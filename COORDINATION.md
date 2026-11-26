@@ -108,8 +108,10 @@ See the "Prior sessions" table above and the verbatim records in git history. Hi
 
 ### PR and deployment status
 
-- PR #15 was opened from this branch; initial `build` and `validate` checks passed. `main` advanced with other sessions while the PR was open; conflicts in the shared coordination/README files are being resolved by retaining the latest main versions and appending this session's entry.
-- Final merge and live Pages URL/status: pending.
+- PR #15: https://github.com/kanlerxz87-cyber/Vegas2/pull/15; merged to `main` at 2026-11-26 22:25:12 UTC as `0daa5eefc511f26b74610f2ad36a131de5925e0d`. Parallel changes required integrations of newer `main` commits; root and other session folders were retained.
+- PR checks passed (`build`, `validate`); the existing main/session-059 build and source checks passed after merge.
+- GitHub Pages deploy run **45904677383** completed successfully; GitHub deployment status is `success`, Pages API reports `built`, with URL `https://kanlerxz87-cyber.github.io/Vegas2/`. This guide is published at `https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/`. Pages API reports source `main` at `/`. Direct `fetch_page` from this sandbox could not retrieve the `github.io` URL, so external-browser content fetch is not asserted.
+- PR #16 is the documentation-only follow-up to record this merge/deployment outcome in the shared task board; its checks and merge remain pending.
 
 ---
 
