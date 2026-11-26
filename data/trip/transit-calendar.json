@@ -1,0 +1,170 @@
+{
+  "transit": [
+    {
+      "mode": "Subway / metro rail",
+      "name": "No subway found on official transit sites",
+      "status": "IRREGULARITY: the brief asks for travel by subway or bus. Neither official transit site read (RTC bus, Las Vegas Monorail) lists a subway. Confirm whether the brief means bus only.",
+      "hours": null,
+      "link": "https://www.rtcsnv.com/",
+      "sources": [
+        {
+          "label": "RTC of Southern Nevada home page (transit services)",
+          "url": "https://www.rtcsnv.com/"
+        }
+      ]
+    },
+    {
+      "mode": "Bus",
+      "name": "RTC of Southern Nevada bus routes (Strip, Downtown and residential)",
+      "status": "Route list and PDF schedules on the official site are stated to be current as of August 23, 2026. Strip and Downtown route list was partly read; per-route hours not read.",
+      "hours": null,
+      "link": "https://www.rtcsnv.com/ways-to-travel/schedules-maps/",
+      "fares": null,
+      "notes": "RTC home page notes F1 construction is changing bus service around the Strip (current alerts page). RTC reports a $118.5 million annual transit shortfall (service risk). Use the official trip planner for each hotel-to-activity trip; no travel time was verified here.",
+      "sources": [
+        {
+          "label": "RTC schedules and maps (official)",
+          "url": "https://www.rtcsnv.com/ways-to-travel/schedules-maps/"
+        },
+        {
+          "label": "RTC home page (alerts, shortfall notice)",
+          "url": "https://www.rtcsnv.com/"
+        },
+        {
+          "label": "RTC trip planner (official link)",
+          "url": "https://www.rtcsnv.com/tripplanner/"
+        }
+      ]
+    },
+    {
+      "mode": "Monorail",
+      "name": "Las Vegas Monorail (Strip, 7 stations)",
+      "status": "Operating schedule as stated on official site.",
+      "hours": "Monday 7:00 AM to midnight; Tuesday to Thursday 7:00 AM to 2:00 AM; Friday to Sunday 7:00 AM to 3:00 AM. Trains every 4 to 8 minutes.",
+      "fares": null,
+      "notes": "Official site lists modified hours for Nov 29 to Dec 15, 2026 (not in the Feb 2027 window). Mobile ticketing ('Scan & Go') available. Fares not read.",
+      "link": "https://www.lvmonorail.com/",
+      "sources": [
+        {
+          "label": "Las Vegas Monorail official home page (hours, stations, system notices)",
+          "url": "https://www.lvmonorail.com/"
+        }
+      ]
+    }
+  ],
+  "calendar": [
+    {
+      "dates": "Mon Feb 15, 2027",
+      "label": "Washington's Birthday (Presidents' Day), federal holiday",
+      "effect": "Official federal holiday on the first preferred travel day. Effect on hotel prices NOT verified.",
+      "sources": [
+        {
+          "label": "OPM federal holidays 2027 (official)",
+          "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+        }
+      ]
+    },
+    {
+      "dates": "Mon Feb 15 to Thu Feb 18, 2027",
+      "label": "Preferred window (from brief): 3 nights",
+      "effect": "Red Rock timed-entry reservations apply on each day of entry (Oct 1 to May 31).",
+      "sources": [
+        {
+          "label": "User brief (provided by the user; not an external source)",
+          "url": null
+        }
+      ]
+    },
+    {
+      "dates": "Mon Feb 15 to Mon Feb 22, 2027",
+      "label": "7-night planning basis (assumption for cost comparison, from brief's 1 to 2 week range)",
+      "effect": "Cost table is calculated on a 7-night basis as requested. The preferred window is only 3 nights; the user must confirm (see Questions).",
+      "sources": [
+        {
+          "label": "User brief (provided by the user; not an external source)",
+          "url": null
+        }
+      ]
+    },
+    {
+      "dates": "Feb 15 to Mar 23, 2027",
+      "label": "Allowed trip window (from brief): trip must be 1 to 2 weeks inside this window",
+      "effect": "Mar 23, 2027 is a Tuesday.",
+      "sources": [
+        {
+          "label": "User brief (provided by the user); weekday computed with a calendar check",
+          "url": null
+        }
+      ]
+    }
+  ],
+  "bookingTiming": [
+    {
+      "item": "Caesars Palace: Advanced Purchase Savings",
+      "fact": "Up to 30% off for stays 30+ days in advance (terms apply).",
+      "validFor": "Stays 30+ days out. Not a price history. Feb 2027 price not confirmed.",
+      "link": "https://www.caesars.com/caesars-palace/hotel?originalrequest=%2Fcaesars-palace%2Fhotel%2Frooms.html",
+      "sources": [
+        {
+          "label": "Caesars Palace official room page",
+          "url": "https://www.caesars.com/caesars-palace/hotel?originalrequest=%2Fcaesars-palace%2Fhotel%2Frooms.html"
+        }
+      ]
+    },
+    {
+      "item": "Caesars Palace: cancellation",
+      "fact": "'FREE 48-Hour Cancellation*' with an asterisk (terms apply; terms not read).",
+      "validFor": "Verify the terms before booking.",
+      "link": "https://www.caesars.com/caesars-palace/hotel?originalrequest=%2Fcaesars-palace%2Fhotel%2Frooms.html",
+      "sources": [
+        {
+          "label": "Caesars Palace official room page",
+          "url": "https://www.caesars.com/caesars-palace/hotel?originalrequest=%2Fcaesars-palace%2Fhotel%2Frooms.html"
+        }
+      ]
+    },
+    {
+      "item": "Wynn Las Vegas: Cyber Savings",
+      "fact": "Up to 25% off resort rooms; $75 daily resort credit (up to $300 per stay); book Nov 20 to Dec 4, 2026 for stays through June 30, 2027.",
+      "validFor": "Promotion window; terms not read. Not a Feb 2027 price.",
+      "link": "https://www.wynnlasvegas.com/",
+      "sources": [
+        {
+          "label": "Wynn Las Vegas official home page",
+          "url": "https://www.wynnlasvegas.com/"
+        }
+      ]
+    },
+    {
+      "item": "é by José Andrés (reservation window)",
+      "fact": "Reservations can be made online up to three months in advance (official page).",
+      "validFor": "Rolling window. Calculated (not stated by source): on Nov 26, 2026 the window reaches about Feb 26, 2027, so Feb 15 to 18 dinners are inside it.",
+      "link": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
+      "sources": [
+        {
+          "label": "Official restaurant page",
+          "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html"
+        }
+      ]
+    },
+    {
+      "item": "Starred restaurants in general (MICHELIN Las Vegas)",
+      "fact": "Most starred restaurants release tables 30 to 60 days ahead; Bib Gourmand and Recommended are generally walk-in friendly (LVCVA FAQ).",
+      "validFor": "General guidance from LVCVA page, not a specific restaurant's policy.",
+      "link": "https://www.visitlasvegas.com/michelin-guide-restaurants/",
+      "sources": [
+        {
+          "label": "Visit Las Vegas MICHELIN FAQ",
+          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        }
+      ]
+    },
+    {
+      "item": "Cheapest upcoming time to book a hotel (7-night total, Feb 2027)",
+      "fact": null,
+      "validFor": "NOT VERIFIED. No official historical rate data or Feb 2027 rate was read from any hotel. Do not treat any date as the cheapest.",
+      "link": null,
+      "sources": []
+    }
+  ]
+}
