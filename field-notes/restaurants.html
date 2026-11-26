@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17201d">
+  <meta name="description" content="Browse 24 Las Vegas restaurants listed in the 2026 MICHELIN Guide Southwest, with official hours and menu prices where directly confirmed.">
+  <title>Restaurants · Vegas Field Notes</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="restaurants">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vegas Field Notes home"><span class="brand-mark" aria-hidden="true">VF</span><span class="brand-name">Vegas Field Notes<small>Plan with receipts</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="restaurants.html" aria-current="page">Restaurants</a><a href="hotels.html">Hotels</a><a href="experiences.html">Experiences</a><a href="itinerary.html">7-night outline</a><a href="getting-around.html">Getting around</a><a href="review.html">Review flags</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container page-wrap">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">Dine · 2026 Guide baseline</p><h1 id="page-title">24 Guide picks.<br>Prices with context.</h1><p class="lede">Four starred restaurants, three Bib Gourmand picks, and 17 Recommended venues—kept in separate categories. Menu figures appear only where a current official page gave us something concrete.</p></div>
+      <div class="hero-meta"><strong>Checked Nov 26, 2026</strong>Guide status is for 2026, not a promise of 2027 recognition. All future hours and menus should be reconfirmed.</div>
+    </section>
+
+    <section class="section callout callout--dark" aria-labelledby="guide-baseline">
+      <p class="eyebrow">Award baseline</p>
+      <h2 id="guide-baseline" style="margin:.25rem 0;font:800 1.3rem/1.2 var(--display);letter-spacing:-.04em">A distinction is not a 2027 prediction.</h2>
+      <p id="guide-note">The 2026 MICHELIN Guide Southwest list is being loaded…</p>
+      <p class="source-line">Full award list: <a href="https://www.visitlasvegas.com/michelin-guide-restaurants/">Visit Las Vegas · MICHELIN restaurants in Las Vegas</a>.</p>
+    </section>
+
+    <section class="section" aria-labelledby="browse-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Browse the list</p><h2 id="browse-title">Filter by distinction or neighborhood.</h2></div>
+        <p>“No verified two-person total” means the research did not find a directly supported complete meal price—not that the meal is free or inexpensive.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Restaurant filters">
+        <div class="field"><label for="restaurant-search">Search restaurants</label><input id="restaurant-search" type="search" placeholder="Name, cuisine, or area"></div>
+        <div class="field"><label for="award-filter">Guide distinction</label><select id="award-filter"><option value="all">All distinctions</option><option value="starred">Starred</option><option value="bib">Bib Gourmand</option><option value="recommended">Recommended</option></select></div>
+        <div class="field"><label for="area-filter">Area</label><select id="area-filter"><option value="all">All areas</option><option value="The Strip">The Strip</option><option value="Downtown / Arts District">Downtown / Arts District</option><option value="Chinatown">Chinatown</option><option value="Off-Strip">Off-Strip</option></select></div>
+      </div>
+      <p id="restaurant-count" class="results-count" role="status" aria-live="polite">Loading checked restaurant entries…</p>
+      <p id="restaurant-status" class="small-note" role="status" aria-live="polite"></p>
+      <noscript><p class="callout callout--warn">The searchable cards need JavaScript. The complete checked dataset is available in <a href="data/restaurants.json">the restaurant research JSON</a>.</p></noscript>
+      <div id="restaurants-grid" class="restaurant-grid" aria-busy="true"></div>
+      <p class="small-note">Hours and menu prices are time-sensitive. “Published price signal” is not an estimated check total; tax, service, beverages, supplements, and availability may vary.</p>
+    </section>
+
+    <section class="section" aria-labelledby="video-title">
+      <div class="section-heading"><div><p class="eyebrow">Watch with context</p><h2 id="video-title">One dining-room preview.</h2></div></div>
+      <article class="panel" style="padding:1.25rem">
+        <span class="badge">Third-party video · not an official restaurant source</span>
+        <h3 style="margin:.65rem 0 .25rem;font:800 1.25rem/1.15 var(--display)">Experience Joël Robuchon · Las Vegas Highest Rated Restaurant</h3>
+        <p class="card-copy">A 30:12 guest video uploaded in 2023 by Josh and Rachael. It is a look at one past Menu Dégustation visit—not a current menu, price quote, MICHELIN listing, or endorsement.</p>
+        <p class="card-actions"><a href="https://www.youtube.com/watch?v=ySJIDJ_F9EA">Watch on YouTube</a><a href="https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html">Check Joël Robuchon’s official page</a></p>
+      </article>
+    </section>
+
+    <section class="section callout callout--warn" aria-labelledby="price-method">
+      <p class="eyebrow">Price method</p><h2 id="price-method" style="margin:.25rem 0;font:800 1.2rem/1.2 var(--display);letter-spacing:-.04em">No invented “average meal for two.”</h2>
+      <p>Where a fixed menu has a listed per-person price, the site multiplies it by two and labels tax/service exclusions. À-la-carte dishes are shown as menu signals only. Missing hours, full meal totals, and future reservation availability stay open on the <a href="review.html">Flagged for Review</a> page.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><p class="footer-mark">Vegas Field Notes</p><p>Official venue pages support hours and menu details; the 2026 selection baseline is linked to Visit Las Vegas.</p></div><div><p class="footer-meta">Research checked · Nov 26, 2026</p><p><a href="review.html">Open research flags</a></p></div></div></footer>
+</body>
+</html>

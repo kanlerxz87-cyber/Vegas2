@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17201d">
+  <meta name="description" content="Official RTC schedule notes, map links, and a live directions builder for Las Vegas hotel-to-venue trips.">
+  <title>Getting around · Vegas Field Notes</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="getting-around">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vegas Field Notes home"><span class="brand-mark" aria-hidden="true">VF</span><span class="brand-name">Vegas Field Notes<small>Plan with receipts</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="restaurants.html">Restaurants</a><a href="hotels.html">Hotels</a><a href="experiences.html">Experiences</a><a href="itinerary.html">7-night outline</a><a href="getting-around.html" aria-current="page">Getting around</a><a href="review.html">Review flags</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container page-wrap">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">Move · RTC schedules & live maps</p><h1 id="page-title">Plan the route.<br>Don't guess the minutes.</h1><p class="lede">RTC documents establish routes and service patterns. They do not provide a dependable door-to-door time between every hotel, restaurant, and attraction in this guide.</p></div>
+      <div class="hero-meta"><strong>Use live directions for the travel date</strong>Schedules, stop access, traffic, and temporary diversions can change before Feb 2027.</div>
+    </section>
+
+    <section class="section" aria-labelledby="rtc-facts">
+      <div class="section-heading"><div><p class="eyebrow">What the schedules support</p><h2 id="rtc-facts">Useful service facts—not trip durations.</h2></div><p>Always check the official RTC map, trip planner, and service alerts for the date and direction you need.</p></div>
+      <div class="grid grid-3">
+        <article class="tile tile--acid"><span class="tile-label">The Deuce</span><strong>24 hours</strong><p>RTC's published schedule shows service around the clock.</p></article>
+        <article class="tile"><span class="tile-label">Typical daytime headway</span><strong>10–15 min</strong><p>Approximate frequency from 7 a.m. to 1 a.m. on the schedule checked.</p></article>
+        <article class="tile tile--coral"><span class="tile-label">Overnight headway</span><strong>About 20 min</strong><p>Approximate frequency from 1 a.m. to 7 a.m.; verify the current timetable.</p></article>
+      </div>
+      <p class="source-line">RTC schedules also show Route 117 service at roughly half-hour intervals around midday. This is a route timetable observation, not a guarantee for a 2027 travel date.</p>
+    </section>
+
+    <section class="section" aria-labelledby="live-route">
+      <div class="section-heading"><div><p class="eyebrow">Live direction handoff</p><h2 id="live-route">Build a route in Google Maps.</h2></div><p>The form creates a link in your browser. It does not send your route to this site or promise a particular travel time.</p></div>
+      <div class="panel" style="padding:1.25rem">
+        <form id="route-form" class="route-form">
+          <div class="field"><label for="route-origin">Starting point</label><input id="route-origin" name="origin" type="text" required autocomplete="off" placeholder="Hotel or street address"></div>
+          <div class="field"><label for="route-destination">Destination</label><input id="route-destination" name="destination" type="text" required autocomplete="off" placeholder="Restaurant, attraction, or address"></div>
+          <div class="field"><label for="route-mode">Travel mode</label><select id="route-mode" name="mode"><option value="transit">Public transit</option><option value="walking">Walking</option><option value="driving">Driving</option></select></div>
+          <button class="button" type="submit">Create directions link</button>
+        </form>
+        <div id="route-result" class="route-result" hidden><p style="margin:0 0 .2rem">Route ready. Google Maps may use your live location and current service data:</p><a id="route-link" href="https://www.google.com/maps/">Open directions</a></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="route-sources">
+      <div class="section-heading"><div><p class="eyebrow">RTC sources</p><h2 id="route-sources">Schedules and maps to check.</h2></div></div>
+      <div class="route-list">
+        <article class="route-card"><h3>The Deuce · Strip & Downtown</h3><p>24-hour route schedule and map. Confirm the stop, direction, and service alert.</p><a href="https://rtcws.rtcsnv.com/routepdf/deuce.pdf">Open RTC Deuce schedule</a></article>
+        <article class="route-card"><h3>Route 117</h3><p>Published RTC schedule used for the midday frequency note.</p><a href="https://rtcws.rtcsnv.com/routepdf/117.pdf">Open RTC Route 117 schedule</a></article>
+        <article class="route-card"><h3>Other RTC schedules</h3><p>Route PDFs checked include 104, 119, and 203. Select the line that serves your actual stops.</p><a href="https://www.rtcsnv.com/ways-to-travel/schedules-maps/">RTC schedules & maps</a></article>
+        <article class="route-card"><h3>RTC maps and guides</h3><p>RTC directs riders to its interactive map and trip-planning resources.</p><a href="https://www.rtcsnv.com/ways-to-travel/schedules-maps/maps-guides/">Open Maps & Guides</a></article>
+        <article class="route-card"><h3>Transit data</h3><p>Static and real-time GTFS resources are published for developers.</p><a href="https://www.rtcsnv.com/ways-to-travel/transit-services/for-developers/">Open RTC developer feeds</a></article>
+        <article class="route-card"><h3>Alerts before you ride</h3><p>Temporary detours may apply; do not carry forward an old event detour as a 2027 route.</p><a href="https://www.rtcsnv.com/ways-to-travel/transit-services/">Check RTC transit services</a></article>
+      </div>
+    </section>
+
+    <section class="section callout" aria-labelledby="one-example">
+      <p class="eyebrow">One measured walking example</p><h2 id="one-example" style="margin:.25rem 0;font:800 1.2rem/1.2 var(--display);letter-spacing:-.04em">Flamingo → Restaurant Guy Savoy: 0.3 mi, 7 min on foot.</h2>
+      <p>Google Maps displayed this walking option when checked Nov 26, 2026, via the Las Vegas Boulevard overpass. The route lookup had been requested as transit, but Maps resolved the displayed option as a walk; this is <strong>not</strong> a transit-time result and should not be generalized to other hotels or destinations.</p>
+      <p><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Flamingo+Las+Vegas%2C+3555+S+Las+Vegas+Blvd%2C+Las+Vegas%2C+NV+89109&amp;destination=Restaurant+Guy+Savoy%2C+3570+S+Las+Vegas+Blvd%2C+Las+Vegas%2C+NV+89109&amp;travelmode=walking">Recheck this walk on Google Maps</a></p>
+    </section>
+
+    <section class="section callout callout--warn" aria-labelledby="route-gap">
+      <p class="eyebrow">What remains open</p><h2 id="route-gap" style="margin:.25rem 0;font:800 1.2rem/1.2 var(--display);letter-spacing:-.04em">No complete venue-to-venue travel-time ranking.</h2>
+      <p>The RTC PDF timetables and GTFS pages are not a substitute for routing a specific origin, destination, departure time, and service date. A full public-transit matrix was not verified; use the route builder and check the live itinerary before booking a dinner or show.</p>
+      <p><a href="review.html">See the transport research flag →</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><p class="footer-mark">Vegas Field Notes</p><p>Transit source snapshot checked Nov 26, 2026. Follow current RTC notices for service changes.</p></div><div><p class="footer-meta">No static trip times</p><p><a href="itinerary.html">Return to the weekly outline</a></p></div></div></footer>
+</body>
+</html>

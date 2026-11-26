@@ -1,0 +1,228 @@
+{
+  "asOf": "2026-11-26",
+  "party": "Two adults · one room · USD",
+  "scenarios": {
+    "threeNight": {
+      "label": "3-night reference",
+      "dates": "Feb 15–18, 2027",
+      "nights": 3,
+      "note": "This exact-date window is useful for a rate snapshot, but it is shorter than the requested 1–2-week trip. Keep it separate from the 7-night comparison.",
+      "hotels": [
+        {
+          "id": "south-point",
+          "name": "South Point",
+          "area": "South Strip · off the central Strip",
+          "profile": "Premium King or Two Queens rooms are listed at 500 sq ft. The resort advertises an airport shuttle; confirm its current schedule and eligibility directly.",
+          "roomLink": "https://southpointcasino.com/hotel/guest-rooms",
+          "bookingLink": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-18&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+          "rates": [
+            {
+              "room": "Premium King",
+              "nightly": "$104.33 average",
+              "total": "$313 displayed stay total",
+              "basis": "Rate-calendar quote; tax excluded. The booking engine identifies a $29.20 daily resort fee, while the hotel's public page states $33 per night. Fee treatment needs reconciliation.",
+              "status": "Fee discrepancy"
+            },
+            {
+              "room": "Premium Two Queens",
+              "nightly": "$114.33 average",
+              "total": "$343 displayed stay total",
+              "basis": "Rate-calendar quote; tax excluded. The booking engine identifies a $29.20 daily resort fee, while the hotel's public page states $33 per night. Fee treatment needs reconciliation.",
+              "status": "Fee discrepancy"
+            }
+          ]
+        },
+        {
+          "id": "flamingo",
+          "name": "Flamingo Las Vegas",
+          "area": "Center Strip",
+          "profile": "Official room profiles include 350-sq-ft Flamingo Rooms with one King or two Queens; the Go Premium room is listed at 550 sq ft with one King. Check the selected room name before booking.",
+          "roomLink": "https://www.caesars.com/flamingo-las-vegas/hotel",
+          "bookingLink": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+          "rates": [
+            {
+              "room": "Room Type Assigned on Arrival",
+              "nightly": "$55 per night",
+              "total": "$165 before tax (nightly × 3)",
+              "basis": "Displayed rate includes the $50/day resort fee and excludes taxes. An assigned-on-arrival room does not guarantee a particular bed type."
+            },
+            {
+              "room": "Fab Two Queens or Go Two Queens",
+              "nightly": "$59 per night",
+              "total": "$177 before tax (nightly × 3)",
+              "basis": "Displayed rate includes the $50/day resort fee and excludes taxes. Room type and availability can change before checkout."
+            }
+          ]
+        },
+        {
+          "id": "caesars-palace",
+          "name": "Caesars Palace",
+          "area": "Center Strip",
+          "profile": "A large center-Strip resort with five hotel towers and multiple room categories. The dated rate search surfaced an assigned room and a named Julius Deluxe King; confirm tower, bed, and cancellation terms on the live offer.",
+          "roomLink": "https://www.caesars.com/caesars-palace/hotel",
+          "bookingLink": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+          "rates": [
+            {
+              "room": "Room Type Assigned on Arrival",
+              "nightly": "$210 per night",
+              "total": "$630 before tax (nightly × 3)",
+              "basis": "Displayed rate includes the resort fee and excludes taxes. Room assignment and bed type are not guaranteed by this label."
+            },
+            {
+              "room": "Julius Deluxe King",
+              "nightly": "$214 per night",
+              "total": "$642 before tax (nightly × 3)",
+              "basis": "Displayed rate includes the resort fee and excludes taxes."
+            }
+          ]
+        },
+        {
+          "id": "resorts-world",
+          "name": "Resorts World · Hilton tower",
+          "area": "North Strip",
+          "profile": "Hilton Deluxe rooms are listed at 400 sq ft with a walk-in shower, in King or Two Queen configurations.",
+          "roomLink": "https://www.rwlasvegas.com/stay/las-vegas-hilton/deluxe-room/",
+          "bookingLink": "https://reservations.rwlasvegas.com/ibe/shop.aspx?hotelID=17726&selectedTower=HILTON&checkin=2027-02-15&checkout=2027-02-18&nights=3&adults=2&children=0",
+          "rates": [
+            {
+              "room": "Hilton Deluxe King",
+              "nightly": "$340.50 average before tax",
+              "total": "$1,158.18 detailed total",
+              "basis": "The detailed total includes room tax, resort fees, and resort-fee tax. The nightly figure includes the resort fee and excludes taxes."
+            },
+            {
+              "room": "Hilton Deluxe Two Queens",
+              "nightly": "$365.25 average before tax",
+              "total": "$1,242.36 detailed total",
+              "basis": "The detailed total includes room tax, resort fees, and resort-fee tax. The nightly figure includes the resort fee and excludes taxes."
+            }
+          ]
+        },
+        {
+          "id": "wynn",
+          "name": "Wynn Las Vegas",
+          "area": "North Strip",
+          "profile": "Wynn Resort rooms are listed at 640 sq ft, with one King or two Queens. The room profile describes a marble bathroom with soaking tub and separate shower.",
+          "roomLink": "https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort",
+          "bookingLink": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&rmID=68658&checkIn=02/15/2027&checkOut=02/18/2027&adults=2&children=0",
+          "rates": [
+            {
+              "room": "Wynn Resort King · Cyber Exclusive snapshot",
+              "nightly": "$774 average per night",
+              "total": "$2,322 before tax (nightly × 3)",
+              "basis": "The displayed offer includes the resort fee and excludes taxes. Cyber Exclusive terms showed travel through Jun 30, 2027 and booking Nov 20–Dec 4, 2026; offer terms and availability can change.",
+              "status": "Offer snapshot"
+            }
+          ]
+        }
+      ]
+    },
+    "sevenNight": {
+      "label": "7-night comparison",
+      "dates": "Feb 15–22, 2027",
+      "nights": 7,
+      "note": "A same-arrival-date, seven-night snapshot is the closest like-for-like duration comparison captured. Prices remain dynamic, and tax/resort-fee treatment differs by booking engine.",
+      "hotels": [
+        {
+          "id": "south-point",
+          "name": "South Point",
+          "area": "South Strip · off the central Strip",
+          "profile": "Premium King or Two Queens rooms are listed at 500 sq ft. The resort advertises an airport shuttle; confirm its current schedule and eligibility directly.",
+          "roomLink": "https://southpointcasino.com/hotel/guest-rooms",
+          "bookingLink": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+          "rates": [
+            {
+              "room": "Premium King",
+              "nightly": "$131.29 average",
+              "total": "$919 displayed stay total before tax",
+              "basis": "The booking card said fees included, but the engine also lists a $29.20 daily resort fee and excludes tax. The public hotel page lists $33 per night; do not treat as an all-in total until confirmed.",
+              "status": "Fee discrepancy"
+            }
+          ]
+        },
+        {
+          "id": "flamingo",
+          "name": "Flamingo Las Vegas",
+          "area": "Center Strip",
+          "profile": "Official room profiles include 350-sq-ft Flamingo Rooms with one King or two Queens; the Go Premium room is listed at 550 sq ft with one King. Check the selected room name before booking.",
+          "roomLink": "https://www.caesars.com/flamingo-las-vegas/hotel",
+          "bookingLink": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+          "rates": [
+            {
+              "room": "Room Type Assigned on Arrival",
+              "nightly": "$77 per night",
+              "total": "$539 before tax (nightly × 7)",
+              "basis": "Displayed rate includes the $50/day resort fee and excludes taxes. An assigned-on-arrival room does not guarantee a particular bed type."
+            },
+            {
+              "room": "Two Queens (named room types)",
+              "nightly": "$86 per night",
+              "total": "$602 before tax (nightly × 7)",
+              "basis": "Displayed rate includes the $50/day resort fee and excludes taxes."
+            }
+          ]
+        },
+        {
+          "id": "caesars-palace",
+          "name": "Caesars Palace",
+          "area": "Center Strip",
+          "profile": "A large center-Strip resort with five hotel towers and multiple room categories. The dated rate search surfaced an assigned room and a named Julius Deluxe King; confirm tower, bed, and cancellation terms on the live offer.",
+          "roomLink": "https://www.caesars.com/caesars-palace/hotel",
+          "bookingLink": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+          "rates": [
+            {
+              "room": "Room Type Assigned on Arrival",
+              "nightly": "$196 per night",
+              "total": "$1,372 before tax (nightly × 7)",
+              "basis": "Displayed rate includes the resort fee and excludes taxes. Room assignment and bed type are not guaranteed by this label."
+            },
+            {
+              "room": "Julius Deluxe King",
+              "nightly": "$201 per night",
+              "total": "$1,407 before tax (nightly × 7)",
+              "basis": "Displayed rate includes the resort fee and excludes taxes."
+            }
+          ]
+        },
+        {
+          "id": "resorts-world",
+          "name": "Resorts World · Hilton tower",
+          "area": "North Strip",
+          "profile": "Hilton Deluxe rooms are listed at 400 sq ft with a walk-in shower, in King or Two Queen configurations.",
+          "roomLink": "https://www.rwlasvegas.com/stay/las-vegas-hilton/deluxe-room/",
+          "bookingLink": "https://reservations.rwlasvegas.com/ibe/shop.aspx?hotelID=17726&selectedTower=HILTON&checkin=2027-02-15&checkout=2027-02-22&nights=7&adults=2&children=0",
+          "rates": [
+            {
+              "room": "Hilton Deluxe King",
+              "nightly": "$314.31 average all-in",
+              "total": "$2,200.15 detailed total",
+              "basis": "Detailed total includes room tax, resort fee, and resort-fee tax."
+            },
+            {
+              "room": "Hilton Deluxe Two Queens",
+              "nightly": "$347.83 average all-in",
+              "total": "$2,434.84 detailed total",
+              "basis": "Detailed total includes room tax, resort fee, and resort-fee tax."
+            }
+          ]
+        },
+        {
+          "id": "wynn",
+          "name": "Wynn Las Vegas",
+          "area": "North Strip",
+          "profile": "Wynn Resort rooms are listed at 640 sq ft, with one King or two Queens. The room profile describes a marble bathroom with soaking tub and separate shower.",
+          "roomLink": "https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort",
+          "bookingLink": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&rmID=68658&checkIn=02/15/2027&checkOut=02/22/2027&adults=2&children=0",
+          "rates": [
+            {
+              "room": "Wynn Resort King · Cyber Exclusive snapshot",
+              "nightly": "$677 average per night",
+              "total": "$4,739 before tax (nightly × 7)",
+              "basis": "The displayed rate includes the resort fee and excludes taxes. The captured quote was a dynamic public offer, not a reservation."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
