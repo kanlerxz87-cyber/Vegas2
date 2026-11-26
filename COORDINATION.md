@@ -108,10 +108,9 @@ See the "Prior sessions" table above and the verbatim records in git history. Hi
 
 ### PR and deployment status
 
-- PR #15: https://github.com/kanlerxz87-cyber/Vegas2/pull/15; merged to `main` at 2026-11-26 22:25:12 UTC as `0daa5eefc511f26b74610f2ad36a131de5925e0d`. Parallel changes required integrations of newer `main` commits; root and other session folders were retained.
-- PR checks passed (`build`, `validate`); the existing main/session-059 build and source checks passed after merge.
-- GitHub Pages deploy run **45904677383** completed successfully; GitHub deployment status is `success`, Pages API reports `built`, with URL `https://kanlerxz87-cyber.github.io/Vegas2/`. This guide is published at `https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/`. Pages API reports source `main` at `/`. Direct `fetch_page` from this sandbox could not retrieve the `github.io` URL, so external-browser content fetch is not asserted.
-- PR #16 is the documentation-only follow-up to record this merge/deployment outcome in the shared task board; its checks and merge remain pending.
+- PR #15: https://github.com/kanlerxz87-cyber/Vegas2/pull/15; merged to `main` at 2026-11-26 22:25:12 UTC as `0daa5eefc511f26b74610f2ad36a131de5925e0d`. Parallel changes required integrating newer `main` commits; root and other session folders were retained.
+- PR #16: https://github.com/kanlerxz87-cyber/Vegas2/pull/16; merged to `main` at 2026-11-26 22:31:49 UTC as `2a0b67b57cb9a3d53ff330f127f8a0ac1c04d863` to add this deployment record. Its `build`, `validate` and isolated-site checks passed.
+- Final Pages workflow run **45905373579** completed successfully; `pages-build-deployment` run **45905373110** also succeeded. The GitHub deployment status is `success`; Pages API reports `built`. Pages root is `https://kanlerxz87-cyber.github.io/Vegas2/`; this guide is isolated at `https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/`. Pages API reports source `main` at `/` and confirms the deployment URL. `fetch_page` could not retrieve the `github.io` page from this sandbox, so direct page-body verification is not asserted.
 
 ---
 
