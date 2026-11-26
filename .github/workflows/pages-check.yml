@@ -1,0 +1,24 @@
+name: Site build and verification
+
+on:
+  push:
+    branches: [main, "arena/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Rebuild site and run verification checks
+        run: node scripts/build.mjs
+      - name: Fail if committed docs/ is out of date
+        run: git diff --exit-code -- docs
+      - name: External link report (warning only; some sites block bots)
+        run: node scripts/linkcheck.mjs || true

@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Hotel candidates",
+    "rankingRule": "Ranked by the number of MICHELIN-listed Las Vegas restaurants inside the same resort (verified from official addresses). Ties broken by MICHELIN star count. The 1-hour bus/transit requirement is NOT verified (no official travel-time source was read), so it is not used in the ranking.",
+    "priceNote": "No official 7-night total for Feb 15-22, 2027 could be read from any hotel source. All price fields are blank and flagged Unverified.",
+    "roomRequirement": "Queen or larger bed, private bathroom, 2 adults. Only the bed type on the Caesars Palace official room list was confirmed. Private bathroom was not confirmed for any hotel."
+  },
+  "hotels": [
+    {
+      "rank": 1,
+      "name": "The Venetian Resort (incl. The Palazzo)",
+      "area": "Strip",
+      "link": "https://www.venetianlasvegas.com/",
+      "michelinInResort": ["Bouchon (Recommended)", "COTE Las Vegas (Recommended)", "Estiatorio Milos (Recommended)", "Mott 32 at The Palazzo (Recommended)"],
+      "michelinStarCount": 0,
+      "michelinCount": 4,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Official homepage shows suites with a king bed image and describes 'All Suites' (not a confirmed standard-room bed type). Room page did not load through the fetch tool.",
+      "sources": [
+        { "label": "Official hotel homepage", "url": "https://www.venetianlasvegas.com/" },
+        { "label": "MICHELIN press release (in-resort restaurants)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "MGM Grand",
+      "area": "Strip",
+      "link": "https://mgmgrand.mgmresorts.com/",
+      "michelinInResort": ["Restaurant de Joël Robuchon (Two Stars)", "L'Atelier de Joël Robuchon Las Vegas (One Star)"],
+      "michelinStarCount": 3,
+      "michelinCount": 2,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Hotel room page not read. Restaurant pages (official) confirm the Michelin awards.",
+      "sources": [
+        { "label": "Official restaurant page (Joël Robuchon)", "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "The Cosmopolitan of Las Vegas",
+      "area": "Strip",
+      "link": "https://cosmopolitanlasvegas.mgmresorts.com/",
+      "michelinInResort": ["é by José Andrés (One Star)", "China Poblano (Bib Gourmand)"],
+      "michelinStarCount": 1,
+      "michelinCount": 2,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Hotel room page not read. é reservations are online up to three months in advance (official restaurant page).",
+      "sources": [
+        { "label": "Official restaurant page (é by José Andrés)", "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Caesars Palace",
+      "area": "Strip",
+      "link": "https://www.caesars.com/caesars-palace",
+      "michelinInResort": ["Guy Savoy Las Vegas (One Star)"],
+      "michelinStarCount": 1,
+      "michelinCount": 1,
+      "bedType": "Colosseum Strip View Room: 2 Queens (non-smoking), listed on official room page",
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": "Official page promotions (terms apply, not a price history): Advanced Purchase Savings up to 30% off for stays 30+ days in advance; Suite Escape booking through Dec 31, 2026 for stays through Sep 2027. Not verified for the Feb 2027 dates.",
+      "notes": "Official room page lists 'FREE 48-Hour Cancellation*' (terms apply). Room private bath not stated on the page read.",
+      "sources": [
+        { "label": "Official room list (bed type, promotions)", "url": "https://www.caesars.com/caesars-palace/hotel?originalrequest=%2Fcaesars-palace%2Fhotel%2Frooms.html" },
+        { "label": "Official restaurant page (Guy Savoy)", "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Bellagio",
+      "area": "Strip",
+      "link": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html",
+      "michelinInResort": ["Michael Mina (Recommended)"],
+      "michelinStarCount": 0,
+      "michelinCount": 1,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Hotel homepage and room page did not load through the fetch tool. Link is the official Michael Mina page (linked from the LVCVA list).",
+      "sources": [
+        { "label": "LVCVA MICHELIN list (venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "ARIA Resort & Casino",
+      "area": "Strip",
+      "link": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html",
+      "michelinInResort": ["Gymkhana Las Vegas (Recommended)"],
+      "michelinStarCount": 0,
+      "michelinCount": 1,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Link is the official Gymkhana page (from the LVCVA list). Hotel page not read.",
+      "sources": [
+        { "label": "LVCVA MICHELIN list (venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Wynn Las Vegas",
+      "area": "Strip",
+      "link": "https://www.wynnlasvegas.com/",
+      "michelinInResort": ["Wing Lei (Recommended)"],
+      "michelinStarCount": 0,
+      "michelinCount": 1,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": "Official homepage promotion (terms apply): Cyber Savings, book Nov 20 to Dec 4, 2026 for stays through June 30, 2027; up to 25% off. Not a Feb 2027 price.",
+      "notes": "Official homepage read; the room-type page did not load through the fetch tool.",
+      "sources": [
+        { "label": "Official homepage (promotion)", "url": "https://www.wynnlasvegas.com/" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Resorts World Las Vegas",
+      "area": "Strip",
+      "link": "https://www.rwlasvegas.com/restaurant/stubborn-seed/",
+      "michelinInResort": ["Stubborn Seed Las Vegas (Recommended)"],
+      "michelinStarCount": 0,
+      "michelinCount": 1,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Link is the official Stubborn Seed page (from the LVCVA list). Hotel page not read.",
+      "sources": [
+        { "label": "LVCVA MICHELIN list (venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Gold Coast Hotel & Casino",
+      "area": "Off-Strip",
+      "link": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong",
+      "michelinInResort": ["Ping Pang Pong (Recommended)"],
+      "michelinStarCount": 0,
+      "michelinCount": 1,
+      "bedType": null,
+      "privateBathroom": null,
+      "sevenNightTotal": null,
+      "cheapestBookingWindow": null,
+      "notes": "Link is the official Ping Pang Pong page (from the LVCVA list). Hotel page not read.",
+      "sources": [
+        { "label": "LVCVA MICHELIN list (venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" },
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+      ]
+    }
+  ]
+}

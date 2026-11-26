@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo review · Las Vegas Trip Planner</title>
+<meta name="description" content="Las Vegas trip planning: hotels, MICHELIN restaurants, activities, transit and dates, with official sources and flagged items.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand"><a href="index.html">Las Vegas Trip Planner</a><span class="upd">Data as of 2026-11-26</span></div>
+  <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="transit-dates.html">Transit & dates</a><a href="booking.html">Booking timing</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="repo-review.html" aria-current="page">Repo review</a><a href="sources.html">Sources</a></nav>
+</header>
+<main id="main">
+
+<section>
+  <h1>Repository review</h1>
+  <p class="note">Line-by-line review of the repository state and branch set at the start of this session (2026-11-26 UTC). Each result cites where it was checked.</p>
+  <div class="tw"><table class="data"><thead><tr><th scope="col">ID</th><th scope="col">Item checked</th><th scope="col">Result</th><th scope="col">Sources for manual review</th></tr></thead><tbody>
+<tr><td data-label="ID">RR1</td><td data-label="Item checked">README.md</td><td data-label="Result">8 bytes: '# Vegas2'. No description, setup, or project purpose. Nothing to verify.</td><td data-label="Sources for manual review"><ul class="cl src"><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/README.md" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2/blob/main/README.md</a></li></ul></td></tr>
+<tr><td data-label="ID">RR2</td><td data-label="Item checked">Default branch 'main' contents</td><td data-label="Result">Only README.md in the initial commit c97c82a. No site, data, or COORDINATION.md on main.</td><td data-label="Sources for manual review"><ul class="cl src"><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/tree/main" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2/tree/main</a></li></ul></td></tr>
+<tr><td data-label="ID">RR3</td><td data-label="Item checked">COORDINATION.md on this session branch</td><td data-label="Result">Did not exist before this session. Created here and logged in commit 6177fed.</td><td data-label="Sources for manual review"><ul class="cl src"><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/059c3126-vegas2/COORDINATION.md" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2/blob/arena/059c3126-vegas2/COORDINATION.md</a></li></ul></td></tr>
+<tr><td data-label="ID">RR4</td><td data-label="Item checked">Parallel branches with competing claims</td><td data-label="Result">arena/2e5e3452-vegas2 (commit d84919a) and arena/e94404fc-vegas2 (commit 1ae27b1) each claim the same overall scope. IRREGULARITY: duplicated effort risk. Logged for the integration session; no edits made to those branches.</td><td data-label="Sources for manual review"><ul class="cl src"><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/tree/arena/2e5e3452-vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2/tree/arena/2e5e3452-vegas2</a></li><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/tree/arena/e94404fc-vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2/tree/arena/e94404fc-vegas2</a></li></ul></td></tr>
+<tr><td data-label="ID">RR5</td><td data-label="Item checked">Brief formatting artifacts</td><td data-label="Result">Brief text contains HTML-escaped strings such as 'session-&amp;amp;amp;lt;id&amp;amp;amp;gt;/' and '[COORDINATION.md](http://COORDINATION.md)' links. Read as 'session-&lt;id&gt;/&lt;task&gt;' and 'COORDINATION.md'. Flagged, not acted on.</td><td data-label="Sources for manual review">—</td></tr>
+<tr><td data-label="ID">RR6</td><td data-label="Item checked">Branch naming rule</td><td data-label="Result">Brief asks for session-&lt;id&gt;/&lt;task&gt; branches; Arena fixes this session to arena/059c3126-vegas2. Followed Arena's rule. Flagged as a conflict.</td><td data-label="Sources for manual review">—</td></tr>
+<tr><td data-label="ID">RR7</td><td data-label="Item checked">License</td><td data-label="Result">No LICENSE file. Reuse rights are not stated. Flagged.</td><td data-label="Sources for manual review"><ul class="cl src"><li><a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2</a></li></ul></td></tr>
+<tr><td data-label="ID">RR8</td><td data-label="Item checked">Build tooling</td><td data-label="Result">No package.json, no build, no tests. This session adds a dependency-free Node script (scripts/build.mjs) that generates the static site in docs/.</td><td data-label="Sources for manual review">—</td></tr>
+<tr><td data-label="ID">RR9</td><td data-label="Item checked">GitHub Pages</td><td data-label="Result">Not configured when this session started. Pages publishing from main /docs is set up after the merge (see the final integration note in COORDINATION.md).</td><td data-label="Sources for manual review"><ul class="cl src"><li><a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">docs.github.com/en/pages</a></li></ul></td></tr>
+</tbody></table></div>
+</section>
+</main>
+<footer class="foot">
+  <p>Every published row links to an official source. Values not confirmed on an official source are shown as <span class="unv">Unverified</span> and listed on <a href="flagged.html">Flagged for Review</a>. Prices and availability change; check the official site before booking.</p>
+  <p>Built from <code>data/*.json</code> by <code>scripts/build.mjs</code>. Repository: <a href="https://github.com/kanlerxz87-cyber/Vegas2">kanlerxz87-cyber/Vegas2</a>.</p>
+</footer>
+</body>
+</html>

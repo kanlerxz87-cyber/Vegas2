@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "title": "MICHELIN restaurants in Las Vegas",
+    "description": "All 24 Las Vegas restaurants in the inaugural 2026 MICHELIN Guide Southwest (4 Stars, 3 Bib Gourmand, 17 Recommended). Address and distinction from the official MICHELIN press release. Hours, price levels and links only where an official page was read.",
+    "expectedCounts": { "Two MICHELIN Stars": 1, "One MICHELIN Star": 3, "Bib Gourmand": 3, "Michelin Recommended": 17, "total": 24 },
+    "primarySource": { "label": "MICHELIN Guide Southwest 2026 press release (michelin.com)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+    "secondarySource": { "label": "Visit Las Vegas (LVCVA) MICHELIN page: cuisine, area and venue links", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+  },
+  "restaurants": [
+    {
+      "name": "Restaurant de Joël Robuchon",
+      "tier": "Two MICHELIN Stars",
+      "area": "Strip (MGM Grand)",
+      "address": "MGM Grand, 3799 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "French Contemporary",
+      "priceLevel": "$$$$ (official page)",
+      "hours": "Tuesday to Saturday 5:00 PM to 9:30 PM; Monday and Sunday closed",
+      "reservations": "Phone 702.891.7925 (official page); MGM Rewards Gold+ members get priority online dining reservations",
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+      "sources": [
+        { "label": "MICHELIN press release (distinction, address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "Official restaurant page (hours, price level)", "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html" }
+      ]
+    },
+    {
+      "name": "é by José Andrés",
+      "tier": "One MICHELIN Star",
+      "area": "Strip (The Cosmopolitan)",
+      "address": "The Cosmopolitan of Las Vegas, 3708 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cuisine": "Spanish Contemporary",
+      "priceLevel": "$$$$ (official page)",
+      "hours": "Tuesday to Saturday 5:30 PM to 8:30 PM; Monday and Sunday closed. Only two seatings nightly.",
+      "reservations": "Online up to three months in advance (official page). Phone 877.893.2003.",
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
+      "sources": [
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "Official restaurant page (hours, reservations)", "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html" }
+      ]
+    },
+    {
+      "name": "Guy Savoy Las Vegas",
+      "tier": "One MICHELIN Star",
+      "area": "Strip (Caesars Palace)",
+      "address": "Caesars Palace, 3570 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cuisine": "French Contemporary",
+      "priceLevel": "$$$$ (official page)",
+      "hours": null,
+      "reservations": "OpenTable link on official page. Phone (702) 731-7286 for information.",
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+      "sources": [
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "Official restaurant page (price level, reservations)", "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" }
+      ]
+    },
+    {
+      "name": "L'Atelier de Joël Robuchon Las Vegas",
+      "tier": "One MICHELIN Star",
+      "area": "Strip (MGM Grand)",
+      "address": "MGM Grand, 3799 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cuisine": "French",
+      "priceLevel": "$$$ (official page)",
+      "hours": "Monday 5:00 PM to 9:30 PM; Tuesday and Wednesday closed; Thursday to Sunday 5:00 PM to 9:30 PM. IRREGULARITY: Monday is listed open here while the sister restaurant is closed Monday; confirm before booking.",
+      "reservations": "Phone 702.891.7358 (official page)",
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
+      "sources": [
+        { "label": "MICHELIN press release", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "Official restaurant page (hours, price level)", "url": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html" }
+      ]
+    },
+    {
+      "name": "China Poblano",
+      "tier": "Bib Gourmand",
+      "area": "Strip (The Cosmopolitan)",
+      "address": "The Cosmopolitan of Las Vegas, 3708 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "Chinese / Mexican",
+      "priceLevel": null,
+      "hours": null,
+      "reservations": null,
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html",
+      "sources": [
+        { "label": "MICHELIN press release (Bib Gourmand, address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Esther's Kitchen",
+      "tier": "Bib Gourmand",
+      "area": "Downtown",
+      "address": "1131 S. Main St., Las Vegas, NV 89104",
+      "cuisine": "Italian",
+      "priceLevel": null,
+      "hours": null,
+      "reservations": null,
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://www.estherslv.com/",
+      "sources": [
+        { "label": "MICHELIN press release (Bib Gourmand, address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "YEN Viet Kitchen",
+      "tier": "Bib Gourmand",
+      "area": "Off-Strip",
+      "address": "3575 S. Decatur Blvd., Ste. 101, Las Vegas, NV 89103",
+      "cuisine": "Vietnamese",
+      "priceLevel": null,
+      "hours": null,
+      "reservations": null,
+      "priceForCouple": null,
+      "social": null,
+      "link": "https://www.yenvietkitchen.com/",
+      "sources": [
+        { "label": "MICHELIN press release (Bib Gourmand, address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Anima by Edo",
+      "tier": "Michelin Recommended",
+      "area": "Off-Strip",
+      "address": "9205 W. Russell Rd., #185, Las Vegas, NV 89148",
+      "cuisine": "Spanish",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://animabyedo.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Bouchon",
+      "tier": "Michelin Recommended",
+      "area": "Strip (The Venetian)",
+      "address": "The Venetian Resort & Casino, 3355 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cuisine": "French",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.venetianlasvegas.com/restaurants/bouchon.html",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "COTE Las Vegas",
+      "tier": "Michelin Recommended",
+      "area": "Strip (The Venetian)",
+      "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "Korean Steakhouse",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.venetianlasvegas.com/dining/restaurants/cote.html",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Estiatorio Milos",
+      "tier": "Michelin Recommended",
+      "area": "Strip (The Venetian)",
+      "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "Greek Seafood",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.venetianlasvegas.com/restaurants/estiatorio-milos.html",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Gymkhana Las Vegas",
+      "tier": "Michelin Recommended",
+      "area": "Strip (ARIA)",
+      "address": "ARIA Resort & Casino, 3730 S. Las Vegas Blvd., Las Vegas, NV 89158",
+      "cuisine": "Indian",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Kabuto",
+      "tier": "Michelin Recommended",
+      "area": "Chinatown (Spring Mountain Rd.)",
+      "address": "5040 Spring Mountain Rd., #4, Las Vegas, NV 89146",
+      "cuisine": "Sushi",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://kabutolv.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Kame Omakase",
+      "tier": "Michelin Recommended",
+      "area": "Chinatown (Spring Mountain Rd.)",
+      "address": "3616 W. Spring Mountain Rd., Ste. 103, Las Vegas, NV 89102",
+      "cuisine": "Omakase",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.kameomakase.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Lamaii",
+      "tier": "Michelin Recommended",
+      "area": "Off-Strip (Spring Mountain Rd.)",
+      "address": "4480 Spring Mountain Rd., Ste. 700, Las Vegas, NV 89102",
+      "cuisine": "Thai",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.lamaiilv.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Michael Mina",
+      "tier": "Michelin Recommended",
+      "area": "Strip (Bellagio)",
+      "address": "Bellagio Hotel & Casino, 3600 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "Seafood",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Mott 32",
+      "tier": "Michelin Recommended",
+      "area": "Strip (The Palazzo at The Venetian)",
+      "address": "The Palazzo at The Venetian, 3325 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "Cantonese",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Partage",
+      "tier": "Michelin Recommended",
+      "area": "Chinatown (Spring Mountain Rd.)",
+      "address": "3839 Spring Mountain Rd., Las Vegas, NV 89102",
+      "cuisine": "French",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://partage.vegas/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Pho Ga Bac Bac",
+      "tier": "Michelin Recommended",
+      "area": "Chinatown (Spring Mountain Rd.)",
+      "address": "3775 Spring Mountain Rd., Las Vegas, NV 89102",
+      "cuisine": "Vietnamese",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://bestchickenpho.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Ping Pang Pong",
+      "tier": "Michelin Recommended",
+      "area": "Off-Strip (Gold Coast)",
+      "address": "Gold Coast Hotel and Casino, 4000 W. Flamingo Rd., Las Vegas, NV 89103",
+      "cuisine": "Chinese",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "SoulBelly BBQ",
+      "tier": "Michelin Recommended",
+      "area": "Downtown",
+      "address": "1327 S. Main St., Las Vegas, NV 89104",
+      "cuisine": "Barbecue",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.soulbellybbq.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Sparrow + Wolf",
+      "tier": "Michelin Recommended",
+      "area": "Chinatown (Spring Mountain Rd.)",
+      "address": "4480 Spring Mountain Rd., #100, Las Vegas, NV 89102",
+      "cuisine": "New American",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.sparrowandwolflv.com/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Stubborn Seed Las Vegas",
+      "tier": "Michelin Recommended",
+      "area": "Strip (Resorts World)",
+      "address": "Resorts World Las Vegas, 3000 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cuisine": "Contemporary",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.rwlasvegas.com/restaurant/stubborn-seed/",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    },
+    {
+      "name": "Wing Lei",
+      "tier": "Michelin Recommended",
+      "area": "Strip (Wynn)",
+      "address": "Wynn Las Vegas, 3131 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cuisine": "Cantonese",
+      "priceLevel": null, "hours": null, "reservations": null, "priceForCouple": null, "social": null,
+      "link": "https://www.wynnlasvegas.com/dining/fine-dining/wing-lei",
+      "sources": [
+        { "label": "MICHELIN press release (address)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+        { "label": "LVCVA list (cuisine, venue link)", "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/" }
+      ]
+    }
+  ],
+  "excludedFromLasVegas": [
+    { "name": "Monte", "reason": "Listed by MICHELIN in South Salt Lake, Utah (not Las Vegas).", "source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" },
+    { "name": "Feldman's Deli", "reason": "Bib Gourmand address is Salt Lake City, Utah (not Las Vegas). Some third-party reprints show it under Las Vegas; the MICHELIN release does not.", "source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" }
+  ]
+}
