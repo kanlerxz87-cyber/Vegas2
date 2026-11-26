@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "Suggestions (for review, not implemented)",
+    "intro": "Suggested improvements to this site and to the research. Nothing below has been implemented. Choose which paths to pursue. Each has a status of Pending until you decide."
+  },
+  "items": [
+    { "id": "S1", "title": "Record dated price snapshots from each hotel's official booking calendar", "benefit": "Only way to answer 'cheapest time to book' and the 7-night totals with real, verified prices.", "effort": "Medium (manual or scripted; repeat over several weeks)", "risk": "Prices change daily; snapshots must carry a date and time.", "status": "Pending" },
+    { "id": "S2", "title": "Use the official RTC trip planner to record travel minutes for each hotel-to-activity pair", "benefit": "Turns the 1-hour travel requirement into a verified check.", "effort": "Low to medium", "risk": "Schedules change; RTC reports a funding shortfall and Strip construction changes.", "status": "Pending" },
+    { "id": "S3", "title": "Confirm the subway requirement with you", "benefit": "The brief says subway or bus. Las Vegas has no subway on official sites read so far.", "effort": "Low (one answer)", "risk": "None", "status": "Pending" },
+    { "id": "S4", "title": "Decide between a 3-night (Feb 15 to 18) plan and a 7-night plan (Feb 15 to 22) as the base", "benefit": "Sets every total, every price table and every booking window.", "effort": "Low (one answer)", "risk": "None", "status": "Pending" },
+    { "id": "S5", "title": "Add a per-row 'last checked' date and a link checker that runs before each publish", "benefit": "Shows the age of each verified value. Catches dead links.", "effort": "Low", "risk": "None", "status": "Pending" },
+    { "id": "S6", "title": "Add a Michelin filter by tier and area (Strip, Chinatown, Downtown, Off-Strip)", "benefit": "Makes clusters easy to compare on a phone.", "effort": "Low", "risk": "None", "status": "Pending" },
+    { "id": "S7", "title": "Add a map view of hotels, restaurants and activities", "benefit": "Shows travel distance at a glance; helps the 1-hour check.", "effort": "Medium (needs a map provider and verified coordinates from official sources)", "risk": "Coordinates must come from official addresses, not inferred.", "status": "Pending" },
+    { "id": "S8", "title": "Add a scoring sheet with weights you choose (price, Michelin count, bed, bathroom, travel time)", "benefit": "Makes the hotel ranking transparent and adjustable.", "effort": "Medium", "risk": "Weights are subjective; need your input (Q2, Q7).", "status": "Pending" },
+    { "id": "S9", "title": "Verify room bed types and bathroom wording on each hotel's official room page", "benefit": "Confirms the hard requirement for each hotel.", "effort": "Medium", "risk": "Room pages may not load in some tools; use a manual check if needed.", "status": "Pending" },
+    { "id": "S10", "title": "Add a 'source freshness' rule: any value older than 30 days is marked stale", "benefit": "Stops stale prices and hours from looking current.", "effort": "Low", "risk": "None", "status": "Pending" },
+    { "id": "S11", "title": "Publish the Michelin list from guide.michelin.com as a second check once it loads", "benefit": "Two official sources agree before publication.", "effort": "Low", "risk": "guide.michelin.com did not load through the fetch tool this session.", "status": "Pending" },
+    { "id": "S12", "title": "Consolidate the three parallel branches on GitHub into one site build before merging to main", "benefit": "Avoids duplicate pages and conflicting data.", "effort": "Medium (integration step)", "risk": "Other branches claim the same scope; merging without reconciling can break the site.", "status": "Pending" }
+  ]
+}

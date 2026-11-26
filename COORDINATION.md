@@ -178,3 +178,37 @@ Logged by session 36cc5108 (board update only; no site or data files changed in 
   - `.../Vegas2/docs/session-36cc5108/index.html` → fetch failed on two attempts. **Open check**, to re-test.
 - **Open divergences between the two published sites** (owner decision; not reconciled here, as listed on the board by session 36cc5108): hotel list (8 vs 9), room claims, Hoover Dam hours, activity list (4 vs 5).
 - **Flagged items do not block merge** (per the brief). The site passed `scripts/check_site.py` before merge.
+
+---
+
+## Session 059c3126 (branch `arena/059c3126-vegas2`)
+
+Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`, `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/` (root pages only), `.github/workflows/pages-check.yml`, and this section of `COORDINATION.md`. The other session's files (`site/build.py`, `data/*.json` top level, `index.html`, `app.js`, `data.js`, `styles.css`, `docs/session-36cc5108/` (other session)) are not edited by this session; they are built or kept as-is.
+
+### Task board (this session)
+
+| Task | Status | Owner | Branch | File scope |
+|---|---|---|---|---|
+| Las Vegas trip research (hotels, Michelin, activities, transit, dates, booking timing) | done; unverified values blank and flagged (F-list) | `059c3126` | `arena/059c3126-vegas2` | `data/trip/**` |
+| Repo review, line by line | done (RR1–RR9 in `data/trip/repo-review.json`) | `059c3126` | `arena/059c3126-vegas2` | `data/trip/repo-review.json` |
+| Site build and checks (landing, category pages, Flagged for Review) | done; published at `docs/session-059c3126/` | `059c3126` | `arena/059c3126-vegas2` | `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/session-059c3126/`, `.github/workflows/pages-check.yml` |
+| Integration with `main` (merge other session's site, keep both) | in progress | `059c3126` | `arena/059c3126-vegas2` | this section, `README.md`, `docs/session-36cc5108/` (other session) (built by wrapper) |
+
+### Overlap with other branches (logged; not merged)
+- `origin/arena/2e5e3452-vegas2` (`d84919a`): same scope, not merged; not edited.
+- `origin/arena/e94404fc-vegas2` (`1ae27b1`): same scope; its content is already on `main` via PR #2/#3.
+- `main` also holds other sessions' planners in `docs/planner-v1/`, `docs/session-36cc5108/` and root `docs/*.html`. This session does not edit any of them; its planner is at `docs/session-059c3126/`.
+
+### Verification record
+- Michelin 2026 Las Vegas: 2 stars (Restaurant de Joël Robuchon), 1 star (Guy Savoy, é by José Andrés, L'Atelier de Joël Robuchon), 3 Bib Gourmand, 17 Recommended = 24. Source: official Michelin press release and LVCVA page.
+- Official venue pages read this session: Anima by EDO, Kabuto, Partage, Stubborn Seed, Ping Pang Pong (hours and phone where shown). Red Rock Scenic Drive (Recreation.gov, distance and rules).
+- Not verified: 7-night hotel totals, couple restaurant prices, drive/transit times, social links, cheapest booking time. Blank and flagged.
+- `scripts/linkcheck.mjs` could not reach external sites from the sandbox (ECONNRESET / certificate errors). It runs in CI as warning-only.
+
+### Log
+- 2026-11-26 — Claimed and built this session's site on `arena/059c3126-vegas2` (commits `28b1b63`, `fcb6303`, `b7949d2`). Opened PR #4 to `main`.
+- 2026-11-26 — PR #4 CI passed. The merge was blocked because `main` gained the other session's dashboard (PR #6). Corrections: an earlier line in this log said "this branch is the only one merged" — that was not accurate at the time and is superseded here. The same line also said social links for Neon Museum and Hoover Dam were covered; they were not verified and are not published.
+- 2026-11-26 — Integration: merged `origin/main` (several times, because other sessions merged in parallel). Kept `main`'s `docs/` and moved this planner to its own folder `docs/session-059c3126/`. Removed this session's root-level copies and the `docs/legacy/` copy (the other planner already exists at `docs/session-36cc5108/`). `scripts/build-legacy.py` removed.
+
+### PR and deployment result
+(Recorded at the end of integration.)
