@@ -1,27 +1,68 @@
-# Coordination board
+# Coordination board — Vegas2 trip planner
+
+## Completed work by earlier sessions
 
 | Task | Status | Owner | Files |
 |---|---|---|---|
-| Research-backed Vegas trip planner and GitHub Pages site (initial base implementation) | done | arena/f0943026-vegas2 | COORDINATION.md, README.md, index.html, styles.css, data.js, .github/workflows/pages.yml |
-| Expand planner with mobile-first summaries, hotel shortlist, dining and activity tables, open questions and review flags | done | arena/e94404fc-vegas2 | index.html, styles.css, app.js, README.md, .nojekyll, COORDINATION.md |
+| Research-backed Vegas trip planner and GitHub Pages base implementation | Done | `arena/f0943026-vegas2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `data.js`, `.github/workflows/pages.yml` |
+| Expand source-first dashboard with initial shortlist, open questions, and flags | Done | `arena/e94404fc-vegas2` | `index.html`, `styles.css`, `app.js`, `README.md`, `.nojekyll`, `COORDINATION.md` |
+
+## Current session claim
+
+**Session:** `fd2715d0`  
+**Current Arena branch:** `arena/fd2715d0-vegas2` (fixed; no branch switch)  
+**Repo:** `kanlerxz87-cyber/Vegas2`  
+**Base originally seen:** `c97c82a`; upstream `main` advanced during this work to include PRs #1–#3.  
+**Scope claimed:** audit and correct/add mobile-first category pages and structured verified data; add standalone Questions, Suggestions, and Flagged for Review pages; integrate with the existing site; validate; open and merge PR; confirm Pages deployment.  
+**Files:** `COORDINATION.md`, `README.md`, `index.html`, `styles.css` only if requested through integration, `data.js` only if necessary to integrate, `data/*.json`, `assets/*`, `hotels.html`, `restaurants.html`, `activities.html`, `dates.html`, `questions.html`, `suggestions.html`, `flagged.html`.
+
+> This session started from a stale local checkout. The main branch already contained the prior sessions' merged dashboard and verification log; those files and claims are being preserved and extended, not removed. The claim commit is being rebased onto the latest `main`. No other active claim has been observed on the current branch after fetching upstream.
+
+## Task board
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Preserve prior site and audit current implementation | In progress | `fd2715d0` | existing root files, `COORDINATION.md` |
+| Michelin list, award status, official profile links | In progress | `fd2715d0` | `data/restaurants.json`, `restaurants.html` |
+| Hotel candidates, rates, room-fit and Michelin cluster methodology | In progress | `fd2715d0` | `data/hotels.json`, `hotels.html` |
+| Activities, hours, exceptions and social links | In progress | `fd2715d0` | `data/activities.json`, `activities.html` |
+| Date-window and booking analysis | In progress | `fd2715d0` | `data/dates.json`, `dates.html` |
+| Mobile dashboard and navigation integration | In progress | `fd2715d0` | `index.html`, `assets/*` |
+| Standalone Questions, Suggestions, Flagged for Review pages | In progress | `fd2715d0` | `questions.html`, `suggestions.html`, `flagged.html` |
+| Final verification, PR, merge, live deploy | Not started | `fd2715d0` | all final deliverables |
 
 ## Verification log
-- Initial implementation: Michelin entries and star statuses checked against official MICHELIN Guide pages linked in `data.js` (2026 selection). Future hours, transit times, prices and inventory are not asserted without confirmation. `node --check data.js` passed; HTML anchors/local references checked. No build dependencies required.
-- 2026-11-26 expansion: official MGM Grand page (https://mgmgrand.mgmresorts.com/en.html) confirms room options including MGM Two Queen; official transportation page (https://mgmgrand.mgmresorts.com/en/amenities/transportation.html) lists Monorail rates, station-to-station times, and operating hours (not guaranteed for 2027). Venetian homepage and map/parking page checked (https://www.venetianlasvegas.com/ and https://www.venetianlasvegas.com/resort/maps-and-parking.html). Caesars Palace and Wynn official property pages checked (https://www.caesars.com/caesars-palace and https://www.wynnlasvegas.com/).
-- MICHELIN official Guide result pages show 2026 award/listing statuses: Restaurant de Joël Robuchon, Two Stars (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/restaurant-de-joel-robuchon); L’Atelier de Joël Robuchon, One Star (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/l-atelier-de-joel-robuchon-las-vegas); Restaurant Guy Savoy, One Star (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/guy-savoy-las-vegas); Bouchon and Stubborn Seed have Guide listings but no star badge in search-result markup (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/bouchon-1250929 and https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/stubborn-seed-las-vegas). Direct fetch of individual Michelin pages failed; recheck linked current pages before booking.
-- Local verification of expanded page: all internal anchors have targets, local stylesheet/script/log exist, and `git diff --check` passes. Static site uses no dependencies; Pages workflow is configured to deploy root on `main` or manual dispatch. No live 2027 price lookup or authenticated booking was performed.
+
+### Prior sessions — retained as historical records
+
+- Session `f0943026`: Michelin entry/status checks and static-page checks are described in the prior log and source links. No 2027 hotel quote was claimed.
+- Session `e94404fc`: official MGM Grand, Venetian, Caesars Palace, Wynn and MICHELIN pages were checked; local anchors/files and Pages deployment were checked. The earlier dashboard explicitly left rates, travel times, social links and future schedules unverified. PR #2 is recorded below.
+
+### Current session — direct official-source checks
+
+- Official MICHELIN Guide Las Vegas index: https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurants — official listing page reports 1–24 of 24. The official 2026 Southwest release gives the starred list, addresses and Recommended list: https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s.
+- Official MICHELIN profile checks returned by web search for individual entries include: Restaurant de Joël Robuchon (Two Stars), https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/restaurant-de-joel-robuchon; L'Atelier, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/l-atelier-de-joel-robuchon-las-vegas; é by José Andrés, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/e-by-jose-andres; Guy Savoy, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/guy-savoy-las-vegas; China Poblano, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/china-poblano; Esther's Kitchen, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/esther-s-kitchen; YEN Viet Kitchen, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/yen-viet-kitchen; Anima by Edo, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/anima-by-edo; Bouchon, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/bouchon-1250929; COTE Las Vegas, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/cote-las-vegas; Estiatorio Milos, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/estiatorio-milos-1250934; Gymkhana Las Vegas, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/gymkhana-las-vegas; Kabuto, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/kabuto; Kame Omakase, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/kame-omakase; Lamaii, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/lamaii; Partage, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/partage-1201408; Pho Ga Bac Bac, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/pho-ga-bac-bac; Ping Pang Pong, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/ping-pang-pong; SoulBelly BBQ, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/soulbelly-bbq; Mott 32, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/mott-32-1250930; Wing Lei, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/wing-lei-1250924.
+- Official MICHELIN page search results showed current weekly hours for some restaurants (e.g. China Poblano, YEN Viet Kitchen, Wing Lei, Kabuto, Lamaii, SoulBelly BBQ, Anima by Edo, Ping Pang Pong). These are current Guide-page hours, not guaranteed 2027 schedules; any retained hours must be labeled with an as-of date and reconfirmed for the trip.
+- Official NFL 2026–27 dates confirm Super Bowl LXI on Feb 14, 2027 at SoFi Stadium, Inglewood: https://www.nfl.com/news/2026-27-national-football-league-important-dates.
+- U.S. OPM official federal-holidays page confirms Washington's Birthday on Mon Feb 15, 2027: https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/.
+- Exact-date hotel rates, cancellation terms, selected room private-bath/bed configuration, 2027 transit itineraries, future venue schedules and official social/video URLs are not claimed unless a direct official page verifies them. Blank and flag instead.
 
 ## Irregularities / flagged for review
-- Hotel date-specific total quotes (room, tax, resort fee, cancellation rules) and historical data needed to determine cheapest booking time are unavailable; price cells are blank.
-- Selected-room bathroom/bed details need confirmation (MGM's Two Queen bed size is shown by its official property page); remaining hotel room details need room-level checking.
-- Door-to-door transit times and 2027 schedules, restaurant totals/current menus and 2027 operating hours, plus official restaurant/activity social or video URLs remain unverified. These are blank and marked in the site's Flagged for Review section.
-- Preferred Feb 15–18, 2027 dates are three nights, incompatible with the 7–14-night duration. The displayed seven-night example is Feb 15–22, 2027 and is labeled as such.
-- MICHELIN awards are from the 2026 selection, not a guarantee of 2027 status, opening, or availability.
 
-## Coordination note
-The original checkout initially exposed only README.md and no coordination file. A concurrent PR had landed on `main` by the time the feature branch was rebased. Its files and data were preserved; this branch expands that implementation rather than replacing the existing data. Arena requires work on its assigned fixed branch, so the user-requested per-session branch naming is not applicable here.
+- Preferred Feb 15–18, 2027 window is three nights, while stated trip duration is 7–14 days and a seven-night hotel total is requested. No single duration is silently selected.
+- Feb 15 is the observed federal Washington's Birthday. Super Bowl LXI is Feb 14 in Inglewood, not Las Vegas. These are verified dates; no hotel-price impact is inferred.
+- Live exact-date hotel prices and the cheapest 7-night stay/booking date cannot be determined without identical-date, identical-room official booking quotes. Any earlier draft price/demand claims are to be removed unless official evidence is added.
+- Las Vegas has bus and monorail service; a transit-only, door-to-door ≤1-hour hotel-to-restaurant matrix requires route-by-route official timetable checks. No unsupported travel counts or rankings should be shown as verified.
+- Social search-result URLs are not verified venue accounts. Omit social handles/URLs unless linked from a venue's official site; otherwise show blank and flag.
+- Current MICHELIN selection is 2026, not a guarantee of a 2027 award, service schedule or opening.
+
+## Coordination / conflict log
+
+- During the initial work, local `origin/main` was stale at `c97c82a`. Fetch showed merged PRs #1–#3. The rebase stopped on an add/add conflict in `COORDINATION.md`; this resolution preserves the full upstream board and verification/deployment record, then appends this session's claim. No upstream work is intentionally discarded.
+- User requested branches named `session-<id>/<task>`, but Arena fixes this session to `arena/fd2715d0-vegas2`; work remains on that branch as required by the environment.
 
 ## PR and deployment result
-- PR #2 (https://github.com/kanlerxz87-cyber/Vegas2/pull/2) merged to `main` at `58dd7c3d9668c982b52fa83a5afe07a0a7447f0e` on 2026-11-26.
-- GitHub Pages deployment run 45901451051 succeeded. Published dashboard: https://kanlerxz87-cyber.github.io/Vegas2/. The Pages API reported `building` briefly; fetching the public URL then returned the deployed page.
-- Actions emitted a Node.js 20 deprecation advisory for upstream Actions versions; deployment succeeded.
+
+- Prior PR #2 (https://github.com/kanlerxz87-cyber/Vegas2/pull/2) merged to `main` at `58dd7c3d9668c982b52fa83a5afe07a0a7447f0e` on 2026-11-26.
+- Prior successful Pages deployment run: https://github.com/kanlerxz87-cyber/Vegas2/actions/runs/45901451051. Existing published site: https://kanlerxz87-cyber.github.io/Vegas2/.
+- Current session PR / merge / deploy: pending.
