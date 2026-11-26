@@ -37,3 +37,10 @@ Session `arena/0f0e637a-vegas2` claims all tasks 1-8 on the current branch (sing
 - 2026-11-26: Self-audit. Corrected: added missing Bib Gourmand Esther's Kitchen; Michelin counts now 1x2★, 3x1★, 3 Bib, 17 Recommended = 24. Removed unsourced notes/cuisine labels. Venue, guide, and hotel pages were NOT fetched, so those rows are flagged unverified.
 - 2026-11-26: Site pages built (index, restaurants, hotels, activities, executive-summary, suggestions, questions, flagged-review) with JSON-driven renderer assets/js/app.js. Internal links checked; no broken internal links. Browser render not tested in this session.
 - PENDING: integration PR to main, merge, and GitHub Pages enable/deploy confirmation (see task 7-8).
+
+## Conflict log (session arena/0f0e637a-vegas2)
+- 2026-11-26: Attempted PR #8 (arena/0f0e637a-vegas2 -> main). NOT MERGED. Main had already been integrated by session 36cc5108 (PRs #6, #7) with its own `docs/` site, `data/*.json`, `index.html`, and `.github/workflows/pages.yml` (deploys `docs/`). This branch's root-level `index.html`, `data/*.json`, and `COORDINATION.md` collide with those files (add/add conflicts).
+- Resolution: main's integrated site is kept as the published version and is not overwritten. This branch's content was not merged. Its Michelin counts (1x2★, 3x1★, 3 Bib, 17 Recommended = 24) match main's T2 record.
+- Note: my Pages API call returned 403 (token lacks Pages admin scope). Main's Pages source is set to `/docs` by its own session. Not changed by this session.
+- Unverified items on this branch (hotel prices, restaurant hours/costs, social links, venue URLs) were NOT fetched. They remain unverified and are not published.
+- Next step for the user: decide whether to keep main's `docs/` site (recommended) or to adopt parts of this branch. PR #8 is left open for review, not merged.
