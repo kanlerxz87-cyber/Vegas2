@@ -35,8 +35,8 @@ Legend: `unclaimed` · `in progress` · `done` · `needs review` (published on F
 - Brief says "subway or bus"; official sources show RTC bus and the Strip monorail, no subway (F01).
 - Red Rock Canyon has no public transit (BLM, S13); it cannot meet the bus-only one-hour test (F02).
 - Trip length conflict: 3-night preferred vs 7-night cost basis vs 1–2 weeks (F03).
-- Feb 15, 2027 is Presidents' Day (OPM, S10) (F13).
-- Yen Viet Kitchen: Bib Gourmand (official release) vs Recommended (Time Out) (F14).
+- Feb 15, 2027 is Washington's Birthday, a federal holiday (OPM, S10) (F13).
+- Yen Viet Kitchen: Bib Gourmand confirmed by the official release (S01, S02) and Time Out (S26); no conflict (F14, resolved).
 - Guy Savoy hours: official page shows none; three listings conflict (F10).
 - Hoover Dam hours: current official page not retrievable; sources conflict (F09).
 
@@ -45,3 +45,46 @@ Legend: `unclaimed` · `in progress` · `done` · `needs review` (published on F
 - 2026-11-26 · 36cc5108 · Claimed T0–T6. Repo held only `README.md`; created this file. Pages was enabled on `main` (legacy, `/`), so the site will be served from `/docs` after merge.
 - 2026-11-26 · 36cc5108 · Completed research and data for T0–T4 against official sources (retrieved this session). Built the site (T5) with 0 errors.
 - 2026-11-26 · 36cc5108 · T6 integration check: re-counted Michelin listings (4 starred, 3 Bib, 17 Recommended = 24) against the release; fixed one official name ("Stubborn Seed Las Vegas"); verified every source and flag ID is defined and referenced; verified trip weekdays (Feb 15 Mon, Feb 18 Thu). Next: PR, merge, Pages source to `/docs`, deploy check.
+
+---
+
+## Entries from other sessions on `main` (preserved verbatim)
+
+These entries were written by other sessions and are kept unchanged. They are not edited by session 36cc5108.
+
+### Coordination board (verbatim from main)
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Research-backed Vegas trip planner and GitHub Pages site (initial base implementation) | done | arena/f0943026-vegas2 | COORDINATION.md, README.md, index.html, styles.css, data.js, .github/workflows/pages.yml |
+| Expand planner with mobile-first summaries, hotel shortlist, dining and activity tables, open questions and review flags | done | arena/e94404fc-vegas2 | index.html, styles.css, app.js, README.md, .nojekyll, COORDINATION.md |
+
+## Verification log
+- Initial implementation: Michelin entries and star statuses checked against official MICHELIN Guide pages linked in `data.js` (2026 selection). Future hours, transit times, prices and inventory are not asserted without confirmation. `node --check data.js` passed; HTML anchors/local references checked. No build dependencies required.
+- 2026-11-26 expansion: official MGM Grand page (https://mgmgrand.mgmresorts.com/en.html) confirms room options including MGM Two Queen; official transportation page (https://mgmgrand.mgmresorts.com/en/amenities/transportation.html) lists Monorail rates, station-to-station times, and operating hours (not guaranteed for 2027). Venetian homepage and map/parking page checked (https://www.venetianlasvegas.com/ and https://www.venetianlasvegas.com/resort/maps-and-parking.html). Caesars Palace and Wynn official property pages checked (https://www.caesars.com/caesars-palace and https://www.wynnlasvegas.com/).
+- MICHELIN official Guide result pages show 2026 award/listing statuses: Restaurant de Joël Robuchon, Two Stars (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/restaurant-de-joel-robuchon); L’Atelier de Joël Robuchon, One Star (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/l-atelier-de-joel-robuchon-las-vegas); Restaurant Guy Savoy, One Star (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/guy-savoy-las-vegas); Bouchon and Stubborn Seed have Guide listings but no star badge in search-result markup (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/bouchon-1250929 and https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/stubborn-seed-las-vegas). Direct fetch of individual Michelin pages failed; recheck linked current pages before booking.
+- Local verification of expanded page: all internal anchors have targets, local stylesheet/script/log exist, and `git diff --check` passes. Static site uses no dependencies; Pages workflow is configured to deploy root on `main` or manual dispatch. No live 2027 price lookup or authenticated booking was performed.
+
+## Irregularities / flagged for review
+- Hotel date-specific total quotes (room, tax, resort fee, cancellation rules) and historical data needed to determine cheapest booking time are unavailable; price cells are blank.
+- Selected-room bathroom/bed details need confirmation (MGM's Two Queen bed size is shown by its official property page); remaining hotel room details need room-level checking.
+- Door-to-door transit times and 2027 schedules, restaurant totals/current menus and 2027 operating hours, plus official restaurant/activity social or video URLs remain unverified. These are blank and marked in the site's Flagged for Review section.
+- Preferred Feb 15–18, 2027 dates are three nights, incompatible with the 7–14-night duration. The displayed seven-night example is Feb 15–22, 2027 and is labeled as such.
+- MICHELIN awards are from the 2026 selection, not a guarantee of 2027 status, opening, or availability.
+
+## Coordination note
+The original checkout initially exposed only README.md and no coordination file. A concurrent PR had landed on `main` by the time the feature branch was rebased. Its files and data were preserved; this branch expands that implementation rather than replacing the existing data. Arena requires work on its assigned fixed branch, so the user-requested per-session branch naming is not applicable here.
+
+## PR and deployment result
+- PR #2 (https://github.com/kanlerxz87-cyber/Vegas2/pull/2) merged to `main` at `58dd7c3d9668c982b52fa83a5afe07a0a7447f0e` on 2026-11-26.
+- GitHub Pages deployment run 45901451051 succeeded. Published dashboard: https://kanlerxz87-cyber.github.io/Vegas2/. The Pages API reported `building` briefly; fetching the public URL then returned the deployed page.
+- Actions emitted a Node.js 20 deprecation advisory for upstream Actions versions; deployment succeeded.
+
+
+## Integration record (session 36cc5108, T6)
+
+- Conflict: `main` moved to `dce4548` (other sessions' root dashboard, `.github/workflows/pages.yml` deploying repo root). This branch merged `origin/main` with both sides kept; no file from either side was deleted.
+- Pages: the workflow now uploads `docs/` (was `.`) so the published site is this build. Pages source set to `main` `/docs` (F27).
+- Other dashboard (root `index.html`, `app.js`, `data.js`, `styles.css`) remains in the repo but is no longer the published site. Its starred-count and omission errors are flagged as F29.
+- Corrections in this integration (see commit log): removed an unsupported Caesars tax split; OPM holiday name aligned to OPM's wording; Yen Viet Kitchen Time Out check resolved (no conflict).
+- PR and merge result: recorded at the end of this file (see "PR and deployment result").
