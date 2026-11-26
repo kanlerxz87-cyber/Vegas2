@@ -703,3 +703,7 @@ table tr:hover {
     max-width: 280px;
   }
 }
+
+.sub-note { font-size: 0.75rem; color: #6b7280; margin-top: 0.2rem; }
+.page-header .sub a { text-decoration: underline; }
+.info-card li { list-style: disc; margin-left: 1rem; }

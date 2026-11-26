@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Summary — Vegas2</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+<header class="site-header"><div class="header-wrap">
+  <a class="brand" href="index.html" style="text-decoration:none"><div class="mark">V2</div><div>Vegas2</div></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg></button>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <nav class="nav-drawer" id="navDrawer"><ul class="drawer-list"><li><a href="index.html">Home / Dashboard</a></li><li><a href="restaurants.html">Michelin Restaurants</a></li><li><a href="hotels.html">Hotels</a></li><li><a href="activities.html">Activities</a></li><li><a href="executive-summary.html" class="active">Executive Summary</a></li><li><a href="suggestions.html">Suggestions</a></li><li><a href="questions.html">Open Questions</a></li><li><a href="flagged-review.html">Flagged for Review</a></li></ul></nav>
+</div></header>
+<main class="page" id="content">
+<div class="page-header"><h2>Executive Summary</h2><div class="sub">Las Vegas, 2 adults, 7 nights (Sun Feb 15 – Sun Feb 22, 2027). Preferred window Feb 15–18.</div></div>
+<div class="stat-grid">
+ <div class="stat-card"><div class="value">24</div><div class="label">Michelin-listed (Las Vegas)</div></div>
+ <div class="stat-card"><div class="value">4</div><div class="label">Currently starred</div></div>
+ <div class="stat-card"><div class="value">9</div><div class="label">Candidate hotels</div></div>
+ <div class="stat-card"><div class="value">11</div><div class="label">Activities</div></div>
+</div>
+<div class="info-card"><h3>Key findings (verified)</h3><ul>
+<li><b>Michelin, Las Vegas (official release):</b> 1 two-star (Restaurant de Joël Robuchon, MGM Grand), 3 one-star (é by José Andrés; Guy Savoy; L'Atelier de Joël Robuchon), 3 Bib Gourmand, 17 Michelin Recommended. Source: <a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">michelin.com press release</a>.</li>
+<li><b>Transit:</b> Las Vegas has no subway. The RTC Deuce runs the Strip 24/7; Monorail covers the east Strip. Secondary guides list the Deuce 24-hour pass at $8 (Strip fare). Confirm on the official RTC site.</li>
+<li><b>Room requirement:</b> MGM Grand's "MGM Two Queen" room has two queen beds (confirmed on mgmgrand.com).</li>
+</ul></div>
+<div class="callout warn"><span class="ct-title">Not yet known</span>Hotel prices for Feb 15–22, 2027, private-bath details for each hotel, restaurant hours and prices, and social-media links. These are blank and flagged. See <a href="questions.html">Open Questions</a> and <a href="flagged-review.html">Flagged for Review</a>.</div>
+<div class="info-card"><h3>Recommendation status</h3><p>No hotel is recommended yet. Hotel ranking uses the count of Michelin-listed restaurants on-site (Venetian 4, MGM Grand 2, Cosmopolitan 2, others 1). Final ranking needs verified prices and room details.</p></div>
+</main>
+<footer class="site-footer"><div class="footer-wrap"><div><strong>Vegas2</strong> — Las Vegas trip planning. Data generated 2026-11-26. Unverified items are blank and flagged; confirm before booking. <a href="flagged-review.html">Flagged for Review</a></div></div></footer>
+<script>
+const t=document.getElementById('menuToggle'),o=document.getElementById('navOverlay'),d=document.getElementById('navDrawer');
+function op(){o.classList.add('open');d.classList.add('open');}
+function cl(){o.classList.remove('open');d.classList.remove('open');}
+t.addEventListener('click',()=>d.classList.contains('open')?cl():op());o.addEventListener('click',cl);
+</script>
+<script src="assets/js/app.js"></script>
+<script></script>
+</body></html>

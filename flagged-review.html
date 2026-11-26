@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flagged for Review — Vegas2</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+<header class="site-header"><div class="header-wrap">
+  <a class="brand" href="index.html" style="text-decoration:none"><div class="mark">V2</div><div>Vegas2</div></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg></button>
+  <div class="nav-overlay" id="navOverlay"></div>
+  <nav class="nav-drawer" id="navDrawer"><ul class="drawer-list"><li><a href="index.html">Home / Dashboard</a></li><li><a href="restaurants.html">Michelin Restaurants</a></li><li><a href="hotels.html">Hotels</a></li><li><a href="activities.html">Activities</a></li><li><a href="executive-summary.html">Executive Summary</a></li><li><a href="suggestions.html">Suggestions</a></li><li><a href="questions.html">Open Questions</a></li><li><a href="flagged-review.html" class="active">Flagged for Review</a></li></ul></nav>
+</div></header>
+<main class="page" id="content"><div class="page-header"><h2>Loading…</h2></div></main>
+<footer class="site-footer"><div class="footer-wrap"><div><strong>Vegas2</strong> — Las Vegas trip planning. Data generated 2026-11-26. Unverified items are blank and flagged; confirm before booking. <a href="flagged-review.html">Flagged for Review</a></div></div></footer>
+<script>
+const t=document.getElementById('menuToggle'),o=document.getElementById('navOverlay'),d=document.getElementById('navDrawer');
+function op(){o.classList.add('open');d.classList.add('open');}
+function cl(){o.classList.remove('open');d.classList.remove('open');}
+t.addEventListener('click',()=>d.classList.contains('open')?cl():op());o.addEventListener('click',cl);
+</script>
+<script src="assets/js/app.js"></script>
+<script>Promise.all([VegasApp.load('data/restaurants.json'),VegasApp.load('data/hotels.json'),VegasApp.load('data/activities.json')]).then(([r,h,a])=>VegasApp.flagged(r,h,a));</script>
+</body></html>
