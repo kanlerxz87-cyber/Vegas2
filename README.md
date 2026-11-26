@@ -73,7 +73,7 @@ A value appears only when an official source confirmed it. Anything else is left
 
 ## Other dashboard in this repository
 
-The root files from another session (`index.html`, `app.js`, `data.js`, `styles.css`, `.nojekyll`) are kept in the repository. The published site is now `docs/` (see F27). Their README, preserved verbatim, follows:
+The earlier dashboard from another session now lives in `legacy-dashboard/` (moved with `git mv`, nothing deleted). The root `index.html` redirects to `docs/`, which is the published site (see F27). Their README, preserved verbatim, follows:
 
 ---
 
