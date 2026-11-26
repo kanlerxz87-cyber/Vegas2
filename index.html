@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegas2 — Las Vegas Trip Planner (Feb 15–22, 2027)</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Las Vegas vacation planner: Michelin restaurants, hotels, activities, and booking guidance for a couple, Feb 15–22 2027.">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="brand">
+        <div class="mark">V2</div>
+        <div>Vegas2</div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+      </button>
+      <div class="nav-overlay" id="navOverlay"></div>
+      <nav class="nav-drawer" id="navDrawer">
+        <div class="drawer-head">
+          <div class="brand" style="font-size:1rem;"><div class="mark" style="width:24px;height:24px;font-size:1rem;">V2</div><div>Vegas2</div></div>
+        </div>
+        <ul class="drawer-list">
+          <li><a href="index.html">Home / Dashboard</a></li>
+          <li><a href="restaurants.html">Michelin Restaurants</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="executive-summary.html">Executive Summary</a></li>
+          <li><a href="suggestions.html">Suggestions</a></li>
+          <li><a href="questions.html">Open Questions</a></li>
+          <li><a href="flagged-review.html">Flagged for Review</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge">Las Vegas &bull; 7 nights &bull; 2 adults</div>
+    <h1>Vegas2<br>Trip Planner Dashboard</h1>
+    <p>A simple, mobile-friendly dashboard for a Las Vegas vacation for two adults. Preferred travel Feb 15–18, 2027; priced here as a 7-night stay <strong>Sun Feb 15 – Sun Feb 22, 2027</strong>. All data is traced to official sources and flagged where it cannot be confirmed.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="executive-summary.html">Executive Summary</a>
+      <a class="btn btn-ghost" href="hotels.html">Hotels &amp; Pricing</a>
+      <a class="btn btn-ghost" href="restaurants.html">Michelin Restaurants</a>
+    </div>
+
+    <div class="dates-card">
+      <h3>Trip dates</h3>
+      <div class="dates-grid">
+        <div class="date-item"><div class="label">Preferred window</div><div class="value">Feb 15 – 18, 2027</div></div>
+        <div class="date-item"><div class="label">Priced stay</div><div class="value">Feb 15 – 22, 2027</div></div>
+        <div class="date-item"><div class="label">Latest allowed</div><div class="value">Mar 23, 2027</div></div>
+        <div class="date-item"><div class="label">Party</div><div class="value">2 adults</div></div>
+        <div class="date-item"><div class="label">Nights</div><div class="value">7 nights</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <div class="page">
+    <div class="page-header">
+      <h2>Dashboard</h2>
+      <div class="sub">Quick view of the plan. Open any category below for the full tables and sources.</div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="value">24</div>
+        <div class="label">Michelin-listed restaurants (Las Vegas)</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">4</div>
+        <div class="label">Starred (★★ / ★)</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">9</div>
+        <div class="label">Candidate hotels</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">11</div>
+        <div class="label">Activities listed</div>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <div class="d-icon">&#127866;</div>
+        <h3>Michelin Restaurants</h3>
+        <p>4 starred + 3 Bib Gourmand + 17 Recommended venues, ranked by proximity to your hotel. Source: official Michelin Guide Southwest 2026 press release.</p>
+        <a class="link-btn" href="restaurants.html">View restaurants &#8594;</a>
+      </div>
+      <div class="dash-card">
+        <div class="d-icon">&#128668;</div>
+        <h3>Hotels</h3>
+        <p>Queen bed + private bath for 2 adults, ranked by Michelin restaurants within 1 hour. Live Feb 2027 pricing flagged unverified.</p>
+        <a class="link-btn" href="hotels.html">View hotels &#8594;</a>
+      </div>
+      <div class="dash-card">
+        <div class="d-icon">&#127926;</div>
+        <h3>Activities</h3>
+        <p>Sightseeing, museums, shows — all within ~1 hour by bus/monorail from a central Strip hotel.</p>
+        <a class="link-btn" href="activities.html">View activities &#8594;</a>
+      </div>
+      <div class="dash-card">
+        <div class="d-icon">&#128214;</div>
+        <h3>Transit note</h3>
+        <p>Las Vegas has <b>no subway</b>. RTC Deuce bus (Strip, 24/7) + Monorail (east Strip) are the public options. Everything on the Strip is under 1 hour by bus.</p>
+        <a class="link-btn" href="flagged-review.html">See caveats &#8594;</a>
+      </div>
+    </div>
+
+    <div class="callout info" style="margin-top:1.5rem;">
+      <span class="ct-title">How to read this site</span>
+      Every table row carries a source link to an official site. If a value could not be confirmed from an official source, it is left <b>blank</b> and marked <b>unverified</b>. Nothing was inferred or filled in. Review the <a href="flagged-review.html">Flagged for Review</a> page before booking.
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div><strong>Vegas2</strong> &mdash; Las Vegas trip planning dashboard. Built as a GitHub Pages static site.</div>
+      <div class="sources">Primary source: MICHELIN Guide official press release, <cite>MICHELIN Guide Reveals First-Ever Southwest Restaurant Selection in the U.S.</cite> (Aug 26/31, 2026) &mdash; <a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">michelin.com</a></div>
+      <div>Generated 2026-11-26 &bull; All unverified items must be confirmed from official sources before booking.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById('menuToggle');
+    const overlay = document.getElementById('navOverlay');
+    const drawer = document.getElementById('navDrawer');
+    function openNav(){ toggle.setAttribute('aria-expanded','true'); overlay.classList.add('open'); drawer.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeNav(){ toggle.setAttribute('aria-expanded','false'); overlay.classList.remove('open'); drawer.classList.remove('open'); document.body.style.overflow=''; }
+    toggle.addEventListener('click', () => drawer.classList.contains('open') ? closeNav() : openNav());
+    overlay.addEventListener('click', closeNav);
+    document.querySelectorAll('.drawer-list a').forEach(a => a.addEventListener('click', closeNav));
+  </script>
+</body>
+</html>

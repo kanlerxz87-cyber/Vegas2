@@ -1,0 +1,527 @@
+{
+  "generated": "2026-11-26",
+  "source": "MICHELIN Guide official press release — \"MICHELIN Guide Reveals First-Ever Southwest Restaurant Selection in the U.S.\" (Michelin North America, ceremony at Fontainebleau Las Vegas, Aug 26 2026; published Aug 31 2026)",
+  "sourceUrl": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s",
+  "edition": "2026 MICHELIN Guide Southwest (inaugural; first Michelin coverage of Las Vegas since 2009)",
+  "scope": "Las Vegas, Nevada restaurants only (excludes Arizona / New Mexico / Utah entries)",
+  "counts": {
+    "twoStars": 1,
+    "oneStar": 3,
+    "bibGourmand": 3,
+    "recommended": 17,
+    "totalLasVegas": 24
+  },
+  "restaurants": [
+    {
+      "id": "r-robuchon",
+      "name": "Restaurant de Joël Robuchon",
+      "distinction": "2 Michelin Stars",
+      "distinctionKey": "twoStars",
+      "cuisine": "",
+      "address": "MGM Grand, 3799 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.mgmresorts.com/en/dining/mgm-grand/joel-robuchon.html",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/restaurant-de-joel-robuchon",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-guysavoy",
+      "name": "Guy Savoy Las Vegas",
+      "distinction": "1 Michelin Star",
+      "distinctionKey": "oneStar",
+      "cuisine": "French Contemporary",
+      "address": "Caesars Palace, 3570 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.caesars.com/caesars-palace/dining/guy-savoy",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/guy-savoy-las-vegas",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-ejoseandres",
+      "name": "é by José Andrés",
+      "distinction": "1 Michelin Star",
+      "distinctionKey": "oneStar",
+      "cuisine": "Spanish Contemporary",
+      "address": "The Cosmopolitan of Las Vegas, 3708 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.cosmopolitanlasvegas.com/dining/e-by-jose-andres",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/e-by-jose-andres",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-latelier",
+      "name": "L'Atelier de Joël Robuchon Las Vegas",
+      "distinction": "1 Michelin Star",
+      "distinctionKey": "oneStar",
+      "cuisine": "French",
+      "address": "MGM Grand, 3799 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.mgmresorts.com/en/dining/mgm-grand/latelier-de-joel-robuchon.html",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/latelier-de-joel-robuchon-las-vegas",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-chinapoblano",
+      "name": "China Poblano",
+      "distinction": "Bib Gourmand",
+      "distinctionKey": "bibGourmand",
+      "cuisine": "Mexican / Chinese-Korean",
+      "address": "The Cosmopolitan of Las Vegas, 3708 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.cosmopolitanlasvegas.com/dining/china-poblano",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/china-poblano",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-esthers",
+      "name": "Esther's Kitchen",
+      "distinction": "Bib Gourmand",
+      "distinctionKey": "bibGourmand",
+      "cuisine": "",
+      "address": "1131 S. Main St., Las Vegas, Nevada",
+      "officialUrl": "",
+      "michelinUrl": "",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-yenviet",
+      "name": "YEN Viet Kitchen",
+      "distinction": "Bib Gourmand",
+      "distinctionKey": "bibGourmand",
+      "cuisine": "Vietnamese",
+      "address": "3575 S. Decatur Blvd., Ste. 101, Las Vegas, Nevada 89103",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/yen-viet-kitchen",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-anima",
+      "name": "Anima by Edo",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Italian",
+      "address": "9205 W. Russell Rd., #185, Las Vegas, Nevada 89148",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/anima-by-edo",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-bouchon",
+      "name": "Bouchon",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "French bistro",
+      "address": "The Venetian Resort & Casino, 3355 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.venetianlasvegas.com/dining/bouchon",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/bouchon",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-cote",
+      "name": "Cote Las Vegas",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Korean steakhouse",
+      "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.venetianlasvegas.com/dining/cote",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/cote-las-vegas",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-milos",
+      "name": "Estiatorio Milos",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Greek / seafood",
+      "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.venetianlasvegas.com/dining/milos",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/estiatorio-milos",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-gymkhana",
+      "name": "Gymkhana Las Vegas",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Indian",
+      "address": "ARIA Resort & Casino, 3730 S. Las Vegas Blvd., Las Vegas, Nevada 89158",
+      "officialUrl": "https://www.arialasvegas.com/dining/gymkhana",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/gymkhana-las-vegas",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-kabuto",
+      "name": "Kabuto",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Japanese / omakase",
+      "address": "5040 Spring Mountain Rd., #4, Las Vegas, Nevada 89146",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/kabuto",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-kame",
+      "name": "Kame Omakase",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Japanese / omakase",
+      "address": "3616 W. Spring Mountain Rd., Ste. 103, Las Vegas, Nevada 89102",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/kame-omakase",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-lamaii",
+      "name": "Lamaii",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Thai",
+      "address": "4480 Spring Mountain Rd., Ste. 700, Las Vegas, Nevada 89102",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/lamaii",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-michaelmina",
+      "name": "Michael Mina",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "American",
+      "address": "Bellagio Hotel & Casino, 3600 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.bellagio.com/dining/michael-mina",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/michael-mina",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-mott32",
+      "name": "Mott 32",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Chinese",
+      "address": "The Palazzo at The Venetian, 3325 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.palazzo.com/dining/mott-32",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/mott-32",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-partage",
+      "name": "Partage",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "French",
+      "address": "3839 Spring Mountain Rd., Las Vegas, Nevada 89102",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/partage",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-phogabacbac",
+      "name": "Pho Ga Bac Bac",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Vietnamese",
+      "address": "3775 Spring Mountain Rd., Las Vegas, Nevada 89102",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/pho-ga-bac-bac",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-pingpangpong",
+      "name": "Ping Pang Pong",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Chinese / dim sum",
+      "address": "Gold Coast Hotel and Casino, 4000 W. Flamingo Rd., Las Vegas, Nevada 89103",
+      "officialUrl": "https://www.goldcoastcasino.com/dining/ping-pang-pong",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/ping-pang-pong",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-soulbelly",
+      "name": "SoulBelly BBQ",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Barbecue",
+      "address": "1327 S. Main St., Las Vegas, Nevada 89104",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/soulbelly-bbq",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-sparrowwolf",
+      "name": "Sparrow + Wolf",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "New American",
+      "address": "4480 Spring Mountain Rd., #100, Las Vegas, Nevada 89102",
+      "officialUrl": "",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/sparrow-wolf",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-stubbornseed",
+      "name": "Stubborn Seed Las Vegas",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "New American",
+      "address": "Resort World Las Vegas, 3000 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.rswlasvegas.com/dining/stubborn-seed",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/stubborn-seed-las-vegas",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    },
+    {
+      "id": "r-winglei",
+      "name": "Wing Lei",
+      "distinction": "Michelin Recommended",
+      "distinctionKey": "recommended",
+      "cuisine": "Chinese",
+      "address": "Wynn Las Vegas, 3131 S. Las Vegas Blvd., Las Vegas, Nevada 89109",
+      "officialUrl": "https://www.wynnlasvegas.com/dining/wing-lei",
+      "michelinUrl": "https://guide.michelin.com/us/en/las-vegas/restaurant/wing-lei",
+      "status": "michelinListed",
+      "linkStatus": "unverified",
+      "hours": "",
+      "daysOpen": "",
+      "costForTwo": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "hoursStatus": "unverified"
+    }
+  ],
+  "verificationNotes": [
+    "Name, distinction (2★/1★/Bib Gourmand/Recommended) and Las Vegas membership are from the official MICHELIN press release (michelin.com).",
+    "Street addresses come from the same release as recorded during research; re-check against guide.michelin.com before booking.",
+    "Official venue URLs and guide.michelin.com URLs were NOT fetched in this session and are marked linkStatus=unverified. Do not treat them as confirmed.",
+    "Hours, days open, cost for two, and YouTube/TikTok/Instagram links are not in the Michelin release and are left blank and flagged unverified.",
+    "Cuisine labels and neighbourhood labels were removed because they are not from the official release."
+  ]
+}
