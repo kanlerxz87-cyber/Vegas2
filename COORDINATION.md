@@ -115,7 +115,7 @@ See the "Prior sessions" table above and the verbatim records in git history. Hi
 
 ## Session `arena/2e5e3452-vegas2` — isolated Vegas Field Notes subsite
 
-This entry records the active session's additions without replacing the existing `docs/` landing page, its data, or the main Pages workflow. The subsite source is `field-notes/`; its published copy is isolated at `docs/session-2e5e3452/`. Latest integrated base during this update: `0daa5ee` (main advanced in parallel through PRs #13, #4, #11, #12, and #15). The branch is being rebased additively; existing session sites and their coordination records are preserved.
+This entry records the active session's additions without replacing the existing `docs/` landing page, its data, or the main Pages workflow. The subsite source is `field-notes/`; its published copy is isolated at `docs/session-2e5e3452/`. The branch was rebased additively onto `0daa5ee` after main advanced through PRs #13, #4, #11, #12, and #15; existing session sites and their coordination records were preserved.
 
 ### Research decisions
 
@@ -139,5 +139,8 @@ This entry records the active session's additions without replacing the existing
 - `python3 scripts/build_field_notes.py` — passed; generates only `docs/session-2e5e3452/`.
 - `python3 scripts/validate_field_notes.py` — passed for source and published copy: 24 restaurants (4 starred, 3 Bib Gourmand, 17 Recommended) and five hotels in each separate rate scenario.
 - HTTP smoke checks returned 200 for all seven pages and all three data files. `git diff --check` passed.
-- PR #14, “Add isolated Vegas Field Notes planning subsite,” is open. Checks passed before this latest rebase; rerun after push. Merge and Pages verification remain pending.
-- Live preview: served from `field-notes/` on port 4173.
+- PR #14, “Add isolated Vegas Field Notes planning subsite,” merged on Nov 26, 2026; merge commit `84abdeb2de99dd7137205d440e8ee35b52d5c84e`.
+- PR checks passed: Field Notes validation and rebuild, existing site validation, and existing site build. The Pages deployment workflow (`45905046100`) and GitHub's Pages build (`45905045093`) both succeeded.
+- The Pages API still reports legacy source `main` `/` and status `built`. Public page checks confirmed the new subsite at `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-2e5e3452/` (the repository's current legacy root source exposes the checked-in `docs/` path). The alternate path without `/docs/` did not resolve under that source configuration.
+- Actions reported an upstream Node.js 20 deprecation advisory; deployment succeeded.
+- Local preview remains served from `field-notes/` on port 4173.
