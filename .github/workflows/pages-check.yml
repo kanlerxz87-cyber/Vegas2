@@ -16,8 +16,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Rebuild site and run verification checks
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild planner and run verification checks
         run: node scripts/build.mjs
+      - name: Rebuild other dashboard into docs/legacy
+        run: python3 scripts/build-legacy.py
       - name: Fail if committed docs/ is out of date
         run: git diff --exit-code -- docs
       - name: External link report (warning only; some sites block bots)

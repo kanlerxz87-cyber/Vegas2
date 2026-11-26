@@ -1,35 +1,64 @@
-# Vegas2 — Las Vegas trip planner
+# Vegas2 — Las Vegas trip planner (Feb 15 – Mar 23, 2027)
 
-A static, mobile-friendly dashboard for planning a Las Vegas trip (window: Feb 15 to Mar 23, 2027).
-Published with GitHub Pages from the `docs/` folder on `main`.
+Live site (GitHub Pages): https://kanlerxz87-cyber.github.io/Vegas2/
 
-**Live site:** https://kanlerxz87-cyber.github.io/Vegas2/ (after the Pages source is set to `main` / `docs`)
+Two sites are published from `docs/`:
 
-## What is in the site
-- **Home**: executive summary and headline numbers
-- **Hotels**: candidates ranked by MICHELIN listings in the same resort, with bed/bath/price status
-- **Michelin**: all 24 official Las Vegas listings (2026 MICHELIN Guide Southwest), clusters, hours where verified
-- **Activities**: attractions with official hours, fees, reservation rules and social links where official
-- **Transit & dates**: RTC bus, Las Vegas Monorail, key dates (OPM federal holidays)
-- **Booking timing**: promotions and booking windows printed on official pages
-- **Questions**, **Suggestions** (for review, not implemented), **Flagged for Review**, **Repo review**, **Sources**
+| Path | What it is | Built by |
+|------|-----------|----------|
+| `docs/` (root) | This session's planner: executive summary, hotels, Michelin restaurants, activities, transit and dates, booking timing, questions, suggestions, Flagged for Review, repo review, sources | `scripts/build.mjs` from `data/trip/*.json` |
+| `docs/legacy/` | The other session's dashboard (kept unchanged for comparison; linked from the landing page) | `scripts/build-legacy.py` (wraps `site/build.py`) from `data/*.json` |
 
-## Rules used
-- Every published row carries at least one official-source link.
-- Any value not confirmed on an official source is left blank and shown as **Unverified**. These are listed automatically on the Flagged for Review page.
-- Michelin awards come from the official MICHELIN press release; the Visit Las Vegas list is used for cuisine and venue links.
+## Layout
 
-## How the site is built
-Data lives in `data/*.json`. The generator is dependency-free Node:
+| Path | Purpose |
+|------|---------|
+| `data/trip/*.json` | Source data for the planner (every value cites an official source; unverified values are blank and flagged) |
+| `scripts/build.mjs` | Builds the planner into `docs/` and runs the verification rules. Exit 0 = passed |
+| `scripts/build-legacy.py` | Builds the other dashboard into `docs/legacy/` without editing its code |
+| `scripts/linkcheck.mjs` | Checks external links (warning-only; intended for CI) |
+| `scripts/style.css` | Planner stylesheet (copied to `docs/assets/style.css`) |
+| `.github/workflows/pages-check.yml` | CI: runs both builds and fails if committed `docs/` is out of date |
+| `.github/workflows/pages.yml` | Deploys `docs/` to GitHub Pages on push to `main` |
+| `COORDINATION.md` | Shared task board, claims, logs and handoffs |
+
+## Rebuild
 
 ```bash
-node scripts/build.mjs      # verifies data rules, regenerates docs/, checks internal links
-node scripts/linkcheck.mjs  # reports external links that do not return OK (run in CI; warning only)
+node scripts/build.mjs          # planner -> docs/
+python3 scripts/build-legacy.py # other dashboard -> docs/legacy/
+node scripts/linkcheck.mjs      # optional, needs outbound web access
 ```
 
-`build.mjs` fails (non-zero exit) if a source is not on the official-domain list, a Michelin tier count does not match the official totals, a hotel ranking is out of order, or an internal link is broken.
+## Verification rule
 
-CI: `.github/workflows/pages-check.yml` rebuilds the site and fails if the committed `docs/` differs from the build output.
+A value appears only when an official source confirmed it. Anything else is left blank and marked **Unverified**, with a flag ID that links to the Flagged for Review page. Third-party sources are used only to flag conflicts.
 
-## Coordination
-See `COORDINATION.md` for the task board, claims, overlap with other session branches, and the log.
+---
+
+## Other dashboard in this repository
+
+The root files from another session (`index.html`, `app.js`, `data.js`, `styles.css`, `.nojekyll`) are kept in the repository. The published site is now `docs/` (see F27). Their README, preserved verbatim, follows:
+
+---
+
+# Las Vegas Trip Planner
+
+A source-first, mobile-friendly planning dashboard for a two-adult Las Vegas trip (Feb 15–Mar 23, 2027). Open `index.html` locally or publish this repository with GitHub Pages.
+
+## Verification and limits
+
+The dashboard separates published facts from unknowns. Dynamic hotel rates and total tax-inclusive prices for Feb 15–22, 2027, restaurant menu totals, transit journey times and future opening hours are not represented as verified unless a cited official source provides them. Blank values are deliberately flagged rather than estimated. Recheck all information before booking.
+
+The 2026 MICHELIN Guide search identified several Las Vegas listings, including three starred restaurants. Individual current Guide listings are linked. Guide presence and star status are explicitly distinguished.
+
+## Deploy
+
+GitHub repository Settings → Pages → Deploy from a branch → `main` / `/ (root)`, or use the included Pages workflow on pushes to `main`.
+
+## Files
+
+- `index.html`: single-page dashboard with category navigation.
+- `styles.css`: responsive styling.
+- `app.js`: interactive navigation and filtering.
+- `COORDINATION.md`: task board, sources, verification notes and flagged gaps.
