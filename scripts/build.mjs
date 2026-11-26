@@ -1,14 +1,15 @@
 #!/usr/bin/env node
-// Builds the static GitHub Pages site in docs/ from data/*.json.
+// Builds this session's trip-planner pages into docs/ (root) from data/trip/*.json.
+// The other session's dashboard is built into docs/legacy/ by site/build.py (see README).
 // No dependencies. Run: node scripts/build.mjs
 // Exits non-zero if any verification rule fails (see checkData below).
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const DATA = join(ROOT, "data");
+const DATA = join(ROOT, "data", "trip");
 const OUT = join(ROOT, "docs");
 
 const load = (f) => JSON.parse(readFileSync(join(DATA, f), "utf8"));
@@ -233,6 +234,7 @@ function buildIndex() {
     ["flagged.html", "Flagged for Review", `${flagged.irregularities.length} irregularities and ${unverifiedCount} unverified item groups.`],
     ["repo-review.html", "Repo review", `${repo.checks.length} repository checks and their sources.`],
     ["sources.html", "Sources", "Every official link used, and where it was used."],
+    ["legacy/index.html", "Other session dashboard", "Snapshot of the dashboard built by another session (site/build.py), kept unchanged for comparison."],
   ]
     .map(([href, t, d]) => `<a class="card" href="${href}"><h3>${esc(t)}</h3><p>${esc(d)}</p></a>`)
     .join("");
@@ -608,7 +610,9 @@ if (problems.length) {
   process.exit(1);
 }
 
-rmSync(OUT, { recursive: true, force: true });
+// Only remove files this builder owns; docs/legacy/ belongs to site/build.py.
+for (const f of [...readdirSync(OUT).filter((f) => f.endsWith(".html")), ".nojekyll"]) rmSync(join(OUT, f), { force: true });
+rmSync(join(OUT, "assets"), { recursive: true, force: true });
 mkdirSync(join(OUT, "assets"), { recursive: true });
 const outputs = {
   "index.html": buildIndex(),
@@ -629,12 +633,13 @@ writeFileSync(join(OUT, "assets", "style.css"), readFileSync(join(ROOT, "scripts
 
 // Internal link check: every relative href/src must resolve to a generated file.
 const pageFiles = new Set([...Object.keys(outputs), "assets/style.css"]);
+const exists = (rel) => existsSync(join(OUT, rel));
 const broken = [];
 for (const [f, html] of Object.entries(outputs)) {
   for (const m of html.matchAll(/href="([^"#:]+)(#[^"]*)?"/g)) {
     const target = m[1];
     if (target.startsWith("http")) continue;
-    if (!pageFiles.has(target)) broken.push(`${f} -> ${target}`);
+    if (!pageFiles.has(target) && !exists(target)) broken.push(`${f} -> ${target}`);
   }
 }
 if (broken.length) {
