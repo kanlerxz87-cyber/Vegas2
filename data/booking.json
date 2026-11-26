@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-11-26",
+  "dates": [
+    {
+      "option": "Preferred — 3 nights",
+      "check_in": "Mon Feb 15, 2027",
+      "check_out": "Thu Feb 18, 2027",
+      "nights": 3,
+      "note": "Check-in is Washington's Birthday (Presidents' Day), a federal holiday (OPM official calendar). Expect high demand."
+    },
+    {
+      "option": "Full — 7 nights",
+      "check_in": "Mon Feb 15, 2027",
+      "check_out": "Mon Feb 22, 2027",
+      "nights": 7,
+      "note": "The brief asks for a 7-night total. Still inside the Feb 15–Mar 23, 2027 window and the 1–2 week range."
+    }
+  ],
+  "sources_dates": [
+    {
+      "label": "OPM — Federal Holidays 2027 (Feb 15 = Washington's Birthday)",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    }
+  ],
+  "rate_results": {
+    "status": "Not retrieved",
+    "text": "No official rate for Feb 15–22, 2027 or Feb 15–18, 2027 was retrieved for any hotel in this session. Every price cell on the Hotels page is therefore Unverified.",
+    "why": "Official booking engines were not queried for these dates, and the fetch tool could not load the booking flows. A rate check is a listed next step (see Suggestions)."
+  },
+  "timing": {
+    "status": "Not determined",
+    "text": "The cheapest upcoming booking time cannot be stated from verified data. No historical or forward rate series was retrieved from an official source.",
+    "verified_booking_facts": [
+      {
+        "fact": "Caesars Palace official homepage advertises 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance' (terms apply).",
+        "url": "https://www.caesars.com/caesars-palace"
+      },
+      {
+        "fact": "Caesars Palace official homepage lists 'FREE 48-Hour Cancellation*' under 'Why Book With Us' (asterisk terms not retrieved).",
+        "url": "https://www.caesars.com/caesars-palace"
+      },
+      {
+        "fact": "é by José Andrés releases tickets three months in advance (official site); waitlist offered when a date is full.",
+        "url": "https://www.ebyjoseandres.com/"
+      },
+      {
+        "fact": "Caesars Palace official Guy Savoy page says reservations are via OpenTable and groups of 13+ call or submit an inquiry.",
+        "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"
+      },
+      {
+        "fact": "Wynn Flexible Getaway rate: cancel 72 hours before arrival to avoid a penalty of one night's room rate and tax; one night's rate and tax is charged at booking. Policy seen on a Nov 26–27, 2026 rate page, so confirm it for 2027.",
+        "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0"
+      }
+    ]
+  }
+}

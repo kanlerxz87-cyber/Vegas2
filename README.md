@@ -1,5 +1,46 @@
 # Vegas2 — Las Vegas trip planner (Feb 15 – Mar 23, 2027)
 
+Live site (GitHub Pages, served from `docs/`): **https://kanlerxz87-cyber.github.io/Vegas2/**
+
+## Published pages (what each URL is)
+
+| URL path | What it is | Built by |
+|---|---|---|
+| `/` (`docs/index.html`) | **Verified landing page** and dashboard: executive summary, hotels, Michelin, activities, booking, questions, suggestions, Flagged for Review, repo review, sources | `scripts/build_site.py` |
+| `/session-36cc5108/` | Parallel site from PR #6, unchanged (its own data in `data/*.json`) | `site/build.py` (output moved to this folder during integration) |
+| `/planner-v1/` | First single-page dashboard from PRs #2/#3, unchanged | copied static files |
+
+## Verified site (this session, a52047d7)
+
+| Path | What it is |
+|---|---|
+| `data/verified/*.json` | Source data for every table: hotels, Michelin, activities, booking, questions, suggestions, flagged, repo review, sources. Every row has a source; unverified values are blank and flagged |
+| `scripts/build_site.py` | Builds `docs/*.html` and `docs/assets/style.css` from `data/verified/` (Python 3 standard library) |
+| `scripts/check_site.py` | Verification gate: JSON validity, a source on every row, official-domain allowlist, Michelin counts (4 starred / 3 Bib / 17 Recommended = 24), internal links, placeholder text |
+| `assets/style.css` | Source stylesheet (copied into `docs/assets/`) |
+
+Rebuild and check (run in this order; both must pass):
+
+```bash
+python3 scripts/build_site.py
+python3 scripts/check_site.py
+python3 site/build.py      # rebuilds /session-36cc5108/ only
+```
+
+Verification rule: a value is **Verified** only when an official source confirmed it. **Partial** means an official source covers only part of the claim. Everything else is left blank and marked **Unverified**. Nothing is inferred.
+
+## Integration notes
+
+- `main` gained a second site (`docs/`, `site/build.py`) from PR #6 while this branch was open. Both builds are kept. Their output moved from `docs/` to `docs/session-36cc5108/` so the two builds cannot delete each other's pages.
+- The Pages workflow (`.github/workflows/pages.yml`) deploys `docs/` and is unchanged.
+- Root-level `index.html`, `styles.css`, `app.js`, `data.js` are the v1 dashboard source, kept unchanged. Their copy for publishing is `docs/planner-v1/`.
+
+---
+
+## Readme from the other session (session 36cc5108), kept verbatim
+
+# Vegas2 — Las Vegas trip planner (Feb 15 – Mar 23, 2027)
+
 Live site (GitHub Pages): https://kanlerxz87-cyber.github.io/Vegas2/
 
 ## What is here

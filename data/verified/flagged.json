@@ -1,0 +1,270 @@
+{
+  "as_of": "2026-11-26",
+  "intro": "Everything here is published for your review. These items do not block the merge. Each entry gives the conflicting or missing data and the source links so you can check it yourself.",
+  "items": [
+    {
+      "id": "F1",
+      "category": "Source conflict",
+      "title": "Secondary press gives different 2026 Michelin star holders for Las Vegas",
+      "detail": "Memesita (Aug 31, 2026) reports Joël Robuchon at 3 stars and Picasso, Guy Savoy and Alex at 2 stars, and Nobu and Wing Lei at 1 star. The official Michelin release lists Restaurant de Joël Robuchon at 2 stars; é by José Andrés, Guy Savoy Las Vegas and L'Atelier at 1 star; and Wing Lei as Recommended. The official list is used everywhere on this site.",
+      "src": [
+        {
+          "label": "Official Michelin release (used)",
+          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+        },
+        {
+          "label": "Conflicting secondary report (Memesita)",
+          "url": "https://www.memesita.com/michelin-guide-2026-new-stars-for-las-vegas-and-the-american-southwest/"
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "category": "Source conflict",
+      "title": "Las Vegas Magazine lists Bib Gourmand restaurants that Michelin lists as Recommended",
+      "detail": "Las Vegas Magazine (Aug 27, 2026) puts Anima by Edo, Bouchon, Cote, Mott 32, Estiatorio Milos, Gymkhana, Kabuto, Kame Omakase, Lamaii, Michael Mina, Partage, Pho Ga Bac Bac, Ping Pang Pong, SoulBelly BBQ, Sparrow & Wolf, Stubborn Seed and Wing Lei under Bib Gourmand. The official release lists 3 Las Vegas Bib Gourmands (China Poblano, Esther's Kitchen, YEN Viet Kitchen) and these 17 as Recommended.",
+      "src": [
+        {
+          "label": "Official Michelin release — Bib and Recommended lists (used)",
+          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+        },
+        {
+          "label": "Las Vegas Magazine (conflicting)",
+          "url": "https://lasvegasmagazine.com/dining/2026/aug/27/michelin-guide-las-vegas-restaurants-stars/"
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "category": "Irregularity",
+      "title": "Preferred check-in date (Mon Feb 15, 2027) is a federal holiday",
+      "detail": "Washington's Birthday (Presidents' Day) falls on Feb 15, 2027. Expect higher demand and possibly different hours or closures at attractions that follow holiday schedules. Not yet priced.",
+      "src": [
+        {
+          "label": "OPM Federal Holidays — 2027",
+          "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "category": "Source conflict",
+      "title": "é by José Andrés operating days differ between official and third-party sources",
+      "detail": "Official site: open Tuesday through Sunday, two seatings at 5:30 PM and 8:30 PM. A third-party listing (smartervegas.com) says Tue–Sat. The official site is used.",
+      "src": [
+        {
+          "label": "Official é by José Andrés site (used)",
+          "url": "https://www.ebyjoseandres.com/"
+        },
+        {
+          "label": "Third-party listing (conflicting)",
+          "url": "https://www.smartervegas.com/dining/restaurant/e_by_jose_andres.aspx"
+        }
+      ]
+    },
+    {
+      "id": "F5",
+      "category": "Unverified",
+      "title": "Hours conflict for Joël Robuchon, L'Atelier and Guy Savoy; official MGM pages could not be loaded",
+      "detail": "Third-party sites disagree on the days open for both Joël Robuchon and L'Atelier. Guy Savoy: official page does not show days; a third-party page says Wed–Sun 5:30–9:30 PM and a 2025 page says Tue–Sat 5–10 PM. All three are left as Unverified.",
+      "src": [
+        {
+          "label": "Official Guy Savoy page (partial)",
+          "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"
+        },
+        {
+          "label": "Third-party: Joël Robuchon hours (conflicting)",
+          "url": "https://www.luminafrontier.ai/en/hotels/mgm-grand-las-vegas/mgm-grand-restaurants/"
+        },
+        {
+          "label": "Third-party: L'Atelier hours (conflicting)",
+          "url": "https://www.opentable.com/r/latelier-joel-robuchon-mgm-grand-hotel-and-casino-mgm-resorts"
+        }
+      ]
+    },
+    {
+      "id": "F6",
+      "category": "Unverified",
+      "title": "No 2027 hotel rates retrieved; cheapest booking time not determined",
+      "detail": "No official rate for Feb 15–18 or Feb 15–22, 2027 was retrieved for any hotel. The Caesars Palace homepage shows 'Rooms from $139' for Dec 11–13, 2026 under a promotion; that is not a trip-date price and is not used.",
+      "src": [
+        {
+          "label": "Caesars Palace official homepage (promo for Dec 2026 only)",
+          "url": "https://www.caesars.com/caesars-palace"
+        }
+      ]
+    },
+    {
+      "id": "F7",
+      "category": "Unverified",
+      "title": "Travel time 'within 1 hour by subway or bus' not verified for any hotel",
+      "detail": "No official transit-time source was retrieved. Las Vegas has no subway (to be confirmed with an official transit source). The ranking on the Hotels page counts Michelin restaurants on each hotel's own campus, not transit-time reachability.",
+      "src": [
+        {
+          "label": "BLM — public transit does not reach Red Rock (official)",
+          "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area"
+        }
+      ]
+    },
+    {
+      "id": "F8",
+      "category": "Unverified",
+      "title": "Hotel room type not confirmed on an official page for four resorts",
+      "detail": "Caesars Palace, MGM Grand and The Venetian have no official room page confirmed in this session (MGM Grand and Venetian fetches failed). ARIA's 2-queen confirmation is for a suite; the standard 2-queen room came from third-party listings only.",
+      "src": [
+        {
+          "label": "Caesars Palace official site",
+          "url": "https://www.caesars.com/caesars-palace"
+        },
+        {
+          "label": "ARIA official suite page",
+          "url": "https://aria.mgmresorts.com/en/hotel/center-suite.html"
+        }
+      ]
+    },
+    {
+      "id": "F9",
+      "category": "Unverified",
+      "title": "Valley of Fire distance from Las Vegas not on the official page",
+      "detail": "The official Nevada State Parks page gives hours and fees but no distance. Third-party sites say 48–55 miles and 50–60 minutes; these are not used.",
+      "src": [
+        {
+          "label": "Official Valley of Fire page",
+          "url": "https://parks.nv.gov/parks/valley-of-fire"
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "category": "Unverified",
+      "title": "Red Rock Canyon entry fee and reservation fee not confirmed on an official page",
+      "detail": "Third-party guides give $20 per vehicle and a $2 reservation fee. The BLM and Recreation.gov pages retrieved state the reservation rules but not the fee amount, so the amounts are left blank.",
+      "src": [
+        {
+          "label": "BLM Red Rock Canyon NCA",
+          "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area"
+        },
+        {
+          "label": "Recreation.gov timed entry",
+          "url": "https://www.recreation.gov/timed-entry/10075177"
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "category": "Irregularity",
+      "title": "Hoover Dam: ticket page status changed between versions; use only official ticket links",
+      "detail": "The official tour page shows Hoover Dam tour tickets as 'not currently available' on one retrieved version and as a live ticketing link on the later version. Several third-party sites sell Hoover Dam tours (for example hooverdam-tours.co). Book only through the official link on usbr.gov.",
+      "src": [
+        {
+          "label": "Official Hoover Dam tour information",
+          "url": "https://www.usbr.gov/lc/hooverdam/service/index.html"
+        },
+        {
+          "label": "Third-party seller warning (not official)",
+          "url": "https://hooverdam-tours.co/plan-your-visit/hoover-dam-official-website/"
+        }
+      ]
+    },
+    {
+      "id": "F12",
+      "category": "Unverified",
+      "title": "Social media links (YouTube, TikTok, Instagram) mostly not verified",
+      "detail": "Only property-level (Caesars Palace) and agency-level (Bureau of Reclamation, BLM) accounts were confirmed on official pages. These are not attraction- or restaurant-specific. Other rows are blank.",
+      "src": [
+        {
+          "label": "Caesars Palace official (property accounts)",
+          "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"
+        },
+        {
+          "label": "BLM official (agency accounts)",
+          "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area"
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "category": "Unverified",
+      "title": "Neon Museum 2027 price is a starting price, and 2026 last-entry times may not carry into 2027",
+      "detail": "The official site lists '2027 Admission — from $21'. The exact price and last entry for the trip date are not confirmed. The last-entry times shown are from the 2026 tickets page.",
+      "src": [
+        {
+          "label": "Official Neon Museum (2027 admission)",
+          "url": "https://neonmuseum.org/"
+        },
+        {
+          "label": "Official Neon Museum tickets page (2026 version)",
+          "url": "https://neonmuseum.org/tickets-and-experiences/"
+        }
+      ]
+    },
+    {
+      "id": "F14",
+      "category": "Irregularity",
+      "title": "Brief conflicts: separate session branches vs. this session's single-branch rule",
+      "detail": "The shared-board brief asks for session-<id>/<task> branches. This session's rules allow only the current branch (arena/a52047d7-vegas2). All tasks are on that branch and are logged in COORDINATION.md.",
+      "src": [
+        {
+          "label": "COORDINATION board (this repo)",
+          "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/a52047d7-vegas2/COORDINATION.md"
+        }
+      ]
+    },
+    {
+      "id": "F15",
+      "category": "Repo",
+      "title": "Repo review: no license, no .gitignore, README has no description",
+      "detail": "The repo holds only README.md ('# Vegas2'). It has no LICENSE, no .gitignore, and no description. Details on the Repo Review page.",
+      "src": [
+        {
+          "label": "GitHub API — repo metadata (license null, description null)",
+          "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2"
+        },
+        {
+          "label": "GitHub API — Pages config (legacy, main, /)",
+          "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages"
+        }
+      ]
+    },
+    {
+      "id": "F16",
+      "category": "Irregularity",
+      "title": "Earlier dashboard (v1) reports 3 starred restaurants; official release lists 4",
+      "detail": "planner-v1/index.html (from PRs #2/#3 on main) says 'Starred Guide restaurants found: 3'. The official Michelin Southwest 2026 release lists 4 starred Las Vegas restaurants: Restaurant de Joël Robuchon (2★), and é by José Andrés, Guy Savoy Las Vegas and L'Atelier de Joël Robuchon (1★ each). v1 omits é by José Andrés. This site uses the official release. v1 is kept unchanged and is labelled as an earlier version.",
+      "src": [
+        {
+          "label": "Michelin official release, Aug 2026",
+          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+        },
+        {
+          "label": "Earlier dashboard (v1) as merged on main (commit dce4548)",
+          "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/dce4548/index.html"
+        }
+      ]
+    },
+    {
+      "id": "F17",
+      "category": "Irregularity",
+      "title": "Wynn 'Panoramic View Two Queens' claim withdrawn — not on official booking page",
+      "detail": "An earlier version of hotels.json marked a Wynn 'Panoramic View Two Queens, 640 sq ft' room as verified. On re-fetch (fetched 2026-11-26) the official Wynn booking page lists only King and Encore King room types across five chunks. No two-queen room appears. The claim is withdrawn; Wynn's queen status is now Unverified and its bathroom is Partial (King room pages only).",
+      "src": [
+        {
+          "label": "Official Wynn booking engine (room list, fetched)",
+          "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0"
+        }
+      ]
+    },
+    {
+      "id": "F18",
+      "category": "Unverified",
+      "title": "Wynn resort-fee wording conflicts on the same booking page",
+      "detail": "The official Wynn booking page shows a '$55 plus tax' daily resort fee on the Flexible Getaway rate block, while the room cards say 'Includes Resort Fee' and a second resort-fee block lists amenities without a dollar amount. The page also shows only the Nov 26–27, 2026 rate, not Feb 2027. Confirm the 2027 fee and total at checkout before comparing prices.",
+      "src": [
+        {
+          "label": "Official Wynn booking engine (fetched)",
+          "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0"
+        }
+      ]
+    }
+  ]
+}

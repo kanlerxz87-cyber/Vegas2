@@ -89,3 +89,62 @@ The original checkout initially exposed only README.md and no coordination file.
 - **Pages workflow**: `.github/workflows/pages.yml` now uploads `docs/` (was `.`).
 - **Corrections in this integration**: removed an unsupported Caesars tax split; OPM holiday wording; Yen Viet Kitchen Time Out check resolved (no conflict, F14); other dashboard's starred-count error flagged (F29).
 - **PR #7**: this change (root redirect, legacy move, record update). Its merge result is recorded in the PR and in the next COORDINATION update.
+
+
+---
+
+# Session a52047d7 — this branch (`arena/a52047d7-vegas2`)
+
+Base: `c97c82a`. The session rules fix the branch name, so the brief's `session-<id>/<task>` form is not used (decision recorded in F14). Statuses use the same legend as above.
+
+## Task board (session a52047d7)
+
+| # | Task | Status | Files | Notes |
+|---|------|--------|-------|-------|
+| T1 | Repo review, line by line | done | `data/verified/repo_review.json`, `docs/repo-review.html` | Log 2026-11-26-A. Items verified on GitHub API |
+| T2 | Hotels (8 Strip hotels): rooms, private bath, Michelin on campus | done (partial) | `data/verified/hotels.json` | Verified: Conrad, Bellagio, ARIA suite, Cosmopolitan (listing). Wynn two-queen claim withdrawn (F17). Prices and transit unverified |
+| T3 | Michelin 2026 Las Vegas (24 rows) | done | `data/verified/michelin.json` | Status from official release. Hours and prices unverified |
+| T4 | Activities (4) | done (partial) | `data/verified/activities.json` | Verified: Hoover fees and hours, Valley of Fire fee and closure, Neon 2027 admission and official social links. Hoover YouTube/Instagram, Red Rock social are agency-level (Partial) |
+| T5 | Booking, price and timing | done (no verified 2027 rates) | `data/verified/booking.json` | Wynn rate page shows only Nov 26–27 2026. No 2027 total verified |
+| T6 | Questions and information gaps | done | `data/verified/questions.json` | |
+| T7 | Suggestions (review only, not implemented) | done | `data/verified/suggestions.json` | Waiting for user choice |
+| T8 | Flagged for Review (F1–F18) | needs review | `data/verified/flagged.json` | Published. Does not block merge |
+| T9 | Site build: landing, subpages, CSS, build and check scripts | done | `scripts/build_site.py`, `scripts/check_site.py`, `assets/style.css`, `docs/*.html`, `docs/planner-v1/` | `scripts/check_site.py` passes: 154 links, 11 pages, all rows sourced |
+| T10 | Integration: merge with `main`, publish, PR, merge, Pages check | in progress | `COORDINATION.md`, `README.md`, `docs/`, `site/build.py` (one output path) | See log 2026-11-26-E |
+
+## Merge conflicts and integration decisions (logged)
+
+- **2026-11-26-D — conflict with PRs #2 and #3** (`arena/f0943026-vegas2`, `arena/e94404fc-vegas2`). Conflicts in `COORDINATION.md` (add/add), `README.md` and `index.html` (add/add). Resolution: both sides kept. The v1 dashboard is preserved as `planner-v1/` (copy of `main`'s root files).
+- **2026-11-26-F — second conflict, PR #7** (`arena/36cc5108-vegas2`, merged as `d27f1f2`). That PR made the root `index.html` a redirect to `docs/index.html` and moved the v1 dashboard to `legacy-dashboard/`. Resolution: the redirect is kept. The Pages artifact is `docs/`, so `docs/index.html` (this session's verified landing) is the live home page. `docs/planner-v1/` keeps the v1 dashboard live inside the artifact, because `legacy-dashboard/` is outside it. `docs/session-36cc5108/` is unchanged.
+- **2026-11-26-E — conflict with PR #6** (`arena/36cc5108-vegas2`, merged to `main` as `ff8a411`). PR #6 added `docs/`, `site/build.py` and `data/*.json` with the same names as this branch. Its Pages workflow now deploys `docs/`, so this branch's root-level site would not be published. Resolution:
+  - Their `data/*.json` files are kept as they are. My data moved to `data/verified/`.
+  - Their `docs/` is moved to `docs/session-36cc5108/`. One output path in `site/build.py` was changed (`OUT = ROOT/"docs"/"session-36cc5108"`) so their build cannot delete the root site. Their rebuild produces identical output with 0 errors.
+  - My verified site is the published landing page at `docs/`.
+  - `.github/workflows/pages.yml` (deploys `docs/`) is unchanged.
+- **Board note.** The board above (session 36cc5108) says "no other session is active." That was true when written. This session also merged into `main` in parallel. Both sites are published and each is labelled.
+
+## Verification corrections in this session
+
+- **Wynn "Panoramic View Two Queens, 640 sq ft" withdrawn** (F17). It was marked verified in an earlier draft. Five chunks of the official booking page list King and Encore King rooms only.
+- **Wynn resort-fee wording conflicts** on the same page (F18).
+- **v1 star count is wrong:** says 3 starred, the official release lists 4 (é by José Andrés omitted) (F16).
+- **ARIA, Conrad, Bellagio, Neon Museum, Hoover Dam, Valley of Fire** claims re-fetched from official pages and corrected (see log 2026-11-26-D).
+
+## Session log (a52047d7)
+
+- **2026-11-26-A — claim.** Claimed T1–T10. Baseline: `README.md` only, no LICENSE, no `.gitignore`, Pages enabled (legacy, `main` `/`, public).
+- **2026-11-26-B — research.** Official sources: Michelin 2026 Southwest release and PDF; OPM federal holidays (Feb 15 2027 = Washington's Birthday); USBR Hoover Dam; BLM Red Rock; Recreation.gov timed entry; Nevada State Parks Valley of Fire; Neon Museum; hotel room pages (Cosmopolitan, Bellagio, Caesars, ARIA, Wynn booking engine, Resorts World Conrad); Caesars and é restaurant pages.
+- **2026-11-26-C — build and gate.** Build reproducible. `check_site.py` passed (130 links, 10 pages) before the integration.
+- **2026-11-26-D — conflict with PRs #2 and #3, and re-verification** (see above).
+- **2026-11-26-E — conflict with PR #6, integration** (see above). PR #5 (`arena/a52047d7-vegas2` → `main`) is the integration PR.
+
+## Still unverified (blank and flagged)
+
+- Hotel rates for Feb 15–22 2027 (7 nights) and Feb 15–18 2027 (3 nights). No official 2027 rate retrieved.
+- Transit times for the 1-hour rule, the restaurant hours for most of the 24 Michelin entries, restaurant costs for 2 adults, and most social links.
+- Caesars, MGM Grand, and Venetian room pages (fetch errors).
+
+## PR and merge record
+
+- PR #5: https://github.com/kanlerxz87-cyber/Vegas2/pull/5 (`arena/a52047d7-vegas2` → `main`).
+- Merge result and Pages check: see the entry appended after the merge below.

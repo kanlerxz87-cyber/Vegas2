@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the static GitHub Pages site from data/*.json.
 
-Output: docs/*.html (served by GitHub Pages from /docs).
+Output: docs/session-36cc5108/*.html (served by GitHub Pages at /session-36cc5108/). Changed in integration so it does not delete the root site in docs/.
 Standard library only. Fails (exit 1) when:
   - a data row has no source ID, or a source ID is not in data/sources.json
   - a flag ID is referenced but not defined in data/flags.json
@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-OUT = ROOT / "docs"
+OUT = ROOT / "docs" / "session-36cc5108"
 ERRORS = []
 
 

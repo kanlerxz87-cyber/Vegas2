@@ -3,25 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Suggestions (awaiting your approval) · Las Vegas Trip Planner</title>
+<title>Suggestions · Las Vegas Trip Planner</title>
+<meta name="description" content="Las Vegas trip planning dashboard: hotels, Michelin restaurants, activities and verification status. Verified from official sources; unverified values are left blank.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="top">
-  <div class="brand"><a href="index.html">Las Vegas Trip Planner</a><span class="asof">Data as of 2026-11-26</span></div>
-  <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Restaurants</a><a href="activities.html">Activities</a><a href="analysis.html">Analysis</a><a href="questions.html">Questions</a><a href="suggestions.html" class="on">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="sources.html">Sources</a><a href="repo-review.html">Repo Review</a></nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Las Vegas Trip Planner</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="booking.html">Booking &amp; price</a><a href="questions.html">Questions</a><a href="suggestions.html" class="on">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+  </div>
 </header>
-<main>
-<h1>Suggestions (awaiting your approval)</h1>
+<main class="wrap">
 
-<p class="lede">These are proposed changes only. Nothing here is implemented until you approve it. Choose the items you want; each one lists the decision it needs.</p>
-<div class="note"><strong>How to respond:</strong> reply with the IDs you approve (for example, "approve S-01, S-02, S-03, S-06") and any changes to the scope.</div>
-<div class="table-wrap"><table class="suggestions"><thead><tr><th>ID</th><th>Area</th><th>Suggestion</th><th>Why</th><th>How</th><th>Effort</th><th>Decision needed</th><th>Status</th></tr></thead><tbody><tr><td data-label="ID"><strong id="S-01">S-01</strong></td><td data-label="Area">Data - hotels</td><td data-label="Suggestion"><strong>Time-stamped official rate log for the chosen dates</strong></td><td data-label="Why">Closes Q-03 and Q-04. The only way to answer &#x27;cheapest time to book&#x27; from official sources is a dated record of official rates.</td><td data-label="How">For each hotel&#x27;s official booking engine, record: search date/time, check-in/out, rate, resort fee, tax, total. Add one row per search to data/rates_log.json.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Approve, and pick the dates (Q-01, Q-02).</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-02">S-02</strong></td><td data-label="Area">Data - hotels</td><td data-label="Suggestion"><strong>Verify room type (queen-or-larger bed, private bathroom) from official room pages</strong></td><td data-label="Why">Closes F05. This is a hard requirement from the brief.</td><td data-label="How">Open each hotel&#x27;s room-type pages, record bed type and bathroom statement with URL, and mark each row Verified or Unverified.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Approve the nine-hotel scope, or name the subset.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-03">S-03</strong></td><td data-label="Area">Data - hotels</td><td data-label="Suggestion"><strong>Read cancellation and deposit terms for each shortlisted hotel</strong></td><td data-label="Why">The &#x27;best time to book&#x27; depends on flexibility. Caesars&#x27; 48-hour cancellation is asterisked (F28).</td><td data-label="How">Copy the cancellation terms text from each official booking page with its URL.</td><td data-label="Effort">Low</td><td data-label="Decision needed">Approve.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-04">S-04</strong></td><td data-label="Area">Data - hotels</td><td data-label="Suggestion"><strong>Add a Chinatown / Spring Mountain and downtown hotel shortlist</strong></td><td data-label="Why">Six Michelin listings sit on Spring Mountain Rd, but no hotel in the current shortlist is there (Q-06).</td><td data-label="How">Name candidate hotels from official sites, then run the same checks as S-01 and S-02.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Approve, or name hotels to add.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-05">S-05</strong></td><td data-label="Area">Data - travel</td><td data-label="Suggestion"><strong>Add RTC trip-planner travel times for each hotel-to-restaurant and hotel-to-activity pair</strong></td><td data-label="Why">The one-hour bus/monorail test is unverified (F20). RTC&#x27;s trip planner is the official source for transit time.</td><td data-label="How">Run RTC Trip Planner for each pair, record duration, number of transfers, and the RTC link used. Blank any pair the planner cannot answer.</td><td data-label="Effort">High (many pairs)</td><td data-label="Decision needed">Approve; confirm &#x27;bus + monorail&#x27; (F01); confirm Red Rock exception (F02).</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-06">S-06</strong></td><td data-label="Area">Data - restaurants</td><td data-label="Suggestion"><strong>Pull official hours, booking windows and menu prices for the remaining 20 listings</strong></td><td data-label="Why">Closes F17, F18, Q-08 and Q-09. Official restaurant sites are reachable, but not every page was retrieved yet.</td><td data-label="How">Open each official_site link from data/restaurants.json (from LVCVA S03), copy hours and printed prices with the URL. Leave blank where not printed.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Approve.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-07">S-07</strong></td><td data-label="Area">Data - activities</td><td data-label="Suggestion"><strong>Add activities the owner ranks as interests</strong></td><td data-label="Why">Only five activities are checked (Q-10).</td><td data-label="How">Add entries from official sites (venue, BLM, NPS, state parks, city), with hours, fees and social links.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Owner to list interests (Q-10).</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-08">S-08</strong></td><td data-label="Area">Data - events</td><td data-label="Suggestion"><strong>Add an events calendar for Feb 15–Mar 23, 2027</strong></td><td data-label="Why">Events affect price and availability (Q-11). Feb 15 is a federal holiday (F13).</td><td data-label="How">Pull events from official venue and visitor sites. Record the source per event.</td><td data-label="Effort">Low</td><td data-label="Decision needed">Approve.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-09">S-09</strong></td><td data-label="Area">Site - decision aids</td><td data-label="Suggestion"><strong>Client-side filters and sorting on every table</strong></td><td data-label="Why">Lets a reader filter by Michelin tier, area or &#x27;verified only&#x27; without reloading.</td><td data-label="How">Add a small script to the generated pages. No external dependencies.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Approve.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-10">S-10</strong></td><td data-label="Area">Site - decision aids</td><td data-label="Suggestion"><strong>Add a &#x27;Last verified&#x27; date column and a &#x27;Verified&#x27; badge per row</strong></td><td data-label="Why">Shows at a glance which values were checked and when.</td><td data-label="How">Add the date from each row&#x27;s source retrieval. Show a badge when every value on the row is verified.</td><td data-label="Effort">Low</td><td data-label="Decision needed">Approve.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-11">S-11</strong></td><td data-label="Area">Site - decision aids</td><td data-label="Suggestion"><strong>Map view of the Michelin clusters and hotels</strong></td><td data-label="Why">Visual check of &#x27;walkable&#x27; or &#x27;bus-reachable&#x27; clusters (C1–C5).</td><td data-label="How">Use free, open map tiles and the addresses already on file. Show only addresses from official sources.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Approve; confirm no third-party map embed is needed.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-12">S-12</strong></td><td data-label="Area">Site - decision aids</td><td data-label="Suggestion"><strong>Weighted scorecard for hotels</strong></td><td data-label="Why">Turns price, Michelin count, resort fee, cancellation and transit time into one ranking, using weights the owner sets.</td><td data-label="How">Add weights in data/scorecard.json. Compute rank in the build script. Show weights on the page.</td><td data-label="Effort">Medium</td><td data-label="Decision needed">Owner to set weights after Q-03 to Q-07 are answered.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-13">S-13</strong></td><td data-label="Area">Repo</td><td data-label="Suggestion"><strong>Add LICENSE, .gitignore and a real README</strong></td><td data-label="Why">Flags F26. The repo has no license, no ignore rules and only a one-line README.</td><td data-label="How">Add a license chosen by the owner, a standard Python .gitignore, and a README describing the site, data files, and how to rebuild.</td><td data-label="Effort">Low</td><td data-label="Decision needed">Owner to choose the license (or &#x27;none&#x27;).</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr><tr><td data-label="ID"><strong id="S-14">S-14</strong></td><td data-label="Area">Repo</td><td data-label="Suggestion"><strong>Add a link-check and data-check step in GitHub Actions</strong></td><td data-label="Why">Keeps links and required fields valid on every push, so a broken link cannot reach main unnoticed.</td><td data-label="How">Add a workflow that runs the build script and fails on a missing source link or a broken internal link.</td><td data-label="Effort">Low</td><td data-label="Decision needed">Approve.</td><td data-label="Status"><span class="badge pending">Awaiting approval</span></td></tr></tbody></table></div>
+<h1>Suggestions for review</h1>
+<p class="lead">These suggestions are for your review only. Nothing here has been implemented. Choose the ones you want (for example S1, S4, S6) and we will implement only those.</p>
+<div class="callout"><strong>How to choose:</strong> reply with the IDs you want (for example <em>S1, S4, S6</em>).
+Only those are implemented. Nothing on this page changes the data.</div>
+<div class="grid"><article class="card">
+  <div class="cardtop"><span class="pill">S1</span><span class="tag">Decision-making</span><span class="tag st">Proposed</span></div>
+  <h3>Add a weighted scoring table for hotels</h3>
+  <p>Score each hotel on price, Michelin count within reach, room fit and travel time. Weights are set by you. Shows the top pick clearly.</p>
+  <dl><dt>Benefit</dt><dd>Turns the ranking into one decision you can check.</dd><dt>Trade-off</dt><dd>Needs your weights, and the price and transit columns must be filled first.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S2</span><span class="tag">Pricing</span><span class="tag st">Proposed</span></div>
+  <h3>Build a price log for each hotel (manual check on set days)</h3>
+  <p>Record official rates for Feb 15–18 and Feb 15–22, 2027 at a fixed time each week, with a link and timestamp. The &#x27;cheapest time to book&#x27; is then read from the log.</p>
+  <dl><dt>Benefit</dt><dd>The only honest way to find the cheapest booking time, since no official history is available.</dd><dt>Trade-off</dt><dd>Needs a weekly check; a few months of data is needed before conclusions.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S3</span><span class="tag">Travel time</span><span class="tag st">Proposed</span></div>
+  <h3>Verify transit times with RTC Southern Nevada routes</h3>
+  <p>For each hotel, record the bus route, boarding stop, and scheduled time to each Michelin restaurant and activity. Only official RTC schedule data is used.</p>
+  <dl><dt>Benefit</dt><dd>Enables the &#x27;1 hour by bus&#x27; test the brief asks for.</dd><dt>Trade-off</dt><dd>Schedules vary by day and time; results are estimates from published data.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S4</span><span class="tag">Michelin</span><span class="tag st">Proposed</span></div>
+  <h3>Pull per-restaurant price ranges from Michelin Guide pages</h3>
+  <p>Open each of the 24 restaurant pages on the Michelin Guide site and record price ranges, cuisine and hours exactly as shown.</p>
+  <dl><dt>Benefit</dt><dd>Gives the 2-adult cost range the brief asks for, from the source Michelin uses.</dd><dt>Trade-off</dt><dd>guide.michelin.com could not be retrieved in this session; needs a manual or retried pass.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S5</span><span class="tag">Coverage</span><span class="tag st">Proposed</span></div>
+  <h3>Add Downtown hotels so the Esther&#x27;s Kitchen and SoulBelly cluster is covered</h3>
+  <p>Two of the Michelin restaurants sit on S. Main St. Downtown hotels would let that cluster be scored like the Strip.</p>
+  <dl><dt>Benefit</dt><dd>Fair comparison across the whole Michelin list.</dd><dt>Trade-off</dt><dd>Adds more hotels to verify.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S6</span><span class="tag">Activities</span><span class="tag st">Proposed</span></div>
+  <h3>Choose the activities list first, then re-run the travel-time check</h3>
+  <p>Pick the activities (for example Hoover Dam, Red Rock, Valley of Fire, Neon Museum, or others). Then add distance and drive or bus time from each hotel.</p>
+  <dl><dt>Benefit</dt><dd>Makes the 1-hour test concrete.</dd><dt>Trade-off</dt><dd>Needs your answer to Q1.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S7</span><span class="tag">Presentation</span><span class="tag st">Proposed</span></div>
+  <h3>Add a &#x27;last verified&#x27; date to every row</h3>
+  <p>Show the date each value was checked, so old data is easy to spot.</p>
+  <dl><dt>Benefit</dt><dd>Makes the verification standard visible on each row.</dd><dt>Trade-off</dt><dd>More columns; mobile cards get longer.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S8</span><span class="tag">Quality</span><span class="tag st">Proposed</span></div>
+  <h3>Add an automated link check on each push (GitHub Actions)</h3>
+  <p>Run the site checker on every push to catch broken links and empty required sources before the site publishes.</p>
+  <dl><dt>Benefit</dt><dd>Protects against broken links after future edits.</dd><dt>Trade-off</dt><dd>Adds a small workflow file to the repo.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S9</span><span class="tag">Decision-making</span><span class="tag st">Proposed</span></div>
+  <h3>Add a &#x27;deal breakers&#x27; list (bathroom, bed, budget cap, distance cap)</h3>
+  <p>Hotels that fail a must-have are moved to a separate section instead of being ranked.</p>
+  <dl><dt>Benefit</dt><dd>Stops the ranking from including hotels you cannot accept.</dd><dt>Trade-off</dt><dd>Needs your input on Q4 and Q7.</dd></dl>
+</article></div>
 
 </main>
 <footer class="foot">
-  <p>Every value links to an official source ID (see <a href="sources.html">Sources</a>). Blank cells read <span class="unv">Unverified</span> and are listed on <a href="flagged.html">Flagged for Review</a>. Nothing here is inferred.</p>
-  <p>Data files: <code>data/*.json</code> · Build: <code>site/build.py</code> · Repository: <a href="https://github.com/kanlerxz87-cyber/Vegas2">kanlerxz87-cyber/Vegas2</a></p>
+  <div class="wrap">
+    Data as of 2026-11-26. Only values confirmed on official sources are shown as verified.
+    Blank cells are marked <span class="b bu">Unverified</span>.
+    Other builds in this repository:
+    <a href="session-36cc5108/index.html">Second build (session 36cc5108)</a> · <a href="planner-v1/index.html">Earlier dashboard (v1)</a>.
+    Source code: <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2</a>.
+  </div>
 </footer>
 </body>
 </html>

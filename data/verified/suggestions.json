@@ -1,0 +1,87 @@
+{
+  "as_of": "2026-11-26",
+  "intro": "These suggestions are for your review only. Nothing here has been implemented. Choose the ones you want (for example S1, S4, S6) and we will implement only those.",
+  "items": [
+    {
+      "id": "S1",
+      "area": "Decision-making",
+      "title": "Add a weighted scoring table for hotels",
+      "detail": "Score each hotel on price, Michelin count within reach, room fit and travel time. Weights are set by you. Shows the top pick clearly.",
+      "benefit": "Turns the ranking into one decision you can check.",
+      "tradeoff": "Needs your weights, and the price and transit columns must be filled first.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S2",
+      "area": "Pricing",
+      "title": "Build a price log for each hotel (manual check on set days)",
+      "detail": "Record official rates for Feb 15–18 and Feb 15–22, 2027 at a fixed time each week, with a link and timestamp. The 'cheapest time to book' is then read from the log.",
+      "benefit": "The only honest way to find the cheapest booking time, since no official history is available.",
+      "tradeoff": "Needs a weekly check; a few months of data is needed before conclusions.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S3",
+      "area": "Travel time",
+      "title": "Verify transit times with RTC Southern Nevada routes",
+      "detail": "For each hotel, record the bus route, boarding stop, and scheduled time to each Michelin restaurant and activity. Only official RTC schedule data is used.",
+      "benefit": "Enables the '1 hour by bus' test the brief asks for.",
+      "tradeoff": "Schedules vary by day and time; results are estimates from published data.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S4",
+      "area": "Michelin",
+      "title": "Pull per-restaurant price ranges from Michelin Guide pages",
+      "detail": "Open each of the 24 restaurant pages on the Michelin Guide site and record price ranges, cuisine and hours exactly as shown.",
+      "benefit": "Gives the 2-adult cost range the brief asks for, from the source Michelin uses.",
+      "tradeoff": "guide.michelin.com could not be retrieved in this session; needs a manual or retried pass.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S5",
+      "area": "Coverage",
+      "title": "Add Downtown hotels so the Esther's Kitchen and SoulBelly cluster is covered",
+      "detail": "Two of the Michelin restaurants sit on S. Main St. Downtown hotels would let that cluster be scored like the Strip.",
+      "benefit": "Fair comparison across the whole Michelin list.",
+      "tradeoff": "Adds more hotels to verify.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S6",
+      "area": "Activities",
+      "title": "Choose the activities list first, then re-run the travel-time check",
+      "detail": "Pick the activities (for example Hoover Dam, Red Rock, Valley of Fire, Neon Museum, or others). Then add distance and drive or bus time from each hotel.",
+      "benefit": "Makes the 1-hour test concrete.",
+      "tradeoff": "Needs your answer to Q1.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S7",
+      "area": "Presentation",
+      "title": "Add a 'last verified' date to every row",
+      "detail": "Show the date each value was checked, so old data is easy to spot.",
+      "benefit": "Makes the verification standard visible on each row.",
+      "tradeoff": "More columns; mobile cards get longer.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S8",
+      "area": "Quality",
+      "title": "Add an automated link check on each push (GitHub Actions)",
+      "detail": "Run the site checker on every push to catch broken links and empty required sources before the site publishes.",
+      "benefit": "Protects against broken links after future edits.",
+      "tradeoff": "Adds a small workflow file to the repo.",
+      "status": "Proposed"
+    },
+    {
+      "id": "S9",
+      "area": "Decision-making",
+      "title": "Add a 'deal breakers' list (bathroom, bed, budget cap, distance cap)",
+      "detail": "Hotels that fail a must-have are moved to a separate section instead of being ranked.",
+      "benefit": "Stops the ranking from including hotels you cannot accept.",
+      "tradeoff": "Needs your input on Q4 and Q7.",
+      "status": "Proposed"
+    }
+  ]
+}
