@@ -4,93 +4,122 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flagged for Review · Las Vegas Trip Planner</title>
-<meta name="description" content="Las Vegas trip planning: hotels, MICHELIN restaurants, activities, transit and dates, with official sources and flagged items.">
+<meta name="description" content="Las Vegas trip planning dashboard: hotels, Michelin restaurants, activities and verification status. Verified from official sources; unverified values are left blank.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <div class="brand"><a href="index.html">Las Vegas Trip Planner</a><span class="upd">Data as of 2026-11-26</span></div>
-  <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="transit-dates.html">Transit & dates</a><a href="booking.html">Booking timing</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html" aria-current="page">Flagged for Review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Las Vegas Trip Planner</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="booking.html">Booking &amp; price</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html" class="on">Flagged for Review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+  </div>
 </header>
-<main id="main">
+<main class="wrap">
 
-<section>
-  <h1>Flagged for Review</h1>
-  <p class="note">Items that could not be confirmed, or where sources disagree or look irregular. They do not block publication. Unverified table cells are also listed automatically on this page at build time. Items here do not block publication. Review them after the site is live.</p>
-</section>
-<section>
-  <h2>Irregularities and conflicts</h2>
-  <div class="tw"><table class="data"><thead><tr><th scope="col">ID</th><th scope="col">Item</th><th scope="col">Detail</th><th scope="col">Source links for manual review</th></tr></thead><tbody>
-<tr><td data-label="ID">F1</td><td data-label="Item">Brief says 'subway or bus'</td><td data-label="Detail">No subway appears on the official RTC or Las Vegas Monorail sites read. The bus and Monorail are the only transit modes found on official sites.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.rtcsnv.com/" target="_blank" rel="noopener">rtcsnv.com/</a></li><li><a href="https://www.lvmonorail.com/" target="_blank" rel="noopener">lvmonorail.com/</a></li></ul></td></tr>
-<tr><td data-label="ID">F2</td><td data-label="Item">Feldman's Deli listed as a Las Vegas Bib Gourmand in a third-party reprint</td><td data-label="Detail">The MICHELIN press release lists Feldman's Deli at 2005 E. 2700 S., Salt Lake City, UT. The Las Vegas Bib Gourmands are China Poblano, Esther's Kitchen and YEN Viet Kitchen. Resolved in favour of the official release.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s</a></li><li><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" target="_blank" rel="noopener">visitlasvegas.com/michelin-guide-restaurants/</a></li></ul></td></tr>
-<tr><td data-label="ID">F3</td><td data-label="Item">Monte listed in some Las Vegas roundups</td><td data-label="Detail">Monte is a one-star MICHELIN restaurant in South Salt Lake, Utah. It is excluded from the Las Vegas count.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s</a></li></ul></td></tr>
-<tr><td data-label="ID">F4</td><td data-label="Item">L'Atelier de Joël Robuchon: Monday hours</td><td data-label="Detail">The official L'Atelier page lists Monday 5:00-9:30 PM open. The sister restaurant on the same property (Restaurant de Joël Robuchon) is closed Monday. Confirm before booking.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html" target="_blank" rel="noopener">mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html</a></li><li><a href="https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html" target="_blank" rel="noopener">mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html</a></li></ul></td></tr>
-<tr><td data-label="ID">F5</td><td data-label="Item">Guy Savoy hours not confirmed</td><td data-label="Detail">The official Caesars page shows 'Closed / Closed / Opens 5:00 PM' without a full weekly schedule. Hours left blank.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" target="_blank" rel="noopener">caesars.com/caesars-palace/restaurants/restaurant-guy-savoy</a></li></ul></td></tr>
-<tr><td data-label="ID">F6</td><td data-label="Item">Hoover Dam ticket button shows two different states</td><td data-label="Detail">One read of the official Hoover Dam page showed the tour ticket button as 'not currently available'; a later read showed a live ticket link and prices. Check ticket availability on the official ticket page before planning.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.usbr.gov/lc/hooverdam/" target="_blank" rel="noopener">usbr.gov/lc/hooverdam/</a></li><li><a href="https://www.usbr.gov/lc/hooverdam/service/index.html" target="_blank" rel="noopener">usbr.gov/lc/hooverdam/service/index.html</a></li></ul></td></tr>
-<tr><td data-label="ID">F7</td><td data-label="Item">Hoover Dam visitor center hours exception text was cut off</td><td data-label="Detail">The official page reads 'Open Daily 9:00 a.m. to 5:00 p.m. (except Th...' and the text was truncated when read. Confirm the exception on the official page.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.usbr.gov/lc/hooverdam/service/index.html" target="_blank" rel="noopener">usbr.gov/lc/hooverdam/service/index.html</a></li></ul></td></tr>
-<tr><td data-label="ID">F8</td><td data-label="Item">RTC schedules are 'current as of August 23, 2026'</td><td data-label="Detail">RTC notes a $118.5 million annual shortfall and F1 construction changes on the Strip. Schedules for Feb 2027 are not confirmed.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.rtcsnv.com/ways-to-travel/schedules-maps/" target="_blank" rel="noopener">rtcsnv.com/ways-to-travel/schedules-maps/</a></li><li><a href="https://www.rtcsnv.com/" target="_blank" rel="noopener">rtcsnv.com/</a></li></ul></td></tr>
-<tr><td data-label="ID">F9</td><td data-label="Item">Michelin press release date vs. ceremony date</td><td data-label="Detail">The michelin.com release page is dated 31 Aug 2026; a Michelin North America post is dated Aug 26, 2026 and says the ceremony was on Aug 26 at Fontainebleau Las Vegas. Award content is the same in both; the date difference is noted only.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s</a></li><li><a href="https://michelinmedia.com/pages/blog/detail/article/c0/a1480/" target="_blank" rel="noopener">michelinmedia.com/pages/blog/detail/article/c0/a1480/</a></li></ul></td></tr>
-<tr><td data-label="ID">F10</td><td data-label="Item">Presidents' Day falls on the first preferred travel day</td><td data-label="Detail">OPM lists Monday Feb 15, 2027 as Washington's Birthday (federal holiday). Effect on hotel prices is not verified.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener">opm.gov/policy-data-oversight/pay-leave/federal-holidays/</a></li></ul></td></tr>
-<tr><td data-label="ID">F11</td><td data-label="Item">Red Rock Canyon requires timed-entry reservations in the trip window</td><td data-label="Detail">Reservations are required Oct 1 to May 31, 8 AM to 5 PM, through Recreation.gov. This applies to Feb 15 to 18, 2027.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/" target="_blank" rel="noopener">redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/</a></li></ul></td></tr>
-<tr><td data-label="ID">F12</td><td data-label="Item">Official pages that did not load through the fetch tool</td><td data-label="Detail">guide.michelin.com (Las Vegas restaurant list); Venetian /hotel/rooms.html; Bellagio /hotel/rooms.html; and the Bellagio fountains page did not load through the fetch tool. Data from these pages is not used.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://guide.michelin.com/us/en/nevada/las-vegas" target="_blank" rel="noopener">guide.michelin.com/us/en/nevada/las-vegas</a></li><li><a href="https://www.venetianlasvegas.com/hotel/rooms.html" target="_blank" rel="noopener">venetianlasvegas.com/hotel/rooms.html</a></li><li><a href="https://bellagio.mgmresorts.com/en/hotel/rooms.html" target="_blank" rel="noopener">bellagio.mgmresorts.com/en/hotel/rooms.html</a></li></ul></td></tr>
-<tr><td data-label="ID">F13</td><td data-label="Item">Activity 'drive time from hotel' is blank for all activities</td><td data-label="Detail">No official travel-time source was read. The 1-hour requirement cannot be confirmed yet.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.rtcsnv.com/tripplanner/" target="_blank" rel="noopener">rtcsnv.com/tripplanner/</a></li></ul></td></tr>
-<tr><td data-label="ID">F14</td><td data-label="Item">Valley of Fire rideshare warning</td><td data-label="Detail">Official page warns that Uber or Lyft may not return visitors from the park, which can strand them.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://parks.nv.gov/parks/valley-of-fire" target="_blank" rel="noopener">parks.nv.gov/parks/valley-of-fire</a></li></ul></td></tr>
-<tr><td data-label="ID">F15</td><td data-label="Item">Neon Museum: higher price for early or late admission from Jan 1, 2027</td><td data-label="Detail">Official FAQ says arriving earlier or later than the selected ticket time may cost more starting January 1, 2027.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://neonmuseum.org/your-visit/" target="_blank" rel="noopener">neonmuseum.org/your-visit/</a></li></ul></td></tr>
-<tr><td data-label="ID">F16</td><td data-label="Item">Some venue links not individually opened</td><td data-label="Detail">Opened and read this session (official venue pages): Anima by EDO, Kabuto, Partage, Stubborn Seed, Ping Pang Pong. NOT opened, so their hours/links are not verified: Bouchon, COTE, Estiatorio Milos, Gymkhana, Kame Omakase, Lamaii, Michael Mina, Mott 32, Pho Ga Bac Bac, SoulBelly BBQ, Sparrow + Wolf, Wing Lei, China Poblano, Esther's Kitchen, YEN Viet Kitchen. Their links come from the official Visit Las Vegas MICHELIN page. The sandbox has no general outbound web access, so an automated link check could not run here; scripts/linkcheck.mjs runs in CI.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" target="_blank" rel="noopener">visitlasvegas.com/michelin-guide-restaurants/</a></li></ul></td></tr>
-<tr><td data-label="ID">F17</td><td data-label="Item">Michelin North America post read only from search results</td><td data-label="Detail">The michelinmedia.com post (used only for the ceremony date in F9) was read as a search result, not as a full page fetch.</td><td data-label="Source links for manual review"><ul class="cl src"><li><a href="https://michelinmedia.com/pages/blog/detail/article/c0/a1480/" target="_blank" rel="noopener">michelinmedia.com/pages/blog/detail/article/c0/a1480/</a></li></ul></td></tr>
-</tbody></table></div>
-</section>
-<section>
-  <h2>Unverified fields (generated from the data)</h2>
-  <p class="muted">40 entries have at least one field not confirmed on an official source. Each such field is blank in the tables.</p>
-  <div class="tw"><table class="data"><thead><tr><th scope="col">Group</th><th scope="col">Entry</th><th scope="col">Unverified fields</th></tr></thead><tbody>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Restaurant de Joël Robuchon</td><td data-label="Unverified fields">priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">é by José Andrés</td><td data-label="Unverified fields">priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Guy Savoy Las Vegas</td><td data-label="Unverified fields">hours, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">L'Atelier de Joël Robuchon Las Vegas</td><td data-label="Unverified fields">priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">China Poblano</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Esther's Kitchen</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">YEN Viet Kitchen</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Anima by Edo</td><td data-label="Unverified fields">priceLevel, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Bouchon</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">COTE Las Vegas</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Estiatorio Milos</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Gymkhana Las Vegas</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Kabuto</td><td data-label="Unverified fields">priceLevel, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Kame Omakase</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Lamaii</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Michael Mina</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Mott 32</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Partage</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Pho Ga Bac Bac</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Ping Pang Pong</td><td data-label="Unverified fields">priceLevel, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">SoulBelly BBQ</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Sparrow + Wolf</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Stubborn Seed Las Vegas</td><td data-label="Unverified fields">priceLevel, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Michelin restaurant</td><td data-label="Entry">Wing Lei</td><td data-label="Unverified fields">hours, priceLevel, reservations, priceForCouple, social</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">The Venetian Resort (incl. The Palazzo)</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">MGM Grand</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">The Cosmopolitan of Las Vegas</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">Caesars Palace</td><td data-label="Unverified fields">privateBathroom, sevenNightTotal</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">Bellagio</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">ARIA Resort &amp; Casino</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">Wynn Las Vegas</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">Resorts World Las Vegas</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Hotel</td><td data-label="Entry">Gold Coast Hotel &amp; Casino</td><td data-label="Unverified fields">bedType, privateBathroom, sevenNightTotal, cheapestBookingWindow</td></tr>
-<tr><td data-label="Group">Activity</td><td data-label="Entry">Hoover Dam (guided dam tour, powerplant tour, visitor center)</td><td data-label="Unverified fields">driveOrTransitFromHotel</td></tr>
-<tr><td data-label="Group">Activity</td><td data-label="Entry">Red Rock Canyon National Conservation Area (Scenic Drive)</td><td data-label="Unverified fields">prices, driveOrTransitFromHotel, social</td></tr>
-<tr><td data-label="Group">Activity</td><td data-label="Entry">Valley of Fire State Park</td><td data-label="Unverified fields">driveOrTransitFromHotel, social</td></tr>
-<tr><td data-label="Group">Activity</td><td data-label="Entry">The Neon Museum (Neon Boneyard and North Gallery)</td><td data-label="Unverified fields">driveOrTransitFromHotel</td></tr>
-<tr><td data-label="Group">Transit</td><td data-label="Entry">No subway found on official transit sites</td><td data-label="Unverified fields">hours</td></tr>
-<tr><td data-label="Group">Transit</td><td data-label="Entry">RTC of Southern Nevada bus routes (Strip, Downtown and residential)</td><td data-label="Unverified fields">hours</td></tr>
-<tr><td data-label="Group">Booking timing</td><td data-label="Entry">Cheapest upcoming time to book a hotel (7-night total, Feb 2027)</td><td data-label="Unverified fields">fact</td></tr>
-</tbody></table></div>
-</section>
+<h1>Flagged for Review</h1>
+<p class="lead">Everything here is published for your review. These items do not block the merge. Each entry gives the conflicting or missing data and the source links so you can check it yourself.</p>
+<div class="callout bad-call"><strong>Not blocking.</strong> These items are published here so you can review them after the site is live and ask for changes.</div>
+<div class="grid"><article class="card">
+  <div class="cardtop"><span class="pill">F1</span><span class="tag warn">Source conflict</span></div>
+  <h3>Secondary press gives different 2026 Michelin star holders for Las Vegas</h3>
+  <p>Memesita (Aug 31, 2026) reports Joël Robuchon at 3 stars and Picasso, Guy Savoy and Alex at 2 stars, and Nobu and Wing Lei at 1 star. The official Michelin release lists Restaurant de Joël Robuchon at 2 stars; é by José Andrés, Guy Savoy Las Vegas and L&#x27;Atelier at 1 star; and Wing Lei as Recommended. The official list is used everywhere on this site.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">Official Michelin release (used)</a></li><li><a href="https://www.memesita.com/michelin-guide-2026-new-stars-for-las-vegas-and-the-american-southwest/" target="_blank" rel="noopener">Conflicting secondary report (Memesita)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F2</span><span class="tag warn">Source conflict</span></div>
+  <h3>Las Vegas Magazine lists Bib Gourmand restaurants that Michelin lists as Recommended</h3>
+  <p>Las Vegas Magazine (Aug 27, 2026) puts Anima by Edo, Bouchon, Cote, Mott 32, Estiatorio Milos, Gymkhana, Kabuto, Kame Omakase, Lamaii, Michael Mina, Partage, Pho Ga Bac Bac, Ping Pang Pong, SoulBelly BBQ, Sparrow &amp; Wolf, Stubborn Seed and Wing Lei under Bib Gourmand. The official release lists 3 Las Vegas Bib Gourmands (China Poblano, Esther&#x27;s Kitchen, YEN Viet Kitchen) and these 17 as Recommended.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">Official Michelin release — Bib and Recommended lists (used)</a></li><li><a href="https://lasvegasmagazine.com/dining/2026/aug/27/michelin-guide-las-vegas-restaurants-stars/" target="_blank" rel="noopener">Las Vegas Magazine (conflicting)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F3</span><span class="tag bad">Irregularity</span></div>
+  <h3>Preferred check-in date (Mon Feb 15, 2027) is a federal holiday</h3>
+  <p>Washington&#x27;s Birthday (Presidents&#x27; Day) falls on Feb 15, 2027. Expect higher demand and possibly different hours or closures at attractions that follow holiday schedules. Not yet priced.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener">OPM Federal Holidays — 2027</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F4</span><span class="tag warn">Source conflict</span></div>
+  <h3>é by José Andrés operating days differ between official and third-party sources</h3>
+  <p>Official site: open Tuesday through Sunday, two seatings at 5:30 PM and 8:30 PM. A third-party listing (smartervegas.com) says Tue–Sat. The official site is used.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.ebyjoseandres.com/" target="_blank" rel="noopener">Official é by José Andrés site (used)</a></li><li><a href="https://www.smartervegas.com/dining/restaurant/e_by_jose_andres.aspx" target="_blank" rel="noopener">Third-party listing (conflicting)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F5</span><span class="tag bu">Unverified</span></div>
+  <h3>Hours conflict for Joël Robuchon, L&#x27;Atelier and Guy Savoy; official MGM pages could not be loaded</h3>
+  <p>Third-party sites disagree on the days open for both Joël Robuchon and L&#x27;Atelier. Guy Savoy: official page does not show days; a third-party page says Wed–Sun 5:30–9:30 PM and a 2025 page says Tue–Sat 5–10 PM. All three are left as Unverified.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" target="_blank" rel="noopener">Official Guy Savoy page (partial)</a></li><li><a href="https://www.luminafrontier.ai/en/hotels/mgm-grand-las-vegas/mgm-grand-restaurants/" target="_blank" rel="noopener">Third-party: Joël Robuchon hours (conflicting)</a></li><li><a href="https://www.opentable.com/r/latelier-joel-robuchon-mgm-grand-hotel-and-casino-mgm-resorts" target="_blank" rel="noopener">Third-party: L&#x27;Atelier hours (conflicting)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F6</span><span class="tag bu">Unverified</span></div>
+  <h3>No 2027 hotel rates retrieved; cheapest booking time not determined</h3>
+  <p>No official rate for Feb 15–18 or Feb 15–22, 2027 was retrieved for any hotel. The Caesars Palace homepage shows &#x27;Rooms from $139&#x27; for Dec 11–13, 2026 under a promotion; that is not a trip-date price and is not used.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.caesars.com/caesars-palace" target="_blank" rel="noopener">Caesars Palace official homepage (promo for Dec 2026 only)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F7</span><span class="tag bu">Unverified</span></div>
+  <h3>Travel time &#x27;within 1 hour by subway or bus&#x27; not verified for any hotel</h3>
+  <p>No official transit-time source was retrieved. Las Vegas has no subway (to be confirmed with an official transit source). The ranking on the Hotels page counts Michelin restaurants on each hotel&#x27;s own campus, not transit-time reachability.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.blm.gov/visit/red-rock-canyon-national-conservation-area" target="_blank" rel="noopener">BLM — public transit does not reach Red Rock (official)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F8</span><span class="tag bu">Unverified</span></div>
+  <h3>Hotel room type not confirmed on an official page for four resorts</h3>
+  <p>Caesars Palace, MGM Grand and The Venetian have no official room page confirmed in this session (MGM Grand and Venetian fetches failed). ARIA&#x27;s 2-queen confirmation is for a suite; the standard 2-queen room came from third-party listings only.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.caesars.com/caesars-palace" target="_blank" rel="noopener">Caesars Palace official site</a></li><li><a href="https://aria.mgmresorts.com/en/hotel/center-suite.html" target="_blank" rel="noopener">ARIA official suite page</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F9</span><span class="tag bu">Unverified</span></div>
+  <h3>Valley of Fire distance from Las Vegas not on the official page</h3>
+  <p>The official Nevada State Parks page gives hours and fees but no distance. Third-party sites say 48–55 miles and 50–60 minutes; these are not used.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://parks.nv.gov/parks/valley-of-fire" target="_blank" rel="noopener">Official Valley of Fire page</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F10</span><span class="tag bu">Unverified</span></div>
+  <h3>Red Rock Canyon entry fee and reservation fee not confirmed on an official page</h3>
+  <p>Third-party guides give $20 per vehicle and a $2 reservation fee. The BLM and Recreation.gov pages retrieved state the reservation rules but not the fee amount, so the amounts are left blank.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.blm.gov/visit/red-rock-canyon-national-conservation-area" target="_blank" rel="noopener">BLM Red Rock Canyon NCA</a></li><li><a href="https://www.recreation.gov/timed-entry/10075177" target="_blank" rel="noopener">Recreation.gov timed entry</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F11</span><span class="tag bad">Irregularity</span></div>
+  <h3>Hoover Dam: ticket page status changed between versions; use only official ticket links</h3>
+  <p>The official tour page shows Hoover Dam tour tickets as &#x27;not currently available&#x27; on one retrieved version and as a live ticketing link on the later version. Several third-party sites sell Hoover Dam tours (for example hooverdam-tours.co). Book only through the official link on usbr.gov.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.usbr.gov/lc/hooverdam/service/index.html" target="_blank" rel="noopener">Official Hoover Dam tour information</a></li><li><a href="https://hooverdam-tours.co/plan-your-visit/hoover-dam-official-website/" target="_blank" rel="noopener">Third-party seller warning (not official)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F12</span><span class="tag bu">Unverified</span></div>
+  <h3>Social media links (YouTube, TikTok, Instagram) mostly not verified</h3>
+  <p>Only property-level (Caesars Palace) and agency-level (Bureau of Reclamation, BLM) accounts were confirmed on official pages. These are not attraction- or restaurant-specific. Other rows are blank.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" target="_blank" rel="noopener">Caesars Palace official (property accounts)</a></li><li><a href="https://www.blm.gov/visit/red-rock-canyon-national-conservation-area" target="_blank" rel="noopener">BLM official (agency accounts)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F13</span><span class="tag bu">Unverified</span></div>
+  <h3>Neon Museum 2027 price is a starting price, and 2026 last-entry times may not carry into 2027</h3>
+  <p>The official site lists &#x27;2027 Admission — from $21&#x27;. The exact price and last entry for the trip date are not confirmed. The last-entry times shown are from the 2026 tickets page.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://neonmuseum.org/" target="_blank" rel="noopener">Official Neon Museum (2027 admission)</a></li><li><a href="https://neonmuseum.org/tickets-and-experiences/" target="_blank" rel="noopener">Official Neon Museum tickets page (2026 version)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F14</span><span class="tag bad">Irregularity</span></div>
+  <h3>Brief conflicts: separate session branches vs. this session&#x27;s single-branch rule</h3>
+  <p>The shared-board brief asks for session-&lt;id&gt;/&lt;task&gt; branches. This session&#x27;s rules allow only the current branch (arena/a52047d7-vegas2). All tasks are on that branch and are logged in COORDINATION.md.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/a52047d7-vegas2/COORDINATION.md" target="_blank" rel="noopener">COORDINATION board (this repo)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F15</span><span class="tag warn">Repo</span></div>
+  <h3>Repo review: no license, no .gitignore, README has no description</h3>
+  <p>The repo holds only README.md (&#x27;# Vegas2&#x27;). It has no LICENSE, no .gitignore, and no description. Details on the Repo Review page.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://api.github.com/repos/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">GitHub API — repo metadata (license null, description null)</a></li><li><a href="https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages" target="_blank" rel="noopener">GitHub API — Pages config (legacy, main, /)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F16</span><span class="tag bad">Irregularity</span></div>
+  <h3>Earlier dashboard (v1) reports 3 starred restaurants; official release lists 4</h3>
+  <p>planner-v1/index.html (from PRs #2/#3 on main) says &#x27;Starred Guide restaurants found: 3&#x27;. The official Michelin Southwest 2026 release lists 4 starred Las Vegas restaurants: Restaurant de Joël Robuchon (2★), and é by José Andrés, Guy Savoy Las Vegas and L&#x27;Atelier de Joël Robuchon (1★ each). v1 omits é by José Andrés. This site uses the official release. v1 is kept unchanged and is labelled as an earlier version.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">Michelin official release, Aug 2026</a></li><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/dce4548/index.html" target="_blank" rel="noopener">Earlier dashboard (v1) as merged on main (commit dce4548)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F17</span><span class="tag bad">Irregularity</span></div>
+  <h3>Wynn &#x27;Panoramic View Two Queens&#x27; claim withdrawn — not on official booking page</h3>
+  <p>An earlier version of hotels.json marked a Wynn &#x27;Panoramic View Two Queens, 640 sq ft&#x27; room as verified. On re-fetch (fetched 2026-11-26) the official Wynn booking page lists only King and Encore King room types across five chunks. No two-queen room appears. The claim is withdrawn; Wynn&#x27;s queen status is now Unverified and its bathroom is Partial (King room pages only).</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&amp;langID=1&amp;access=&amp;corp=&amp;voucher=&amp;rcID=324634&amp;currID=0" target="_blank" rel="noopener">Official Wynn booking engine (room list, fetched)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F18</span><span class="tag bu">Unverified</span></div>
+  <h3>Wynn resort-fee wording conflicts on the same booking page</h3>
+  <p>The official Wynn booking page shows a &#x27;$55 plus tax&#x27; daily resort fee on the Flexible Getaway rate block, while the room cards say &#x27;Includes Resort Fee&#x27; and a second resort-fee block lists amenities without a dollar amount. The page also shows only the Nov 26–27, 2026 rate, not Feb 2027. Confirm the 2027 fee and total at checkout before comparing prices.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&amp;langID=1&amp;access=&amp;corp=&amp;voucher=&amp;rcID=324634&amp;currID=0" target="_blank" rel="noopener">Official Wynn booking engine (fetched)</a></li></ul></div>
+</article></div>
+
 </main>
 <footer class="foot">
-  <p>Every published row links to an official source. Values not confirmed on an official source are shown as <span class="unv">Unverified</span> and listed on <a href="flagged.html">Flagged for Review</a>. Prices and availability change; check the official site before booking.</p>
-  <p>Built from <code>data/*.json</code> by <code>scripts/build.mjs</code>. Repository: <a href="https://github.com/kanlerxz87-cyber/Vegas2">kanlerxz87-cyber/Vegas2</a>.</p>
+  <div class="wrap">
+    Data as of 2026-11-26. Only values confirmed on official sources are shown as verified.
+    Blank cells are marked <span class="b bu">Unverified</span>.
+    Other builds in this repository:
+    <a href="session-36cc5108/index.html">Second build (session 36cc5108)</a> · <a href="planner-v1/index.html">Earlier dashboard (v1)</a>.
+    Source code: <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2</a>.
+  </div>
 </footer>
 </body>
 </html>

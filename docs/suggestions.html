@@ -4,42 +4,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Suggestions · Las Vegas Trip Planner</title>
-<meta name="description" content="Las Vegas trip planning: hotels, MICHELIN restaurants, activities, transit and dates, with official sources and flagged items.">
+<meta name="description" content="Las Vegas trip planning dashboard: hotels, Michelin restaurants, activities and verification status. Verified from official sources; unverified values are left blank.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <div class="brand"><a href="index.html">Las Vegas Trip Planner</a><span class="upd">Data as of 2026-11-26</span></div>
-  <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="transit-dates.html">Transit & dates</a><a href="booking.html">Booking timing</a><a href="questions.html">Questions</a><a href="suggestions.html" aria-current="page">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Las Vegas Trip Planner</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="booking.html">Booking &amp; price</a><a href="questions.html">Questions</a><a href="suggestions.html" class="on">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+  </div>
 </header>
-<main id="main">
+<main class="wrap">
 
-<section>
-  <h1>Suggestions for review</h1>
-  <p class="note">Suggested improvements to this site and to the research. Nothing below has been implemented. Choose which paths to pursue. Each has a status of Pending until you decide.</p>
-</section>
-<section>
-  <h2>Options</h2>
-  <div class="tw"><table class="data"><thead><tr><th scope="col">ID</th><th scope="col">Suggestion</th><th scope="col">Benefit</th><th scope="col">Effort</th><th scope="col">Risk / caveat</th><th scope="col">Decision</th></tr></thead><tbody>
-<tr><td data-label="ID">S1</td><td data-label="Suggestion">Record dated price snapshots from each hotel's official booking calendar</td><td data-label="Benefit">Only way to answer 'cheapest time to book' and the 7-night totals with real, verified prices.</td><td data-label="Effort">Medium (manual or scripted; repeat over several weeks)</td><td data-label="Risk / caveat">Prices change daily; snapshots must carry a date and time.</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S2</td><td data-label="Suggestion">Use the official RTC trip planner to record travel minutes for each hotel-to-activity pair</td><td data-label="Benefit">Turns the 1-hour travel requirement into a verified check.</td><td data-label="Effort">Low to medium</td><td data-label="Risk / caveat">Schedules change; RTC reports a funding shortfall and Strip construction changes.</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S3</td><td data-label="Suggestion">Confirm the subway requirement with you</td><td data-label="Benefit">The brief says subway or bus. Las Vegas has no subway on official sites read so far.</td><td data-label="Effort">Low (one answer)</td><td data-label="Risk / caveat">None</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S4</td><td data-label="Suggestion">Decide between a 3-night (Feb 15 to 18) plan and a 7-night plan (Feb 15 to 22) as the base</td><td data-label="Benefit">Sets every total, every price table and every booking window.</td><td data-label="Effort">Low (one answer)</td><td data-label="Risk / caveat">None</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S5</td><td data-label="Suggestion">Add a per-row 'last checked' date and a link checker that runs before each publish</td><td data-label="Benefit">Shows the age of each verified value. Catches dead links.</td><td data-label="Effort">Low</td><td data-label="Risk / caveat">None</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S6</td><td data-label="Suggestion">Add a Michelin filter by tier and area (Strip, Chinatown, Downtown, Off-Strip)</td><td data-label="Benefit">Makes clusters easy to compare on a phone.</td><td data-label="Effort">Low</td><td data-label="Risk / caveat">None</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S7</td><td data-label="Suggestion">Add a map view of hotels, restaurants and activities</td><td data-label="Benefit">Shows travel distance at a glance; helps the 1-hour check.</td><td data-label="Effort">Medium (needs a map provider and verified coordinates from official sources)</td><td data-label="Risk / caveat">Coordinates must come from official addresses, not inferred.</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S8</td><td data-label="Suggestion">Add a scoring sheet with weights you choose (price, Michelin count, bed, bathroom, travel time)</td><td data-label="Benefit">Makes the hotel ranking transparent and adjustable.</td><td data-label="Effort">Medium</td><td data-label="Risk / caveat">Weights are subjective; need your input (Q2, Q7).</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S9</td><td data-label="Suggestion">Verify room bed types and bathroom wording on each hotel's official room page</td><td data-label="Benefit">Confirms the hard requirement for each hotel.</td><td data-label="Effort">Medium</td><td data-label="Risk / caveat">Room pages may not load in some tools; use a manual check if needed.</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S10</td><td data-label="Suggestion">Add a 'source freshness' rule: any value older than 30 days is marked stale</td><td data-label="Benefit">Stops stale prices and hours from looking current.</td><td data-label="Effort">Low</td><td data-label="Risk / caveat">None</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S11</td><td data-label="Suggestion">Publish the Michelin list from guide.michelin.com as a second check once it loads</td><td data-label="Benefit">Two official sources agree before publication.</td><td data-label="Effort">Low</td><td data-label="Risk / caveat">guide.michelin.com did not load through the fetch tool this session.</td><td data-label="Decision">Pending</td></tr>
-<tr><td data-label="ID">S12</td><td data-label="Suggestion">Consolidate the three parallel branches on GitHub into one site build before merging to main</td><td data-label="Benefit">Avoids duplicate pages and conflicting data.</td><td data-label="Effort">Medium (integration step)</td><td data-label="Risk / caveat">Other branches claim the same scope; merging without reconciling can break the site.</td><td data-label="Decision">Pending</td></tr>
-</tbody></table></div>
-</section>
+<h1>Suggestions for review</h1>
+<p class="lead">These suggestions are for your review only. Nothing here has been implemented. Choose the ones you want (for example S1, S4, S6) and we will implement only those.</p>
+<div class="callout"><strong>How to choose:</strong> reply with the IDs you want (for example <em>S1, S4, S6</em>).
+Only those are implemented. Nothing on this page changes the data.</div>
+<div class="grid"><article class="card">
+  <div class="cardtop"><span class="pill">S1</span><span class="tag">Decision-making</span><span class="tag st">Proposed</span></div>
+  <h3>Add a weighted scoring table for hotels</h3>
+  <p>Score each hotel on price, Michelin count within reach, room fit and travel time. Weights are set by you. Shows the top pick clearly.</p>
+  <dl><dt>Benefit</dt><dd>Turns the ranking into one decision you can check.</dd><dt>Trade-off</dt><dd>Needs your weights, and the price and transit columns must be filled first.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S2</span><span class="tag">Pricing</span><span class="tag st">Proposed</span></div>
+  <h3>Build a price log for each hotel (manual check on set days)</h3>
+  <p>Record official rates for Feb 15–18 and Feb 15–22, 2027 at a fixed time each week, with a link and timestamp. The &#x27;cheapest time to book&#x27; is then read from the log.</p>
+  <dl><dt>Benefit</dt><dd>The only honest way to find the cheapest booking time, since no official history is available.</dd><dt>Trade-off</dt><dd>Needs a weekly check; a few months of data is needed before conclusions.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S3</span><span class="tag">Travel time</span><span class="tag st">Proposed</span></div>
+  <h3>Verify transit times with RTC Southern Nevada routes</h3>
+  <p>For each hotel, record the bus route, boarding stop, and scheduled time to each Michelin restaurant and activity. Only official RTC schedule data is used.</p>
+  <dl><dt>Benefit</dt><dd>Enables the &#x27;1 hour by bus&#x27; test the brief asks for.</dd><dt>Trade-off</dt><dd>Schedules vary by day and time; results are estimates from published data.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S4</span><span class="tag">Michelin</span><span class="tag st">Proposed</span></div>
+  <h3>Pull per-restaurant price ranges from Michelin Guide pages</h3>
+  <p>Open each of the 24 restaurant pages on the Michelin Guide site and record price ranges, cuisine and hours exactly as shown.</p>
+  <dl><dt>Benefit</dt><dd>Gives the 2-adult cost range the brief asks for, from the source Michelin uses.</dd><dt>Trade-off</dt><dd>guide.michelin.com could not be retrieved in this session; needs a manual or retried pass.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S5</span><span class="tag">Coverage</span><span class="tag st">Proposed</span></div>
+  <h3>Add Downtown hotels so the Esther&#x27;s Kitchen and SoulBelly cluster is covered</h3>
+  <p>Two of the Michelin restaurants sit on S. Main St. Downtown hotels would let that cluster be scored like the Strip.</p>
+  <dl><dt>Benefit</dt><dd>Fair comparison across the whole Michelin list.</dd><dt>Trade-off</dt><dd>Adds more hotels to verify.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S6</span><span class="tag">Activities</span><span class="tag st">Proposed</span></div>
+  <h3>Choose the activities list first, then re-run the travel-time check</h3>
+  <p>Pick the activities (for example Hoover Dam, Red Rock, Valley of Fire, Neon Museum, or others). Then add distance and drive or bus time from each hotel.</p>
+  <dl><dt>Benefit</dt><dd>Makes the 1-hour test concrete.</dd><dt>Trade-off</dt><dd>Needs your answer to Q1.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S7</span><span class="tag">Presentation</span><span class="tag st">Proposed</span></div>
+  <h3>Add a &#x27;last verified&#x27; date to every row</h3>
+  <p>Show the date each value was checked, so old data is easy to spot.</p>
+  <dl><dt>Benefit</dt><dd>Makes the verification standard visible on each row.</dd><dt>Trade-off</dt><dd>More columns; mobile cards get longer.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S8</span><span class="tag">Quality</span><span class="tag st">Proposed</span></div>
+  <h3>Add an automated link check on each push (GitHub Actions)</h3>
+  <p>Run the site checker on every push to catch broken links and empty required sources before the site publishes.</p>
+  <dl><dt>Benefit</dt><dd>Protects against broken links after future edits.</dd><dt>Trade-off</dt><dd>Adds a small workflow file to the repo.</dd></dl>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">S9</span><span class="tag">Decision-making</span><span class="tag st">Proposed</span></div>
+  <h3>Add a &#x27;deal breakers&#x27; list (bathroom, bed, budget cap, distance cap)</h3>
+  <p>Hotels that fail a must-have are moved to a separate section instead of being ranked.</p>
+  <dl><dt>Benefit</dt><dd>Stops the ranking from including hotels you cannot accept.</dd><dt>Trade-off</dt><dd>Needs your input on Q4 and Q7.</dd></dl>
+</article></div>
+
 </main>
 <footer class="foot">
-  <p>Every published row links to an official source. Values not confirmed on an official source are shown as <span class="unv">Unverified</span> and listed on <a href="flagged.html">Flagged for Review</a>. Prices and availability change; check the official site before booking.</p>
-  <p>Built from <code>data/*.json</code> by <code>scripts/build.mjs</code>. Repository: <a href="https://github.com/kanlerxz87-cyber/Vegas2">kanlerxz87-cyber/Vegas2</a>.</p>
+  <div class="wrap">
+    Data as of 2026-11-26. Only values confirmed on official sources are shown as verified.
+    Blank cells are marked <span class="b bu">Unverified</span>.
+    Other builds in this repository:
+    <a href="session-36cc5108/index.html">Second build (session 36cc5108)</a> · <a href="planner-v1/index.html">Earlier dashboard (v1)</a>.
+    Source code: <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2</a>.
+  </div>
 </footer>
 </body>
 </html>

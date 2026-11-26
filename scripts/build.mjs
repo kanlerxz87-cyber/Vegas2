@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Builds this session's trip-planner pages into docs/ (root) from data/trip/*.json.
-// The other session's dashboard is built into docs/legacy/ by site/build.py (see README).
+// Output goes to docs/session-059c3126/ only. Other sessions own their own docs/ folders.
 // No dependencies. Run: node scripts/build.mjs
 // Exits non-zero if any verification rule fails (see checkData below).
 
@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = join(ROOT, "data", "trip");
-const OUT = join(ROOT, "docs");
+const OUT = join(ROOT, "docs", "session-059c3126");
 
 const load = (f) => JSON.parse(readFileSync(join(DATA, f), "utf8"));
 const michelin = load("michelin.json");
@@ -207,7 +207,7 @@ ${body}
 </main>
 <footer class="foot">
   <p>Every published row links to an official source. Values not confirmed on an official source are shown as <span class="unv">Unverified</span> and listed on <a href="flagged.html">Flagged for Review</a>. Prices and availability change; check the official site before booking.</p>
-  <p>Built from <code>data/*.json</code> by <code>scripts/build.mjs</code>. Repository: <a href="https://github.com/kanlerxz87-cyber/Vegas2">kanlerxz87-cyber/Vegas2</a>.</p>
+  <p>Built from <code>data/trip/*.json</code> by <code>scripts/build.mjs</code>. Repository: <a href="https://github.com/kanlerxz87-cyber/Vegas2">kanlerxz87-cyber/Vegas2</a>.</p>
 </footer>
 </body>
 </html>
@@ -234,7 +234,7 @@ function buildIndex() {
     ["flagged.html", "Flagged for Review", `${flagged.irregularities.length} irregularities and ${unverifiedCount} unverified item groups.`],
     ["repo-review.html", "Repo review", `${repo.checks.length} repository checks and their sources.`],
     ["sources.html", "Sources", "Every official link used, and where it was used."],
-    ["legacy/index.html", "Other session dashboard", "Snapshot of the dashboard built by another session (site/build.py), kept unchanged for comparison."],
+    ["../session-36cc5108/index.html", "Other planner (session 36cc5108)", "The other session's planner, built by site/build.py and kept unchanged for comparison."],
   ]
     .map(([href, t, d]) => `<a class="card" href="${href}"><h3>${esc(t)}</h3><p>${esc(d)}</p></a>`)
     .join("");
@@ -610,7 +610,8 @@ if (problems.length) {
   process.exit(1);
 }
 
-// Only remove files this builder owns; docs/legacy/ belongs to site/build.py.
+// Only this builder's folder is cleared.
+mkdirSync(OUT, { recursive: true });
 for (const f of [...readdirSync(OUT).filter((f) => f.endsWith(".html")), ".nojekyll"]) rmSync(join(OUT, f), { force: true });
 rmSync(join(OUT, "assets"), { recursive: true, force: true });
 mkdirSync(join(OUT, "assets"), { recursive: true });
@@ -647,4 +648,4 @@ if (broken.length) {
   process.exit(1);
 }
 const unv = unverifiedItems().length;
-console.log(`Built ${Object.keys(outputs).length} pages into docs/. Unverified entry groups: ${unv}. Checks passed.`);
+console.log(`Built ${Object.keys(outputs).length} pages into docs/session-059c3126/. Unverified entry groups: ${unv}. Checks passed.`);
