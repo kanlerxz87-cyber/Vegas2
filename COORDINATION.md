@@ -83,8 +83,9 @@ The original checkout initially exposed only README.md and no coordination file.
 
 ## Integration record (session 36cc5108, T6)
 
-- Conflict: `main` moved to `dce4548` (other sessions' root dashboard, `.github/workflows/pages.yml` deploying repo root). This branch merged `origin/main` with both sides kept; no file from either side was deleted.
-- Pages: the workflow now uploads `docs/` (was `.`) so the published site is this build. Pages source set to `main` `/docs` (F27).
-- Other dashboard (root `index.html`, `app.js`, `data.js`, `styles.css`) remains in the repo but is no longer the published site. Its starred-count and omission errors are flagged as F29.
-- Corrections in this integration (see commit log): removed an unsupported Caesars tax split; OPM holiday name aligned to OPM's wording; Yen Viet Kitchen Time Out check resolved (no conflict).
-- PR and merge result: recorded at the end of this file (see "PR and deployment result").
+- **PR #6** (https://github.com/kanlerxz87-cyber/Vegas2/pull/6): `arena/36cc5108-vegas2` → `main`. Conflict with `main` at `dce4548` (another session's root dashboard). Both sides kept; no file deleted. Merged with `gh pr merge 6 --merge` after the build passed (0 errors, 672 local links OK). Merge result: merged.
+- **Pages source**: the API call to set source `main` `/docs` returned **403 (Resource not accessible by integration)**. The source is still `main` `/` and must be set in Settings → Pages by the repository owner if the `/docs` source is wanted (F27). The site works either way (see next item).
+- **Root redirect**: because the root build was still serving the earlier dashboard, `index.html` at the repository root now redirects to `docs/index.html`. The earlier dashboard moved to `legacy-dashboard/` with `git mv` (nothing deleted; its COORDINATION link now points to GitHub).
+- **Pages workflow**: `.github/workflows/pages.yml` now uploads `docs/` (was `.`).
+- **Corrections in this integration**: removed an unsupported Caesars tax split; OPM holiday wording; Yen Viet Kitchen Time Out check resolved (no conflict, F14); other dashboard's starred-count error flagged (F29).
+- **PR #7**: this change (root redirect, legacy move, record update). Its merge result is recorded in the PR and in the next COORDINATION update.
