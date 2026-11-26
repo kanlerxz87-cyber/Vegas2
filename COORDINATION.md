@@ -19,7 +19,7 @@ Shared task board. Every row needs a status, an owning session, and the files it
 | T7 | Suggestions for site & decision-making (review only, not implemented) | done | a52047d7 | `data/suggestions.json` | Awaiting user choice |
 | T8 | Flagged for Review (irregularities & unverified items) | needs review | a52047d7 | `data/flagged.json` | Published; does not block merge |
 | T9 | Site build (landing, subpages, CSS, build + check scripts) | done | a52047d7 | `scripts/*.py`, `assets/style.css`, generated `*.html`, `.nojekyll`, `README.md` | Static site served from repo root via GitHub Pages |
-| T10 | Integration: re-verify combined data, build, link check, PR, merge, Pages check | in progress | a52047d7 | `COORDINATION.md` | Final step |
+| T10 | Integration: re-verify combined data, build, link check, PR, merge, Pages check | in progress (build & gate passed; PR/merge pending) | a52047d7 | `COORDINATION.md` | Final step |
 
 ---
 
@@ -41,6 +41,12 @@ Official sources retrieved on 2026-11-26 (all links are the pages actually read)
 - Hotel official pages: Cosmopolitan https://cosmopolitanlasvegas.mgmresorts.com/en.html · Bellagio https://bellagio.mgmresorts.com/en/hotel.html · Caesars Palace https://www.caesars.com/caesars-palace · ARIA https://aria.mgmresorts.com/en/hotel/center-suite.html · Wynn booking engine https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0 · Resorts World (Conrad) https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/
 - Restaurant official pages: é by José Andrés https://www.ebyjoseandres.com/ · Guy Savoy https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy · Gymkhana hours via MGM Resorts press release (republished) https://www.stocktitan.net/news/MGM/aria-resort-casino-and-jks-restaurants-unveil-gymkhana-bringing-pus2edgb10tf.html
 - Repo/Pages config: https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages
+
+### 2026-11-26-C — a52047d7 — build & verification gate
+- Built 10 pages with `python3 scripts/build_site.py`; re-running it produces no diff (reproducible).
+- `python3 scripts/check_site.py`: OK — all data files parse; every hotel, Michelin and activity row has at least one https source; every row source is on the official-domain allowlist; Michelin counts 4 starred / 3 Bib / 17 Recommended = 24; 130 internal links resolve across 10 pages; no placeholder text leaked into HTML.
+- Verification totals (cells across hotels, Michelin and activities): see the Home page KPIs.
+- Commit: `c8d3d9b` (site build) on `arena/a52047d7-vegas2`.
 
 ### Verification gaps (see Flagged for Review)
 - Official MGM Grand, Venetian, Restaurant de Joël Robuchon and L'Atelier pages could not be retrieved (fetch errors). Their rows are marked partial/unverified.
