@@ -151,27 +151,90 @@ Base: `c97c82a`. The session rules fix the branch name, so the brief's `session-
 
 ---
 
-# Session fd2715d0 — supplemental source-first category audit
+## Session 36cc5108 — collision with a52047d7 on T6/T10 and current state
 
-**Current branch:** `arena/fd2715d0-vegas2` (fixed by Arena).
-**Integration base:** the feature started from `dce4548`; `main` later advanced to `eaf87bb` with PRs #5–#7, which moved the published site to `docs/` and made the root `index.html` a redirect. This session preserves that redirect, the primary docs site/build, the legacy dashboard, the parallel `session-36cc5108` site, and all shared verified data.
+Logged by session 36cc5108 (board update only; no site or data files changed in this entry).
 
-## Scope and task board
+- **Collision.** Both sessions claimed integration. PR #6 (36cc5108, `ff8a411`) and PR #7 (36cc5108, `d27f1f2`) merged first. PR #5 (a52047d7, `eaf87bb`, 22:10:16 UTC) then merged and replaced the root of `docs/` with a52047d7's site. This session's site was kept, not deleted: it is at `docs/session-36cc5108/` (checked: contains F29, the corrected Yen Viet entry, and OPM "Washington's Birthday" wording).
+- **Pages.** `PUT /repos/.../pages` for source `main` `/docs` returned **403** for session 36cc5108. The source is still `main` `/`. Root `index.html` redirects to `docs/index.html`, and the live URL currently shows a52047d7's landing page. Owner action needed only if the `/docs` source is wanted (F27).
+- **Read-only checks (36cc5108, on a snapshot of `origin/main`).** 21 HTML files under `docs/`, 0 broken local links or anchors. a52047d7's `scripts/check_site.py`: 154 links, 0 warnings. These checks did not rebuild or change `docs/`.
+- **Two published sites now disagree. Not reconciled here; owner decision needed.**
+  1. Hotel list: this session ranks 9 hotels (H1–H9). The root site lists 8 Strip candidates.
+  2. Room facts: the root site says two-queen rooms are confirmed for Resorts World, Bellagio and the Cosmopolitan. This session marks queen-or-larger beds and private bathrooms as unverified for every hotel (F05). Those room pages were not fetched in this session.
+  3. Hoover Dam hours: blank here (F09). The root site reports hours; this session did not verify them.
+  4. Activities: this session lists 5 (Red Rock, Valley of Fire, Monorail, Neon Museum, Hoover Dam). The root site lists 4 (no Monorail).
+  No values were copied between the two sites.
+- **Status.** T6 (36cc5108): this session's site is merged and preserved. The root publish is owned by a52047d7 T10. No further writes to `docs/` from 36cc5108 until the owner chooses which site is the root.
 
-| Task | Status | Location |
+### PR #5 merge record and Pages check (session a52047d7, 2026-11-26)
+- **PR #5** (`arena/a52047d7-vegas2` → `main`): https://github.com/kanlerxz87-cyber/Vegas2/pull/5. Merge commit **`eaf87bb`** at 2026-11-26 22:10:16 UTC (`gh pr merge 5 --merge`). Commit `eaf87bb` is an ancestor of current `main`.
+- **Earlier merge attempts.** Blocked twice by base changes: PR #6 (`ff8a411`) and then PR #7 (`d27f1f2`). Each time the branch was merged with the new `main`, conflicts were resolved (log entries D, E, F), and the branch was re-pushed before merging.
+- **Pages deploy.** Workflow run `45903027931` ("Deploy static site to GitHub Pages") concluded **success**. The legacy Pages build for `eaf87bb` reported `built`. Pages source remains `main` `/` (legacy); a `/docs` source change returned 403 (see session 36cc5108's board note), so the site is served through the root redirect `index.html` → `docs/index.html`.
+- **Live checks (fetched 2026-11-26):**
+  - `https://kanlerxz87-cyber.github.io/Vegas2/` → verified landing page (title "Home · Las Vegas Trip Planner"). Pass.
+  - `.../Vegas2/docs/hotels.html` → verified hotels table. Pass.
+  - `.../Vegas2/docs/planner-v1/index.html` → v1 dashboard. Pass.
+  - `.../Vegas2/docs/session-36cc5108/hotels.html` → other session's hotels table. Pass.
+  - `.../Vegas2/docs/session-36cc5108/index.html` → fetch failed on two attempts. **Open check**, to re-test.
+- **Open divergences between the two published sites** (owner decision; not reconciled here, as listed on the board by session 36cc5108): hotel list (8 vs 9), room claims, Hoover Dam hours, activity list (4 vs 5).
+- **Flagged items do not block merge** (per the brief). The site passed `scripts/check_site.py` before merge.
+
+---
+
+## Session 059c3126 (branch `arena/059c3126-vegas2`)
+
+Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`, `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/` (root pages only), `.github/workflows/pages-check.yml`, and this section of `COORDINATION.md`. The other session's files (`site/build.py`, `data/*.json` top level, `index.html`, `app.js`, `data.js`, `styles.css`, `docs/session-36cc5108/` (other session)) are not edited by this session; they are built or kept as-is.
+
+### Task board (this session)
+
+| Task | Status | Owner | Branch | File scope |
+|---|---|---|---|---|
+| Las Vegas trip research (hotels, Michelin, activities, transit, dates, booking timing) | done; unverified values blank and flagged (F-list) | `059c3126` | `arena/059c3126-vegas2` | `data/trip/**` |
+| Repo review, line by line | done (RR1–RR9 in `data/trip/repo-review.json`) | `059c3126` | `arena/059c3126-vegas2` | `data/trip/repo-review.json` |
+| Site build and checks (landing, category pages, Flagged for Review) | done; published at `docs/session-059c3126/` | `059c3126` | `arena/059c3126-vegas2` | `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/session-059c3126/`, `.github/workflows/pages-check.yml` |
+| Integration with `main` (merge other session's site, keep both) | in progress | `059c3126` | `arena/059c3126-vegas2` | this section, `README.md`, `docs/session-36cc5108/` (other session) (built by wrapper) |
+
+### Overlap with other branches (logged; not merged)
+- `origin/arena/2e5e3452-vegas2` (`d84919a`): same scope, not merged; not edited.
+- `origin/arena/e94404fc-vegas2` (`1ae27b1`): same scope; its content is already on `main` via PR #2/#3.
+- `main` also holds other sessions' planners in `docs/planner-v1/`, `docs/session-36cc5108/` and root `docs/*.html`. This session does not edit any of them; its planner is at `docs/session-059c3126/`.
+
+### Verification record
+- Michelin 2026 Las Vegas: 2 stars (Restaurant de Joël Robuchon), 1 star (Guy Savoy, é by José Andrés, L'Atelier de Joël Robuchon), 3 Bib Gourmand, 17 Recommended = 24. Source: official Michelin press release and LVCVA page.
+- Official venue pages read this session: Anima by EDO, Kabuto, Partage, Stubborn Seed, Ping Pang Pong (hours and phone where shown). Red Rock Scenic Drive (Recreation.gov, distance and rules).
+- Not verified: 7-night hotel totals, couple restaurant prices, drive/transit times, social links, cheapest booking time. Blank and flagged.
+- `scripts/linkcheck.mjs` could not reach external sites from the sandbox (ECONNRESET / certificate errors). It runs in CI as warning-only.
+
+### Log
+- 2026-11-26 — Claimed and built this session's site on `arena/059c3126-vegas2` (commits `28b1b63`, `fcb6303`, `b7949d2`). Opened PR #4 to `main`.
+- 2026-11-26 — PR #4 CI passed. The merge was blocked because `main` gained the other session's dashboard (PR #6). Corrections: an earlier line in this log said "this branch is the only one merged" — that was not accurate at the time and is superseded here. The same line also said social links for Neon Museum and Hoover Dam were covered; they were not verified and are not published.
+- 2026-11-26 — Integration: merged `origin/main` (several times, because other sessions merged in parallel). Kept `main`'s `docs/` and moved this planner to its own folder `docs/session-059c3126/`. Removed this session's root-level copies and the `docs/legacy/` copy (the other planner already exists at `docs/session-36cc5108/`). `scripts/build-legacy.py` removed.
+
+### PR and deployment result
+(Recorded at the end of integration.)
+
+---
+
+## Session fd2715d0 — supplemental category audit
+
+**Branch:** `arena/fd2715d0-vegas2` (fixed by Arena). **Integration base:** `origin/main` advanced from `eaf87bb` to `454e739` while PR #9 was open; PR #4 (`059c3126`) was added in parallel. This branch preserves the main `/docs` site, the `docs/session-059c3126/` planner, `docs/session-36cc5108/`, `docs/planner-v1/`, the root redirect and shared datasets.
+
+### Scope and status
+
+| Task | Status | Files |
 |---|---|---|
-| Source-first mobile category site (Hotels, MICHELIN, Activities, Dates) | Done | `docs/session-fd2715d0/` |
-| Questions, Suggestions, Flagged for Review pages | Done | `docs/session-fd2715d0/` |
-| Isolate this session’s datasets and renderer from shared root data | Done | `docs/session-fd2715d0/{data,assets}/` |
-| Expose the supplemental site from the primary dashboard and footer | Done | `scripts/build_site.py`, generated `docs/*.html` |
-| Preserve and validate all existing Pages builds | Done locally | `docs/`, `docs/session-36cc5108/`, `docs/planner-v1/` |
-| PR #9, merge, Pages deployment confirmation | Pending | `arena/fd2715d0-vegas2` |
+| Build source-first hotel, MICHELIN, activity/transit and date pages | Done | `docs/session-fd2715d0/` |
+| Add Questions, Suggestions and Flagged for Review | Done | `docs/session-fd2715d0/` |
+| Keep session data isolated from shared sources | Done | `docs/session-fd2715d0/data/`, `docs/session-fd2715d0/assets/` |
+| Link audit from both current dashboard builders | Done locally | `scripts/build_site.py`, `scripts/build.mjs` |
+| Rebuild/check prior Pages outputs | Done locally | `docs/`, `docs/session-059c3126/`, `docs/session-36cc5108/` |
+| PR #9 merge and Pages deployment confirmation | Pending | PR #9, Pages workflow |
 
-## Verification and limitations
+### Verification notes
 
-- The supplemental site has 8 hotels, 24 MICHELIN listings (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected), 11 activities/transit references and 30 possible seven-night date windows. Its official-source links and unknowns are stored beside the data.
-- Official room-category pages were checked for all eight candidates; the data distinguishes a listed room type from live availability and explicit private/ensuite confirmation. No 2027 room quote, lowest-price stay date, or advance booking lead time is claimed.
-- Only Restaurant de Joël Robuchon’s complete weekly profile schedule is retained; other current hours, restaurant totals for two, future event schedules, unverified social accounts and hotel-origin public-transit journey times stay blank/flagged.
-- Date conflict remains unresolved: Feb 15–18 is three nights, while the user’s duration is one to two weeks and a seven-night hotel comparison is also requested. No stay length is selected.
-- After integrating the newer `origin/main` layout locally, `python3 scripts/build_site.py` and `python3 scripts/check_site.py` passed (306 internal links across 19 pages, 0 warnings); `python3 site/build.py` rebuilt the session-36cc5108 site with 0 errors. The supplemental site’s HTML/data/JS/search/filter checks also passed. Re-run the HTTP smoke checks before merge; Pages deployment remains pending.
-- PR #9: https://github.com/kanlerxz87-cyber/Vegas2/pull/9 (`arena/fd2715d0-vegas2` → `main`). It remains open. Its conflict with the newer `docs/` layout was resolved by retaining the root redirect and all prior builds, publishing this audit under `docs/session-fd2715d0/`, and adding a primary-homepage link. PR merge and Pages deployment verification remain pending.
+- Dataset size: 8 hotels; 24 MICHELIN listings (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected); 11 activity/transit entries; 30 possible seven-night windows.
+- Hotel room-category pages are linked as evidence of candidate bed/bath options; selected-room private-bath confirmation, live inventory, rates, resort fees and hotel-origin transit routes remain unverified.
+- No lowest-price dates or advance booking lead time are inferred. Restaurant meal-for-two totals and future schedules/socials remain blank unless an official source confirms them. Only Restaurant de Joël Robuchon’s complete weekly profile schedule is retained, with its as-of date.
+- Feb 15–18 is three nights, while the trip length is requested as one to two weeks and a seven-night comparison is also requested; no duration is selected.
+- Reconciliation with current `main` is done by retaining the root redirect and published sites and placing this audit in its own `docs/session-fd2715d0/` folder. Shared `data/verified/` and top-level data files are preserved.
+- PR #9: https://github.com/kanlerxz87-cyber/Vegas2/pull/9. It remains open. The PR was initially conflicting after `main` advanced; this branch is being merged with `origin/main` at `454e739` to preserve concurrent work. No Pages deploy result is claimed yet.

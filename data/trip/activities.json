@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Activities",
+    "note": "Only activities with an official page read this session are listed. Drive or transit time from each hotel is NOT verified for any activity (no official travel-time source was read), so those cells are blank. Other candidate attractions are listed under Questions as research still needed.",
+    "reservationWindow": "Feb 15-18, 2027 falls inside Red Rock Canyon's timed-entry season (Oct 1 to May 31)."
+  },
+  "activities": [
+    {
+      "name": "Hoover Dam (guided dam tour, powerplant tour, visitor center)",
+      "category": "Day trip (outside Las Vegas)",
+      "link": "https://www.usbr.gov/lc/hooverdam/service/index.html",
+      "tickets": "https://hooverdam.ticketure.co/events?category=Admission",
+      "hours": "Hoover Dam open to the public daily 5:00 AM to 9:00 PM (PT). Visitor Center and tours daily 9:00 AM to 5:00 PM; the official page lists exceptions (text truncated in the read; verify on the page).",
+      "prices": "Guided Dam Tour $40 per person (children 3 and under free); Guided Powerplant Tour $25 adults, $15 ages 4-16; Self-Guided Visitor Center Tour $15 per person. Interagency passes NOT accepted.",
+      "specialRules": "Special-event activities may be limited around Easter, first two weeks of August, 3 days after Thanksgiving, and the week after Christmas through the first Monday of January (official page).",
+      "driveOrTransitFromHotel": null,
+      "social": "Facebook: https://www.facebook.com/theHooverDam/ (linked from official page). TikTok/Instagram/YouTube for this site: not confirmed.",
+      "sources": [
+        {
+          "label": "Official tour information (usbr.gov)",
+          "url": "https://www.usbr.gov/lc/hooverdam/service/index.html"
+        },
+        {
+          "label": "Official Hoover Dam homepage (hours, special events)",
+          "url": "https://www.usbr.gov/lc/hooverdam/"
+        }
+      ]
+    },
+    {
+      "name": "Red Rock Canyon National Conservation Area (Scenic Drive)",
+      "category": "Nature / scenic drive (a few miles west of Las Vegas, per official page)",
+      "link": "https://www.redrockcanyonlv.org/visitor-information/",
+      "tickets": "https://www.recreation.gov/timed-entry/10075177",
+      "hours": "Conservation area hours Oct 1 to May 31: November to February 6:00 AM to 5:00 PM (PT); March 6:00 AM to 7:00 PM; April to May 6:00 AM to 8:00 PM. Visitor Center 8:00 AM to 4:30 PM.",
+      "prices": null,
+      "specialRules": "Timed-entry reservations REQUIRED for vehicle entry to the Scenic Drive Oct 1 to May 31, 8:00 AM to 5:00 PM, one reservation per day of entry (Recreation.gov, or call (877) 444-6777). Scenic Drive is one-way, 13-mile loop. Parking fills early on weekends and holidays. Recreation.gov states the Scenic Drive is 17 miles west of the Las Vegas Strip (distance only; drive time not verified). Reservations NOT required June 1 to Sept 30.",
+      "driveOrTransitFromHotel": null,
+      "social": null,
+      "sources": [
+        {
+          "label": "Official timed-entry and hours page (redrockcanyonlv.org)",
+          "url": "https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/"
+        },
+        {
+          "label": "Official Red Rock homepage",
+          "url": "https://www.redrockcanyonlv.org/"
+        },
+        {
+          "label": "Recreation.gov Scenic Drive timed-entry page (distance, rules)",
+          "url": "https://www.recreation.gov/timed-entry/10075177"
+        }
+      ]
+    },
+    {
+      "name": "Valley of Fire State Park",
+      "category": "Nature / state park (Overton, NV address per official page)",
+      "link": "https://parks.nv.gov/parks/valley-of-fire",
+      "tickets": "https://www.reservenevada.com/NevadaWeb/Default.aspx#!park/22",
+      "hours": "Park open daily, sunrise to sunset. Visitor Center daily 9:00 AM to 4:00 PM. Office hours Mon-Fri 9:00 AM to 4:00 PM.",
+      "prices": "Entrance $10.00 per Nevada vehicle; $15.00 per non-Nevada vehicle (official page).",
+      "specialRules": "Reservations not required for day use. Trails such as White Domes, Fire Wave, Pinnacles are closed annually May 15 to Sep 30 (official). Park closes to all visitors Dec 1 to Dec 14 each year (not in the Feb 2027 window). Official page warns that Uber/Lyft can strand visitors because return rides are often unavailable.",
+      "driveOrTransitFromHotel": null,
+      "social": null,
+      "sources": [
+        {
+          "label": "Official Valley of Fire page (parks.nv.gov)",
+          "url": "https://parks.nv.gov/parks/valley-of-fire"
+        }
+      ]
+    },
+    {
+      "name": "The Neon Museum (Neon Boneyard and North Gallery)",
+      "category": "Museum / outdoor exhibit (downtown)",
+      "link": "https://neonmuseum.org/your-visit/",
+      "tickets": "https://neonmuseum.org/your-visit/",
+      "hours": "Sept to May: 3:00 PM to 11:00 PM daily (last entry 10:00 PM). June to August: 8:00 PM to midnight (last entry 11:00 PM). Official weekly grid shows 3:00 PM to 11:00 PM for every day of the week shown on the page read.",
+      "prices": "Not read (ticket page is dynamic). Official FAQ: from January 1, 2027, arriving earlier or later than the selected ticket time may cost more.",
+      "specialRules": "Outdoor site: tours cancel if the temperature is above 100 F; General Admission closes above 105 F; Museum closes above 110 F. Rain or shine. Phone 702-387-6366.",
+      "driveOrTransitFromHotel": null,
+      "social": "TikTok: https://www.tiktok.com/@neonmuseumlasvegas ; Instagram: https://www.instagram.com/theneonmuseumlasvegas/ (both linked on the official site)",
+      "sources": [
+        {
+          "label": "Official visit page (hours, FAQs, social links)",
+          "url": "https://neonmuseum.org/your-visit/"
+        }
+      ]
+    }
+  ]
+}
