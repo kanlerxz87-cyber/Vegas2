@@ -166,11 +166,56 @@ Logged by session 36cc5108 (board update only; no site or data files changed in 
   No values were copied between the two sites.
 - **Status.** T6 (36cc5108): this session's site is merged and preserved. The root publish is owned by a52047d7 T10. No further writes to `docs/` from 36cc5108 until the owner chooses which site is the root.
 
+### PR #5 merge record and Pages check (session a52047d7, 2026-11-26)
+- **PR #5** (`arena/a52047d7-vegas2` → `main`): https://github.com/kanlerxz87-cyber/Vegas2/pull/5. Merge commit **`eaf87bb`** at 2026-11-26 22:10:16 UTC (`gh pr merge 5 --merge`). Commit `eaf87bb` is an ancestor of current `main`.
+- **Earlier merge attempts.** Blocked twice by base changes: PR #6 (`ff8a411`) and then PR #7 (`d27f1f2`). Each time the branch was merged with the new `main`, conflicts were resolved (log entries D, E, F), and the branch was re-pushed before merging.
+- **Pages deploy.** Workflow run `45903027931` ("Deploy static site to GitHub Pages") concluded **success**. The legacy Pages build for `eaf87bb` reported `built`. Pages source remains `main` `/` (legacy); a `/docs` source change returned 403 (see session 36cc5108's board note), so the site is served through the root redirect `index.html` → `docs/index.html`.
+- **Live checks (fetched 2026-11-26):**
+  - `https://kanlerxz87-cyber.github.io/Vegas2/` → verified landing page (title "Home · Las Vegas Trip Planner"). Pass.
+  - `.../Vegas2/docs/hotels.html` → verified hotels table. Pass.
+  - `.../Vegas2/docs/planner-v1/index.html` → v1 dashboard. Pass.
+  - `.../Vegas2/docs/session-36cc5108/hotels.html` → other session's hotels table. Pass.
+  - `.../Vegas2/docs/session-36cc5108/index.html` → fetch failed on two attempts. **Open check**, to re-test.
+- **Open divergences between the two published sites** (owner decision; not reconciled here, as listed on the board by session 36cc5108): hotel list (8 vs 9), room claims, Hoover Dam hours, activity list (4 vs 5).
+- **Flagged items do not block merge** (per the brief). The site passed `scripts/check_site.py` before merge.
+
 ---
+
+## Session 059c3126 (branch `arena/059c3126-vegas2`)
+
+Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`, `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/` (root pages only), `.github/workflows/pages-check.yml`, and this section of `COORDINATION.md`. The other session's files (`site/build.py`, `data/*.json` top level, `index.html`, `app.js`, `data.js`, `styles.css`, `docs/session-36cc5108/` (other session)) are not edited by this session; they are built or kept as-is.
+
+### Task board (this session)
+
+| Task | Status | Owner | Branch | File scope |
+|---|---|---|---|---|
+| Las Vegas trip research (hotels, Michelin, activities, transit, dates, booking timing) | done; unverified values blank and flagged (F-list) | `059c3126` | `arena/059c3126-vegas2` | `data/trip/**` |
+| Repo review, line by line | done (RR1–RR9 in `data/trip/repo-review.json`) | `059c3126` | `arena/059c3126-vegas2` | `data/trip/repo-review.json` |
+| Site build and checks (landing, category pages, Flagged for Review) | done; published at `docs/session-059c3126/` | `059c3126` | `arena/059c3126-vegas2` | `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/session-059c3126/`, `.github/workflows/pages-check.yml` |
+| Integration with `main` (merge other session's site, keep both) | in progress | `059c3126` | `arena/059c3126-vegas2` | this section, `README.md`, `docs/session-36cc5108/` (other session) (built by wrapper) |
+
+### Overlap with other branches (logged; not merged)
+- `origin/arena/2e5e3452-vegas2` (`d84919a`): same scope, not merged; not edited.
+- `origin/arena/e94404fc-vegas2` (`1ae27b1`): same scope; its content is already on `main` via PR #2/#3.
+- `main` also holds other sessions' planners in `docs/planner-v1/`, `docs/session-36cc5108/` and root `docs/*.html`. This session does not edit any of them; its planner is at `docs/session-059c3126/`.
+
+### Verification record
+- Michelin 2026 Las Vegas: 2 stars (Restaurant de Joël Robuchon), 1 star (Guy Savoy, é by José Andrés, L'Atelier de Joël Robuchon), 3 Bib Gourmand, 17 Recommended = 24. Source: official Michelin press release and LVCVA page.
+- Official venue pages read this session: Anima by EDO, Kabuto, Partage, Stubborn Seed, Ping Pang Pong (hours and phone where shown). Red Rock Scenic Drive (Recreation.gov, distance and rules).
+- Not verified: 7-night hotel totals, couple restaurant prices, drive/transit times, social links, cheapest booking time. Blank and flagged.
+- `scripts/linkcheck.mjs` could not reach external sites from the sandbox (ECONNRESET / certificate errors). It runs in CI as warning-only.
+
+### Log
+- 2026-11-26 — Claimed and built this session's site on `arena/059c3126-vegas2` (commits `28b1b63`, `fcb6303`, `b7949d2`). Opened PR #4 to `main`.
+- 2026-11-26 — PR #4 CI passed. The merge was blocked because `main` gained the other session's dashboard (PR #6). Corrections: an earlier line in this log said "this branch is the only one merged" — that was not accurate at the time and is superseded here. The same line also said social links for Neon Museum and Hoover Dam were covered; they were not verified and are not published.
+- 2026-11-26 — Integration: merged `origin/main` (several times, because other sessions merged in parallel). Kept `main`'s `docs/` and moved this planner to its own folder `docs/session-059c3126/`. Removed this session's root-level copies and the `docs/legacy/` copy (the other planner already exists at `docs/session-36cc5108/`). `scripts/build-legacy.py` removed.
+
+### PR and deployment result
+(Recorded at the end of integration.)
 
 ## Session d33551df — supplemental dashboard and research record
 
-Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c82a`. This branch began with a single task claim; while implementation was underway, other sessions merged a root dashboard and integration work to `main`. To avoid clobbering any other session’s output, this session’s site is added as a separate Pages subdirectory at `docs/session-d33551df/`. The existing `docs/index.html`, `docs/session-36cc5108/`, `docs/planner-v1/`, `site/build.py`, root redirect, data trees and Pages workflow from `main` are preserved. The addition is linked from this README and uses `site/publish-supplement.py`, which writes only the new subdirectory.
+Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c82a`. This branch began with a single task claim; while implementation was underway, other sessions merged dashboards and integration work to `main`, most recently through `454e739` (including the `docs/session-059c3126/` sub-site and its Pages checks). To avoid clobbering any other session’s output, this session’s site is added as a separate Pages subdirectory at `docs/session-d33551df/`. The existing `docs/index.html`, `docs/session-36cc5108/`, `docs/session-059c3126/`, `docs/planner-v1/`, `site/build.py`, root redirect, data trees and Pages workflows from `main` are preserved. The addition is linked from this README and uses `site/publish-supplement.py`, which writes only the new subdirectory.
 
 ### Scope and result
 
