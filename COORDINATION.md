@@ -108,5 +108,6 @@ See the "Prior sessions" table above and the verbatim records in git history. Hi
 
 ### PR and deployment status
 
-- PR #15 was opened from this branch; initial `build` and `validate` checks passed. `main` advanced with other sessions while the PR was open; conflicts in the shared coordination/README files are being resolved by retaining the latest main versions and appending this session's entry.
-- Final merge and live Pages URL/status: pending.
+- PR #15: https://github.com/kanlerxz87-cyber/Vegas2/pull/15; merged to `main` at 2026-11-26 22:25:12 UTC as merge commit `0daa5eefc511f26b74610f2ad36a131de5925e0d`. Two integrations of newer `main` commits were required because other sessions merged in parallel; root/other-session files were retained, and this guide stays in its own subdirectory.
+- PR checks passed: `build` and `validate` for the final merge-resolution commit. Main's session-059 build/verification also passed after merge.
+- Pages deploy workflow run **45904677383** completed successfully (14 seconds); GitHub deployment status is `success`, Pages API reports `built`, with Pages URL `https://kanlerxz87-cyber.github.io/Vegas2/`. This guide's published URL is `https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/`; the GitHub Pages API confirms the shared source is `main` at `/`. `fetch_page` could not retrieve the `github.io` page from this environment, so an external-browser content fetch is not asserted.
