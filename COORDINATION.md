@@ -10,7 +10,8 @@
 - No other task claims existed when this board was created. This checkout has one active session; shared integration is necessarily done here.
 - Verification performed: `node --check data.js` passed; parsed the HTML anchors/links (no missing in-page anchors); verified referenced local assets exist. No build dependencies are required.
 - Outstanding: live hotel total quotes for exact dates; official hotel room/bed/private-bathroom inventory; public-transit itineraries; social media links; activity/restaurant opening schedules for the future date range. These are explicitly flagged for review, not invented.
-- Sources: official 2026 MICHELIN Guide pages linked in restaurant rows and in the site review section. Changes provide a GitHub Pages workflow; deployment still needs a successful GitHub Actions run and repository Pages configuration.
+- Sources: official 2026 MICHELIN Guide pages linked in restaurant rows and in the site review section.
+- PR #1: https://github.com/kanlerxz87-cyber/Vegas2/pull/1 — merged with merge commit. No workflow run was returned by `gh run list --workflow \"Deploy GitHub Pages\"`; therefore Pages deployment is NOT confirmed. Repository Pages may require Actions source/configuration and a manual workflow dispatch; do not represent the site as live until a successful deployment is visible.
 
 ## Irregularities
 
