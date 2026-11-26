@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "verified_on": "2026-11-26",
+    "window": "Feb 15 – Mar 23, 2027 (7-night stays; check-in Feb 15 – Mar 16)",
+    "key_facts": [
+      "Super Bowl LXI: Sun Feb 14, 2027 (SoFi Stadium, Inglewood) — day before preferred window",
+      "Presidents' Day: Mon Feb 15, 2027 (federal holiday) — preferred start date",
+      "Valentine's Day: Sun Feb 14, 2027",
+      "MAGIC Las Vegas + International Roofing Expo: Feb 16–18, 2027 (LVCC) — overlaps preferred window",
+      "IFA Convention: Feb 22–24, 2027",
+      "WVC (Western Veterinary Conference): Feb 28–Mar 3, 2027 (Mandalay Bay)",
+      "ASD Market Week: Mar 2–4, 2027; AAOS Annual Meeting: Mar 3–6, 2027 (Venetian)",
+      "Red Rock Rave volleyball: Mar 5–7, 2027 (~60,000 attendees)",
+      "Mar 15–18 pile-up: Channel Partners, MRC Vegas, LIGHTFAIR, SAPinsider, MURTEC",
+      "Bar & Restaurant Expo + Shoptalk: Mar 22–24, 2027 (tail of window)",
+      "Feb 2027 citywide avg rate ~$186/night (LVCVA-derived); Feb 4-star ~$145, 5-star ~$264 (incl. resort fee, excl. ~13% tax). July is cheapest month overall (~$155) but outside window. March 2027 avg higher (~$206 in 2026 comparison).",
+      "Any 7-night block includes one Friday + one Saturday (the two most expensive nights) — cheapest 7-night is driven by conventions/events, not weekday alone."
+    ],
+    "recommendation": "Primary: Fri Feb 19 – Fri Feb 26, 2027 (7 nights). Avoids Super Bowl/Presidents' Day/MAGIC; before March peak. Alternate: Sun Mar 7 – Sun Mar 14, 2027 (avoids Mar 15 pile-up). Preferred Feb 15–22 start is the MOST expensive option in-window (holiday + MAGIC). Book refundable NOW (Nov 2026, ~3 months out) and re-check; convention-week rates only rise. Compare TOTAL (room + resort fee + tax), never nightly rate alone."
+  },
+  "windows": [
+    {"checkin": "Mon Feb 15", "checkout": "Mon Feb 22", "nights": 7, "events": "Presidents' Day + MAGIC Feb 16–18 + Super Bowl spillover", "demand": "PEAK", "note": "Preferred start = most expensive. Avoid if price-sensitive."},
+    {"checkin": "Tue Feb 16", "checkout": "Tue Feb 23", "nights": 7, "events": "MAGIC Feb 16–18 + IFA start", "demand": "PEAK", "note": "Convention overlap both ends."},
+    {"checkin": "Wed Feb 17", "checkout": "Wed Feb 24", "nights": 7, "events": "MAGIC tail + IFA Feb 22–24", "demand": "PEAK", "note": "Convention overlap."},
+    {"checkin": "Thu Feb 18", "checkout": "Thu Feb 25", "nights": 7, "events": "IFA Feb 22–24", "demand": "HIGH", "note": "Better than Feb 15 start; still IFA week."},
+    {"checkin": "Fri Feb 19", "checkout": "Fri Feb 26", "nights": 7, "events": "IFA Feb 22–24 + TPE Feb 24–26", "demand": "HIGH (least-bad)", "note": "RECOMMENDED primary. Avoids holiday + MAGIC + March peak."},
+    {"checkin": "Sat Feb 20", "checkout": "Sat Feb 27", "nights": 7, "events": "IFA/TPE + Rugby League Feb 27", "demand": "HIGH", "note": "Similar to Feb 19; Rugby League tail."},
+    {"checkin": "Sun Feb 21", "checkout": "Sun Feb 28", "nights": 7, "events": "TPE + WVC start Feb 28", "demand": "HIGH", "note": "WVC tail hits checkout night."},
+    {"checkin": "Mon Feb 22", "checkout": "Mon Mar 1", "nights": 7, "events": "IFA + TPE + WVC start", "demand": "HIGH", "note": "Three conventions in one stay."},
+    {"checkin": "Tue Feb 23", "checkout": "Tue Mar 2", "nights": 7, "events": "TPE + WVC + ASD start", "demand": "HIGH", "note": "Convention chain."},
+    {"checkin": "Wed Feb 24", "checkout": "Wed Mar 3", "nights": 7, "events": "TPE + WVC + ASD/AAOS start", "demand": "HIGH", "note": "Convention chain."},
+    {"checkin": "Thu Feb 25", "checkout": "Thu Mar 4", "nights": 7, "events": "WVC + ASD + AAOS start", "demand": "PEAK", "note": "March peak begins."},
+    {"checkin": "Fri Feb 26", "checkout": "Fri Mar 5", "nights": 7, "events": "WVC + ASD + AAOS + Red Rock Rave start", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Sat Feb 27", "checkout": "Sat Mar 6", "nights": 7, "events": "ASD + AAOS + Red Rock Rave", "demand": "PEAK", "note": "Avoid (60k volleyball attendees)."},
+    {"checkin": "Sun Feb 28", "checkout": "Sun Mar 7", "nights": 7, "events": "ASD + AAOS + Red Rock Rave", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Mon Mar 1", "checkout": "Mon Mar 8", "nights": 7, "events": "ASD + AAOS + Red Rock Rave + PCA", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Tue Mar 2", "checkout": "Tue Mar 9", "nights": 7, "events": "AAOS + Red Rock Rave + PCA + HumanX", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Wed Mar 3", "checkout": "Wed Mar 10", "nights": 7, "events": "AAOS + Red Rock Rave + HumanX", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Thu Mar 4", "checkout": "Thu Mar 11", "nights": 7, "events": "Red Rock Rave + HumanX + HFA/Vision start", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Fri Mar 5", "checkout": "Fri Mar 12", "nights": 7, "events": "Red Rock Rave + HumanX + HFA/Vision", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Sat Mar 6", "checkout": "Sat Mar 13", "nights": 7, "events": "HumanX + HFA + Vision Expo", "demand": "HIGH", "note": "Better than Mar 1–5; still busy."},
+    {"checkin": "Sun Mar 7", "checkout": "Sun Mar 14", "nights": 7, "events": "HumanX + HFA + Vision tail", "demand": "HIGH (least-bad alt)", "note": "ALTERNATE recommendation. Avoids Mar 15 pile-up."},
+    {"checkin": "Mon Mar 8", "checkout": "Mon Mar 15", "nights": 7, "events": "HumanX/HFA/Vision + Mar 15 pile-up start", "demand": "HIGH", "note": "Checkout night hits pile-up."},
+    {"checkin": "Tue Mar 9", "checkout": "Tue Mar 16", "nights": 7, "events": "HFA/Vision + Mar 15–18 pile-up", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Wed Mar 10", "checkout": "Wed Mar 17", "nights": 7, "events": "Vision tail + Mar 15–18 pile-up", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Thu Mar 11", "checkout": "Thu Mar 18", "nights": 7, "events": "Mar 15–18 pile-up (5 shows)", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Fri Mar 12", "checkout": "Fri Mar 19", "nights": 7, "events": "Mar 15–18 pile-up", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Sat Mar 13", "checkout": "Sat Mar 20", "nights": 7, "events": "Mar 15–18 pile-up", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Sun Mar 14", "checkout": "Sun Mar 21", "nights": 7, "events": "Mar 15–18 pile-up", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Mon Mar 15", "checkout": "Mon Mar 22", "nights": 7, "events": "Mar 15–18 pile-up + Bar Expo start", "demand": "PEAK", "note": "Avoid."},
+    {"checkin": "Tue Mar 16", "checkout": "Tue Mar 23", "nights": 7, "events": "Mar 15 tail + Bar & Restaurant Expo Mar 22–24", "demand": "PEAK", "note": "Avoid (window tail)."}
+  ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotels — Vegas2 Las Vegas Trip Planner</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="brand"><span class="logo">🏨</span><div><h1>Hotels — ranked by Michelin access</h1><p>2 adults · private bathroom · queen bed or larger · 7-night totals via official booking links</p></div></div>
+<nav class="main">
+<a href="index.html">🏠 Dashboard</a>
+<a href="hotels.html" class="active">🏨 Hotels</a>
+<a href="restaurants.html">⭐ Michelin Restaurants</a>
+<a href="activities.html">🎭 Activities</a>
+<a href="dates.html">📅 Dates & Cheapest</a>
+<a href="suggestions.html">💡 Suggestions</a>
+<a href="questions.html">❓ Questions</a>
+<a href="flagged.html">🚩 Flagged for Review</a>
+</nav>
+</div></header>
+<main><div class="wrap">
+<div class="hero"><h2>10 hotels, ranked by Michelin restaurants within 1 hour</h2>
+<p>Ranking = starred on-site → walkable (15 min) → 30-min → 60-min by RTC bus/Monorail/walk. Las Vegas has <strong>no subway</strong>; "subway or bus" = RTC Deuce bus (24h) + Monorail + walking. Bus times are estimates — confirm in the <a href="https://www.rtcsnv.com/" target="_blank" rel="noopener">RTC trip planner ↗</a>.</p>
+<p><strong>7-night total (2 adults):</strong> Nightly room rates are <strong>live/dynamic</strong> — there is no static published total to copy without inventing numbers. Click <em>Book / check live total</em> on each row for your exact dates. To compare fairly: <span class="kbd">(nightly rate + resort fee) × 7</span>, then add <strong>~13.38% lodging tax</strong> (Clark County Strip). MGM Grand resort fee <strong>$50/night + tax</strong> (published Oct 2026) is the only fee verified at research time; all others say "check live".</p></div>
+
+<div class="toolbar">
+<input id="q" type="search" placeholder="Search hotels, areas, amenities…" aria-label="Search hotels">
+<select id="sort" aria-label="Sort hotels">
+<option value="rank">Sort: Recommended rank</option>
+<option value="michelin">Sort: Most Michelin ≤1 hr</option>
+<option value="walk">Sort: Most Michelin ≤15-min walk</option>
+</select>
+<span id="hotels-count" class="small"></span>
+</div>
+<div class="table-wrap"><table id="hotels-table"></table></div>
+
+<div class="note"><strong>How the 1-hour counts work:</strong> From any Center Strip hotel, all 24 Michelin restaurants are reachable within ~60 min by bus/walk/rideshare — so the ranking differentiates by <em>on-site + walkable</em> density, not just the 60-min total. MGM Grand (South Strip) reaches 23/24 within 60 min (Anima by Edo, far SW, is the edge case). Downtown Circa reaches 24/24 but the Strip cluster is 35–50 min by Deuce. Chinatown (5 Selected + 1 Bib) is 30–45 min from Center Strip, 45–60 min from MGM Grand. Confirm any specific trip in the RTC planner before booking.</div>
+<div class="warn"><strong>⚠ Booking tip:</strong> Book a <strong>refundable</strong> rate now (Nov 2026, ~3 months out) for Feb 19–26, then re-check prices monthly. Convention-week rates (MAGIC, IFA, March pile-up) only rise. Always compare the <strong>total with resort fee + tax</strong> — nightly-rate-only comparisons are misleading in Las Vegas.</div>
+</div></main>
+<footer><div class="wrap"><p><a href="index.html">← Dashboard</a> · <a href="dates.html">Dates & Cheapest →</a> · <a href="flagged.html">Flagged for Review</a></p></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
