@@ -213,28 +213,56 @@ Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`
 ### PR and deployment result
 (Recorded at the end of integration.)
 
+## Session d33551df — supplemental dashboard and research record
+
+Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c82a`. This branch began with a single task claim; while implementation was underway, other sessions merged dashboards and integration work to `main`, most recently through `454e739` (including the `docs/session-059c3126/` sub-site and its Pages checks). To avoid clobbering any other session’s output, this session’s site is added as a separate Pages subdirectory at `docs/session-d33551df/`. The existing `docs/index.html`, `docs/session-36cc5108/`, `docs/session-059c3126/`, `docs/planner-v1/`, `site/build.py`, root redirect, data trees and Pages workflows from `main` are preserved. The addition is linked from this README and uses `site/publish-supplement.py`, which writes only the new subdirectory.
+
+### Scope and result
+
+- Source dashboard: `site/index.html`, `hotels.html`, `restaurants.html`, `activities.html`, `analysis.html`, `flagged.html`, `assets/` and `verify.cjs`.
+- Published copy: `docs/session-d33551df/`, served by the existing `docs/` Pages artifact without changing the root landing page or another session path.
+- PR #11: https://github.com/kanlerxz87-cyber/Vegas2/pull/11 (branch `arena/d33551df-vegas2` → `main`). Initial merge attempt found conflicts because `main` advanced; the branch now merges `origin/main`, preserves its existing Pages workflow, and publishes this work only under `docs/session-d33551df/`. The PR is open; hosted deployment is pending.
+- User-specified constraints retained: no unverified values inferred, no user input requested, official source links on every findings-table row, and unresolved items remain visible on Flagged for Review.
+
+### Research/source facts and irregularities
+
+- MICHELIN source: [Visit Las Vegas 2026 restaurant list](https://www.visitlasvegas.com/michelin-guide-restaurants/). 24 venues: one two-star, three one-star, three Bib Gourmand and 17 Recommended/Selected. Distinctions are separate in the new table.
+- Hotel room sources are linked per row in `site/assets/data.js`: official pages for Caesars Palace, MGM Grand, Cosmopolitan, Venetian and Wynn. Each selected room page confirms a king and private bath. Caesars room-size sources conflict (350 vs. 360+ sq. ft.); size is left blank.
+- Caesars exact-date room list (Feb 15–22, 2027, two adults) had rate volatility/irregularity: earlier capture $226/night including resort fee, tax excluded; later recheck displayed Julius Deluxe King $201/night ($146 room rate + $55 daily resort fee, tax excluded) and room assigned on arrival $196/night, while also showing a technical-difficulties notice. Flexible calendar sum was $1,580. Simple products ($1,582 at $226; $1,407 at $201) are arithmetic, not confirmed totals. Seven-night total remains blank and flagged.
+- Preferred Feb 15–18 is three nights, conflicting with the 1–2-week request. Feb 15–22 is explicitly only a seven-night comparison scenario.
+- Official meal-price anchors: China Poblano $60/person; Anima by EDO $85/person; Partage $130/$160/$210 per guest for 5/7/Signature menus. Michael Mina lists $295++ per person but was shown temporarily closed on Nov 26, 2026. Guy Savoy weekly hours/full meal total, Yen Viet hours (conflicting snippets), and Kame Omakase hours/full meal total remain blank and flagged.
+- Official RTC sources: [Trip Planner](https://www.rtcsnv.com/tripplanner/), [How to Ride](https://www.rtcsnv.com/ways-to-travel/how-to-ride/), [Maps & Guides](https://www.rtcsnv.com/ways-to-travel/schedules-maps/maps-guides/) and [Fares](https://www.rtcsnv.com/ways-to-travel/fares-passes/). No consistent 5 × 24 hotel-to-restaurant journey matrix was recorded. Transit counts stay blank (unmeasured, not zero), with no fabricated ranking.
+- Attraction source links, current hours/prices and exceptions are in the activity table. Bellagio’s Lunar New Year display is listed Jan 9–Mar 6, 2027; Bellagio Gallery and Michael Mina are currently flagged temporarily closed.
+
+### Verification
+
+- After integrating `origin/main` additively, `python3 site/publish-supplement.py`, separate `node --check` invocations for `site/assets/app.js`, `site/assets/data.js` and `site/verify.cjs`, and `node site/verify.cjs` passed. The verifier checked 5 hotel candidates, 24 restaurants (4 starred / 3 Bib / 17 Selected), 8 activity/transit rows, 13 review flags, and source/local links.
+- `python3 scripts/build_site.py` and `python3 scripts/check_site.py` passed for the existing root dashboard (154 internal links, 11 pages). The build preserves nested Pages subdirectories.
+- `git diff --check` passed. Local HTTP smoke checks of all six published sub-pages and CSS/JS assets under `/session-d33551df/` returned 200.
+- GitHub Pages hosting of `/session-d33551df/` remains to be confirmed after this PR is merged.
+
 ---
 
 ## Session fd2715d0 — supplemental category audit
 
-**Branch:** `arena/fd2715d0-vegas2` (fixed by Arena). **Integration base:** `origin/main` advanced from `eaf87bb` to `454e739` while PR #9 was open; PR #4 (`059c3126`) was added in parallel. This branch preserves the main `/docs` site, the `docs/session-059c3126/` planner, `docs/session-36cc5108/`, `docs/planner-v1/`, the root redirect and shared datasets.
+**Branch:** `arena/fd2715d0-vegas2` (fixed by Arena). Main advanced during integration to `0548530` with concurrent PR #11. This session preserves the root redirect, primary `docs/` site, `docs/session-059c3126/`, `docs/session-36cc5108/`, `docs/session-d33551df/`, `docs/planner-v1/`, and shared data. Its separate site is `docs/session-fd2715d0/`.
 
 ### Scope and status
 
 | Task | Status | Files |
 |---|---|---|
-| Build source-first hotel, MICHELIN, activity/transit and date pages | Done | `docs/session-fd2715d0/` |
-| Add Questions, Suggestions and Flagged for Review | Done | `docs/session-fd2715d0/` |
-| Keep session data isolated from shared sources | Done | `docs/session-fd2715d0/data/`, `docs/session-fd2715d0/assets/` |
-| Link audit from both current dashboard builders | Done locally | `scripts/build_site.py`, `scripts/build.mjs` |
-| Rebuild/check prior Pages outputs | Done locally | `docs/`, `docs/session-059c3126/`, `docs/session-36cc5108/` |
-| PR #9 merge and Pages deployment confirmation | Pending | PR #9, Pages workflow |
+| Source-first mobile Hotels, MICHELIN, Activities/Transit, Dates pages | Done | `docs/session-fd2715d0/` |
+| Questions, Suggestions, Flagged for Review | Done | `docs/session-fd2715d0/` |
+| Isolated data and renderer | Done | `docs/session-fd2715d0/data/`, `docs/session-fd2715d0/assets/` |
+| Link from current dashboard builders | Done locally | `scripts/build_site.py`, `scripts/build.mjs` |
+| Rebuild/check existing site folders | Done locally | `docs/`, `docs/session-059c3126/`, `docs/session-36cc5108/` |
+| PR #9 merge and hosted deployment confirmation | Pending | PR #9, Pages workflow |
 
-### Verification notes
+### Verification and limitations
 
-- Dataset size: 8 hotels; 24 MICHELIN listings (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected); 11 activity/transit entries; 30 possible seven-night windows.
-- Hotel room-category pages are linked as evidence of candidate bed/bath options; selected-room private-bath confirmation, live inventory, rates, resort fees and hotel-origin transit routes remain unverified.
-- No lowest-price dates or advance booking lead time are inferred. Restaurant meal-for-two totals and future schedules/socials remain blank unless an official source confirms them. Only Restaurant de Joël Robuchon’s complete weekly profile schedule is retained, with its as-of date.
-- Feb 15–18 is three nights, while the trip length is requested as one to two weeks and a seven-night comparison is also requested; no duration is selected.
-- Reconciliation with current `main` is done by retaining the root redirect and published sites and placing this audit in its own `docs/session-fd2715d0/` folder. Shared `data/verified/` and top-level data files are preserved.
-- PR #9: https://github.com/kanlerxz87-cyber/Vegas2/pull/9. It remains open. The PR was initially conflicting after `main` advanced; this branch is being merged with `origin/main` at `454e739` to preserve concurrent work. No Pages deploy result is claimed yet.
+- Data: 8 hotels; 24 MICHELIN entries (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected); 11 activity/transit entries; 30 possible seven-night windows.
+- Official room-category pages are linked as evidence of candidate room types. Exact selected-room private-bath configuration and live availability are not confirmed. No 2027 hotel rate, cheapest date, or booking lead time is claimed.
+- Restaurant totals for two, most current weekly hours, future schedules, venue-specific social accounts and unverified hotel-origin public-transit times remain blank/flagged. No route under one hour is asserted.
+- Preferred Feb 15–18 is three nights; the requested length is one to two weeks and a seven-night comparison is also requested. No trip length is silently selected.
+- `node scripts/build.mjs` and its committed-output gate passed. `python3 scripts/build_site.py` / `python3 scripts/check_site.py` passed (306 links across 19 pages, 0 warnings); `python3 site/build.py` passed with 0 errors. The local 24-route HTTP smoke test returned 200. The warning-only external link checker could not reach external sites from this sandbox.
+- PR #9: https://github.com/kanlerxz87-cyber/Vegas2/pull/9. It remains open pending clean merge into the newest `main` and Pages verification.
