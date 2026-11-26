@@ -7,12 +7,13 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCE = ROOT / "site" / "session-b29fc34e"
 PAGES = ["index.html", "hotels.html", "dining.html", "experiences.html", "transit.html", "review.html"]
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", default="_site", help="output directory, relative to the repository root")
+    parser.add_argument("--output", default="docs/session-b29fc34e", help="output directory, relative to the repository root")
     args = parser.parse_args()
     output = (ROOT / args.output).resolve()
     if output == ROOT or ROOT not in output.parents:
@@ -23,11 +24,11 @@ def main() -> int:
     output.mkdir(parents=True)
 
     for name in PAGES:
-        source = ROOT / name
+        source = SOURCE / name
         if not source.is_file():
             raise SystemExit(f"Required page is missing: {name}")
         shutil.copy2(source, output / name)
-    shutil.copytree(ROOT / "assets", output / "assets")
+    shutil.copytree(SOURCE / "assets", output / "assets")
     print(f"Built {len(PAGES)} static pages and assets into {output.relative_to(ROOT)}")
     return 0
 

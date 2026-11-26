@@ -19,8 +19,12 @@ jobs:
         with:
           python-version: "3.x"
       - name: Validate static pages and local links
-        run: python scripts/check_site.py
+        run: python scripts/check_session_b29fc34e.py
       - name: Test dining search and filters
         run: node scripts/test_filters.js
-      - name: Build Pages artifact
+      - name: Build this session's Pages output
         run: python scripts/build_pages.py
+      - name: Fail if this session's published output is out of date
+        run: |
+          git diff --exit-code -- docs/session-b29fc34e
+          test -z "$(git status --porcelain -- docs/session-b29fc34e)"

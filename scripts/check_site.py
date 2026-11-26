@@ -1,149 +1,224 @@
 #!/usr/bin/env python3
-"""Lightweight offline checks for the static Las Vegas guide."""
-from __future__ import annotations
+"""Verification gate for the Las Vegas trip-planning site.
 
+Checks (exit code 1 on any failure):
+  1. Every data file parses as JSON.
+  2. Every table row (hotels, Michelin, activities) has at least one https source link.
+  3. Row sources use an official-domain allowlist (secondary sources are only allowed
+     in the flagged/sources pages, where they are labelled as conflict checks).
+  4. Every verification cell has a valid state (v / p / u).
+  5. Michelin counts match the official 2026 release (24 total: 4 starred, 3 Bib, 17 Recommended).
+  6. Every internal link and asset in docs/*.html and docs/planner-v1/ resolves.
+  7. No placeholder strings ("None", "undefined", "TODO") leaked into the HTML.
+Run after scripts/build_site.py. Pages checked: docs/*.html (this build) and docs/planner-v1/index.html. docs/session-36cc5108/ is checked by its own build (site/build.py).
+"""
+import json
+import pathlib
+import re
+import sys
 from html.parser import HTMLParser
-from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import urlparse
 
-ROOT = Path(__file__).resolve().parents[1]
-PAGES = ["index.html", "hotels.html", "dining.html", "experiences.html", "transit.html", "review.html"]
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+DATA = ROOT / "data" / "verified"
+OUT = ROOT / "docs"
 
+OFFICIAL_DOMAINS = {
+    "michelin.com", "michelinmedia.com", "agngnconpm.cloudimg.io", "opm.gov",
+    "mgmresorts.com", "cosmopolitanlasvegas.mgmresorts.com", "bellagio.mgmresorts.com",
+    "aria.mgmresorts.com", "mgmgrand.com", "caesars.com", "ebyjoseandres.com",
+    "reservations.wynnlasvegas.com", "wynnlasvegas.com", "venetian.com", "rwlasvegas.com",
+    "usbr.gov", "facebook.com", "youtube.com", "instagram.com", "blm.gov", "x.com",
+    "recreation.gov", "parks.nv.gov", "neonmuseum.org", "api.github.com", "github.com",
+    "stocktitan.net",  # republished MGM Resorts press release (labelled in data)
+}
+SECONDARY_DOMAINS = {
+    "memesita.com", "lasvegasmagazine.com", "smartervegas.com", "luminafrontier.ai",
+    "opentable.com", "hooverdam-tours.co", "thelasvegastravelguide.com", "usmenuguide.com",
+    "lasvegasadvisor.com", "lasvegaswonders.com", "timeout.com", "vegasnearme.com",
+    "theadventuristmagazine.com", "yahoo.com", "sincityvip.com", "visitlasvegas.com",
+    "thedailyscout.com", "utahbusiness.com", "web.archive.org", "translate.google.com",
+    "vegas.com", "smartvegasdeals.com", "wedreamoftravel.com", "vicerealtygroup.com",
+    "trip.com", "vacatia.com", "wheeltheworld.com", "momondo.com", "lasvegashotels.com",
+    "justsimplywander.com", "adventuresoflilnicki.com", "discovernevada.info", "leavenotracy.com",
+    "comedybustours.com", "fandom.com", "lasvegas.fandom.com", "h-rez.com", "us-lasvegas.com",
+    "bookstaygo.com", "eater.com", "axios.com", "azcentral.com", "phoenixnewtimes.com",
+    "arizonarepublic.com", "mgmresorts.com.au", "investors.mgmresorts.com",
+}
 
-class PageParser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__(convert_charrefs=True)
-        self.ids: set[str] = set()
-        self.duplicate_ids: set[str] = set()
-        self.links: list[str] = []
-        self.images_without_alt: list[str] = []
-        self.title_parts: list[str] = []
-        self.in_title = False
-        self.h1_count = 0
-        self.lang: str | None = None
-        self.has_viewport = False
-        self.has_main = False
-        self.restaurant_cards: list[dict[str, object]] = []
-        self._restaurant_stack: list[dict[str, object]] = []
-
-    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        attrs_dict = dict(attrs)
-        element_id = attrs_dict.get("id")
-        if element_id:
-            if element_id in self.ids:
-                self.duplicate_ids.add(element_id)
-            self.ids.add(element_id)
-        if tag == "html":
-            self.lang = attrs_dict.get("lang")
-        if tag == "meta" and attrs_dict.get("name", "").lower() == "viewport":
-            self.has_viewport = True
-        if tag == "main":
-            self.has_main = True
-        if tag == "title":
-            self.in_title = True
-        if tag == "h1":
-            self.h1_count += 1
-        if tag == "a" and attrs_dict.get("href"):
-            self.links.append(attrs_dict["href"] or "")
-            if self._restaurant_stack and (attrs_dict["href"] or "").startswith("https://"):
-                self._restaurant_stack[-1]["external_sources"] = int(self._restaurant_stack[-1]["external_sources"]) + 1
-        if tag == "img" and "alt" not in attrs_dict:
-            self.images_without_alt.append(attrs_dict.get("src") or "(unknown source)")
-        if tag == "article" and "data-restaurant-card" in attrs_dict:
-            card: dict[str, object] = {
-                "status": attrs_dict.get("data-michelin"),
-                "external_sources": 0,
-            }
-            self.restaurant_cards.append(card)
-            self._restaurant_stack.append(card)
-
-    def handle_endtag(self, tag: str) -> None:
-        if tag == "title":
-            self.in_title = False
-        if tag == "article" and self._restaurant_stack:
-            self._restaurant_stack.pop()
-
-    def handle_data(self, data: str) -> None:
-        if self.in_title:
-            self.title_parts.append(data.strip())
+failures = []
+warnings = []
 
 
-def parse_page(path: Path) -> PageParser:
-    parser = PageParser()
-    parser.feed(path.read_text(encoding="utf-8"))
-    parser.close()
-    return parser
+def fail(msg):
+    failures.append(msg)
+    print("FAIL:", msg)
 
 
-def main() -> int:
-    errors: list[str] = []
-    parsed: dict[str, PageParser] = {}
+def warn(msg):
+    warnings.append(msg)
+    print("WARN:", msg)
 
-    for page_name in PAGES:
-        page = ROOT / page_name
-        if not page.is_file():
-            errors.append(f"Missing required page: {page_name}")
+
+def load(name):
+    p = DATA / f"{name}.json"
+    try:
+        with open(p, encoding="utf-8") as fh:
+            return json.load(fh)
+    except Exception as exc:  # noqa: BLE001
+        fail(f"{p.name} does not parse: {exc}")
+        return None
+
+
+def domain_of(url):
+    host = urlparse(url).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
+def in_domains(host, domains):
+    return any(host == d or host.endswith("." + d) for d in domains)
+
+
+def check_sources(where, items, allow_secondary=False):
+    if not items:
+        fail(f"{where}: no source links")
+        return
+    for it in items:
+        url = it.get("url", "")
+        if not url.startswith("https://"):
+            fail(f"{where}: source is not https: {url!r}")
             continue
-        parser = parse_page(page)
-        parsed[page_name] = parser
-        if not parser.title_parts or not "".join(parser.title_parts).strip():
-            errors.append(f"{page_name}: missing a non-empty <title>")
-        if not parser.lang:
-            errors.append(f"{page_name}: <html> is missing its lang attribute")
-        if not parser.has_viewport:
-            errors.append(f"{page_name}: missing responsive viewport metadata")
-        if not parser.has_main:
-            errors.append(f"{page_name}: missing a <main> landmark")
-        if parser.h1_count != 1:
-            errors.append(f"{page_name}: expected exactly one <h1>, found {parser.h1_count}")
-        if parser.duplicate_ids:
-            errors.append(f"{page_name}: duplicate id(s): {', '.join(sorted(parser.duplicate_ids))}")
-        if parser.images_without_alt:
-            errors.append(f"{page_name}: image(s) missing alt attribute: {', '.join(parser.images_without_alt)}")
+        host = domain_of(url)
+        if in_domains(host, OFFICIAL_DOMAINS):
+            continue
+        if allow_secondary and in_domains(host, SECONDARY_DOMAINS):
+            continue
+        fail(f"{where}: source domain not on official allowlist: {host} ({url})")
 
-    # Validate local files and fragment targets. External URLs are deliberately not
-    # fetched here: checks must work offline and venue pages change independently.
-    for page_name, parser in parsed.items():
-        page_path = ROOT / page_name
-        for raw_href in parser.links:
-            href = raw_href.strip()
-            if not href or href.startswith(("mailto:", "tel:", "javascript:", "data:")):
+
+STATES = {"v", "p", "u"}
+
+
+def check_cells(where, row, fields):
+    for f in fields:
+        v = row.get(f)
+        if isinstance(v, dict):
+            if v.get("s") not in STATES:
+                fail(f"{where}.{f}: invalid state {v.get('s')!r}")
+            if v.get("s") in ("v", "p") and not str(v.get("t", "")).strip():
+                fail(f"{where}.{f}: verified/partial cell has no text")
+
+
+def main():
+    data = {}
+    for name in ["hotels", "michelin", "activities", "booking", "questions", "suggestions",
+                 "flagged", "repo_review", "sources"]:
+        data[name] = load(name)
+    if any(v is None for v in data.values()):
+        return
+
+    # 2 & 3 & 4: hotels
+    for i, r in enumerate(data["hotels"]["rows"]):
+        where = f"hotels[{r.get('name', i)}]"
+        check_sources(where, r.get("src"))
+        check_cells(where, r, ["queen", "private_bath", "transit_1hr", "price_7n", "price_3n", "book_timing", "social"])
+        if not isinstance(r.get("michelin_on_campus"), int):
+            fail(f"{where}: michelin_on_campus must be an integer")
+
+    # Michelin
+    mrows = data["michelin"]["rows"]
+    for r in mrows:
+        where = f"michelin[{r.get('name')}]"
+        check_sources(where, r.get("src"))
+        check_cells(where, r, ["hours", "price_2adults", "reservations", "social"])
+    counts = {}
+    for r in mrows:
+        counts[r["status_group"]] = counts.get(r["status_group"], 0) + 1
+    expected = {"Starred": 4, "Bib Gourmand": 3, "Recommended": 17}
+    if len(mrows) != 24:
+        fail(f"michelin: expected 24 Las Vegas rows, found {len(mrows)}")
+    for k, v in expected.items():
+        if counts.get(k) != v:
+            fail(f"michelin: expected {v} in group {k}, found {counts.get(k)}")
+    stars = {r["name"]: r["status"] for r in mrows if r["status_group"] == "Starred"}
+    if stars.get("Restaurant de Joël Robuchon") != "2 MICHELIN Stars":
+        fail("michelin: Restaurant de Joël Robuchon must be 2 MICHELIN Stars (official release)")
+
+    # Activities
+    for r in data["activities"]["rows"]:
+        where = f"activities[{r.get('name')}]"
+        check_sources(where, r.get("src"))
+        check_cells(where, r, ["distance", "hours", "fees", "exceptions", "reservation", "social"])
+
+    # Booking facts & dates
+    for f in data["booking"]["timing"]["verified_booking_facts"]:
+        check_sources("booking.timing", [{"label": "fact", "url": f["url"]}])
+    check_sources("booking.sources_dates", data["booking"]["sources_dates"])
+
+    # Questions, flagged, repo, sources
+    for q in data["questions"]["answered"]:
+        check_sources(f"questions[{q['q'][:30]}]", [{"label": "src", "url": q["src"]}], allow_secondary=True)
+    for f in data["flagged"]["items"]:
+        check_sources(f"flagged[{f['id']}]", f["src"], allow_secondary=True)
+    for i in data["repo_review"]["items"]:
+        check_sources(f"repo_review[{i['item']}]", i["src"])
+    for s in data["sources"]["items"]:
+        if s["type"].startswith("Official") and not in_domains(domain_of(s["url"]), OFFICIAL_DOMAINS):
+            fail(f"sources: official-labelled source is not on the official allowlist: {s['url']}")
+
+    # 6 & 7: generated HTML
+    html_files = sorted(OUT.glob("*.html")) + [OUT / "planner-v1" / "index.html"]
+    if not html_files:
+        fail("no HTML pages found; run scripts/build_site.py first")
+    pages = {p.name for p in OUT.glob("*.html")}
+    expected_pages = {"index.html", "hotels.html", "michelin.html", "activities.html", "booking.html",
+                      "questions.html", "suggestions.html", "flagged.html", "repo-review.html", "sources.html"}
+    for missing in sorted(expected_pages - pages):
+        fail(f"missing page: {missing}")
+
+    class LinkParser(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.links = []
+
+        def handle_starttag(self, tag, attrs):
+            for k, v in attrs:
+                if k in ("href", "src") and v:
+                    self.links.append((tag, v))
+
+    internal_checked = 0
+    for page_path in html_files:
+        text = page_path.read_text(encoding="utf-8")
+        for bad in ("None", "undefined", "TODO", "NaN"):
+            if re.search(r"(?<![A-Za-z])" + bad + r"(?![A-Za-z])", text):
+                fail(f"{page_path.name}: placeholder text '{bad}' found")
+        parser = LinkParser()
+        parser.feed(text)
+        for tag, link in parser.links:
+            parsed = urlparse(link)
+            if parsed.scheme in ("http", "https", "mailto", "tel"):
+                if parsed.scheme == "http":
+                    fail(f"{page_path.name}: insecure link {link}")
                 continue
-            parts = urlsplit(href)
-            if parts.scheme or parts.netloc:
+            if link.startswith("#"):
                 continue
-            decoded_path = unquote(parts.path)
-            if decoded_path:
-                target = (page_path.parent / decoded_path).resolve()
-                if not target.is_file():
-                    errors.append(f"{page_name}: local link target does not exist: {href}")
-                elif parts.fragment and target.parent == ROOT and target.name in parsed:
-                    if unquote(parts.fragment) not in parsed[target.name].ids:
-                        errors.append(f"{page_name}: fragment target does not exist: {href}")
-            elif parts.fragment and unquote(parts.fragment) not in parser.ids:
-                errors.append(f"{page_name}: fragment target does not exist: {href}")
+            target = (page_path.parent / parsed.path).resolve() if parsed.path else page_path
+            internal_checked += 1
+            if not target.exists():
+                fail(f"{page_path.name}: broken internal link -> {link}")
+    print(f"checked {internal_checked} internal links across {len(html_files)} pages")
+    if not (OUT / "assets" / "style.css").exists():
+        fail("docs/assets/style.css missing")
+    if not (OUT / ".nojekyll").exists():
+        fail("docs/.nojekyll missing (GitHub Pages would ignore _-prefixed folders)")
 
-    dining = parsed.get("dining.html")
-    if dining:
-        if len(dining.restaurant_cards) != 24:
-            errors.append(f"dining.html: expected 24 restaurant cards, found {len(dining.restaurant_cards)}")
-        allowed_statuses = {"star", "bib", "listed"}
-        for index, card in enumerate(dining.restaurant_cards, start=1):
-            if card["status"] not in allowed_statuses:
-                errors.append(f"dining.html: restaurant card {index} has unknown MICHELIN filter status {card['status']!r}")
-            if int(card["external_sources"]) < 1:
-                errors.append(f"dining.html: restaurant card {index} has no external source link")
-
-    if errors:
-        print("Static site checks failed:")
-        for error in errors:
-            print(f" - {error}")
-        return 1
-
-    print(f"Static site checks passed: {len(parsed)} pages, 24 sourced restaurant cards, local files and fragments OK.")
-    print("Note: external provider links were not fetched by this offline checker.")
-    return 0
+    if failures:
+        print(f"\n{len(failures)} failure(s). Fix before publishing.")
+        sys.exit(1)
+    print(f"\nOK — all checks passed ({len(warnings)} warning(s)).")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

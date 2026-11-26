@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Repository review",
+    "intro": "Line-by-line review of the repository state and branch set at the start of this session (2026-11-26 UTC). Each result cites where it was checked."
+  },
+  "checks": [
+    { "id": "RR1", "item": "README.md", "result": "8 bytes: '# Vegas2'. No description, setup, or project purpose. Nothing to verify.", "sources": ["https://github.com/kanlerxz87-cyber/Vegas2/blob/main/README.md"] },
+    { "id": "RR2", "item": "Default branch 'main' contents", "result": "Only README.md in the initial commit c97c82a. No site, data, or COORDINATION.md on main.", "sources": ["https://github.com/kanlerxz87-cyber/Vegas2/tree/main"] },
+    { "id": "RR3", "item": "COORDINATION.md on this session branch", "result": "Did not exist before this session. Created here and logged in commit 6177fed.", "sources": ["https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/059c3126-vegas2/COORDINATION.md"] },
+    { "id": "RR4", "item": "Parallel branches with competing claims", "result": "arena/2e5e3452-vegas2 (commit d84919a) and arena/e94404fc-vegas2 (commit 1ae27b1) each claim the same overall scope. IRREGULARITY: duplicated effort risk. Logged for the integration session; no edits made to those branches.", "sources": ["https://github.com/kanlerxz87-cyber/Vegas2/tree/arena/2e5e3452-vegas2", "https://github.com/kanlerxz87-cyber/Vegas2/tree/arena/e94404fc-vegas2"] },
+    { "id": "RR5", "item": "Brief formatting artifacts", "result": "Brief text contains HTML-escaped strings such as 'session-&amp;amp;lt;id&amp;amp;gt;/' and '[COORDINATION.md](http://COORDINATION.md)' links. Read as 'session-<id>/<task>' and 'COORDINATION.md'. Flagged, not acted on.", "sources": []},
+    { "id": "RR6", "item": "Branch naming rule", "result": "Brief asks for session-<id>/<task> branches; Arena fixes this session to arena/059c3126-vegas2. Followed Arena's rule. Flagged as a conflict.", "sources": []},
+    { "id": "RR7", "item": "License", "result": "No LICENSE file. Reuse rights are not stated. Flagged.", "sources": ["https://github.com/kanlerxz87-cyber/Vegas2"] },
+    { "id": "RR8", "item": "Build tooling", "result": "No package.json, no build, no tests. This session adds a dependency-free Node script (scripts/build.mjs) that generates the static site in docs/.", "sources": []},
+    { "id": "RR9", "item": "GitHub Pages", "result": "Not configured when this session started. Pages publishing from main /docs is set up after the merge (see the final integration note in COORDINATION.md).", "sources": ["https://docs.github.com/en/pages"] }
+  ]
+}

@@ -33,7 +33,7 @@ global.document = {
   },
 };
 
-vm.runInThisContext(fs.readFileSync("assets/js/site.js", "utf8"), { filename: "assets/js/site.js" });
+vm.runInThisContext(fs.readFileSync("site/session-b29fc34e/assets/js/site.js", "utf8"), { filename: "site/session-b29fc34e/assets/js/site.js" });
 assert.equal(resultCount.textContent, "3 of 3 restaurants shown");
 input.value = "poblano";
 inputHandlers.input();
