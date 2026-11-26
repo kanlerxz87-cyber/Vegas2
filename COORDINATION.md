@@ -11,9 +11,9 @@ Last updated: 2026-11-26 (UTC)
 
 | Task | Status | Owner / session | Branch | File scope |
 |---|---|---|---|---|
-| Las Vegas trip research: hotels, Michelin restaurants, activities, transit, dates, booking timing | in progress | `059c3126` | `arena/059c3126-vegas2` | `data/**`, `scripts/**`, `docs/**`, `README.md`, `COORDINATION.md`, `.github/workflows/**` |
-| Repo review (line-by-line of repo state, branches, brief) | in progress | `059c3126` | `arena/059c3126-vegas2` | `data/repo-review.json` |
-| GitHub Pages site build, checks, flagged-for-review page | in progress | `059c3126` | `arena/059c3126-vegas2` | `scripts/**`, `docs/**`, `.github/workflows/**` |
+| Las Vegas trip research: hotels, Michelin restaurants, activities, transit, dates, booking timing | done (research), see flagged items | `059c3126` | `arena/059c3126-vegas2` | `data/**`, `scripts/**`, `docs/**`, `README.md`, `COORDINATION.md`, `.github/workflows/**` |
+| Repo review (line-by-line of repo state, branches, brief) | done (see Repo review page) | `059c3126` | `arena/059c3126-vegas2` | `data/repo-review.json` |
+| GitHub Pages site build, checks, flagged-for-review page | needs review (Flagged for Review page) | `059c3126` | `arena/059c3126-vegas2` | `scripts/**`, `docs/**`, `.github/workflows/**` |
 
 ## Overlap with other session branches (logged, not resolved here)
 - `origin/arena/2e5e3452-vegas2` (commit `d84919a`) claims "Las Vegas trip-planning research, accessible multi-page site, review flags, build/deploy verification, and final integration" with file scope `COORDINATION.md`, `README.md`, `index.html`, `assets/**`, `data/**`, `pages/**`, `scripts/**`, `styles/**`, `.github/workflows/**`, `package.json`.
@@ -32,3 +32,7 @@ Last updated: 2026-11-26 (UTC)
 - 2026-11-26 — Verified Michelin Southwest 2026 Las Vegas list from michelin.com press release (4 Stars, 3 Bib Gourmand, 17 Recommended = 24 Las Vegas entries). Visit Las Vegas (LVCVA) page used for cuisine labels and venue links.
 - 2026-11-26 — Verified federal holiday on Mon Feb 15, 2027 (Washington's Birthday) from opm.gov.
 - 2026-11-26 — Note on fetch limits: `guide.michelin.com` and several hotel room pages (Venetian `/hotel/rooms.html`, Bellagio `/hotel/rooms.html`) and the Bellagio fountains page did not load through the fetch tool. Those items are left unverified.
+- 2026-11-26 — Built the site (`scripts/build.mjs`, 11 pages in `docs/`). Verification rules pass: source domains are on the official list; Michelin tier counts = 1 Two-Star, 3 One-Star, 3 Bib, 17 Recommended (24); hotel ranking order; date weekday checks; internal links resolve. Committed as `28b1b63`.
+- 2026-11-26 — Sandbox has no general outbound web access, so `scripts/linkcheck.mjs` could not run here. It runs in CI (warning only). Venue links not individually opened are listed as Flagged F16.
+- 2026-11-26 — Integration: this branch is the only one merged to `main` in this run. The two other session branches (`arena/2e5e3452-vegas2`, `arena/e94404fc-vegas2`) were NOT merged or changed. Their overlapping scope is logged above for reconciliation.
+- Tasks not finished (blocked by missing official data, see Questions/Flagged): 7-night hotel totals, hotel bed/bath checks, couple prices, drive/transit times, social links except Neon Museum and Hoover Dam, cheapest booking time.
