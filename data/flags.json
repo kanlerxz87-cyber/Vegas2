@@ -1,0 +1,388 @@
+{
+  "as_of": "2026-11-26",
+  "note": "Flagged items are published on the 'Flagged for Review' page. They do not block the merge. Each one names the sources used so the owner can check them.",
+  "flags": [
+    {
+      "id": "F01",
+      "category": "Brief irregularity",
+      "title": "'Subway or bus' does not match Las Vegas transit",
+      "detail": "The brief asks for stops reachable 'by subway or bus'. The official transit sources reviewed list RTC bus service (S11) and the Las Vegas Monorail on the Strip (S12). No subway appears in them. This review uses bus + monorail. Owner to confirm.",
+      "source_ids": [
+        "S11",
+        "S12"
+      ],
+      "affects": [
+        "hotels",
+        "activities",
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F02",
+      "category": "Conflict with brief",
+      "title": "Red Rock Canyon has no public transit",
+      "detail": "BLM states: 'Public transportation does not extend to Red Rock Canyon' (S13). Red Rock therefore cannot meet the bus-only one-hour test. It is shown with the driving distance (approx. 30 minutes, S13) and flagged.",
+      "source_ids": [
+        "S13"
+      ],
+      "affects": [
+        "activities"
+      ]
+    },
+    {
+      "id": "F03",
+      "category": "Brief irregularity",
+      "title": "Trip length conflicts",
+      "detail": "The brief asks for a trip of 1–2 weeks, a preferred window of Feb 15–18 2027 (3 nights), and 7-night cost totals. Each uses a different length. Both 3-night and 7-night views are kept. Owner to choose.",
+      "source_ids": [
+        "S10"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F04",
+      "category": "Unverified",
+      "title": "Cheapest time to book: not determinable from official sources",
+      "detail": "The official pages reviewed show no Feb 2027 rate history. Caesars shows only a December 2026 calendar (S08). Official offers exist (advance purchase up to 30%, S09), but there is no price trend data, so the cheapest booking date cannot be stated. Flagged for research (see Questions Q-03/Q-04).",
+      "source_ids": [
+        "S08",
+        "S09"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F05",
+      "category": "Unverified",
+      "title": "Queen-or-larger bed and private bathroom not verified for any hotel",
+      "detail": "No official room-type page was checked. Every hotel row shows 'UNVERIFIED' for both requirements. Do not treat any hotel as meeting them until checked.",
+      "source_ids": [
+        "S07",
+        "S08",
+        "S20"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F06",
+      "category": "Unverified",
+      "title": "No verified 7-night total for any hotel (Feb 15–22, 2027)",
+      "detail": "The official booking page (S08) returned the December 2026 calendar with 'Searching Rates' for the Feb 2027 dates. No official Feb 2027 rate was retrieved for any hotel. Price cells are blank by design.",
+      "source_ids": [
+        "S08"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F07",
+      "category": "Irregularity (not used)",
+      "title": "Caesars 'Rooms from $186 / $139' banner is not a Feb 2027 rate",
+      "detail": "The Caesars home page banner advertises a Cyber Monday sale for December 2026 stays (S09). It is not used for any value.",
+      "source_ids": [
+        "S09"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F08",
+      "category": "Unverified",
+      "title": "Resort fees: only Caesars is confirmed officially",
+      "detail": "Caesars Palace: $62.30 per night incl. tax, verified (S08). Other MGM and Venetian properties: third-party reports say $50–$55 before tax (S22). Those figures are not confirmed on official pages, so the cells are blank.",
+      "source_ids": [
+        "S08",
+        "S22"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F09",
+      "category": "Conflict / unverified",
+      "title": "Hoover Dam hours: official page not retrievable; sources conflict",
+      "detail": "The current usbr.gov page could not be fetched. The only archived copy found is from 2010 (S21). A third-party site calling itself an 'official' guide gives different hours (S27). Hours are left blank.",
+      "source_ids": [
+        "S21",
+        "S27"
+      ],
+      "affects": [
+        "activities"
+      ]
+    },
+    {
+      "id": "F10",
+      "category": "Conflict / unverified",
+      "title": "Restaurant Guy Savoy hours: three listings disagree; official page shows none",
+      "detail": "Official Caesars page does not show the day-by-day hours in the captured text (S07). Listings conflict: OpenTable Tue–Sat 5:00–8:45 PM (S23); Yelp Tue–Sat 5–9 PM (S24); a third-party guide lists Wed–Sun 5:30–10 PM. Hours left blank.",
+      "source_ids": [
+        "S07",
+        "S23",
+        "S24"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F11",
+      "category": "Conflict",
+      "title": "é by José Andrés: third-party listings disagree with the official schedule",
+      "detail": "Official site: Tue–Sun, 5:30 and 8:30 PM seatings (S06). LasVegasAdvisor lists Thu–Sat only (S25). The official schedule is used.",
+      "source_ids": [
+        "S06",
+        "S25"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F12",
+      "category": "Outdated third-party",
+      "title": "L'Atelier: an older third-party page shows daily hours",
+      "detail": "A 2023 third-party guide lists 5:30–10:30 PM daily. The official MGM Grand page (S05) shows Mon and Thu–Sun, 5:00–9:30 PM. The official page is used.",
+      "source_ids": [
+        "S05"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F13",
+      "category": "Brief note",
+      "title": "Feb 15, 2027 is Washington's Birthday (federal holiday)",
+      "detail": "OPM lists Monday, February 15, 2027 as Washington's Birthday (S10). Holiday demand may affect prices and availability. The effect is not quantified, so no price is inferred.",
+      "source_ids": [
+        "S10"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F14",
+      "category": "Checked, no conflict",
+      "title": "Yen Viet Kitchen: Bib Gourmand (confirmed by two sources)",
+      "detail": "The official Michelin release (S01, S02) and Time Out (S26) both list Yen Viet Kitchen as a Bib Gourmand. An earlier note of a Recommended listing was a misreading and is withdrawn. Hours remain unverified (F17).",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S26"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F15",
+      "category": "Methodology",
+      "title": "'1 hour by transit' cannot be verified, so a count-in-resort ranking is used",
+      "detail": "Travel time by RTC bus or monorail is not verifiable from the official pages reviewed. The ranking therefore counts restaurants inside the same resort (address match, S01/S02). The one-hour transit test is listed as unverified for every hotel (F20).",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S11",
+        "S12"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F16",
+      "category": "Unverified source",
+      "title": "guide.michelin.com restaurant pages could not be retrieved",
+      "detail": "Michelin distinctions come from the official Michelin press release (S01, S02) and the LVCVA page (S03). The guide.michelin.com restaurant pages (hours, price symbols, reservations) were not reachable this session.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F17",
+      "category": "Unverified",
+      "title": "Hours not verified for 20 of 24 Michelin listings",
+      "detail": "Hours are verified for R01 (Joël Robuchon), R02 (L'Atelier) and R03 (é). R13 (Kabuto) is partial, from official site captions. The other 20 rows are blank, including R04 Guy Savoy (see F10). Official sites for Esther's (S17), YEN Viet (S18) and Partage (S19) show no hours in the captured text. The other rows have no official page fetched this session.",
+      "source_ids": [
+        "S01",
+        "S03"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F18",
+      "category": "Unverified",
+      "title": "Price for two adults not verified for any restaurant",
+      "detail": "No official menu or per-person price was captured for any row. Only the price symbol ($$$–$$$$) is shown, and only where an official page printed it (S04, S05, S07). The price-for-two column is blank.",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S07"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F19",
+      "category": "Unverified",
+      "title": "YouTube / TikTok / Instagram links not verified for restaurants",
+      "detail": "No restaurant-specific account was confirmed from an official page. Only venue- or agency-level accounts are listed: Caesars Palace (S30), Neon Museum TikTok and Instagram (S15), Monorail handle @lvmonorail (S12), BLM YouTube and Instagram (S13). Restaurant social cells are blank.",
+      "source_ids": [
+        "S12",
+        "S13",
+        "S15",
+        "S30"
+      ],
+      "affects": [
+        "restaurants",
+        "activities"
+      ]
+    },
+    {
+      "id": "F20",
+      "category": "Unverified",
+      "title": "Drive and transit times are not verified",
+      "detail": "No official page gave a verified transit time from any hotel to any restaurant or activity. Distances are shown only where the official page states them (Red Rock, S13). All other time cells are blank.",
+      "source_ids": [
+        "S11",
+        "S12",
+        "S13"
+      ],
+      "affects": [
+        "hotels",
+        "activities",
+        "restaurants"
+      ]
+    },
+    {
+      "id": "F21",
+      "category": "Future change",
+      "title": "Neon Museum: time-slot pricing changes Jan 1, 2027",
+      "detail": "From Jan 1, 2027, arriving earlier or later than the ticket time may cost more (S15). This applies to the trip window.",
+      "source_ids": [
+        "S15"
+      ],
+      "affects": [
+        "activities"
+      ]
+    },
+    {
+      "id": "F22",
+      "category": "Risk",
+      "title": "RTC bus service faces a funding shortfall",
+      "detail": "RTC reports a $118.5 million annual transit shortfall (S11). Future bus service levels are uncertain.",
+      "source_ids": [
+        "S11"
+      ],
+      "affects": [
+        "hotels",
+        "activities"
+      ]
+    },
+    {
+      "id": "F23",
+      "category": "Risk",
+      "title": "RTC notes bus service changes around the Strip (F1 construction)",
+      "detail": "RTC's current notice says construction is changing bus service around the Strip (S11). The Feb 2027 status is unknown. Check RTC alerts before booking.",
+      "source_ids": [
+        "S11"
+      ],
+      "affects": [
+        "hotels",
+        "activities"
+      ]
+    },
+    {
+      "id": "F24",
+      "category": "Unverified",
+      "title": "Valley of Fire drive time from the Strip not stated",
+      "detail": "The official page gives the address and hours (S14) but no drive time. The cell is blank.",
+      "source_ids": [
+        "S14"
+      ],
+      "affects": [
+        "activities"
+      ]
+    },
+    {
+      "id": "F25",
+      "category": "Repo irregularity",
+      "title": "Brief uses broken link and entity artifacts",
+      "detail": "The brief's links point to 'http://COORDINATION.md' and session names contain '&amp;amp;lt;' entity artifacts. The actual file is COORDINATION.md in the repo root. Session branch naming was not followed because the session branch is fixed by Arena.",
+      "source_ids": [
+        "S33"
+      ],
+      "affects": [
+        "repo"
+      ]
+    },
+    {
+      "id": "F26",
+      "category": "Repo irregularity",
+      "title": "Repository has no LICENSE, .gitignore or description",
+      "detail": "README.md contains only '# Vegas2' (8 bytes). There is no LICENSE file and no .gitignore. See Repo Review.",
+      "source_ids": [
+        "S33"
+      ],
+      "affects": [
+        "repo"
+      ]
+    },
+    {
+      "id": "F27",
+      "category": "Repo setting",
+      "title": "GitHub Pages was served from main root before this work",
+      "detail": "Pages is configured as legacy build, branch main, path '/' (S28). After merge the Pages source will move to /docs so the generated site stays out of the repo root. This change is made by the integration step and listed in COORDINATION.md.",
+      "source_ids": [
+        "S28"
+      ],
+      "affects": [
+        "repo"
+      ]
+    },
+    {
+      "id": "F28",
+      "category": "Partial",
+      "title": "Caesars '48-hour cancellation' is asterisked",
+      "detail": "The official page shows 'FREE 48-Hour Cancellation*' with terms not captured (S09). Treat as unverified until the terms are read.",
+      "source_ids": [
+        "S09"
+      ],
+      "affects": [
+        "hotels"
+      ]
+    },
+    {
+      "id": "F29",
+      "category": "Other site on main",
+      "title": "Dashboard on main understates Las Vegas starred restaurants (3 vs 4) and omits é by José Andrés",
+      "detail": "index.html and data.js on main (commit dce4548, arena/e94404fc-vegas2 expansion) say the Guide has 'two One-Star restaurants and one Two-Star' and list three starred restaurants. The official release (S01, S02) and Time Out (S26) list four: Restaurant de Joël Robuchon (2 stars), é by José Andrés, Guy Savoy and L'Atelier de Joël Robuchon (1 star each). Its data.js also omits é. Those files are kept unchanged on main; this site is the corrected list.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S26",
+        "S34"
+      ],
+      "affects": [
+        "restaurants"
+      ]
+    }
+  ]
+}
