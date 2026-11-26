@@ -1,286 +1,278 @@
 {
-  "as_of": "2026-11-26",
-  "note": "Every source the site uses. 'Official' means the owning organisation's own domain or a government/agency page. 'Secondary' sources are used only to flag conflicts, never as the value.",
-  "items": [
+  "retrieved_on": "2026-11-26",
+  "note": "Every row in every table references one or more of these source IDs. 'official' = issued by the entity itself or a government/tourism body. 'secondary' = media or third-party; used only to flag conflicts, never to fill a value.",
+  "sources": [
     {
-      "label": "Michelin Guide 2026 Southwest — official press release",
-      "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s",
-      "type": "Official",
-      "owner": "MICHELIN",
-      "used_for": "All Michelin statuses, addresses, cuisines (starred), Bib and Recommended lists",
-      "result": "Read (3 chunks)"
-    },
-    {
-      "label": "Michelin Media — release copy",
+      "id": "S01",
+      "type": "official",
+      "publisher": "Michelin North America (press release, 2026 MICHELIN Guide Southwest)",
+      "title": "MICHELIN Guide Reveals First-Ever Southwest Restaurant Selection in the U.S.",
       "url": "https://michelinmedia.com/pages/blog/detail/article/c0/a1480/",
-      "type": "Official",
-      "owner": "MICHELIN North America",
-      "used_for": "Cross-check of star and Bib lists",
-      "result": "Read"
+      "used_for": "Michelin distinctions (2 stars, 1 star, Bib Gourmand, Recommended), restaurant addresses, 24 Las Vegas listings"
     },
     {
-      "label": "Michelin Southwest 2026 release PDF (as linked from michelin.com)",
-      "url": "https://agngnconpm.cloudimg.io/v7/https://dgaddcosprod.blob.core.windows.net/cxf-corporate/attachments/xa99yos9yd51m3npthcquoxc-20260828-pr-michelinguide-southwest-2026.pdf",
-      "type": "Official",
-      "owner": "MICHELIN",
-      "used_for": "Cross-check of Recommended list (17 Las Vegas entries)",
-      "result": "Read"
+      "id": "S02",
+      "type": "official",
+      "publisher": "Michelin North America (same release, distributed via WebWire)",
+      "title": "MICHELIN Guide Reveals First-Ever Southwest Restaurant Selection (WebWire copy)",
+      "url": "https://www.webwire.com/ViewPressRel.asp?aId=359755",
+      "used_for": "Cross-check of Bib Gourmand and Recommended address lists"
     },
     {
-      "label": "OPM — Federal Holidays (2027 table)",
-      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
-      "type": "Official",
-      "owner": "US Office of Personnel Management",
-      "used_for": "Feb 15, 2027 = Washington's Birthday",
-      "result": "Read"
+      "id": "S03",
+      "type": "official",
+      "publisher": "Las Vegas Convention and Visitors Authority (visitlasvegas.com)",
+      "title": "MICHELIN Restaurants in Las Vegas",
+      "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/",
+      "used_for": "Cuisine and area labels for all 24 Las Vegas listings; official restaurant website links"
     },
     {
-      "label": "Cosmopolitan of Las Vegas — official homepage",
-      "url": "https://cosmopolitanlasvegas.mgmresorts.com/en.html",
-      "type": "Official",
-      "owner": "MGM Resorts",
-      "used_for": "Two-queen room listing",
-      "result": "Read"
+      "id": "S04",
+      "type": "official",
+      "publisher": "MGM Grand (MGM Resorts)",
+      "title": "Joël Robuchon",
+      "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+      "used_for": "Hours, dress code, phone, price level ($$$$), Michelin 2-star status"
     },
     {
-      "label": "Bellagio — official rooms page",
-      "url": "https://bellagio.mgmresorts.com/en/hotel.html",
-      "type": "Official",
-      "owner": "MGM Resorts",
-      "used_for": "Premier Two Queen (510 sq ft, 2 Queen Beds)",
-      "result": "Read (3 chunks, 2026-11-26): Premier Two Queen 510 sq ft, 2 Queen Beds"
+      "id": "S05",
+      "type": "official",
+      "publisher": "MGM Grand (MGM Resorts)",
+      "title": "L'Atelier de Joël Robuchon",
+      "url": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
+      "used_for": "Hours, dress code, phone, price level ($$$), Michelin 1-star status"
     },
     {
-      "label": "Caesars Palace — official homepage",
-      "url": "https://www.caesars.com/caesars-palace",
-      "type": "Official",
-      "owner": "Caesars Entertainment",
-      "used_for": "Promo rate (not trip dates), cancellation & advance-purchase claims, property social links",
-      "result": "Read"
-    },
-    {
-      "label": "Restaurant Guy Savoy — official page",
-      "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
-      "type": "Official",
-      "owner": "Caesars Entertainment",
-      "used_for": "Price level $$$$, dress, reservations, property social links",
-      "result": "Read (2 chunks; hours not shown)"
-    },
-    {
-      "label": "é by José Andrés — official site",
+      "id": "S06",
+      "type": "official",
+      "publisher": "é by José Andrés (official site)",
+      "title": "é by José Andrés | The Cosmopolitan | Las Vegas",
       "url": "https://www.ebyjoseandres.com/",
-      "type": "Official",
-      "owner": "José Andrés Group",
-      "used_for": "Hours (Tue–Sun, 5:30 & 8:30 PM), ticket release, address",
-      "result": "Read"
+      "used_for": "Hours (Tue–Sun, 5:30 and 8:30 PM seatings), address, phone, 1-star status, ticket release timing"
     },
     {
-      "label": "ARIA Resort & Casino — official Center Tower Suite page",
-      "url": "https://aria.mgmresorts.com/en/hotel/center-suite.html",
-      "type": "Official",
-      "owner": "MGM Resorts",
-      "used_for": "2 Queen Beds and bathroom (suite only)",
-      "result": "Read (2026-11-26): 2 Queen Beds, 1,075 sq ft, suite only"
+      "id": "S07",
+      "type": "official",
+      "publisher": "Caesars Entertainment (Caesars Palace)",
+      "title": "Restaurant Guy Savoy",
+      "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+      "used_for": "Phone (702) 731-7286, dress (Formal), price level ($$$$), 1-star reference, property address 3570 Las Vegas Blvd S. Hours NOT shown on the rendered page."
     },
     {
-      "label": "Wynn Las Vegas — official booking engine",
-      "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0",
-      "type": "Official",
-      "owner": "Wynn Resorts",
-      "used_for": "Two Queen room types and bathroom",
-      "result": "Read (5 chunks, 2026-11-26): no two-queen room; rates shown only for Nov 26–27 2026"
+      "id": "S08",
+      "type": "official",
+      "publisher": "Caesars Entertainment (booking engine)",
+      "title": "Caesars Palace hotel calendar (URL with Feb 15–22, 2027 parameters)",
+      "url": "https://www.caesars.com/book/hotel-calendar?dateSearchFormat=flexible-dates&flexibleMonth=December&propCode=clv&checkIn=2027-02-15&checkOut=2027-02-22&numAdults=2",
+      "used_for": "Resort fee $62.30/night incl. tax (official). Rates for Feb 2027 NOT returned (page showed 'Searching Rates', December 2026 calendar)."
     },
     {
-      "label": "Resorts World Las Vegas — Conrad Premium Room (official)",
-      "url": "https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/",
-      "type": "Official",
-      "owner": "Resorts World Las Vegas",
-      "used_for": "King or two queen beds, 550 sq ft, bathroom",
-      "result": "Read (2026-11-26): one king or two queens, 550 sq ft, spa bathroom"
+      "id": "S09",
+      "type": "official",
+      "publisher": "Caesars Entertainment (Caesars Palace home page)",
+      "title": "Caesars Palace Las Vegas Hotel & Casino",
+      "url": "https://www.caesars.com/caesars-palace",
+      "used_for": "Advance Purchase Savings ('up to 30% off for stays 30+ days in advance', terms apply); '48-Hour Cancellation' (asterisked terms). Promotional 'Rooms from' banner refers to a December 2026 sale and is NOT used."
     },
     {
-      "label": "Hoover Dam — official home (Bureau of Reclamation)",
-      "url": "https://www.usbr.gov/lc/hooverdam/",
-      "type": "Official",
-      "owner": "US Bureau of Reclamation",
-      "used_for": "Hoover Dam links, Bureau social accounts",
-      "result": "Read"
+      "id": "S10",
+      "type": "official",
+      "publisher": "U.S. Office of Personnel Management",
+      "title": "Federal Holidays (2027 schedule)",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "used_for": "Monday, February 15, 2027 = Washington's Birthday (federal holiday)"
     },
     {
-      "label": "Hoover Dam — official tour information",
-      "url": "https://www.usbr.gov/lc/hooverdam/service/index.html",
-      "type": "Official",
-      "owner": "US Bureau of Reclamation",
-      "used_for": "Hours, tour prices, ticketing, exceptions, official Facebook link",
-      "result": "Read (3 chunks, 2026-11-26): fees, hours, last tour 4:10 PM, Facebook link"
+      "id": "S11",
+      "type": "official",
+      "publisher": "Regional Transportation Commission of Southern Nevada (RTC)",
+      "title": "RTC of Southern Nevada home page",
+      "url": "https://www.rtcsnv.com/",
+      "used_for": "Bus service is operated by RTC; $118.5M annual transit shortfall notice; F1 construction notice changing bus service around the Strip"
     },
     {
-      "label": "Red Rock Canyon NCA — BLM official page",
+      "id": "S12",
+      "type": "official",
+      "publisher": "Las Vegas Monorail",
+      "title": "Ride the Monorail",
+      "url": "https://www.lvmonorail.com/",
+      "used_for": "Seven Strip stations; station hours (Mon 7am–12am; Tue–Thu 7am–2am; Fri–Sun 7am–3am); Instagram handle @lvmonorail"
+    },
+    {
+      "id": "S13",
+      "type": "official",
+      "publisher": "U.S. Bureau of Land Management",
+      "title": "Red Rock Canyon National Conservation Area",
       "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area",
-      "type": "Official",
-      "owner": "US Bureau of Land Management",
-      "used_for": "17 miles / ~30 min from Strip, no public transit, timed entry Oct–May, agency social links",
-      "result": "Read (2026-11-26): timed entry Oct 1–May 31, 8–5; agency social links"
+      "used_for": "17 miles west of Strip, ~30 min; timed entry Oct 1–May 31, 8am–5pm; 'Public transportation does not extend to Red Rock Canyon'; agency YouTube/Instagram"
     },
     {
-      "label": "Red Rock Scenic Drive timed entry — Recreation.gov",
-      "url": "https://www.recreation.gov/timed-entry/10075177",
-      "type": "Official",
-      "owner": "Recreation.gov (US government)",
-      "used_for": "Scenic Drive hours, reservation rules, Visitor Center hours",
-      "result": "Read"
-    },
-    {
-      "label": "BLM press release — Red Rock Thanksgiving hours (2025)",
-      "url": "https://www.blm.gov/announcement/red-rock-canyon-national-conservation-area-open-limited-hours-thanksgiving",
-      "type": "Official",
-      "owner": "US Bureau of Land Management",
-      "used_for": "Holiday hours precedent",
-      "result": "Read via search excerpt (official domain)"
-    },
-    {
-      "label": "BLM press release — Red Rock fee-free Presidents' Day (2021)",
-      "url": "https://www.blm.gov/press-release/red-rock-canyon-national-conservation-area-fee-free-february-15",
-      "type": "Official",
-      "owner": "US Bureau of Land Management",
-      "used_for": "2021 precedent only; not a 2027 confirmation",
-      "result": "Read via search excerpt (official domain)"
-    },
-    {
-      "label": "Valley of Fire State Park — Nevada State Parks",
+      "id": "S14",
+      "type": "official",
+      "publisher": "Nevada State Parks",
+      "title": "Valley of Fire State Park",
       "url": "https://parks.nv.gov/parks/valley-of-fire",
-      "type": "Official",
-      "owner": "Nevada State Parks",
-      "used_for": "Hours, fees, visitor center hours, closures, reservation rules",
-      "result": "Read (2026-11-26): $10 / $15 non-NV, Dec 1–14 closure"
+      "used_for": "Open daily sunrise–sunset; $10 NV / $15 non-NV vehicle; visitor center 9am–4pm; Dec 1–14 annual closure; trail closures May 15–Sep 30; rideshare return warning"
     },
     {
-      "label": "The Neon Museum — official home",
-      "url": "https://neonmuseum.org/",
-      "type": "Official",
-      "owner": "The Neon Museum",
-      "used_for": "2027 Admission hours and 'from $21'",
-      "result": "Read via search excerpt (official domain)"
+      "id": "S15",
+      "type": "official",
+      "publisher": "The Neon Museum",
+      "title": "Plan Your Visit",
+      "url": "https://neonmuseum.org/your-visit/",
+      "used_for": "Address 770 Las Vegas Blvd N; Sep–May 3pm–11pm daily, last entry 10pm; price change for off-slot entry from Jan 1, 2027; TikTok and Instagram links"
     },
     {
-      "label": "The Neon Museum — official tickets page",
-      "url": "https://neonmuseum.org/tickets-and-experiences/",
-      "type": "Official",
-      "owner": "The Neon Museum",
-      "used_for": "2026 last-entry times; holiday advisory",
-      "result": "Read (2026-11-26): 2027 admission daily 3–11 PM from $21; official social links"
+      "id": "S16",
+      "type": "official",
+      "publisher": "Kabuto (official site)",
+      "title": "Kabuto Edomae Sushi",
+      "url": "https://www.kabutolv.com/",
+      "used_for": "Michelin 2026 statement; hours stated in official post captions: daily 5:30–9:00 PM; reservations only; address 5040 Spring Mountain Rd"
     },
     {
-      "label": "GitHub API — Pages configuration",
-      "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages",
-      "type": "Official",
-      "owner": "GitHub",
-      "used_for": "Repo review: Pages settings",
-      "result": "Read"
+      "id": "S17",
+      "type": "official",
+      "publisher": "Esther's Kitchen (official site)",
+      "title": "Esther's Kitchen",
+      "url": "https://www.estherslv.com/",
+      "used_for": "Seasonal Italian, Arts District (downtown). No hours on the official home page."
     },
     {
-      "label": "GitHub API — repository metadata",
-      "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2",
-      "type": "Official",
-      "owner": "GitHub",
-      "used_for": "Repo review: license, visibility, description",
-      "result": "Read"
+      "id": "S18",
+      "type": "official",
+      "publisher": "Yen Viet Kitchen (official site)",
+      "title": "Yen Viet Kitchen",
+      "url": "https://www.yenvietkitchen.com/",
+      "used_for": "Dine-in and online ordering exist. No hours on the official page."
     },
     {
-      "label": "MGM Resorts press release — Gymkhana opening (republished by StockTitan)",
-      "url": "https://www.stocktitan.net/news/MGM/aria-resort-casino-and-jks-restaurants-unveil-gymkhana-bringing-pus2edgb10tf.html",
-      "type": "Official press release (republished)",
-      "owner": "MGM Resorts (release) / StockTitan (host)",
-      "used_for": "Gymkhana hours and reservation channels (Dec 2025)",
-      "result": "Read via search excerpt; confirm on mgmresorts.com"
+      "id": "S19",
+      "type": "official",
+      "publisher": "Partage (official site)",
+      "title": "Partage Las Vegas | MICHELIN Guide French Tasting Menu",
+      "url": "https://partage.vegas/",
+      "used_for": "French tasting menus (5, 7, 9 courses); 12-seat private room. No hours shown in readable text."
     },
     {
-      "label": "Memesita — Michelin 2026 report (conflict check)",
-      "url": "https://www.memesita.com/michelin-guide-2026-new-stars-for-las-vegas-and-the-american-southwest/",
-      "type": "Secondary",
-      "owner": "Memesita",
-      "used_for": "Conflict flag F1 only",
-      "result": "Read via search excerpt"
+      "id": "S20",
+      "type": "official",
+      "publisher": "The Cosmopolitan of Las Vegas (MGM Resorts)",
+      "title": "The Cosmopolitan of Las Vegas home page",
+      "url": "https://cosmopolitanlasvegas.mgmresorts.com/en.html",
+      "used_for": "Hotel official site; 'Advance Purchase Non-Refundable' rate type exists (official home page)"
     },
     {
-      "label": "Las Vegas Magazine — Michelin 2026 (conflict check)",
-      "url": "https://lasvegasmagazine.com/dining/2026/aug/27/michelin-guide-las-vegas-restaurants-stars/",
-      "type": "Secondary",
-      "owner": "Las Vegas Magazine",
-      "used_for": "Conflict flag F2 only",
-      "result": "Read via search excerpt"
+      "id": "S21",
+      "type": "archived-official",
+      "publisher": "U.S. Bureau of Reclamation (archived 2010 copy)",
+      "title": "Hoover Dam: Visitor Center/Tour Information (archived)",
+      "url": "https://web.archive.org/web/20100528053724/http:/www.usbr.gov/lc/hooverdam/service/index.html",
+      "used_for": "Only location statement (30 miles SE of Las Vegas). The archive is 2010 and is NOT a current source for hours."
     },
     {
-      "label": "Smarter Vegas — é by José Andrés (conflict check)",
-      "url": "https://www.smartervegas.com/dining/restaurant/e_by_jose_andres.aspx",
-      "type": "Secondary",
-      "owner": "Smarter Vegas",
-      "used_for": "Conflict flag F4 only",
-      "result": "Read via search excerpt"
+      "id": "S22",
+      "type": "secondary",
+      "publisher": "Unleash Vegas (third party)",
+      "title": "Las Vegas Resort Fees by Hotel (2026)",
+      "url": "https://unleashvegas.com/guides/vegas-basics/resort-fees",
+      "used_for": "Flag only. Reports MGM-property resort fees of $50–$55 before tax. Not confirmed on an official page, so not used as a value."
     },
     {
-      "label": "Lumina Frontier — MGM Grand restaurants (conflict check)",
-      "url": "https://www.luminafrontier.ai/en/hotels/mgm-grand-las-vegas/mgm-grand-restaurants/",
-      "type": "Secondary",
-      "owner": "Lumina Frontier",
-      "used_for": "Conflict flag F5 only",
-      "result": "Read via search excerpt"
+      "id": "S23",
+      "type": "secondary",
+      "publisher": "OpenTable (third party listings)",
+      "title": "Restaurant Guy Savoy – Caesars Palace (OpenTable)",
+      "url": "https://www.opentable.com/r/restaurant-guy-savoy-caesars-palace-las-vegas",
+      "used_for": "Flag only: lists dinner Tue–Sat 5:00–8:45 PM, which conflicts with other listings"
     },
     {
-      "label": "Hoover Dam third-party seller (warning only)",
+      "id": "S24",
+      "type": "secondary",
+      "publisher": "Yelp (third party listing)",
+      "title": "Restaurant Guy Savoy (Yelp)",
+      "url": "https://www.yelp.com/biz/restaurant-guy-savoy-las-vegas-4",
+      "used_for": "Flag only: lists Tue–Sat 5–9 PM, which conflicts with other listings"
+    },
+    {
+      "id": "S25",
+      "type": "secondary",
+      "publisher": "Vegas Advisor / Huntington Press (third party)",
+      "title": "é by José Andrés (LasVegasAdvisor)",
+      "url": "https://www.lasvegasadvisor.com/restaurants/e-by-jose-andres/",
+      "used_for": "Flag only: lists Thu–Sat seatings, which conflicts with the official Tue–Sun schedule"
+    },
+    {
+      "id": "S26",
+      "type": "secondary",
+      "publisher": "Time Out (media)",
+      "title": "Michelin just added its first-ever Southwest restaurant selection to the guide",
+      "url": "https://www.timeout.com/usa/news/michelin-just-added-its-first-ever-southwest-restaurant-selection-to-the-guide-082926",
+      "used_for": "Time Out, Aug 29 2026. Lists 2 stars for Restaurant de Joël Robuchon; 1 star each for é, Guy Savoy and L'Atelier (4 Las Vegas stars); Yen Viet Kitchen as Bib Gourmand. Confirms the official release; not a value source on its own."
+    },
+    {
+      "id": "S27",
+      "type": "secondary",
+      "publisher": "Hooverdam-tours.co (third party, self-described official-site guide)",
+      "title": "Hoover Dam Official Website 2026",
       "url": "https://hooverdam-tours.co/plan-your-visit/hoover-dam-official-website/",
-      "type": "Secondary",
-      "owner": "Third party",
-      "used_for": "Warning about unofficial sellers (F11) only",
-      "result": "Read via search excerpt"
+      "used_for": "Flag only: claims Visitor Center 9:00–17:00 daily. This is not the official usbr.gov site, so it is not used as a value."
     },
     {
-      "label": "Caesars Palace Julius rooms (third-party)",
-      "url": "https://www.thelasvegastravelguide.com/rooms-and-suites/caesars-palace-las-vegas-julius-deluxe-room-two-queens",
-      "type": "Secondary",
-      "owner": "Third party",
-      "used_for": "Not used as a value; shows that 2-queen rooms exist but are unverified on an official page",
-      "result": "Read via search excerpt"
+      "id": "S28",
+      "type": "official",
+      "publisher": "GitHub REST API (repository settings, read this session)",
+      "title": "Pages configuration for kanlerxz87-cyber/Vegas2",
+      "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages",
+      "used_for": "Pages is built (legacy), source branch main, path /, URL https://kanlerxz87-cyber.github.io/Vegas2/"
     },
     {
-      "label": "Official MGM Grand room / restaurant pages",
-      "url": "https://www.mgmgrand.com/",
-      "type": "Official",
-      "owner": "MGM Resorts",
-      "used_for": "Attempted; not retrieved",
-      "result": "Failed (fetch error)"
+      "id": "S29",
+      "type": "official",
+      "publisher": "Las Vegas Monorail (system notice on same page)",
+      "title": "Monorail system notice – early closure (Nov–Dec 2026 only)",
+      "url": "https://www.lvmonorail.com/",
+      "used_for": "Notice dates are Nov 29–Dec 15, 2026, outside the trip window. Not applied to the trip."
     },
     {
-      "label": "Official Venetian site",
-      "url": "https://www.venetian.com/",
-      "type": "Official",
-      "owner": "Las Vegas Sands",
-      "used_for": "Attempted; not retrieved",
-      "result": "Failed (fetch error)"
+      "id": "S30",
+      "type": "official",
+      "publisher": "Caesars Palace (property page footer)",
+      "title": "Caesars Palace social links (footer on Guy Savoy page)",
+      "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+      "used_for": "Property-level Instagram https://www.instagram.com/caesarspalace/ and YouTube https://www.youtube.com/user/caesarspalace (property, not restaurant-specific)"
     },
     {
-      "label": "Official Wynn homepage",
-      "url": "https://www.wynnlasvegas.com/",
-      "type": "Official",
-      "owner": "Wynn Resorts",
-      "used_for": "Attempted; not retrieved",
-      "result": "Failed (fetch error)"
+      "id": "S31",
+      "type": "official",
+      "publisher": "GitHub REST API (repository metadata, read this session)",
+      "title": "kanlerxz87-cyber/Vegas2 repository metadata",
+      "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2",
+      "used_for": "Visibility public; default branch main; permissions (admin/push) for the session account"
     },
     {
-      "label": "Michelin Guide restaurant pages (guide.michelin.com)",
-      "url": "https://guide.michelin.com/us/en/nevada/las-vegas/restaurants",
-      "type": "Official",
-      "owner": "MICHELIN",
-      "used_for": "Attempted; price and hours data would be here",
-      "result": "Failed (fetch error, 3 variants)"
+      "id": "S32",
+      "type": "official",
+      "publisher": "GitHub (repository home page)",
+      "title": "kanlerxz87-cyber/Vegas2",
+      "url": "https://github.com/kanlerxz87-cyber/Vegas2",
+      "used_for": "Public repository location for review"
     },
     {
-      "label": "Wynn — official Flexible Getaway rate policy (same booking page)",
-      "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0",
-      "type": "Official",
-      "owner": "Wynn Resorts",
-      "used_for": "Cancellation rule (72 hours) — flagged as 2026 rate only",
-      "result": "Read (2026-11-26)"
+      "id": "S33",
+      "type": "internal",
+      "publisher": "This repository (owner brief and session task board)",
+      "title": "COORDINATION.md (task board for this work)",
+      "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/36cc5108-vegas2/COORDINATION.md",
+      "used_for": "Owner brief items with no web source (budget, interests, repo wording). Not a factual claim about the world."
+    },
+    {
+      "id": "S34",
+      "type": "internal",
+      "publisher": "This repository, branch main (commit dce4548)",
+      "title": "index.html and data.js on main (other session's dashboard)",
+      "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html",
+      "used_for": "Reviewed for conflicts only (F29). Not a source for any value in this site."
     }
   ]
 }

@@ -1,87 +1,20 @@
 {
   "as_of": "2026-11-26",
-  "intro": "These suggestions are for your review only. Nothing here has been implemented. Choose the ones you want (for example S1, S4, S6) and we will implement only those.",
-  "items": [
-    {
-      "id": "S1",
-      "area": "Decision-making",
-      "title": "Add a weighted scoring table for hotels",
-      "detail": "Score each hotel on price, Michelin count within reach, room fit and travel time. Weights are set by you. Shows the top pick clearly.",
-      "benefit": "Turns the ranking into one decision you can check.",
-      "tradeoff": "Needs your weights, and the price and transit columns must be filled first.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S2",
-      "area": "Pricing",
-      "title": "Build a price log for each hotel (manual check on set days)",
-      "detail": "Record official rates for Feb 15–18 and Feb 15–22, 2027 at a fixed time each week, with a link and timestamp. The 'cheapest time to book' is then read from the log.",
-      "benefit": "The only honest way to find the cheapest booking time, since no official history is available.",
-      "tradeoff": "Needs a weekly check; a few months of data is needed before conclusions.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S3",
-      "area": "Travel time",
-      "title": "Verify transit times with RTC Southern Nevada routes",
-      "detail": "For each hotel, record the bus route, boarding stop, and scheduled time to each Michelin restaurant and activity. Only official RTC schedule data is used.",
-      "benefit": "Enables the '1 hour by bus' test the brief asks for.",
-      "tradeoff": "Schedules vary by day and time; results are estimates from published data.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S4",
-      "area": "Michelin",
-      "title": "Pull per-restaurant price ranges from Michelin Guide pages",
-      "detail": "Open each of the 24 restaurant pages on the Michelin Guide site and record price ranges, cuisine and hours exactly as shown.",
-      "benefit": "Gives the 2-adult cost range the brief asks for, from the source Michelin uses.",
-      "tradeoff": "guide.michelin.com could not be retrieved in this session; needs a manual or retried pass.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S5",
-      "area": "Coverage",
-      "title": "Add Downtown hotels so the Esther's Kitchen and SoulBelly cluster is covered",
-      "detail": "Two of the Michelin restaurants sit on S. Main St. Downtown hotels would let that cluster be scored like the Strip.",
-      "benefit": "Fair comparison across the whole Michelin list.",
-      "tradeoff": "Adds more hotels to verify.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S6",
-      "area": "Activities",
-      "title": "Choose the activities list first, then re-run the travel-time check",
-      "detail": "Pick the activities (for example Hoover Dam, Red Rock, Valley of Fire, Neon Museum, or others). Then add distance and drive or bus time from each hotel.",
-      "benefit": "Makes the 1-hour test concrete.",
-      "tradeoff": "Needs your answer to Q1.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S7",
-      "area": "Presentation",
-      "title": "Add a 'last verified' date to every row",
-      "detail": "Show the date each value was checked, so old data is easy to spot.",
-      "benefit": "Makes the verification standard visible on each row.",
-      "tradeoff": "More columns; mobile cards get longer.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S8",
-      "area": "Quality",
-      "title": "Add an automated link check on each push (GitHub Actions)",
-      "detail": "Run the site checker on every push to catch broken links and empty required sources before the site publishes.",
-      "benefit": "Protects against broken links after future edits.",
-      "tradeoff": "Adds a small workflow file to the repo.",
-      "status": "Proposed"
-    },
-    {
-      "id": "S9",
-      "area": "Decision-making",
-      "title": "Add a 'deal breakers' list (bathroom, bed, budget cap, distance cap)",
-      "detail": "Hotels that fail a must-have are moved to a separate section instead of being ranked.",
-      "benefit": "Stops the ranking from including hotels you cannot accept.",
-      "tradeoff": "Needs your input on Q4 and Q7.",
-      "status": "Proposed"
-    }
+  "status_rule": "NOTHING on this list is implemented until the owner approves it. Each item gives the decision needed. Approved items get a status change here and a commit.",
+  "suggestions": [
+    {"id": "S-01", "area": "Data - hotels", "title": "Time-stamped official rate log for the chosen dates", "why": "Closes Q-03 and Q-04. The only way to answer 'cheapest time to book' from official sources is a dated record of official rates.", "how": "For each hotel's official booking engine, record: search date/time, check-in/out, rate, resort fee, tax, total. Add one row per search to data/rates_log.json.", "effort": "Medium", "decision_needed": "Approve, and pick the dates (Q-01, Q-02)."},
+    {"id": "S-02", "area": "Data - hotels", "title": "Verify room type (queen-or-larger bed, private bathroom) from official room pages", "why": "Closes F05. This is a hard requirement from the brief.", "how": "Open each hotel's room-type pages, record bed type and bathroom statement with URL, and mark each row Verified or Unverified.", "effort": "Medium", "decision_needed": "Approve the nine-hotel scope, or name the subset."},
+    {"id": "S-03", "area": "Data - hotels", "title": "Read cancellation and deposit terms for each shortlisted hotel", "why": "The 'best time to book' depends on flexibility. Caesars' 48-hour cancellation is asterisked (F28).", "how": "Copy the cancellation terms text from each official booking page with its URL.", "effort": "Low", "decision_needed": "Approve."},
+    {"id": "S-04", "area": "Data - hotels", "title": "Add a Chinatown / Spring Mountain and downtown hotel shortlist", "why": "Six Michelin listings sit on Spring Mountain Rd, but no hotel in the current shortlist is there (Q-06).", "how": "Name candidate hotels from official sites, then run the same checks as S-01 and S-02.", "effort": "Medium", "decision_needed": "Approve, or name hotels to add."},
+    {"id": "S-05", "area": "Data - travel", "title": "Add RTC trip-planner travel times for each hotel-to-restaurant and hotel-to-activity pair", "why": "The one-hour bus/monorail test is unverified (F20). RTC's trip planner is the official source for transit time.", "how": "Run RTC Trip Planner for each pair, record duration, number of transfers, and the RTC link used. Blank any pair the planner cannot answer.", "effort": "High (many pairs)", "decision_needed": "Approve; confirm 'bus + monorail' (F01); confirm Red Rock exception (F02)."},
+    {"id": "S-06", "area": "Data - restaurants", "title": "Pull official hours, booking windows and menu prices for the remaining 20 listings", "why": "Closes F17, F18, Q-08 and Q-09. Official restaurant sites are reachable, but not every page was retrieved yet.", "how": "Open each official_site link from data/restaurants.json (from LVCVA S03), copy hours and printed prices with the URL. Leave blank where not printed.", "effort": "Medium", "decision_needed": "Approve."},
+    {"id": "S-07", "area": "Data - activities", "title": "Add activities the owner ranks as interests", "why": "Only five activities are checked (Q-10).", "how": "Add entries from official sites (venue, BLM, NPS, state parks, city), with hours, fees and social links.", "effort": "Medium", "decision_needed": "Owner to list interests (Q-10)."},
+    {"id": "S-08", "area": "Data - events", "title": "Add an events calendar for Feb 15–Mar 23, 2027", "why": "Events affect price and availability (Q-11). Feb 15 is a federal holiday (F13).", "how": "Pull events from official venue and visitor sites. Record the source per event.", "effort": "Low", "decision_needed": "Approve."},
+    {"id": "S-09", "area": "Site - decision aids", "title": "Client-side filters and sorting on every table", "why": "Lets a reader filter by Michelin tier, area or 'verified only' without reloading.", "how": "Add a small script to the generated pages. No external dependencies.", "effort": "Medium", "decision_needed": "Approve."},
+    {"id": "S-10", "area": "Site - decision aids", "title": "Add a 'Last verified' date column and a 'Verified' badge per row", "why": "Shows at a glance which values were checked and when.", "how": "Add the date from each row's source retrieval. Show a badge when every value on the row is verified.", "effort": "Low", "decision_needed": "Approve."},
+    {"id": "S-11", "area": "Site - decision aids", "title": "Map view of the Michelin clusters and hotels", "why": "Visual check of 'walkable' or 'bus-reachable' clusters (C1–C5).", "how": "Use free, open map tiles and the addresses already on file. Show only addresses from official sources.", "effort": "Medium", "decision_needed": "Approve; confirm no third-party map embed is needed."},
+    {"id": "S-12", "area": "Site - decision aids", "title": "Weighted scorecard for hotels", "why": "Turns price, Michelin count, resort fee, cancellation and transit time into one ranking, using weights the owner sets.", "how": "Add weights in data/scorecard.json. Compute rank in the build script. Show weights on the page.", "effort": "Medium", "decision_needed": "Owner to set weights after Q-03 to Q-07 are answered."},
+    {"id": "S-13", "area": "Repo", "title": "Add LICENSE, .gitignore and a real README", "why": "Flags F26. The repo has no license, no ignore rules and only a one-line README.", "how": "Add a license chosen by the owner, a standard Python .gitignore, and a README describing the site, data files, and how to rebuild.", "effort": "Low", "decision_needed": "Owner to choose the license (or 'none')."},
+    {"id": "S-14", "area": "Repo", "title": "Add a link-check and data-check step in GitHub Actions", "why": "Keeps links and required fields valid on every push, so a broken link cannot reach main unnoticed.", "how": "Add a workflow that runs the build script and fails on a missing source link or a broken internal link.", "effort": "Low", "decision_needed": "Approve."}
   ]
 }

@@ -8,9 +8,9 @@ Checks (exit code 1 on any failure):
      in the flagged/sources pages, where they are labelled as conflict checks).
   4. Every verification cell has a valid state (v / p / u).
   5. Michelin counts match the official 2026 release (24 total: 4 starred, 3 Bib, 17 Recommended).
-  6. Every internal link and asset in the generated HTML points to a file that exists.
+  6. Every internal link and asset in docs/*.html and docs/planner-v1/ resolves.
   7. No placeholder strings ("None", "undefined", "TODO") leaked into the HTML.
-Run after scripts/build_site.py.
+Run after scripts/build_site.py. Pages checked: docs/*.html (this build) and docs/planner-v1/index.html. docs/session-36cc5108/ is checked by its own build (site/build.py).
 """
 import json
 import pathlib
@@ -20,7 +20,8 @@ from html.parser import HTMLParser
 from urllib.parse import urlparse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = ROOT / "data" / "verified"
+OUT = ROOT / "docs"
 
 OFFICIAL_DOMAINS = {
     "michelin.com", "michelinmedia.com", "agngnconpm.cloudimg.io", "opm.gov",
@@ -168,10 +169,10 @@ def main():
             fail(f"sources: official-labelled source is not on the official allowlist: {s['url']}")
 
     # 6 & 7: generated HTML
-    html_files = sorted(ROOT.glob("*.html"))
+    html_files = sorted(OUT.glob("*.html")) + [OUT / "planner-v1" / "index.html"]
     if not html_files:
         fail("no HTML pages found; run scripts/build_site.py first")
-    pages = {p.name for p in html_files}
+    pages = {p.name for p in OUT.glob("*.html")}
     expected_pages = {"index.html", "hotels.html", "michelin.html", "activities.html", "booking.html",
                       "questions.html", "suggestions.html", "flagged.html", "repo-review.html", "sources.html"}
     for missing in sorted(expected_pages - pages):
@@ -203,11 +204,15 @@ def main():
                 continue
             if link.startswith("#"):
                 continue
-            target = (ROOT / parsed.path).resolve() if parsed.path else page_path
+            target = (page_path.parent / parsed.path).resolve() if parsed.path else page_path
             internal_checked += 1
             if not target.exists():
                 fail(f"{page_path.name}: broken internal link -> {link}")
     print(f"checked {internal_checked} internal links across {len(html_files)} pages")
+    if not (OUT / "assets" / "style.css").exists():
+        fail("docs/assets/style.css missing")
+    if not (OUT / ".nojekyll").exists():
+        fail("docs/.nojekyll missing (GitHub Pages would ignore _-prefixed folders)")
 
     if failures:
         print(f"\n{len(failures)} failure(s). Fix before publishing.")

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build the static Las Vegas trip-planning site from data/*.json.
 
-Output: HTML pages written to the repository root (GitHub Pages is configured
-to serve the root of the `main` branch). No third-party dependencies.
+Output: HTML pages written to docs/ (GitHub Pages serves docs/ from main via
+.github/workflows/pages.yml). Data is read from data/verified/. The assets are
+copied from assets/style.css. No third-party dependencies.
 
 Usage:  python3 scripts/build_site.py
 """
@@ -11,7 +12,9 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = ROOT / "data" / "verified"
+OUT = ROOT / "docs"
+ASSETS = ROOT / "assets"
 AS_OF = "2026-11-26"
 
 
@@ -87,6 +90,10 @@ NAV = [
     ("repo-review.html", "Repo review"),
     ("sources.html", "Sources"),
 ]
+OTHER_BUILDS = [
+    ("session-36cc5108/index.html", "Second build (session 36cc5108)"),
+    ("planner-v1/index.html", "Earlier dashboard (v1)"),
+]
 
 
 def page(filename, title, body, active):
@@ -118,13 +125,15 @@ def page(filename, title, body, active):
   <div class="wrap">
     Data as of {AS_OF}. Only values confirmed on official sources are shown as verified.
     Blank cells are marked <span class="b bu">Unverified</span>.
+    Other builds in this repository:
+    {" · ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for h, l in OTHER_BUILDS)}.
     Source code: <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2</a>.
   </div>
 </footer>
 </body>
 </html>
 """
-    (ROOT / filename).write_text(doc, encoding="utf-8")
+    (OUT / filename).write_text(doc, encoding="utf-8")
     print("wrote", filename)
 
 
@@ -425,7 +434,8 @@ def build_index():
         ("flagged.html", "Flagged for Review", f"{len(flg['items'])} irregularities, source conflicts and unverified items, with links."),
         ("repo-review.html", "Repo review", "Line-by-line review of the repository and GitHub Pages settings."),
         ("sources.html", "Sources", "Every official and secondary source, and what each one was used for."),
-        ("planner-v1.html", "Earlier dashboard (v1)", "The first single-page planner from PRs #2 and #3, kept unchanged for reference."),
+        ("planner-v1/index.html", "Earlier dashboard (v1)", "The first single-page planner from PRs #2 and #3, kept unchanged for reference."),
+        ("session-36cc5108/index.html", "Second build (session 36cc5108)", "The parallel site from PR #6 on main, kept unchanged. Its data is in data/*.json."),
     ]
     card_html = "".join(
         f'<a class="tile" href="{href}"><strong>{esc(title)}</strong><span>{esc(desc)}</span></a>'
@@ -467,7 +477,15 @@ def build_index():
     page("index.html", "Home", body, "index.html")
 
 
+def copy_assets():
+    import shutil
+    (OUT / "assets").mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(ASSETS / "style.css", OUT / "assets" / "style.css")
+    (OUT / ".nojekyll").write_text("", encoding="utf-8")
+
+
 def main():
+    copy_assets()
     build_index()
     build_hotels()
     build_michelin()

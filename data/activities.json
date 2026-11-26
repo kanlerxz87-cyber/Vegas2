@@ -1,182 +1,129 @@
 {
   "as_of": "2026-11-26",
-  "note": "The user has not yet named the activities to plan. These four are verified starting points chosen from official sources. Add or remove items on the Questions page.",
-  "legend": {
-    "v": "Verified on an official page",
-    "p": "Partially verified",
-    "u": "Unverified — left blank by rule"
-  },
-  "rows": [
+  "scope": "Activities checked against official pages this session. Drive and transit claims come only from the official page that states them. Blank = not verified (flagged).",
+  "activities": [
     {
-      "name": "Hoover Dam (Bureau of Reclamation)",
-      "type": "Landmark / guided tour",
-      "distance": {
-        "s": "u",
-        "t": "Unverified — no current official distance or drive-time retrieved"
-      },
-      "hours": {
-        "s": "v",
-        "t": "Dam: daily 5:00 AM–9:00 PM (PST). Visitor Center and tours: daily 9:00 AM–5:00 PM. Doors close 4:15 PM; last tour departs 4:10 PM (official, last updated 10/30/26)."
-      },
-      "fees": {
-        "s": "v",
-        "t": "Self-Guided Visitor Center Tour $15; Guided Power Plant Tour $25 (adults); Guided Dam Tour $40 (on-site purchase only). Children 3 & under free. America the Beautiful passes not accepted."
-      },
-      "exceptions": {
-        "s": "v",
-        "t": "Closed Thanksgiving and Christmas Day. Special event activities may be limited around Easter, early August, 3 days after Thanksgiving and the week after Christmas through the first Monday of the new year (official)."
-      },
-      "reservation": {
-        "s": "v",
-        "t": "Visitor Center and Power Plant tours sold through the official ticketing link on usbr.gov. Guided Dam Tour is on-site only."
-      },
-      "social": {
-        "s": "v",
-        "t": "Hoover Dam Facebook: https://www.facebook.com/theHooverDam/ (linked from the official Bureau of Reclamation tour page, fetched 2026-11-26). Bureau-level YouTube and Instagram also exist (not Hoover-specific)."
-      },
-      "overall": "p",
-      "src": [
-        {
-          "label": "Official Hoover Dam tour information (Bureau of Reclamation)",
-          "url": "https://www.usbr.gov/lc/hooverdam/service/index.html"
-        },
-        {
-          "label": "Official — Hoover Dam home (hours, exceptions)",
-          "url": "https://www.usbr.gov/lc/hooverdam/"
-        },
-        {
-          "label": "Official Hoover Dam Facebook (linked from official page)",
-          "url": "https://www.facebook.com/theHooverDam/"
-        },
-        {
-          "label": "Bureau of Reclamation YouTube (agency-level)",
-          "url": "https://www.youtube.com/@reclamation"
-        },
-        {
-          "label": "Bureau of Reclamation Instagram (agency-level)",
-          "url": "https://instagram.com/bureau_of_reclamation"
-        }
+      "id": "A1",
+      "name": "Red Rock Canyon National Conservation Area",
+      "type": "Outdoor / scenic drive",
+      "address": "1000 Scenic Loop Drive, Las Vegas, NV 89161 (visitor center)",
+      "distance_from_strip": "17 miles west of the Strip; 'approx. 30 minutes' (BLM, S13)",
+      "public_transit": "Public transportation does not extend to Red Rock Canyon (S13). Fails the bus-only test (F02).",
+      "hours": "Scenic drive timed entry required Oct 1 – May 31, 8:00 am – 5:00 pm (S13). Feb 2027 falls inside this window.",
+      "days_open": "Not stated as 'daily' on the official page. Timed entry required Oct 1 – May 31, 8:00 am – 5:00 pm (S13).",
+      "exceptions": "Timed entry ticket required on each day you plan to enter (Oct 1–May 31). Fees and reservations: see BLM fees page linked from S13.",
+      "fees": "Not captured (see BLM fee page). Flagged.",
+      "official_site": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area",
+      "phone": "(702) 515-5350",
+      "social_youtube": "https://www.youtube.com/BLMNational (BLM national account, agency-level, S13)",
+      "social_tiktok": null,
+      "social_instagram": "http://instagram.com/mypubliclands (BLM national account, agency-level, S13)",
+      "sources": [
+        "S13"
+      ],
+      "flags": [
+        "F02",
+        "F20",
+        "F19"
       ]
     },
     {
-      "name": "Red Rock Canyon National Conservation Area — Scenic Drive",
-      "type": "Scenic drive / hiking",
-      "distance": {
-        "s": "v",
-        "t": "17 miles west of the Las Vegas Strip, approx. 30 minutes (BLM). Public transit does not extend to Red Rock (BLM)."
-      },
-      "hours": {
-        "s": "v",
-        "t": "Scenic Drive hours (Recreation.gov): Oct 6 AM–7 PM; Nov–Feb 6 AM–5 PM; Mar 6 AM–7 PM; Apr–Sep 6 AM–8 PM. Visitor Center 8 AM–4:30 PM."
-      },
-      "fees": {
-        "s": "u",
-        "t": "Unverified — entry fee not confirmed on an official page retrieved in this session"
-      },
-      "exceptions": {
-        "s": "p",
-        "t": "Limited hours on Thanksgiving (BLM, 2025). BLM waived amenity fees for Presidents' Day in 2021 (BLM press release). No 2027 fee-free day confirmed."
-      },
-      "reservation": {
-        "s": "v",
-        "t": "Timed entry required Oct 1–May 31, 8 AM–5 PM for the Scenic Drive (BLM & Recreation.gov). Walk-in and bicycle visitors do not need a reservation. Non-refundable on the day of arrival."
-      },
-      "social": {
-        "s": "p",
-        "t": "Agency-level BLM accounts linked from the official BLM page (fetched 2026-11-26): X https://x.com/blmnational · YouTube http://www.youtube.com/BLMNational · Facebook https://www.facebook.com/BLMNational · Instagram http://instagram.com/mypubliclands. Not Red Rock-specific."
-      },
-      "overall": "p",
-      "src": [
-        {
-          "label": "Official — BLM Red Rock Canyon NCA (distance, transit, reservation)",
-          "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area"
-        },
-        {
-          "label": "Official — Recreation.gov timed entry (hours, rules)",
-          "url": "https://www.recreation.gov/timed-entry/10075177"
-        },
-        {
-          "label": "Official BLM press release — Thanksgiving hours (2025)",
-          "url": "https://www.blm.gov/announcement/red-rock-canyon-national-conservation-area-open-limited-hours-thanksgiving"
-        },
-        {
-          "label": "Official BLM press release — Presidents' Day fee waiver (2021)",
-          "url": "https://www.blm.gov/press-release/red-rock-canyon-national-conservation-area-fee-free-february-15"
-        }
-      ]
-    },
-    {
+      "id": "A2",
       "name": "Valley of Fire State Park",
-      "type": "State park / hiking",
-      "distance": {
-        "s": "u",
-        "t": "Unverified — no distance on the official page retrieved; third-party sites give 48–55 miles (not used)"
-      },
-      "hours": {
-        "s": "v",
-        "t": "Open daily, sunrise to sunset (Nevada State Parks). Visitor Center daily 9 AM–4 PM (Nevada State Parks)."
-      },
-      "fees": {
-        "s": "v",
-        "t": "Day-use entrance $10 per Nevada-plated vehicle; $15 for non-Nevada vehicles (Nevada State Parks). Bike-in $2 per bike."
-      },
-      "exceptions": {
-        "s": "v",
-        "t": "Annual maintenance closure Dec 1–14 (park fully closed, incl. on foot). Many trails closed May 15–Sep 30 (outside the trip window). Visitor Center daily 9 AM–4 PM. Camping by reservation. Office hours Mon–Fri 9–4; closed on state holidays. (Nevada State Parks, fetched 2026-11-26.)"
-      },
-      "reservation": {
-        "s": "v",
-        "t": "Day-use reservations not required (Nevada State Parks). Campsites by reservation via reservenevada.com."
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "overall": "p",
-      "src": [
-        {
-          "label": "Official — Nevada State Parks, Valley of Fire",
-          "url": "https://parks.nv.gov/parks/valley-of-fire"
-        }
+      "type": "Desert park / petroglyphs",
+      "address": "29450 Valley of Fire Rd, Overton, NV 89040",
+      "distance_from_strip": "Drive time NOT stated on the official page (F24)",
+      "public_transit": "Not stated. Official warning: rideshare may leave visitors stranded because return rides are often unavailable (S14).",
+      "hours": "Park open daily, sunrise to sunset (S14). Visitor center daily 9:00 am – 4:00 pm (S14).",
+      "days_open": "Every day, 365 days a year (S14)",
+      "exceptions": "Annual maintenance closure Dec 1–14 (outside trip window). Trail closures May 15–Sep 30 (outside trip window). Group sites by reservation. Day use needs no reservation.",
+      "fees": "$10 per vehicle (Nevada), $15 (non-Nevada) (S14)",
+      "official_site": "https://parks.nv.gov/parks/valley-of-fire",
+      "phone": "702-397-2088",
+      "social_youtube": null,
+      "social_tiktok": null,
+      "social_instagram": null,
+      "sources": [
+        "S14"
+      ],
+      "flags": [
+        "F19",
+        "F20",
+        "F24"
       ]
     },
     {
-      "name": "The Neon Museum",
-      "type": "Museum / outdoor art",
-      "distance": {
-        "s": "u",
-        "t": "Unverified — location & distance not confirmed on the official pages retrieved"
-      },
-      "hours": {
-        "s": "v",
-        "t": "2027 Admission (for tickets for Jan 1, 2027 onward): daily 3–11 PM (official). Official tickets page (2026 version): last entry 10 PM Sept–May; box office closes 1 hour before closing."
-      },
-      "fees": {
-        "s": "p",
-        "t": "2027 Admission listed 'From $21' (official). Exact per-person price for the trip date is not confirmed."
-      },
-      "exceptions": {
-        "s": "p",
-        "t": "Official holiday advisory: buy tickets ahead to guarantee admission. The 2026 hours table may not match 2027 last-entry times — confirm."
-      },
-      "reservation": {
-        "s": "v",
-        "t": "Tickets bought online on neonmuseum.org (official)."
-      },
-      "social": {
-        "s": "v",
-        "t": "TikTok https://www.tiktok.com/@neonmuseumlasvegas · Instagram https://www.instagram.com/theneonmuseumlasvegas/ · Facebook https://www.facebook.com/NeonMuseum (linked from official neonmuseum.org site navigation, fetched 2026-11-26)."
-      },
-      "overall": "p",
-      "src": [
-        {
-          "label": "The Neon Museum — official Tickets & Experiences (fetched)",
-          "url": "https://neonmuseum.org/tickets-and-experiences/"
-        },
-        {
-          "label": "Official — The Neon Museum home (2027 admission hours)",
-          "url": "https://neonmuseum.org/"
-        }
+      "id": "A3",
+      "name": "Las Vegas Monorail (Strip transit)",
+      "type": "Transit",
+      "address": "Seven Strip stations (route map on official site)",
+      "distance_from_strip": "On the Strip (route map, S12)",
+      "public_transit": "This IS the rail option. Trains every 4–8 minutes (S12). No subway appears in the official transit sources reviewed (S11, S12), so the bus + monorail interpretation is used (F01).",
+      "hours": "Monday 7:00 am – 12:00 am; Tuesday–Thursday 7:00 am – 2:00 am; Friday–Sunday 7:00 am – 3:00 am (S12)",
+      "days_open": "Every day",
+      "exceptions": "Early-closure notices apply only Nov 29 – Dec 15, 2026 (outside trip window) (S29).",
+      "fees": "Not captured in readable text (see S12 ticket page)",
+      "official_site": "https://www.lvmonorail.com/",
+      "phone": null,
+      "social_youtube": null,
+      "social_tiktok": null,
+      "social_instagram": "@lvmonorail (handle named on official page, S12; account URL not separately verified)",
+      "sources": [
+        "S12",
+        "S29"
+      ],
+      "flags": [
+        "F01",
+        "F19"
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "The Neon Museum (Neon Boneyard)",
+      "type": "Museum / guided tour",
+      "address": "770 Las Vegas Blvd. N., Las Vegas, NV 89101",
+      "distance_from_strip": "Not stated on the official page (F20)",
+      "public_transit": "Not stated (F20)",
+      "hours": "Sep–May: 3:00 pm – 11:00 pm daily, last entry 10:00 pm (S15). Official 'open today' block lists 3 pm – 11 pm for each day of the week.",
+      "days_open": "Every day",
+      "exceptions": "From Jan 1, 2027, admission earlier or later than your ticket time may carry a higher ticket price (S15). Tours cancel above 100°F; general admission closes above 105°F; museum closes above 110°F (S15).",
+      "fees": "Not captured (see S15 ticket page)",
+      "official_site": "https://neonmuseum.org/your-visit/",
+      "phone": "(702) 387-6366",
+      "social_youtube": null,
+      "social_tiktok": "https://www.tiktok.com/@neonmuseumlasvegas (official site link, S15)",
+      "social_instagram": "https://www.instagram.com/theneonmuseumlasvegas/ (official site link, S15)",
+      "sources": [
+        "S15"
+      ],
+      "flags": [
+        "F20",
+        "F21"
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "Hoover Dam (Bureau of Reclamation)",
+      "type": "Landmark / tour",
+      "address": "Official address not retrieved this session",
+      "distance_from_strip": "'30 miles southeast of Las Vegas' appears on an archived 2010 usbr page (S21). Not confirmed on a current official page.",
+      "public_transit": "Not verified (F20)",
+      "hours": "UNVERIFIED. The official usbr.gov page could not be retrieved. Conflicting sources: an archived 2010 page (S21) and a third-party 'official' guide (S27) give different hours (F09).",
+      "days_open": null,
+      "exceptions": "Thanksgiving and Christmas closures are reported by secondary sources only (F09).",
+      "fees": "Not verified",
+      "official_site": "https://www.usbr.gov/lc/hooverdam/visit/index.html (not retrievable this session)",
+      "phone": null,
+      "social_youtube": null,
+      "social_tiktok": null,
+      "social_instagram": null,
+      "sources": [
+        "S21"
+      ],
+      "flags": [
+        "F09",
+        "F19",
+        "F20"
       ]
     }
   ]

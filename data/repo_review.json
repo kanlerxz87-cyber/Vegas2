@@ -1,127 +1,116 @@
 {
   "as_of": "2026-11-26",
-  "scope": "Line-by-line review of the repository at commit c97c82a (branch main) and the working branch arena/a52047d7-vegas2, plus GitHub Pages settings.",
-  "items": [
+  "scope": "Line-by-line review of the repository at base commit c97c82a (branch main) and of the branch in use (arena/36cc5108-vegas2). Evidence is cited to the local git history or to the GitHub API. Each finding names its flag.",
+  "findings": [
     {
-      "item": "Tracked files",
-      "finding": "Only one file is tracked: README.md. Output of `git ls-files` at c97c82a: 'README.md'.",
-      "status": "Verified",
-      "src": [
-        {
-          "label": "Repository on GitHub",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2"
-        }
-      ]
+      "id": "R-01",
+      "item": "Repository contents",
+      "result": "Only two tracked files at base: README.md and (after this session) COORDINATION.md.",
+      "evidence": "git ls-files on the branch; README.md is 8 bytes ('# Vegas2').",
+      "source_ids": [
+        "S32"
+      ],
+      "flag": "F26",
+      "status": "Irregular"
     },
     {
-      "item": "README.md content",
-      "finding": "The file is 8 bytes: '# Vegas2' with no trailing newline. It has no description, no setup steps and no project purpose.",
-      "status": "Verified — flagged (no description)",
-      "src": [
-        {
-          "label": "README.md on main",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/README.md"
-        }
-      ]
-    },
-    {
-      "item": "Commit history",
-      "finding": "One commit on main: c97c82a 'Initial commit' (author kanlerxz87-cyber, Nov 25, 2026). No other branches on origin besides main and arena/a52047d7-vegas2 (created in this session).",
-      "status": "Verified",
-      "src": [
-        {
-          "label": "Commit c97c82a",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2/commit/c97c82aaa0d485e60be170e2e93e64beabdb9508"
-        }
-      ]
-    },
-    {
-      "item": "License",
-      "finding": "No LICENSE file. GitHub API reports license: null.",
-      "status": "Verified — flagged",
-      "src": [
-        {
-          "label": "GitHub API — repo metadata",
-          "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2"
-        }
-      ]
-    },
-    {
-      "item": ".gitignore",
-      "finding": "No .gitignore file is tracked. Generated files (for example build output) would not be excluded by default.",
-      "status": "Verified — flagged",
-      "src": [
-        {
-          "label": "Repository file list",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2"
-        }
-      ]
-    },
-    {
+      "id": "R-02",
       "item": "Coordination file",
-      "finding": "COORDINATION.md did not exist. It was created in this session as the shared task board.",
-      "status": "Fixed in this session",
-      "src": [
-        {
-          "label": "COORDINATION.md on the working branch",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/a52047d7-vegas2/COORDINATION.md"
-        }
-      ]
+      "result": "COORDINATION.md did not exist. It was created and the claims for T0–T6 were committed and pushed (commit 2cf5776).",
+      "evidence": "git log: 2cf5776 'Coordination: create task board…'.",
+      "source_ids": [
+        "S32"
+      ],
+      "flag": null,
+      "status": "Done"
     },
     {
+      "id": "R-03",
+      "item": "License and ignore rules",
+      "result": "No LICENSE file. No .gitignore. Both are standard for a public repo.",
+      "evidence": "git ls-files shows no LICENSE or .gitignore.",
+      "source_ids": [
+        "S32"
+      ],
+      "flag": "F26",
+      "status": "Irregular"
+    },
+    {
+      "id": "R-04",
+      "item": "Visibility and default branch",
+      "result": "Public repository. Default branch main. Session account has admin, maintain, push and pull access.",
+      "evidence": "GitHub API repo metadata read this session.",
+      "source_ids": [
+        "S31"
+      ],
+      "flag": null,
+      "status": "Verified"
+    },
+    {
+      "id": "R-05",
       "item": "GitHub Pages configuration",
-      "finding": "Pages is enabled: build_type legacy, source branch main, path '/', status 'built', public, HTTPS enforced. Site URL: https://kanlerxz87-cyber.github.io/Vegas2/. The site is therefore served from the repo root, so index.html must sit at the root.",
-      "status": "Verified",
-      "src": [
-        {
-          "label": "GitHub API — Pages config",
-          "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages"
-        }
-      ]
+      "result": "Pages is built (legacy). Source: branch main, path '/'. URL https://kanlerxz87-cyber.github.io/Vegas2/. The site will move to /docs (F27).",
+      "evidence": "GitHub API pages endpoint read this session.",
+      "source_ids": [
+        "S28"
+      ],
+      "flag": "F27",
+      "status": "Verified; change planned"
     },
     {
-      "item": "Repository visibility",
-      "finding": "Public. Default branch main. No description set.",
-      "status": "Verified",
-      "src": [
-        {
-          "label": "GitHub API — repo metadata",
-          "url": "https://api.github.com/repos/kanlerxz87-cyber/Vegas2"
-        }
-      ]
+      "id": "R-06",
+      "item": "Branch naming",
+      "result": "The brief asks for session-<id>/<task> branches. The session branch is fixed by Arena as arena/36cc5108-vegas2, so all work is on this one branch.",
+      "evidence": "Branch note in the session message; git branch -r lists origin/arena/36cc5108-vegas2.",
+      "source_ids": [
+        "S32"
+      ],
+      "flag": "F25",
+      "status": "Irregular (cannot follow as written)"
     },
     {
-      "item": "Commit author e-mail",
-      "finding": "The commit exposes the author e-mail address kanlerxz87@gmail.com in the public history. Informational only; a note for review.",
-      "status": "Verified — flagged for review",
-      "src": [
-        {
-          "label": "Commit c97c82a",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2/commit/c97c82aaa0d485e60be170e2e93e64beabdb9508"
-        }
-      ]
+      "id": "R-07",
+      "item": "Brief text artifacts",
+      "result": "The brief has broken link text '[COORDINATION.md](http://COORDINATION.md)' and entity artifacts ('&amp;amp;lt;') in the session naming. Read as the repo file COORDINATION.md.",
+      "evidence": "Text of the brief.",
+      "source_ids": [
+        "S33"
+      ],
+      "flag": "F25",
+      "status": "Irregular"
     },
     {
-      "item": "Build and test setup",
-      "finding": "No package.json, Python project file, CI workflow or tests existed. The site build is a plain Python script added in this session (scripts/build_site.py) with no third-party dependencies.",
-      "status": "Verified",
-      "src": [
-        {
-          "label": "Repository file list",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2"
-        }
-      ]
+      "id": "R-08",
+      "item": "Build, test and CI",
+      "result": "No build script, no tests and no .github/workflows directory at base. The Pages site is static HTML.",
+      "evidence": "git ls-files at base shows only README.md.",
+      "source_ids": [
+        "S32"
+      ],
+      "flag": null,
+      "status": "Gap (see S-14)"
     },
     {
-      "item": "Brief vs. session rules",
-      "finding": "The brief asks for session-<id>/<task> branches; the session rules allow only the current branch. Followed the session rules (see Flagged F14).",
-      "status": "Flagged",
-      "src": [
-        {
-          "label": "COORDINATION.md (this repo)",
-          "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/a52047d7-vegas2/COORDINATION.md"
-        }
-      ]
+      "id": "R-09",
+      "item": "Base commit history",
+      "result": "One commit at base ('Initial commit', c97c82a, 2026-11-25) by kanlerxz87-cyber. No other history on main.",
+      "evidence": "git log --all on the clone.",
+      "source_ids": [
+        "S32"
+      ],
+      "flag": null,
+      "status": "Verified"
+    },
+    {
+      "id": "R-10",
+      "item": "Data sources and verification method",
+      "result": "The site's data (data/*.json) came from official pages checked this session. Values with no official source are blank and flagged, not inferred.",
+      "evidence": "data/sources.json (32 source IDs), data/flags.json (28 flags).",
+      "source_ids": [
+        "S33"
+      ],
+      "flag": null,
+      "status": "Verified"
     }
   ]
 }
