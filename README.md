@@ -1,40 +1,106 @@
-# Vegas2 — Las Vegas trip planning dashboard
+# Vegas2 — Las Vegas trip planner (Feb 15 – Mar 23, 2027)
 
-A mobile-friendly, source-linked planning dashboard for two adults considering Las Vegas dates from **February 15 through March 23, 2027**.
+Live site (GitHub Pages, served from `docs/`): **https://kanlerxz87-cyber.github.io/Vegas2/**
 
-## Open the dashboard
+## Published pages (what each URL is)
 
-- [Overview](site/index.html)
-- [Hotels & room comparison](site/hotels.html)
-- [2026 MICHELIN restaurants](site/restaurants.html)
-- [Activities & transit](site/activities.html)
-- [Analysis, knowns, Q&A & improvement ideas](site/analysis.html)
-- [Flagged for Review](site/flagged.html)
+| URL path | What it is | Built by |
+|---|---|---|
+| `/` (`docs/index.html`) | **Verified landing page** and dashboard: executive summary, hotels, Michelin, activities, booking, questions, suggestions, Flagged for Review, repo review, sources | `scripts/build_site.py` |
+| `/session-36cc5108/` | Parallel site from PR #6, unchanged (its own data in `data/*.json`) | `site/build.py` (output moved to this folder during integration) |
+| `/planner-v1/` | First single-page dashboard from PRs #2/#3, unchanged | copied static files |
+| `/session-d33551df/` | Supplemental source-first hotel, Michelin, activity and review dashboard | `site/publish-supplement.py` |
 
-After GitHub Pages is enabled and the Actions workflow succeeds, the same pages are published from the `site/` directory.
+## Verified site (this session, a52047d7)
 
-## Important planning caveats
+| Path | What it is |
+|---|---|
+| `data/verified/*.json` | Source data for every table: hotels, Michelin, activities, booking, questions, suggestions, flagged, repo review, sources. Every row has a source; unverified values are blank and flagged |
+| `scripts/build_site.py` | Builds `docs/*.html` and `docs/assets/style.css` from `data/verified/` (Python 3 standard library) |
+| `scripts/check_site.py` | Verification gate: JSON validity, a source on every row, official-domain allowlist, Michelin counts (4 starred / 3 Bib / 17 Recommended = 24), internal links, placeholder text |
+| `assets/style.css` | Source stylesheet (copied into `docs/assets/`) |
 
-- Preferred dates **Feb 15–18, 2027** are three nights, while the requested trip length is one to two weeks. The separate seven-night **Feb 15–22** rate check is a comparison scenario, not a substitute itinerary.
-- Caesars Palace produced inconsistent dated displays for Feb 15–22: an earlier capture showed **$226/night**, while a later official recheck displayed the Julius Deluxe King at **$201/night** ($146 room rate + $55 resort fee, taxes excluded) and a room-assigned option at **$196/night**. The flexible calendar summed to **$1,580**; the later booking page also showed a technical-difficulties notice. The seven-night total is intentionally left unconfirmed.
-- The other hotel date-price checks were not reliable enough for a like-for-like comparison. No market-wide cheapest stay is claimed.
-- The hotel ranking by MICHELIN restaurants reachable within one hour by bus is pending RTC date/time route checks. Blank reach counts mean **unmeasured**, not zero.
-- Unconfirmed prices, hours, exceptions and social accounts remain blank and are listed on the review page. Restaurant MICHELIN distinctions are explicitly separated.
+Rebuild and check (run in this order; both must pass):
 
-## Local preview and validation
-
-From the repository root:
-
-```sh
-python3 -m http.server 8000 --directory site
+```bash
+python3 scripts/build_site.py
+python3 scripts/check_site.py
+python3 site/build.py      # rebuilds /session-36cc5108/ only
 ```
 
-Then open `http://localhost:8000`. The site is static HTML/CSS/JavaScript and has no package install step. Validate the source data with:
+Verification rule: a value is **Verified** only when an official source confirmed it. **Partial** means an official source covers only part of the claim. Everything else is left blank and marked **Unverified**. Nothing is inferred.
 
-```sh
-node site/verify.cjs
+## Integration notes
+
+- `main` gained a second site (`docs/`, `site/build.py`) from PR #6 while this branch was open. Both builds are kept. Their output moved from `docs/` to `docs/session-36cc5108/` so the two builds cannot delete each other's pages.
+- The Pages workflow (`.github/workflows/pages.yml`) deploys `docs/` and is unchanged.
+- Root-level `index.html`, `styles.css`, `app.js`, `data.js` are the v1 dashboard source, kept unchanged. Their copy for publishing is `docs/planner-v1/`.
+
+---
+
+## Readme from the other session (session 36cc5108), kept verbatim
+
+# Vegas2 — Las Vegas trip planner (Feb 15 – Mar 23, 2027)
+
+Live site (GitHub Pages): https://kanlerxz87-cyber.github.io/Vegas2/
+
+## What is here
+
+| Path | Purpose |
+|------|---------|
+| `docs/` | Generated static site served by GitHub Pages (do not edit by hand) |
+| `site/build.py` | Builds `docs/` from `data/` (standard library only) and fails on missing sources, undefined flags or broken links |
+| `data/hotels.json` | Hotel shortlist, in-resort Michelin ranking, resort fee (verified only where official), blanks for anything unverified |
+| `data/restaurants.json` | All 24 Las Vegas listings in the 2026 MICHELIN Guide Southwest, with official addresses |
+| `data/activities.json` | Activities checked against official pages |
+| `data/sources.json` | Source registry (every row cites one or more of these IDs) |
+| `data/flags.json` | Irregularities, conflicts and unverified items (published on "Flagged for Review") |
+| `data/questions.json` | Questions and information gaps, with known / missing / how-to-find |
+| `data/suggestions.json` | Proposed site and data changes. Nothing is implemented until approved |
+| `data/repo_review.json` | Line-by-line repository review |
+| `COORDINATION.md` | Shared task board, claims, logs and handoffs |
+
+## Rebuild
+
+```bash
+python3 site/build.py
 ```
 
-GitHub Actions runs the same validation before deploying `site/` to GitHub Pages.
+Exit code 0 means every row has a source, every flag resolves and every internal link works.
 
-Research snapshot: **November 26, 2026**. Rates, inventory, hours, transit schedules and ticket prices may change before travel; always recheck the linked official source before paying or booking.
+## Verification rule
+
+A value appears only when an official source confirmed it. Anything else is left blank and marked **Unverified**, with a flag ID linking to the review list. Third-party sources are used only to flag conflicts.
+
+## Other dashboard in this repository
+
+The earlier dashboard from another session now lives in `legacy-dashboard/` (moved with `git mv`, nothing deleted). The root `index.html` redirects to `docs/`, which is the published site (see F27). Their README, preserved verbatim, follows:
+
+---
+
+# Las Vegas Trip Planner
+
+A source-first, mobile-friendly planning dashboard for a two-adult Las Vegas trip (Feb 15–Mar 23, 2027). Open `index.html` locally or publish this repository with GitHub Pages.
+
+## Verification and limits
+
+The dashboard separates published facts from unknowns. Dynamic hotel rates and total tax-inclusive prices for Feb 15–22, 2027, restaurant menu totals, transit journey times and future opening hours are not represented as verified unless a cited official source provides them. Blank values are deliberately flagged rather than estimated. Recheck all information before booking.
+
+The 2026 MICHELIN Guide search identified several Las Vegas listings, including three starred restaurants. Individual current Guide listings are linked. Guide presence and star status are explicitly distinguished.
+
+## Deploy
+
+GitHub repository Settings → Pages → Deploy from a branch → `main` / `/ (root)`, or use the included Pages workflow on pushes to `main`.
+
+## Files
+
+- `index.html`: single-page dashboard with category navigation.
+- `styles.css`: responsive styling.
+- `app.js`: interactive navigation and filtering.
+- `COORDINATION.md`: task board, sources, verification notes and flagged gaps.
+
+## Supplemental source-first dashboard (session `d33551df`)
+
+This session's separately labeled comparison dashboard is published at [`/session-d33551df/`](docs/session-d33551df/index.html) (and, after the Pages deployment completes, `https://kanlerxz87-cyber.github.io/Vegas2/session-d33551df/`). It preserves this repository's existing `docs/` landing page and other session sub-sites.
+
+Source files and the publication copy are `site/*.html`, `site/assets/`, and `docs/session-d33551df/`. Recreate only this supplemental subdirectory with `python3 site/publish-supplement.py`; it does not overwrite `docs/index.html` or other session paths. Validate with `node site/verify.cjs`.

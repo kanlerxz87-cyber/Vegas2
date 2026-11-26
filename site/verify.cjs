@@ -57,6 +57,18 @@ for (const page of pages) {
   requireCheck(html.includes('assets/data.js') && html.includes('assets/app.js'), `${page}: missing application scripts.`);
   requireCheck(html.includes('<main id="main"'), `${page}: missing main landmark.`);
 }
+const publishedPath = path.join(__dirname, '..', 'docs', 'session-d33551df');
+for (const page of pages) {
+  const publishedPage = path.join(publishedPath, page);
+  requireCheck(fs.existsSync(publishedPage), `Published Pages copy is missing ${page}.`);
+  if (fs.existsSync(publishedPage)) {
+    const html = fs.readFileSync(publishedPage, 'utf8');
+    requireCheck(html.includes('assets/styles.css') && html.includes('assets/data.js') && html.includes('assets/app.js'), `Published ${page}: missing local assets.`);
+  }
+}
+for (const asset of ['styles.css', 'data.js', 'app.js']) {
+  requireCheck(fs.existsSync(path.join(publishedPath, 'assets', asset)), `Published Pages copy is missing asset ${asset}.`);
+}
 
 const appSource = fs.readFileSync(path.join(__dirname, 'assets', 'app.js'), 'utf8');
 const expectedRendered = {
