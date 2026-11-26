@@ -1,2 +1,9 @@
+# Python cache files
 __pycache__/
+
+# Local static-site preview output
 _site/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
