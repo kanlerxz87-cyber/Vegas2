@@ -212,7 +212,7 @@
       "hours": null,
       "days_open": null,
       "closed_days": null,
-      "exceptions": "Official page shows no hours. Time Out lists this restaurant as Recommended, which conflicts with the official release (F14).",
+      "exceptions": "Official site shows no hours (F17). Time Out (S26) also lists this restaurant as a Bib Gourmand; no conflict (F14).",
       "dress_code": null,
       "phone": null,
       "price_level": null,
@@ -220,7 +220,7 @@
       "social_youtube": null,
       "social_tiktok": null,
       "social_instagram": null,
-      "verification": "Distinction, address: verified (S01, S02). Area, cuisine: LVCVA (S03). Hours: UNVERIFIED (F17). Conflict with Time Out (F14). Price, social: unverified (F18, F19).",
+      "verification": "Distinction, address: verified (S01, S02, S26). Area, cuisine: LVCVA (S03). Hours: UNVERIFIED (F17). Price, social: unverified (F18, F19).",
       "sources": [
         "S01",
         "S02",

@@ -96,7 +96,7 @@
       "id": "F08",
       "category": "Unverified",
       "title": "Resort fees: only Caesars is confirmed officially",
-      "detail": "Caesars Palace: $62.30 per night incl. $7.35 tax, verified (S08). Other MGM and Venetian properties: third-party reports say $50–$55 before tax (S22). Those figures are not confirmed on official pages, so the cells are blank.",
+      "detail": "Caesars Palace: $62.30 per night incl. tax, verified (S08). Other MGM and Venetian properties: third-party reports say $50–$55 before tax (S22). Those figures are not confirmed on official pages, so the cells are blank.",
       "source_ids": [
         "S08",
         "S22"
@@ -160,7 +160,7 @@
     {
       "id": "F13",
       "category": "Brief note",
-      "title": "Feb 15, 2027 is Presidents' Day (federal holiday)",
+      "title": "Feb 15, 2027 is Washington's Birthday (federal holiday)",
       "detail": "OPM lists Monday, February 15, 2027 as Washington's Birthday (S10). Holiday demand may affect prices and availability. The effect is not quantified, so no price is inferred.",
       "source_ids": [
         "S10"
@@ -171,9 +171,9 @@
     },
     {
       "id": "F14",
-      "category": "Source conflict",
-      "title": "Yen Viet Kitchen: Bib Gourmand (official) vs Recommended (Time Out)",
-      "detail": "The official Michelin release lists YEN Viet Kitchen as a Bib Gourmand (S01, S02). Time Out lists it as Recommended (S26). The official release is used.",
+      "category": "Checked, no conflict",
+      "title": "Yen Viet Kitchen: Bib Gourmand (confirmed by two sources)",
+      "detail": "The official Michelin release (S01, S02) and Time Out (S26) both list Yen Viet Kitchen as a Bib Gourmand. An earlier note of a Recommended listing was a misreading and is withdrawn. Hours remain unverified (F17).",
       "source_ids": [
         "S01",
         "S02",
@@ -367,6 +367,21 @@
       ],
       "affects": [
         "hotels"
+      ]
+    },
+    {
+      "id": "F29",
+      "category": "Other site on main",
+      "title": "Dashboard on main understates Las Vegas starred restaurants (3 vs 4) and omits é by José Andrés",
+      "detail": "index.html and data.js on main (commit dce4548, arena/e94404fc-vegas2 expansion) say the Guide has 'two One-Star restaurants and one Two-Star' and list three starred restaurants. The official release (S01, S02) and Time Out (S26) list four: Restaurant de Joël Robuchon (2 stars), é by José Andrés, Guy Savoy and L'Atelier de Joël Robuchon (1 star each). Its data.js also omits é. Those files are kept unchanged on main; this site is the corrected list.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S26",
+        "S34"
+      ],
+      "affects": [
+        "restaurants"
       ]
     }
   ]

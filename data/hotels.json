@@ -58,7 +58,7 @@
       "michelin_counts": {"two_star": 0, "one_star": 1, "bib_gourmand": 0, "recommended": 0},
       "address": "3570 Las Vegas Blvd. S., Las Vegas, NV 89109",
       "area": "The Strip", "official_site": "https://www.caesars.com/caesars-palace",
-      "resort_fee_per_night_usd": 62.30, "resort_fee_status": "VERIFIED: $62.30 per night = $54.95 + $7.35 tax (official booking page, S08). Not exempt for Diamond/Seven Stars guests.",
+      "resort_fee_per_night_usd": 62.30, "resort_fee_status": "VERIFIED: $62.30 per night incl. tax (official booking page, S08). The tax split is not shown on that page and is not used.",
       "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
       "price_7_nights_usd": null, "price_status": "UNVERIFIED. Official booking page did not return Feb 2027 rates (S08). Promotional banner shows a December 2026 sale (F07).",
       "best_booking_time": "UNVERIFIED (F04). Official advance-purchase offer: up to 30% off for stays 30+ days ahead, terms apply (S09). Official '48-hour cancellation' is asterisked (F28).",

@@ -64,7 +64,7 @@
       "publisher": "Caesars Entertainment (booking engine)",
       "title": "Caesars Palace hotel calendar (URL with Feb 15–22, 2027 parameters)",
       "url": "https://www.caesars.com/book/hotel-calendar?dateSearchFormat=flexible-dates&flexibleMonth=December&propCode=clv&checkIn=2027-02-15&checkOut=2027-02-22&numAdults=2",
-      "used_for": "Resort fee $62.30/night incl. $7.35 tax (official). Rates for Feb 2027 NOT returned (page showed 'Searching Rates', December 2026 calendar)."
+      "used_for": "Resort fee $62.30/night incl. tax (official). Rates for Feb 2027 NOT returned (page showed 'Searching Rates', December 2026 calendar)."
     },
     {
       "id": "S09",
@@ -80,7 +80,7 @@
       "publisher": "U.S. Office of Personnel Management",
       "title": "Federal Holidays (2027 schedule)",
       "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
-      "used_for": "Monday, February 15, 2027 = Washington's Birthday (Presidents' Day)"
+      "used_for": "Monday, February 15, 2027 = Washington's Birthday (federal holiday)"
     },
     {
       "id": "S11",
@@ -208,7 +208,7 @@
       "publisher": "Time Out (media)",
       "title": "Michelin just added its first-ever Southwest restaurant selection to the guide",
       "url": "https://www.timeout.com/usa/news/michelin-just-added-its-first-ever-southwest-restaurant-selection-to-the-guide-082926",
-      "used_for": "Flag only: lists Yen Viet Kitchen as Recommended; official release lists it as Bib Gourmand"
+      "used_for": "Time Out, Aug 29 2026. Lists 2 stars for Restaurant de Joël Robuchon; 1 star each for é, Guy Savoy and L'Atelier (4 Las Vegas stars); Yen Viet Kitchen as Bib Gourmand. Confirms the official release; not a value source on its own."
     },
     {
       "id": "S27",
@@ -265,6 +265,14 @@
       "title": "COORDINATION.md (task board for this work)",
       "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/arena/36cc5108-vegas2/COORDINATION.md",
       "used_for": "Owner brief items with no web source (budget, interests, repo wording). Not a factual claim about the world."
+    },
+    {
+      "id": "S34",
+      "type": "internal",
+      "publisher": "This repository, branch main (commit dce4548)",
+      "title": "index.html and data.js on main (other session's dashboard)",
+      "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html",
+      "used_for": "Reviewed for conflicts only (F29). Not a source for any value in this site."
     }
   ]
 }

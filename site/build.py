@@ -190,7 +190,7 @@ def page_index():
 <section class="panel">
 <h2>Executive summary</h2>
 <ul class="bullets">
-<li><strong>Dates.</strong> Preferred stay is Mon Feb 15 – Thu Feb 18, 2027 (3 nights). Feb 15 is Washington's Birthday (Presidents' Day), a federal holiday [<a href="sources.html#S10">S10</a>]. The brief also asks for 7-night totals, so both views are kept. <a href="questions.html#Q-01">Q-01</a></li>
+<li><strong>Dates.</strong> Preferred stay is Mon Feb 15 – Thu Feb 18, 2027 (3 nights). Feb 15 is Washington's Birthday, a federal holiday [<a href="sources.html#S10">S10</a>]. The brief also asks for 7-night totals, so both views are kept. <a href="questions.html#Q-01">Q-01</a></li>
 <li><strong>Michelin.</strong> Las Vegas has 24 listings in the inaugural 2026 Southwest guide: 4 starred (Joël Robuchon 2★; L'Atelier, é by José Andrés and Guy Savoy 1★), 3 Bib Gourmand and 17 Recommended [<a href="sources.html#S01">S01</a>, <a href="sources.html#S02">S02</a>].</li>
 <li><strong>Best in-resort Michelin count.</strong> The Venetian (4 Recommended), then MGM Grand (2 starred, 3 stars in total), then The Cosmopolitan (1★ + Bib) [<a href="analysis.html">Analysis</a>].</li>
 <li><strong>Hotel prices.</strong> No verified 7-night total exists yet. Official booking pages returned no Feb 2027 rates [<a href="sources.html#S08">S08</a>]. The one verified fee is Caesars Palace's resort fee: $62.30 per night incl. tax [<a href="sources.html#S08">S08</a>].</li>
