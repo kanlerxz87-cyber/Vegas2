@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17201d">
+  <meta name="description" content="Compare official Las Vegas hotel rate snapshots for Feb 15–18 and Feb 15–22, 2027, with resort fees, taxes, and room types shown separately.">
+  <title>Hotels · Vegas Field Notes</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="hotels">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vegas Field Notes home"><span class="brand-mark" aria-hidden="true">VF</span><span class="brand-name">Vegas Field Notes<small>Plan with receipts</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="restaurants.html">Restaurants</a><a href="hotels.html" aria-current="page">Hotels</a><a href="experiences.html">Experiences</a><a href="itinerary.html">7-night outline</a><a href="getting-around.html">Getting around</a><a href="review.html">Review flags</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container page-wrap">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">Stay · two adults · one room</p><h1 id="page-title">Compare the stay,<br>not just the headline rate.</h1><p class="lede">Five hotels, two separate quote windows, and explicit room/fee notes. Rates were captured from official booking engines on Nov 26, 2026; the live price may already have changed.</p></div>
+      <div class="hero-meta"><strong>USD · dynamic snapshots</strong>Rates are not reservations, inventory guarantees, or a recommendation to book any property.</div>
+    </section>
+
+    <section class="section callout callout--warn" aria-labelledby="duration-note">
+      <p class="eyebrow">Keep these scenarios separate</p>
+      <h2 id="duration-note" style="margin:.25rem 0;font:800 1.25rem/1.2 var(--display);letter-spacing:-.04em">Feb 15–18 is three nights—not the requested 1–2 weeks.</h2>
+      <p>The preferred exact dates were quoted as a short reference. The seven-night comparison uses Feb 15–22. A verified 14-night quote was not captured, so no two-week total is inferred.</p>
+    </section>
+
+    <section class="section" aria-labelledby="compare-title">
+      <div class="section-heading"><div><p class="eyebrow">Date-matched snapshots</p><h2 id="compare-title">Switch the stay length.</h2></div><p>Use the live-search links for today's amount and cancellation terms. Room labels matter: an assigned-on-arrival rate does not promise a King or Two Queens.</p></div>
+      <div class="rate-controls" role="group" aria-label="Select hotel quote scenario">
+        <button type="button" data-rate-scenario="threeNight" aria-pressed="true">3 nights · Feb 15–18</button>
+        <button type="button" data-rate-scenario="sevenNight" aria-pressed="false">7 nights · Feb 15–22</button>
+      </div>
+      <h3 id="hotel-scenario-heading" aria-live="polite" aria-atomic="true" style="font:800 1.45rem/1.15 var(--display);letter-spacing:-.04em">Loading rates…</h3>
+      <p id="hotel-scenario-note" class="section-intro"></p>
+      <p id="hotel-status" class="results-count" role="status" aria-live="polite">Loading hotel source snapshots…</p>
+      <noscript><p class="callout callout--warn">The scenario switcher needs JavaScript. Both quote sets are available in <a href="data/hotels.json">the hotel research JSON</a>.</p></noscript>
+      <div id="hotel-grid" class="hotel-grid" aria-busy="true"></div>
+    </section>
+
+    <section class="section" aria-labelledby="how-read">
+      <div class="section-heading"><div><p class="eyebrow">How to read the cards</p><h2 id="how-read">Not all totals are all-in.</h2></div></div>
+      <div class="grid grid-3">
+        <article class="tile tile--acid"><span class="tile-label">Room + resort fee</span><strong>Sometimes</strong><p>Several nightly quotes include the resort fee but explicitly exclude room tax.</p></article>
+        <article class="tile"><span class="tile-label">Tax + fee detail</span><strong>Resorts World</strong><p>Those cards show detailed totals including room tax, resort fee, and resort-fee tax.</p></article>
+        <article class="tile tile--coral"><span class="tile-label">Fee conflict</span><strong>South Point</strong><p>Its booking engine and public hotel page showed different daily resort-fee figures.</p></article>
+      </div>
+      <p class="source-line">Before comparing or booking, open the live rate search and confirm the final checkout total, bed type, cancellation policy, and resort-fee inclusions. <a href="review.html">Full rate caveats →</a></p>
+    </section>
+
+    <section class="section callout" aria-labelledby="booking-time">
+      <p class="eyebrow">Booking timing</p>
+      <h2 id="booking-time" style="margin:.25rem 0;font:800 1.2rem/1.2 var(--display);letter-spacing:-.04em">No universal “best time” is supported by these snapshots.</h2>
+      <p>Current promotional banners and advance-purchase offers are date- and property-specific. These observations are not enough to predict future prices or tell every traveler when to book. Compare a refundable rate with the final nonrefundable offer before choosing.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><div><p class="footer-mark">Vegas Field Notes</p><p>All five room profiles and all quote searches link to the hotel's official site or booking engine.</p></div><div><p class="footer-meta">Snapshot date · Nov 26, 2026</p><p><a href="review.html">Open rate caveats and missing quotes</a></p></div></div></footer>
+</body>
+</html>

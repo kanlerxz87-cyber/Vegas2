@@ -1,0 +1,70 @@
+{
+  "asOf": "2026-11-26",
+  "experiences": [
+    {
+      "name": "High Roller Observation Wheel",
+      "area": "The LINQ Promenade · central Strip",
+      "category": "View / attraction",
+      "summary": "A 550-foot observation wheel; one full rotation takes about 30 minutes. Allow at least an hour for entry and exit.",
+      "hours": "Official page lists daily tickets from 12 p.m. to close; check the live hours calendar.",
+      "price": "Adult daytime ticket $23.50 (12–5:59 p.m.); adult anytime ticket $34.75; Happy Half Hour $60 (21+). Taxes and fees apply.",
+      "forTwo": "$47 for two daytime tickets or $69.50 for two anytime tickets, before taxes and fees.",
+      "note": "Nevada residents receive 20% off standard tickets at the box office in January and June before 5 p.m. with valid ID; this is not a February offer.",
+      "source": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
+      "sourceLabel": "Official attraction page and FAQ",
+      "booking": "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+    },
+    {
+      "name": "The Mob Museum",
+      "area": "Downtown · 300 Stewart Avenue",
+      "category": "Museum",
+      "summary": "Four floors of organized-crime and law-enforcement history, immersive exhibits, and a separate speakeasy/distillery experience downstairs.",
+      "hours": "Museum daily 9 a.m.–9 p.m. · The Underground Sun–Thu 11 a.m.–11 p.m.; Fri–Sat 11 a.m.–midnight. Hours can change; check early closures.",
+      "price": "General admission $37.95 per adult; Deluxe $49.95; Premier $54.95. Online reservations are encouraged.",
+      "forTwo": "$75.90 for two general-admission tickets at the listed price; upgrades, tax, and any extras are additional if applicable.",
+      "note": "Ticket tiers and special-day hours may change. Confirm the chosen date on the official ticket page.",
+      "source": "https://themobmuseum.org/plan-your-visit/purchase-tickets/",
+      "sourceLabel": "Official visit and ticket information",
+      "booking": "https://themobmuseum.org/plan-your-visit/purchase-tickets/"
+    },
+    {
+      "name": "The Neon Museum · 2027 Admission",
+      "area": "Downtown North",
+      "category": "Museum / outdoor collection",
+      "summary": "Timed admission to the Neon Boneyard and Las Vegas sign collection; the museum recommends buying in advance because some nights sell out.",
+      "hours": "Daily 3–11 p.m. for 2027 Admission; last admission 10 p.m. Seasonal ticket wording may vary, so check the target date.",
+      "price": "2027 adult admission from $21; a ticket processing fee applies.",
+      "forTwo": "From $42 for two adults before the ticket processing fee.",
+      "note": "The official FAQ says tickets are released 60 days in advance. Check the ticket calendar for the actual release date and availability.",
+      "source": "https://neonmuseum.org/whats-on/all-day-admission/",
+      "sourceLabel": "Official 2027 admission and ticket page",
+      "booking": "https://neonmuseum.org/whats-on/all-day-admission/"
+    },
+    {
+      "name": "Fremont Street Experience",
+      "area": "Downtown",
+      "category": "Free public experience",
+      "summary": "Pedestrian entertainment district with the Viva Vision canopy and free live entertainment on its stages; individual venues and add-ons may charge.",
+      "hours": "Check the official calendar for current event times and any access notices.",
+      "price": "Entry and the listed street-stage entertainment are free; food, drinks, and other attractions are extra.",
+      "forTwo": "Free entry for two; optional purchases are not included.",
+      "note": "The calendar reviewed did not establish a February 2027 performance lineup. Recheck closer to travel.",
+      "source": "https://fremontstreetexperience.com/calendar/",
+      "sourceLabel": "Official event calendar",
+      "booking": "https://fremontstreetexperience.com/calendar/"
+    },
+    {
+      "name": "Sphere · The Wizard of Oz",
+      "area": "East of the central Strip",
+      "category": "Immersive film experience",
+      "summary": "The official FAQ describes the experience as about 75 minutes. Doors open 45 minutes before ticket time; late seating is not permitted; recommended for ages 6+.",
+      "hours": "Show dates and start times vary. A specific Feb 15–18, 2027 screening was not confirmed in the reviewed calendar.",
+      "price": "No confirmed ticket price for the preferred dates in this research snapshot.",
+      "forTwo": "Not priced for the target dates; check the live show and ticket calendar.",
+      "note": "The Sphere show page displayed a Metallica residency range of Jan 28–Mar 13, 2027, overlapping the preferred date window. Confirm the exact performance date and ticket price before planning around it.",
+      "source": "https://www.thesphere.com/shows/wizard-of-oz-experience",
+      "sourceLabel": "Official Sphere show and FAQ",
+      "booking": "https://www.thesphere.com/shows"
+    }
+  ]
+}

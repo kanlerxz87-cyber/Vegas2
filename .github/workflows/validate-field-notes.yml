@@ -1,0 +1,27 @@
+name: Validate Vegas Field Notes
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate and rebuild isolated site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check field-notes/assets/js/app.js
+      - name: Build into the existing Pages artifact
+        run: python3 scripts/build_field_notes.py
+      - name: Validate source and published copy
+        run: python3 scripts/validate_field_notes.py
+      - name: Ensure committed Pages output is current
+        run: git diff --exit-code -- docs/session-2e5e3452

@@ -108,6 +108,38 @@ See the "Prior sessions" table above and the verbatim records in git history. Hi
 
 ### PR and deployment status
 
-- PR #15: https://github.com/kanlerxz87-cyber/Vegas2/pull/15; merged to `main` at 2026-11-26 22:25:12 UTC as merge commit `0daa5eefc511f26b74610f2ad36a131de5925e0d`. Two integrations of newer `main` commits were required because other sessions merged in parallel; root/other-session files were retained, and this guide stays in its own subdirectory.
-- PR checks passed: `build` and `validate` for the final merge-resolution commit. Main's session-059 build/verification also passed after merge.
-- Pages deploy workflow run **45904677383** completed successfully (14 seconds); GitHub deployment status is `success`, Pages API reports `built`, with Pages URL `https://kanlerxz87-cyber.github.io/Vegas2/`. This guide's published URL is `https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/`; the GitHub Pages API confirms the shared source is `main` at `/`. `fetch_page` could not retrieve the `github.io` page from this environment, so an external-browser content fetch is not asserted.
+- PR #15: https://github.com/kanlerxz87-cyber/Vegas2/pull/15; merged to `main` at 2026-11-26 22:25:12 UTC as `0daa5eefc511f26b74610f2ad36a131de5925e0d`. Parallel changes required integrations of newer `main` commits; root and other session folders were retained.
+- PR checks passed (`build`, `validate`); the existing main/session-059 build and source checks passed after merge.
+- GitHub Pages deploy run **45904677383** completed successfully; GitHub deployment status is `success`, Pages API reports `built`, with URL `https://kanlerxz87-cyber.github.io/Vegas2/`. This guide is published at `https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/`. Pages API reports source `main` at `/`. Direct `fetch_page` from this sandbox could not retrieve the `github.io` URL, so external-browser content fetch is not asserted.
+- PR #16 is the documentation-only follow-up to record this merge/deployment outcome in the shared task board; its checks and merge remain pending.
+
+---
+
+## Session `arena/2e5e3452-vegas2` — isolated Vegas Field Notes subsite
+
+This entry records the active session's additions without replacing the existing `docs/` landing page, its data, or the main Pages workflow. The subsite source is `field-notes/`; its published copy is isolated at `docs/session-2e5e3452/`. Latest integrated base during this update: `0daa5ee` (main advanced in parallel through PRs #13, #4, #11, #12, and #15). The branch is being rebased additively; existing session sites and their coordination records are preserved.
+
+### Research decisions
+
+- Rate party is two adults, one room, USD. Feb 15–18, 2027 is a three-night exact-date reference; Feb 15–22 is a separate seven-night comparison. Neither is mislabeled as a 14-night stay; a 14-night hotel quote was not verified.
+- Rates were captured Nov 26, 2026 and are dynamic. South Point's booking engine lists a $29.20/day resort fee while its public page says $33/night. Resorts World detailed totals include room tax, resort fee, and fee tax; other displayed nightly rates often exclude tax. No false all-in hotel ranking is made.
+- Visit Las Vegas's 2026 MICHELIN Guide Southwest list supports four starred restaurants (five stars total), three Bib Gourmand, and 17 Recommended. This is not a 2027 awards claim.
+- Only directly published fixed-menu prices are multiplied into two-person figures. À-la-carte items are not converted into average checks. Sphere/Fremont future dates, Michael Mina's temporary closure, incomplete restaurant hours/prices, and door-to-door trip times remain flagged.
+- No Vegas1 project data was copied.
+
+### Main source set
+
+- Guide list: https://www.visitlasvegas.com/michelin-guide-restaurants/
+- Hotels and rates: official room pages and dated booking engines are linked in `field-notes/data/hotels.json` and the published copy. Hotel profiles checked: South Point, Flamingo, Caesars Palace, Resorts World Hilton, and Wynn.
+- Activities: official High Roller, Mob Museum, Neon Museum, Fremont Street Experience, and Sphere sources are linked on the activity cards.
+- Transit: RTC Deuce and Route 117 PDFs, RTC maps/guides, and developer feeds. These do not establish a complete venue-to-venue travel-time matrix.
+- Restaurant cards link to the checked venue/menu pages; award categories are cross-referenced to the 2026 Visit Las Vegas list.
+
+### Verification and integration
+
+- `node --check field-notes/assets/js/app.js` — passed.
+- `python3 scripts/build_field_notes.py` — passed; generates only `docs/session-2e5e3452/`.
+- `python3 scripts/validate_field_notes.py` — passed for source and published copy: 24 restaurants (4 starred, 3 Bib Gourmand, 17 Recommended) and five hotels in each separate rate scenario.
+- HTTP smoke checks returned 200 for all seven pages and all three data files. `git diff --check` passed.
+- PR #14, “Add isolated Vegas Field Notes planning subsite,” is open. Checks passed before this latest rebase; rerun after push. Merge and Pages verification remain pending.
+- Live preview: served from `field-notes/` on port 4173.
