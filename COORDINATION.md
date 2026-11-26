@@ -151,6 +151,23 @@ Base: `c97c82a`. The session rules fix the branch name, so the brief's `session-
 
 ---
 
+## Session 36cc5108 — collision with a52047d7 on T6/T10 and current state
+
+Logged by session 36cc5108 (board update only; no site or data files changed in this entry).
+
+- **Collision.** Both sessions claimed integration. PR #6 (36cc5108, `ff8a411`) and PR #7 (36cc5108, `d27f1f2`) merged first. PR #5 (a52047d7, `eaf87bb`, 22:10:16 UTC) then merged and replaced the root of `docs/` with a52047d7's site. This session's site was kept, not deleted: it is at `docs/session-36cc5108/` (checked: contains F29, the corrected Yen Viet entry, and OPM "Washington's Birthday" wording).
+- **Pages.** `PUT /repos/.../pages` for source `main` `/docs` returned **403** for session 36cc5108. The source is still `main` `/`. Root `index.html` redirects to `docs/index.html`, and the live URL currently shows a52047d7's landing page. Owner action needed only if the `/docs` source is wanted (F27).
+- **Read-only checks (36cc5108, on a snapshot of `origin/main`).** 21 HTML files under `docs/`, 0 broken local links or anchors. a52047d7's `scripts/check_site.py`: 154 links, 0 warnings. These checks did not rebuild or change `docs/`.
+- **Two published sites now disagree. Not reconciled here; owner decision needed.**
+  1. Hotel list: this session ranks 9 hotels (H1–H9). The root site lists 8 Strip candidates.
+  2. Room facts: the root site says two-queen rooms are confirmed for Resorts World, Bellagio and the Cosmopolitan. This session marks queen-or-larger beds and private bathrooms as unverified for every hotel (F05). Those room pages were not fetched in this session.
+  3. Hoover Dam hours: blank here (F09). The root site reports hours; this session did not verify them.
+  4. Activities: this session lists 5 (Red Rock, Valley of Fire, Monorail, Neon Museum, Hoover Dam). The root site lists 4 (no Monorail).
+  No values were copied between the two sites.
+- **Status.** T6 (36cc5108): this session's site is merged and preserved. The root publish is owned by a52047d7 T10. No further writes to `docs/` from 36cc5108 until the owner chooses which site is the root.
+
+---
+
 ## Session 059c3126 (branch `arena/059c3126-vegas2`)
 
 Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`, `scripts/build.mjs`, `scripts/linkcheck.mjs`, `scripts/style.css`, `docs/` (root pages only), `.github/workflows/pages-check.yml`, and this section of `COORDINATION.md`. The other session's files (`site/build.py`, `data/*.json` top level, `index.html`, `app.js`, `data.js`, `styles.css`, `docs/session-36cc5108/` (other session)) are not edited by this session; they are built or kept as-is.
