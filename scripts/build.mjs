@@ -234,6 +234,7 @@ function buildIndex() {
     ["flagged.html", "Flagged for Review", `${flagged.irregularities.length} irregularities and ${unverifiedCount} unverified item groups.`],
     ["repo-review.html", "Repo review", `${repo.checks.length} repository checks and their sources.`],
     ["sources.html", "Sources", "Every official link used, and where it was used."],
+    ["../session-fd2715d0/index.html", "Source-first category audit", "Mobile-friendly hotel, Michelin, activity and date tables; live rates and route times remain unverified."],
     ["../session-36cc5108/index.html", "Other planner (session 36cc5108)", "The other session's planner, built by site/build.py and kept unchanged for comparison."],
   ]
     .map(([href, t, d]) => `<a class="card" href="${href}"><h3>${esc(t)}</h3><p>${esc(d)}</p></a>`)

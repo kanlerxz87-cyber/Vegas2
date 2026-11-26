@@ -169,7 +169,11 @@ def main():
             fail(f"sources: official-labelled source is not on the official allowlist: {s['url']}")
 
     # 6 & 7: generated HTML
-    html_files = sorted(OUT.glob("*.html")) + [OUT / "planner-v1" / "index.html"]
+    html_files = (
+        sorted(OUT.glob("*.html"))
+        + [OUT / "planner-v1" / "index.html"]
+        + sorted((OUT / "session-fd2715d0").glob("*.html"))
+    )
     if not html_files:
         fail("no HTML pages found; run scripts/build_site.py first")
     pages = {p.name for p in OUT.glob("*.html")}

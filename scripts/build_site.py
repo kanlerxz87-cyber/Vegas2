@@ -91,6 +91,7 @@ NAV = [
     ("sources.html", "Sources"),
 ]
 OTHER_BUILDS = [
+    ("session-fd2715d0/index.html", "Source-first category audit (session fd2715d0)"),
     ("session-36cc5108/index.html", "Second build (session 36cc5108)"),
     ("planner-v1/index.html", "Earlier dashboard (v1)"),
 ]
@@ -434,6 +435,7 @@ def build_index():
         ("flagged.html", "Flagged for Review", f"{len(flg['items'])} irregularities, source conflicts and unverified items, with links."),
         ("repo-review.html", "Repo review", "Line-by-line review of the repository and GitHub Pages settings."),
         ("sources.html", "Sources", "Every official and secondary source, and what each one was used for."),
+        ("session-fd2715d0/index.html", "Source-first category audit", "Mobile-friendly tables for hotels, Michelin restaurants, activities and dates; live quotes and transit times remain unverified."),
         ("planner-v1/index.html", "Earlier dashboard (v1)", "The first single-page planner from PRs #2 and #3, kept unchanged for reference."),
         ("session-36cc5108/index.html", "Second build (session 36cc5108)", "The parallel site from PR #6 on main, kept unchanged. Its data is in data/*.json."),
     ]

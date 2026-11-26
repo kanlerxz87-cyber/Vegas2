@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "verified_on": "2026-11-26",
+    "requested_outer_window": {
+      "start": "2027-02-15",
+      "end": "2027-03-23"
+    },
+    "preferred_window": {
+      "start": "2027-02-15",
+      "end": "2027-02-18",
+      "nights": 3
+    },
+    "seven_night_example": {
+      "checkin": "2027-02-15",
+      "checkout": "2027-02-22",
+      "nights": 7,
+      "status": "Example only; not a selected trip or price quote"
+    },
+    "fourteen_night_example": {
+      "checkin": "2027-02-15",
+      "checkout": "2027-03-01",
+      "nights": 14,
+      "status": "Example only; not a selected trip or price quote"
+    },
+    "holiday": {
+      "date": "2027-02-15",
+      "official_name": "Washington’s Birthday",
+      "source_url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    },
+    "super_bowl": {
+      "date": "2027-02-14",
+      "event": "Super Bowl LXI at SoFi Stadium, Inglewood, California",
+      "source_url": "https://www.nfl.com/news/2026-27-national-football-league-important-dates"
+    },
+    "cheapest_window": "",
+    "best_booking_lead_time": "",
+    "price_method": "No hotel quote is recorded. Compare identical dates, room category, 2-adult occupancy, refundability, taxes and mandatory fees on official hotel booking pages. Repeat at dated intervals and choose the lowest confirmed total that meets the room/cancellation requirements.",
+    "limitation": "No live booking checkout or historical official rate series was captured; therefore neither the cheapest stay dates nor the cheapest time-to-book can be responsibly named. No demand or convention price impact is inferred.",
+    "seven_night_windows": 30,
+    "window_note": "All possible 7-night check-in dates whose checkout is no later than Mar 23, 2027, calculated from the user’s requested outer date window. Each official_quote is intentionally blank."
+  },
+  "windows": [
+    {
+      "checkin_iso": "2027-02-15",
+      "checkout_iso": "2027-02-22",
+      "checkin": "Mon Feb 15, 2027",
+      "checkout": "Mon Feb 22, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-16",
+      "checkout_iso": "2027-02-23",
+      "checkin": "Tue Feb 16, 2027",
+      "checkout": "Tue Feb 23, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-17",
+      "checkout_iso": "2027-02-24",
+      "checkin": "Wed Feb 17, 2027",
+      "checkout": "Wed Feb 24, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-18",
+      "checkout_iso": "2027-02-25",
+      "checkin": "Thu Feb 18, 2027",
+      "checkout": "Thu Feb 25, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-19",
+      "checkout_iso": "2027-02-26",
+      "checkin": "Fri Feb 19, 2027",
+      "checkout": "Fri Feb 26, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-20",
+      "checkout_iso": "2027-02-27",
+      "checkin": "Sat Feb 20, 2027",
+      "checkout": "Sat Feb 27, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-21",
+      "checkout_iso": "2027-02-28",
+      "checkin": "Sun Feb 21, 2027",
+      "checkout": "Sun Feb 28, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-22",
+      "checkout_iso": "2027-03-01",
+      "checkin": "Mon Feb 22, 2027",
+      "checkout": "Mon Mar 1, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-23",
+      "checkout_iso": "2027-03-02",
+      "checkin": "Tue Feb 23, 2027",
+      "checkout": "Tue Mar 2, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-24",
+      "checkout_iso": "2027-03-03",
+      "checkin": "Wed Feb 24, 2027",
+      "checkout": "Wed Mar 3, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-25",
+      "checkout_iso": "2027-03-04",
+      "checkin": "Thu Feb 25, 2027",
+      "checkout": "Thu Mar 4, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-26",
+      "checkout_iso": "2027-03-05",
+      "checkin": "Fri Feb 26, 2027",
+      "checkout": "Fri Mar 5, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-27",
+      "checkout_iso": "2027-03-06",
+      "checkin": "Sat Feb 27, 2027",
+      "checkout": "Sat Mar 6, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-02-28",
+      "checkout_iso": "2027-03-07",
+      "checkin": "Sun Feb 28, 2027",
+      "checkout": "Sun Mar 7, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-01",
+      "checkout_iso": "2027-03-08",
+      "checkin": "Mon Mar 1, 2027",
+      "checkout": "Mon Mar 8, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-02",
+      "checkout_iso": "2027-03-09",
+      "checkin": "Tue Mar 2, 2027",
+      "checkout": "Tue Mar 9, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-03",
+      "checkout_iso": "2027-03-10",
+      "checkin": "Wed Mar 3, 2027",
+      "checkout": "Wed Mar 10, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-04",
+      "checkout_iso": "2027-03-11",
+      "checkin": "Thu Mar 4, 2027",
+      "checkout": "Thu Mar 11, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-05",
+      "checkout_iso": "2027-03-12",
+      "checkin": "Fri Mar 5, 2027",
+      "checkout": "Fri Mar 12, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-06",
+      "checkout_iso": "2027-03-13",
+      "checkin": "Sat Mar 6, 2027",
+      "checkout": "Sat Mar 13, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-07",
+      "checkout_iso": "2027-03-14",
+      "checkin": "Sun Mar 7, 2027",
+      "checkout": "Sun Mar 14, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-08",
+      "checkout_iso": "2027-03-15",
+      "checkin": "Mon Mar 8, 2027",
+      "checkout": "Mon Mar 15, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-09",
+      "checkout_iso": "2027-03-16",
+      "checkin": "Tue Mar 9, 2027",
+      "checkout": "Tue Mar 16, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-10",
+      "checkout_iso": "2027-03-17",
+      "checkin": "Wed Mar 10, 2027",
+      "checkout": "Wed Mar 17, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-11",
+      "checkout_iso": "2027-03-18",
+      "checkin": "Thu Mar 11, 2027",
+      "checkout": "Thu Mar 18, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-12",
+      "checkout_iso": "2027-03-19",
+      "checkin": "Fri Mar 12, 2027",
+      "checkout": "Fri Mar 19, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-13",
+      "checkout_iso": "2027-03-20",
+      "checkin": "Sat Mar 13, 2027",
+      "checkout": "Sat Mar 20, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-14",
+      "checkout_iso": "2027-03-21",
+      "checkin": "Sun Mar 14, 2027",
+      "checkout": "Sun Mar 21, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-15",
+      "checkout_iso": "2027-03-22",
+      "checkin": "Mon Mar 15, 2027",
+      "checkout": "Mon Mar 22, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    },
+    {
+      "checkin_iso": "2027-03-16",
+      "checkout_iso": "2027-03-23",
+      "checkin": "Tue Mar 16, 2027",
+      "checkout": "Tue Mar 23, 2027",
+      "nights": 7,
+      "official_quote": "",
+      "quote_source": "https://mgmgrand.mgmresorts.com/en.html",
+      "status": "No official exact-date quote captured"
+    }
+  ]
+}

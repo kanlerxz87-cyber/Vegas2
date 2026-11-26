@@ -136,3 +136,11 @@ GitHub repository Settings → Pages → Deploy from a branch → `main` / `/ (r
 This session's separately labeled comparison dashboard is published at [`/session-d33551df/`](docs/session-d33551df/index.html) (and, after the Pages deployment completes, `https://kanlerxz87-cyber.github.io/Vegas2/session-d33551df/`). It preserves this repository's existing `docs/` landing page and other session sub-sites.
 
 Source files and the publication copy are `site/*.html`, `site/assets/`, and `docs/session-d33551df/`. Recreate only this supplemental subdirectory with `python3 site/publish-supplement.py`; it does not overwrite `docs/index.html` or other session paths. Validate with `node site/verify.cjs`.
+
+---
+
+## Supplemental category audit (session `fd2715d0`)
+
+Published at [the source-first category audit](https://kanlerxz87-cyber.github.io/Vegas2/session-fd2715d0/), linked from the a52047d7 and 059c3126 dashboards. Files and data are isolated under `docs/session-fd2715d0/`; existing verified datasets and other session builds remain intact. It provides searchable hotel, MICHELIN, activity/transit and date tables, plus Questions, Suggestions and Flagged for Review.
+
+Live 2027 hotel totals, cheapest dates, booking lead time, selected-room inventory, meal totals for two and unverified hotel-origin route times are not asserted. Rebuild the a52047d7 root pages with `python3 scripts/build_site.py` / `python3 scripts/check_site.py` and the 059c3126 site with `node scripts/build.mjs`.

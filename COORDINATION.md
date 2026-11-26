@@ -240,3 +240,29 @@ Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c8
 - `python3 scripts/build_site.py` and `python3 scripts/check_site.py` passed for the existing root dashboard (154 internal links, 11 pages). The build preserves nested Pages subdirectories.
 - `git diff --check` passed. Local HTTP smoke checks of all six published sub-pages and CSS/JS assets under `/session-d33551df/` returned 200.
 - GitHub Pages hosting of `/session-d33551df/` remains to be confirmed after this PR is merged.
+
+---
+
+## Session fd2715d0 — supplemental category audit
+
+**Branch:** `arena/fd2715d0-vegas2` (fixed by Arena). Main advanced during integration to `0548530` with concurrent PR #11. This session preserves the root redirect, primary `docs/` site, `docs/session-059c3126/`, `docs/session-36cc5108/`, `docs/session-d33551df/`, `docs/planner-v1/`, and shared data. Its separate site is `docs/session-fd2715d0/`.
+
+### Scope and status
+
+| Task | Status | Files |
+|---|---|---|
+| Source-first mobile Hotels, MICHELIN, Activities/Transit, Dates pages | Done | `docs/session-fd2715d0/` |
+| Questions, Suggestions, Flagged for Review | Done | `docs/session-fd2715d0/` |
+| Isolated data and renderer | Done | `docs/session-fd2715d0/data/`, `docs/session-fd2715d0/assets/` |
+| Link from current dashboard builders | Done locally | `scripts/build_site.py`, `scripts/build.mjs` |
+| Rebuild/check existing site folders | Done locally | `docs/`, `docs/session-059c3126/`, `docs/session-36cc5108/` |
+| PR #9 merge and hosted deployment confirmation | Pending | PR #9, Pages workflow |
+
+### Verification and limitations
+
+- Data: 8 hotels; 24 MICHELIN entries (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected); 11 activity/transit entries; 30 possible seven-night windows.
+- Official room-category pages are linked as evidence of candidate room types. Exact selected-room private-bath configuration and live availability are not confirmed. No 2027 hotel rate, cheapest date, or booking lead time is claimed.
+- Restaurant totals for two, most current weekly hours, future schedules, venue-specific social accounts and unverified hotel-origin public-transit times remain blank/flagged. No route under one hour is asserted.
+- Preferred Feb 15–18 is three nights; the requested length is one to two weeks and a seven-night comparison is also requested. No trip length is silently selected.
+- `node scripts/build.mjs` and its committed-output gate passed. `python3 scripts/build_site.py` / `python3 scripts/check_site.py` passed (306 links across 19 pages, 0 warnings); `python3 site/build.py` passed with 0 errors. The local 24-route HTTP smoke test returned 200. The warning-only external link checker could not reach external sites from this sandbox.
+- PR #9: https://github.com/kanlerxz87-cyber/Vegas2/pull/9. It remains open pending clean merge into the newest `main` and Pages verification.
