@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michelin Restaurants — Vegas2 Las Vegas Planner</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand"><span class="mark">&#x1F3DC;&#xFE0F;</span> Vegas2</a>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">&#x2261;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html" class="active">Michelin Restaurants</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="activities.html">Activities</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Questions &amp; Answers</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Michelin Restaurants</h1>
+  <p class="page-subtitle">Las Vegas — 2026 Michelin Guide Southwest (awarded August 26, 2026). 24 distinctions: 4 starred, 3 Bib Gourmand, 17 Recommended. Status column shows whether the restaurant is starred in the guide or merely listed/recommended.</p>
+
+  <div class="callout">
+    <p><strong>Starred vs listed.</strong> A restaurant is <strong>starred</strong> only if it holds one or two Michelin stars (Jo&euml;l Robuchon 2&#9733;; Guy Savoy, L&rsquo;Atelier de Jo&euml;l Robuchon, &eacute; by Jos&eacute; Andr&eacute;s 1&#9733; each). <strong>Bib Gourmand</strong> (China Poblano, Esther&rsquo;s Kitchen, Yen Viet Kitchen) recognizes great food at a moderate price — it is a Michelin distinction but not a star. All other listed restaurants are <strong>Recommended</strong> (in the guide, no star). Source: <a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas (official LVCVA)</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Restaurant table</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Restaurant</th>
+            <th>Michelin status</th>
+            <th>Cuisine</th>
+            <th>Area / Hotel</th>
+            <th>Price (pp)</th>
+            <th>Days open / Hours</th>
+            <th>Official site</th>
+            <th>Social / video (YT, TikTok, IG)</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- STARRED -->
+          <tr>
+            <td><span class="name">Jo&euml;l Robuchon</span><div class="loc">French haute cuisine</div></td>
+            <td><span class="badge badge-star">2&#9733; Two stars</span></td>
+            <td>French</td>
+            <td>The Strip / MGM Grand</td>
+            <td><span class="price">$$$$</span></td>
+            <td><span class="hours" title="Verified on official MGM Grand page">Tue–Sat 5:00–9:30 PM; Mon &amp; Sun Closed</span></td>
+            <td><a href="https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td><a href="https://www.instagram.com/joelrobuchon.lasvegas/" target="_blank" rel="noopener">Instagram @joelrobuchon.lasvegas</a> <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html" class="src" target="_blank" rel="noopener">MGM Grand</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">&eacute; by Jos&eacute; Andr&eacute;s</span><div class="loc">Spanish avant-garde tasting</div></td>
+            <td><span class="badge badge-star">1&#9733; One star</span></td>
+            <td>Spanish</td>
+            <td>The Strip / The Cosmopolitan</td>
+            <td><span class="price">$$$$</span></td>
+            <td><span class="hours" title="Verified on official Cosmopolitan page">Tue–Sat 5:30–8:30 PM; Mon &amp; Sun Closed</span></td>
+            <td><a href="https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td><a href="https://www.instagram.com/ebyjoseandres/" target="_blank" rel="noopener">Instagram @ebyjoseandres</a> <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html" class="src" target="_blank" rel="noopener">The Cosmopolitan</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">L&rsquo;Atelier de Jo&euml;l Robuchon</span><div class="loc">Modern French, counter seating</div></td>
+            <td><span class="badge badge-star">1&#9733; One star</span></td>
+            <td>French</td>
+            <td>The Strip / MGM Grand</td>
+            <td><span class="price">$$$</span></td>
+            <td><span class="hours" title="Verified on official MGM Grand page">Mon 5:00–9:30 PM; Tue–Wed Closed; Thu–Sun 5:00–9:30 PM</span></td>
+            <td><a href="https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html" class="src" target="_blank" rel="noopener">MGM Grand</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Restaurant Guy Savoy</span><div class="loc">French haute cuisine</div></td>
+            <td><span class="badge badge-star">1&#9733; One star</span></td>
+            <td>French</td>
+            <td>The Strip / Caesars Palace</td>
+            <td><span class="price">$$$$</span></td>
+            <td><span class="hours" title="Partially verified on official Caesars page">Opens 5:00 PM; full weekly hours not yet confirmed</span></td>
+            <td><a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" class="src" target="_blank" rel="noopener">Caesars Palace</a></td>
+          </tr>
+
+          <!-- BIB GOURMAND -->
+          <tr>
+            <td><span class="name">China Poblano</span><div class="loc">Chinese / Mexican</div></td>
+            <td><span class="badge badge-bib">Bib Gourmand</span></td>
+            <td>Chinese, Mexican</td>
+            <td>The Strip / The Cosmopolitan</td>
+            <td><span class="price">$$</span></td>
+            <td><span class="hours" title="Verified on official Cosmopolitan page">Mon–Thu 11:00–10:00 PM; Fri 11:00–10:30 PM; Sat 10:00–10:30 PM; Sun 10:00–10:00 PM</span></td>
+            <td><a href="https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html" class="src" target="_blank" rel="noopener">The Cosmopolitan</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Esther&rsquo;s Kitchen</span><div class="loc">Seasonal Italian</div></td>
+            <td><span class="badge badge-bib">Bib Gourmand</span></td>
+            <td>Italian</td>
+            <td>Downtown / Arts District</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.estherslv.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.estherslv.com/" class="src" target="_blank" rel="noopener">Esther&rsquo;s Kitchen</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Yen Viet Kitchen</span><div class="loc">Vietnamese</div></td>
+            <td><span class="badge badge-bib">Bib Gourmand</span></td>
+            <td>Vietnamese</td>
+            <td>Off-Strip / Chinatown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.yenvietkitchen.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.yenvietkitchen.com/" class="src" target="_blank" rel="noopener">Yen Viet Kitchen</a></td>
+          </tr>
+
+          <!-- RECOMMENDED -->
+          <tr>
+            <td><span class="name">Wing Lei</span><div class="loc">Cantonese fine dining</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Cantonese</td>
+            <td>The Strip / Wynn Las Vegas</td>
+            <td>—</td>
+            <td><span class="hours" title="Verified on official Wynn page">Thu/Sun/Mon 5:30–9:30 PM; Fri–Sat 5:30–10:00 PM; Tue–Wed Closed</span></td>
+            <td><a href="https://www.wynnlasvegas.com/dining/fine-dining/wing-lei" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td><a href="https://www.instagram.com/wynnlasvegas/" target="_blank" rel="noopener">Instagram @wynnlasvegas (Wynn)</a> <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.wynnlasvegas.com/dining/fine-dining/wing-lei" class="src" target="_blank" rel="noopener">Wynn Las Vegas</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Bouchon</span><div class="loc">Modern French bistro</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>French</td>
+            <td>The Strip / The Venetian South Tower</td>
+            <td><span class="price">$$$</span></td>
+            <td><span class="hours" title="Verified on official Venetian page">Mon–Wed 5:00–10:00 PM; Thu 8:00 AM–1:00 PM &amp; 5:00–10:00 PM; Fri–Sun 8:00 AM–2:00 PM &amp; 5:00–10:00 PM</span></td>
+            <td><a href="https://www.venetianlasvegas.com/restaurants/bouchon.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.venetianlasvegas.com/restaurants/bouchon.html" class="src" target="_blank" rel="noopener">The Venetian</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">COTE Las Vegas</span><div class="loc">Korean steakhouse</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Korean Steakhouse</td>
+            <td>The Strip / The Venetian</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.venetianlasvegas.com/dining/restaurants/cote.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.venetianlasvegas.com/dining/restaurants/cote.html" class="src" target="_blank" rel="noopener">The Venetian</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Estiatorio Milos</span><div class="loc">Greek seafood</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Greek Seafood</td>
+            <td>The Strip / The Venetian</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.venetianlasvegas.com/restaurants/estiatorio-milos.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.venetianlasvegas.com/restaurants/estiatorio-milos.html" class="src" target="_blank" rel="noopener">The Venetian</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Gymkhana</span><div class="loc">Indian</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Indian</td>
+            <td>The Strip / ARIA</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://aria.mgmresorts.com/en/restaurants/gymkhana.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://aria.mgmresorts.com/en/restaurants/gymkhana.html" class="src" target="_blank" rel="noopener">ARIA</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Kabuto</span><div class="loc">Sushi</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Sushi</td>
+            <td>Chinatown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://kabutolv.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://kabutolv.com/" class="src" target="_blank" rel="noopener">Kabuto</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Kame Omakase</span><div class="loc">Omakase</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Omakase</td>
+            <td>Chinatown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.kameomakase.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.kameomakase.com/" class="src" target="_blank" rel="noopener">Kame Omakase</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Lamaii</span><div class="loc">Thai</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Thai</td>
+            <td>Off-Strip</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.lamaiilv.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.lamaiilv.com/" class="src" target="_blank" rel="noopener">Lamaii</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Michael Mina</span><div class="loc">Seafood</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Seafood</td>
+            <td>The Strip / Bellagio</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html" class="src" target="_blank" rel="noopener">Bellagio</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Mott 32</span><div class="loc">Cantonese</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Cantonese</td>
+            <td>The Strip / The Palazzo</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.venetianlasvegas.com/dining/restaurants/mott-32.html" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.venetianlasvegas.com/dining/restaurants/mott-32.html" class="src" target="_blank" rel="noopener">The Venetian</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Partage</span><div class="loc">French</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>French</td>
+            <td>Chinatown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://partage.vegas/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://partage.vegas/" class="src" target="_blank" rel="noopener">Partage</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Pho Ga Bac Bac</span><div class="loc">Vietnamese</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Vietnamese</td>
+            <td>Chinatown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://bestchickenpho.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://bestchickenpho.com/" class="src" target="_blank" rel="noopener">Pho Ga Bac Bac</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Ping Pang Pong</span><div class="loc">Chinese</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Chinese</td>
+            <td>Off-Strip / Gold Coast</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong" class="src" target="_blank" rel="noopener">Gold Coast</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Soulbelly BBQ</span><div class="loc">Barbecue</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Barbecue</td>
+            <td>Downtown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.soulbellybbq.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.soulbellybbq.com/" class="src" target="_blank" rel="noopener">Soulbelly BBQ</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Sparrow and Wolf</span><div class="loc">New American</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>New American</td>
+            <td>Chinatown</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.sparrowandwolflv.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.sparrowandwolflv.com/" class="src" target="_blank" rel="noopener">Sparrow and Wolf</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Stubborn Seed</span><div class="loc">Contemporary</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Contemporary</td>
+            <td>The Strip / Resorts World</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://www.rwlasvegas.com/restaurant/stubborn-seed/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://www.rwlasvegas.com/restaurant/stubborn-seed/" class="src" target="_blank" rel="noopener">Resorts World</a></td>
+          </tr>
+          <tr>
+            <td><span class="name">Anima by Edo</span><div class="loc">Spanish</div></td>
+            <td><span class="badge badge-rec">Recommended</span></td>
+            <td>Spanish</td>
+            <td>Off-Strip</td>
+            <td>—</td>
+            <td><span class="hours">Hours not yet confirmed from official source</span></td>
+            <td><a href="https://animabyedo.com/" class="link" target="_blank" rel="noopener">Official site</a></td>
+            <td>— <span class="badge badge-unverified" style="margin-left:6px;">unverified</span></td>
+            <td><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">Visit Las Vegas</a> &bull; <a href="https://animabyedo.com/" class="src" target="_blank" rel="noopener">Anima by Edo</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="price-note">Price symbols are per-person dinner indicators from official venue pages where stated ($$ = moderate, $$$ = upscale, $$$$ = fine dining). Blank = not confirmed from an official source. Total cost for a couple of 2 adults depends on menu choices, wine pairings, tax, and tip — confirm on each restaurant&rsquo;s official site.</p>
+
+    <div class="callout">
+      <p><strong>Travel note.</strong> Las Vegas has no subway; the <strong>Las Vegas Monorail</strong> runs along the Strip and RTC buses serve the valley. All 24 Michelin restaurants are on or near the Strip / Downtown / Chinatown, so any Strip hotel places them within roughly 15–20 minutes by car, rideshare, bus, or monorail — under the one-hour limit.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="foot-title">Vegas2</div>
+      <div class="small">Source-linked Las Vegas trip planner.</div>
+    </div>
+    <div>
+      <div class="foot-title">Navigate</div>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="hotels.html">Hotels</a></div>
+      <div><a href="activities.html">Activities</a></div>
+      <div><a href="flagged-for-review.html">Flagged for Review</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
