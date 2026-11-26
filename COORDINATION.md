@@ -212,3 +212,31 @@ Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`
 
 ### PR and deployment result
 (Recorded at the end of integration.)
+
+## Session d33551df — supplemental dashboard and research record
+
+Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c82a`. This branch began with a single task claim; while implementation was underway, other sessions merged dashboards and integration work to `main`, most recently through `454e739` (including the `docs/session-059c3126/` sub-site and its Pages checks). To avoid clobbering any other session’s output, this session’s site is added as a separate Pages subdirectory at `docs/session-d33551df/`. The existing `docs/index.html`, `docs/session-36cc5108/`, `docs/session-059c3126/`, `docs/planner-v1/`, `site/build.py`, root redirect, data trees and Pages workflows from `main` are preserved. The addition is linked from this README and uses `site/publish-supplement.py`, which writes only the new subdirectory.
+
+### Scope and result
+
+- Source dashboard: `site/index.html`, `hotels.html`, `restaurants.html`, `activities.html`, `analysis.html`, `flagged.html`, `assets/` and `verify.cjs`.
+- Published copy: `docs/session-d33551df/`, served by the existing `docs/` Pages artifact without changing the root landing page or another session path.
+- PR #11: https://github.com/kanlerxz87-cyber/Vegas2/pull/11 (branch `arena/d33551df-vegas2` → `main`). Initial merge attempt found conflicts because `main` advanced; the branch now merges `origin/main`, preserves its existing Pages workflow, and publishes this work only under `docs/session-d33551df/`. The PR is open; hosted deployment is pending.
+- User-specified constraints retained: no unverified values inferred, no user input requested, official source links on every findings-table row, and unresolved items remain visible on Flagged for Review.
+
+### Research/source facts and irregularities
+
+- MICHELIN source: [Visit Las Vegas 2026 restaurant list](https://www.visitlasvegas.com/michelin-guide-restaurants/). 24 venues: one two-star, three one-star, three Bib Gourmand and 17 Recommended/Selected. Distinctions are separate in the new table.
+- Hotel room sources are linked per row in `site/assets/data.js`: official pages for Caesars Palace, MGM Grand, Cosmopolitan, Venetian and Wynn. Each selected room page confirms a king and private bath. Caesars room-size sources conflict (350 vs. 360+ sq. ft.); size is left blank.
+- Caesars exact-date room list (Feb 15–22, 2027, two adults) had rate volatility/irregularity: earlier capture $226/night including resort fee, tax excluded; later recheck displayed Julius Deluxe King $201/night ($146 room rate + $55 daily resort fee, tax excluded) and room assigned on arrival $196/night, while also showing a technical-difficulties notice. Flexible calendar sum was $1,580. Simple products ($1,582 at $226; $1,407 at $201) are arithmetic, not confirmed totals. Seven-night total remains blank and flagged.
+- Preferred Feb 15–18 is three nights, conflicting with the 1–2-week request. Feb 15–22 is explicitly only a seven-night comparison scenario.
+- Official meal-price anchors: China Poblano $60/person; Anima by EDO $85/person; Partage $130/$160/$210 per guest for 5/7/Signature menus. Michael Mina lists $295++ per person but was shown temporarily closed on Nov 26, 2026. Guy Savoy weekly hours/full meal total, Yen Viet hours (conflicting snippets), and Kame Omakase hours/full meal total remain blank and flagged.
+- Official RTC sources: [Trip Planner](https://www.rtcsnv.com/tripplanner/), [How to Ride](https://www.rtcsnv.com/ways-to-travel/how-to-ride/), [Maps & Guides](https://www.rtcsnv.com/ways-to-travel/schedules-maps/maps-guides/) and [Fares](https://www.rtcsnv.com/ways-to-travel/fares-passes/). No consistent 5 × 24 hotel-to-restaurant journey matrix was recorded. Transit counts stay blank (unmeasured, not zero), with no fabricated ranking.
+- Attraction source links, current hours/prices and exceptions are in the activity table. Bellagio’s Lunar New Year display is listed Jan 9–Mar 6, 2027; Bellagio Gallery and Michael Mina are currently flagged temporarily closed.
+
+### Verification
+
+- After integrating `origin/main` additively, `python3 site/publish-supplement.py`, separate `node --check` invocations for `site/assets/app.js`, `site/assets/data.js` and `site/verify.cjs`, and `node site/verify.cjs` passed. The verifier checked 5 hotel candidates, 24 restaurants (4 starred / 3 Bib / 17 Selected), 8 activity/transit rows, 13 review flags, and source/local links.
+- `python3 scripts/build_site.py` and `python3 scripts/check_site.py` passed for the existing root dashboard (154 internal links, 11 pages). The build preserves nested Pages subdirectories.
+- `git diff --check` passed. Local HTTP smoke checks of all six published sub-pages and CSS/JS assets under `/session-d33551df/` returned 200.
+- GitHub Pages hosting of `/session-d33551df/` remains to be confirmed after this PR is merged.

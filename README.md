@@ -41,6 +41,7 @@ Live site (GitHub Pages, served from `docs/`): **https://kanlerxz87-cyber.github
 | `/` (`docs/index.html`) | **Verified landing page** and dashboard: executive summary, hotels, Michelin, activities, booking, questions, suggestions, Flagged for Review, repo review, sources | `scripts/build_site.py` |
 | `/session-36cc5108/` | Parallel site from PR #6, unchanged (its own data in `data/*.json`) | `site/build.py` (output moved to this folder during integration) |
 | `/planner-v1/` | First single-page dashboard from PRs #2/#3, unchanged | copied static files |
+| `/session-d33551df/` | Supplemental source-first hotel, Michelin, activity and review dashboard | `site/publish-supplement.py` |
 
 ## Verified site (this session, a52047d7)
 
@@ -129,3 +130,9 @@ GitHub repository Settings → Pages → Deploy from a branch → `main` / `/ (r
 - `styles.css`: responsive styling.
 - `app.js`: interactive navigation and filtering.
 - `COORDINATION.md`: task board, sources, verification notes and flagged gaps.
+
+## Supplemental source-first dashboard (session `d33551df`)
+
+This session's separately labeled comparison dashboard is published at [`/session-d33551df/`](docs/session-d33551df/index.html) (and, after the Pages deployment completes, `https://kanlerxz87-cyber.github.io/Vegas2/session-d33551df/`). It preserves this repository's existing `docs/` landing page and other session sub-sites.
+
+Source files and the publication copy are `site/*.html`, `site/assets/`, and `docs/session-d33551df/`. Recreate only this supplemental subdirectory with `python3 site/publish-supplement.py`; it does not overwrite `docs/index.html` or other session paths. Validate with `node site/verify.cjs`.
