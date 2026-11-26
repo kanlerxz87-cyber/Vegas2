@@ -41,6 +41,7 @@ Live site (GitHub Pages, served from `docs/`): **https://kanlerxz87-cyber.github
 | `/` (`docs/index.html`) | **Verified landing page** and dashboard: executive summary, hotels, Michelin, activities, booking, questions, suggestions, Flagged for Review, repo review, sources | `scripts/build_site.py` |
 | `/session-36cc5108/` | Parallel site from PR #6, unchanged (its own data in `data/*.json`) | `site/build.py` (output moved to this folder during integration) |
 | `/planner-v1/` | First single-page dashboard from PRs #2/#3, unchanged | copied static files |
+| `/session-d33551df/` | Supplemental source-first hotel, Michelin, activity and review dashboard | `site/publish-supplement.py` |
 
 ## Verified site (this session, a52047d7)
 
@@ -130,20 +131,26 @@ GitHub repository Settings → Pages → Deploy from a branch → `main` / `/ (r
 - `app.js`: interactive navigation and filtering.
 - `COORDINATION.md`: task board, sources, verification notes and flagged gaps.
 
+## Supplemental source-first dashboard (session `d33551df`)
+
+This session's separately labeled comparison dashboard is published at [`/session-d33551df/`](docs/session-d33551df/index.html) (and, after the Pages deployment completes, `https://kanlerxz87-cyber.github.io/Vegas2/session-d33551df/`). It preserves this repository's existing `docs/` landing page and other session sub-sites.
+
+Source files and the publication copy are `site/*.html`, `site/assets/`, and `docs/session-d33551df/`. Recreate only this supplemental subdirectory with `python3 site/publish-supplement.py`; it does not overwrite `docs/index.html` or other session paths. Validate with `node site/verify.cjs`.
+
 ---
 
-## Session b29fc34e — Vegas Field Guide (current branch)
+## Session b29fc34e — Vegas Field Guide
 
-This session's mobile-first guide is published alongside the other planners at **[`/session-b29fc34e/`](https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/)**. The shared root landing page and other sessions' site/data files remain unchanged.
+This branch's source-linked guide is published alongside other planners at **[`/session-b29fc34e/`](https://kanlerxz87-cyber.github.io/Vegas2/session-b29fc34e/)**. It does not replace the shared root landing page or other session output.
 
 | Path | Purpose |
 |---|---|
-| `site/session-b29fc34e/` | Hand-authored HTML, CSS, JS and local SVG for overview, hotels, dining, experiences, transit and review flags. |
-| `docs/session-b29fc34e/` | Static GitHub Pages output generated from the source directory. |
-| `scripts/build_pages.py` | Copies the session source to `docs/session-b29fc34e/` without touching other pages. |
-| `scripts/check_session_b29fc34e.py` | Validates page landmarks, image alt attributes, local links, restaurant cards and source links. |
-| `scripts/test_filters.js` | Tests dining search and MICHELIN-status filters without extra dependencies. |
-| `.github/workflows/validate.yml` | Runs this session's static checks and confirms generated output is current. |
+| `site/session-b29fc34e/` | Hand-authored responsive HTML, CSS, JS and local SVG for overview, hotels, dining, experiences, transit and review flags. |
+| `docs/session-b29fc34e/` | Static Pages output generated from that source. |
+| `scripts/build_pages.py` | Builds only `docs/session-b29fc34e/`. |
+| `scripts/check_session_b29fc34e.py` | Checks page landmarks, images, internal links and sourced restaurant cards. |
+| `scripts/test_filters.js` | Tests dining search and MICHELIN-status filters. |
+| `.github/workflows/validate.yml` | Runs this session's checks and ensures the published subdirectory matches its source. |
 
 Rebuild and verify:
 
@@ -153,4 +160,4 @@ node scripts/test_filters.js
 python3 scripts/build_pages.py
 ```
 
-The South Point resort-fee difference, $1 rate-total mismatch, sparse comparative quotes, private-bathroom confirmation, and unverified 2027 dates remain flagged on the site's **Review Flags** page.
+The South Point resort-fee discrepancy, sparse rate comparisons, private-bathroom confirmation, and future schedules remain openly flagged in the published Review Flags page.

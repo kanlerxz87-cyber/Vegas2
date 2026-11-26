@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suggestions — Vegas2 Las Vegas Planner</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand"><span class="mark">&#x1F3DC;&#xFE0F;</span> Vegas2</a>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">&#x2261;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">Michelin Restaurants</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="activities.html">Activities</a>
+      <a href="suggestions.html" class="active">Suggestions</a>
+      <a href="questions.html">Questions &amp; Answers</a>
+      <a href="flagged-for-review.html">Flagged for Review</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h1 class="page-title">Suggestions &amp; Decision Paths</h1>
+  <p class="page-subtitle">Suggestions for improving the site and the decision-making process. Review each suggestion and choose the best path before implementing any changes. None of these are implemented yet.</p>
+
+  <div class="callout">
+    <p><strong>How to use this page.</strong> Each suggestion below lists the proposed change, why it helps, the effort level, and a recommended decision path. A reviewer should mark each as <em>approve / revise / defer / reject</em> before any work is scheduled.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Site-improvement suggestions</h2>
+
+    <div class="q-item">
+      <div class="q">S-1 &bull; Add a date picker &amp; live price checker for hotels</div>
+      <div class="a">Why: Hotel rates are dynamic; the verified prices here are snapshots (Feb 15–22, 2027) and will go stale. A date picker that calls each hotel&rsquo;s official booking endpoint would let users compare real-time 7-night totals for their exact dates.</div>
+      <div class="a" style="margin-top:6px;">Effort: High (requires integration with hotel booking APIs or official site scraping, respecting terms of service).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve only after confirming data sources &amp; legal review; otherwise defer to a manual “check official site” link per hotel.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-2 &bull; Verify &amp; complete missing hours, prices &amp; social links</div>
+      <div class="a">Why: Most restaurant and activity rows have blank hours/price/social fields flagged unverified. Completing them makes the tables decision-ready.</div>
+      <div class="a" style="margin-top:6px;">Effort: Medium (manual research of each official venue page).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve — prioritize starred restaurants (4) and the user’s preferred dates first; track progress on the Flagged for Review page.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-3 &bull; Add a Michelin proximity map</div>
+      <div class="a">Why: A map showing each hotel and the Michelin restaurants within one hour would make the “one-hour travel” rule visual and easier to compare than a table alone.</div>
+      <div class="a" style="margin-top:6px;">Effort: Medium (map library + geocoded restaurant/hotel coordinates).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve as a Phase-2 enhancement after table data is verified.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-4 &bull; Add restaurant cost-per-couple estimates</div>
+      <div class="a">Why: The user wants total price for a couple of 2 adults at Michelin restaurants. Current tables show per-person symbols ($$–$$$$) only. Add an estimated total range per restaurant (e.g., “$$$$ = ~$400–$700+/couple”) flagged as estimates, not verified quotes.</div>
+      <div class="a" style="margin-top:6px;">Effort: Low–Medium.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve for starred/Bib Gourmand restaurants where menu prices are published on official sites; mark clearly as estimate.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-5 &bull; Add filters &amp; sorting (star level, price, area, open-days)</div>
+      <div class="a">Why: Helps the couple narrow choices quickly on mobile.</div>
+      <div class="a" style="margin-top:6px;">Effort: Low (client-side JavaScript).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve — quick win, low risk.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-6 &bull; Add a printable trip itinerary export</div>
+      <div class="a">Why: Users may want a one-page summary (hotel + dinner reservations + activities) to print or save to phone.</div>
+      <div class="a" style="margin-top:6px;">Effort: Low–Medium (client-side PDF or .ics export).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve as Phase-2.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-7 &bull; Add accessibility &amp; i18n improvements</div>
+      <div class="a">Why: Mobile-friendly is required; also ensure WCAG contrast, keyboard navigation, and language options for international travelers.</div>
+      <div class="a" style="margin-top:6px;">Effort: Low–Medium.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve accessibility fixes (already in CSS); defer i18n.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-8 &bull; Add user notes / saved selections</div>
+      <div class="a">Why: Let the couple save a shortlist of hotels and restaurants and compare side by side.</div>
+      <div class="a" style="margin-top:6px;">Effort: Medium (localStorage or backend).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve localStorage version first; evaluate backend only if needed.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Reviewer decision log</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Suggestion</th>
+          <th>Recommended path</th>
+          <th>Decision (approve / revise / defer / reject)</th>
+          <th>Reviewer &amp; date</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>S-1 Live price checker</td><td>Defer pending data-source &amp; legal review</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>S-2 Verify missing fields</td><td>Approve — prioritize starred restaurants</td><td>—</td><td>—</td><td>Track on Flagged for Review page</td></tr>
+        <tr><td>S-3 Michelin proximity map</td><td>Approve — Phase 2</td><td>—</td><td>—</td><td>After table data verified</td></tr>
+        <tr><td>S-4 Cost-per-couple estimates</td><td>Approve — starred/Bib Gourmand first</td><td>—</td><td>—</td><td>Mark as estimate, not verified</td></tr>
+        <tr><td>S-5 Filters &amp; sorting</td><td>Approve</td><td>—</td><td>—</td><td>Low-risk client-side</td></tr>
+        <tr><td>S-6 Itinerary export</td><td>Approve — Phase 2</td><td>—</td><td>—</td><td>Client-side PDF/.ics</td></tr>
+        <tr><td>S-7 Accessibility / i18n</td><td>Approve accessibility; defer i18n</td><td>—</td><td>—</td><td>WCAG contrast + keyboard nav</td></tr>
+        <tr><td>S-8 Saved selections</td><td>Approve localStorage version</td><td>—</td><td>—</td><td>Evaluate backend only if needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="foot-title">Vegas2</div>
+      <div class="small">Suggestions for decision making.</div>
+    </div>
+    <div>
+      <div class="foot-title">Navigate</div>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="questions.html">Questions &amp; Answers</a></div>
+      <div><a href="flagged-for-review.html">Flagged for Review</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
