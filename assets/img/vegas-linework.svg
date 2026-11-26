@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated Las Vegas skyline at dusk</title>
+  <desc id="desc">A simple line drawing of desert mountains, hotel towers, and a radiant evening sun.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f2bc78" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#df6a55" stop-opacity=".6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#e9c28b" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#b85f53" stop-opacity=".18"/>
+    </linearGradient>
+  </defs>
+  <circle cx="520" cy="135" r="85" fill="url(#sky)" opacity=".72"/>
+  <path d="M0 280 90 230l58 28 75-75 74 73 73-96 81 69 62-34 75 55 66-18 66 40v148H0Z" fill="#eeb975" opacity=".13"/>
+  <path d="M0 298 85 256l72 30 71-41 56 42 65-48 54 33 70-51 67 51 74-21 75 33 31-9v125H0Z" fill="#091c28" opacity=".78"/>
+  <g fill="url(#glass)" stroke="#f5d29b" stroke-opacity=".63" stroke-width="2">
+    <path d="M153 175h62v155h-62z"/>
+    <path d="M163 143h42v32h-42z"/>
+    <path d="m163 143 21-25 21 25z"/>
+    <path d="M229 215h64v115h-64z"/>
+    <path d="M241 186h40v29h-40z"/>
+    <path d="M305 159h70v171h-70z"/>
+    <path d="M315 129h50v30h-50z"/>
+    <path d="m315 129 25-22 25 22z"/>
+    <path d="M386 205h54v125h-54z"/>
+    <path d="M445 182h67v148h-67z"/>
+    <path d="M456 151h44v31h-44z"/>
+    <path d="M521 221h60v109h-60z"/>
+  </g>
+  <g stroke="#f4d6a6" stroke-opacity=".34" stroke-width="2">
+    <path d="M165 194h38m-38 18h38m-38 18h38m-38 18h38m-38 18h38m-38 18h38"/>
+    <path d="M318 179h44m-44 20h44m-44 20h44m-44 20h44m-44 20h44m-44 20h44"/>
+    <path d="M458 202h40m-40 20h40m-40 20h40m-40 20h40m-40 20h40"/>
+  </g>
+  <path d="M0 331h720" stroke="#f3c98a" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M0 342h720" stroke="#f3c98a" stroke-opacity=".18" stroke-width="1"/>
+  <g fill="#f0c88e" opacity=".82">
+    <circle cx="93" cy="332" r="3"/><circle cx="114" cy="332" r="3"/><circle cx="608" cy="332" r="3"/><circle cx="628" cy="332" r="3"/>
+  </g>
+</svg>
