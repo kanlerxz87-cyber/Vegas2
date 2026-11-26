@@ -1,82 +1,177 @@
-# Coordination board — Vegas2 trip planner
+# COORDINATION.md — Shared task board (Vegas2)
 
-## Completed work by earlier sessions
+Branch in use: `arena/36cc5108-vegas2` (fixed for this session by Arena; the `session-<id>/<task>` naming in the brief cannot be used). All tasks are on this one branch. Scopes below are disjoint; no other session is active on this repo.
 
-| Task | Status | Owner | Files |
-|---|---|---|---|
-| Research-backed Vegas trip planner and GitHub Pages base implementation | Done | `arena/f0943026-vegas2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `data.js`, `.github/workflows/pages.yml` |
-| Expand source-first dashboard with initial shortlist, open questions, and flags | Done | `arena/e94404fc-vegas2` | `index.html`, `styles.css`, `app.js`, `README.md`, `.nojekyll`, `COORDINATION.md` |
-
-## Current session claim
-
-**Session:** `fd2715d0`  
-**Current Arena branch:** `arena/fd2715d0-vegas2` (fixed; no branch switch)  
-**Repo:** `kanlerxz87-cyber/Vegas2`  
-**Base originally seen:** `c97c82a`; upstream `main` advanced during this work to include PRs #1–#3.  
-**Scope claimed:** audit and correct/add mobile-first category pages and structured verified data; add standalone Questions, Suggestions, and Flagged for Review pages; integrate with the existing site; validate; open and merge PR; confirm Pages deployment.  
-**Files:** `COORDINATION.md`, `README.md`, `index.html`, `styles.css` only if requested through integration, `data.js` only if necessary to integrate, `data/*.json`, `assets/*`, `hotels.html`, `restaurants.html`, `activities.html`, `dates.html`, `questions.html`, `suggestions.html`, `flagged.html`.
-
-> This session started from a stale local checkout. The main branch already contained the prior sessions' merged dashboard and verification log; those files and claims are being preserved and extended, not removed. The claim commit is being rebased onto the latest `main`. No other active claim has been observed on the current branch after fetching upstream.
+Legend: `unclaimed` · `in progress` · `done` · `needs review` (published on Flagged for Review; does not block anything)
 
 ## Task board
 
+| ID | Task | Status | Owner | Claimed (UTC) | File scope |
+|----|------|--------|-------|---------------|------------|
+| T0 | Repo review + irregularity flags | done | 36cc5108 | 2026-11-26 | `data/repo_review.json`, `data/flags.json` (repo flags F25–F27) |
+| T1 | Hotels: shortlist, in-resort Michelin ranking, official resort fee, trip-date options | done (prices and room specs flagged as unverified) | 36cc5108 | 2026-11-26 | `data/hotels.json` |
+| T2 | Michelin restaurants (official 2026 Southwest list, Las Vegas, 24 rows) | done (hours partly unverified; see F17–F19) | 36cc5108 | 2026-11-26 | `data/restaurants.json` |
+| T3 | Activities within transit/drive limits, official pages | done (Hoover Dam hours unverified; see F09) | 36cc5108 | 2026-11-26 | `data/activities.json` |
+| T4 | Questions, suggestions (for approval only), sources | done | 36cc5108 | 2026-11-26 | `data/questions.json`, `data/suggestions.json`, `data/sources.json` |
+| T5 | Static site (landing, category pages, Flagged for Review) | done (builds with 0 errors) | 36cc5108 | 2026-11-26 | `site/build.py`, `docs/**`, `README.md` |
+| T6 | Integration: combined re-check, build, link check, PR to `main`, merge, Pages | in progress | 36cc5108 | 2026-11-26 | all |
+
+## Source and verification record (per task)
+
+**T0 Repo review.** Sources: `api.github.com/repos/kanlerxz87-cyber/Vegas2` (S31), `api.github.com/.../pages` (S28), local git (`c97c82a`, `2cf5776`). Verified: visibility public, default branch main, Pages legacy build from main `/`. Irregular: repo holds only a 8-byte README and no LICENSE or .gitignore (F26); branch naming differs from brief (F25); Pages will move to `/docs` (F27).
+
+**T1 Hotels.** Sources: Michelin release (S01, S02) for every hotel-to-restaurant address match; Caesars booking page (S08) for the only verified resort fee ($62.30/night incl. tax); Caesars home page (S09) and Cosmopolitan home page (S20) for booking-offer types. Not verified (left blank, flagged): 7-night totals (F06), queen-or-larger bed and private bathroom (F05), resort fees other than Caesars (F08), best time to book (F04). Third-party resort-fee reports (S22) were not used as values.
+
+**T2 Michelin restaurants.** Sources: Michelin press release (S01) and WebWire copy (S02) for all 24 distinctions and addresses; LVCVA page (S03) for area, cuisine and official site links. Hours verified from official pages: Joël Robuchon (S04), L'Atelier (S05), é (S06); Guy Savoy (S07) phone, dress and price symbol only. Kabuto (S16) hours are partial (official captions). Not verified: hours for 20 rows (F17), price for 2 for all rows (F18), social accounts for all restaurants (F19). Conflicts flagged: F10, F11, F12, F14.
+
+**T3 Activities.** Sources: BLM Red Rock (S13), NV State Parks Valley of Fire (S14), Las Vegas Monorail (S12), Neon Museum (S15); Hoover Dam official site could not be retrieved (S21 archive from 2010 and S27 third-party conflict) so its hours are blank (F09).
+
+**T4 Questions, suggestions, sources.** Sources: OPM 2027 federal holidays (S10) for Feb 15, 2027. Suggestions S-01 to S-14 are proposals only and are awaiting approval.
+
+**T5 Site.** Built by `site/build.py` (standard library). Last build: 10 pages, 0 errors (strict source checks; internal links and anchors resolved).
+
+## Irregularities for review (summary; full text on Flagged for Review)
+
+- Brief says "subway or bus"; official sources show RTC bus and the Strip monorail, no subway (F01).
+- Red Rock Canyon has no public transit (BLM, S13); it cannot meet the bus-only one-hour test (F02).
+- Trip length conflict: 3-night preferred vs 7-night cost basis vs 1–2 weeks (F03).
+- Feb 15, 2027 is Washington's Birthday, a federal holiday (OPM, S10) (F13).
+- Yen Viet Kitchen: Bib Gourmand confirmed by the official release (S01, S02) and Time Out (S26); no conflict (F14, resolved).
+- Guy Savoy hours: official page shows none; three listings conflict (F10).
+- Hoover Dam hours: current official page not retrievable; sources conflict (F09).
+
+## Session log
+
+- 2026-11-26 · 36cc5108 · Claimed T0–T6. Repo held only `README.md`; created this file. Pages was enabled on `main` (legacy, `/`), so the site will be served from `/docs` after merge.
+- 2026-11-26 · 36cc5108 · Completed research and data for T0–T4 against official sources (retrieved this session). Built the site (T5) with 0 errors.
+- 2026-11-26 · 36cc5108 · T6 integration check: re-counted Michelin listings (4 starred, 3 Bib, 17 Recommended = 24) against the release; fixed one official name ("Stubborn Seed Las Vegas"); verified every source and flag ID is defined and referenced; verified trip weekdays (Feb 15 Mon, Feb 18 Thu). Next: PR, merge, Pages source to `/docs`, deploy check.
+
+---
+
+## Entries from other sessions on `main` (preserved verbatim)
+
+These entries were written by other sessions and are kept unchanged. They are not edited by session 36cc5108.
+
+### Coordination board (verbatim from main)
+
 | Task | Status | Owner | Files |
 |---|---|---|---|
-| Preserve prior site and audit current implementation | Done | `fd2715d0` | existing root files, `COORDINATION.md` |
-| Michelin list, award status, official profile links | Done; unverified hours/totals remain flagged | `fd2715d0` | `data/restaurants.json`, `restaurants.html` |
-| Hotel candidates, room evidence and Michelin cluster methodology | Done; live rates and selected-room inventory remain blank | `fd2715d0` | `data/hotels.json`, `hotels.html` |
-| Activities, hours, exceptions and social links | Done; future schedules and routes remain flagged | `fd2715d0` | `data/activities.json`, `activities.html` |
-| Date-window and booking analysis | Done; no live quote or cheapest-date claim | `fd2715d0` | `data/dates.json`, `dates.html` |
-| Mobile dashboard and navigation integration | Done | `fd2715d0` | `index.html`, `styles.css`, `assets/app.js` |
-| Standalone Questions, Suggestions, Flagged for Review pages | Done | `fd2715d0` | `questions.html`, `suggestions.html`, `flagged.html` |
-| Static validation and local HTTP smoke checks | Done | `fd2715d0` | all site and data files |
-| PR, merge, live deploy verification | Pending | `fd2715d0` | current branch, GitHub PR, Pages workflow |
+| Research-backed Vegas trip planner and GitHub Pages site (initial base implementation) | done | arena/f0943026-vegas2 | COORDINATION.md, README.md, index.html, styles.css, data.js, .github/workflows/pages.yml |
+| Expand planner with mobile-first summaries, hotel shortlist, dining and activity tables, open questions and review flags | done | arena/e94404fc-vegas2 | index.html, styles.css, app.js, README.md, .nojekyll, COORDINATION.md |
 
 ## Verification log
-
-### Prior sessions — retained as historical records
-
-- Session `f0943026`: Michelin entry/status checks and static-page checks are described in the prior log and source links. No 2027 hotel quote was claimed.
-- Session `e94404fc`: official MGM Grand, Venetian, Caesars Palace, Wynn and MICHELIN pages were checked; local anchors/files and Pages deployment were checked. The earlier dashboard explicitly left rates, travel times, social links and future schedules unverified. PR #2 is recorded below.
-
-### Current session — direct official-source checks
-
-- Official MICHELIN Guide Las Vegas index: https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurants — official listing page reports 1–24 of 24. The official 2026 Southwest release gives the starred list, addresses and Recommended list: https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s.
-- Official MICHELIN profile checks returned by web search for individual entries include: Restaurant de Joël Robuchon (Two Stars), https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/restaurant-de-joel-robuchon; L'Atelier, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/l-atelier-de-joel-robuchon-las-vegas; é by José Andrés, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/e-by-jose-andres; Guy Savoy, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/guy-savoy-las-vegas; China Poblano, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/china-poblano; Esther's Kitchen, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/esther-s-kitchen; YEN Viet Kitchen, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/yen-viet-kitchen; Anima by Edo, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/anima-by-edo; Bouchon, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/bouchon-1250929; COTE Las Vegas, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/cote-las-vegas; Estiatorio Milos, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/estiatorio-milos-1250934; Gymkhana Las Vegas, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/gymkhana-las-vegas; Kabuto, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/kabuto; Kame Omakase, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/kame-omakase; Lamaii, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/lamaii; Partage, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/partage-1201408; Pho Ga Bac Bac, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/pho-ga-bac-bac; Ping Pang Pong, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/ping-pang-pong; SoulBelly BBQ, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/soulbelly-bbq; Mott 32, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/mott-32-1250930; Wing Lei, https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/wing-lei-1250924.
-- Search-result snippets for individual MICHELIN profiles exposed some partial or inconsistent schedules. To avoid treating snippets as complete hours, the dataset keeps only Restaurant de Joël Robuchon’s full weekly schedule, checked on its official profile on 2026-11-26; all other restaurant hours remain blank pending direct confirmation. Even the retained schedule is not a guarantee for Feb–Mar 2027.
-- Official NFL 2026–27 dates confirm Super Bowl LXI on Feb 14, 2027 at SoFi Stadium, Inglewood: https://www.nfl.com/news/2026-27-national-football-league-important-dates.
-- U.S. OPM official federal-holidays page confirms Washington's Birthday on Mon Feb 15, 2027: https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/.
-- Official room-category pages were checked for each hotel candidate and linked in `data/hotels.json`: The Venetian, MGM Grand, Caesars Palace, The Cosmopolitan, Bellagio, ARIA, Wynn and Resorts World. These pages establish example queen-or-larger bed and bathroom options; they do not establish the selected room’s exact private/ensuite configuration or date-specific inventory.
-- Official Bellagio Conservatory page (https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html) lists Lunar New Year Jan 9–Mar 6, 2027, Spring Mar 13–May 15, and a Mar 7–12 transition/dark period. Daily access hours and entry price were not captured.
-- Official Neon Museum 2027 admission page (https://neonmuseum.org/whats-on/all-day-admission/) lists daily 3–11 PM admission, last entry 10 PM, adult tickets from $21 plus a processing fee, and links official Instagram/TikTok accounts.
-- Official Sphere show page (https://www.thesphere.com/shows/wizard-of-oz-experience) identifies The Wizard of Oz experience, approximately 75-minute runtime, doors 45 minutes before ticket time, no late seating, and date/time/price availability caveats. No February–March 2027 ticket dates or total for two were captured.
-- Official RTC fares (https://www.rtcsnv.com/ways-to-travel/fares-passes/) list the Strip/All Access 24-hour pass at $8 and 3-day pass at $20; the Monorail publishes its current station hours and 7-day fares. These are current transit products, not route durations or a total for the requested stay.
-- Official High Roller page (https://www.caesars.com/linq/things-to-do/attractions/high-roller) lists current adult ticket prices, the daily ticket windows and current closing time; prices are before taxes/fees and are not a 2027 quote. Official Fremont Street Experience page describes free nightly concerts and canopy entertainment, but no exact future event times were captured.
-- Exact-date hotel rates, cancellation terms, selected-room private-bath/bed configuration, 2027 transit itineraries, future venue schedules and venue-specific social/video URLs remain blank unless a direct official page verifies them. Only verified official social links are shown.
-
-### Current session — implementation and validation
-
-- Added integrated page navigation, searchable/filterable tables, date-window views, standalone Questions, Suggestions and Flagged pages, source links and responsive styling; preserved the repository’s existing Pages workflow and historical coordination record.
-- Dataset counts validate as 8 hotels, 24 restaurants (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected), 11 activity/transit entries and 30 seven-night windows.
-- `python -m json.tool` passed for every dataset; `node --check` passed for both JS files; HTML local-file targets and document titles validated; `git diff --check` passed; local HTTP smoke checks returned HTTP 200 for all eight pages, the script and four JSON datasets.
-- No hotel totals, exact cheapest date, booking lead time or unverified route times were supplied. Restaurant meal-for-two prices remain blank; all date-window quote fields remain blank.
+- Initial implementation: Michelin entries and star statuses checked against official MICHELIN Guide pages linked in `data.js` (2026 selection). Future hours, transit times, prices and inventory are not asserted without confirmation. `node --check data.js` passed; HTML anchors/local references checked. No build dependencies required.
+- 2026-11-26 expansion: official MGM Grand page (https://mgmgrand.mgmresorts.com/en.html) confirms room options including MGM Two Queen; official transportation page (https://mgmgrand.mgmresorts.com/en/amenities/transportation.html) lists Monorail rates, station-to-station times, and operating hours (not guaranteed for 2027). Venetian homepage and map/parking page checked (https://www.venetianlasvegas.com/ and https://www.venetianlasvegas.com/resort/maps-and-parking.html). Caesars Palace and Wynn official property pages checked (https://www.caesars.com/caesars-palace and https://www.wynnlasvegas.com/).
+- MICHELIN official Guide result pages show 2026 award/listing statuses: Restaurant de Joël Robuchon, Two Stars (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/restaurant-de-joel-robuchon); L’Atelier de Joël Robuchon, One Star (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/l-atelier-de-joel-robuchon-las-vegas); Restaurant Guy Savoy, One Star (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/guy-savoy-las-vegas); Bouchon and Stubborn Seed have Guide listings but no star badge in search-result markup (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/bouchon-1250929 and https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/stubborn-seed-las-vegas). Direct fetch of individual Michelin pages failed; recheck linked current pages before booking.
+- Local verification of expanded page: all internal anchors have targets, local stylesheet/script/log exist, and `git diff --check` passes. Static site uses no dependencies; Pages workflow is configured to deploy root on `main` or manual dispatch. No live 2027 price lookup or authenticated booking was performed.
 
 ## Irregularities / flagged for review
+- Hotel date-specific total quotes (room, tax, resort fee, cancellation rules) and historical data needed to determine cheapest booking time are unavailable; price cells are blank.
+- Selected-room bathroom/bed details need confirmation (MGM's Two Queen bed size is shown by its official property page); remaining hotel room details need room-level checking.
+- Door-to-door transit times and 2027 schedules, restaurant totals/current menus and 2027 operating hours, plus official restaurant/activity social or video URLs remain unverified. These are blank and marked in the site's Flagged for Review section.
+- Preferred Feb 15–18, 2027 dates are three nights, incompatible with the 7–14-night duration. The displayed seven-night example is Feb 15–22, 2027 and is labeled as such.
+- MICHELIN awards are from the 2026 selection, not a guarantee of 2027 status, opening, or availability.
 
-- Preferred Feb 15–18, 2027 window is three nights, while the request also says one to two weeks and asks for a seven-night hotel total. No single duration or nights interpretation is silently selected.
-- Feb 15 is the observed federal Washington's Birthday. Super Bowl LXI is Feb 14 in Inglewood, not Las Vegas. These are verified dates; no hotel-price impact is inferred.
-- Live exact-date hotel prices and the cheapest 7-night stay/booking date cannot be determined without identical-date, identical-room official booking quotes. Any earlier draft price/demand claims are to be removed unless official evidence is added.
-- Las Vegas has bus and monorail service; a transit-only, door-to-door ≤1-hour hotel-to-restaurant matrix requires route-by-route official timetable checks. No unsupported travel counts or rankings should be shown as verified.
-- Social search-result URLs are not verified venue accounts. Omit social handles/URLs unless linked from a venue's official site; otherwise show blank and flag.
-- Current MICHELIN selection is 2026, not a guarantee of a 2027 award, service schedule or opening.
-
-## Coordination / conflict log
-
-- During the initial work, local `origin/main` was stale at `c97c82a`. Fetch showed merged PRs #1–#3. The rebase stopped on an add/add conflict in `COORDINATION.md`; this resolution preserves the full upstream board and verification/deployment record, then appends this session's claim. No upstream work is intentionally discarded.
-- User requested branches named `session-<id>/<task>`, but Arena fixes this session to `arena/fd2715d0-vegas2`; work remains on that branch as required by the environment.
+## Coordination note
+The original checkout initially exposed only README.md and no coordination file. A concurrent PR had landed on `main` by the time the feature branch was rebased. Its files and data were preserved; this branch expands that implementation rather than replacing the existing data. Arena requires work on its assigned fixed branch, so the user-requested per-session branch naming is not applicable here.
 
 ## PR and deployment result
+- PR #2 (https://github.com/kanlerxz87-cyber/Vegas2/pull/2) merged to `main` at `58dd7c3d9668c982b52fa83a5afe07a0a7447f0e` on 2026-11-26.
+- GitHub Pages deployment run 45901451051 succeeded. Published dashboard: https://kanlerxz87-cyber.github.io/Vegas2/. The Pages API reported `building` briefly; fetching the public URL then returned the deployed page.
+- Actions emitted a Node.js 20 deprecation advisory for upstream Actions versions; deployment succeeded.
 
-- Prior PR #2 (https://github.com/kanlerxz87-cyber/Vegas2/pull/2) merged to `main` at `58dd7c3d9668c982b52fa83a5afe07a0a7447f0e` on 2026-11-26.
-- Prior successful Pages deployment run: https://github.com/kanlerxz87-cyber/Vegas2/actions/runs/45901451051. Existing published site: https://kanlerxz87-cyber.github.io/Vegas2/.
-- Current session PR / merge / deploy: pending.
+
+## Integration record (session 36cc5108, T6)
+
+- **PR #6** (https://github.com/kanlerxz87-cyber/Vegas2/pull/6): `arena/36cc5108-vegas2` → `main`. Conflict with `main` at `dce4548` (another session's root dashboard). Both sides kept; no file deleted. Merged with `gh pr merge 6 --merge` after the build passed (0 errors, 672 local links OK). Merge result: merged.
+- **Pages source**: the API call to set source `main` `/docs` returned **403 (Resource not accessible by integration)**. The source is still `main` `/` and must be set in Settings → Pages by the repository owner if the `/docs` source is wanted (F27). The site works either way (see next item).
+- **Root redirect**: because the root build was still serving the earlier dashboard, `index.html` at the repository root now redirects to `docs/index.html`. The earlier dashboard moved to `legacy-dashboard/` with `git mv` (nothing deleted; its COORDINATION link now points to GitHub).
+- **Pages workflow**: `.github/workflows/pages.yml` now uploads `docs/` (was `.`).
+- **Corrections in this integration**: removed an unsupported Caesars tax split; OPM holiday wording; Yen Viet Kitchen Time Out check resolved (no conflict, F14); other dashboard's starred-count error flagged (F29).
+- **PR #7**: this change (root redirect, legacy move, record update). Its merge result is recorded in the PR and in the next COORDINATION update.
+
+
+---
+
+# Session a52047d7 — this branch (`arena/a52047d7-vegas2`)
+
+Base: `c97c82a`. The session rules fix the branch name, so the brief's `session-<id>/<task>` form is not used (decision recorded in F14). Statuses use the same legend as above.
+
+## Task board (session a52047d7)
+
+| # | Task | Status | Files | Notes |
+|---|------|--------|-------|-------|
+| T1 | Repo review, line by line | done | `data/verified/repo_review.json`, `docs/repo-review.html` | Log 2026-11-26-A. Items verified on GitHub API |
+| T2 | Hotels (8 Strip hotels): rooms, private bath, Michelin on campus | done (partial) | `data/verified/hotels.json` | Verified: Conrad, Bellagio, ARIA suite, Cosmopolitan (listing). Wynn two-queen claim withdrawn (F17). Prices and transit unverified |
+| T3 | Michelin 2026 Las Vegas (24 rows) | done | `data/verified/michelin.json` | Status from official release. Hours and prices unverified |
+| T4 | Activities (4) | done (partial) | `data/verified/activities.json` | Verified: Hoover fees and hours, Valley of Fire fee and closure, Neon 2027 admission and official social links. Hoover YouTube/Instagram, Red Rock social are agency-level (Partial) |
+| T5 | Booking, price and timing | done (no verified 2027 rates) | `data/verified/booking.json` | Wynn rate page shows only Nov 26–27 2026. No 2027 total verified |
+| T6 | Questions and information gaps | done | `data/verified/questions.json` | |
+| T7 | Suggestions (review only, not implemented) | done | `data/verified/suggestions.json` | Waiting for user choice |
+| T8 | Flagged for Review (F1–F18) | needs review | `data/verified/flagged.json` | Published. Does not block merge |
+| T9 | Site build: landing, subpages, CSS, build and check scripts | done | `scripts/build_site.py`, `scripts/check_site.py`, `assets/style.css`, `docs/*.html`, `docs/planner-v1/` | `scripts/check_site.py` passes: 154 links, 11 pages, all rows sourced |
+| T10 | Integration: merge with `main`, publish, PR, merge, Pages check | in progress | `COORDINATION.md`, `README.md`, `docs/`, `site/build.py` (one output path) | See log 2026-11-26-E |
+
+## Merge conflicts and integration decisions (logged)
+
+- **2026-11-26-D — conflict with PRs #2 and #3** (`arena/f0943026-vegas2`, `arena/e94404fc-vegas2`). Conflicts in `COORDINATION.md` (add/add), `README.md` and `index.html` (add/add). Resolution: both sides kept. The v1 dashboard is preserved as `planner-v1/` (copy of `main`'s root files).
+- **2026-11-26-F — second conflict, PR #7** (`arena/36cc5108-vegas2`, merged as `d27f1f2`). That PR made the root `index.html` a redirect to `docs/index.html` and moved the v1 dashboard to `legacy-dashboard/`. Resolution: the redirect is kept. The Pages artifact is `docs/`, so `docs/index.html` (this session's verified landing) is the live home page. `docs/planner-v1/` keeps the v1 dashboard live inside the artifact, because `legacy-dashboard/` is outside it. `docs/session-36cc5108/` is unchanged.
+- **2026-11-26-E — conflict with PR #6** (`arena/36cc5108-vegas2`, merged to `main` as `ff8a411`). PR #6 added `docs/`, `site/build.py` and `data/*.json` with the same names as this branch. Its Pages workflow now deploys `docs/`, so this branch's root-level site would not be published. Resolution:
+  - Their `data/*.json` files are kept as they are. My data moved to `data/verified/`.
+  - Their `docs/` is moved to `docs/session-36cc5108/`. One output path in `site/build.py` was changed (`OUT = ROOT/"docs"/"session-36cc5108"`) so their build cannot delete the root site. Their rebuild produces identical output with 0 errors.
+  - My verified site is the published landing page at `docs/`.
+  - `.github/workflows/pages.yml` (deploys `docs/`) is unchanged.
+- **Board note.** The board above (session 36cc5108) says "no other session is active." That was true when written. This session also merged into `main` in parallel. Both sites are published and each is labelled.
+
+## Verification corrections in this session
+
+- **Wynn "Panoramic View Two Queens, 640 sq ft" withdrawn** (F17). It was marked verified in an earlier draft. Five chunks of the official booking page list King and Encore King rooms only.
+- **Wynn resort-fee wording conflicts** on the same page (F18).
+- **v1 star count is wrong:** says 3 starred, the official release lists 4 (é by José Andrés omitted) (F16).
+- **ARIA, Conrad, Bellagio, Neon Museum, Hoover Dam, Valley of Fire** claims re-fetched from official pages and corrected (see log 2026-11-26-D).
+
+## Session log (a52047d7)
+
+- **2026-11-26-A — claim.** Claimed T1–T10. Baseline: `README.md` only, no LICENSE, no `.gitignore`, Pages enabled (legacy, `main` `/`, public).
+- **2026-11-26-B — research.** Official sources: Michelin 2026 Southwest release and PDF; OPM federal holidays (Feb 15 2027 = Washington's Birthday); USBR Hoover Dam; BLM Red Rock; Recreation.gov timed entry; Nevada State Parks Valley of Fire; Neon Museum; hotel room pages (Cosmopolitan, Bellagio, Caesars, ARIA, Wynn booking engine, Resorts World Conrad); Caesars and é restaurant pages.
+- **2026-11-26-C — build and gate.** Build reproducible. `check_site.py` passed (130 links, 10 pages) before the integration.
+- **2026-11-26-D — conflict with PRs #2 and #3, and re-verification** (see above).
+- **2026-11-26-E — conflict with PR #6, integration** (see above). PR #5 (`arena/a52047d7-vegas2` → `main`) is the integration PR.
+
+## Still unverified (blank and flagged)
+
+- Hotel rates for Feb 15–22 2027 (7 nights) and Feb 15–18 2027 (3 nights). No official 2027 rate retrieved.
+- Transit times for the 1-hour rule, the restaurant hours for most of the 24 Michelin entries, restaurant costs for 2 adults, and most social links.
+- Caesars, MGM Grand, and Venetian room pages (fetch errors).
+
+## PR and merge record
+
+- PR #5: https://github.com/kanlerxz87-cyber/Vegas2/pull/5 (`arena/a52047d7-vegas2` → `main`).
+- Merge result and Pages check: see the entry appended after the merge below.
+
+---
+
+# Session fd2715d0 — supplemental source-first category audit
+
+**Current branch:** `arena/fd2715d0-vegas2` (fixed by Arena).
+**Integration base:** the feature started from `dce4548`; `main` later advanced to `eaf87bb` with PRs #5–#7, which moved the published site to `docs/` and made the root `index.html` a redirect. This session preserves that redirect, the primary docs site/build, the legacy dashboard, the parallel `session-36cc5108` site, and all shared verified data.
+
+## Scope and task board
+
+| Task | Status | Location |
+|---|---|---|
+| Source-first mobile category site (Hotels, MICHELIN, Activities, Dates) | Done | `docs/session-fd2715d0/` |
+| Questions, Suggestions, Flagged for Review pages | Done | `docs/session-fd2715d0/` |
+| Isolate this session’s datasets and renderer from shared root data | Done | `docs/session-fd2715d0/{data,assets}/` |
+| Expose the supplemental site from the primary dashboard and footer | Done | `scripts/build_site.py`, generated `docs/*.html` |
+| Preserve and validate all existing Pages builds | Done locally | `docs/`, `docs/session-36cc5108/`, `docs/planner-v1/` |
+| PR #9, merge, Pages deployment confirmation | Pending | `arena/fd2715d0-vegas2` |
+
+## Verification and limitations
+
+- The supplemental site has 8 hotels, 24 MICHELIN listings (1 two-star, 3 one-star, 3 Bib Gourmand, 17 Selected), 11 activities/transit references and 30 possible seven-night date windows. Its official-source links and unknowns are stored beside the data.
+- Official room-category pages were checked for all eight candidates; the data distinguishes a listed room type from live availability and explicit private/ensuite confirmation. No 2027 room quote, lowest-price stay date, or advance booking lead time is claimed.
+- Only Restaurant de Joël Robuchon’s complete weekly profile schedule is retained; other current hours, restaurant totals for two, future event schedules, unverified social accounts and hotel-origin public-transit journey times stay blank/flagged.
+- Date conflict remains unresolved: Feb 15–18 is three nights, while the user’s duration is one to two weeks and a seven-night hotel comparison is also requested. No stay length is selected.
+- After integrating the newer `origin/main` layout locally, `python3 scripts/build_site.py` and `python3 scripts/check_site.py` passed (306 internal links across 19 pages, 0 warnings); `python3 site/build.py` rebuilt the session-36cc5108 site with 0 errors. The supplemental site’s HTML/data/JS/search/filter checks also passed. Re-run the HTTP smoke checks before merge; Pages deployment remains pending.
+- PR #9: https://github.com/kanlerxz87-cyber/Vegas2/pull/9 (`arena/fd2715d0-vegas2` → `main`). It remains open. Its conflict with the newer `docs/` layout was resolved by retaining the root redirect and all prior builds, publishing this audit under `docs/session-fd2715d0/`, and adding a primary-homepage link. PR merge and Pages deployment verification remain pending.

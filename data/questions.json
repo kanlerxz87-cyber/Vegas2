@@ -1,0 +1,196 @@
+{
+  "as_of": "2026-11-26",
+  "note": "Questions that must be answered before a decision can be made. 'Known' lists what is verified (with source IDs). 'Missing' lists what is not. 'How to find it' lists the discovery step; each step is listed in Suggestions so it can be approved first.",
+  "questions": [
+    {
+      "id": "Q-01",
+      "priority": "High",
+      "question": "How long should the trip be: the 3-night window (Feb 15–18) or a 7-night stay?",
+      "known": "Preferred window is Mon Feb 15 to Thu Feb 18, 2027 (3 nights). Brief asks for 7-night totals and 1–2 weeks. Feb 15, 2027 is a federal holiday (S10).",
+      "missing": "The owner's choice of length.",
+      "how_to_find": "Owner decision. Once chosen, all price cells are re-pulled for that length.",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S10"
+      ]
+    },
+    {
+      "id": "Q-02",
+      "priority": "High",
+      "question": "Which check-in and check-out dates should be priced (Feb 15 – Mar 23, 2027 range)?",
+      "known": "Window is Feb 15 – Mar 23, 2027 (brief). Example 7-night window: Feb 15–22 (used for lookups only).",
+      "missing": "Final dates.",
+      "how_to_find": "Owner decision. Some official booking engines show rates only inside a booking window, so exact dates are needed to check.",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S08"
+      ]
+    },
+    {
+      "id": "Q-03",
+      "priority": "High",
+      "question": "What is the verified total price for a 7-night stay at each shortlisted hotel?",
+      "known": "Caesars resort fee is $62.30/night incl. tax (S08). The official booking page did not return Feb 2027 room rates (S08).",
+      "missing": "All room rates for Feb 2027; all other resort fees; taxes for every hotel.",
+      "how_to_find": "Run official booking-engine searches for the chosen dates on each hotel's official site, record the date/time of the search, and copy the total (rate + resort fee + tax). See Suggestion S-01.",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S08"
+      ]
+    },
+    {
+      "id": "Q-04",
+      "priority": "High",
+      "question": "What is the cheapest time to book, and when should we book?",
+      "known": "Caesars offers 'Advanced Purchase Savings' up to 30% off for stays 30+ days ahead, terms apply (S09). Cosmopolitan offers an 'Advance Purchase Non-Refundable' rate type (S20). Caesars advertises '48-hour cancellation' with asterisked terms (S09).",
+      "missing": "Any official price history or trend for Feb 2027 stays. The current sources cannot answer 'cheapest time'.",
+      "how_to_find": "Track official rates for the chosen dates on a schedule and record them (S-01). Read each hotel's cancellation policy (S-03).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S09",
+        "S20"
+      ]
+    },
+    {
+      "id": "Q-05",
+      "priority": "High",
+      "question": "What is the budget per night, and do we need a room type with a queen or larger bed and a private bathroom?",
+      "known": "Brief requires private bathroom and queen-or-larger bed. Requirement is not yet confirmed for any hotel (F05).",
+      "missing": "Budget. Room-type verification.",
+      "how_to_find": "Owner to state budget. Check each official room-type page (S-02).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S33"
+      ]
+    },
+    {
+      "id": "Q-06",
+      "priority": "High",
+      "question": "Should the hotel be on the Strip, downtown, or in the Chinatown/Spring Mountain corridor?",
+      "known": "By LVCVA area label (S03): 13 of 24 Michelin listings are on the Strip, 5 in Chinatown, 2 downtown, 4 off-Strip. Six listings have Spring Mountain Rd addresses (S01).",
+      "missing": "No hotel in the shortlist is on Spring Mountain Rd. Downtown hotels are not in the shortlist.",
+      "how_to_find": "Owner decision. Add a Chinatown and downtown hotel shortlist (S-04).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S01"
+      ]
+    },
+    {
+      "id": "Q-07",
+      "priority": "High",
+      "question": "What does '1 hour by subway or bus' mean in practice, given Las Vegas transit?",
+      "known": "No subway in official transit sources reviewed (S11, S12). Monorail serves the Strip only (S12). Red Rock has no public transit (S13).",
+      "missing": "Travel times from each hotel to each restaurant and activity.",
+      "how_to_find": "Owner to confirm 'bus + monorail' (F01). Then pull RTC Trip Planner times for each pair (S-05).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S11",
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "id": "Q-08",
+      "priority": "High",
+      "question": "Which of the 24 Michelin restaurants should be booked first?",
+      "known": "Starred restaurants: Joël Robuchon (2★), L'Atelier (1★), é (1★), Guy Savoy (1★) (S01). LVCVA says starred restaurants usually release tables 30–60 days ahead (S03).",
+      "missing": "Booking dates for each restaurant; price for two; hours for 20 of 24 listings.",
+      "how_to_find": "Confirm each restaurant's official booking window (S-06). Then pull hours and prices from official pages (S-06).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S01",
+        "S03"
+      ]
+    },
+    {
+      "id": "Q-09",
+      "priority": "Medium",
+      "question": "What price should be shown for a couple of 2 adults at each Michelin restaurant?",
+      "known": "Price symbols only: Joël Robuchon $$$$ (S04), L'Atelier $$$ (S05), Guy Savoy $$$$ (S07). é has no price symbol on its official site (S06).",
+      "missing": "Menu prices, tasting-menu prices, tax and tip assumptions.",
+      "how_to_find": "Read official menus and price pages (S-06). Enter exact values only when printed.",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S07"
+      ]
+    },
+    {
+      "id": "Q-10",
+      "priority": "Medium",
+      "question": "Which activities should be included?",
+      "known": "Five activities are checked: Red Rock, Valley of Fire, Monorail, Neon Museum, Hoover Dam (partial).",
+      "missing": "Owner's preferences. Additional options (Fremont Street, Bellagio fountains, High Roller, shows) are not yet checked.",
+      "how_to_find": "Owner to rank the interests. Then official pages are pulled (S-07).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S33"
+      ]
+    },
+    {
+      "id": "Q-11",
+      "priority": "Medium",
+      "question": "What events are happening in Las Vegas Feb 15–18, 2027 (and other candidate dates)?",
+      "known": "Feb 15, 2027 is a federal holiday (S10). No event calendar was checked.",
+      "missing": "Event calendar for the window.",
+      "how_to_find": "Check official events calendars and venue sites for the dates (S-08).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S10"
+      ]
+    },
+    {
+      "id": "Q-12",
+      "priority": "Medium",
+      "question": "Do we need a rental car, or will rideshare and RTC/monorail be enough?",
+      "known": "Valley of Fire warns that rideshare may leave visitors stranded (S14). Red Rock has no public transit (S13).",
+      "missing": "Owner's preference. Rental and parking costs.",
+      "how_to_find": "Owner decision. If a car is chosen, check official parking and resort fee terms for each hotel (S-02).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "id": "Q-13",
+      "priority": "Medium",
+      "question": "Are there dietary, accessibility or celebration needs (e.g., anniversary, birthday) to plan for?",
+      "known": "Partage notes it cannot accommodate dairy-free, vegan, vegetarian, celiac, onion or garlic-free diets (S19).",
+      "missing": "Owner's dietary and occasion details.",
+      "how_to_find": "Owner to provide. Restaurant rows can then be filtered.",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S19"
+      ]
+    },
+    {
+      "id": "Q-14",
+      "priority": "Low",
+      "question": "Should the site show Michelin 'within 1 hour' results per hotel, or in-resort results only?",
+      "known": "In-resort counts are verified (S01, S02). Travel time is not.",
+      "missing": "Owner's choice of method.",
+      "how_to_find": "Owner decision (F15).",
+      "answer": null,
+      "status": "Open",
+      "source_ids": [
+        "S01",
+        "S02"
+      ]
+    }
+  ]
+}

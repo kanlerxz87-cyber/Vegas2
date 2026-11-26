@@ -1,201 +1,130 @@
 {
-  "meta": {
-    "verified_on": "2026-11-26",
-    "travel_rule": "The requested one-hour limit is a one-way hotel-to-activity public-transit limit. No hotel/venue-specific RTC or Monorail itineraries were verified, so no activity is marked as meeting the limit. A public transit mode is not the same as a verified travel time.",
-    "cost_rule": "Published prices below are current official prices as of the source snapshot, not guaranteed February–March 2027 prices. Totals for two are simple multiplication of a stated adult ticket/fare; taxes, ticketing fees or future changes are noted.",
-    "social_rule": "Only direct social URLs linked from an official operator source are shown. Blank means not verified; do not replace with platform search results or guessed handles.",
-    "transport_sources": [
-      "https://www.rtcsnv.com/ways-to-travel/fares-passes/",
-      "https://rtcws.rtcsnv.com/routepdf/deuce.pdf",
-      "https://www.lvmonorail.com/",
-      "https://www.lvmonorail.com/group-tickets/"
-    ]
-  },
+  "as_of": "2026-11-26",
+  "scope": "Activities checked against official pages this session. Drive and transit claims come only from the official page that states them. Blank = not verified (flagged).",
   "activities": [
     {
-      "name": "Fountains of Bellagio",
-      "category": "Free attraction",
-      "location": "Bellagio, Center Strip",
-      "official_url": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
-      "cost_for_two": "$0 — official page says the display is free",
-      "days_open": "Daily",
-      "hours": "Monday–Friday: every 30 minutes 3:00–7:30 PM; every 15 minutes 8:00 PM–midnight. Saturday, Sunday and holidays: every 30 minutes noon–7:30 PM; every 15 minutes 8:00 PM–midnight.",
-      "exceptions": "Schedule may vary; outdoor display can be canceled due to weather.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-fountain route time not verified.",
-      "verified_fields": "Official MGM source confirms free access, daily display schedule and weather caveat.",
-      "flag": "Current schedule is not a guarantee for 2027; confirm day-of. No official Bellagio social/video URL verified."
-    },
-    {
-      "name": "Bellagio Conservatory & Botanical Gardens",
-      "category": "Attraction",
-      "location": "Bellagio, Center Strip",
-      "official_url": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html",
-      "cost_for_two": "",
-      "days_open": "",
-      "hours": "",
-      "exceptions": "Official Bellagio page lists Lunar New Year display Jan 9–Mar 6, 2027 and Spring display Mar 13–May 15, 2027, with Mar 7–12 as a dark/transition period. Confirm access details before visiting.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-attraction route time not verified.",
-      "verified_fields": "Official Bellagio page confirms seasonal displays and the published 2027 installation/dark dates.",
-      "flag": "Current daily access hours and entry price not captured; check the official page for seasonal transition updates. Hotel-origin transit time not verified."
-    },
-    {
-      "name": "High Roller Observation Wheel",
-      "category": "Paid attraction",
-      "location": "The LINQ Promenade, Center Strip",
-      "official_url": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
-      "cost_for_two": "Daytime adult tickets: $47 for two before taxes/fees ($23.50 each). Anytime tickets from 6 PM: $69.50 for two before taxes/fees ($34.75 each). Current official starting prices, not a 2027 quote.",
-      "days_open": "Official page lists daily tickets; confirm schedule for travel date.",
-      "hours": "Official page lists daytime ticket window 12:00–5:59 PM and anytime beginning 6:00 PM; attraction page currently displays closing at 11:30 PM.",
-      "exceptions": "Taxes and fees apply; confirm live ticket inventory and hours for the selected date.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-attraction route time not verified.",
-      "verified_fields": "Official Caesars page confirms adult price points, ticket windows, current closing display and ride duration.",
-      "flag": "Current ticket prices/hours may change before 2027; route time from each hotel not verified. No attraction-specific official social account verified."
-    },
-    {
-      "name": "The Neon Museum — 2027 Admission",
-      "category": "Museum",
-      "location": "770 N. Las Vegas Blvd., Downtown",
-      "official_url": "https://neonmuseum.org/whats-on/all-day-admission/",
-      "cost_for_two": "From $42 for two adults, plus ticket processing fee (official adult admission from $21 each).",
-      "days_open": "Daily (2027 admission page).",
-      "hours": "3:00–11:00 PM; last admission 10:00 PM. The official page lists the September–May schedule, which covers Feb–Mar.",
-      "exceptions": "Outdoor venue; weather may affect availability. Box office closes one hour before posted closing time. Reserve online; admission is subject to availability.",
-      "social_urls": [
-        {
-          "platform": "Instagram",
-          "url": "https://www.instagram.com/theneonmuseumlasvegas/"
-        },
-        {
-          "platform": "TikTok",
-          "url": "https://www.tiktok.com/@neonmuseumlasvegas"
-        }
-      ],
-      "social_source_url": "https://neonmuseum.org/whats-on/all-day-admission/",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-museum public-transit route/time not verified.",
-      "verified_fields": "Official 2027 page confirms daily 3–11 PM admission, last admission 10 PM, adult price from $21 and links to Instagram/TikTok.",
-      "flag": "Price is a from-price plus processing fee; confirm Feb–Mar 2027 availability and route from chosen hotel."
-    },
-    {
-      "name": "Fremont Street Experience — The Canopy / free entertainment",
-      "category": "Free entertainment",
-      "location": "Downtown Las Vegas",
-      "official_url": "https://fremontstreetexperience.com/",
-      "cost_for_two": "$0 for public free concerts and canopy entertainment (official site); optional attractions are separately priced.",
-      "days_open": "Official site describes nightly entertainment; check the live calendar.",
-      "hours": "No fixed 2027 schedule verified. Official event calendar: https://fremontstreetexperience.com/calendar#cal",
-      "exceptions": "Artist lineups and event schedules vary; confirm the event calendar for the exact date.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-Downtown route/time not verified; use official RTC trip planner for a chosen hotel.",
-      "verified_fields": "Official destination site describes free nightly entertainment and links to the current event calendar; no official venue-specific social account verified.",
-      "flag": "No exact Feb–Mar 2027 show schedule, official venue-specific social account or hotel-origin travel time verified."
-    },
-    {
-      "name": "The Wizard of Oz at Sphere",
-      "category": "Immersive show",
-      "location": "Sphere, East of the Strip",
-      "official_url": "https://www.thesphere.com/shows/wizard-of-oz-experience",
-      "cost_for_two": "",
-      "days_open": "",
-      "hours": "",
-      "exceptions": "Official ticket page says doors open 45 minutes before the ticket time, the experience runs about 75 minutes, and late seating is not permitted. Show dates, times, prices and availability can change; check the exact 2027 date.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-Sphere route/time not verified.",
-      "verified_fields": "Official Sphere page confirms the experience, approximate runtime, door timing and ticket link; no Feb–Mar 2027 schedule or price for two captured.",
-      "flag": "Feb–Mar 2027 schedule and adult ticket total not captured; social profile URLs and route time not verified."
-    },
-    {
-      "name": "O by Cirque du Soleil",
-      "category": "Show",
-      "location": "Bellagio, Center Strip",
-      "official_url": "https://www.cirquedusoleil.com/shows/o",
-      "cost_for_two": "",
-      "days_open": "",
-      "hours": "",
-      "exceptions": "Show calendar, dark days, seat prices and availability must be checked for the selected 2027 date.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-to-show route/time not verified.",
-      "verified_fields": "Official Cirque du Soleil show page.",
-      "flag": "Future performance schedule, two-ticket total, exceptions, social/video URLs and hotel-origin travel time not verified."
-    },
-    {
-      "name": "RTC Deuce on the Strip",
-      "category": "Public transport reference",
-      "location": "Las Vegas Strip and Downtown route",
-      "official_url": "https://www.rtcsnv.com/ways-to-travel/fares-passes/",
-      "cost_for_two": "24-hour Strip & All Access passes: $16 for two adults ($8 each). 3-day passes: $40 for two ($20 each). Current official fares, not a seven-night trip total.",
-      "days_open": "Daily; official route information says the Deuce operates 24 hours a day.",
-      "hours": "24 hours. Published frequency varies by time; consult the official route timetable for the travel date.",
-      "exceptions": "RTC notes fares and schedules can change; use current official route map/timetable and fare page.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "No hotel-to-venue route matrix or actual trip duration verified.",
-      "verified_fields": "Official RTC source confirms Strip fare amounts and Deuce service; route PDF gives current service information.",
-      "flag": "Fare totals are current published products, not a quote for the whole stay. Specific route times from candidate hotels remain unverified."
-    },
-    {
-      "name": "Las Vegas Monorail",
-      "category": "Public transport reference",
-      "location": "Seven-station rail route along the east side of the Strip",
-      "official_url": "https://www.lvmonorail.com/",
-      "cost_for_two": "7-day full-fare passes: $128 for two ($64 each); official group-ticket page lists a $53.30 eTicket per person ($106.60 for two). Current prices; verify before purchase.",
-      "days_open": "Daily; the official site lists service hours by weekday.",
-      "hours": "Monday 7:00 AM–midnight; Tuesday–Thursday 7:00 AM–2:00 AM; Friday–Sunday 7:00 AM–3:00 AM (current published schedule).",
-      "exceptions": "Official Monorail notes unusual/unplanned schedule changes can occur; check service notices for travel dates.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Monorail station-to-venue walking links and hotel-to-activity journey times not verified.",
-      "verified_fields": "Official Las Vegas Monorail page confirms station hours; official group-ticket page lists 7-day pass prices.",
-      "flag": "Current fare and hours may change before 2027; a 7-day pass may not match a 7-night stay. Confirm station access and route time."
-    },
-    {
+      "id": "A1",
       "name": "Red Rock Canyon National Conservation Area",
-      "category": "Outdoor / day trip",
-      "location": "17 miles west of the Las Vegas Strip (BLM)",
-      "official_url": "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon",
-      "cost_for_two": "",
-      "days_open": "Scenic Drive daily (hours vary by month).",
-      "hours": "November–February 6:00 AM–5:00 PM; March 6:00 AM–7:00 PM. Timed-entry reservations required Oct 1–May 31 for entry 8:00 AM–5:00 PM.",
-      "exceptions": "BLM says public transportation does not extend to Red Rock Canyon. Commercial tour buses require reservations and have separate restrictions/charges.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "No — BLM states public transportation does not extend to the area.",
-      "transit_note": "Not eligible under the requested bus/rail-only criterion unless a separately verified tour is accepted.",
-      "verified_fields": "Official BLM page confirms distance from Strip, no public transportation, hours and timed-entry rule.",
-      "flag": "Exact hotel-origin time and current entry price for two not verified; this activity does not meet the stated transit-only filter."
+      "type": "Outdoor / scenic drive",
+      "address": "1000 Scenic Loop Drive, Las Vegas, NV 89161 (visitor center)",
+      "distance_from_strip": "17 miles west of the Strip; 'approx. 30 minutes' (BLM, S13)",
+      "public_transit": "Public transportation does not extend to Red Rock Canyon (S13). Fails the bus-only test (F02).",
+      "hours": "Scenic drive timed entry required Oct 1 – May 31, 8:00 am – 5:00 pm (S13). Feb 2027 falls inside this window.",
+      "days_open": "Not stated as 'daily' on the official page. Timed entry required Oct 1 – May 31, 8:00 am – 5:00 pm (S13).",
+      "exceptions": "Timed entry ticket required on each day you plan to enter (Oct 1–May 31). Fees and reservations: see BLM fees page linked from S13.",
+      "fees": "Not captured (see BLM fee page). Flagged.",
+      "official_site": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area",
+      "phone": "(702) 515-5350",
+      "social_youtube": "https://www.youtube.com/BLMNational (BLM national account, agency-level, S13)",
+      "social_tiktok": null,
+      "social_instagram": "http://instagram.com/mypubliclands (BLM national account, agency-level, S13)",
+      "sources": [
+        "S13"
+      ],
+      "flags": [
+        "F02",
+        "F20",
+        "F19"
+      ]
     },
     {
-      "name": "Hoover Dam — visitor center / tours",
-      "category": "Day trip",
-      "location": "Hoover Dam",
-      "official_url": "https://www.usbr.gov/lc/hooverdam/service/index.html",
-      "cost_for_two": "Guided Dam Tour: $80 for two adults ($40 each; on-site purchase only). Power Plant Tour: $50 for two adults ($25 each). Visitor Center: $30 for two ($15 each). Current official prices; verify for 2027.",
-      "days_open": "Daily except Thanksgiving Day and Christmas Day (Visitor Center and tours).",
-      "hours": "Visitor Center and tours 9:00 AM–5:00 PM; doors close 4:15 PM; last tour departs 4:10 PM. Dam public access 5:00 AM–9:00 PM.",
-      "exceptions": "Guided Dam Tour tickets are on-site only and can sell out; tour may be canceled. Age/accessibility limitations apply; check official page.",
-      "social_urls": [],
-      "social_source_url": "",
-      "transit_within_60min": "",
-      "transit_note": "Hotel-origin public-transit route and journey time not verified; not marked as within one hour.",
-      "verified_fields": "Official Bureau of Reclamation source confirms ticket prices, hours and purchase constraints.",
-      "flag": "Current prices/hours may change by 2027; route and transit time from hotels unverified."
+      "id": "A2",
+      "name": "Valley of Fire State Park",
+      "type": "Desert park / petroglyphs",
+      "address": "29450 Valley of Fire Rd, Overton, NV 89040",
+      "distance_from_strip": "Drive time NOT stated on the official page (F24)",
+      "public_transit": "Not stated. Official warning: rideshare may leave visitors stranded because return rides are often unavailable (S14).",
+      "hours": "Park open daily, sunrise to sunset (S14). Visitor center daily 9:00 am – 4:00 pm (S14).",
+      "days_open": "Every day, 365 days a year (S14)",
+      "exceptions": "Annual maintenance closure Dec 1–14 (outside trip window). Trail closures May 15–Sep 30 (outside trip window). Group sites by reservation. Day use needs no reservation.",
+      "fees": "$10 per vehicle (Nevada), $15 (non-Nevada) (S14)",
+      "official_site": "https://parks.nv.gov/parks/valley-of-fire",
+      "phone": "702-397-2088",
+      "social_youtube": null,
+      "social_tiktok": null,
+      "social_instagram": null,
+      "sources": [
+        "S14"
+      ],
+      "flags": [
+        "F19",
+        "F20",
+        "F24"
+      ]
+    },
+    {
+      "id": "A3",
+      "name": "Las Vegas Monorail (Strip transit)",
+      "type": "Transit",
+      "address": "Seven Strip stations (route map on official site)",
+      "distance_from_strip": "On the Strip (route map, S12)",
+      "public_transit": "This IS the rail option. Trains every 4–8 minutes (S12). No subway appears in the official transit sources reviewed (S11, S12), so the bus + monorail interpretation is used (F01).",
+      "hours": "Monday 7:00 am – 12:00 am; Tuesday–Thursday 7:00 am – 2:00 am; Friday–Sunday 7:00 am – 3:00 am (S12)",
+      "days_open": "Every day",
+      "exceptions": "Early-closure notices apply only Nov 29 – Dec 15, 2026 (outside trip window) (S29).",
+      "fees": "Not captured in readable text (see S12 ticket page)",
+      "official_site": "https://www.lvmonorail.com/",
+      "phone": null,
+      "social_youtube": null,
+      "social_tiktok": null,
+      "social_instagram": "@lvmonorail (handle named on official page, S12; account URL not separately verified)",
+      "sources": [
+        "S12",
+        "S29"
+      ],
+      "flags": [
+        "F01",
+        "F19"
+      ]
+    },
+    {
+      "id": "A4",
+      "name": "The Neon Museum (Neon Boneyard)",
+      "type": "Museum / guided tour",
+      "address": "770 Las Vegas Blvd. N., Las Vegas, NV 89101",
+      "distance_from_strip": "Not stated on the official page (F20)",
+      "public_transit": "Not stated (F20)",
+      "hours": "Sep–May: 3:00 pm – 11:00 pm daily, last entry 10:00 pm (S15). Official 'open today' block lists 3 pm – 11 pm for each day of the week.",
+      "days_open": "Every day",
+      "exceptions": "From Jan 1, 2027, admission earlier or later than your ticket time may carry a higher ticket price (S15). Tours cancel above 100°F; general admission closes above 105°F; museum closes above 110°F (S15).",
+      "fees": "Not captured (see S15 ticket page)",
+      "official_site": "https://neonmuseum.org/your-visit/",
+      "phone": "(702) 387-6366",
+      "social_youtube": null,
+      "social_tiktok": "https://www.tiktok.com/@neonmuseumlasvegas (official site link, S15)",
+      "social_instagram": "https://www.instagram.com/theneonmuseumlasvegas/ (official site link, S15)",
+      "sources": [
+        "S15"
+      ],
+      "flags": [
+        "F20",
+        "F21"
+      ]
+    },
+    {
+      "id": "A5",
+      "name": "Hoover Dam (Bureau of Reclamation)",
+      "type": "Landmark / tour",
+      "address": "Official address not retrieved this session",
+      "distance_from_strip": "'30 miles southeast of Las Vegas' appears on an archived 2010 usbr page (S21). Not confirmed on a current official page.",
+      "public_transit": "Not verified (F20)",
+      "hours": "UNVERIFIED. The official usbr.gov page could not be retrieved. Conflicting sources: an archived 2010 page (S21) and a third-party 'official' guide (S27) give different hours (F09).",
+      "days_open": null,
+      "exceptions": "Thanksgiving and Christmas closures are reported by secondary sources only (F09).",
+      "fees": "Not verified",
+      "official_site": "https://www.usbr.gov/lc/hooverdam/visit/index.html (not retrievable this session)",
+      "phone": null,
+      "social_youtube": null,
+      "social_tiktok": null,
+      "social_instagram": null,
+      "sources": [
+        "S21"
+      ],
+      "flags": [
+        "F09",
+        "F19",
+        "F20"
+      ]
     }
   ]
 }
