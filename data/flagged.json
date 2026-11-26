@@ -134,8 +134,8 @@
     },
     {
       "id": "F16",
-      "item": "Venue links not individually opened",
-      "detail": "Restaurant venue links (e.g. Anima by Edo, Bouchon, Kabuto, Esther's Kitchen, YEN Viet Kitchen) come from the official Visit Las Vegas MICHELIN page. Each venue page was not opened this session, so the link is not separately verified. The sandbox has no general outbound web access, so an automated link check could not run here; scripts/linkcheck.mjs runs in CI.",
+      "item": "Some venue links not individually opened",
+      "detail": "Opened and read this session (official venue pages): Anima by EDO, Kabuto, Partage, Stubborn Seed, Ping Pang Pong. NOT opened, so their hours/links are not verified: Bouchon, COTE, Estiatorio Milos, Gymkhana, Kame Omakase, Lamaii, Michael Mina, Mott 32, Pho Ga Bac Bac, SoulBelly BBQ, Sparrow + Wolf, Wing Lei, China Poblano, Esther's Kitchen, YEN Viet Kitchen. Their links come from the official Visit Las Vegas MICHELIN page. The sandbox has no general outbound web access, so an automated link check could not run here; scripts/linkcheck.mjs runs in CI.",
       "sources": [
         "https://www.visitlasvegas.com/michelin-guide-restaurants/"
       ]

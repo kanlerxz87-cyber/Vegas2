@@ -34,7 +34,8 @@ const OFFICIAL_DOMAINS = [
   "parks.nv.gov", "reservenevada.com", "www.reservenevada.com", "usbr.gov", "www.usbr.gov",
   "hooverdam.ticketure.co", "neonmuseum.org", "www.neonmuseum.org",
   "tiktok.com", "www.tiktok.com", "instagram.com", "www.instagram.com", "facebook.com", "www.facebook.com",
-  "github.com", "docs.github.com", "opentable.com", "www.opentable.com"
+  "github.com", "docs.github.com", "opentable.com", "www.opentable.com",
+  "animabyedo.com", "kabutolv.com", "partage.vegas", "sevenrooms.com"
 ];
 
 const problems = [];

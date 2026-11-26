@@ -16,8 +16,14 @@
       "driveOrTransitFromHotel": null,
       "social": "Facebook: https://www.facebook.com/theHooverDam/ (linked from official page). TikTok/Instagram/YouTube for this site: not confirmed.",
       "sources": [
-        { "label": "Official tour information (usbr.gov)", "url": "https://www.usbr.gov/lc/hooverdam/service/index.html" },
-        { "label": "Official Hoover Dam homepage (hours, special events)", "url": "https://www.usbr.gov/lc/hooverdam/" }
+        {
+          "label": "Official tour information (usbr.gov)",
+          "url": "https://www.usbr.gov/lc/hooverdam/service/index.html"
+        },
+        {
+          "label": "Official Hoover Dam homepage (hours, special events)",
+          "url": "https://www.usbr.gov/lc/hooverdam/"
+        }
       ]
     },
     {
@@ -27,12 +33,22 @@
       "tickets": "https://www.recreation.gov/timed-entry/10075177",
       "hours": "Conservation area hours Oct 1 to May 31: November to February 6:00 AM to 5:00 PM (PT); March 6:00 AM to 7:00 PM; April to May 6:00 AM to 8:00 PM. Visitor Center 8:00 AM to 4:30 PM.",
       "prices": null,
-      "specialRules": "Timed-entry reservations REQUIRED for vehicle entry to the Scenic Drive Oct 1 to May 31, 8:00 AM to 5:00 PM, one reservation per day of entry (Recreation.gov, or call (877) 444-6777). Scenic Drive is one-way, 13-mile loop. Parking fills early on weekends and holidays.",
+      "specialRules": "Timed-entry reservations REQUIRED for vehicle entry to the Scenic Drive Oct 1 to May 31, 8:00 AM to 5:00 PM, one reservation per day of entry (Recreation.gov, or call (877) 444-6777). Scenic Drive is one-way, 13-mile loop. Parking fills early on weekends and holidays. Recreation.gov states the Scenic Drive is 17 miles west of the Las Vegas Strip (distance only; drive time not verified). Reservations NOT required June 1 to Sept 30.",
       "driveOrTransitFromHotel": null,
       "social": null,
       "sources": [
-        { "label": "Official timed-entry and hours page (redrockcanyonlv.org)", "url": "https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/" },
-        { "label": "Official Red Rock homepage", "url": "https://www.redrockcanyonlv.org/" }
+        {
+          "label": "Official timed-entry and hours page (redrockcanyonlv.org)",
+          "url": "https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/"
+        },
+        {
+          "label": "Official Red Rock homepage",
+          "url": "https://www.redrockcanyonlv.org/"
+        },
+        {
+          "label": "Recreation.gov Scenic Drive timed-entry page (distance, rules)",
+          "url": "https://www.recreation.gov/timed-entry/10075177"
+        }
       ]
     },
     {
@@ -46,7 +62,10 @@
       "driveOrTransitFromHotel": null,
       "social": null,
       "sources": [
-        { "label": "Official Valley of Fire page (parks.nv.gov)", "url": "https://parks.nv.gov/parks/valley-of-fire" }
+        {
+          "label": "Official Valley of Fire page (parks.nv.gov)",
+          "url": "https://parks.nv.gov/parks/valley-of-fire"
+        }
       ]
     },
     {
@@ -60,7 +79,10 @@
       "driveOrTransitFromHotel": null,
       "social": "TikTok: https://www.tiktok.com/@neonmuseumlasvegas ; Instagram: https://www.instagram.com/theneonmuseumlasvegas/ (both linked on the official site)",
       "sources": [
-        { "label": "Official visit page (hours, FAQs, social links)", "url": "https://neonmuseum.org/your-visit/" }
+        {
+          "label": "Official visit page (hours, FAQs, social links)",
+          "url": "https://neonmuseum.org/your-visit/"
+        }
       ]
     }
   ]
