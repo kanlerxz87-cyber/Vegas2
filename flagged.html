@@ -94,6 +94,21 @@
   <h3>Repo review: no license, no .gitignore, README has no description</h3>
   <p>The repo holds only README.md (&#x27;# Vegas2&#x27;). It has no LICENSE, no .gitignore, and no description. Details on the Repo Review page.</p>
   <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://api.github.com/repos/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">GitHub API — repo metadata (license null, description null)</a></li><li><a href="https://api.github.com/repos/kanlerxz87-cyber/Vegas2/pages" target="_blank" rel="noopener">GitHub API — Pages config (legacy, main, /)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F16</span><span class="tag bad">Irregularity</span></div>
+  <h3>Earlier dashboard (v1) reports 3 starred restaurants; official release lists 4</h3>
+  <p>planner-v1.html (from PRs #2/#3 on main) says &#x27;Starred Guide restaurants found: 3&#x27;. The official Michelin Southwest 2026 release lists 4 starred Las Vegas restaurants: Restaurant de Joël Robuchon (2★), and é by José Andrés, Guy Savoy Las Vegas and L&#x27;Atelier de Joël Robuchon (1★ each). v1 omits é by José Andrés. This site uses the official release. v1 is kept unchanged and is labelled as an earlier version.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">Michelin official release, Aug 2026</a></li><li><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/dce4548/index.html" target="_blank" rel="noopener">Earlier dashboard (v1) as merged on main (commit dce4548)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F17</span><span class="tag bad">Irregularity</span></div>
+  <h3>Wynn &#x27;Panoramic View Two Queens&#x27; claim withdrawn — not on official booking page</h3>
+  <p>An earlier version of hotels.json marked a Wynn &#x27;Panoramic View Two Queens, 640 sq ft&#x27; room as verified. On re-fetch (fetched 2026-11-26) the official Wynn booking page lists only King and Encore King room types across five chunks. No two-queen room appears. The claim is withdrawn; Wynn&#x27;s queen status is now Unverified and its bathroom is Partial (King room pages only).</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&amp;langID=1&amp;access=&amp;corp=&amp;voucher=&amp;rcID=324634&amp;currID=0" target="_blank" rel="noopener">Official Wynn booking engine (room list, fetched)</a></li></ul></div>
+</article><article class="card">
+  <div class="cardtop"><span class="pill">F18</span><span class="tag bu">Unverified</span></div>
+  <h3>Wynn resort-fee wording conflicts on the same booking page</h3>
+  <p>The official Wynn booking page shows a &#x27;$55 plus tax&#x27; daily resort fee on the Flexible Getaway rate block, while the room cards say &#x27;Includes Resort Fee&#x27; and a second resort-fee block lists amenities without a dollar amount. The page also shows only the Nov 26–27, 2026 rate, not Feb 2027. Confirm the 2027 fee and total at checkout before comparing prices.</p>
+  <div class="srcwrap"><strong>Source links for manual review</strong><ul class="srcs"><li><a href="https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&amp;langID=1&amp;access=&amp;corp=&amp;voucher=&amp;rcID=324634&amp;currID=0" target="_blank" rel="noopener">Official Wynn booking engine (fetched)</a></li></ul></div>
 </article></div>
 
 </main>

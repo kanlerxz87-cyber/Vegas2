@@ -418,13 +418,14 @@ def build_index():
     cards = [
         ("hotels.html", "Hotels", "8 Strip candidates, ranked by Michelin count on campus, with room checks and blank prices."),
         ("michelin.html", "Michelin", "All 24 Las Vegas 2026 entries: 4 starred, 3 Bib Gourmand, 17 Recommended."),
-        ("activities.html", "Activities", "Hoover Dam, Red Rock Canyon, Valley of Fire and The Neon Museum: official hours and rules."),
+        ("activities.html", "Activities", "Hoover Dam, Red Rock Canyon, Valley of Fire and The Neon Museum: official hours, fees and rules."),
         ("booking.html", "Booking & price", "Feb 15–18 and Feb 15–22, 2027 options. No verified 2027 rates yet."),
         ("questions.html", "Questions", "What we know, what we need from you, and what is still missing."),
         ("suggestions.html", "Suggestions", "Options for improving the site and the decision. Choose before anything changes."),
         ("flagged.html", "Flagged for Review", f"{len(flg['items'])} irregularities, source conflicts and unverified items, with links."),
         ("repo-review.html", "Repo review", "Line-by-line review of the repository and GitHub Pages settings."),
         ("sources.html", "Sources", "Every official and secondary source, and what each one was used for."),
+        ("planner-v1.html", "Earlier dashboard (v1)", "The first single-page planner from PRs #2 and #3, kept unchanged for reference."),
     ]
     card_html = "".join(
         f'<a class="tile" href="{href}"><strong>{esc(title)}</strong><span>{esc(desc)}</span></a>'
@@ -451,7 +452,7 @@ def build_index():
     <li><strong>Michelin, Las Vegas 2026 (official).</strong> 24 restaurants: 4 starred (Restaurant de Joël Robuchon at 2 stars; é by José Andrés, Guy Savoy Las Vegas and L'Atelier de Joël Robuchon at 1 star each), 3 Bib Gourmand, 17 Recommended. <span class="src">[<a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">Michelin</a>]</span></li>
     <li><strong>Michelin clusters.</strong> 13 of the 24 are on the Strip (Las Vegas Blvd), 6 on Spring Mountain (Chinatown), and 5 elsewhere (Downtown/S. Main, S. Decatur, W. Russell, Gold Coast). Counts use official addresses.</li>
     <li><strong>Best-placed hotels by Michelin count on campus.</strong> The Venetian (4), then The Cosmopolitan and MGM Grand (2 each). Caesars Palace, Bellagio, Wynn, ARIA and Resorts World have 1 each. This is a campus count only; the 1-hour transit test is not verified.</li>
-    <li><strong>Rooms.</strong> Two queen beds are confirmed on official pages for 4 hotels (Cosmopolitan, Bellagio, Wynn, Resorts World); ARIA is partial (suite only). Caesars Palace, MGM Grand and The Venetian are unverified.</li>
+    <li><strong>Rooms.</strong> Two queen beds are confirmed on official pages for Resorts World (Conrad, one king <em>or</em> two queens), Bellagio (Premier Two Queen) and the Cosmopolitan (two-queen listing). ARIA is confirmed for its Center Tower Suite only. Wynn's two-queen claim was <strong>withdrawn</strong> after re-checking the official booking page (see Flagged F17). Caesars Palace, MGM Grand and The Venetian remain unverified.</li>
     <li><strong>Price and booking time.</strong> <em>No 2027 rate was verified for any hotel</em>, so totals and the cheapest booking time are blank. This is the largest gap.</li>
     <li><strong>Activities.</strong> Hoover Dam, Red Rock Canyon (timed entry Oct–May), Valley of Fire ($10/$15 fee) and The Neon Museum: hours and rules from official pages. You have not yet named your activity list (see Questions).</li>
     <li><strong>Irregularities.</strong> Secondary press gives different Michelin star holders and Bib lists than the official release. The official release is used throughout. Full list on <a href="flagged.html">Flagged for Review</a>.</li>

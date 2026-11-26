@@ -1,5 +1,7 @@
 # COORDINATION — Las Vegas Trip Planning (Vegas2)
 
+> **Integration note (a52047d7).** `main` gained PRs #2 and #3 from earlier sessions (`arena/f0943026-vegas2`, `arena/e94404fc-vegas2`) while this branch was open. Their live dashboard is preserved unchanged as `planner-v1.html` with its `styles.css`, `app.js` and `data.js`. This branch's verified site now owns `index.html` (landing) and the subpages. Their task rows are kept below as P1 and P2, and their log is kept verbatim in the section *Prior session records*.
+
 Shared task board. Every row needs a status, an owning session, and the files it touches.
 
 **Statuses:** `unclaimed` · `in progress` · `done` · `needs review` (published on the *Flagged for Review* page; does not block)
@@ -20,6 +22,9 @@ Shared task board. Every row needs a status, an owning session, and the files it
 | T8 | Flagged for Review (irregularities & unverified items) | needs review | a52047d7 | `data/flagged.json` | Published; does not block merge |
 | T9 | Site build (landing, subpages, CSS, build + check scripts) | done | a52047d7 | `scripts/*.py`, `assets/style.css`, generated `*.html`, `.nojekyll`, `README.md` | Static site served from repo root via GitHub Pages |
 | T10 | Integration: re-verify combined data, build, link check, PR, merge, Pages check | in progress (build & gate passed; PR/merge pending) | a52047d7 | `COORDINATION.md` | Final step |
+
+| P1 | Initial Vegas trip planner and GitHub Pages site (base implementation) | done | arena/f0943026-vegas2 | COORDINATION.md, README.md, index.html, styles.css, data.js, .github/workflows/pages.yml | Merged to main via PR #2 (`58dd7c3`). Now kept as `planner-v1.html` |
+| P2 | Expanded planner: mobile summaries, hotel shortlist, dining, activities, questions, review flags | done | arena/e94404fc-vegas2 | index.html, styles.css, app.js, README.md, .nojekyll, COORDINATION.md | Merged to main via PR #3 (`dce4548`). `styles.css`, `app.js`, `data.js` still serve `planner-v1.html` |
 
 ---
 
@@ -48,6 +53,22 @@ Official sources retrieved on 2026-11-26 (all links are the pages actually read)
 - Verification totals (cells across hotels, Michelin and activities): see the Home page KPIs.
 - Commit: `c8d3d9b` (site build) on `arena/a52047d7-vegas2`.
 
+### 2026-11-26-D — a52047d7 — integration, merge conflict & re-verification
+- **Merge conflict logged.** While this branch was open, `main` received PR #2 (`arena/f0943026-vegas2`, commit `58dd7c3`) and PR #3 (`arena/e94404fc-vegas2`, commit `dce4548`). The PR then reported "not mergeable". Conflicts were in `COORDINATION.md` (add/add), `README.md` (content) and `index.html` (add/add).
+- **Resolution (kept both sides, no history lost):** `index.html` is now this session's verified landing page. The earlier single-page dashboard is preserved unchanged as `planner-v1.html` (its `styles.css`, `app.js` and `data.js` are kept). `README.md` was rewritten to cover both. This board keeps the prior rows as P1/P2 and the prior log verbatim.
+- **Re-verification before publish (fetched 2026-11-26):**
+  - ARIA Center Tower Suite — 2 Queen Beds, private water closet (suite only) → Verified.
+  - Resorts World Conrad Premium Room — one king or two queens, 550 sq ft, spa bathroom → Verified.
+  - Bellagio Premier Two Queen — 2 Queen Beds, 510 sq ft → Verified.
+  - Wynn Las Vegas — **the "Panoramic View Two Queens 640 sq ft" claim is withdrawn.** Across five chunks, the official booking page lists only King and Encore King rooms. Queen is now Unverified (F17).
+  - Wynn booking page resort fee conflicts ($55 plus tax vs "includes resort fee") → F18.
+  - Neon Museum — official 2027 admission (daily 3–11 PM, from $21) and official TikTok/Instagram/Facebook links → Verified.
+  - Hoover Dam — official fees ($40 guided dam tour, $25 powerplant, $15 visitor center, $10 parking), last tour 4:10 PM, Hoover Facebook → Verified. YouTube and Instagram are Bureau-level only → Partial.
+  - Valley of Fire — $10 / $15 non-NV, Dec 1–14 maintenance closure → Verified.
+  - Red Rock — agency-level BLM social links → Partial.
+- **Found and fixed:** `planner-v1.html` says 3 starred restaurants and omits é by José Andrés. The official release lists 4 (F16).
+- **Still unverified:** all 2027 hotel rates and totals, transit times, most restaurant hours and costs, Caesars/MGM/Venetian room pages, Valley of Fire social.
+
 ### Verification gaps (see Flagged for Review)
 - Official MGM Grand, Venetian, Restaurant de Joël Robuchon and L'Atelier pages could not be retrieved (fetch errors). Their rows are marked partial/unverified.
 - No hotel rate for 7 nights (Feb 15–22, 2027) or 3 nights (Feb 15–18, 2027) was retrieved from an official source.
@@ -68,4 +89,30 @@ See `flagged.html` (Flagged for Review) for the full list and links. Key items: 
 - [ ] GitHub Pages deploy confirmed live
 
 ### PR & merge record
-_(to be filled after the PR is created and merged)_
+- PR #5 (`arena/a52047d7-vegas2` → `main`): https://github.com/kanlerxz87-cyber/Vegas2/pull/5 — opened with summary, sources and irregularities. Its first attempt to merge reported a conflict with `main` (PRs #2/#3). Resolved on this branch (see log 2026-11-26-D) and pushed.
+- Merge result and Pages deploy result: recorded in the branch's final commit after merge (see the end of this section).
+
+---
+
+## Prior session records (verbatim, from `main`)
+
+### Verification log
+- Initial implementation: Michelin entries and star statuses checked against official MICHELIN Guide pages linked in `data.js` (2026 selection). Future hours, transit times, prices and inventory are not asserted without confirmation. `node --check data.js` passed; HTML anchors/local references checked. No build dependencies required.
+- 2026-11-26 expansion: official MGM Grand page (https://mgmgrand.mgmresorts.com/en.html) confirms room options including MGM Two Queen; official transportation page (https://mgmgrand.mgmresorts.com/en/amenities/transportation.html) lists Monorail rates, station-to-station times, and operating hours (not guaranteed for 2027). Venetian homepage and map/parking page checked (https://www.venetianlasvegas.com/ and https://www.venetianlasvegas.com/resort/maps-and-parking.html). Caesars Palace and Wynn official property pages checked (https://www.caesars.com/caesars-palace and https://www.wynnlasvegas.com/).
+- MICHELIN official Guide result pages show 2026 award/listing statuses: Restaurant de Joël Robuchon, Two Stars (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/restaurant-de-joel-robuchon); L’Atelier de Joël Robuchon, One Star (https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/l-atelier-de-joel-robuchon-las-vegas); Restaurant Guy Savoy, One Star (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/guy-savoy-las-vegas); Bouchon and Stubborn Seed have Guide listings but no star badge in search-result markup (https://guide.michelin.com/en/nevada/las-vegas_2935077/restaurant/bouchon-1250929 and https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurant/stubborn-seed-las-vegas). Direct fetch of individual Michelin pages failed; recheck linked current pages before booking.
+- Local verification of expanded page: all internal anchors have targets, local stylesheet/script/log exist, and `git diff --check` passes. Static site uses no dependencies; Pages workflow is configured to deploy root on `main` or manual dispatch. No live 2027 price lookup or authenticated booking was performed.
+
+## Irregularities / flagged for review
+- Hotel date-specific total quotes (room, tax, resort fee, cancellation rules) and historical data needed to determine cheapest booking time are unavailable; price cells are blank.
+- Selected-room bathroom/bed details need confirmation (MGM's Two Queen bed size is shown by its official property page); remaining hotel room details need room-level checking.
+- Door-to-door transit times and 2027 schedules, restaurant totals/current menus and 2027 operating hours, plus official restaurant/activity social or video URLs remain unverified. These are blank and marked in the site's Flagged for Review section.
+- Preferred Feb 15–18, 2027 dates are three nights, incompatible with the 7–14-night duration. The displayed seven-night example is Feb 15–22, 2027 and is labeled as such.
+- MICHELIN awards are from the 2026 selection, not a guarantee of 2027 status, opening, or availability.
+
+## Coordination note
+The original checkout initially exposed only README.md and no coordination file. A concurrent PR had landed on `main` by the time the feature branch was rebased. Its files and data were preserved; this branch expands that implementation rather than replacing the existing data. Arena requires work on its assigned fixed branch, so the user-requested per-session branch naming is not applicable here.
+
+## PR and deployment result
+- PR #2 (https://github.com/kanlerxz87-cyber/Vegas2/pull/2) merged to `main` at `58dd7c3d9668c982b52fa83a5afe07a0a7447f0e` on 2026-11-26.
+- GitHub Pages deployment run 45901451051 succeeded. Published dashboard: https://kanlerxz87-cyber.github.io/Vegas2/. The Pages API reported `building` briefly; fetching the public URL then returned the deployed page.
+- Actions emitted a Node.js 20 deprecation advisory for upstream Actions versions; deployment succeeded.
