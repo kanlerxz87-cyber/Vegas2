@@ -1,82 +1,87 @@
-/* Vegas2 trip planner — vanilla JS, no build step. Renders tables from data/*.json */
-function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function yt(q){return 'https://www.youtube.com/results?search_query='+encodeURIComponent(q)}
-function tt(q){return 'https://www.tiktok.com/search?q='+encodeURIComponent(q)}
-function ig(q){return 'https://www.instagram.com/explore/search/keyword/?q='+encodeURIComponent(q)}
-function social(name){
-  return '<span class="social"><a href="'+yt(name+' Las Vegas')+'" target="_blank" rel="noopener">▶ YouTube</a><a href="'+tt(name+' Las Vegas')+'" target="_blank" rel="noopener">♪ TikTok</a><a href="'+ig(name+' Las Vegas')+'" target="_blank" rel="noopener">◎ Instagram</a></span>';
+/* Vegas2 static pages: JSON-backed tables, no dependencies or fabricated platform search links. */
+const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = (value) => /^https:\/\//i.test(String(value || '')) ? String(value) : '';
+const external = (url, label) => safeUrl(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>` : '';
+const social = (items) => (Array.isArray(items) && items.length) ? items.map(s => external(s.url, s.platform)).filter(Boolean).join(' · ') : '<span class="cell-muted">No official venue account verified</span>';
+const tagFor = (status) => {
+  if (String(status).includes('Stars')) return `<span class="tag star">${esc(status)}</span>`;
+  if (status === 'Bib Gourmand') return `<span class="tag">Bib Gourmand</span>`;
+  return `<span class="tag">Selected · no star</span>`;
+};
+async function loadJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Could not load ${path} (${response.status})`);
+  return response.json();
 }
-function badge(v){
-  if(v==='verified') return '<span class="badge b-green">✓ Verified</span>';
-  if(v==='partial') return '<span class="badge b-amber">◐ Partial — see flag</span>';
-  return '<span class="badge b-red">Unverified</span>';
+function searchText(item) { return JSON.stringify(item).toLowerCase(); }
+function emptyValue(value, note='Not verified') {
+  return value ? esc(value) : `<span class="blank">—</span><span class="cell-muted">${esc(note)}</span>`;
 }
-function distBadge(d){
-  if(d.includes('2 Stars')) return '<span class="badge b-gold">★★ 2 Stars</span>';
-  if(d.includes('1 Star')) return '<span class="badge b-gold">★ 1 Star</span>';
-  if(d.includes('Bib')) return '<span class="badge b-blue">Bib Gourmand</span>';
-  return '<span class="badge b-blue">Selected</span>';
-}
-async function loadJSON(url){const r=await fetch(url);if(!r.ok)throw new Error(url);return r.json()}
-
-async function renderHotels(){
-  const el=document.getElementById('hotels-table'); if(!el) return;
-  const data=await loadJSON('data/hotels.json');
-  const q=(document.getElementById('q')?.value||'').toLowerCase();
-  const sort=document.getElementById('sort')?.value||'rank';
-  let rows=data.hotels.filter(h=>!q||JSON.stringify(h).toLowerCase().includes(q));
-  if(sort==='rank') rows.sort((a,b)=>a.rank-b.rank);
-  if(sort==='michelin') rows.sort((a,b)=>(b.michelin_within_60min_bus||0)-(a.michelin_within_60min_bus||0)||a.rank-b.rank);
-  if(sort==='walk') rows.sort((a,b)=>(b.michelin_within_15min_walk||0)-(a.michelin_within_15min_walk||0)||a.rank-b.rank);
-  el.innerHTML='<thead><tr><th>#</th><th>Hotel (official)</th><th>Area / Room</th><th>7-night total (2 adults)</th><th>Michelin ≤1 hr (bus/walk)</th><th>Why / Amenities</th><th>Verification</th></tr></thead><tbody>'+
-  rows.map(h=>'<tr><td><strong>'+h.rank+'</strong></td><td><a href="'+esc(h.official_url)+'" target="_blank" rel="noopener"><strong>'+esc(h.name)+'</strong></a><br><span class="small">Official site ↗</span>'+(h.flag?'<br><span class="small">⚠ '+esc(h.flag)+'</span>':'')+'</td><td>'+esc(h.area)+'<br><span class="small">'+esc(h.room_example)+'</span></td><td><strong>'+esc(h.seven_night_total)+'</strong><br><span class="small">Resort fee: '+esc(h.resort_fee_per_night)+'<br><a href="'+esc(h.booking_url)+'" target="_blank" rel="noopener">Book / check live total ↗</a></span></td><td><span class="small">On-site: '+esc(h.michelin_on_site)+'</span><br>15-min walk: <strong>'+h.michelin_within_15min_walk+'</strong> · 30-min: <strong>'+h.michelin_within_30min+'</strong> · 60-min bus: <strong>'+h.michelin_within_60min_bus+'</strong>/24</td><td><span class="small">'+esc(h.why)+'<br><br><strong>Amenities:</strong> '+esc(h.amenities)+'</span></td><td>'+badge(h.verified)+'</td></tr>').join('')+'</tbody>';
-  document.getElementById('hotels-count').textContent=rows.length+' hotels shown';
+function sourceCell(primary, extras=[]) {
+  const links = [external(primary, 'Official source'), ...extras.map((x, i) => external(x, `Source ${i+2}`))].filter(Boolean);
+  return links.length ? `<div class="cell-links">${links.join('')}</div>` : '<span class="cell-muted">No source link</span>';
 }
 
-async function renderRestaurants(){
-  const el=document.getElementById('restaurants-table'); if(!el) return;
-  const data=await loadJSON('data/restaurants.json');
-  const q=(document.getElementById('q')?.value||'').toLowerCase();
-  const f=document.getElementById('filter')?.value||'all';
-  let rows=data.restaurants.filter(r=>{
-    if(f==='starred'&&!r.distinction.includes('Star'))return false;
-    if(f==='bib'&&!r.distinction.includes('Bib'))return false;
-    if(f==='selected'&&!r.distinction.includes('Selected'))return false;
-    if(q&&!JSON.stringify(r).toLowerCase().includes(q))return false;
-    return true;
+async function renderHotels() {
+  const table = document.getElementById('hotels-table'); if (!table) return;
+  const data = await loadJson('data/hotels.json');
+  const query = (document.getElementById('q')?.value || '').toLowerCase();
+  const sort = document.getElementById('sort')?.value || 'count';
+  const hotels = data.hotels.filter(h => !query || searchText(h).includes(query));
+  if (sort === 'count') hotels.sort((a,b) => b.on_property_count - a.on_property_count || a.name.localeCompare(b.name));
+  if (sort === 'name') hotels.sort((a,b) => a.name.localeCompare(b.name));
+  table.innerHTML = `<thead><tr><th>Hotel · official booking page</th><th>MICHELIN Guide restaurants on property / resort complex</th><th>7-night total (2 adults)</th><th>Official room-type evidence · date inventory unverified</th><th>Public transit ≤60 min</th><th>Official sources / status</th></tr></thead><tbody>${hotels.map(h => {
+    const guideLinks = h.michelin_sources.map((url, i) => external(url, h.on_property_restaurants[i] || `Guide profile ${i+1}`)).join('<br>');
+    return `<tr><td>${external(h.official_url, h.name)}<span class="cell-muted">${esc(h.area)}</span></td><td><strong>${h.on_property_count}</strong> confirmed Guide entries<span class="cell-muted">${guideLinks}</span></td><td>${emptyValue(h.seven_night_total, 'No live official quote captured')}<span class="cell-muted">Fee: ${emptyValue(h.resort_fee, 'not checked')}</span><span class="cell-muted">${external(h.booking_url, 'Check official booking page')}</span></td><td>${h.room_option ? `<strong>${esc(h.room_option)}</strong><span class="cell-muted">${esc(h.room_fit)}</span>` : emptyValue(h.room_fit, 'no room-type page captured')}<span class="cell-muted">${esc(h.room_requirement_note)}</span><span class="cell-muted">${external(h.room_url, 'Official room details')}</span></td><td>${emptyValue(h.within_60min_public_transit, 'route not verified')}</td><td>${sourceCell(h.official_url, h.michelin_sources)}<span class="cell-muted">⚑ ${esc(h.flag)}</span></td></tr>`;
+  }).join('')}</tbody>`;
+  const count = document.getElementById('hotels-count'); if (count) count.textContent = `${hotels.length} candidate hotels · ordered by same-property Guide count, not transit time`;
+}
+
+async function renderRestaurants() {
+  const table = document.getElementById('restaurants-table'); if (!table) return;
+  const data = await loadJson('data/restaurants.json');
+  const query = (document.getElementById('q')?.value || '').toLowerCase();
+  const filter = document.getElementById('filter')?.value || 'all';
+  const restaurants = data.restaurants.filter(r => {
+    if (filter === 'starred' && !r.distinction.includes('Stars') && !r.distinction.includes('Star')) return false;
+    if (filter === 'bib' && r.distinction !== 'Bib Gourmand') return false;
+    if (filter === 'selected' && !r.distinction.startsWith('Selected')) return false;
+    return !query || searchText(r).includes(query);
   });
-  const order={'2 Stars':0,'1 Star':1,'Bib Gourmand':2,'Selected (Michelin Guide)':3};
-  rows.sort((a,b)=>(order[a.distinction]??9)-(order[b.distinction]??9)||a.name.localeCompare(b.name));
-  el.innerHTML='<thead><tr><th>Restaurant (official)</th><th>Distinction</th><th>Cost for 2 (food only)</th><th>Days / Hours / Exceptions</th><th>Social</th><th>Verification</th></tr></thead><tbody>'+
-  rows.map(r=>'<tr><td><a href="'+esc(r.official_url)+'" target="_blank" rel="noopener"><strong>'+esc(r.name)+'</strong></a><br><span class="small">'+esc(r.cuisine)+' · '+esc(r.location)+'<br><a href="'+esc(r.menu_url)+'" target="_blank" rel="noopener">Official menu ↗</a></span>'+(r.flag?'<br><span class="small">⚠ '+esc(r.flag)+'</span>':'')+'</td><td>'+distBadge(r.distinction)+'<br><span class="small">'+esc(r.distinction)+'</span></td><td><strong>'+esc(r.total_for_2)+'</strong><br><span class="small">'+esc(r.price_per_person)+'</span></td><td><span class="small"><strong>Days:</strong> '+esc(r.days_open)+'<br><strong>Hours:</strong> '+esc(r.hours)+'<br><strong>Exceptions:</strong> '+esc(r.exceptions)+'</span></td><td>'+social(r.name)+'</td><td>'+badge(r.verified)+'</td></tr>').join('')+'</tbody>';
-  document.getElementById('restaurants-count').textContent=rows.length+' restaurants shown';
+  const order = s => s.includes('2 MICHELIN Stars') ? 0 : s.includes('1 MICHELIN Star') ? 1 : s === 'Bib Gourmand' ? 2 : 3;
+  restaurants.sort((a,b) => order(a.distinction)-order(b.distinction) || a.name.localeCompare(b.name));
+  table.innerHTML = `<thead><tr><th>Restaurant · official Guide profile</th><th>2026 Guide status</th><th>Guide price tier</th><th>Cost for two</th><th>Current official profile hours</th><th>2027 exceptions / social</th><th>Sources</th></tr></thead><tbody>${restaurants.map(r => {
+    const cost = r.cost_for_two ? esc(r.cost_for_two) : '<span class="blank">—</span><span class="cell-muted">No official fixed two-person total verified</span>';
+    const hrs = r.current_hours ? `${esc(r.current_hours)}<span class="cell-muted">MICHELIN profile snapshot ${esc(r.hours_as_of)}; recheck for 2027.</span>` : '<span class="blank">—</span><span class="cell-muted">No complete official weekly schedule captured</span>';
+    return `<tr><td>${external(r.guide_url, r.name)}<span class="cell-muted">${esc(r.cuisine)} · ${esc(r.location)}</span></td><td>${tagFor(r.distinction)}</td><td>${emptyValue(r.price_tier, 'not shown')}</td><td>${cost}</td><td>${hrs}</td><td>${r.exceptions ? esc(r.exceptions) : '<span class="cell-muted">No 2027 exception schedule verified</span>'}<span class="cell-muted">${social(r.social_urls)}</span><span class="cell-muted">⚑ ${esc(r.flag)}</span></td><td>${sourceCell(r.guide_url, [r.venue_url, r.menu_url, data.meta.official_guide_release])}</td></tr>`;
+  }).join('')}</tbody>`;
+  const count = document.getElementById('restaurants-count'); if (count) count.textContent = `${restaurants.length} of 24 restaurants`;
 }
 
-async function renderActivities(){
-  const el=document.getElementById('activities-table'); if(!el) return;
-  const data=await loadJSON('data/activities.json');
-  const q=(document.getElementById('q')?.value||'').toLowerCase();
-  let rows=data.activities.filter(a=>!q||JSON.stringify(a).toLowerCase().includes(q));
-  el.innerHTML='<thead><tr><th>Activity (official)</th><th>Cost for 2</th><th>Days / Hours / Exceptions</th><th>Travel ≤1 hr</th><th>Social</th><th>Verification</th></tr></thead><tbody>'+
-  rows.map(a=>'<tr><td><a href="'+esc(a.official_url)+'" target="_blank" rel="noopener"><strong>'+esc(a.name)+'</strong></a><br><span class="small">'+esc(a.category)+' · '+esc(a.location)+'</span>'+(a.flag?'<br><span class="small">⚠ '+esc(a.flag)+'</span>':'')+'</td><td><strong>'+esc(a.cost_for_2)+'</strong></td><td><span class="small"><strong>Days:</strong> '+esc(a.days_open)+'<br><strong>Hours:</strong> '+esc(a.hours)+'<br><strong>Exceptions:</strong> '+esc(a.exceptions)+'</span></td><td><span class="small">'+esc(a.travel_from_center_strip)+'</span></td><td>'+social(a.name)+'</td><td>'+badge(a.verified)+'</td></tr>').join('')+'</tbody>';
-  document.getElementById('activities-count').textContent=rows.length+' activities shown';
+async function renderActivities() {
+  const table = document.getElementById('activities-table'); if (!table) return;
+  const data = await loadJson('data/activities.json');
+  const query = (document.getElementById('q')?.value || '').toLowerCase();
+  const activities = data.activities.filter(a => !query || searchText(a).includes(query));
+  table.innerHTML = `<thead><tr><th>Activity · official operator</th><th>Cost for two</th><th>Days / hours / exceptions</th><th>≤60 min by public transit?</th><th>Official social links</th><th>Source / unverified items</th></tr></thead><tbody>${activities.map(a => `<tr><td>${external(a.official_url, a.name)}<span class="cell-muted">${esc(a.category)} · ${esc(a.location)}</span></td><td>${emptyValue(a.cost_for_two, 'not verified')}</td><td>${a.days_open ? `<strong>Days:</strong> ${esc(a.days_open)}` : '<strong>Days:</strong> —'}<br>${a.hours ? `<strong>Hours:</strong> ${esc(a.hours)}` : '<strong>Hours:</strong> —'}<br><span class="cell-muted"><strong>Exceptions:</strong> ${a.exceptions ? esc(a.exceptions) : 'Not verified'}</span></td><td>${emptyValue(a.transit_within_60min, 'hotel-origin route not verified')}<span class="cell-muted">${esc(a.transit_note)}</span></td><td>${social(a.social_urls)}</td><td>${sourceCell(a.official_url, [a.social_source_url])}<span class="cell-muted">⚑ ${esc(a.flag)}</span></td></tr>`).join('')}</tbody>`;
+  const count = document.getElementById('activities-count'); if (count) count.textContent = `${activities.length} activity/transport candidates · none certified under the hotel-origin time rule`;
 }
 
-async function renderDates(){
-  const el=document.getElementById('dates-table'); if(!el) return;
-  const data=await loadJSON('data/dates.json');
-  el.innerHTML='<thead><tr><th>Check-in → Check-out (7 nights)</th><th>Events in window</th><th>Demand</th><th>Note</th></tr></thead><tbody>'+
-  data.windows.map(w=>{
-    let b='<span class="badge b-blue">'+esc(w.demand)+'</span>';
-    if(w.demand==='PEAK')b='<span class="badge b-red">PEAK</span>';
-    if(w.demand.includes('least-bad'))b='<span class="badge b-green">'+esc(w.demand)+'</span>';
-    return '<tr><td><strong>'+esc(w.checkin)+' → '+esc(w.checkout)+'</strong></td><td><span class="small">'+esc(w.events)+'</span></td><td>'+b+'</td><td><span class="small">'+esc(w.note)+'</span></td></tr>';
-  }).join('')+'</tbody>';
+async function renderDates() {
+  const table = document.getElementById('dates-table'); if (!table) return;
+  const data = await loadJson('data/dates.json');
+  const query = (document.getElementById('q')?.value || '').toLowerCase();
+  const windows = data.windows.filter(w => !query || `${w.checkin} ${w.checkout}`.toLowerCase().includes(query));
+  table.innerHTML = `<thead><tr><th>Check-in → check-out</th><th>Nights</th><th>Verified official hotel total</th><th>Quote / source</th></tr></thead><tbody>${windows.map(w => `<tr><td><strong>${esc(w.checkin)} → ${esc(w.checkout)}</strong><span class="cell-muted">Calculated from requested date range</span></td><td>${w.nights}</td><td><span class="blank">—</span><span class="cell-muted">No official quote captured</span></td><td>${external(w.quote_source, 'Open official hotel site')}<span class="cell-muted">No specific booking result verified for these dates.</span></td></tr>`).join('')}</tbody>`;
+  const count = document.getElementById('dates-count'); if (count) count.textContent = `${windows.length} of ${data.windows.length} possible seven-night windows`;
 }
 
-document.addEventListener('DOMContentLoaded',()=>{
-  renderHotels();renderRestaurants();renderActivities();renderDates();
-  document.getElementById('q')?.addEventListener('input',()=>{renderHotels();renderRestaurants();renderActivities()});
-  document.getElementById('sort')?.addEventListener('change',renderHotels);
-  document.getElementById('filter')?.addEventListener('change',renderRestaurants);
+document.addEventListener('DOMContentLoaded', () => {
+  const run = () => Promise.allSettled([renderHotels(), renderRestaurants(), renderActivities(), renderDates()]).then(results => {
+    results.filter(r => r.status === 'rejected').forEach(r => console.error(r.reason));
+  });
+  run();
+  document.getElementById('q')?.addEventListener('input', run);
+  document.getElementById('sort')?.addEventListener('change', renderHotels);
+  document.getElementById('filter')?.addEventListener('change', renderRestaurants);
 });

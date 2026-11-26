@@ -1,47 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michelin Restaurants — Vegas2 Las Vegas Trip Planner</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michelin Restaurants | Vegas Trip Planner</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><div class="wrap">
-<div class="brand"><span class="logo">⭐</span><div><h1>Michelin Restaurants — 2026 Southwest Guide</h1><p>24 Las Vegas restaurants · starred vs Bib vs Selected · cost for 2 · hours · social links</p></div></div>
-<nav class="main">
-<a href="index.html">🏠 Dashboard</a>
-<a href="hotels.html">🏨 Hotels</a>
-<a href="restaurants.html" class="active">⭐ Michelin Restaurants</a>
-<a href="activities.html">🎭 Activities</a>
-<a href="dates.html">📅 Dates & Cheapest</a>
-<a href="suggestions.html">💡 Suggestions</a>
-<a href="questions.html">❓ Questions</a>
-<a href="flagged.html">🚩 Flagged for Review</a>
-</nav>
-</div></header>
-<main><div class="wrap">
-<div class="hero"><h2>All 24 Michelin-recognized restaurants in Las Vegas</h2>
-<p><strong>Guide:</strong> 2026 MICHELIN Guide Southwest (announced Aug 26, 2026; first Las Vegas guide since 2009). Official list: <a href="https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurants" target="_blank" rel="noopener">guide.michelin.com — Las Vegas ↗</a> · Press release: <a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">michelin.com ↗</a></p>
-<p><span class="badge b-gold">★★ 2 Stars (1)</span> <span class="badge b-gold">★ 1 Star (3)</span> <span class="badge b-blue">Bib Gourmand (3)</span> <span class="badge b-blue">Selected (17)</span> — <strong>Starred ≠ Listed:</strong> only the 4 starred hold stars; Bib = good value; Selected = in the Guide with no star. Legacy stars (Picasso, Le Cirque, Wing Lei as starred, Joël Robuchon as 3★) are <strong>history, not current</strong> — see flags.</p>
-<p><strong>Cost for 2</strong> = per-person menu price × 2, <strong>food only, before tax/tip/wine</strong>. Starred tasting prices are from third-party menu reports and <strong>must be confirmed on the official page</strong> (flagged ◐). Where no fixed price is published, the cell says "See official menu" — never invented.</p></div>
-
-<div class="toolbar">
-<input id="q" type="search" placeholder="Search restaurants, cuisine, location…" aria-label="Search restaurants">
-<select id="filter" aria-label="Filter by distinction">
-<option value="all">All distinctions (24)</option>
-<option value="starred">Starred only (4)</option>
-<option value="bib">Bib Gourmand only (3)</option>
-<option value="selected">Selected only (17)</option>
-</select>
-<span id="restaurants-count" class="small"></span>
-</div>
-<div class="table-wrap"><table id="restaurants-table"></table></div>
-
-<div class="note"><strong>Booking priority:</strong> Book <strong>Joël Robuchon (2★)</strong> first, then <strong>é by José Andrés</strong> (8–9 seats/seating, prepaid, hardest table in the city), then <strong>L'Atelier</strong> and <strong>Guy Savoy</strong>. Starred tables release ~30–60 days ahead — set alerts now. Bib/Selected are generally walk-in friendly (Visit Las Vegas). <strong>Social links</strong> are YouTube/TikTok/Instagram <em>search</em> URLs per row (stable + verifiable; specific video IDs are not invented).</div>
-<div class="warn"><strong>⚠ Legacy warning:</strong> Many blogs still list Picasso (closed), Le Cirque (closed 2026), Wing Lei / Michael Mina as starred, and Joël Robuchon as 3★. Those were 2008–09 ratings. <strong>Current 2026 ratings above are authoritative</strong> (Michelin Guide + press release).</div>
-</div></main>
-<footer><div class="wrap"><p><a href="index.html">← Dashboard</a> · <a href="hotels.html">Hotels →</a> · <a href="flagged.html">Flagged for Review</a></p></div></footer>
-<script src="assets/app.js"></script>
-</body>
-</html>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">V</span><span>VEGAS <small>TRIP PLANNER</small></span></a><nav aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="hotels.html">Hotels</a><a aria-current="page" href="restaurants.html">Michelin</a><a href="activities.html">Activities</a><a href="dates.html">Dates</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a class="nav-alert" href="flagged.html">Flagged</a></nav></header>
+<main class="page-main"><div class="wrap">
+  <section class="page-banner"><p class="eyebrow">03 / MICHELIN GUIDE DINING</p><h1>Las Vegas · 2026 MICHELIN Guide</h1><p>The official Guide list contains 24 restaurants. Award classes are kept distinct: <strong>1 two-star, 3 one-star, 3 Bib Gourmand, and 17 Selected</strong>. “Selected” means Guide-listed without a Star or Bib Gourmand classification in this selection; it is not a star.</p><div class="source-links"><a href="https://guide.michelin.com/us/en/nevada/las-vegas_2935077/restaurants" target="_blank" rel="noopener">Official MICHELIN Las Vegas list ↗</a><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">Official 2026 Southwest announcement ↗</a></div></section>
+  <section class="page-section"><h2>All 24 Guide entries</h2><p class="section-intro">The cost-for-two cell is intentionally blank unless an official fixed price for a pair was found. Michelin’s $, $$, $$$ and $$$$ are price categories, not meal totals. Current hours are shown only when a complete weekly schedule was captured on the official Guide profile; check the restaurant for Feb–Mar 2027 changes.</p>
+    <div class="search-row"><input id="q" type="search" placeholder="Search restaurant, cuisine or location…" aria-label="Search restaurants"><select id="filter" aria-label="Filter by Guide distinction"><option value="all">All 24</option><option value="starred">Starred only</option><option value="bib">Bib Gourmand</option><option value="selected">Selected only</option></select><span id="restaurants-count" class="result-count" role="status" aria-live="polite"></span></div>
+    <div class="data-table"><table id="restaurants-table"></table></div>
+    <div class="page-note warning"><strong>Reservation and pricing caveat:</strong> The Guide confirms award/listing and, in some profiles, current hours and price tier. It does not give a reliable all-in meal total for two. Official menus may be à la carte, tasting-menu, beverage and service-charge dependent. These totals remain blank rather than using third-party or outdated menu reports. Social URLs are included only when verified from an official venue source; current restaurant account links remain flagged.</div>
+  </section>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">V</span><span>VEGAS <small>TRIP PLANNER</small></span></a><p>Guide selection: 2026 · <a href="flagged.html">Review pricing, hours and socials</a></p><p><a href="hotels.html">Hotel clusters →</a></p></footer>
+</div></main><script src="assets/app.js"></script></body></html>

@@ -1,40 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Activities — Vegas2 Las Vegas Trip Planner</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activities & Transit | Vegas Trip Planner</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="top"><div class="wrap">
-<div class="brand"><span class="logo">🎭</span><div><h1>Activities — all within ~1 hour</h1><p>Days open · hours · exceptions · cost for 2 · official + social links</p></div></div>
-<nav class="main">
-<a href="index.html">🏠 Dashboard</a>
-<a href="hotels.html">🏨 Hotels</a>
-<a href="restaurants.html">⭐ Michelin Restaurants</a>
-<a href="activities.html" class="active">🎭 Activities</a>
-<a href="dates.html">📅 Dates & Cheapest</a>
-<a href="suggestions.html">💡 Suggestions</a>
-<a href="questions.html">❓ Questions</a>
-<a href="flagged.html">🚩 Flagged for Review</a>
-</nav>
-</div></header>
-<main><div class="wrap">
-<div class="hero"><h2>12 activities, ≤1 hour from Center Strip hotels</h2>
-<p>10 are reachable by <strong>walk / RTC bus / Monorail</strong>. 2 (Red Rock Canyon, Hoover Dam) need a <strong>car, rideshare, or tour</strong> — flagged, since they exceed a bus-only constraint. Every row has an official link + YouTube/TikTok/Instagram search links. Hours marked "Check official site" change by date/season — confirm for Feb–Mar 2027 before going.</p>
-<p><strong>Transit cheat sheet:</strong> RTC Deuce bus 24h, every ~10–15 min (7am–1am), Strip fares $4 / $6 (2-hr) / $8 (24-hr) / $20 (3-day). Monorail 7am–2am Mon–Thu, 7am–3am Fri–Sun. Las Vegas has <strong>no subway</strong>. Source: <a href="https://www.rtcsnv.com/" target="_blank" rel="noopener">rtcsnv.com ↗</a> (checked Oct 2026).</p></div>
-
-<div class="toolbar">
-<input id="q" type="search" placeholder="Search activities…" aria-label="Search activities">
-<span id="activities-count" class="small"></span>
-</div>
-<div class="table-wrap"><table id="activities-table"></table></div>
-
-<div class="ok"><strong>Free + verified highlight:</strong> <strong>Fountains of Bellagio</strong> — hours verified on the official MGM page (Mon–Fri every 30 min 3:00–7:30 PM, then every 15 min 8:00 PM–midnight; Sat/Sun/Holidays from 12:00 PM). Free, daily, walkable from Bellagio/Cosmo/ARIA/Caesars. Pair with the free Bellagio Conservatory (confirm seasonal changeover dates).</div>
-<div class="note"><strong>Planning tip:</strong> Book Sphere + Cirque shows for your exact dates once the Feb–Mar 2027 calendar is confirmed on official sites. Neon Museum + STRAT are timed-entry — book ahead. Red Rock / Hoover Dam: decide car vs tour in <a href="questions.html">Questions</a> (Q7).</div>
-</div></main>
-<footer><div class="wrap"><p><a href="index.html">← Dashboard</a> · <a href="restaurants.html">Restaurants →</a> · <a href="flagged.html">Flagged for Review</a></p></div></footer>
-<script src="assets/app.js"></script>
-</body>
-</html>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">V</span><span>VEGAS <small>TRIP PLANNER</small></span></a><nav aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin</a><a aria-current="page" href="activities.html">Activities</a><a href="dates.html">Dates</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a class="nav-alert" href="flagged.html">Flagged</a></nav></header>
+<main class="page-main"><div class="wrap">
+  <section class="page-banner"><p class="eyebrow">04 / PLACES & EXPERIENCES</p><h1>Activities and transit references</h1><p>Official operator links, current published prices/hours when confirmed, and official social accounts only when source-linked. <strong>No activity is certified as ≤60 minutes from a shortlisted hotel by public transit</strong> until a specific route is checked.</p><div class="page-note"><strong>Important:</strong> A destination being in Las Vegas does not prove it is within one hour by bus or rail. The travel-time column is blank unless a hotel-origin itinerary is verified. Activities that fail or have not been tested against the transit rule are labeled clearly.</div></section>
+  <section class="page-section"><h2>Activity candidates</h2><div class="search-row"><input id="q" type="search" placeholder="Search activity, location or type…" aria-label="Search activities"><span id="activities-count" class="result-count" role="status" aria-live="polite"></span></div><div class="data-table"><table id="activities-table"></table></div>
+    <div class="page-note"><strong>Transit fares (official current fares, not a trip quote):</strong> RTC Strip/All Access 24-hour pass is $8 per adult; for two adults, $16. Three-day pass is $20 per adult; for two adults, $40. Las Vegas Monorail publishes a 7-day full fare of $64 per adult and an online eTicket price of $53.30 per adult. Confirm fares, service notices and which pass fits your actual one-to-two-week trip before purchase. Official links: <a href="https://www.rtcsnv.com/ways-to-travel/fares-passes/" target="_blank" rel="noopener">RTC fares ↗</a> · <a href="https://www.lvmonorail.com/group-tickets/" target="_blank" rel="noopener">Monorail passes ↗</a>.</div>
+  </section>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">V</span><span>VEGAS <small>TRIP PLANNER</small></span></a><p>Ticket prices and schedules are date-sensitive · <a href="flagged.html">Open review flags</a></p><p><a href="questions.html">Decision checklist →</a></p></footer>
+</div></main><script src="assets/app.js"></script></body></html>
