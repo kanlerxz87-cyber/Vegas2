@@ -1,0 +1,401 @@
+{
+  "as_of": "2026-11-26",
+  "source_status": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s",
+  "source_status_label": "Michelin Guide 2026 Southwest — official press release (Aug 26/31, 2026)",
+  "summary": "The official 2026 Michelin Guide Southwest lists 24 restaurants in Las Vegas: 4 starred (1 with 2 stars, 3 with 1 star), 3 Bib Gourmand, 17 Michelin Recommended. Prices for 2 adults are NOT in the official release and are left blank.",
+  "price_note": "Michelin's official press release does not publish prices. Dollar amounts are blank (Unverified). Where an official restaurant page shows only a price level symbol, that symbol is shown and the amount stays blank.",
+  "legend": {
+    "v": "Verified on an official page",
+    "p": "Partially verified",
+    "u": "Unverified — left blank by rule"
+  },
+  "rows": [
+    {
+      "name": "Restaurant de Joël Robuchon",
+      "status": "2 MICHELIN Stars",
+      "status_group": "Starred",
+      "cuisine": "French Contemporary (Michelin)",
+      "address": "MGM Grand, 3799 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified — official MGM Grand page not retrieved; third-party sites disagree (Thu–Mon 5–9:30 PM vs Tue–Sat 5–9:30 PM)"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — 2-star listing and address", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "é by José Andrés",
+      "status": "1 MICHELIN Star",
+      "status_group": "Starred",
+      "cuisine": "Spanish Contemporary (Michelin)",
+      "address": "The Cosmopolitan of Las Vegas, 3708 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "v", "t": "Tuesday–Sunday; two seatings nightly at 5:30 PM and 8:30 PM (official restaurant site). A third-party listing says Tue–Sat — conflict flagged."},
+      "price_2adults": {"s": "u", "t": "Unverified — no official price on the retrieved page"},
+      "reservations": {"s": "v", "t": "Tickets released three months in advance; waitlist offered (official site)"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Official restaurant site — hours & reservations", "url": "https://www.ebyjoseandres.com/"},
+        {"label": "Michelin 2026 Southwest (official) — 1-star listing", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Guy Savoy Las Vegas",
+      "status": "1 MICHELIN Star",
+      "status_group": "Starred",
+      "cuisine": "French Contemporary (Michelin)",
+      "address": "Caesars Palace, 3570 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "p", "t": "Official page shows 'Closed / Opens 5:00 PM' status and Formal dress, but days/hours were not visible on the retrieved text. Third-party sites conflict (Wed–Sun 5:30–9:30 PM vs Tue–Sat 5–10 PM, 2025)."},
+      "price_2adults": {"s": "p", "t": "Official price level shown: $$$$. Dollar amount Unverified."},
+      "reservations": {"s": "v", "t": "Reservations via OpenTable link on official page; phone (702) 731-7286 on official page"},
+      "social": {"s": "v", "t": "Property-level (Caesars Palace) accounts on the official page: Instagram @caesarspalace; YouTube /user/caesarspalace"},
+      "overall": "p",
+      "src": [
+        {"label": "Official restaurant page (price level, dress, reservations, social)", "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"},
+        {"label": "Michelin 2026 Southwest (official) — 1-star listing", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "L'Atelier de Joël Robuchon Las Vegas",
+      "status": "1 MICHELIN Star",
+      "status_group": "Starred",
+      "cuisine": "French (Michelin)",
+      "address": "MGM Grand, 3799 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified — official page not retrieved; third-party sites disagree (Mon + Thu–Sun vs Mon–Sun)"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — 1-star listing and address", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "China Poblano",
+      "status": "Bib Gourmand",
+      "status_group": "Bib Gourmand",
+      "cuisine": "Not stated in official release",
+      "address": "The Cosmopolitan of Las Vegas, 3708 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Bib Gourmand list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Esther's Kitchen",
+      "status": "Bib Gourmand",
+      "status_group": "Bib Gourmand",
+      "cuisine": "Not stated in official release",
+      "address": "1131 S. Main St., Las Vegas, NV 89104",
+      "cluster": "Downtown / S. Main St",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Bib Gourmand list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "YEN Viet Kitchen",
+      "status": "Bib Gourmand",
+      "status_group": "Bib Gourmand",
+      "cuisine": "Not stated in official release",
+      "address": "3575 S. Decatur Blvd., Ste. 101, Las Vegas, NV 89103",
+      "cluster": "West (S. Decatur Blvd)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Bib Gourmand list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Anima by Edo",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "9205 W. Russell Rd., #185, Las Vegas, NV 89148",
+      "cluster": "Other (W. Russell Rd)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Bouchon",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "The Venetian Resort & Casino, 3355 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Cote Las Vegas",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Estiatorio Milos",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Gymkhana Las Vegas",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Indian (per MGM press release)",
+      "address": "ARIA Resort & Casino, 3730 Las Vegas Blvd. S., Las Vegas, NV 89158",
+      "cluster": "Strip",
+      "hours": {"s": "p", "t": "Sun–Thu 5–10 PM; Fri–Sat 5–10:30 PM (MGM Resorts press release, Dec 2025, as republished by StockTitan). Not confirmed on the official restaurant page."},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "p", "t": "Reservations via SevenRooms or ARIA Concierge (702) 590-9520 (MGM Resorts press release, as republished)"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "MGM Resorts press release (republished by StockTitan) — hours & reservations", "url": "https://www.stocktitan.net/news/MGM/aria-resort-casino-and-jks-restaurants-unveil-gymkhana-bringing-pus2edgb10tf.html"},
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Kabuto",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "5040 Spring Mountain Rd., #4, Las Vegas, NV 89146",
+      "cluster": "Spring Mountain (Chinatown)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Kame Omakase",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "3616 W. Spring Mountain Rd., Ste. 103, Las Vegas, NV 89102",
+      "cluster": "Spring Mountain (Chinatown)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Lamaii",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "4480 Spring Mountain Rd., Ste. 700, Las Vegas, NV 89102",
+      "cluster": "Spring Mountain (Chinatown)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Michael Mina",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "Bellagio Hotel & Casino, 3600 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Mott 32",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "The Palazzo at The Venetian, 3325 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Partage",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "3839 Spring Mountain Rd., Las Vegas, NV 89102",
+      "cluster": "Spring Mountain (Chinatown)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Pho Ga Bac Bac",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "3775 Spring Mountain Rd., Las Vegas, NV 89102",
+      "cluster": "Spring Mountain (Chinatown)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Ping Pang Pong",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "Gold Coast Hotel and Casino, 4000 W. Flamingo Rd., Las Vegas, NV 89103",
+      "cluster": "West (Gold Coast)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "SoulBelly BBQ",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "1327 S. Main St., Las Vegas, NV 89104",
+      "cluster": "Downtown / S. Main St",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Sparrow + Wolf",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "4480 Spring Mountain Rd., #100, Las Vegas, NV 89102",
+      "cluster": "Spring Mountain (Chinatown)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Stubborn Seed Las Vegas",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "Resorts World Las Vegas, 3000 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "cluster": "Strip (north end)",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "name": "Wing Lei",
+      "status": "Michelin Recommended",
+      "status_group": "Recommended",
+      "cuisine": "Not stated in official release",
+      "address": "Wynn Las Vegas, 3131 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "cluster": "Strip",
+      "hours": {"s": "u", "t": "Unverified"},
+      "price_2adults": {"s": "u", "t": "Unverified"},
+      "reservations": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — Recommended list", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    }
+  ]
+}

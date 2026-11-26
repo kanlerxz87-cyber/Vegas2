@@ -1,0 +1,135 @@
+{
+  "as_of": "2026-11-26",
+  "stay_window": {
+    "earliest_check_in": "2027-02-15",
+    "latest_check_out": "2027-03-23",
+    "preferred": {"check_in": "2027-02-15 (Monday)", "check_out": "2027-02-18 (Thursday)", "nights": 3},
+    "cost_basis_requested": "7 nights (total price)",
+    "trip_length_requested": "1–2 weeks",
+    "example_7_night_window_inside_range": "2027-02-15 to 2027-02-22 (check-in Mon, check-out Mon). Used only as the example window for price lookups; no price was retrieved for it."
+  },
+  "guests": "2 adults, 1 room",
+  "requirements": {
+    "private_bathroom": "unverified for every hotel (F05)",
+    "queen_or_larger_bed": "unverified for every hotel (F05)",
+    "budget": "not specified by user (Q-05)"
+  },
+  "ranking_method": "Ranked by the number of 2026 MICHELIN Guide Southwest restaurants inside the same resort (address match, verified from S01/S02). Tie-break: starred restaurants, then Bib Gourmands. This is an in-resort count, not a 1-hour transit count. The 1-hour transit check is unverified (F20).",
+  "hotels": [
+    {
+      "rank": 1, "id": "H1", "name": "The Venetian Resort (incl. The Palazzo)",
+      "michelin_restaurants": ["R09", "R10", "R11", "R17"],
+      "michelin_counts": {"two_star": 0, "one_star": 0, "bib_gourmand": 0, "recommended": 4},
+      "address": "3355 Las Vegas Blvd. S., Las Vegas, NV 89109 (Venetian); Mott 32 at The Palazzo, 3325 S. Las Vegas Blvd.",
+      "area": "The Strip", "official_site": "https://www.venetianlasvegas.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED (no official page retrieved this session; F08)",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S03"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 2, "id": "H2", "name": "MGM Grand",
+      "michelin_restaurants": ["R01", "R02"],
+      "michelin_counts": {"two_star": 1, "one_star": 1, "bib_gourmand": 0, "recommended": 0},
+      "address": "3799 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "area": "The Strip", "official_site": "https://mgmgrand.mgmresorts.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED. Third-party reports say $50 before tax (S22); not confirmed on an official page (F08).",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S04", "S05"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 3, "id": "H3", "name": "The Cosmopolitan of Las Vegas",
+      "michelin_restaurants": ["R03", "R05"],
+      "michelin_counts": {"two_star": 0, "one_star": 1, "bib_gourmand": 1, "recommended": 0},
+      "address": "3708 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "area": "The Strip", "official_site": "https://cosmopolitanlasvegas.mgmresorts.com/en.html",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED. Third-party reports say $55 before tax (S22); not confirmed on an official page (F08).",
+      "private_bathroom": "UNVERIFIED (F05). Official page describes 'residential-styled rooms with private terraces' (S20); bathroom not stated.", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04). Official site lists an 'Advance Purchase Non-Refundable' rate type (S20), which is a trade-off, not a price guarantee.",
+      "sources": ["S01", "S02", "S06", "S20"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 4, "id": "H4", "name": "Caesars Palace",
+      "michelin_restaurants": ["R04"],
+      "michelin_counts": {"two_star": 0, "one_star": 1, "bib_gourmand": 0, "recommended": 0},
+      "address": "3570 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "area": "The Strip", "official_site": "https://www.caesars.com/caesars-palace",
+      "resort_fee_per_night_usd": 62.30, "resort_fee_status": "VERIFIED: $62.30 per night incl. tax (official booking page, S08). The tax split is not shown on that page and is not used.",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED. Official booking page did not return Feb 2027 rates (S08). Promotional banner shows a December 2026 sale (F07).",
+      "best_booking_time": "UNVERIFIED (F04). Official advance-purchase offer: up to 30% off for stays 30+ days ahead, terms apply (S09). Official '48-hour cancellation' is asterisked (F28).",
+      "sources": ["S01", "S02", "S07", "S08", "S09"], "flags": ["F04", "F05", "F06", "F07", "F28"]
+    },
+    {
+      "rank": 5, "id": "H5", "name": "Bellagio",
+      "michelin_restaurants": ["R16"],
+      "michelin_counts": {"two_star": 0, "one_star": 0, "bib_gourmand": 0, "recommended": 1},
+      "address": "3600 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "area": "The Strip", "official_site": "https://bellagio.mgmresorts.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED. Third-party reports say $55 before tax (S22) (F08).",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S03"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 6, "id": "H6", "name": "Wynn Las Vegas",
+      "michelin_restaurants": ["R24"],
+      "michelin_counts": {"two_star": 0, "one_star": 0, "bib_gourmand": 0, "recommended": 1},
+      "address": "3131 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "area": "The Strip", "official_site": "https://www.wynnlasvegas.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED (F08)",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S03"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 7, "id": "H7", "name": "ARIA Resort & Casino",
+      "michelin_restaurants": ["R12"],
+      "michelin_counts": {"two_star": 0, "one_star": 0, "bib_gourmand": 0, "recommended": 1},
+      "address": "3730 S. Las Vegas Blvd., Las Vegas, NV 89158",
+      "area": "The Strip", "official_site": "https://aria.mgmresorts.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED. Third-party reports say $55 before tax (S22) (F08).",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S03"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 8, "id": "H8", "name": "Resorts World Las Vegas",
+      "michelin_restaurants": ["R23"],
+      "michelin_counts": {"two_star": 0, "one_star": 0, "bib_gourmand": 0, "recommended": 1},
+      "address": "3000 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "area": "The Strip (north)", "official_site": "https://www.rwlasvegas.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED (F08)",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S03"], "flags": ["F05", "F06", "F08"]
+    },
+    {
+      "rank": 9, "id": "H9", "name": "Gold Coast Hotel & Casino",
+      "michelin_restaurants": ["R20"],
+      "michelin_counts": {"two_star": 0, "one_star": 0, "bib_gourmand": 0, "recommended": 1},
+      "address": "4000 W. Flamingo Rd., Las Vegas, NV 89103",
+      "area": "Off-Strip (west)", "official_site": "https://goldcoast.boydgaming.com/",
+      "resort_fee_per_night_usd": null, "resort_fee_status": "UNVERIFIED (F08)",
+      "private_bathroom": "UNVERIFIED (F05)", "queen_or_larger_bed": "UNVERIFIED (F05)",
+      "price_7_nights_usd": null, "price_status": "UNVERIFIED (F06)",
+      "best_booking_time": "UNVERIFIED (F04)",
+      "sources": ["S01", "S02", "S03"], "flags": ["F05", "F06", "F08"]
+    }
+  ],
+  "michelin_clusters": [
+    {"id": "C1", "name": "Strip center and south (Caesars, Cosmopolitan, MGM Grand, Bellagio)", "restaurants": ["R01", "R02", "R03", "R04", "R05", "R16"], "count": 6, "note": "Densest starred cluster: 4 starred restaurants across 3 resorts."},
+    {"id": "C2", "name": "Venetian campus and Strip north (Venetian/Palazzo, Wynn, ARIA, Resorts World)", "restaurants": ["R09", "R10", "R11", "R17", "R12", "R23", "R24"], "count": 7, "note": "Largest Recommended cluster. No starred restaurants."},
+    {"id": "C3", "name": "Spring Mountain Road / Chinatown corridor", "restaurants": ["R13", "R14", "R15", "R18", "R19", "R22"], "count": 6, "note": "Six Michelin-listed restaurants on Spring Mountain Rd. No hotel in the current shortlist is in this corridor (Q-06)."},
+    {"id": "C4", "name": "Downtown and Arts District", "restaurants": ["R06", "R21"], "count": 2, "note": "One Bib Gourmand and one Recommended. Transit time from the Strip is unverified (F20)."},
+    {"id": "C5", "name": "Off-Strip (Decatur, Russell Rd, Flamingo)", "restaurants": ["R07", "R08", "R20"], "count": 3, "note": "Spread out. Transit time from the Strip is unverified (F20)."}
+  ]
+}
