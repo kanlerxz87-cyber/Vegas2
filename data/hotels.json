@@ -1,0 +1,176 @@
+{
+  "as_of": "2026-11-26",
+  "stay": {
+    "preferred": "Check-in Mon Feb 15, 2027 → check-out Thu Feb 18, 2027 (3 nights)",
+    "seven_night": "Check-in Mon Feb 15, 2027 → check-out Mon Feb 22, 2027 (7 nights)",
+    "holiday_note": "Feb 15, 2027 is Washington's Birthday (Presidents' Day), a federal holiday per OPM."
+  },
+  "legend": {
+    "v": "Verified on an official page",
+    "p": "Partially verified (official page covers part of the claim, or only a suite/adjacent room)",
+    "u": "Unverified — left blank by rule"
+  },
+  "method": "Candidates are the Strip-corridor resorts that host at least one restaurant in the official 2026 Michelin Southwest list. Michelin count = restaurants on the same resort/campus per the official Michelin address list. Transit-time analysis was NOT performed (no official transit-time source retrieved), so the 1-hour test is unverified for every hotel.",
+  "rows": [
+    {
+      "rank": 1,
+      "name": "The Venetian Resort",
+      "cluster": "Strip",
+      "address": "3355 S. Las Vegas Blvd (address listed for Venetian restaurants in the official Michelin release)",
+      "michelin_on_campus": 4,
+      "michelin_on_campus_list": "Bouchon (Recommended); Cote Las Vegas (Recommended); Estiatorio Milos (Recommended); Mott 32 at The Palazzo (Recommended)",
+      "queen": {"s": "u", "t": "Unverified — official Venetian room page not retrieved"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "u",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official press release) — campus restaurants", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site (not retrieved — fetch failed)", "url": "https://www.venetian.com/"}
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "The Cosmopolitan of Las Vegas",
+      "cluster": "Strip",
+      "address": "3708 Las Vegas Blvd. S., Las Vegas, NV 89109 (Michelin release)",
+      "michelin_on_campus": 2,
+      "michelin_on_campus_list": "é by José Andrés (1 MICHELIN Star); China Poblano (Bib Gourmand)",
+      "queen": {"s": "v", "t": "Yes — 'Terrace Studio Two Queen Beds Fountain View' is listed on the official hotel homepage"},
+      "private_bath": {"s": "u", "t": "Unverified — bathroom details not on the retrieved official page"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Official hotel homepage (room list)", "url": "https://cosmopolitanlasvegas.mgmresorts.com/en.html"},
+        {"label": "Michelin 2026 Southwest (official) — campus restaurants", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "MGM Grand Hotel & Casino",
+      "cluster": "Strip",
+      "address": "3799 S. Las Vegas Blvd., Las Vegas, NV 89109 (Michelin release)",
+      "michelin_on_campus": 2,
+      "michelin_on_campus_list": "Restaurant de Joël Robuchon (2 MICHELIN Stars); L'Atelier de Joël Robuchon Las Vegas (1 MICHELIN Star)",
+      "queen": {"s": "u", "t": "Unverified — official MGM Grand room page not retrieved"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "u",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official) — campus restaurants", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site (not retrieved — fetch failed)", "url": "https://www.mgmgrand.com/"}
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Caesars Palace",
+      "cluster": "Strip",
+      "address": "3570 Las Vegas Blvd S, Las Vegas, NV 89109 (official Caesars Palace restaurant page)",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Guy Savoy Las Vegas (1 MICHELIN Star)",
+      "queen": {"s": "u", "t": "Unverified — no official Caesars room list retrieved (2-queen room names seen only on third-party sites)"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — the official homepage shows a 'Rooms from $139' promo for Dec 11–13, 2026 only; not valid for trip dates"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "p", "t": "Official homepage: 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance' (terms apply). Not a verified cheapest-booking window."},
+      "social": {"s": "v", "t": "Property-level accounts linked on the official page: Instagram @caesarspalace; YouTube /user/caesarspalace"},
+      "overall": "p",
+      "src": [
+        {"label": "Official hotel homepage", "url": "https://www.caesars.com/caesars-palace"},
+        {"label": "Official restaurant page (Guy Savoy) — address & social links", "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"}
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Bellagio",
+      "cluster": "Strip",
+      "address": "3600 S. Las Vegas Blvd. (address listed for Michael Mina at Bellagio in the official Michelin release)",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Michael Mina (Michelin Recommended)",
+      "queen": {"s": "v", "t": "Yes — 'Premier Two Queen', 510 sq. ft., 2 Queen Beds, max 4 guests (official room list)"},
+      "private_bath": {"s": "p", "t": "Marble bathroom described on the official room page; the word 'private' is not used — confirm at booking"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Official hotel rooms page (room list & sizes)", "url": "https://bellagio.mgmresorts.com/en/hotel.html"},
+        {"label": "Michelin 2026 Southwest (official) — Michael Mina address", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Wynn Las Vegas",
+      "cluster": "Strip",
+      "address": "3131 Las Vegas Blvd. S., Las Vegas, NV 89109 (address listed for Wing Lei in the official Michelin release)",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Wing Lei (Michelin Recommended)",
+      "queen": {"s": "v", "t": "Yes — 'Wynn Panoramic View Two Queens', 640 sq ft, two Queen beds (official Wynn booking engine)"},
+      "private_bath": {"s": "v", "t": "In-room marble bathroom with glass-enclosed shower and separate water closet, per the same official booking page"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Official Wynn booking engine (room types)", "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0"},
+        {"label": "Michelin 2026 Southwest (official) — Wing Lei address", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "ARIA Resort & Casino",
+      "cluster": "Strip",
+      "address": "3730 Las Vegas Blvd. S., Las Vegas, NV 89158 (address listed for Gymkhana in the official Michelin release)",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Gymkhana Las Vegas (Michelin Recommended)",
+      "queen": {"s": "p", "t": "2 Queen Beds confirmed on the official ARIA 'Center Tower Suite' page (a suite). Standard 2-queen room not confirmed on an official page"},
+      "private_bath": {"s": "p", "t": "Private water closet and stone shower listed on the official suite page (suite only)"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Official ARIA suite page (2 queen beds, bathroom)", "url": "https://aria.mgmresorts.com/en/hotel/center-suite.html"},
+        {"label": "Michelin 2026 Southwest (official) — Gymkhana address", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Resorts World Las Vegas (Conrad Las Vegas room type)",
+      "cluster": "Strip (north end)",
+      "address": "3000 South Las Vegas Boulevard, Las Vegas, NV 89109 (official Resorts World room page)",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Stubborn Seed Las Vegas (Michelin Recommended)",
+      "queen": {"s": "v", "t": "Yes — Conrad Las Vegas Premium Room: 'One King Bed or Two Queen Beds', 550 sq. ft. (official room page)"},
+      "private_bath": {"s": "v", "t": "Spa-inspired bathroom with walk-in shower in the room (official room page)"},
+      "transit_1hr": {"s": "u", "t": "Unverified — no official transit-time source"},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "overall": "p",
+      "src": [
+        {"label": "Official Resorts World room page (Conrad Premium Room)", "url": "https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/"},
+        {"label": "Michelin 2026 Southwest (official) — Stubborn Seed address", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"}
+      ]
+    }
+  ]
+}
