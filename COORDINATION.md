@@ -83,12 +83,12 @@ The original checkout initially exposed only README.md and no coordination file.
 
 ## Integration record (session 36cc5108, T6)
 
-- Conflict: `main` moved to `dce4548` (other sessions' root dashboard, `.github/workflows/pages.yml` deploying repo root). This branch merged `origin/main` with both sides kept; no file from either side was deleted.
-- Pages: the workflow now uploads `docs/` (was `.`) so the published site is this build. Pages source set to `main` `/docs` (F27).
-- Other dashboard (root `index.html`, `app.js`, `data.js`, `styles.css`) remains in the repo but is no longer the published site. Its starred-count and omission errors are flagged as F29.
-- Corrections in this integration (see commit log): removed an unsupported Caesars tax split; OPM holiday name aligned to OPM's wording; Yen Viet Kitchen Time Out check resolved (no conflict).
-- PR and merge result: recorded at the end of this file (see "PR and deployment result").
-
+- **PR #6** (https://github.com/kanlerxz87-cyber/Vegas2/pull/6): `arena/36cc5108-vegas2` → `main`. Conflict with `main` at `dce4548` (another session's root dashboard). Both sides kept; no file deleted. Merged with `gh pr merge 6 --merge` after the build passed (0 errors, 672 local links OK). Merge result: merged.
+- **Pages source**: the API call to set source `main` `/docs` returned **403 (Resource not accessible by integration)**. The source is still `main` `/` and must be set in Settings → Pages by the repository owner if the `/docs` source is wanted (F27). The site works either way (see next item).
+- **Root redirect**: because the root build was still serving the earlier dashboard, `index.html` at the repository root now redirects to `docs/index.html`. The earlier dashboard moved to `legacy-dashboard/` with `git mv` (nothing deleted; its COORDINATION link now points to GitHub).
+- **Pages workflow**: `.github/workflows/pages.yml` now uploads `docs/` (was `.`).
+- **Corrections in this integration**: removed an unsupported Caesars tax split; OPM holiday wording; Yen Viet Kitchen Time Out check resolved (no conflict, F14); other dashboard's starred-count error flagged (F29).
+- **PR #7**: this change (root redirect, legacy move, record update). Its merge result is recorded in the PR and in the next COORDINATION update.
 
 ---
 
@@ -119,7 +119,8 @@ Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`
 ### Log
 - 2026-11-26 — Claimed and built this session's site on `arena/059c3126-vegas2` (commits `28b1b63`, `fcb6303`, `b7949d2`). Opened PR #4 to `main`.
 - 2026-11-26 — PR #4 CI passed. The merge was blocked because `main` gained the other session's dashboard (PR #6). Corrections: an earlier line in this log said "this branch is the only one merged" — that was not accurate at the time and is superseded here. The same line also said social links for Neon Museum and Hoover Dam were covered; they were not verified and are not published.
-- 2026-11-26 — Integration: merged `origin/main` into this branch, keeping both sides. Data moved to `data/trip/`. Both sites built into `docs/`.
+- 2026-11-26 — Integration: merged `origin/main` into this branch, keeping both sides. Data moved to `data/trip/`. Both sites built into `docs/`: this planner at `docs/` root, the other session's planner at `docs/legacy/` (built by `scripts/build-legacy.py`, unchanged `site/build.py`). The root `index.html` redirect (main, PR #7) now lands on this planner's landing page.
+- 2026-11-26 — Pages: `pages.yml` uploads `docs/`, so the published site root is `docs/`. Other session's planner is at `/legacy/` on the published site.
 
 ### PR and deployment result
 (Recorded at the end of integration.)
