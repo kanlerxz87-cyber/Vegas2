@@ -1,15 +1,20 @@
-# Las Vegas Trip Planner (2027)
+# Las Vegas Trip Planner
 
-A mobile-friendly GitHub Pages research dashboard for a Las Vegas trip in the Feb 15–Mar 23, 2027 window. It separates officially sourced information from unknowns and flags unresolved decisions rather than making up live hotel rates, opening schedules, transit times, or room inventory.
+A source-first, mobile-friendly planning dashboard for a two-adult Las Vegas trip (Feb 15–Mar 23, 2027). Open `index.html` locally or publish this repository with GitHub Pages.
 
-## Preview locally
+## Verification and limits
 
-Open `index.html` in a browser. The site uses a small vanilla JS data file and no build step.
+The dashboard separates published facts from unknowns. Dynamic hotel rates and total tax-inclusive prices for Feb 15–22, 2027, restaurant menu totals, transit journey times and future opening hours are not represented as verified unless a cited official source provides them. Blank values are deliberately flagged rather than estimated. Recheck all information before booking.
 
-## Publish with GitHub Pages
+The 2026 MICHELIN Guide search identified several Las Vegas listings, including three starred restaurants. Individual current Guide listings are linked. Guide presence and star status are explicitly distinguished.
 
-The included Actions workflow publishes the repository root on pushes to `main` and via manual dispatch. In repository Settings → Pages, set the source to GitHub Actions if it is not already selected.
+## Deploy
 
-## Research caveat
+GitHub repository Settings → Pages → Deploy from a branch → `main` / `/ (root)`, or use the included Pages workflow on pushes to `main`.
 
-Restaurant star classifications link to individual official MICHELIN Guide pages and refer to their 2026 selection. This is not a claim that future hours, prices, routes, hotel inventory, or 2027 Guide awards will remain unchanged. See the site's **Flagged for Review** section before making bookings.
+## Files
+
+- `index.html`: single-page dashboard with category navigation.
+- `styles.css`: responsive styling.
+- `app.js`: interactive navigation and filtering.
+- `COORDINATION.md`: task board, sources, verification notes and flagged gaps.
