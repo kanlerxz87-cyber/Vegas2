@@ -211,4 +211,7 @@ Last updated: 2026-11-26 (UTC). Owner session: `059c3126`. Scope: `data/trip/**`
 - 2026-11-26 — Integration: merged `origin/main` (several times, because other sessions merged in parallel). Kept `main`'s `docs/` and moved this planner to its own folder `docs/session-059c3126/`. Removed this session's root-level copies and the `docs/legacy/` copy (the other planner already exists at `docs/session-36cc5108/`). `scripts/build-legacy.py` removed.
 
 ### PR and deployment result
-(Recorded at the end of integration.)
+- PR #4 (https://github.com/kanlerxz87-cyber/Vegas2/pull/4): `arena/059c3126-vegas2` → `main`. Merged with `gh pr merge 4 --merge` at merge commit `454e739317a7757a5934fb009565cdfa34d74968` (2026-11-26 22:16 UTC). Merged after the build and verification passed on the exact tree (CI run 45903499316: pass). `main` moved several times during integration (PRs #5, #6, #7, #10, #13 from other sessions); this branch merged the latest `main` each time, kept every other session's files, and did not edit them.
+- Pages: `pages.yml` deploy run 45903715853 succeeded on `454e739`; Pages API reports the latest build as `built` on that commit. The uploaded artifact is `docs/`, and this planner is at `/session-059c3126/` in it. The sandbox could not load the public URL (no route to github.io), so the live page was not checked in-sandbox.
+- CI on `main` for `454e739` (run 45903715931): pass.
+- Not in this PR: the external link report (`scripts/linkcheck.mjs`) is warning-only; in-sandbox link checks failed (no outbound web access), so external links remain unverified (flag F16).
