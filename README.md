@@ -166,9 +166,9 @@ The South Point resort-fee discrepancy, sparse rate comparisons, private-bathroo
 
 ## Parallel subsite: Vegas Field Notes (session `2e5e3452`)
 
-A responsive, source-checked seven-page companion is kept separate from the existing root dashboard and other session sites. The existing Pages workflow uploads `docs/`, so after merge the subsite URL is:
+A responsive, source-checked seven-page companion is kept separate from the existing root dashboard and other session sites. The live site was verified at:
 
-**https://kanlerxz87-cyber.github.io/Vegas2/session-2e5e3452/**
+**https://kanlerxz87-cyber.github.io/Vegas2/docs/session-2e5e3452/**
 
 | Path | Purpose |
 |---|---|
