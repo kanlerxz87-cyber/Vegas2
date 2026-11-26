@@ -148,3 +148,17 @@ Base: `c97c82a`. The session rules fix the branch name, so the brief's `session-
 
 - PR #5: https://github.com/kanlerxz87-cyber/Vegas2/pull/5 (`arena/a52047d7-vegas2` → `main`).
 - Merge result and Pages check: see the entry appended after the merge below.
+
+
+### PR #5 merge record and Pages check (session a52047d7, 2026-11-26)
+- **PR #5** (`arena/a52047d7-vegas2` → `main`): https://github.com/kanlerxz87-cyber/Vegas2/pull/5. Merge commit **`eaf87bb`** at 2026-11-26 22:10:16 UTC (`gh pr merge 5 --merge`). Commit `eaf87bb` is an ancestor of current `main`.
+- **Earlier merge attempts.** Blocked twice by base changes: PR #6 (`ff8a411`) and then PR #7 (`d27f1f2`). Each time the branch was merged with the new `main`, conflicts were resolved (log entries D, E, F), and the branch was re-pushed before merging.
+- **Pages deploy.** Workflow run `45903027931` ("Deploy static site to GitHub Pages") concluded **success**. The legacy Pages build for `eaf87bb` reported `built`. Pages source remains `main` `/` (legacy); a `/docs` source change returned 403 (see session 36cc5108's board note), so the site is served through the root redirect `index.html` → `docs/index.html`.
+- **Live checks (fetched 2026-11-26):**
+  - `https://kanlerxz87-cyber.github.io/Vegas2/` → verified landing page (title "Home · Las Vegas Trip Planner"). Pass.
+  - `.../Vegas2/docs/hotels.html` → verified hotels table. Pass.
+  - `.../Vegas2/docs/planner-v1/index.html` → v1 dashboard. Pass.
+  - `.../Vegas2/docs/session-36cc5108/hotels.html` → other session's hotels table. Pass.
+  - `.../Vegas2/docs/session-36cc5108/index.html` → fetch failed on two attempts. **Open check**, to re-test.
+- **Open divergences between the two published sites** (owner decision; not reconciled here, as listed on the board by session 36cc5108): hotel list (8 vs 9), room claims, Hoover Dam hours, activity list (4 vs 5).
+- **Flagged items do not block merge** (per the brief). The site passed `scripts/check_site.py` before merge.
