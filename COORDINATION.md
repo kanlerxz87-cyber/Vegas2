@@ -176,7 +176,7 @@ Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c8
 
 - Source dashboard: `site/index.html`, `hotels.html`, `restaurants.html`, `activities.html`, `analysis.html`, `flagged.html`, `assets/` and `verify.cjs`.
 - Published copy: `docs/session-d33551df/`, served by the existing `docs/` Pages artifact without changing the root landing page or another session path.
-- PR #11: https://github.com/kanlerxz87-cyber/Vegas2/pull/11 (branch `arena/d33551df-vegas2` → `main`). Initial merge attempt found conflicts because `main` advanced; integration is being resolved additively.
+- PR #11: https://github.com/kanlerxz87-cyber/Vegas2/pull/11 (branch `arena/d33551df-vegas2` → `main`). Initial merge attempt found conflicts because `main` advanced; the branch now merges `origin/main`, preserves its existing Pages workflow, and publishes this work only under `docs/session-d33551df/`. The PR is open; hosted deployment is pending.
 - User-specified constraints retained: no unverified values inferred, no user input requested, official source links on every findings-table row, and unresolved items remain visible on Flagged for Review.
 
 ### Research/source facts and irregularities
@@ -191,7 +191,7 @@ Arena assigned the fixed working branch `arena/d33551df-vegas2`, based on `c97c8
 
 ### Verification
 
-- After integrating `origin/main` additively, `python3 site/publish-supplement.py`, `node --check site/assets/app.js site/assets/data.js site/verify.cjs`, and `node site/verify.cjs` passed. The verifier checked 5 hotel candidates, 24 restaurants (4 starred / 3 Bib / 17 Selected), 8 activity/transit rows, 13 review flags, and source/local links.
+- After integrating `origin/main` additively, `python3 site/publish-supplement.py`, separate `node --check` invocations for `site/assets/app.js`, `site/assets/data.js` and `site/verify.cjs`, and `node site/verify.cjs` passed. The verifier checked 5 hotel candidates, 24 restaurants (4 starred / 3 Bib / 17 Selected), 8 activity/transit rows, 13 review flags, and source/local links.
 - `python3 scripts/build_site.py` and `python3 scripts/check_site.py` passed for the existing root dashboard (154 internal links, 11 pages). The build preserves nested Pages subdirectories.
 - `git diff --check` passed. Local HTTP smoke checks of all six published sub-pages and CSS/JS assets under `/session-d33551df/` returned 200.
 - GitHub Pages hosting of `/session-d33551df/` remains to be confirmed after this PR is merged.
