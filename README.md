@@ -161,3 +161,29 @@ python3 scripts/build_pages.py
 ```
 
 The South Point resort-fee discrepancy, sparse rate comparisons, private-bathroom confirmation, and future schedules remain openly flagged in the published Review Flags page.
+
+---
+
+## Parallel subsite: Vegas Field Notes (session `2e5e3452`)
+
+A responsive, source-checked seven-page companion is kept separate from the existing root dashboard and other session sites. The existing Pages workflow uploads `docs/`, so after merge the subsite URL is:
+
+**https://kanlerxz87-cyber.github.io/Vegas2/session-2e5e3452/**
+
+| Path | Purpose |
+|---|---|
+| `field-notes/` | Editable source: pages, local data, CSS, and JavaScript |
+| `docs/session-2e5e3452/` | Built static copy included in the existing Pages artifact |
+| `scripts/build_field_notes.py` | Copies only this subsite into its isolated Pages path |
+| `scripts/validate_field_notes.py` | Checks source and generated pages, local links, research counts, and hotel scenarios |
+| `.github/workflows/validate-field-notes.yml` | PR validation without replacing the existing Pages deployment workflow |
+
+Rebuild and verify:
+
+```bash
+node --check field-notes/assets/js/app.js
+python3 scripts/build_field_notes.py
+python3 scripts/validate_field_notes.py
+```
+
+Hotel snapshots were checked Nov 26, 2026. Three-night and seven-night scenarios remain separate; 2026 MICHELIN distinctions are not presented as 2027 awards; unsupported meal totals and future dates stay flagged.
