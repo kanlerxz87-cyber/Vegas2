@@ -1,0 +1,31 @@
+name: Validate Session 3c7ffbdd Dashboard
+
+on:
+  push:
+    branches: [main, "arena/3c7ffbdd-vegas2"]
+    paths:
+      - "data/session-3c7ffbdd/**"
+      - "docs/session-3c7ffbdd/**"
+      - "scripts/build_session_3c7ffbdd.py"
+      - "scripts/check_session_3c7ffbdd.py"
+      - ".github/workflows/validate-session-3c7ffbdd.yml"
+  pull_request:
+    paths:
+      - "data/session-3c7ffbdd/**"
+      - "docs/session-3c7ffbdd/**"
+      - "scripts/build_session_3c7ffbdd.py"
+      - "scripts/check_session_3c7ffbdd.py"
+      - ".github/workflows/validate-session-3c7ffbdd.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify deterministic build and integrity checks
+        run: |
+          python3 scripts/build_session_3c7ffbdd.py --check
+          python3 scripts/check_session_3c7ffbdd.py
