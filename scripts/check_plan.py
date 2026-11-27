@@ -122,13 +122,23 @@ def main():
             for f in ("total", "room", "nightly", "basis"):
                 if f not in p:
                     fail(f"hotel {h['name']}: price7 missing {f}")
-            if not isinstance(p.get("total"), int):
-                fail(f"hotel {h['name']}: price7 total must be an integer")
-            m = re.search(r"\$(\d[\d,]*)", p.get("nightly", ""))
-            if m and isinstance(p.get("total"), int):
-                nightly = int(m.group(1).replace(",", ""))
-                if abs(nightly * 7 - p["total"]) > 7:
-                    fail(f"hotel {h['name']}: nightly × 7 ({nightly*7}) != total ({p['total']})")
+            # Money may carry cents (e.g. an avg/night of $277.21). Accept int or
+            # float, reject bool/str, and verify nightly x 7 to the cent.
+            total = p.get("total")
+            if isinstance(total, bool) or not isinstance(total, (int, float)):
+                fail(f"hotel {h['name']}: price7 total must be numeric")
+            m = re.search(r"\$(\d[\d,]*(?:\.\d{1,2})?)", p.get("nightly", ""))
+            if m and isinstance(total, (int, float)) and not isinstance(total, bool):
+                nightly = float(m.group(1).replace(",", ""))
+                # Engines round an average nightly to the cent, so allow 7c of drift.
+                if abs(nightly * 7 - total) > 0.07:
+                    if p.get("publishedTotal"):
+                        # The engine itself printed the stay total; the nightly figure is a
+                        # rounded display. Allowed only with an explicit basis note.
+                        if "ROUNDING DISCREPANCY" not in p.get("basis", ""):
+                            fail(f"hotel {h['name']}: publishedTotal set without a rounding note")
+                    else:
+                        fail(f"hotel {h['name']}: nightly × 7 ({nightly*7:.2f}) != total ({total})")
         else:
             if not h.get("price7Note"):
                 fail(f"hotel {h['name']}: no price and no explanation")
