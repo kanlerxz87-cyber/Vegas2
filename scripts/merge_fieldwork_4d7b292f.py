@@ -793,6 +793,20 @@ def repo_review():
             "status": "resolved",
         },
         {
+            "id": "R-16", "severity": "medium",
+            "finding": "A prior session's validator fails on main because its official-domain allowlist is too narrow",
+            "evidence": ("scripts/check_site.py reports 26 failures on origin/main @ 900cb90, independent of "
+                         "this session's changes (reproduced from a clean git archive of main). The failures "
+                         "are of two kinds: (a) genuinely official domains rejected by the allowlist, e.g. "
+                         "venetianlasvegas.com and rtcws.rtcsnv.com; (b) insecure http:// social links such as "
+                         "http://instagram.com/mypubliclands. Its own CI job is not gating main."),
+            "action": ("Not fixed here: data/verified/ and scripts/check_site.py belong to session a52047d7 "
+                       "and are outside this session's additive scope. Requested change: add the official "
+                       "domains to the allowlist and upgrade those social links to https. The canonical root "
+                       "site is gated separately by scripts/check_plan.py, which passes with 0 failures."),
+            "status": "needs review",
+        },
+        {
             "id": "R-15", "severity": "medium",
             "finding": "GitHub Pages source configuration and the Pages workflow disagree",
             "evidence": ("The Pages API reports build_type 'legacy' with source branch 'main' and path '/', "

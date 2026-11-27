@@ -370,3 +370,18 @@ No prior session's folder, data tree or workflow was edited or deleted: `docs/se
 | 5 | PR to main, merge, confirm Pages deploy, record result | in progress | 9b4f59cd | GitHub PR |
 
 **Verification rule:** A value appears only when an official source confirmed it. Otherwise blank + `Unverified` + flag ID linking to Flagged for Review. No inference, no hallucination. Dynamic 2027 hotel rates are re-checked live; if an official booking page cannot be retrieved, the price stays blank.
+
+### Second parallel merge (PR #25) and cross-session regression check
+`main` advanced again to `900cb90` (PR #25, session `9b4f59cd`, isolated subsite under `docs/session-9b4f59cd/`). Merged additively; only `COORDINATION.md` conflicted and **both sides were retained**.
+
+All session validators were then run against this branch:
+| Validator | Result |
+|---|---|
+| `scripts/check_plan.py` (canonical root site) | **OK — 0 failures, 0 warnings, 11 pages** |
+| `scripts/check_session_9b4f59cd.py` | **PASS — 10 pages, 64 sources, 16 flags** |
+| `scripts/check_session_b29fc34e.py` | **PASS — 6 pages, 24 sourced cards** |
+| `scripts/validate_field_notes.py` | **PASS — 24 restaurants, 5 hotels per scenario** |
+| `node scripts/build.mjs` | **PASS — 11 pages, checks passed** |
+| `scripts/check_site.py` | 26 failures — **pre-existing on `main`**, reproduced from a clean `git archive origin/main`. Caused by an over-narrow official-domain allowlist (rejects `venetianlasvegas.com`, `rtcws.rtcsnv.com`) plus `http://` social links. Logged as **R-16**; not fixed because `data/verified/` and that script belong to session `a52047d7`. |
+
+No working-tree drift after running every builder (`git status` clean).
