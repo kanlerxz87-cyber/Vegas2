@@ -314,3 +314,34 @@ After this session's PR #22 and PR #24 merged, two further sessions merged to `m
 - One transient Pages build error was logged for commit `ac92554` ("Page build failed") between two merges; the immediate rebuild succeeded, so it did not persist.
 
 **Root-page ownership:** `index.html`, `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `sources.html`, `repo-review.html`, `assets/site/**` and `data/plan/**` belong to this consolidated build. Rebuild with `python3 scripts/build_plan.py && python3 scripts/check_plan.py`; hand-editing a root page will be overwritten by the next build. Other sessions should keep publishing inside `docs/session-<id>/` with data in their own folder.
+## Session `arena/3c7ffbdd-vegas2` — Verified Line-by-Line Audit & Isolated Dashboard
+
+**Claimed:** 2026-11-27 (UTC). Session ID `3c7ffbdd-vegas2`. Branch `arena/3c7ffbdd-vegas2` (Arena pins the branch; `session-<id>/<task>` branch naming cannot be used).
+**Parallel-session coordination:** Active parallel sessions (`arena/155b420b-vegas2`, `arena/4d7b292f-vegas2`, `arena/c88d116c-vegas2`) claimed root-site scopes, and `arena/9b4f59cd-vegas2` claimed its own isolated subsite. To maintain strictly non-overlapping scopes and never overwrite any other session's work, this session edits **only** its isolated paths (`data/session-3c7ffbdd/**`, `docs/session-3c7ffbdd/**`, `scripts/build_session_3c7ffbdd.py`, `scripts/check_session_3c7ffbdd.py`, `.github/workflows/validate-session-3c7ffbdd.yml`) plus append-only updates to this section of `COORDINATION.md`.
+
+### Task board (`3c7ffbdd-vegas2`)
+
+| # | Task | Status | Owner | File scope | Sources / verification |
+|---|---|---|---|---|---|
+| 1 | Claim non-overlapping scope in COORDINATION.md | done | 3c7ffbdd-vegas2 | COORDINATION.md | n/a |
+| 2 | Line-by-line repo audit (root HTML, prior data, Pages config, calendar/URL/claim irregularities) | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/flagged.json | repo files + OPM / official venue verification |
+| 3 | Verify hotels (private bath, queen+ bed, 7-night Feb 15–22 & 5-week Feb 15–Mar 22, 2027 quotes, transit & Michelin clusters) | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/hotels.json | Live 2026-11-27 Caesars, Resorts World, SynXis, Wynn booking engines + LV Monorail + RTC + OPM |
+| 4 | Verify all 24 Michelin Guide Las Vegas restaurants (status, clusters, 2-adult cost, hours/exceptions, official site, YT/TT/IG) | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/restaurants.json | Michelin 2026 SW release + Visit Las Vegas + all 24 official restaurant sites/menus/Resy |
+| 5 | Verify Las Vegas activities within <=1 hr (hours/days/exceptions, 2-adult pricing, official site, YT/TT/IG) | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/activities.json | Official Bellagio, Caesars/High Roller, Mandalay Bay/Shark Reef, Sphere, Fremont St, Mob Museum, Neon Museum, BLM/Recreation.gov, USBR Hoover Dam, NV State Parks |
+| 6 | Compile Executive Summary, Questions & Missing-Info Discovery, Suggestions, and Flagged for Review | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/*.json | cross-checked against official sources |
+| 7 | Build mobile-first multi-page static dashboard, validator & CI workflow | done | 3c7ffbdd-vegas2 | docs/session-3c7ffbdd/**, scripts/build_session_3c7ffbdd.py, scripts/check_session_3c7ffbdd.py, .github/workflows/validate-session-3c7ffbdd.yml | `build_session_3c7ffbdd.py --check` + `check_session_3c7ffbdd.py` passed |
+| 8 | PR to main, merge, verify GitHub Pages deploy & record result | in progress | 3c7ffbdd-vegas2 | GitHub PR #27, COORDINATION.md | pending merge |
+
+### Key Verified Sources & Irregularities Logged (`2026-11-27`)
+
+- **Published subsite URL (legacy `main /` Pages):** `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/`
+- **Cheapest verified 7-night window & booking timing:** Live 5-week quotes across Feb 15–Mar 22, 2027 show **Mon Feb 15 – Mon Feb 22, 2027** (overlaps preferred Feb 15–18) is cheapest at Flamingo ($83/nt vs $118–$141/nt), Caesars Palace ($214/nt vs $254–$317/nt; Tue Mar 2 Sold Out), and South Point ($919 vs $979). Booking now (Nov 27, 2026) captures active Cyber Sales (Wynn Cyber Exclusive $677/nt + up to $300 credit ends **Dec 4, 2026**; Resorts World `DBF26` active).
+- **Michelin Guide (24 venues = 1 Two-Star, 3 One-Star, 3 Bib Gourmand, 17 Recommended):** All 24 official venues verified; official 2-adult menu totals published for 7 venues (Guy Savoy, China Poblano $120, Michael Mina $590++, Stubborn Seed $320–$390, Kabuto $260–$370, Partage $260–$420, Anima by EDO $170 / $65 Mon Pasta); remaining 17 intentionally left blank & flagged rather than guessed.
+- **Key Irregularities Flagged (`docs/session-3c7ffbdd/flagged.html`):**
+  - `REPO-01`–`REPO-05`: Prior root calendar weekday inversions ("Sun Feb 15", "Thu Feb 19 vs Fri Feb 18"), broken root activity URLs (`highroller.com`, `fremontexperience.com`, `vegasmonorail.com`), unverified `~15–20 min` transit claims, HTML tag mismatch in prior `suggestions.html`, and `.github/workflows/pages.yml` vs legacy `main /` Pages mismatch.
+  - `DATA-01`–`DATA-08`: Michael Mina temporarily closed (late-2026 closures, 2027 schedule unposted); Joël Robuchon IG bio (`@joelrobuchon.lasvegas`) still claiming "3-Star" vs 2026 Two-Star award; South Point SynXis ($29.20/day) vs public ($33/nt) resort fee conflict; BLM Red Rock PDF ($15+$2) vs live Recreation.gov ($20+$2=$22); Caesars pre-tax vs Resorts World all-in quotes & invalid `hlv` propCode; Valley of Fire ~50–60 min boundary + Uber/Lyft stranding warning; unverified restaurant prices/hours/social links left blank.
+- **Verification commands passed:**
+  - `python3 scripts/build_session_3c7ffbdd.py --check` — OK (9 generated files match deterministic build).
+  - `python3 scripts/check_session_3c7ffbdd.py` — PASS (7 pages, 8 hotels, 24 Michelin restaurants [1 Two-Star, 3 One-Star, 3 Bib Gourmand, 17 Recommended], 11 activities, 13 flagged items, 0 broken internal links, 0 forbidden broken domains, balanced HTML).
+  - Existing repo checks (`scripts/check_site.py`, `scripts/check_plan.py`, `scripts/validate_field_notes.py`, `scripts/check_session_b29fc34e.py`) all passed unchanged.
+
