@@ -610,6 +610,23 @@ All five claimed tasks are complete. The subsite is published, merged and verifi
 
 ---
 
+## Session 2ec5be84-vegas2 — final record (PR #30 merged)
+
+**PR #30:** https://github.com/kanlerxz87-cyber/Vegas2/pull/30 — "2ec5be84-vegas2: verification pass + planner integration fixes". **MERGED** 2026-11-27T18:26:32Z as `74e244fb19a8f40e48b2e70ace419712d856c567`.
+
+### What this session contributed (all landed on `main` via PR #30)
+- Fresh line-by-line verification pass (re-verified official captures): China Poblano full weekly grid + José's Way $60/pp = $120/2; Anima by EDO $85/pp = $170/2 + nightly from 5:00 PM; Kabuto official 2026 menu $130/$185 pp = $260/$370; Kame Omakase $350/$500 pp = $700/$1,000; Mott 32 lunch sets $38/$68 pp = $76/$136 (lunch only); Sparrow and Wolf chef's tasting $149/pp = $298; Michael Mina temporary closure (official Bellagio page, verified 2026-11-27) with $295++pp tasting = $590/2 basis; Neon Museum 2027 admission from $21/pp = $42/2; item-range notes for Esther's Kitchen, Soulbelly BBQ, Lamaii (no two-person total published). All applied through `data/plan/*.json` + `scripts/build_plan.py`, never by hand-editing generated pages.
+- F-11 (flag) rewritten: 8 restaurants now carry published per-person or exact two-person totals; the rest remain honestly blank/"not published". Q-15 now records both booking-window sources verbatim (Visit Las Vegas 30–60 days vs é by José Andrés three months — cited side by side, not reconciled).
+- `scripts/audit_no_data_loss.py` ALLOWED list extended with 11 explicit, documented gap-statement→verified-capture supersedes.
+- CI: all gates green at merge — `Validate canonical planner` (incl. fieldwork-merge idempotency + no-data-loss audit + pages-out-of-date check), `Build and verify the root planner`, `Validate and rebuild isolated site`, `build`, `validate`, plus site-deploy workflows. Pages `status: built` (legacy source `main` `/`), and the live restaurants page serves the verified values (China Poblano $120, Michael Mina $590 + closure, Kabuto $260/$370, Kame $700/$1,000, Mott 32 lunch $76/$136, Neon $42).
+
+### Merge path and conflicts
+`main` advanced seven times mid-flight (PRs #18–#40 incl. #23/#24/#25/#26/#27/#28/#29/#31/#32/#33/#34/#35/#36/#37/#40). Every conflict was resolved keeping both sides' work: generated root HTML kept `main`'s canonical rebuilt versions each time; `COORDINATION.md` kept both sessions' sections; `data/plan/*.json` merged field-level with this session's verified captures re-applied on top of c88d116c's/155b420b's/4d7b292f's reconciled files. No session's files were discarded. One CI-only fix was needed after the final merge: commit the byte-level formatting produced by `scripts/merge_fieldwork_4d7b292f.py` so the idempotency gate passes (values unchanged).
+
+### Note for the next session
+- `curl` returns 000 from this sandbox; the sanctioned live checks are the Pages API (`status: built`), the workflow runs, and `fetch_page` on the live URL — all confirmed for `74e244f`.
+- Remaining open items are unchanged from `flagged.html` (taxes excluded from all totals F-03; no dated rate for Venetian/MGM/Cosmopolitan/Wynn/Bellagio F-05/F-06; no RTC door-to-door transit times F-02; South Point published $33/nt resort fee vs booking-engine $29.20 unresolved; Caesars rate volatility F-23; é/Yang window vs Visit LV 30–60 days — cite both).
+- PR #30 page shows the full file history; nothing from this session was force-pushed.
 ## COMPLETION 2026-11-27 · session `4d7b292f` — PR #31 merged, verified live
 
 - **PR:** https://github.com/kanlerxz87-cyber/Vegas2/pull/31 — **MERGED** at `2026-11-27T18:15:00Z` as **`e1486a0da1421f2fad09e71a6f35d9add3de45fd`**.
