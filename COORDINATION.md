@@ -321,7 +321,22 @@ No other session's files, data trees, workflows or open PRs were touched.
 | 5 | Verify Las Vegas activities within <=1 hr (hours/days/exceptions, 2-adult pricing, official site, YT/TT/IG) | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/activities.json | Official Bellagio, Caesars/High Roller, Mandalay Bay/Shark Reef, Sphere, Fremont St, Mob Museum, Neon Museum, BLM/Recreation.gov, USBR Hoover Dam, NV State Parks |
 | 6 | Compile Executive Summary, Questions & Missing-Info Discovery, Suggestions, and Flagged for Review | done | 3c7ffbdd-vegas2 | data/session-3c7ffbdd/*.json | cross-checked against official sources |
 | 7 | Build mobile-first multi-page static dashboard, validator & CI workflow | done | 3c7ffbdd-vegas2 | docs/session-3c7ffbdd/**, scripts/build_session_3c7ffbdd.py, scripts/check_session_3c7ffbdd.py, .github/workflows/validate-session-3c7ffbdd.yml | `build_session_3c7ffbdd.py --check` + `check_session_3c7ffbdd.py` passed |
-| 8 | PR to main, merge, verify GitHub Pages deploy & record result | in progress | 3c7ffbdd-vegas2 | GitHub PR #27, COORDINATION.md | pending merge |
+| 8 | PR to main, merge, verify GitHub Pages deploy & record result | done | 3c7ffbdd-vegas2 | GitHub PR #27, COORDINATION.md | merged `a07c877`, CI green, Pages live-verified |
+
+### PR, Merge & Deployment Result (`3c7ffbdd-vegas2`)
+
+- **Main Deliverable PR:** https://github.com/kanlerxz87-cyber/Vegas2/pull/27 (`arena/3c7ffbdd-vegas2` → `main`)
+- **Merged:** `2026-11-27T17:59:26Z`, merge commit `a07c87714a7612c3b70076127031f214a5547c57`.
+- **CI Checks on `main`:** `Validate Session 3c7ffbdd Dashboard` (`46046030042` — pass, 9s), `Validate canonical planner` (`46046030165` — pass), `Validate static site` (`46046030028` — pass), `Validate Vegas Field Notes` (`46046030007` — pass). (Pre-existing legacy-vs-Actions conflict in `.github/workflows/pages.yml` `46046030011` remains untouched and documented as `REPO-05`.)
+- **GitHub Pages Deployment:** Legacy `main /` build completed `2026-11-27T17:59:49Z` for commit `a07c87714a7612c3b70076127031f214a5547c57` (`status: built`, `error: null`).
+- **Live Page Verification:** All 7 deployed pages fetched live and verified with zero broken internal links:
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/index.html`
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/hotels.html`
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/restaurants.html`
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/activities.html`
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/suggestions.html`
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/questions.html`
+  - `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-3c7ffbdd/flagged.html`
 
 ### Key Verified Sources & Irregularities Logged (`2026-11-27`)
 
