@@ -227,3 +227,13 @@ While this session was building, `main` advanced through PRs #19–#21 (sessions
 - **Their transit claim (`~15–20 minutes` from any Strip hotel) was not adopted**, because no official journey time supports it; F-02 explains why the site prints no travel times.
 
 No other session's files, data trees, workflows or open PRs were touched.
+
+### PR, merge and deployment result — session `155b420b-vegas2`
+
+- **PR #22:** https://github.com/kanlerxz87-cyber/Vegas2/pull/22 (branch `arena/155b420b-vegas2` → `main`) — "Consolidate Vegas planner into one verified, mobile-first root site".
+- **Checks before merge:** `Validate canonical planner` pass, `Site build and verification` pass, `Validate static site` pass, `Validate Vegas Field Notes` pass. Local gate `python3 scripts/check_plan.py` → OK, 0 failures, 0 warnings.
+- **Merge:** `gh pr merge 22 --merge` succeeded; merged 2026-11-27T17:48:24Z as `76b22b883dc7c58a5b9496afea940687a45d2516` (merge commit). No changes were discarded in the merge conflict.
+- **Pages deployment:** Pages API reports `build_type: legacy`, source `main` `/`, status `built`, public URL https://kanlerxz87-cyber.github.io/Vegas2/. The Pages build for commit `76b22b8` completed at 2026-11-27T17:48:37Z with status `built`; the `Validate canonical planner` run on `main` also passed.
+- **Live verification:** the deployed root now serves the new overview page (`<title>Las Vegas, planned from official sources · Vegas2 planner</title>`) with the 24-distinction / $581 / 23-flag figures — confirmed by fetching `https://kanlerxz87-cyber.github.io/Vegas2/index.html?rev=76b22b8` from this sandbox. The root also serves `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `repo-review.html`, `sources.html` and `assets/site/style.css` from the same commit.
+- **Flagged items published:** F-01…F-23 on `flagged.html`; repository findings R-01…R-13 on `repo-review.html`. Unverified values are blank, and each flag carries its official source link.
+- **Not changed:** PRs #8 and #9 remain open; every prior session folder under `docs/` and every prior data tree is untouched. Their root-page versions are archived at `docs/session-legacy-root/main-0d3e73e/`.
