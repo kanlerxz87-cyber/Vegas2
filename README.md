@@ -1,6 +1,13 @@
 # Vegas2 — Las Vegas trip planner (Feb 15 – Mar 23, 2027)
 
-Live site (GitHub Pages): https://kanlerxz87-cyber.github.io/Vegas2/
+**Live site (GitHub Pages, legacy source `main` `/`):** https://kanlerxz87-cyber.github.io/Vegas2/ — the repository-root dashboard (`index.html` + `hotels.html`, `restaurants.html`, `activities.html`, `questions.html`, `suggestions.html`, `flagged-for-review.html`).
+
+## Current status (2026-11-27, session 2ec5be84-vegas2)
+
+- Root site re-verified and updated: Michelin list re-checked against Visit Las Vegas (24 distinctions: 4 starred / 3 Bib Gourmand / 17 Recommended, 2026 guide); Joël Robuchon, L'Atelier, é by José Andrés, China Poblano hours re-verified on official MGM Grand / Cosmopolitan pages; restaurant table now carries an “Est. total for 2 adults” column (official fixed-price menus only: China Poblano $120, Anima by EDO $170, Kabuto $260/$370, Kame Omakase $700/$1,000, Mott 32 lunch $76/$136, Sparrow + Wolf $298); High Roller (official Caesars page; highroller.com redirects to an unrelated sports-betting domain — do not use) and The Neon Museum (hours, 2027 Admission from $21/pp, official socials) verified; South Point captured rates added ($919 King / $989 2 Queens, 7 nts Feb 15–22, 2027, +tax; resort-fee discrepancy $29.20 vs $33.00 flagged); Feb 15, 2027 = Washington's Birthday (holiday pricing risk) documented.
+- GitHub Pages serves the **repository root** (legacy source, `main` `/`). `.github/workflows/pages.yml` additionally uploads `docs/` on pushes to `main` — a second, divergent publish path; flagged for owner decision (see `flagged-for-review.html` U-11), not changed unilaterally.
+- Every row still ties to an official source or is blank/flagged `unverified`. 29 JSON data files parse; internal links resolve; tag-balance check passes.
+- Lines below this section are preserved verbatim from earlier sessions, including their (superseded) publishing-path claims.
 
 This session's planner is published at **`/session-059c3126/`** (`docs/session-059c3126/`). Other sessions publish their own folders under `docs/` and are not edited by this session.
 

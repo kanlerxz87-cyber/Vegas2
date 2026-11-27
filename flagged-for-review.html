@@ -58,10 +58,10 @@
           <tr>
             <td>U-2</td>
             <td>Restaurant price per couple (2 adults)</td>
-            <td>Verified total price per couple</td>
-            <td>restaurants.html (only $$–$$$$ symbols where stated)</td>
-            <td>Official restaurant menus</td>
-            <td><span class="badge badge-unverified">unverified</span></td>
+            <td>Verified total price per couple — now published for official fixed-price menus only (China Poblano $120; Anima by EDO $170; Kabuto $260/$370; Kame Omakase $700/$1,000; Mott 32 lunch $76/$136; Sparrow + Wolf $298)</td>
+            <td>restaurants.html “Est. total for 2 adults” column</td>
+            <td>Official menus (links per cell; captured Nov 26–27, 2026)</td>
+            <td><span class="badge badge-unverified">unverified (others)</span></td>
           </tr>
           <tr>
             <td>U-3</td>
@@ -74,7 +74,7 @@
           <tr>
             <td>U-4</td>
             <td>Activity hours, open days, exceptions, prices</td>
-            <td>All activity table fields</td>
+            <td>All activity table fields — High Roller (daily from 12 PM) and Neon Museum (daily 3–11 PM Sep–May; 2027 Admission from $21/pp) verified 2026-11-27; all others still missing</td>
             <td>activities.html</td>
             <td>Each venue&rsquo;s official website</td>
             <td><span class="badge badge-unverified">unverified</span></td>
@@ -111,6 +111,46 @@
             <td>Each venue&rsquo;s official site</td>
             <td><span class="badge badge-unverified">unverified</span></td>
           </tr>
+          <tr>
+            <td>U-9</td>
+            <td>South Point resort-fee math + private bathroom</td>
+            <td>Booking output listed $29.20/day resort fee (“fees included”) vs public page stating $33.00/room/night; bed config (King / Premium 2 Queens) OK, private bath unverified</td>
+            <td>hotels.html “Best price candidate” section</td>
+            <td>South Point official room page + booking flow (re-quote Feb 15–22, 2027)</td>
+            <td><span class="badge badge-unverified">unverified</span></td>
+          </tr>
+          <tr>
+            <td>U-10</td>
+            <td>Michael Mina (Bellagio) status</td>
+            <td>Reported temporarily closed as of late Nov 2026; not confirmed for Feb 2027</td>
+            <td>restaurants.html</td>
+            <td>Bellagio official restaurant page / restaurant directly</td>
+            <td><span class="badge badge-unverified">unverified</span></td>
+          </tr>
+          <tr>
+            <td>U-11</td>
+            <td>GitHub Pages source vs workflow</td>
+            <td>Pages API reports legacy source <code>main</code> <code>/</code> (root index.html is live); <code>.github/workflows/pages.yml</code> also uploads <code>docs/</code> on push — two different publish paths that can diverge</td>
+            <td>repo root vs <code>.github/workflows/pages.yml</code></td>
+            <td>Decide one publishing path (root legacy serving works today; switching to the Actions path would change what <code>/</code> serves) — repo owner to confirm</td>
+            <td><span class="badge badge-unverified">needs decision</span></td>
+          </tr>
+          <tr>
+            <td>U-12</td>
+            <td>highroller.com redirects to rolr.com (sports betting)</td>
+            <td>Official High Roller ticketing is via caesars.com (The LINQ); stale third-party link removed from site on 2026-11-27</td>
+            <td>activities.html (fixed 2026-11-27)</td>
+            <td>n/a — replaced with official Caesars page</td>
+            <td><span class="badge badge-verified">fixed 2026-11-27</span></td>
+          </tr>
+          <tr>
+            <td>U-13</td>
+            <td>Restaurant social handles (Instagram)</td>
+            <td>@joelrobuchon.lasvegas, @ebyjoseandres etc. found via search; not confirmed on official sites</td>
+            <td>restaurants.html</td>
+            <td>Each venue&rsquo;s official site footer/social links</td>
+            <td><span class="badge badge-unverified">unverified</span></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -136,6 +176,30 @@
       <div class="q-item">
         <div class="q">I-5 &bull; Social links from third-party search</div>
         <div class="a">A few Instagram handles (e.g., @joelrobuchon.lasvegas, @ebyjoseandres) were found via web search, not confirmed on the official venue sites. Flagged unverified — do not treat as official until confirmed.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">I-6 &bull; South Point fee discrepancy (captured 2026-11-26)</div>
+        <div class="a">Official booking output showed a $29.20/day resort fee with “fees included,” while the official public page states $33.00/room/night (Wi-Fi, fitness center, scheduled airport shuttle, calls, business center, safe, funbook). Both figures appear on hotels.html; neither is asserted as final. Captured Feb 15–22, 2027: King $919 / Premium 2 Queens $989 (+ tax). Feb 22–Mar 1, 2027: King $979 / 2 Queens $1,049. Feb 15–18, 2027 (3 nts): King $313 / 2 Queens $343. Fee math + private bathroom remain open (U-9). Source: <a href="https://www.southpointcasino.com/hotel/" class="src" target="_blank" rel="noopener">southpointcasino.com</a>.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">I-7 &bull; Presidents&rsquo; Day pricing risk — Feb 15, 2027</div>
+        <div class="a">Monday, Feb 15, 2027 is Washington&rsquo;s Birthday (third Monday in February, federal holiday). Expect holiday-weekend demand Feb 15–16; captured evidence: The Venetian Feb 18 $1,499.25 vs Feb 19 $374.25. Preferred dates (Feb 15–18) therefore span the single most expensive night of the window. Strategy on hotels.html “Booking window &amp; best time to book.” Informational source: <a href="https://www.almanac.com/content/when-presidents-day" class="src" target="_blank" rel="noopener">Farmers&rsquo; Almanac</a>.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">I-8 &bull; Hours re-verified 2026-11-27 (this session)</div>
+        <div class="a">Official MGM Grand / Cosmopolitan pages confirm: Joël Robuchon (Mon &amp; Sun closed; Tue–Sat 5:00–9:30 PM), L&rsquo;Atelier (Tue–Wed closed; Mon &amp; Thu–Sun 5:00–9:30 PM), é by José Andrés (Mon &amp; Sun closed; Tue–Sat 5:30–8:30 PM), China Poblano (Mon–Thu 11:00–22:00; Fri until 22:30; Sat from 10:00 until 22:30; Sun 10:00–22:00). Wing Lei, Bouchon, Guy Savoy hours remain unverified. Visit Las Vegas re-checked 2026-11-27: 24 distinctions (4 starred / 3 Bib / 17 Recommended) — unchanged.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">I-9 &bull; Markup defect fixed (2026-11-27)</div>
+        <div class="a">suggestions.html had a stray <code>&lt;/h1&gt;</code> closing an <code>&lt;h2&gt;</code> (“Reviewer decision log”) — corrected. Tag-balance check now passes on all root pages; all 29 JSON data files parse; all root-page internal links resolve.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">I-10 &bull; README described a superseded publishing path</div>
+        <div class="a">README claimed the live site is the <code>/session-059c3126/</code> planner; in fact GitHub Pages serves the repository root (root <code>index.html</code>). README updated 2026-11-27 with a current-status note; historical session notes kept verbatim. Note: <code>.github/workflows/pages.yml</code> separately uploads <code>docs/</code> on pushes to <code>main</code> — two publish paths exist; flagged as U-11 for a repo-owner decision rather than changed unilaterally.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">I-11 &bull; Per-couple restaurant totals — officially published only</div>
+        <div class="a">Only totals visible on official menus/sites are shown: China Poblano $120 (José&rsquo;s Way, chinapoblano.com/menus), Anima by EDO $170 (animabyedo.com, $85/pp tasting), Kabuto $260/$370 (kabuto-menu2026.pdf), Kame Omakase $700/$1,000 (kameomakase.com), Mott 32 $76/$136 lunch sets (lunch-menu.pdf), Sparrow + Wolf $298 (chef&rsquo;s tasting). Starred fine-dining totals (Joël Robuchon, é, L&rsquo;Atelier, Guy Savoy) are NOT published officially — MGM Resorts newsroom (2026-09-28) lists a special $595/pp white-truffle event menu (&asymp;$1,190/2 + tax/gratuity) for reference only. All other restaurants: Unverified. Captured Nov 26–27, 2026; menus/prices change — re-check before booking.</div>
       </div>
     </div>
   </div>
