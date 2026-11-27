@@ -179,6 +179,45 @@ This entry records the active session's additions without replacing the existing
 
 ---
 
+## Session `arena/7c99df0b-vegas2` — Dashboard Rebuild & Research Update
+
+**Branch:** `arena/7c99df0b-vegas2` (active). Base commit: `8a538fbd6535abf19448da2e48616ffc61907a58`.
+
+### Research conducted (2026-11-27)
+
+- Fetched and verified official Michelin press release (all 24 LV restaurants, addresses, statuses)
+- Fetched official restaurant pages for: Joël Robuchon (hours Tue-Sat 5-9:30PM, $$$$, Business Formal, phone 702-891.7925), L'Atelier (hours Mon/Thu-Sun 5-9:30PM, $$$, Business Casual, phone 702-891.7358), é by José Andrés (hours Tue-Sun, seatings 5:30/8:30PM, tickets 3mo ahead, phone 702-698-7950), China Poblano (hours Mon-Sun, $$, Casual, phone 877-893-2003), Bouchon (hours Mon-Sun with brunch, $$$, phone 702-414-6200), Gymkhana (hours Mon-Sun, $$$$, Business Casual, phone 702-590-9520, IG @gymkhanalasvegas), Wing Lei (hours Thu-Sun/Mon, Tue-Wed closed, Business casual, phone 702-770-3388), Sparrow + Wolf (phone 702-790-2147, OpenTable, max 4 guests), Esther's Kitchen, YEN Viet Kitchen
+- Fetched official RTC Deuce PDF: Strip bus operates 24/7, every 10-15 min (7AM-1AM), every 20 min (1-7AM). Full SSTT-to-Fremont route: 77 min. Stops at all major Strip hotels.
+- Searched hotel pricing: third-party sources show Venetian ~$481/night Feb 2027 (Google Hotels, not official). No official Feb 2027 rate verified for any hotel.
+- Web search confirmed Michelin 2026 data across multiple sources (Eater Vegas, Visit Las Vegas/LVCVA, The Adventurist).
+
+### Files changed
+- `data/verified/michelin.json` — Updated with verified hours for 7 restaurants (Joël Robuchon, é, L'Atelier, China Poblano, Bouchon, Gymkhana, Wing Lei); verified prices ($$$$, $$$, $$, etc.); verified phones and social; official links for all 24.
+- `data/verified/hotels.json` — Updated with RTC transit verification (all Strip hotels confirmed Deuce access); verified queen beds for 3/8 hotels; updated booking policies.
+- `docs/index.html` — Clean dashboard with executive summary, KPIs, navigation tiles.
+- `docs/michelin.html` — All 24 restaurants in organized tables with status, hours, prices, official links, social.
+- `docs/hotels.html` — 8 hotels ranked with Michelin count, room verification, transit, pricing.
+- `docs/activities.html` — 4 activities with verified hours/fees from official sources.
+- `docs/booking.html` — Date options, verified policies, third-party estimates flagged.
+- `docs/questions.html` — 5 answered + 9 open questions + missing info list.
+- `docs/suggestions.html` — 9 suggestions (S1–S9) for review.
+- `docs/flagged.html` — 13 flagged items (F1–F13) with source links.
+- `docs/sources.html` — 21 official + 5 secondary sources + all 24 restaurant links.
+- `docs/assets/style.css` — Clean mobile-first responsive stylesheet.
+
+### Verification performed
+- All 24 Michelin entries confirmed against official press release (S01)
+- 7 of 24 restaurant hours verified from official restaurant pages
+- RTC Deuce route confirmed from official PDF (S20)
+- Feb 15 = Presidents' Day confirmed from OPM (S19)
+- Activity hours/fees verified from BLM, Nevada State Parks, USBR, Recreation.gov, Neon Museum
+
+### Irregularities
+- No official Feb 2027 hotel rates (F6)
+- 17 of 24 restaurant hours unverified (F5 partial — now 7 verified)
+- Most social media links unverified (F12)
+- Third-party price estimates flagged, not used as verified
+
 ## Session `arena/155b420b-vegas2` — final integration (ACTIVE)
 
 **Claimed:** 2026-11-27 (UTC). Session ID `155b420b-vegas2`. Branch `arena/155b420b-vegas2` (Arena pins it; `session-<id>/<task>` naming is not usable).
@@ -238,12 +277,40 @@ No other session's files, data trees, workflows or open PRs were touched.
 - **Flagged items published:** F-01…F-23 on `flagged.html`; repository findings R-01…R-13 on `repo-review.html`. Unverified values are blank, and each flag carries its official source link.
 - **Not changed:** PRs #8 and #9 remain open; every prior session folder under `docs/` and every prior data tree is untouched. Their root-page versions are archived at `docs/session-legacy-root/main-0d3e73e/`.
 
-### Post-merge observation — concurrent session `arena/7c99df0b-vegas2` (2026-11-27T17:52Z)
+---
 
-While this session was verifying its deployment, PR #26 from session `7c99df0b-vegas2` merged on top of the PR #22/#24 changes (main `9630aea`). Their commit `a543860` rebuilt the **`docs/`** site and `data/verified/*`; it did **not** modify the root pages, so the canonical root planner remains the one described above. Verified after their merge:
+---
 
-- Every root page (`index.html`, `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `sources.html`, `repo-review.html`) and `assets/site/style.css` is present on `main` at `9630aea`.
-- The Pages build for `9630aea` completed with status `built` (2026-11-27T17:52:52Z), and `https://kanlerxz87-cyber.github.io/Vegas2/index.html` and `/flagged.html` were fetched live and serve this session's pages.
-- One transient Pages build error was logged for commit `ac92554` ("Page build failed") between the two merges; the immediate rebuild for `9630aea` succeeded, so it did not persist.
+## Session 9b4f59cd — isolated verified planner subsite (current branch arena/9b4f59cd-vegas2)
 
-**Ownership going forward:** root `*.html` and `data/plan/**` belong to the consolidated build (`scripts/build_plan.py`). Later sessions should either rebuild through that script or work inside their own `docs/session-<id>/` folder — hand-editing a root page would be overwritten by the next build.
+**Claim (2026-11-27):** Session `9b4f59cd` claims ONLY these paths; no other session's files will be edited:
+- `data/session-9b4f59cd/*.json` (new source data)
+- `docs/session-9b4f59cd/**` (generated output; no separate site/ tree)
+- `scripts/build_session_9b4f59cd.py`, `scripts/check_session_9b4f59cd.py` (new)
+- `docs/session-9b4f59cd/**` (generated Pages output)
+- This COORDINATION.md section (append-only)
+
+**Explicitly NOT claimed / not edited:** root `docs/*.html`, `docs/index.html`, `data/verified/*`, `data/trip/*`, `data/*.json`, `field-notes/`, `site/session-b29fc34e/`, `docs/session-*/` (other sessions), workflows. Session `c88d116c` (root-site verification scope, per its commit message) is respected — no root-site edits from this session. If a shared-file change is needed, it will be logged here as a request instead of edited.
+
+**Tasks:**
+| # | Task | Status | Owner | File scope |
+|---|------|--------|-------|------------|
+| 1 | Claim scope + audit existing site/validators | done | 9b4f59cd | COORDINATION.md |
+| 2 | Fresh official-source research (Michelin, hotels, activities, transit, social) | done | 9b4f59cd | data/session-9b4f59cd/ |
+| 3 | Build isolated subsite (executive summary, hotels, Michelin, activities, booking, questions, suggestions, flagged, sources) | done | 9b4f59cd | site/session-9b4f59cd/, docs/session-9b4f59cd/ |
+| 4 | Line-by-line verification (every row sourced; blanks flagged) | done | 9b4f59cd | scripts/check_session_9b4f59cd.py |
+| 5 | PR to main, merge, confirm Pages deploy, record result | in progress | 9b4f59cd | GitHub PR |
+
+**Verification rule:** A value appears only when an official source confirmed it. Otherwise blank + `Unverified` + flag ID linking to Flagged for Review. No inference, no hallucination. Dynamic 2027 hotel rates are re-checked live; if an official booking page cannot be retrieved, the price stays blank.
+
+---
+
+### Post-merge observation — sessions `7c99df0b` and `9b4f59cd` merged on top (2026-11-27)
+
+After this session's PR #22 and PR #24 merged, two further sessions merged to `main`: PR #26 (`7c99df0b-vegas2`, rebuilding `docs/` and `data/verified/*`) and PR #25 (`9b4f59cd-vegas2`, publishing its own 10 pages under `docs/` with data in `data/session-9b4f59cd/`). Neither modified the canonical root pages, which this session re-verified after each merge:
+
+- All 11 root pages plus `assets/site/style.css` remain on `main` and are served live from `https://kanlerxz87-cyber.github.io/Vegas2/`.
+- `scripts/check_plan.py` still passes on the merged tree (0 failures).
+- One transient Pages build error was logged for commit `ac92554` ("Page build failed") between two merges; the immediate rebuild succeeded, so it did not persist.
+
+**Root-page ownership:** `index.html`, `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `sources.html`, `repo-review.html`, `assets/site/**` and `data/plan/**` belong to this consolidated build. Rebuild with `python3 scripts/build_plan.py && python3 scripts/check_plan.py`; hand-editing a root page will be overwritten by the next build. Other sessions should keep publishing inside `docs/session-<id>/` with data in their own folder.

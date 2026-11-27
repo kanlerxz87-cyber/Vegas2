@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for review · Las Vegas Trip Planner</title>
+<meta name="description" content="Source-verified Las Vegas trip plan for two adults, Feb 15 – Mar 23, 2027. Hotels, MICHELIN restaurants, activities and open questions, each row linked to an official source.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="bar">
+<a class="brand" href="index.html">Las Vegas <span>2027</span></a>
+<button class="navbtn" id="navbtn" aria-label="Toggle navigation" aria-expanded="false">&#9776; Menu</button>
+<nav class="main" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="booking.html">Booking &amp; cost</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html" aria-current="page">Flagged for review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+</div></div></header>
+<main class="wrap">
+
+<h1>Flagged for review</h1>
+<p class="lead">Every item below is either unverified, a conflict between two official sources, or a data gap. Nothing here blocks the site from publishing; each item is listed so a decision can be made with eyes open.</p>
+
+<div class="kpis">
+<div class="kpi bad"><b>5</b><small>High severity</small></div>
+<div class="kpi warn"><b>9</b><small>Medium severity</small></div>
+<div class="kpi"><b>2</b><small>Low severity</small></div>
+<div class="kpi gold"><b>16</b><small>Items in total</small></div>
+</div>
+
+<div class="warn">None of these items blocked publication. They are published here, with their sources, so the decision can be made with the gaps visible.</div>
+
+<div class="tablewrap"><table>
+<caption>Every item is anchored — link to it directly with #F-01 style anchors.</caption>
+<thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Detail, impact and next step</th><th>Source</th></tr></thead>
+<tbody><tr id="F-01">
+<td><strong>F-01</strong></td>
+<td><span class="b bx">high</span><br><span class="muted">missing value</span></td>
+<td><strong>The Venetian publishes no price for February 2027</strong></td>
+<td>The official booking calendar for Feb 15–22, 2027 displayed a placeholder string in place of a rate on every February 2027 date. The hotel therefore has no verified price despite hosting the largest Michelin cluster.<br><br><em>Impact:</em> Venetian cannot be ranked on cost at all. It can only be ranked on Michelin count and room fit.<br><em>Next step:</em> Check again closer to the date or ask the property for a quote.</td>
+<td class="src"><a href="https://www.venetianlasvegas.com/booking?adults%5B%5D=2&amp;arrival_date=2027-02-15&amp;children%5B%5D=0&amp;departure_date=2027-02-22&amp;view=calendar" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-02">
+<td><strong>F-02</strong></td>
+<td><span class="b bx">high</span><br><span class="muted">missing value</span></td>
+<td><strong>Five hotels have no verified 2027 price</strong></td>
+<td>MGM Grand, The Cosmopolitan and Bellagio booking pages returned errors (HTTP 500 / page errors), The Venetian&#x27;s calendar published no rate, and Wynn returned an average nightly rate without a confirmed tax and fee basis, so no total can be stated. Four of the five carry MICHELIN restaurants.<br><br><em>Impact:</em> Any price ranking excludes four of the five hotels that have a MICHELIN restaurant on campus. The &#x27;best hotel by price&#x27; answer is therefore incomplete, not negative.<br><em>Next step:</em> Retry the MGM Resorts booking flow, The Venetian calendar and the Wynn engine; ask each property for a written all-in quote for Feb 15–22, 2027.</td>
+<td class="src"><a href="https://mgmgrand.mgmresorts.com/en/hotel/rooms.html" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-03">
+<td><strong>F-03</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">source conflict</span></td>
+<td><strong>Two official sources disagree on the number of Bib Gourmands</strong></td>
+<td>The MICHELIN press release lists exactly 3 Las Vegas Bib Gourmands (China Poblano, Esther&#x27;s Kitchen, YEN Viet Kitchen). The Visit Las Vegas page says &#x27;24 distinctions&#x27; and names four Bib Gourmands, adding a fourth name not in the release. Both are official domains.<br><br><em>Impact:</em> The Las Vegas total could be 24 (17 Recommended + 3 Bib + 4 stars) or the DMO&#x27;s slightly different split. Star count is unaffected — both sources agree on 4 starred restaurants.<br><em>Next step:</em> Treat the MICHELIN press release as authoritative for award class; treat the DMO list as a discovery aid.</td>
+<td class="src"><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" target="_blank" rel="noopener">source</a><br><span class="src">also: <a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s</a></span></td>
+</tr><tr id="F-04">
+<td><strong>F-04</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">unverified</span></td>
+<td><strong>Wynn&#x27;s $833 average nightly has an unconfirmed fee basis</strong></td>
+<td>The booking engine returned &#x27;$833 Avg/Night Includes ...&#x27; and the string was truncated before stating what it includes. Wynn separately states a $55/night resort fee plus tax.<br><br><em>Impact:</em> No 7-night total is shown for Wynn. Multiplying $833 × 7 could overstate or understate the real bill.<br><em>Next step:</em> Re-open the rate block and read the inclusion line before comparing Wynn on price.</td>
+<td class="src"><a href="https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&amp;langID=1&amp;rmID=68658&amp;checkIn=02/15/2027&amp;checkOut=02/22/2027&amp;adults=2&amp;children=0" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-05">
+<td><strong>F-05</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">source conflict</span></td>
+<td><strong>South Point&#x27;s fee wording is internally inconsistent</strong></td>
+<td>The engine&#x27;s rate banner says &#x27;Prevailing Rates include a $29.20 daily resort fee. Taxes not included.&#x27; while the room cards say &#x27;Including all fees&#x27;. A prior session also recorded the public rate page quoting $33/night.<br><br><em>Impact:</em> South Point&#x27;s $989 may or may not include the full resort fee. It is the cheapest hotel-issued 7-night total, so this matters for the ranking.<br><em>Next step:</em> Request an itemised quote from the property showing room, tax and resort fee separately.</td>
+<td class="src"><a href="https://be.synxis.com/?adult=2&amp;arrive=2027-02-15&amp;chain=6903&amp;child=0&amp;currency=USD&amp;depart=2027-02-22&amp;hotel=11548&amp;level=hotel&amp;locale=en-US&amp;productcurrency=USD&amp;rooms=1" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-06">
+<td><strong>F-06</strong></td>
+<td><span class="b bx">high</span><br><span class="muted">missing value</span></td>
+<td><strong>Per-couple restaurant prices missing for 20 of 24 Michelin listings</strong></td>
+<td>Four restaurants publish a usable price on an official page: Michael Mina ($295++ per person), Partage ($130/$160/$210 per person for 5/7/9 courses), Anima by EDO ($85 per person tasting menu) and Restaurant Guy Savoy (à-la-carte dish prices, summed into scenarios). The other 20 publish no price.<br><br><em>Impact:</em> A total dining budget cannot be built from official data alone. The table shows blank prices rather than estimates, and the four known prices are multiplied by two diners and labelled.<br><em>Next step:</em> OpenTable/MICHELIN Guide menu pages per restaurant, or ask each property for its current tasting-menu price.</td>
+<td class="src"><a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-07">
+<td><strong>F-07</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">method note</span></td>
+<td><strong>Starred menus are priced per dish, not per person</strong></td>
+<td>Guy Savoy and Partage quote dish or course prices. Multiplying by two diners gives a food-only subtotal, excluding tax, gratuity, wine and add-ons.<br><br><em>Impact:</em> The $420–$2,080 Guy Savoy range is a scenario spread, not an expected bill. Presenting one number would be misleading.<br><em>Next step:</em> Ask for the current tasting-menu price per person including service.</td>
+<td class="src"><a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy/main-menu" target="_blank" rel="noopener">source</a><br><span class="src">also: <a href="https://partage.vegas/menu" target="_blank" rel="noopener">https://partage.vegas/menu</a></span></td>
+</tr><tr id="F-08">
+<td><strong>F-08</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">missing value</span></td>
+<td><strong>Hours and prices not published by many official sites</strong></td>
+<td>Hours and prices are published inconsistently. Since the last pass, official hours were confirmed for Kabuto (daily 5:30–9:00 PM), Lamaii Chinatown (Mon–Wed 11–12, Thu–Sun 11–2), SoulBelly BBQ (Tue–Sun) and Anima by EDO (nightly from 5 PM). Still unconfirmed: Esther&#x27;s Kitchen, YEN Viet Kitchen, Sparrow + Wolf, Kame Omakase, and day-by-day grids for Guy Savoy.<br><br><em>Impact:</em> Day-by-day itinerary planning now has confirmed hours for more venues, but a full week cannot be built for the restaurants that publish no weekly grid.<br><em>Next step:</em> Use each venue&#x27;s reservation widget (OpenTable/SevenRooms) which usually exposes service times.</td>
+<td class="src"><a href="https://www.estherslv.com/" target="_blank" rel="noopener">source</a><br><span class="src">also: <a href="https://www.yenvietkitchen.com/" target="_blank" rel="noopener">https://www.yenvietkitchen.com/</a></span></td>
+</tr><tr id="F-09">
+<td><strong>F-09</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">unverified</span></td>
+<td><strong>Michael Mina is currently closed and its February 2027 status is unknown</strong></td>
+<td>Bellagio&#x27;s official page lists Michael Mina as &#x27;Monday to Sunday: Closed&#x27; with seasonal closures Nov 22–30 and Dec 6–8, 13–15, 20–22. No reopening date is published.<br><br><em>Impact:</em> Bellagio&#x27;s only Michelin restaurant may not be operating during the trip. Bellagio should not be selected on the strength of that restaurant alone.<br><em>Next step:</em> Call Bellagio (702.693.7223) to confirm February 2027 service.</td>
+<td class="src"><a href="https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-10">
+<td><strong>F-10</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">constraint</span></td>
+<td><strong>Red Rock Canyon has no public transit and needs a timed-entry reservation</strong></td>
+<td>Vehicle entry requires a timed-entry reservation 1 Oct–31 May, 8 AM–5 PM, booked through Recreation.gov. The RTC does not serve the canyon.<br><br><em>Impact:</em> Any plan that assumes bus or monorail access to Red Rock is not viable. Transport must be a rental car or rideshare.<br><em>Next step:</em> Book timed entry once the date is fixed; add car rental or rideshare to the budget.</td>
+<td class="src"><a href="https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-11">
+<td><strong>F-11</strong></td>
+<td><span class="b bx">high</span><br><span class="muted">brief conflict</span></td>
+<td><strong>There is no subway or metro in Las Vegas</strong></td>
+<td>The brief asks for Michelin restaurants &#x27;within 1 hour of travel by subway or bus&#x27;. Las Vegas has no subway or metro rail. Public options are the RTC bus network (including the Deuce on the Strip) and the privately operated Las Vegas Monorail.<br><br><em>Impact:</em> All &#x27;1 hour by subway&#x27; analysis was re-scoped to bus + monorail. Distances that are not served by either are flagged rather than assumed.<br><em>Next step:</em> Confirm whether car/rideshare time may substitute for the 1-hour transit rule.</td>
+<td class="src"><a href="https://www.rtcsnv.com/" target="_blank" rel="noopener">source</a><br><span class="src">also: <a href="https://www.lvmonorail.com/stations/" target="_blank" rel="noopener">https://www.lvmonorail.com/stations/</a></span></td>
+</tr><tr id="F-12">
+<td><strong>F-12</strong></td>
+<td><span class="b bu">low</span><br><span class="muted">method note</span></td>
+<td><strong>Derived totals are labelled, not presented as official</strong></td>
+<td>Where a hotel published only a nightly rate, the 7-night figure is that rate × 7 and is marked &#x27;derived&#x27;. Only South Point and Resorts World issued genuine multi-night totals.<br><br><em>Impact:</em> Derived totals exclude taxes and resort-fee tax. Clark County room tax was not verified for these bookings, so no percentage is applied and no all-in figure is implied.<br><em>Next step:</em> Use the booking engine&#x27;s &#x27;Total Price&#x27; toggle for a true all-in figure before deciding.</td>
+<td class="src"><a href="https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&amp;departureDate=02/22/2027&amp;dateSearchFormat=exact-dates&amp;propCode=flv&amp;numberOfAdults=2&amp;numberOfRooms=1" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-13">
+<td><strong>F-13</strong></td>
+<td><span class="b bu">low</span><br><span class="muted">context</span></td>
+<td><strong>Feb 15, 2027 is a federal holiday</strong></td>
+<td>OPM lists Monday, February 15, 2027 as Washington&#x27;s Birthday. The preferred arrival date is therefore a US federal holiday, which usually means higher demand and heavier traffic.<br><br><em>Impact:</em> Arrival-day pricing and crowds may be elevated; the Feb 15–22 week was still the cheapest of the weeks tested.<br><em>Next step:</em> Consider arriving Feb 16 to avoid holiday demand, then re-check prices.</td>
+<td class="src"><a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-14">
+<td><strong>F-14</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">missing value</span></td>
+<td><strong>Social-media links verified for only 6 of 33 listed venues</strong></td>
+<td>A social link is recorded only where the venue&#x27;s own official site publishes it. That is true for The Neon Museum (Instagram, TikTok, Facebook), SoulBelly BBQ (@soulbellybbqlv), Anima by EDO (@animabyedo) and Kabuto (@kabutolv, confirmed by the venue&#x27;s own embedded post). The remaining venues publish no social account on any official page reached in this session, so those cells stay blank.<br><br><em>Impact:</em> The requested YouTube/TikTok/Instagram column is populated wherever the venue itself links an account, and blank elsewhere. Guessing handles is not acceptable: a check of instagram.com/estherskitchen returned a Miami-based Haitian caterer, not the Las Vegas restaurant, which is exactly the impersonation risk this rule avoids.<br><em>Next step:</em> Each venue&#x27;s own footer, or a platform search confirmed against a post that names the address and phone. Where a handle can be tied to the venue&#x27;s address, add it; do not infer from the restaurant name.</td>
+<td class="src"><a href="https://neonmuseum.org/" target="_blank" rel="noopener">source</a></td>
+</tr><tr id="F-15">
+<td><strong>F-15</strong></td>
+<td><span class="b bp">medium</span><br><span class="muted">brief conflict</span></td>
+<td><strong>Trip length in the brief conflicts with itself</strong></td>
+<td>The brief asks for a 1–2 week trip, then names Feb 15–18, 2027 (3 nights) as the preferred vacation time, and also asks for hotel costs on a 7-night basis.<br><br><em>Impact:</em> Three different durations were priced separately rather than merged: 3 nights (preferred), 7 nights (cost basis) and 14 nights (1–2 week goal).<br><em>Next step:</em> Pick one duration; only South Point quoted a 14-night stay.</td>
+<td class="src"><a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener">source</a><br><span class="src">also: <a href="https://be.synxis.com/?adult=2&amp;arrive=2027-02-15&amp;chain=6903&amp;child=0&amp;currency=USD&amp;depart=2027-03-01&amp;hotel=11548&amp;level=hotel&amp;locale=en-US&amp;productcurrency=USD&amp;rooms=1" target="_blank" rel="noopener">https://be.synxis.com/?adult=2&amp;arrive=2027-02-15&amp;chain=6903&amp;child=0&amp;currency=USD&amp;depart=2027-03-01&amp;hotel=11548&amp;level=hotel&amp;locale=en-US&amp;productcurrency=USD&amp;rooms=1</a></span></td>
+</tr><tr id="F-16">
+<td><strong>F-16</strong></td>
+<td><span class="b bx">high</span><br><span class="muted">missing value</span></td>
+<td><strong>Travel times to each venue were not published by RTC or Monorail</strong></td>
+<td>Neither RTC nor the Monorail publishes a venue-to-venue travel-time table. The Deuce is documented as running about every 15 minutes, and the Monorail every 4–8 minutes, but door-to-door minutes depend on which stop and how far you walk.<br><br><em>Impact:</em> The 1-hour travel test could not be executed with official numbers. It is shown as a route-availability test (served / not served) instead of a false minute count.<br><em>Next step:</em> Run each specific pair through the RTC trip planner for the actual date and record the result.</td>
+<td class="src"><a href="https://www.rtcsnv.com/ways-to-travel/fares-passes/" target="_blank" rel="noopener">source</a><br><span class="src">also: <a href="https://www.lvmonorail.com/stations/" target="_blank" rel="noopener">https://www.lvmonorail.com/stations/</a></span></td>
+</tr></tbody></table></div>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p><strong>Data captured 2026-11-27 from official sources only.</strong> Hotel and restaurant prices are dynamic and will change. A cell is filled only when an official source confirmed it; everything else says <span class="b bu">Unverified</span> and links to the flag that explains why.</p>
+<p><a href="index.html">Home</a> · <a href="flagged.html">Flagged for review</a> · <a href="sources.html">All sources</a> · <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">Repository</a></p>
+</div></footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=document.getElementById('navbtn'),n=document.getElementById('nav');
+  if(b&&b.contains(e.target)){n.classList.toggle('open');return}
+  if(n&&n.contains(e.target)){n.classList.remove('open')}
+});
+</script>
+</body>
+</html>

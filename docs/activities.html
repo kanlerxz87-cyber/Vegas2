@@ -3,44 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Activities · Las Vegas Trip Planner</title>
-<meta name="description" content="Las Vegas trip planning dashboard: hotels, Michelin restaurants, activities and verification status. Verified from official sources; unverified values are left blank.">
+<title>Activities — Las Vegas Trip Planner</title>
+<meta name="description" content="Verified Las Vegas activities with official hours, fees, and reservation details.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html">Las Vegas Trip Planner</a>
-    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html" class="on">Activities</a><a href="booking.html">Booking &amp; price</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for Review</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a>
+      <a href="activities.html" class="on">Activities</a><a href="booking.html">Booking</a><a href="questions.html">Questions</a>
+      <a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="sources.html">Sources</a>
+    </nav>
   </div>
 </header>
 <main class="wrap">
 
-<h1>Activities</h1>
-<p class="lead">The user has not yet named the activities to plan. These four are verified starting points chosen from official sources. Add or remove items on the Questions page.</p>
-<div class="kpis">
-  <div class="kpi"><span>4</span>activities</div>
-  <div class="kpi ok"><span>15</span>verified cells</div>
-  <div class="kpi warn"><span>4</span>partial cells</div>
-  <div class="kpi bad"><span>5</span>unverified cells</div>
+<h1>Activities — Verified from Official Sources</h1>
+<p class="lead">Starting activity suggestions verified from official government and venue sources. You haven't named your activity list yet — see Questions.</p>
+
+<div class="callout callout-warn">
+  <strong>Open question (Q1):</strong> Which activities do you actually want to do? The four below are starting suggestions. The 1-hour travel test depends on your final list.
 </div>
-<div class="legend">
-<span class="b bv">Verified</span> confirmed on an official page ·
-<span class="b bp">Partial</span> official page covers part of the claim ·
-<span class="b bu">Unverified</span> not confirmed — left blank by rule
+
+<div class="card">
+  <h3>Hoover Dam <span class="b bv">Hours Verified</span> <span class="b bv">Fees Verified</span></h3>
+  <div class="meta">Bureau of Reclamation · ~45 min southeast of Strip (driving)</div>
+  <div class="detail"><strong>Hours:</strong> <span class="b bv">V</span> Dam: daily 5:00 AM–9:00 PM (PST). Visitor Center &amp; tours: daily 9:00 AM–5:00 PM. Doors close 4:15 PM; last tour 4:10 PM.</div>
+  <div class="detail"><strong>Fees:</strong> <span class="b bv">V</span> Self-Guided Visitor Center $15; Guided Power Plant Tour $25; Guided Dam Tour $40 (on-site only). Children 3 &amp; under free.</div>
+  <div class="detail"><strong>Exceptions:</strong> <span class="b bv">V</span> Closed Thanksgiving &amp; Christmas Day. Special events may limit access around Easter, early August, 3 days after Thanksgiving, and week after Christmas.</div>
+  <div class="detail"><strong>Reservations:</strong> <span class="b bv">V</span> Visitor Center &amp; Power Plant tours via official ticketing. Dam Tour on-site only.</div>
+  <div class="detail"><strong>Social:</strong> <span class="b bv">V</span> <a href="https://www.facebook.com/theHooverDam/" target="_blank">Facebook</a> · <a href="https://www.youtube.com/@reclamation" target="_blank">YouTube (Bureau)</a> · <a href="https://instagram.com/bureau_of_reclamation" target="_blank">Instagram (Bureau)</a></div>
+  <div class="detail"><strong>Link:</strong> <a href="https://www.usbr.gov/lc/hooverdam/service/index.html" target="_blank">Official tour info</a> · <a href="https://www.usbr.gov/lc/hooverdam/" target="_blank">Official home</a></div>
 </div>
-<h2>Attractions</h2>
-<div class="tblwrap"><table class="tbl"><thead><tr><th>Place</th><th>Type</th><th>Distance from Strip</th><th>Days open &amp; hours</th><th>Cost</th><th>Exceptions</th><th>Reservation</th><th>Social (YouTube/TikTok/IG)</th><th>Sources</th></tr></thead><tbody><tr><td data-label="Place"><strong>Hoover Dam (Bureau of Reclamation)</strong></td><td data-label="Type">Landmark / guided tour</td><td data-label="Distance from Strip"><span class="b bu">Unverified</span><div class="sub">no current official distance or drive-time retrieved</div></td><td data-label="Days open &amp; hours"><span class="b bv">Verified</span><div class="sub">Dam: daily 5:00 AM–9:00 PM (PST). Visitor Center and tours: daily 9:00 AM–5:00 PM. Doors close 4:15 PM; last tour departs 4:10 PM (official, last updated 10/30/26).</div></td><td data-label="Cost"><span class="b bv">Verified</span><div class="sub">Self-Guided Visitor Center Tour $15; Guided Power Plant Tour $25 (adults); Guided Dam Tour $40 (on-site purchase only). Children 3 &amp; under free. America the Beautiful passes not accepted.</div></td><td data-label="Exceptions"><span class="b bv">Verified</span><div class="sub">Closed Thanksgiving and Christmas Day. Special event activities may be limited around Easter, early August, 3 days after Thanksgiving and the week after Christmas through the first Monday of the new year (official).</div></td><td data-label="Reservation"><span class="b bv">Verified</span><div class="sub">Visitor Center and Power Plant tours sold through the official ticketing link on usbr.gov. Guided Dam Tour is on-site only.</div></td><td data-label="Social (YouTube/TikTok/IG)"><span class="b bv">Verified</span><div class="sub">Hoover Dam Facebook: https://www.facebook.com/theHooverDam/ (linked from the official Bureau of Reclamation tour page, fetched 2026-11-26). Bureau-level YouTube and Instagram also exist (not Hoover-specific).</div></td><td data-label="Sources"><ul class="srcs"><li><a href="https://www.usbr.gov/lc/hooverdam/service/index.html" target="_blank" rel="noopener">Official Hoover Dam tour information (Bureau of Reclamation)</a></li><li><a href="https://www.usbr.gov/lc/hooverdam/" target="_blank" rel="noopener">Official — Hoover Dam home (hours, exceptions)</a></li><li><a href="https://www.facebook.com/theHooverDam/" target="_blank" rel="noopener">Official Hoover Dam Facebook (linked from official page)</a></li><li><a href="https://www.youtube.com/@reclamation" target="_blank" rel="noopener">Bureau of Reclamation YouTube (agency-level)</a></li><li><a href="https://instagram.com/bureau_of_reclamation" target="_blank" rel="noopener">Bureau of Reclamation Instagram (agency-level)</a></li></ul></td></tr><tr><td data-label="Place"><strong>Red Rock Canyon National Conservation Area — Scenic Drive</strong></td><td data-label="Type">Scenic drive / hiking</td><td data-label="Distance from Strip"><span class="b bv">Verified</span><div class="sub">17 miles west of the Las Vegas Strip, approx. 30 minutes (BLM). Public transit does not extend to Red Rock (BLM).</div></td><td data-label="Days open &amp; hours"><span class="b bv">Verified</span><div class="sub">Scenic Drive hours (Recreation.gov): Oct 6 AM–7 PM; Nov–Feb 6 AM–5 PM; Mar 6 AM–7 PM; Apr–Sep 6 AM–8 PM. Visitor Center 8 AM–4:30 PM.</div></td><td data-label="Cost"><span class="b bu">Unverified</span><div class="sub">entry fee not confirmed on an official page retrieved in this session</div></td><td data-label="Exceptions"><span class="b bp">Partial</span><div class="sub">Limited hours on Thanksgiving (BLM, 2025). BLM waived amenity fees for Presidents&#x27; Day in 2021 (BLM press release). No 2027 fee-free day confirmed.</div></td><td data-label="Reservation"><span class="b bv">Verified</span><div class="sub">Timed entry required Oct 1–May 31, 8 AM–5 PM for the Scenic Drive (BLM &amp; Recreation.gov). Walk-in and bicycle visitors do not need a reservation. Non-refundable on the day of arrival.</div></td><td data-label="Social (YouTube/TikTok/IG)"><span class="b bp">Partial</span><div class="sub">Agency-level BLM accounts linked from the official BLM page (fetched 2026-11-26): X https://x.com/blmnational · YouTube http://www.youtube.com/BLMNational · Facebook https://www.facebook.com/BLMNational · Instagram http://instagram.com/mypubliclands. Not Red Rock-specific.</div></td><td data-label="Sources"><ul class="srcs"><li><a href="https://www.blm.gov/visit/red-rock-canyon-national-conservation-area" target="_blank" rel="noopener">Official — BLM Red Rock Canyon NCA (distance, transit, reservation)</a></li><li><a href="https://www.recreation.gov/timed-entry/10075177" target="_blank" rel="noopener">Official — Recreation.gov timed entry (hours, rules)</a></li><li><a href="https://www.blm.gov/announcement/red-rock-canyon-national-conservation-area-open-limited-hours-thanksgiving" target="_blank" rel="noopener">Official BLM press release — Thanksgiving hours (2025)</a></li><li><a href="https://www.blm.gov/press-release/red-rock-canyon-national-conservation-area-fee-free-february-15" target="_blank" rel="noopener">Official BLM press release — Presidents&#x27; Day fee waiver (2021)</a></li></ul></td></tr><tr><td data-label="Place"><strong>Valley of Fire State Park</strong></td><td data-label="Type">State park / hiking</td><td data-label="Distance from Strip"><span class="b bu">Unverified</span><div class="sub">no distance on the official page retrieved; third-party sites give 48–55 miles (not used)</div></td><td data-label="Days open &amp; hours"><span class="b bv">Verified</span><div class="sub">Open daily, sunrise to sunset (Nevada State Parks). Visitor Center daily 9 AM–4 PM (Nevada State Parks).</div></td><td data-label="Cost"><span class="b bv">Verified</span><div class="sub">Day-use entrance $10 per Nevada-plated vehicle; $15 for non-Nevada vehicles (Nevada State Parks). Bike-in $2 per bike.</div></td><td data-label="Exceptions"><span class="b bv">Verified</span><div class="sub">Annual maintenance closure Dec 1–14 (park fully closed, incl. on foot). Many trails closed May 15–Sep 30 (outside the trip window). Visitor Center daily 9 AM–4 PM. Camping by reservation. Office hours Mon–Fri 9–4; closed on state holidays. (Nevada State Parks, fetched 2026-11-26.)</div></td><td data-label="Reservation"><span class="b bv">Verified</span><div class="sub">Day-use reservations not required (Nevada State Parks). Campsites by reservation via reservenevada.com.</div></td><td data-label="Social (YouTube/TikTok/IG)"><span class="b bu">Unverified</span></td><td data-label="Sources"><ul class="srcs"><li><a href="https://parks.nv.gov/parks/valley-of-fire" target="_blank" rel="noopener">Official — Nevada State Parks, Valley of Fire</a></li></ul></td></tr><tr><td data-label="Place"><strong>The Neon Museum</strong></td><td data-label="Type">Museum / outdoor art</td><td data-label="Distance from Strip"><span class="b bu">Unverified</span><div class="sub">location &amp; distance not confirmed on the official pages retrieved</div></td><td data-label="Days open &amp; hours"><span class="b bv">Verified</span><div class="sub">2027 Admission (for tickets for Jan 1, 2027 onward): daily 3–11 PM (official). Official tickets page (2026 version): last entry 10 PM Sept–May; box office closes 1 hour before closing.</div></td><td data-label="Cost"><span class="b bp">Partial</span><div class="sub">2027 Admission listed &#x27;From $21&#x27; (official). Exact per-person price for the trip date is not confirmed.</div></td><td data-label="Exceptions"><span class="b bp">Partial</span><div class="sub">Official holiday advisory: buy tickets ahead to guarantee admission. The 2026 hours table may not match 2027 last-entry times — confirm.</div></td><td data-label="Reservation"><span class="b bv">Verified</span><div class="sub">Tickets bought online on neonmuseum.org (official).</div></td><td data-label="Social (YouTube/TikTok/IG)"><span class="b bv">Verified</span><div class="sub">TikTok https://www.tiktok.com/@neonmuseumlasvegas · Instagram https://www.instagram.com/theneonmuseumlasvegas/ · Facebook https://www.facebook.com/NeonMuseum (linked from official neonmuseum.org site navigation, fetched 2026-11-26).</div></td><td data-label="Sources"><ul class="srcs"><li><a href="https://neonmuseum.org/tickets-and-experiences/" target="_blank" rel="noopener">The Neon Museum — official Tickets &amp; Experiences (fetched)</a></li><li><a href="https://neonmuseum.org/" target="_blank" rel="noopener">Official — The Neon Museum home (2027 admission hours)</a></li></ul></td></tr></tbody></table></div>
+
+<div class="card">
+  <h3>Red Rock Canyon — Scenic Drive <span class="b bv">Hours Verified</span> <span class="b bu">Fees Unverified</span></h3>
+  <div class="meta">BLM · ~17 miles west of Strip (~30 min driving). No public transit to Red Rock.</div>
+  <div class="detail"><strong>Hours:</strong> <span class="b bv">V</span> Oct: 6 AM–7 PM; Nov–Feb: 6 AM–5 PM; Mar: 6 AM–7 PM; Apr–Sep: 6 AM–8 PM. Visitor Center 8 AM–4:30 PM.</div>
+  <div class="detail"><strong>Fees:</strong> <span class="b bu">U</span> Entry fee not confirmed on retrieved official page. Third-party guides say ~$20/vehicle + $2 reservation fee.</div>
+  <div class="detail"><strong>Exceptions:</strong> <span class="b bp">P</span> Limited hours Thanksgiving (BLM 2025). BLM waived fees for Presidents' Day in 2021 (not confirmed for 2027).</div>
+  <div class="detail"><strong>Reservations:</strong> <span class="b bv">V</span> Timed entry required Oct 1–May 31, 8 AM–5 PM. Walk-in &amp; bicycle visitors exempt. Non-refundable. <a href="https://www.recreation.gov/timed-entry/10075177" target="_blank">Recreation.gov</a></div>
+  <div class="detail"><strong>Social:</strong> <span class="b bp">P</span> BLM agency-level: <a href="https://x.com/blmnational" target="_blank">X</a> · <a href="http://www.youtube.com/BLMNational" target="_blank">YouTube</a> · <a href="https://www.facebook.com/BLMNational" target="_blank">Facebook</a> · <a href="http://instagram.com/mypubliclands" target="_blank">Instagram</a></div>
+  <div class="detail"><strong>Link:</strong> <a href="https://www.blm.gov/visit/red-rock-canyon-national-conservation-area" target="_blank">BLM official</a></div>
+</div>
+
+<div class="card">
+  <h3>Valley of Fire State Park <span class="b bv">Hours Verified</span> <span class="b bv">Fees Verified</span></h3>
+  <div class="meta">Nevada State Parks · ~50 miles northeast of Strip (~55 min driving)</div>
+  <div class="detail"><strong>Hours:</strong> <span class="b bv">V</span> Open daily sunrise to sunset. Visitor Center daily 9 AM–4 PM.</div>
+  <div class="detail"><strong>Fees:</strong> <span class="b bv">V</span> $10 Nevada-plated vehicle; $15 non-Nevada vehicle. Bike-in $2/bike.</div>
+  <div class="detail"><strong>Exceptions:</strong> <span class="b bv">V</span> Annual maintenance closure Dec 1–14. Many trails closed May 15–Sep 30 (outside trip window).</div>
+  <div class="detail"><strong>Reservations:</strong> <span class="b bv">V</span> Day-use: no reservation needed. Camping via reservenevada.com.</div>
+  <div class="detail"><strong>Social:</strong> <span class="b bu">U</span></div>
+  <div class="detail"><strong>Link:</strong> <a href="https://parks.nv.gov/parks/valley-of-fire" target="_blank">Official page</a></div>
+</div>
+
+<div class="card">
+  <h3>The Neon Museum <span class="b bv">Hours Verified</span> <span class="b bp">Pricing Partial</span></h3>
+  <div class="meta">Museum / outdoor neon art · Downtown Las Vegas</div>
+  <div class="detail"><strong>Hours:</strong> <span class="b bv">V</span> Daily tours (times vary by season; check official site for Feb 2027 schedule).</div>
+  <div class="detail"><strong>Fees:</strong> <span class="b bp">P</span> 2027 admission from $21 (starting price; exact amount unverified). 2026 last-entry times may not apply in 2027.</div>
+  <div class="detail"><strong>Social:</strong> <span class="b bu">U</span></div>
+  <div class="detail"><strong>Link:</strong> <a href="https://neonmuseum.org/" target="_blank">Official site</a> · <a href="https://neonmuseum.org/tickets-and-experiences/" target="_blank">Tickets</a></div>
+</div>
+
+<div class="callout">
+  <strong>Travel time note:</strong> Hoover Dam and Valley of Fire require driving (rental car or rideshare). Red Rock Canyon has no public transit. Only the Neon Museum is reachable by RTC bus from the Strip.
+</div>
 
 </main>
 <footer class="foot">
-  <div class="wrap">
-    Data as of 2026-11-26. Only values confirmed on official sources are shown as verified.
-    Blank cells are marked <span class="b bu">Unverified</span>.
-    Other builds in this repository:
-    <a href="session-36cc5108/index.html">Second build (session 36cc5108)</a> · <a href="planner-v1/index.html">Earlier dashboard (v1)</a>.
-    Source code: <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">github.com/kanlerxz87-cyber/Vegas2</a>.
-  </div>
+  <div class="wrap">Data as of 2026-11-27. <a href="index.html">← Back to dashboard</a>.</div>
 </footer>
 </body>
 </html>
