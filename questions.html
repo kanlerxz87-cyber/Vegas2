@@ -1,149 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Questions &amp; Answers — Vegas2 Las Vegas Planner</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions that must be answered first · Vegas2 planner</title>
+<meta name="description" content="A clear list of what we know from official sources, what we do not know, and the exact step that would close each gap.">
+<link rel="stylesheet" href="assets/site/style.css">
 </head>
 <body>
-
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="brand"><span class="mark">&#x1F3DC;&#xFE0F;</span> Vegas2</a>
-    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">&#x2261;</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="restaurants.html">Michelin Restaurants</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="activities.html">Activities</a>
-      <a href="suggestions.html">Suggestions</a>
-      <a href="questions.html" class="active">Questions &amp; Answers</a>
-      <a href="flagged-for-review.html">Flagged for Review</a>
-    </div>
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> Vegas2 <span class="small" style="color:#66707d;font-weight:500">Las Vegas · Feb–Mar 2027</span></a>
+    <span class="spacer"></span>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="nav" id="navLinks" aria-label="Main"><a href="index.html">Overview</a><a href="restaurants.html">MICHELIN</a><a href="hotels.html">Hotels</a><a href="booking.html">Prices &amp; dates</a><a href="activities.html">Activities</a><a href="transit.html">Transit</a><a href="questions.html" class="active">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
   </div>
 </header>
+<main class="wrap" id="main">
+<p class="crumb"><a href="index.html" target="_blank" rel="noopener noreferrer">Overview</a> / Questions</p>
+<h1>Questions that must be answered first</h1>
+<p class="lede">A clear list of what we know from official sources, what we do not know, and the exact step that would close each gap.</p>
 
-<div class="container">
-  <h1 class="page-title">Questions, Information &amp; Answers</h1>
-  <p class="page-subtitle">Items that must be addressed before any booking decision can be reasonably made, based on what we already have and do not have. Each item includes how to discover the missing information.</p>
-
-  <div class="callout warn">
-    <p><strong>Do not book yet.</strong> Several fields below are blank because they could not be confirmed from an official source. Nothing on this site should be treated as a confirmed price, hour, or availability until verified.</p>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Open questions &amp; required information</h2>
-    <div class="q-item">
-      <div class="q">Q-1. Which exact travel dates?</div>
-      <div class="a">Answer: Preferred window is February 15–18, 2027; acceptable range is February 15 – March 23, 2027 (1–2 weeks). Not yet finalized.</div>
-      <div class="a" style="margin-top:6px;">Discover: Ask the couple to confirm check-in/check-out and total nights.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-2. Total trip length (nights)?</div>
-      <div class="a">Answer: Not confirmed. Hotel tables use a 7-night stay (Feb 15–22, 2027) for comparison only; the actual trip may be shorter.</div>
-      <div class="a" style="margin-top:6px;">Discover: Confirm number of nights; recompute hotel totals per property for the actual length.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-3. Confirmed hotel budget per night / total?</div>
-      <div class="a">Answer: Not provided. Verified data so far: Caesars Palace $226/nt (+tax), The Venetian $6,170.43 all-in, and South Point King $919 (fee discrepancy flagged) for 7 nights (Feb 15–22, 2027). Other hotels unverified.</div>
-      <div class="a" style="margin-top:6px;">Discover: Ask for budget; fetch real-time quotes from official hotel booking pages for the confirmed dates.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-4. Room requirements: private bathroom + queen bed or bigger?</div>
-      <div class="a">Answer: Required for both adults. Verified for Caesars Palace (Julius Deluxe, 1 King, private bath) and The Venetian (Luxury King Suite, private bath). Unverified for candidate hotels.</div>
-      <div class="a" style="margin-top:6px;">Discover: Confirm bed type and private bath on each candidate hotel&rsquo;s official room page.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-5. Which Michelin restaurants to prioritize?</div>
-      <div class="a">Answer: Four starred (Jo&euml;l Robuchon 2&#9733;, Guy Savoy 1&#9733;, L&rsquo;Atelier 1&#9733;, &eacute; by Jos&eacute; Andr&eacute;s 1&#9733;) plus 3 Bib Gourmand. Not yet selected.</div>
-      <div class="a" style="margin-top:6px;">Discover: Check each starred restaurant&rsquo;s official site for reservation release policy (most release tables 30–60 days ahead).</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-6. Restaurant cost for a couple of 2 adults?</div>
-      <div class="a">Answer: Partially answered. Officially published fixed-price menus give per-couple totals for China Poblano ($120), Anima by EDO ($170), Kabuto ($260/$370), Kame Omakase ($700/$1,000), Mott 32 lunch sets ($76/$136) and Sparrow + Wolf ($298) — see restaurants.html “Est. total for 2 adults” column. All other restaurants publish no two-person total, so nothing is shown rather than guessed.</div>
-      <div class="a" style="margin-top:6px;">Discover: Review published menus on official restaurant sites; add estimated per-couple ranges, flagged as estimates.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-7. Restaurant days open / hours / exceptions?</div>
-      <div class="a">Answer: Re-verified 2026-11-27 on official MGM Grand / Cosmopolitan pages: Jo&euml;l Robuchon (Mon &amp; Sun closed; Tue–Sat 5–9:30pm), L&rsquo;Atelier (Tue–Wed closed; Mon &amp; Thu–Sun 5–9:30pm), &eacute; by Jos&eacute; Andr&eacute;s (Mon &amp; Sun closed; Tue–Sat 5:30–8:30pm), China Poblano (daily; 11am–10pm Mon–Thu, Sat–Sun 10am start). All other restaurants remain blank/unverified.</div>
-      <div class="a" style="margin-top:6px;">Discover: Visit each restaurant&rsquo;s official site; record hours, closed days, holidays, and exceptions.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-8. YouTube / TikTok / Instagram links for each restaurant &amp; activity?</div>
-      <div class="a">Answer: Partial leads only (e.g., Jo&euml;l Robuchon IG @joelrobuchon.lasvegas; Wynn IG @wynnlasvegas). Most are blank and flagged unverified.</div>
-      <div class="a" style="margin-top:6px;">Discover: Search each venue&rsquo;s official site and official social profiles; confirm handles before linking.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-9. Activity hours, open days, exceptions, and prices?</div>
-      <div class="a">Answer: All blank/unverified on the Activities page (Bellagio Fountains, High Roller, Sphere, Fremont Street, Neon Museum, Cirque, Red Rock, Hoover Dam, Shark Reef, Monorail).</div>
-      <div class="a" style="margin-top:6px;">Discover: Visit each venue&rsquo;s official site; record hours, closed days, exceptions, and ticket prices for 2 adults.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-10. Cheapest time to book the hotel?</div>
-      <div class="a">Answer: Partially indicated — at The Venetian, Thu Feb 19 was cheapest ($374.25) vs Fri Feb 18 ($1,499.25); mid-week tends to be cheaper. Not confirmed across all hotels or the full Feb 15–Mar 23 window.</div>
-      <div class="a" style="margin-top:6px;">Discover: Pull rate calendars from official hotel booking pages for multiple dates in the window and compare.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-11. Transportation within one hour of hotel?</div>
-      <div class="a">Answer: Las Vegas has no subway; options are the Las Vegas Monorail (Strip), RTC buses, rideshare, rental car. Not yet tied to a specific hotel.</div>
-      <div class="a" style="margin-top:6px;">Discover: Choose hotel first, then confirm monorail/bus stops and ride times to each activity/restaurant.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">Q-12. Reservation lead time for starred restaurants?</div>
-      <div class="a">Answer: Per Visit Las Vegas, starred restaurants typically release tables 30–60 days ahead; &eacute; by Jos&eacute; Andr&eacute;s takes reservations up to three months ahead, two seatings nightly.</div>
-      <div class="a" style="margin-top:6px;">Discover: Confirm exact booking windows on each starred restaurant&rsquo;s official site once travel dates are set.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Suggestions to discover missing information</h2>
-    <ul style="padding-left:20px;">
-      <li>Open each restaurant&rsquo;s official site (links on the Michelin Restaurants page) and record hours, closed days, exceptions, and menu prices.</li>
-      <li>Open each candidate hotel&rsquo;s official booking page for the confirmed dates and record private bath, bed type, and the all-in 7-night total including resort fees and taxes.</li>
-      <li>For starred restaurants, check the reservation release policy (30–60 days ahead is typical) and book as soon as the window opens.</li>
-      <li>For activities, visit each venue&rsquo;s official site and record hours, open days, exceptions, and ticket prices for 2 adults.</li>
-      <li>Confirm social-media handles (YouTube/TikTok/Instagram) from each venue&rsquo;s official site before linking.</li>
-      <li>Re-check hotel prices close to booking, since rates are dynamic and the verified snapshots will go stale.</li>
-    </ul>
-  </div>
-
-  <div class="callout ok">
-    <p><strong>Decision rule.</strong> A booking decision is reasonable only after Q-1 through Q-3 (dates, length, budget) are answered and Q-4 through Q-12 are resolved or explicitly accepted as unverified risks.</p>
-  </div>
+<div class="note">
+  <p>Everything that must be answered before a booking decision can be made. Each item separates what we know from an official source, what is missing, and exactly how to close the gap. Nothing here asks you to re-enter data we already hold.</p>
+  <p class="small"><strong>17 of 20 questions are still open.</strong> The site cannot get cheaper or more precise until they are answered — the missing inputs are preferences and budget, not research.</p>
 </div>
+<h2>Questions, known facts, gaps and how to close them</h2>
+<div class="table-wrap"><table class="stack"><caption>Ordered: open questions first, then partly answered, then answered.</caption><thead><tr><th class="">#</th><th class="">Question</th><th class="">Status</th><th class="">What we know (sourced)</th><th class="">What is missing</th><th class="">How to find it</th></tr></thead><tbody><tr><td data-label="#"><span class="qid">Q-01</span></td><td data-label="Question"><strong>Is this a 3-night trip (Feb 15–18) or a 7-night trip (Feb 15–22) — or up to two weeks?</strong><span class="sub">Changes hotel total by roughly half, changes which restaurants fit, and changes whether a Downtown day and a Hoover Dam day both fit.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">The brief names Feb 15–18, 2027 as preferred vacation time, asks for hotel costs on a 7-night basis, and allows 1–2 weeks. Those three statements conflict.</td><td data-label="What is missing">One authoritative length.</td><td data-label="How to find it">Pick one: 3 nights / 7 nights / 10+ nights. This site prices 7 nights and keeps 3 nights as the preferred-date reference.</td></tr><tr><td data-label="#"><span class="qid">Q-02</span></td><td data-label="Question"><strong>What is the total budget for two adults, all-in (room + tax + resort fees + food + activities)?</strong><span class="sub">Without it, a $581 room and a $6,170 suite look equally valid.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Cheapest verified 7-night two-queen room is $581 before tax (Flamingo); most expensive verified figure is a prior-session $6,170.43 (Venetian, all-in).</td><td data-label="What is missing">A budget ceiling.</td><td data-label="How to find it">State a number. The site can then flag which hotels/restaurants fit.</td></tr><tr><td data-label="#"><span class="qid">Q-04</span></td><td data-label="Question"><strong>Does the 1-hour rule mean door-to-door, or time on the vehicle?</strong><span class="sub">Door-to-door can double a 20-minute ride once waiting and walking are added.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">No official door-to-door journey time was retrieved for any venue pair. Monorail headways are 4–8 minutes; station hours are published.</td><td data-label="What is missing">Definition of the limit, and per-pair journey times.</td><td data-label="How to find it">Define it, then query the RTC Trip Planner for the exact pairs on the exact dates.</td></tr><tr><td data-label="#"><span class="qid">Q-05</span></td><td data-label="Question"><strong>Do you want MICHELIN-starred restaurants only, or every MICHELIN-listed restaurant?</strong><span class="sub">Determines whether hotel ranking weights 2 resorts (starred only) or 8 (all listed).</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">4 starred (5 stars), 3 Bib Gourmand, 17 Recommended = 24 total in the 2026 guide.</td><td data-label="What is missing">A preference.</td><td data-label="How to find it">Choose a path on the Suggestions page.</td></tr><tr><td data-label="#"><span class="qid">Q-06</span></td><td data-label="Question"><strong>What is the per-meal budget for two?</strong><span class="sub">Starred rooms typically run several hundred dollars per couple before wine.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Exact published two-person totals exist for Partage ($260 / $320 / $420). Guy Savoy publishes à-la-carte items $60–$290. Other menus were not priced on official pages.</td><td data-label="What is missing">A ceiling per meal.</td><td data-label="How to find it">Set a range; then request menus/prices directly from the venues that do not publish them.</td></tr><tr><td data-label="#"><span class="qid">Q-07</span></td><td data-label="Question"><strong>Is one king bed acceptable, or must it be two queens?</strong><span class="sub">About 7% on the room at South Point, about 2% at Paris. Bed choice does not change the total much for two adults.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">The brief says queen-sized or bigger, which a king satisfies. Verified bed-price differences: South Point two queens $989 vs king $919 (+$70 for the week); Paris two queens $1,421 vs king $1,393 (+$28). Flamingo&#x27;s two-queen rate is $83/night; its king rate was not captured.</td><td data-label="What is missing">Whether you want two beds.</td><td data-label="How to find it">Confirm bed preference.</td></tr><tr><td data-label="#"><span class="qid">Q-08</span></td><td data-label="Question"><strong>Will a 2026 MICHELIN distinction still apply in February 2027?</strong><span class="sub">A hotel chosen for a specific star could lose that reason.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">The 2026 Southwest guide is the current one; 2027 awards are not announced. Restaurants can lose or gain stars.</td><td data-label="What is missing">The 2027 guide.</td><td data-label="How to find it">Recheck visitlasvegas.com and guide.michelin.com once the 2027 selection publishes.</td></tr><tr><td data-label="#"><span class="qid">Q-10</span></td><td data-label="Question"><strong>Do you need a pool, spa, gym or view?</strong><span class="sub">Feb pool weather in Las Vegas is cool; a pool may not be usable.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Caesars Palace lists a full-service spa, pools and fitness centre; Flamingo lists two seasonal pools and a spa; South Point lists free valet and a fitness centre in the resort fee.</td><td data-label="What is missing">Which amenities actually matter to you.</td><td data-label="How to find it">Name the top three.</td></tr><tr><td data-label="#"><span class="qid">Q-11</span></td><td data-label="Question"><strong>Are you willing to rent a car or use rideshare for out-of-corridor activities?</strong><span class="sub">Adds $40–$100+/day in car, insurance and parking, or rideshare fares.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Hoover Dam, Red Rock Canyon and Valley of Fire have no verified public-transit option; public transit in the valley is bus-only outside the Monorail.</td><td data-label="What is missing">A yes/no.</td><td data-label="How to find it">Decide before choosing a hotel — South Point&#x27;s free parking and south location favour a car; a center-Strip hotel favours walking.</td></tr><tr><td data-label="#"><span class="qid">Q-12</span></td><td data-label="Question"><strong>How flexible are your dates inside Feb 15 – Mar 23, 2027?</strong><span class="sub">Slight price differences and real availability risk in March.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">South Point quoted $989 for Feb 15–22 vs $1,049 for Feb 22–Mar 1, and had no rooms at all for Mar 15–22 because Mar 20 is sold out.</td><td data-label="What is missing">How much you can move.</td><td data-label="How to find it">Give a range of ±3 days.</td></tr><tr><td data-label="#"><span class="qid">Q-14</span></td><td data-label="Question"><strong>Do you have loyalty status (Caesars Rewards, MGM Rewards, Wynn Rewards, Venetian Rewards)?</strong><span class="sub">Resort-fee waivers alone can be worth $400+ on a week.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Caesars Rewards: 15% off this booking for new members; Diamond/Seven Stars free High Roller; resort fees waived for Diamond/Seven Stars. Venetian Rewards: up to 5% member rate. MGM Rewards Gold+ gets priority dining reservations.</td><td data-label="What is missing">Your status.</td><td data-label="How to find it">Say which programmes you hold.</td></tr><tr><td data-label="#"><span class="qid">Q-15</span></td><td data-label="Question"><strong>Do you want reservations pre-booked, or a list to book yourself?</strong><span class="sub">February is high season; the small rooms (é, Kabuto, Kame) sell out.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">é by José Andrés releases tickets about three months ahead; starred rooms need reservations; Bib/Recommended are generally walk-in friendly per the official FAQ.</td><td data-label="What is missing">Whether we should hold placeholders.</td><td data-label="How to find it">Choose &#x27;book now&#x27; or &#x27;list only&#x27;.</td></tr><tr><td data-label="#"><span class="qid">Q-16</span></td><td data-label="Question"><strong>Are there dietary restrictions or dress-code constraints?</strong><span class="sub">Can eliminate otherwise strong picks.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Partage cannot accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. Joël Robuchon requires business formal; Guy Savoy is formal; Wing Lei business casual and no children under 5.</td><td data-label="What is missing">Restrictions and wardrobe plans.</td><td data-label="How to find it">List restrictions.</td></tr><tr><td data-label="#"><span class="qid">Q-17</span></td><td data-label="Question"><strong>How much walking per day is acceptable?</strong><span class="sub">Decides whether a center-Strip location beats a cheaper off-Strip one.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Strip resorts are large; the Venetian suite collection alone spans two towers. No official walking distances were captured.</td><td data-label="What is missing">A comfort limit.</td><td data-label="How to find it">Estimate blocks/minutes per day.</td></tr><tr><td data-label="#"><span class="qid">Q-18</span></td><td data-label="Question"><strong>Do you need cancellation flexibility?</strong><span class="sub">Cheapest rates are usually the least flexible.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Caesars advertises free 48-hour cancellation with terms not fully retrieved; South Point rates require a deposit; advance-purchase rates are typically restrictive.</td><td data-label="What is missing">How firm your plans are.</td><td data-label="How to find it">Confirm the cancellation window on the exact rate before paying.</td></tr><tr><td data-label="#"><span class="qid">Q-19</span></td><td data-label="Question"><strong>What is the arrival airport and date?</strong><span class="sub">Late arrivals change the first night&#x27;s plan and airport-transfer cost.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">Nothing was researched for flights — out of scope so far.</td><td data-label="What is missing">Airport, arrival time, airline.</td><td data-label="How to find it">Provide flight details or ask for a flight search.</td></tr><tr><td data-label="#"><span class="qid">Q-20</span></td><td data-label="Question"><strong>Should the site show all-in totals including tax?</strong><span class="sub">All totals on this site currently understate the final bill.</span></td><td data-label="Status"><span class="badge b-no">Open — needs your answer</span></td><td data-label="What we know (sourced)">No booking engine published the tax amount; every rate was &#x27;excluding taxes&#x27;.</td><td data-label="What is missing">The applicable tax rate for these bookings.</td><td data-label="How to find it">Either fetch the tax line from a booking checkout, or use the applicable Clark County room-tax rate from an official Nevada source.</td></tr><tr><td data-label="#"><span class="qid">Q-03</span></td><td data-label="Question"><strong>Do you accept that Las Vegas has no subway or metro?</strong><span class="sub">The whole hotel-proximity ranking rests on this.</span></td><td data-label="Status"><span class="badge b-ok">Answered from a source</span></td><td data-label="What we know (sourced)">There is no subway. Rail is the 7-station Las Vegas Monorail (Strip only); the rest is RTC bus/Deuce, walking, tram, rideshare or car. Verified on lvmonorail.com and rtcsnv.com.</td><td data-label="What is missing">Whether that changes your &#x27;1 hour by subway or bus&#x27; criterion.</td><td data-label="How to find it">Read the Transit page; decide if bus/monorail/walking satisfies the rule.</td></tr><tr><td data-label="#"><span class="qid">Q-09</span></td><td data-label="Question"><strong>Do you need a private bathroom attached to the room, or a private bathroom anywhere?</strong><span class="sub">Removes a filtering requirement.</span></td><td data-label="Status"><span class="badge b-ok">Answered from a source</span></td><td data-label="What we know (sourced)">Every room captured (Venetian suites, Caesars Julius, Paris Bordeaux, Flamingo, South Point) is described with an in-room bathroom.</td><td data-label="What is missing">Nothing for those rooms; other hotels&#x27; room pages were not captured.</td><td data-label="How to find it">n/a — attached bathrooms confirmed for the priced rooms.</td></tr><tr><td data-label="#"><span class="qid">Q-13</span></td><td data-label="Question"><strong>Is Feb 15, 2027 (Washington&#x27;s Birthday / Presidents&#x27; Day) a problem?</strong><span class="sub">Holiday weekends raise rates and restaurant demand.</span></td><td data-label="Status"><span class="badge b-ok">Answered from a source</span></td><td data-label="What we know (sourced)">Feb 15, 2027 is a federal holiday (OPM calendar), so the preferred check-in is a holiday Monday — higher demand and a busier Strip.</td><td data-label="What is missing">Whether you want to avoid it.</td><td data-label="How to find it">Consider checking in Feb 16 or Feb 17 instead.</td></tr></tbody></table></div>
+<h2>If you only answer three</h2>
+<div class="grid three">
+  <div class="pick"><div class="tag">Changes every total</div><div class="big">Q-01 · Trip length</div><p>3 nights, 7 nights or two weeks. The brief currently says all three.</p></div>
+  <div class="pick"><div class="tag">Changes the hotel</div><div class="big">Q-02 · Budget</div><p>An all-in ceiling for two. Without it, $581 and $6,170 look equally valid.</p></div>
+  <div class="pick"><div class="tag">Changes the method</div><div class="big">Q-03 · No subway</div><p>Accept bus/monorail/walking, or redefine the 1-hour rule.</p></div>
+</div>
+<h2>How to answer without doing research</h2>
+<p>Reply with numbers or choices only — e.g. "7 nights, $3,000 all-in, two queens, no car, starred restaurants only". Everything else on this site is already sourced and will re-rank itself.</p>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="foot-title">Vegas2</div>
-      <div class="small">Open questions before booking.</div>
-    </div>
-    <div>
-      <div class="foot-title">Navigate</div>
-      <div><a href="index.html">Home</a></div>
-      <div><a href="suggestions.html">Suggestions</a></div>
-      <div><a href="flagged-for-review.html">Flagged for Review</a></div>
-    </div>
-  </div>
+</main>
+<footer class="site">
+  <p><strong>Vegas2 planner.</strong> Built 2026-11-27. Two adults, one room, Las Vegas, Feb 15 – Mar 23, 2027.
+  Every value shown is tied to an official source captured on the date stated; anything unconfirmed is left blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Prices are snapshots, not offers, and exclude taxes unless stated.</p>
+  <p>Source register: <a href="sources.html">Sources</a> · Repository review: <a href="repo-review.html">Repo review</a> · Coordination: <a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md</a></p>
 </footer>
-
 <script>
-document.getElementById('navToggle').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
-});
+  var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');
+  if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
 </script>
-
 </body>
 </html>

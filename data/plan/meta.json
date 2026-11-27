@@ -1,0 +1,28 @@
+{
+  "asOf": "2026-11-27",
+  "timezone": "Trip dates are local Las Vegas dates (Pacific Time).",
+  "party": "2 adults, 1 room, USD",
+  "tripWindow": "Feb 15 – Mar 23, 2027 (1–2 weeks)",
+  "preferredWindow": "Feb 15–18, 2027 (3 nights, as stated in the brief)",
+  "costBasis": "7-night stays (the brief asks for 7-night totals). 3-night price is shown separately where captured.",
+  "legend": {
+    "v": "Verified — read directly on an official page during this session (2026-11-27), or by a prior logged session on the stated date. Source link on the row.",
+    "p": "Partial — an official page confirms part of the claim only.",
+    "u": "Unverified — left blank. No official source confirmed it; see Flagged for Review."
+  },
+  "rules": [
+    "A value is shown only when an official source (hotel, restaurant, venue, transit agency, or the official Las Vegas MICHELIN list) states it.",
+    "Dynamic booking prices are snapshots. Every nightly rate was captured live on the date shown and will change.",
+    "No tax-inclusive total is computed anywhere. Booking engines display rates 'excluding taxes'; the tax amount is not published in the captured output, so it is left unstated.",
+    "Travel times are not modelled or estimated as facts. Where no official journey time was retrieved, the cell says so.",
+    "Michelin tiers follow the official 2026 MICHELIN Guide Southwest list published on visitlasvegas.com. 2027 awards have not been announced."
+  ],
+  "keyFindings": [
+    "The 2026 Las Vegas MICHELIN list has 24 distinctions: 4 starred (5 stars total), 3 Bib Gourmand, 17 Recommended.",
+    "Las Vegas has no subway/metro. Rail service is the 7-station Las Vegas Monorail plus RTC buses and the Deuce.",
+    "Every MICHELIN restaurant in Las Vegas is within the Strip/Downtown/Chinatown core; a 1-hour bus/rail filter therefore does not separate Strip hotels. Michelin restaurants inside the same resort is the filter that does.",
+    "The Venetian/Palazzo campus has four MICHELIN distinctions — the densest cluster — but its dated rate calendar returned no prices.",
+    "Cheapest verified 7-night total for a two-queen room: Flamingo Las Vegas, $581 including its $50/day resort fee, taxes excluded (captured 2026-11-27 for Feb 15–22, 2027).",
+    "South Point is the only property whose own engine posted a full 7-night total with fees for three different date windows: Feb 15–22 ($919 king / $989 two queens), Feb 22–Mar 1 ($979 / $1,049) and Mar 15–22 (no availability on Mar 20, 2027)."
+  ]
+}

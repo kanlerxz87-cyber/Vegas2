@@ -1,0 +1,114 @@
+{
+ "as_of": "2026-11-27",
+ "intro": "Each suggestion is a proposal only. Nothing has been implemented; pick the ones worth doing and they can be added in a later pass.",
+ "rows": [
+  {
+   "id": "S-01",
+   "title": "Book the Feb 15\u201322, 2027 week and lock the 7-night comparison",
+   "why": "It was the cheapest week across every hotel tested and it matches the requested 7-night cost basis.",
+   "effort": "Low",
+   "impact": "High",
+   "needs": "Traveller confirmation of dates",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-02",
+   "title": "Get a written all-in quote from the top two hotels",
+   "why": "Derived totals exclude tax. One itemised quote per hotel removes the guesswork (F-05, F-12).",
+   "effort": "Low",
+   "impact": "High",
+   "needs": "Email or phone to each property",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-03",
+   "title": "Retry pricing for MGM Grand, Cosmopolitan and Bellagio",
+   "why": "Three of the four hotels with a Michelin star on campus have no verified price (F-02), which skews the price ranking.",
+   "effort": "Low",
+   "impact": "High",
+   "needs": "Working MGM Resorts booking session",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-04",
+   "title": "Add a real RTC travel-time matrix for the 12 confirmed-hour restaurants",
+   "why": "The brief's 1-hour rule cannot be honoured without door-to-door minutes (F-16). The RTC trip planner can supply them.",
+   "effort": "Medium",
+   "impact": "High",
+   "needs": "Time to run each origin\u2013destination pair",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-05",
+   "title": "Split the trip: Strip hotel for Michelin nights, Chinatown hotel for the 6-restaurant cluster",
+   "why": "Chinatown has six Michelin restaurants in one mile but no Michelin hotel; the Strip has the stars but a 20\u201330 minute ride to Chinatown.",
+   "effort": "Medium",
+   "impact": "Medium",
+   "needs": "A second hotel quote for a 2\u20133 night split",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-06",
+   "title": "Collect tasting-menu prices for the 21 unpriced restaurants",
+   "why": "Food budget cannot be built without them (F-06).",
+   "effort": "Medium",
+   "impact": "High",
+   "needs": "OpenTable/MICHELIN menu pages or direct contact",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-07",
+   "title": "Verify social accounts for the top 10 venues only",
+   "why": "Verifying all 33 venues is slow; the top 10 cover every starred restaurant and the main activities (F-14).",
+   "effort": "Low",
+   "impact": "Medium",
+   "needs": "Checking each platform for a linked official handle",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-08",
+   "title": "Add a total-cost calculator to the site",
+   "why": "Readers currently have to add hotel + restaurants + transit + shows by hand. A simple sum with clearly-labelled assumptions would speed the decision.",
+   "effort": "Medium",
+   "impact": "High",
+   "needs": "Approval to add an interactive element",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-09",
+   "title": "Shift arrival to Feb 16 to dodge the federal holiday",
+   "why": "Feb 15, 2027 is Washington's Birthday (F-13); arriving a day later may reduce arrival-day cost and congestion.",
+   "effort": "Low",
+   "impact": "Medium",
+   "needs": "A re-priced Feb 16\u201323 quote",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-10",
+   "title": "Decide whether to treat the DMO or MICHELIN as authoritative on Bib Gourmands",
+   "why": "Two official sources disagree (F-03). Publishing one consistent rule prevents future contradictions.",
+   "effort": "Low",
+   "impact": "Low",
+   "needs": "A stated editorial rule; MICHELIN release recommended",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-11",
+   "title": "Show distance rings on the hotel page",
+   "why": "The brief wants travel of an hour or less; a simple walking/bus/monorail ring per hotel would make that visual.",
+   "effort": "Medium",
+   "impact": "Medium",
+   "needs": "Approved map data and a design pass",
+   "status": "Awaiting decision"
+  },
+  {
+   "id": "S-12",
+   "title": "Set a recheck date for every dynamic rate",
+   "why": "All hotel prices are live and will drift; a single 'recheck by' date keeps the site honest.",
+   "effort": "Low",
+   "impact": "Medium",
+   "needs": "Calendar reminder, e.g. 60 days before arrival",
+   "status": "Awaiting decision"
+  }
+ ]
+}

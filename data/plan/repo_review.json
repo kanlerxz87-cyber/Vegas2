@@ -1,0 +1,141 @@
+{
+  "intro": "Line-by-line review of the repository as inherited (commit 3386a21), plus what this session changed. Findings are grouped by kind; nothing is asserted without a file path or an API result.",
+  "stats": [
+    {
+      "label": "HTML pages in repo",
+      "value": "78"
+    },
+    {
+      "label": "Competing 'final' planners",
+      "value": "7"
+    },
+    {
+      "label": "Duplicate data trees",
+      "value": "4"
+    },
+    {
+      "label": "CI workflows",
+      "value": "4"
+    },
+    {
+      "label": "Open PRs from old sessions",
+      "value": "2"
+    },
+    {
+      "label": "Pages build type (API)",
+      "value": "legacy · main · /"
+    }
+  ],
+  "positives": [
+    "Every previous session left a written record: COORDINATION.md is 18 KB and tracks claims, sources and handoffs across seven sessions.",
+    "Data files are structured JSON with explicit null/blank values rather than invented numbers — the right instinct for this brief.",
+    "The 24-row MICHELIN list in prior sessions matches the official Las Vegas MICHELIN page exactly (4 starred / 3 Bib / 17 Recommended).",
+    "Prior sessions correctly identified the two structural problems: no subway in Las Vegas, and the missing transit-time evidence."
+  ],
+  "rows": [
+    {
+      "id": "R-01",
+      "severity": "high",
+      "finding": "Seven parallel sites all claimed to be the planner",
+      "evidence": "Root *.html (7 pages), docs/*.html (9 pages), docs/session-059c3126/, docs/session-2e5e3452/, docs/session-36cc5108/, docs/session-b29fc34e/, docs/session-d33551df/, docs/planner-v1/, legacy-dashboard/, field-notes/, site/*.html, site/session-b29fc34e/.",
+      "action": "Consolidated to one canonical root site (this session). All prior sites preserved untouched under docs/ and in git history. README now states which site is canonical.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-02",
+      "severity": "high",
+      "finding": "Pages serves the repository root, not docs/, yet most prior work lives in docs/",
+      "evidence": "GET /repos/.../pages → {build_type: 'legacy', source: {branch: 'main', path: '/'}}. Prior READMEs described docs/ as the published site.",
+      "action": "Root site rebuilt as the canonical, mobile-first planner, so the URL people actually open is the good one. docs/ remains reachable at /docs/ and /<session>/ paths.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-03",
+      "severity": "medium",
+      "finding": "README is four READMEs stacked, with contradictory instructions and a factual error",
+      "evidence": "README.md repeats 'Rebuild' instructions for four different builders and says 'three starred restaurants' (official list: four).",
+      "action": "README rewritten as one document with one build command; the historical text is preserved in the Repo review page and git history. Error logged as F-19.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-04",
+      "severity": "medium",
+      "finding": "Four overlapping data trees with duplicated files",
+      "evidence": "data/*.json (14), data/verified/*.json (9), data/trip/*.json (9), field-notes/data/*.json (3); 2 files are byte-identical duplicates across trees.",
+      "action": "New canonical tree data/plan/ (9 files) used by the new build. Old trees left read-only as record.",
+      "status": "documented"
+    },
+    {
+      "id": "R-05",
+      "severity": "medium",
+      "finding": "Four CI workflows, three of which rebuild only a subtask",
+      "evidence": ".github/workflows/pages.yml (uploads docs/), pages-check.yml (rebuilds session-059c3126), validate.yml (session b29fc34e), validate-field-notes.yml (session 2e5e3452).",
+      "action": "Added .github/workflows/validate-plan.yml for the canonical site; existing workflows left intact so old outputs do not go stale.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-06",
+      "severity": "low",
+      "finding": "Legacy dashboard duplicated at the root and in legacy-dashboard/",
+      "evidence": "legacy-dashboard/{index.html,data.js,app.js,styles.css} duplicates the first session's dashboard, which was also the v1 root pages.",
+      "action": "Kept as-is (historical). Not linked from the new site.",
+      "status": "documented"
+    },
+    {
+      "id": "R-07",
+      "severity": "low",
+      "finding": "Prior root pages used emoji icons and inline nav duplicated per file",
+      "evidence": "Every previous root page carried its own <header> block with a hard-coded nav, and an emoji brand mark.",
+      "action": "Replaced by a single generated layout from scripts/build_plan.py with a shared nav and accessible skip link.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-08",
+      "severity": "medium",
+      "finding": "Unverified values were sometimes presented as facts in prose",
+      "evidence": "The inherited hotels.html stated 'roughly 15–20 minutes by car' travel times and a blanket 'all 24 restaurants reachable' claim without a transit source; this site's rule forbids that.",
+      "action": "Travel times removed or explicitly marked unverified. Ranking now uses a measurable, sourced measure (restaurants inside the same resort).",
+      "status": "fixed"
+    },
+    {
+      "id": "R-09",
+      "severity": "low",
+      "finding": "No automated link or source check existed for the root site",
+      "evidence": "Prior checkers (scripts/check_site.py, check_session_b29fc34e.py) cover only docs/ builds.",
+      "action": "scripts/check_plan.py validates every page, internal link, required source on every row, award counts (4/3/17) and blank-value discipline.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-10",
+      "severity": "low",
+      "finding": "Open PRs #8 and #9 were never merged or closed",
+      "evidence": "GitHub PR list shows both OPEN since 2026-11-26.",
+      "action": "Left open (outside this session's scope); recorded in COORDINATION.md and F-21.",
+      "status": "documented"
+    },
+    {
+      "id": "R-11",
+      "severity": "low",
+      "finding": "Coordination board's task table had drifted from reality",
+      "evidence": "Previous session marked 'verify table rows line-by-line' done while its own flag list recorded most rows unverified.",
+      "action": "This session split 'verified' from 'done' and records per-value capture dates.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-12",
+      "severity": "low",
+      "finding": "Mobile tables in prior versions required horizontal scrolling",
+      "evidence": "Prior tables used overflow-x on 8+ columns with no stacking behaviour at narrow widths.",
+      "action": "New tables stack into labelled cards below 640 px (CSS data-label pattern), verified by the checker's markup test.",
+      "status": "fixed"
+    },
+    {
+      "id": "R-13",
+      "severity": "medium",
+      "finding": "Two more sessions landed on main while this session was building, conflicting on the same five root pages",
+      "evidence": "origin/main advanced to 0d3e73e (PRs #19–#21, sessions 4831d710 and c5a8afb5) and modified index.html, hotels.html, restaurants.html, activities.html, flagged-for-review.html and COORDINATION.md.",
+      "action": "Merged main into this branch. This session's generated root pages kept as canonical; main's versions archived at docs/session-legacy-root/main-0d3e73e/ and COORDINATION.md keeps both records. Their two verified rate captures were incorporated (F-23).",
+      "status": "fixed"
+    }
+  ]
+}
