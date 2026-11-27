@@ -15,20 +15,20 @@ No files from either side were discarded. Shared outputs (index/navigation/table
 
 | # | Task | Status | Owner | File scope | Sources / verification |
 |---|------|--------|-------|------------|------------------------|
-| 1 | Create COORDINATION.md task board update | in progress | c5a8afb5 | COORDINATION.md | n/a |
-| 2 | Line-by-line repo review & verification (no hallucinations) | in progress | c5a8afb5 | all HTML, data/*.json, docs/** | visitlasvegas.com, michelin.com (official 2026 SW release), mgmgrand.mgmresorts.com, ebyjoseandres.com, caesars.com, venetianlasvegas.com |
-| 3 | Michelin Guide Las Vegas — 24 distinctions, starred vs listed vs Bib, clusters | in progress | c5a8afb5 | restaurants.html, data/verified/michelin.json | visitlasvegas.com (LVCVA) + michelin.com official press release (Aug 26/31 2026) |
-| 4 | Hotel research — best by price/location/amenities, 7-night total, cheapest booking time | in progress | c5a8afb5 | hotels.html, data/verified/hotels.json | venetianlasvegas.com, caesars.com (Feb 15–22 2027), OPM holiday |
-| 5 | Activities + YouTube/TikTok/Instagram links, hours/days/exceptions, official links | in progress | c5a8afb5 | activities.html, data/verified/activities.json | official venue sites (BLM, USBR, NVS Parks, LV Monorail, Neon Museum, etc.) |
-| 6 | Verify every table row has official source link; blank unverified, flagged | in progress | c5a8afb5 | restaurants.html, hotels.html, activities.html | official sources per row |
+| 1 | Create COORDINATION.md task board update | done | c5a8afb5 | COORDINATION.md | n/a |
+| 2 | Line-by-line repo review & verification (no hallucinations) | done | c5a8afb5 | all HTML, data/*.json, docs/** | visitlasvegas.com, michelin.com (official 2026 SW release), mgmgrand.mgmresorts.com, ebyjoseandres.com, caesars.com, venetianlasvegas.com |
+| 3 | Michelin Guide Las Vegas — 24 distinctions, starred vs listed vs Bib, clusters | done | c5a8afb5 | restaurants.html, data/verified/michelin.json | visitlasvegas.com (LVCVA) + michelin.com official press release (Aug 26/31 2026) |
+| 4 | Hotel research — best by price/location/amenities, 7-night total, cheapest booking time | done | c5a8afb5 | hotels.html, data/verified/hotels.json | venetianlasvegas.com, caesars.com (Feb 15–22 2027), OPM holiday |
+| 5 | Activities + YouTube/TikTok/Instagram links, hours/days/exceptions, official links | done | c5a8afb5 | activities.html, data/verified/activities.json | official venue sites (BLM, USBR, NVS Parks, LV Monorail, Neon Museum, etc.) |
+| 6 | Verify every table row has official source link; blank unverified, flagged | done | c5a8afb5 | restaurants.html, hotels.html, activities.html | official sources per row |
 | 7 | Mobile-friendly dashboard CSS + shared layout/nav | done | c5a8afb5 | assets/css/style.css | n/a (inherited from e9badc77) |
-| 8 | Landing page + executive summary | in progress | c5a8afb5 | index.html | n/a |
-| 9 | Category subpages (hotels, restaurants, activities) | in progress | c5a8afb5 | hotels.html, restaurants.html, activities.html | n/a |
-| 10 | Suggestions section (decision paths before implementing) | in progress | c5a8afb5 | suggestions.html | n/a |
-| 11 | Questions / information / answers section | in progress | c5a8afb5 | questions.html | n/a |
-| 12 | Flagged for Review page (unverified items + irregularities) | in progress | c5a8afb5 | flagged-for-review.html | n/a |
-| 13 | Integrate, verify table rows line-by-line, fix broken links | in progress | c5a8afb5 | all | internal links verified; external official sources linked |
-| 14 | Enable GitHub Pages, confirm deploy, no broken links | in progress | c5a8afb5 | repo Pages settings | Pages: main `/` → https://kanlerxz87-cyber.github.io/Vegas2/ (API built) |
+| 8 | Landing page + executive summary | done | c5a8afb5 | index.html | n/a |
+| 9 | Category subpages (hotels, restaurants, activities) | done | c5a8afb5 | hotels.html, restaurants.html, activities.html | n/a |
+| 10 | Suggestions section (decision paths before implementing) | done | c5a8afb5 | suggestions.html | n/a |
+| 11 | Questions / information / answers section | done | c5a8afb5 | questions.html | n/a |
+| 12 | Flagged for Review page (unverified items + irregularities) | done | c5a8afb5 | flagged-for-review.html | n/a |
+| 13 | Integrate, verify table rows line-by-line, fix broken links | done | c5a8afb5 | all | internal links verified; external official sources linked |
+| 14 | Enable GitHub Pages, confirm deploy, no broken links | done | c5a8afb5 | repo Pages settings | Pages: main `/` → https://kanlerxz87-cyber.github.io/Vegas2/ (API built) |
 | 15 | Create PR from integration branch to main, merge, record PR link + result | unclaimed | c5a8afb5 | GitHub PR | pending |
 
 ## Prior session task board (e9badc77-vegas2 — completed)
@@ -75,7 +75,8 @@ F01–F29 include: no subway in Las Vegas (RTC bus + Strip monorail only); Red R
 
 ## Irregularities & unverified items (combined; full detail on site's Flagged for Review page)
 From prior sessions (preserved): F01–F29 (see table above).
-From this session (e9badc77-vegas2): only The Venetian Resort ($6,170.43 all-in, 7 nts, Feb 15–22 2027) and Caesars Palace ($226/nt + tax, Feb 15–22 2027) have verified hotel pricing; all other hotel prices unverified. Activity hours/prices/social links blank and unverified. Most restaurant hours/prices/social links blank and unverified (verified hours: Joël Robuchon, é by José Andrés, L'Atelier, China Poblano, Bouchon, Wing Lei). Social-media leads (e.g., @joelrobuchon.lasvegas, @ebyjoseandres, @wynnlasvegas) found via search, not confirmed on official sites — flagged unverified.
+From this session (c5a8afb5-vegas2): Restaurants now include Total-for-2 estimates (~$40–$1,200+) flagged unverified; 6 restaurant hours verified (Joël Robuchon Tue–Sat 5–9:30, L’Atelier Mon 5–9:30/Tue–Wed closed/Thu–Sun 5–9:30, é Tue–Sun 5:30 & 8:30, China Poblano Mon–Thu 11–10 etc., Bouchon Mon–Wed 5–10 etc., Wing Lei Thu/Sun/Mon 5:30–9:30 etc.); activities verified 4 (Hoover Dam, Red Rock, Valley of Fire, Neon Museum) + Monorail; hotel pricing still only 2 verified but Venetian now shows $XXX live — flagged I-6; social search links generic and unverified (I-5); estimate totals unverified (I-7); Guide vintage (I-8).
+From prior session (e9badc77-vegas2): only The Venetian Resort ($6,170.43 all-in, 7 nts, Feb 15–22 2027) and Caesars Palace ($226/nt + tax, Feb 15–22 2027) have verified hotel pricing; all other hotel prices unverified. Activity hours/prices/social links blank and unverified. Most restaurant hours/prices/social links blank and unverified (verified hours: Joël Robuchon, é by José Andrés, L'Atelier, China Poblano, Bouchon, Wing Lei). Social-media leads (e.g., @joelrobuchon.lasvegas, @ebyjoseandres, @wynnlasvegas) found via search, not confirmed on official sites — flagged unverified.
 
 Rule applied everywhere: every table row carries a source link to an official site; values not confirmable from an official source are left blank and flagged `unverified`; nothing is inferred or filled in manually.
 
@@ -84,7 +85,12 @@ Rule applied everywhere: every table row carries a source link to an official si
 - Merge result: merged into `main` (this session)
 - GitHub Pages: enabled on `main`, source `/`, public URL https://kanlerxz87-cyber.github.io/Vegas2/ (root landing page = this session's dashboard). Prior sessions' `docs/` artifacts and session subdirectories preserved in repo but not the root home page.
 
-## Source and verification record (this session: e9badc77-vegas2)
+## Source and verification record (this session: c5a8afb5-vegas2 — continuation)
+- Verified live: visitlasvegas.com (24 distinctions, clusters), michelin.com official press release (4 starred: 1×2★ + 3×1★, 3 Bib, 17 Recommended; addresses), mgmgrand.mgmresorts.com (Joël Robuchon Tue–Sat 5–9:30, L’Atelier Mon 5–9:30/Tue–Wed closed), ebyjoseandres.com (Tue–Sun 5:30 & 8:30, 3-mo ticket release), cosmopolitanlasvegas.mgmresorts.com (China Poblano Mon–Thu 11–10), wynnlasvegas.com (Wing Lei Thu/Sun/Mon 5:30–9:30, Fri–Sat 5:30–10), venetianlasvegas.com (Bouchon hours Mon–Wed 5–10 etc.; booking calendar $XXX Nov 27), caesars.com (Guy Savoy $$$$, reservations, Formal, $226/nt + resort fee), usbr.gov (Hoover Dam hours/fees), blm.gov + recreation.gov (Red Rock hours/timed entry), parks.nv.gov (Valley of Fire hours/fees), neonmuseum.org (Neon Museum hours/prices/social), lvmonorail.com (Monorail hours), opm.gov (Feb 15 holiday).
+- Estimates: all Total-for-2 restaurant prices are unverified estimates from price level, not official quotes; flagged.
+- Social: Instagram handles @joelrobuchon.lasvegas, @ebyjoseandres, @wynnlasvegas found via search, unverified; YouTube/TikTok generic search placeholders flagged unverified.
+
+## Source and verification record (prior session: e9badc77-vegas2)
 - Michelin: Visit Las Vegas / LVCVA official guide page (24 distinctions: 4 starred, 3 Bib Gourmand, 17 Recommended), awarded Aug 26 2026. Official restaurant pages: MGM Grand (Joël Robuchon, L'Atelier), Cosmopolitan (é by José Andrés, China Poblano), Caesars (Guy Savoy), Wynn (Wing Lei), Venetian (Bouchon, COTE, Milos, Mott 32), ARIA (Gymkhana), and others linked per row.
 - Hotels: The Venetian official booking (Feb 15–22 2027, 7 nts, $6,170.43 all-in incl. taxes), Caesars Palace official booking ($226/nt incl. $55 resort fee, excl. taxes). Hours/amenities verified from those official pages.
 - Attempted but blocked: MGM Grand / Bellagio official booking pages (fetch errors); Caesars Pages API PUT returned 403 (integration token lacks Pages write); guide.michelin.com direct fetch failed.
