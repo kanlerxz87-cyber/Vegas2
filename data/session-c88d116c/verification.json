@@ -7,7 +7,7 @@
    "hours": "Dam: daily 5:00 AM-9:00 PM (PST). Visitor Center and tours: daily 9:00 AM-5:00 PM. Doors close 4:15 PM; last tour departs 4:10 PM (official page, last updated 10/30/26).",
    "name": "Hoover Dam (Bureau of Reclamation)",
    "reservation": "Visitor Center and Power Plant tours sold through the official ticketing link on usbr.gov. Guided Dam Tour on-site only.",
-   "social": "Unverified at venue level for this session (prior session noted Hoover Dam Facebook linked from official page; not re-verified 2026-11-27).",
+   "social": "VERIFIED: Facebook https://www.facebook.com/theHooverDam/ (linked from official USBR tour page per prior session a52047d7; re-listed by parallel session c5a8afb5). Bureau-level YouTube @reclamation (agency-level).",
    "status": "verified-hours-fees-exceptions",
    "transit_1hr": "u: no official transit-time source; public transit to Hoover Dam not established",
    "url": "https://www.usbr.gov/lc/hooverdam/service/index.html"
@@ -19,11 +19,11 @@
    "hours": "Scenic Drive (Recreation.gov/BLM): Oct 6 AM-7 PM; Nov-Feb 6 AM-5 PM; Mar 6 AM-7 PM; Apr-Sep 6 AM-8 PM. Visitor Center 8 AM-4:30 PM.",
    "name": "Red Rock Canyon National Conservation Area - Scenic Drive",
    "reservation": "Timed entry reservation required Oct 1-May 31, 8 AM-5 PM for the Scenic Drive (BLM + Recreation.gov). Covers the Feb 2027 trip window. Walk-in and bicycle visitors do not need a reservation.",
-   "social": "u: agency-level BLM accounts only (not venue-specific); left blank.",
+   "social": "PARTIAL (agency-level): YouTube https://www.youtube.com/user/BLMNational, IG instagram.com/mypubliclands — BLM national accounts (prior session a52047d7 + parallel c5a8afb5). No Red-Rock-specific handle.",
    "status": "verified-distance-hours-reservation",
    "transit_1hr": "u: BLM states public transit does not extend to Red Rock; drive time is not an official transit-time source",
    "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area",
-   "url2": "https://www.recreation.gov/timed-entry/400000",
+   "url2": "https://www.recreation.gov/timed-entry/10075177",
    "verified_distance": "17 miles west of the Las Vegas Strip, approx. 30 minutes (BLM). Public transit does not extend to Red Rock (BLM)."
   },
   {
@@ -39,13 +39,13 @@
    "url": "https://parks.nv.gov/parks/valley-of-fire"
   },
   {
-   "exceptions": "Official holiday advisory: buy tickets ahead to guarantee admission. 2026 last-entry table may not match 2027 times - confirm on tickets page.",
+   "exceptions": "Official holiday advisory: buy tickets ahead to guarantee admission. 2026 last-entry table may not match 2027 times - confirm on tickets page. Tours may cancel above 100F; museum closes above 110F (per parallel verification c5a8afb5).",
    "fees": "2027 Admission (tickets for Jan 1, 2027 onward) listed 'From $21' (official). 2026 reference: Daytime from $25 (3-5 PM), Evening from $35 (5-11 PM). Exact per-person price for trip date not confirmed.",
    "fetched": "2026-11-27",
    "hours": "2027 Admission: daily 3-11 PM (official). 2026 reference: Jun-Aug 8 PM-midnight; last entry 10 PM Sep-May; box office closes 1 hour before close.",
    "name": "The Neon Museum",
    "reservation": "Tickets bought online on neonmuseum.org (official).",
-   "social": "Prior session verified TikTok/Instagram/Facebook links on official site (not re-verified 2026-11-27); re-confirm before treating as official.",
+   "social": "VERIFIED: Instagram https://www.instagram.com/theneonmuseumlasvegas/; TikTok https://www.tiktok.com/@neonmuseumlasvegas; Facebook https://www.facebook.com/NeonMuseum (all linked from official neonmuseum.org per prior session a52047d7; IG+TikTok re-listed by parallel session c5a8afb5).",
    "status": "verified-hours-partial-fees",
    "transit_1hr": "u: no official transit-time source",
    "url": "https://neonmuseum.org/"
@@ -132,12 +132,12 @@
    "name": "Las Vegas Monorail",
    "status": "verified-hours",
    "url": "https://www.lvmonorail.com/",
-   "fetched": "2026-11-27",
+   "fetched": "2026-11-27 (re-verified during merge resolution)",
    "hours": "Mon 7:00 AM-midnight; Tue-Thu 7:00 AM-2:00 AM; Fri-Sun 7:00 AM-3:00 AM. Modified-hours notices posted seasonally - re-check for Feb 2027.",
    "fees": "u: fares not extracted - left blank.",
    "exceptions": "Separate ticketed system; RTC passes do NOT work on the Monorail. 7 stations, MGM Grand to SAHARA; trains every 4-8 minutes.",
    "reservation": "None - buy tickets/passes for travel days.",
-   "social": "u: left blank.",
+   "social": "VERIFIED: @lvmonorail on Instagram, Twitter/X, and Facebook — handles published on the official homepage 'Let's Get Social!' panel (claimed by parallel session c5a8afb5; RE-VERIFIED by fresh fetch of https://www.lvmonorail.com/ 2026-11-27).",
    "transit_1hr": "u: no official door-to-door transit-time source",
    "wrong_domain_note": "vegasmonorail.com is parked/for-sale - do not use."
   },
@@ -284,7 +284,14 @@
    "e by Jose Andres - 1 MICHELIN Star (The Cosmopolitan)",
    "Guy Savoy Las Vegas - 1 MICHELIN Star (Caesars Palace)",
    "L'Atelier de Joel Robuchon Las Vegas - 1 MICHELIN Star (MGM Grand)"
-  ]
+  ],
+  "clusters": {
+   "Strip / Las Vegas Blvd": 13,
+   "Spring Mountain / Chinatown": 6,
+   "Downtown / S. Main St": 2,
+   "Off-Strip (W. Russell / S. Decatur / Gold Coast)": 3,
+   "note": "Cluster assignment contributed by parallel session c5a8afb5 (main PR #20); counts cross-checked against the official Michelin address list (13+6+2+3=24)."
+  }
  },
  "restaurants": [
   {
@@ -300,12 +307,12 @@
   {
    "cost_for_2": "u: blank.",
    "cuisine": "Spanish",
-   "fetched_prior": "2026-11-26",
-   "hours": "Tue-Sat 5:30-8:30 PM; Mon & Sun Closed (prior official Cosmopolitan snapshot; not re-fetched 2026-11-27). Reservations up to three months ahead, two seatings nightly (LVCVA; confirm on official site).",
+   "hours": "Tue-Sat 5:30-8:30 PM; Mon & Sun Closed (RE-VERIFIED on the official Cosmopolitan page 2026-11-27; resolves conflict with parallel session c5a8afb5 which listed 'Tue-Sun'). Only 2 seatings nightly; reservations to 3 months ahead; Upscale dress code; 9-seat room; $$$$ Spanish; 3708 Las Vegas Blvd S; 877.893.2003 / 702.698.7950.",
    "name": "e by Jose Andres",
    "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
    "social": "u: blank (prior Instagram lead was search-found, not venue-confirmed; removed).",
-   "status": "1 MICHELIN Star"
+   "status": "1 MICHELIN Star",
+   "fetched": "2026-11-27 (fresh re-verification during merge resolution)"
   },
   {
    "cost_for_2": "u: blank.",
@@ -561,5 +568,24 @@
   "holiday_note": "Feb 15, 2027 is Washington's Birthday (Presidents' Day), a federal holiday (OPM; prior verification 2026-11-26). Expect holiday/weekend demand pricing on Feb 15-18 nights.",
   "seven_night": "Check-in Mon Feb 15, 2027 -> check-out Mon Feb 22, 2027 (7 nights; comparison basis)",
   "window": "2027-02-15 to 2027-03-23 (1-2 weeks); preferred 2027-02-15 to 2027-02-18 (3 nights)"
+ },
+ "integration": {
+  "merged": "origin/main at 0d3e73e (PRs #19, #20, #21; sessions 4831d710 + c5a8afb5) into arena/c88d116c-vegas2 on 2026-11-27",
+  "conflicts": "index.html, restaurants.html, hotels.html, activities.html, flagged-for-review.html (same-file parallel edits); COORDINATION.md auto-merged. Resolution: c88d116c versions kept as base; c5a8afb5 contributions integrated where rule-compliant (see below). Nothing deleted from the repo; all parallel work preserved in git history.",
+  "integrated_from_c5a8afb5": [
+   "Michelin clusters (13/6/2/3) — cross-checked against official addresses",
+   "Hoover Facebook, Neon IG/TikTok/FB, BLM agency YouTube, Monorail @lvmonorail socials (dual-corroborated; Monorail re-verified by fresh fetch)",
+   "Neon heat policy (cancel >100F, close >110F)",
+   "Recreation.gov timed-entry link for Red Rock (10075177)",
+   "OPM holiday link on index trip card",
+   "Caesars Advance Purchase promo as prior-partial note on booking.html"
+  ],
+  "held_out_with_reasons": [
+   "'~15-20 min' / '~20-45 min' travel-time assertions — inference without an official transit-time source; violates the user's explicit no-inference rule (see ROOT-1).",
+   "Per-restaurant total-for-2 ESTIMATE ranges (~$40-$1,200+) — held for reviewer decision per S-4 verified-only rule; preserved in main history (commit 57a08c6), noted in Flagged X-2.",
+   "Generic YouTube/TikTok/IG SEARCH links — not venue-published handles; removed in favor of official-site-only links, noted in Flagged U-3.",
+   "e 'Tue-Sun' hours — contradicted by fresh official-page fetch (Sunday: Closed); corrected, noted in Flagged X-1.",
+   "Duplicated booking paragraph tail + 'Nov 27, 2027' typo + malformed flagged q-item shell — parallel-session editing bugs; not carried over (originals preserved in main history)."
+  ]
  }
 }

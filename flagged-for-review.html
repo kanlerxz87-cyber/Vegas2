@@ -70,7 +70,7 @@
             <td>Social / video links (YouTube, TikTok, Instagram)</td>
             <td>Venue-confirmed handles (all restaurants + activities)</td>
             <td>restaurants.html &amp; activities.html (all blank)</td>
-            <td>Each venue’s official site footer/social icons — link only handles published there; start from the <a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">official LVCVA restaurant list</a></td>
+            <td>Each venue’s official site footer/social icons — link only handles published there; start from the <a href="https://www.visitlasvegas.com/michelin-guide-restaurants/" class="src" target="_blank" rel="noopener">official LVCVA restaurant list</a> (generic search-engine placeholders proposed in main history by c5a8afb5 were removed in favor of venue-published handles)</td>
             <td><span class="badge badge-unverified">unverified</span></td>
           </tr>
           <tr>
@@ -182,6 +182,14 @@
       <div class="q-item">
         <div class="q">ROOT-12 &bull; Pages workflow vs live source <span class="badge badge-unverified">open — out of scope</span></div>
         <div class="a">.github/workflows/pages.yml uploads docs/, while the Pages API reports the live source as main / (root) — the root dashboard is the live home page and docs/ is preserved history. No workflow change was made in this session (root-site scope only).</div>
+      </div>
+      <div class="q-item">
+        <div class="q">X-1 &bull; &eacute; hours conflict — resolved by fresh fetch <span class="badge badge-verified">fixed Nov 27</span></div>
+        <div class="a">Parallel session c5a8afb5 (main PR #20) listed &eacute; by Jos&eacute; Andr&eacute;s as “Tue–Sun 5:30 &amp; 8:30 seatings; Mon Closed”. A fresh fetch of the <a href="https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html" class="src" target="_blank" rel="noopener">official Cosmopolitan page</a> on Nov 27, 2026 states Monday: Closed; Tuesday–Saturday 5:30–8:30 PM; Sunday: Closed — Sunday is closed, so the parallel version is corrected here. Also confirmed: 2 seatings nightly, reservations to 3 months ahead, Upscale dress code.</div>
+      </div>
+      <div class="q-item">
+        <div class="q">X-2 &bull; Parallel-session restaurant estimates held for review <span class="badge badge-unverified">open — reviewer decision</span></div>
+        <div class="a">Session c5a8afb5 (main commit 57a08c6, PR #20) added per-restaurant “Total for 2 adults” estimate ranges (~$40–$1,200+, flagged estimate) plus generic search links. They are preserved in git history but held OUT of the data tables, which show verified fixed-menu totals only (S-4 verified-only decision). A reviewer may approve labeled estimates as a separate column. Nothing was deleted from the repo.</div>
       </div>
       <div class="q-item">
         <div class="q">I-1 &bull; Michelin guide vintage</div>
