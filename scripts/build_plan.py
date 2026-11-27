@@ -486,7 +486,7 @@ def build_activities(acts):
         ])
     body = f"""
 <div class="note">
-  <p><strong>What "cost for 2" means here.</strong> Only the High Roller publishes both a per-person price and a clear per-person structure, so it is the only activity with a true two-person total. Everything else is blank or shows the published per-person figure in the notes. No ticket price is estimated.</p>
+  <p><strong>What "cost for 2" means here.</strong> Only venues with published per-person tiers get a two-person total (High Roller, Shark Reef); the Bellagio Fountains and the Fremont canopy shows are free. Everything else is blank or shows the published per-person figure in the notes. No ticket price is estimated.</p>
 </div>
 <h2>Activities</h2>
 {table(["Activity", "Area", "Open (days & hours)", "Cost for 2 adults", "Travel / transit", "Official link", "Social / video"], rows,

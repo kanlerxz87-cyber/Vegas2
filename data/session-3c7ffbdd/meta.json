@@ -1,0 +1,102 @@
+{
+  "session_id": "3c7ffbdd",
+  "branch": "arena/3c7ffbdd-vegas2",
+  "verified_date": "2026-11-27",
+  "trip": {
+    "travelers": "2 adults (couple)",
+    "length": "1–2 weeks (7-night benchmark used for live hotel quotes)",
+    "window_start": "2027-02-15",
+    "window_end": "2027-03-23",
+    "preferred_window": "Mon Feb 15 – Thu Feb 18, 2027",
+    "best_verified_7_night_window": "Mon Feb 15 – Mon Feb 22, 2027",
+    "holiday_note": "Monday, Feb 15, 2027 is Washington's Birthday (U.S. federal holiday per OPM); Fountains of Bellagio run holiday hours (starting 12:00 PM) and Monday check-in stays cheaper than late Feb / March convention weeks.",
+    "holiday_source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+  },
+  "best_time_to_book": {
+    "summary": "Book during the current Cyber Sale window (late Nov – early Dec 2026) for refundable/72-hour-cancel rates on Mon Feb 15 – Mon Feb 22, 2027.",
+    "evidence": [
+      "Wynn Cyber Exclusive (book Nov 20 – Dec 4, 2026) cuts Wynn Resort King on Feb 15–22, 2027 from $833/nt ($5,831) to $677/nt ($4,739) before tax plus up to $300 resort credit, with 72-hour cancellation.",
+      "Resorts World Las Vegas Cyber Sale (promo DBF26) is live as of Nov 27, 2026; Hilton Deluxe 1 King quotes $2,200.15 all-in for Feb 15–22, 2027.",
+      "Across 5 consecutive Monday–Monday weeks tested live on Nov 27, 2026 (Feb 15 – Mar 22, 2027), Mon Feb 15 – Mon Feb 22 is the cheapest week at every multi-week hotel tested: Flamingo ($83/nt vs $118–$141/nt), Caesars Palace ($214/nt vs $254–$317/nt, with Tue Mar 2 already Sold Out), and South Point ($919 vs $979).",
+      "Michelin dining reservation timing: starred venues typically open tables 30–60 days ahead (Visit Las Vegas / Michelin), Kabuto opens 30 days ahead on Resy, and é by José Andrés opens up to 3 months ahead — meaning mid-Nov 2026 to mid-Jan 2027 is the booking window for Feb 15–22, 2027 tables."
+    ],
+    "sources": [
+      {
+        "label": "Wynn Live Booking Engine (Feb 15–22, 2027)",
+        "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&rmID=68658&checkIn=02/15/2027&checkOut=02/22/2027"
+      },
+      {
+        "label": "Caesars Live Booking — Flamingo (Feb 15–22, 2027)",
+        "url": "https://www.caesars.com/book/room-list?propCode=flv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0"
+      },
+      {
+        "label": "Caesars Live Booking — Caesars Palace (Feb 15–22, 2027)",
+        "url": "https://www.caesars.com/book/room-list?propCode=clv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0"
+      },
+      {
+        "label": "Visit Las Vegas — 2026 MICHELIN Guide",
+        "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+      }
+    ]
+  },
+  "transit": {
+    "subway_note": "Las Vegas has NO underground subway system. Public transit along the Strip and Downtown relies on the elevated Las Vegas Monorail (7 Strip stations) and RTC Southern Nevada buses (including the 24/7 Deuce on the Strip and east–west cross-town routes like Route 203 on Spring Mountain Rd and Route 202 on Flamingo Rd).",
+    "monorail": {
+      "name": "Las Vegas Monorail",
+      "stations": "7 Strip stations (MGM Grand, Horseshoe/Paris, Flamingo/Caesars Palace, Harrah's/The LINQ, Boingo Station at Las Vegas Convention Center, Westgate, SAHARA Las Vegas)",
+      "headway": "Every 4–8 minutes",
+      "hours": "Mon 7:00 AM–12:00 AM; Tue–Thu 7:00 AM–2:00 AM; Fri–Sun 7:00 AM–3:00 AM",
+      "fares_per_adult": "eTicket / Full: 1-Ride $5.75 / $6.25; 1-Day $13.95 / $15.50; 3-Day $30.85 / $33.00; 7-Day $59.95 / $64.00 (valid 1 year from purchase)",
+      "two_adult_7_day_cost": "$119.90 (eTickets) / $128.00 (full price)",
+      "official_url": "https://www.lvmonorail.com/ticket-information/",
+      "instagram": "https://www.instagram.com/lvmonorail"
+    },
+    "rtc_deuce": {
+      "name": "RTC Deuce on the Strip & All Access Buses",
+      "headway": "Approximately every 15 minutes (24/7 Strip service)",
+      "fares_per_adult": "Single Ride $4.00; 2-Hour $6.00; 24-Hour $8.00; 3-Day $20.00",
+      "two_adult_3_day_cost": "$40.00 (two 3-Day Strip & All Access passes)",
+      "official_url": "https://www.rtcsnv.com/ways-to-travel/fares-passes/"
+    }
+  },
+  "michelin_summary": {
+    "edition": "2026 MICHELIN Guide Southwest (inaugural Las Vegas selection, announced Aug 31, 2026)",
+    "total": 24,
+    "two_stars": 1,
+    "one_star": 3,
+    "bib_gourmand": 3,
+    "recommended": 17,
+    "clusters": [
+      {
+        "name": "The Strip",
+        "count": 13,
+        "highlights": "All 4 starred restaurants (Joël Robuchon 2★, L'Atelier 1★, é by José Andrés 1★, Guy Savoy 1★), China Poblano (Bib), plus 8 Recommended venues (4 at Venetian/Palazzo alone)."
+      },
+      {
+        "name": "Chinatown / Spring Mountain Rd",
+        "count": 6,
+        "highlights": "Kabuto, Kame Omakase, Lamaii (Chinatown), Partage, Pho Ga Bac Bac, Sparrow + Wolf — clustered along Spring Mountain Rd west of the Strip."
+      },
+      {
+        "name": "Downtown / Arts District (S. Main St)",
+        "count": 2,
+        "highlights": "Esther's Kitchen (Bib Gourmand) and SoulBelly BBQ (Main St location only), steps apart on South Main Street."
+      },
+      {
+        "name": "Off-Strip West / Southwest",
+        "count": 3,
+        "highlights": "YEN Viet Kitchen (Bib Gourmand, S. Decatur), Ping Pang Pong (Gold Coast, W. Flamingo), Anima by EDO (The Gramercy, W. Russell Rd)."
+      }
+    ],
+    "official_sources": [
+      {
+        "label": "Michelin Official 2026 Southwest Selection Announcement",
+        "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+      },
+      {
+        "label": "Visit Las Vegas — 2026 MICHELIN Guide Directory",
+        "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+      }
+    ]
+  }
+}

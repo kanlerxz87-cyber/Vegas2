@@ -1,413 +1,452 @@
 {
-  "basis": "7 nights, 1 room, 2 adults. All totals captured 2026-11-27 for check-in Mon Feb 15, 2027 → check-out Mon Feb 22, 2027 unless noted.",
-  "roomRequirement": "Queen bed or larger + private bathroom (brief). A 'two queen' room is treated as equivalent to or larger than a queen bed.",
-  "rankMethod": "Primary sort = number of 2026 MICHELIN distinctions inside the same resort campus (walking distance, no transit needed). Secondary sort = verified 7-night total, lowest first. Hotels with no verified rate follow. The 1-hour transit test is reported per hotel but does not separate Strip properties (see F-02).",
-  "rows": [
+ "basis": "7 nights, 1 room, 2 adults. All totals captured 2026-11-27 for check-in Mon Feb 15, 2027 → check-out Mon Feb 22, 2027 unless noted.",
+ "roomRequirement": "Queen bed or larger + private bathroom (brief). A 'two queen' room is treated as equivalent to or larger than a queen bed.",
+ "rankMethod": "Primary sort = number of 2026 MICHELIN distinctions inside the same resort campus (walking distance, no transit needed). Secondary sort = verified 7-night total, lowest first. Hotels with no verified rate follow. The 1-hour transit test is reported per hotel but does not separate Strip properties (see F-02).",
+ "rows": [
+  {
+   "id": "venetian",
+   "name": "The Venetian Resort (incl. The Palazzo)",
+   "area": "Center-North Strip",
+   "venues": [
+    "The Venetian",
+    "The Palazzo"
+   ],
+   "rooms": "Every suite is 650 sq ft or larger. Verified suite types include Luxury King Suite (650 sq ft, 1 king), New Luxury Loft Two Queen Suite (650 sq ft, 2 queens) and Luxury Two Queen Suite at The Palazzo (720 sq ft, 2 queens). A 'Luxury Two Queen Suite' (750 sq ft, 2 queens, living room, Roman tub) is also listed for The Venetian tower (official page, session c88d116c 2026-11-27).",
+   "bath": "Oversized private bathroom listed for each suite type on the official suite page.",
+   "roomStatus": "v",
+   "price7": null,
+   "price7Note": "No dated price retrieved. The official booking calendar for Feb 15–22, 2027 displayed '$XXX' for every date, i.e. no rate was served to the fetch tool.",
+   "price3": null,
+   "transit": "Center-North Strip; on the Las Vegas Monorail corridor and the Deuce route. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
     {
-      "id": "venetian",
-      "name": "The Venetian Resort (incl. The Palazzo)",
-      "area": "Center-North Strip",
-      "venues": [
-        "The Venetian",
-        "The Palazzo"
-      ],
-      "rooms": "Every suite is 650 sq ft or larger. Verified suite types include Luxury King Suite (650 sq ft, 1 king), New Luxury Loft Two Queen Suite (650 sq ft, 2 queens) and Luxury Two Queen Suite at The Palazzo (720 sq ft, 2 queens).",
-      "bath": "Oversized private bathroom listed for each suite type on the official suite page.",
-      "roomStatus": "v",
-      "price7": null,
-      "price7Note": "No dated price retrieved. The official booking calendar for Feb 15–22, 2027 displayed '$XXX' for every date, i.e. no rate was served to the fetch tool.",
-      "price3": null,
-      "transit": "Center-North Strip; on the Las Vegas Monorail corridor and the Deuce route. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official suite collection (room sizes, bed types, bathrooms)",
-          "url": "https://www.venetianlasvegas.com/hotel/suites.html"
-        },
-        {
-          "label": "Official booking calendar, Feb 15–22 2027",
-          "url": "https://www.venetianlasvegas.com/booking?adults[]=2&arrival_date=2027-02-15&children[]=0&departure_date=2027-02-22"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "Four MICHELIN distinctions on one campus: Bouchon, COTE, Estiatorio Milos and Mott 32 (all 2026 Recommended). A prior session captured a $6,170.43 all-in 7-night total (including $728.18 tax) on 2026-11-26; the same calendar returned no rate on 2026-11-27, so no current price is ranked.",
-      "priorPrice": {
-        "total": 6170.43,
-        "basis": "All-in 7-night total including $728.18 of tax and the daily $55 resort fee, average $777.46/night, captured by a prior session on 2026-11-26 under the 'Book Direct: Up to 25% Off' offer. Not reproduced on 2026-11-27.",
-        "status": "p"
-      },
-      "flagIds": [
-        "F-05"
-      ]
+     "label": "Official suite collection (room sizes, bed types, bathrooms)",
+     "url": "https://www.venetianlasvegas.com/hotel/suites.html"
     },
     {
-      "id": "cosmopolitan",
-      "name": "The Cosmopolitan of Las Vegas",
-      "area": "Center Strip",
-      "venues": [
-        "The Cosmopolitan"
-      ],
-      "rooms": "Two-queen configuration exists (prior logged session saw 'Terrace Studio Two Queen Beds | Fountain View' on the official site). Room size not captured this session.",
-      "bath": "",
-      "roomStatus": "p",
-      "price7": null,
-      "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
-      "price3": null,
-      "transit": "Center Strip; Monorail-adjacent east side, Deuce on Las Vegas Blvd. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official hotel site",
-          "url": "https://cosmopolitanlasvegas.mgmresorts.com/en.html"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "Two MICHELIN distinctions on campus: é by José Andrés (1 star) and China Poblano (Bib Gourmand) — the only hotel with both a starred room and a Bib Gourmand.",
-      "flagIds": [
-        "F-06",
-        "F-07"
-      ]
+     "label": "Official booking calendar, Feb 15–22 2027",
+     "url": "https://www.venetianlasvegas.com/booking?adults[]=2&arrival_date=2027-02-15&children[]=0&departure_date=2027-02-22"
     },
     {
-      "id": "mgm-grand",
-      "name": "MGM Grand Las Vegas",
-      "area": "South Strip",
-      "venues": [
-        "MGM Grand"
-      ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
-      "price7": null,
-      "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
-      "price3": null,
-      "transit": "South Strip. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official hotel site",
-          "url": "https://mgmgrand.mgmresorts.com/"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "Two MICHELIN distinctions on campus: Joël Robuchon (2 stars — the only two-star in Las Vegas) and L'Atelier de Joël Robuchon (1 star).",
-      "flagIds": [
-        "F-06"
-      ]
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
     },
     {
-      "id": "caesars-palace",
-      "name": "Caesars Palace",
-      "area": "Center Strip",
-      "venues": [
-        "Caesars Palace"
-      ],
-      "rooms": "Julius Deluxe Room | 1 King | Non-Smoking, 360+ sq ft. A 'Colosseum Strip View Room | 2 Queens | Non-Smoking' also exists on the official room list.",
-      "bath": "Julius Deluxe: 'stone and glass bathroom features a double sink vanity and hand-held showerhead' (official description).",
-      "roomStatus": "v",
-      "price7": {
-        "total": 1498,
-        "room": "Julius Deluxe | 1 King",
-        "nightly": "$214/night including the $55/day resort fee",
-        "math": "$214 × 7 = $1,498 before taxes",
-        "basis": "Rate card: $159 room rate + $55 resort fee = $214/night, taxes excluded. The fee disclosure states the resort fee is $62.30 with tax ($54.95 + $7.35), so taxes apply to the fee as well."
-      },
-      "price7Note": "",
-      "price3": null,
-      "transit": "Center Strip. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [
-        {
-          "label": "Caesars Palace Instagram (linked from the official site footer)",
-          "url": "https://www.instagram.com/caesarspalace/"
-        },
-        {
-          "label": "Caesars Palace YouTube (official footer link)",
-          "url": "https://www.youtube.com/user/caesarspalace"
-        }
-      ],
-      "socialStatus": "v",
-      "sources": [
-        {
-          "label": "Official room list with rates, Feb 15–22 2027",
-          "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
-        },
-        {
-          "label": "Official hotel & room pages",
-          "url": "https://www.caesars.com/caesars-palace/hotel"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "One MICHELIN distinction on campus: Restaurant Guy Savoy (1 star). Rates moved between captures: $226/night ($1,582 for 7 nights) on 2026-11-26 and $214/night ($1,498) on 2026-11-27 — a 5.6% swing in one day (F-23). The two-queen room exists but only the king rate was served.",
-      "flagIds": [
-        "F-04",
-        "F-07"
-      ]
-    },
-    {
-      "id": "bellagio",
-      "name": "Bellagio",
-      "area": "Center Strip",
-      "venues": [
-        "Bellagio"
-      ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
-      "price7": null,
-      "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
-      "price3": null,
-      "transit": "Center Strip. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official hotel site",
-          "url": "https://bellagio.mgmresorts.com/en.html"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "One MICHELIN distinction on campus: Michael Mina (Recommended). The free Conservatory display is on the same property and runs Lunar New Year 1/9–3/6/2027 — directly inside the Feb 15–18 window.",
-      "flagIds": [
-        "F-06"
-      ]
-    },
-    {
-      "id": "aria",
-      "name": "ARIA Resort & Casino",
-      "area": "Center Strip (CityCenter)",
-      "venues": [
-        "ARIA"
-      ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
-      "price7": null,
-      "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
-      "price3": null,
-      "transit": "Center Strip / CityCenter; tram and Deuce nearby. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official hotel site",
-          "url": "https://aria.mgmresorts.com/en.html"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "One MICHELIN distinction on campus: Gymkhana (Recommended).",
-      "flagIds": [
-        "F-06"
-      ]
-    },
-    {
-      "id": "wynn",
-      "name": "Wynn Las Vegas",
-      "area": "North Strip",
-      "venues": [
-        "Wynn"
-      ],
-      "rooms": "Wynn Resort room: 'one King or two Queen Wynn Dream Beds, among the most spacious standard rooms in Las Vegas'. Wynn Tower Suite Two Queens also listed.",
-      "bath": "",
-      "roomStatus": "v",
-      "price7": null,
-      "price7Note": "No dated price retrieved. The Wynn booking engine returned to its search form without a Feb 15–22, 2027 rate set, so no total is shown.",
-      "price3": null,
-      "transit": "North Strip; Monorail corridor at the north end. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official rooms & suites page (bed configurations)",
-          "url": "https://www.wynnlasvegas.com/rooms-and-suites"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "One MICHELIN distinction on campus: Wing Lei (2026 Recommended — not starred this year, despite its Forbes Five-Star status).",
-      "flagIds": [
-        "F-09"
-      ]
-    },
-    {
-      "id": "resorts-world",
-      "name": "Resorts World Las Vegas",
-      "area": "North Strip",
-      "venues": [
-        "Resorts World"
-      ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
-      "price7": null,
-      "price7Note": "No dated price retrieved.",
-      "price3": null,
-      "transit": "North Strip; Monorail-adjacent. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official hotel site",
-          "url": "https://www.rwlasvegas.com/"
-        },
-        {
-          "label": "Official 2026 MICHELIN Las Vegas list",
-          "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
-        }
-      ],
-      "note": "One MICHELIN distinction on campus: Stubborn Seed (Recommended).",
-      "flagIds": []
-    },
-    {
-      "id": "flamingo",
-      "name": "Flamingo Las Vegas",
-      "area": "Center Strip",
-      "venues": [],
-      "rooms": "Flamingo Room | 2 Queens, 350 sq ft, two queen beds and a chaise. A Habitat Tower two-queen version is the same price.",
-      "bath": "Room description: 'rain shower and sophisticated bathroom fixtures' in the private en-suite bathroom.",
-      "roomStatus": "v",
-      "price7": {
-        "total": 581,
-        "room": "Flamingo Room | 2 Queens",
-        "nightly": "$83/night including the $50/day resort fee",
-        "math": "$83 × 7 = $581 before taxes",
-        "basis": "Rate card: $33 room rate + $50 resort fee = $83/night, taxes excluded. Fee disclosure: resort fee $56.63 with tax ($49.95 + $6.68)."
-      },
-      "price7Note": "Cheapest verified two-queen 7-night total found in this session.",
-      "price3": null,
-      "transit": "Center Strip, on the Las Vegas Blvd Deuce route and inside the Monorail corridor (see the official route map). Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official room list with rates, Feb 15–22 2027",
-          "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1"
-        },
-        {
-          "label": "Official hotel page",
-          "url": "https://www.caesars.com/flamingo-las-vegas/hotel"
-        },
-        {
-          "label": "Las Vegas Monorail route map",
-          "url": "https://www.lvmonorail.com/route-map/"
-        }
-      ],
-      "note": "No MICHELIN restaurant inside the resort, but the center-Strip location is inside the 1-hour core for all 24 (transit time unverified).",
-      "flagIds": [
-        "F-04"
-      ]
-    },
-    {
-      "id": "paris",
-      "name": "Paris Las Vegas",
-      "area": "Center Strip",
-      "venues": [],
-      "rooms": "Bordeaux Room | 2 Queens, 390 sq ft, Bordeaux Tower.",
-      "bath": "Room description: 'The luxurious bathroom boasts a marble counter along with a shower.'",
-      "roomStatus": "v",
-      "price7": {
-        "total": 1421,
-        "room": "Bordeaux Room | 2 Queens",
-        "nightly": "$203/night including the $55/day resort fee",
-        "math": "$203 × 7 = $1,421 before taxes",
-        "basis": "Rate card: $148 room rate + $55 resort fee = $203/night, taxes excluded. Fee disclosure: $62.30 with tax ($54.95 + $7.35)."
-      },
-      "price7Note": "",
-      "price3": null,
-      "transit": "Center Strip, inside the Monorail corridor (see the official route map); Deuce on Las Vegas Blvd. Door-to-door times not retrieved.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official room list with rates, Feb 15–22 2027",
-          "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=plv&numberOfAdults=2&numberOfRooms=1"
-        },
-        {
-          "label": "Official hotel page",
-          "url": "https://www.caesars.com/paris-las-vegas/hotel"
-        },
-        {
-          "label": "Las Vegas Monorail route map",
-          "url": "https://www.lvmonorail.com/route-map/"
-        }
-      ],
-      "note": "No MICHELIN restaurant inside the resort; strongest verified two-queen room size among the Caesars properties checked (390 sq ft).",
-      "flagIds": [
-        "F-04"
-      ]
-    },
-    {
-      "id": "south-point",
-      "name": "South Point Hotel, Casino & Spa",
-      "area": "South end of the Las Vegas Strip (well south of the center Strip)",
-      "venues": [],
-      "rooms": "Premium King or Premium Two Queens, 500 sq ft; the two-queen room sleeps four.",
-      "bath": "Official room page describes the in-room bathroom ('The Premium Room bathroom is equipped with a lighted makeup mirror') and shows bathroom photos.",
-      "roomStatus": "v",
-      "price7": {
-        "total": 989,
-        "room": "Premium 2 Queens",
-        "nightly": "$141/night including all fees",
-        "math": "Booking engine states '$989 total for 7 nights', including all fees, taxes not included.",
-        "basis": "Prevailing Rate includes a $29.20/day resort fee per the engine; the hotel's public rate page says rates include a $33/night resort fee (F-04). Taxes not included."
-      },
-      "price7Note": "Premium King is $919 for the same 7 nights.",
-      "price3": null,
-      "transit": "Well south of the center Strip. RTC Route 117 and the South Strip Transit Terminal are the public-transit option; sampled scheduled segments were logged by a prior session, but no door-to-door time is verified here.",
-      "transitStatus": "u",
-      "social": [],
-      "socialStatus": "u",
-      "sources": [
-        {
-          "label": "Official booking engine, Feb 15–22 2027",
-          "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
-        },
-        {
-          "label": "Official guest rooms page",
-          "url": "https://southpointcasino.com/hotel/guest-rooms"
-        },
-        {
-          "label": "RTC schedules & maps",
-          "url": "https://www.rtcsnv.com/ways-to-travel/schedules-maps/"
-        }
-      ],
-      "note": "Best-documented pricing: three separate 7-night windows were captured directly from its engine (see Prices & dates). No MICHELIN restaurant on site.",
-      "flagIds": [
-        "F-04",
-        "F-15"
-      ]
+     "label": "Venetian Luxury Two Queen Suite (750 sq ft)",
+     "url": "https://www.venetianlasvegas.com/hotel/the-venetian/luxury-two-queen-suite.html"
     }
-  ]
+   ],
+   "note": "Four MICHELIN distinctions on one campus: Bouchon, COTE, Estiatorio Milos and Mott 32 (all 2026 Recommended). A prior session captured a $6,170.43 all-in 7-night total (including $728.18 tax) on 2026-11-26; the same calendar returned no rate on 2026-11-27, so no current price is ranked.",
+   "priorPrice": {
+    "total": 6170.43,
+    "basis": "All-in 7-night total including $728.18 of tax and the daily $55 resort fee, average $777.46/night, captured by a prior session on 2026-11-26 under the 'Book Direct: Up to 25% Off' offer. Not reproduced on 2026-11-27.",
+    "status": "p"
+   },
+   "flagIds": [
+    "F-05"
+   ]
+  },
+  {
+   "id": "cosmopolitan",
+   "name": "The Cosmopolitan of Las Vegas",
+   "area": "Center Strip",
+   "venues": [
+    "The Cosmopolitan"
+   ],
+   "rooms": "Two-queen configuration exists (prior logged session saw 'Terrace Studio Two Queen Beds | Fountain View' on the official site). Room size not captured this session. City Room Queen: 460 sq ft, 2 queens, max 4 (official page, session c88d116c 2026-11-27).",
+   "bath": "",
+   "roomStatus": "p",
+   "price7": null,
+   "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
+   "price3": null,
+   "transit": "Center Strip; Monorail-adjacent east side, Deuce on Las Vegas Blvd. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official hotel site",
+     "url": "https://cosmopolitanlasvegas.mgmresorts.com/en.html"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "Cosmopolitan City Room Queen",
+     "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/hotel/city-room.html"
+    }
+   ],
+   "note": "Two MICHELIN distinctions on campus: é by José Andrés (1 star) and China Poblano (Bib Gourmand) — the only hotel with both a starred room and a Bib Gourmand.",
+   "flagIds": [
+    "F-06",
+    "F-07"
+   ]
+  },
+  {
+   "id": "mgm-grand",
+   "name": "MGM Grand Las Vegas",
+   "area": "South Strip",
+   "venues": [
+    "MGM Grand"
+   ],
+   "rooms": "MGM Two Queen: 446 sq ft, 2 queens, max 4 (official page, session c88d116c 2026-11-27).",
+   "bath": "",
+   "roomStatus": "p",
+   "price7": null,
+   "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
+   "price3": null,
+   "transit": "South Strip. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official hotel site",
+     "url": "https://mgmgrand.mgmresorts.com/"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "MGM Grand MGM Two Queen",
+     "url": "https://mgmgrand.mgmresorts.com/en/hotel/mgm-two-queen.html"
+    }
+   ],
+   "note": "Two MICHELIN distinctions on campus: Joël Robuchon (2 stars — the only two-star in Las Vegas) and L'Atelier de Joël Robuchon (1 star).",
+   "flagIds": [
+    "F-06"
+   ]
+  },
+  {
+   "id": "caesars-palace",
+   "name": "Caesars Palace",
+   "area": "Center Strip",
+   "venues": [
+    "Caesars Palace"
+   ],
+   "rooms": "Julius Deluxe Room | 1 King | Non-Smoking, 360+ sq ft. A 'Colosseum Strip View Room | 2 Queens | Non-Smoking' also exists on the official room list. 'Colosseum Strip View | 2 Queens' (475 sq ft) and 'Augustus Fountain View | 2 Queens' (650 sq ft) are also on the official room list (session c88d116c 2026-11-27).",
+   "bath": "Julius Deluxe: 'stone and glass bathroom features a double sink vanity and hand-held showerhead' (official description).",
+   "roomStatus": "v",
+   "price7": {
+    "total": 1498,
+    "room": "Julius Deluxe | 1 King",
+    "nightly": "$214/night including the $55/day resort fee",
+    "math": "$214 × 7 = $1,498 before taxes",
+    "basis": "Rate card: $159 room rate + $55 resort fee = $214/night, taxes excluded. The fee disclosure states the resort fee is $62.30 with tax ($54.95 + $7.35), so taxes apply to the fee as well."
+   },
+   "price7Note": "",
+   "price3": {
+    "total": 549,
+    "room": "Room Type Assigned on Arrival",
+    "nightly": "$183/night including the $55/day resort fee",
+    "math": "$183 × 3 = $549 before taxes",
+    "basis": "Captured 2026-11-27 for Feb 15–18, 2027 (3 nights, Mon–Thu): $128 room rate + $55 resort fee = $183/night, taxes excluded. Julius Deluxe 1 King was $186 ($131 + $55). Fee disclosure: $62.30 with tax (F-04)."
+   },
+   "transit": "Center Strip. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [
+    {
+     "label": "Caesars Palace Instagram (linked from the official site footer)",
+     "url": "https://www.instagram.com/caesarspalace/"
+    },
+    {
+     "label": "Caesars Palace YouTube (official footer link)",
+     "url": "https://www.youtube.com/user/caesarspalace"
+    }
+   ],
+   "socialStatus": "v",
+   "sources": [
+    {
+     "label": "Official room list with rates, Feb 15–22 2027",
+     "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+     "label": "Official hotel & room pages",
+     "url": "https://www.caesars.com/caesars-palace/hotel"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "Official room list with rates, Feb 15–18 2027 (3-night)",
+     "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=clv"
+    }
+   ],
+   "note": "One MICHELIN distinction on campus: Restaurant Guy Savoy (1 star). Rates moved between captures: $226/night ($1,582 for 7 nights) on 2026-11-26 and $214/night ($1,498) on 2026-11-27 — a 5.6% swing in one day (F-23). The two-queen room exists but only the king rate was served. A second same-day capture (2026-11-27, session c88d116c) showed $226/night Best Available ($171 + $55, Room Type Assigned; Julius $232) — a $214–$232 intraday spread for identical dates (F-23).",
+   "flagIds": [
+    "F-04",
+    "F-07",
+    "F-23"
+   ]
+  },
+  {
+   "id": "bellagio",
+   "name": "Bellagio",
+   "area": "Center Strip",
+   "venues": [
+    "Bellagio"
+   ],
+   "rooms": "Premier Two Queen: 510 sq ft, 2 queens, max 4 (official page, session c88d116c 2026-11-27).",
+   "bath": "Marble bathroom with dual-sink vanity and frameless shower (official room page); the word 'private' is not used — confirm at booking.",
+   "roomStatus": "p",
+   "price7": null,
+   "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
+   "price3": null,
+   "transit": "Center Strip. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official hotel site",
+     "url": "https://bellagio.mgmresorts.com/en.html"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "Bellagio Premier Two Queen",
+     "url": "https://bellagio.mgmresorts.com/en/hotel/premier-two-queen.html"
+    }
+   ],
+   "note": "One MICHELIN distinction on campus: Michael Mina (Recommended). The free Conservatory display is on the same property and runs Lunar New Year 1/9–3/6/2027 — directly inside the Feb 15–18 window.",
+   "flagIds": [
+    "F-06"
+   ]
+  },
+  {
+   "id": "aria",
+   "name": "ARIA Resort & Casino",
+   "area": "Center Strip (CityCenter)",
+   "venues": [
+    "ARIA"
+   ],
+   "rooms": "Center Suite: 1,075 sq ft, 2 queens, max 4 — suite only; no standard 2-queen room confirmed (official page, session c88d116c 2026-11-27).",
+   "bath": "Private water closet, dual-sink vanity, stone shower and tub — suite only (official page).",
+   "roomStatus": "v",
+   "price7": null,
+   "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
+   "price3": null,
+   "transit": "Center Strip / CityCenter; tram and Deuce nearby. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official hotel site",
+     "url": "https://aria.mgmresorts.com/en.html"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "ARIA Center Suite",
+     "url": "https://aria.mgmresorts.com/en/hotel/center-suite.html"
+    }
+   ],
+   "note": "One MICHELIN distinction on campus: Gymkhana (Recommended).",
+   "flagIds": [
+    "F-06"
+   ]
+  },
+  {
+   "id": "wynn",
+   "name": "Wynn Las Vegas",
+   "area": "North Strip",
+   "venues": [
+    "Wynn"
+   ],
+   "rooms": "Wynn Resort room: 'one King or two Queen Wynn Dream Beds, among the most spacious standard rooms in Las Vegas'. Wynn Tower Suite Two Queens also listed. Wynn Resort room: 640 sq ft, 1 king or 2 queens, Dream Beds (official page, session c88d116c 2026-11-27). Confirm a 2-queen booking — a prior engine pull listed king types only.",
+   "bath": "",
+   "roomStatus": "v",
+   "price7": null,
+   "price7Note": "No dated price retrieved. The Wynn booking engine returned to its search form without a Feb 15–22, 2027 rate set, so no total is shown.",
+   "price3": null,
+   "transit": "North Strip; Monorail corridor at the north end. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official rooms & suites page (bed configurations)",
+     "url": "https://www.wynnlasvegas.com/rooms-and-suites"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "Wynn Resort room",
+     "url": "https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort"
+    }
+   ],
+   "note": "One MICHELIN distinction on campus: Wing Lei (2026 Recommended — not starred this year, despite its Forbes Five-Star status).",
+   "flagIds": [
+    "F-09"
+   ]
+  },
+  {
+   "id": "resorts-world",
+   "name": "Resorts World Las Vegas",
+   "area": "North Strip",
+   "venues": [
+    "Resorts World"
+   ],
+   "rooms": "Conrad Premium Room: 550 sq ft, 1 king or 2 queens (official page, session c88d116c 2026-11-27).",
+   "bath": "Spa-inspired bathroom with vanity, LED mirror and walk-in shower (official page).",
+   "roomStatus": "v",
+   "price7": null,
+   "price7Note": "No dated price retrieved.",
+   "price3": null,
+   "transit": "North Strip; Monorail-adjacent. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official hotel site",
+     "url": "https://www.rwlasvegas.com/"
+    },
+    {
+     "label": "Official 2026 MICHELIN Las Vegas list",
+     "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+     "label": "Conrad Premium Room",
+     "url": "https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/"
+    }
+   ],
+   "note": "One MICHELIN distinction on campus: Stubborn Seed (Recommended).",
+   "flagIds": []
+  },
+  {
+   "id": "flamingo",
+   "name": "Flamingo Las Vegas",
+   "area": "Center Strip",
+   "venues": [],
+   "rooms": "Flamingo Room | 2 Queens, 350 sq ft, two queen beds and a chaise. A Habitat Tower two-queen version is the same price.",
+   "bath": "Room description: 'rain shower and sophisticated bathroom fixtures' in the private en-suite bathroom.",
+   "roomStatus": "v",
+   "price7": {
+    "total": 581,
+    "room": "Flamingo Room | 2 Queens",
+    "nightly": "$83/night including the $50/day resort fee",
+    "math": "$83 × 7 = $581 before taxes",
+    "basis": "Rate card: $33 room rate + $50 resort fee = $83/night, taxes excluded. Fee disclosure: resort fee $56.63 with tax ($49.95 + $6.68)."
+   },
+   "price7Note": "Cheapest verified two-queen 7-night total found in this session.",
+   "price3": null,
+   "transit": "Center Strip, on the Las Vegas Blvd Deuce route and inside the Monorail corridor (see the official route map). Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official room list with rates, Feb 15–22 2027",
+     "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+     "label": "Official hotel page",
+     "url": "https://www.caesars.com/flamingo-las-vegas/hotel"
+    },
+    {
+     "label": "Las Vegas Monorail route map",
+     "url": "https://www.lvmonorail.com/route-map/"
+    }
+   ],
+   "note": "No MICHELIN restaurant inside the resort, but the center-Strip location is inside the 1-hour core for all 24 (transit time unverified).",
+   "flagIds": [
+    "F-04"
+   ]
+  },
+  {
+   "id": "paris",
+   "name": "Paris Las Vegas",
+   "area": "Center Strip",
+   "venues": [],
+   "rooms": "Bordeaux Room | 2 Queens, 390 sq ft, Bordeaux Tower.",
+   "bath": "Room description: 'The luxurious bathroom boasts a marble counter along with a shower.'",
+   "roomStatus": "v",
+   "price7": {
+    "total": 1421,
+    "room": "Bordeaux Room | 2 Queens",
+    "nightly": "$203/night including the $55/day resort fee",
+    "math": "$203 × 7 = $1,421 before taxes",
+    "basis": "Rate card: $148 room rate + $55 resort fee = $203/night, taxes excluded. Fee disclosure: $62.30 with tax ($54.95 + $7.35)."
+   },
+   "price7Note": "",
+   "price3": null,
+   "transit": "Center Strip, inside the Monorail corridor (see the official route map); Deuce on Las Vegas Blvd. Door-to-door times not retrieved.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official room list with rates, Feb 15–22 2027",
+     "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=plv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+     "label": "Official hotel page",
+     "url": "https://www.caesars.com/paris-las-vegas/hotel"
+    },
+    {
+     "label": "Las Vegas Monorail route map",
+     "url": "https://www.lvmonorail.com/route-map/"
+    }
+   ],
+   "note": "No MICHELIN restaurant inside the resort; strongest verified two-queen room size among the Caesars properties checked (390 sq ft).",
+   "flagIds": [
+    "F-04"
+   ]
+  },
+  {
+   "id": "south-point",
+   "name": "South Point Hotel, Casino & Spa",
+   "area": "South end of the Las Vegas Strip (well south of the center Strip)",
+   "venues": [],
+   "rooms": "Premium King or Premium Two Queens, 500 sq ft; the two-queen room sleeps four.",
+   "bath": "Official room page describes the in-room bathroom ('The Premium Room bathroom is equipped with a lighted makeup mirror') and shows bathroom photos.",
+   "roomStatus": "v",
+   "price7": {
+    "total": 989,
+    "room": "Premium 2 Queens",
+    "nightly": "$141/night including all fees",
+    "math": "Booking engine states '$989 total for 7 nights', including all fees, taxes not included.",
+    "basis": "Prevailing Rate includes a $29.20/day resort fee per the engine; the hotel's public rate page says rates include a $33/night resort fee (F-04). Taxes not included."
+   },
+   "price7Note": "Premium King is $919 for the same 7 nights.",
+   "price3": null,
+   "transit": "Well south of the center Strip. RTC Route 117 and the South Strip Transit Terminal are the public-transit option; sampled scheduled segments were logged by a prior session, but no door-to-door time is verified here.",
+   "transitStatus": "u",
+   "social": [],
+   "socialStatus": "u",
+   "sources": [
+    {
+     "label": "Official booking engine, Feb 15–22 2027",
+     "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+     "label": "Official guest rooms page",
+     "url": "https://southpointcasino.com/hotel/guest-rooms"
+    },
+    {
+     "label": "RTC schedules & maps",
+     "url": "https://www.rtcsnv.com/ways-to-travel/schedules-maps/"
+    }
+   ],
+   "note": "Best-documented pricing: three separate 7-night windows were captured directly from its engine (see Prices & dates). No MICHELIN restaurant on site.",
+   "flagIds": [
+    "F-04",
+    "F-15"
+   ]
+  }
+ ]
 }

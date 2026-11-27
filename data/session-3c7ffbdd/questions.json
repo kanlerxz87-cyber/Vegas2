@@ -1,0 +1,54 @@
+{
+  "verified_date": "2026-11-27",
+  "intro": "Clear answers to key Las Vegas 2027 trip-planning questions based solely on verified official sources, paired with concrete discovery methods for every still-unverified detail.",
+  "qa_items": [
+    {
+      "id": "Q-01",
+      "topic": "Best Dates & Booking Timing",
+      "question": "What is the cheapest 7-night window between Feb 15 and Mar 23, 2027, and when should we book?",
+      "answer": "Mon Feb 15 – Mon Feb 22, 2027 is the cheapest verified week across all multi-week hotels checked live on 2026-11-27 (Flamingo $83/nt vs $118–$141/nt later; Caesars Palace $214/nt vs $254–$317/nt with Tue Mar 2 already Sold Out; South Point $919 vs $979), AND it overlaps your preferred Feb 15–18 window. The best time to book is RIGHT NOW during late-Nov/early-Dec 2026 Cyber Sales (Wynn Cyber Exclusive runs Nov 20 – Dec 4, 2026) using refundable / 72-hour-cancel rates.",
+      "missing_info_discovery": "To confirm exact final out-the-door totals including Clark County room tax (~13.38%) on Caesars properties and Wynn, advance one step into checkout on caesars.com and reservations.wynnlasvegas.com and screenshot the tax line before paying.",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=clv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0"
+    },
+    {
+      "id": "Q-02",
+      "topic": "Transit Reality (Subway vs Monorail & Bus)",
+      "question": "Does Las Vegas have a subway, and how many Michelin restaurants are truly within <=1 hour by public transit?",
+      "answer": "Las Vegas has NO subway. Public transit is the Las Vegas Monorail (7 Strip stations, every 4–8 min; 7-day eTicket $59.95/adult = $119.90 for 2) plus RTC buses including the 24/7 Deuce on the Strip (3-day pass $20/adult = $40 for 2). From Center-Strip Monorail hotels (The LINQ, Flamingo, Horseshoe, Paris, Caesars Palace), 15 Michelin restaurants are directly on the Strip/Arts District transit corridor (13 Strip + 2 Arts District). The 6 Chinatown (Spring Mountain Rd) and 3 Off-Strip West/SW restaurants require an east–west RTC bus transfer (e.g., Route 203 / 202) or rideshare.",
+      "missing_info_discovery": "Use the official RTC Southern Nevada Trip Planner (rtcsnv.com) with departure time 6:00 PM on a weekday from 'Las Vegas Blvd @ Flamingo' to each Chinatown/SW address (especially Anima by EDO at 9205 W Russell Rd and YEN Viet Kitchen at 6115 S Decatur Blvd) to confirm exact bus+walk minutes.",
+      "source_url": "https://www.lvmonorail.com/ticket-information/"
+    },
+    {
+      "id": "Q-03",
+      "topic": "Michelin Stars vs Guide Listings",
+      "question": "Which Las Vegas restaurants currently hold Michelin Stars versus Bib Gourmand or Michelin Recommended status?",
+      "answer": "Per the inaugural 2026 MICHELIN Guide Southwest (announced Aug 31, 2026), Las Vegas has 24 honored restaurants: 4 Michelin-Starred — Joël Robuchon (Two Stars, MGM Grand), L'Atelier de Joël Robuchon (One Star, MGM Grand), é by José Andrés (One Star, Cosmopolitan), and Restaurant Guy Savoy (One Star, Caesars Palace) — plus 3 Bib Gourmand (China Poblano, Esther's Kitchen, YEN Viet Kitchen) and 17 Michelin Recommended venues.",
+      "missing_info_discovery": "Check guide.michelin.com in January 2027 before travel in case any restaurant announces temporary closures, chef changes, or updated tasting formats.",
+      "source_url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+    },
+    {
+      "id": "Q-04",
+      "topic": "Unpublished Restaurant Prices & Hours",
+      "question": "Why are 2-adult costs blank for several Michelin restaurants, and how can we confirm exact prices before booking?",
+      "answer": "Under our strict zero-hallucination rule, we only list 2-adult totals published directly on official restaurant menus or official booking portals (verified for Guy Savoy, China Poblano, Michael Mina, Stubborn Seed, Kabuto, Partage, and Anima by EDO). Several fine-dining venues (Joël Robuchon, L'Atelier, é by José Andrés, Wing Lei, Venetian venues, Kame Omakase) omit static prices online or reveal ticketed pricing only inside OpenTable/SevenRooms/Resy checkout.",
+      "missing_info_discovery": "1) Start a live test booking on SevenRooms (Cosmopolitan/Venetian/Anima), OpenTable (Guy Savoy, Partage, Sparrow + Wolf), or Resy (Kabuto, Lamaii, SoulBelly) to view prepaid tasting prices. 2) Call the verified venue phone numbers listed in our Restaurants table (e.g., Joël Robuchon 702-891-7925; é by José Andrés 702-698-7950; Michael Mina / Bellagio concierge 866-906-7171 for 2027 reopening dates). 3) Open YEN Viet Kitchen's Skipli link (skiplinow.com/shop/514688a) and Pho Ga Bac Bac's Fetail link (fetail.com/storev2/shop?store_id=116) for item-by-item prices.",
+      "source_url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+      "id": "Q-05",
+      "topic": "Outdoor Parks Without a Car",
+      "question": "Can we visit Red Rock Canyon, Hoover Dam, or Valley of Fire by bus/monorail or rideshare?",
+      "answer": "NO for public transit — BLM explicitly confirms public transportation does not extend to Red Rock Canyon, and neither Hoover Dam nor Valley of Fire has Strip bus service. For Red Rock Canyon, BLM warns rideshare visitors are limited to the Visitor Center area; for Valley of Fire, Nevada State Parks explicitly warns Uber/Lyft can leave visitors stranded with no return ride. Renting a car for 1–2 days (or booking an authorized commercial tour) is the safe, reliable option.",
+      "missing_info_discovery": "For Red Rock Canyon timed entry ($20 vehicle + $2 fee), log into Recreation.gov at 7:00 AM PT exactly 30 days before your chosen Feb 2027 date (e.g., Jan 18, 2027 for Feb 17). For Hoover Dam Guided Dam Tours ($40/pp, in-person only), arrive near 9:00 AM opening before tours sell out.",
+      "source_url": "https://www.recreation.gov/timed-entry/10075177/ticket/10075178"
+    },
+    {
+      "id": "Q-06",
+      "topic": "Missing Social Media Links (YouTube / TikTok / Instagram)",
+      "question": "Why are some YouTube, TikTok, or Instagram cells blank in the Restaurants and Activities tables?",
+      "answer": "Many Strip casino restaurants share their parent resort's YouTube/TikTok channel rather than maintaining a standalone verified channel, and several independent Chinatown eateries do not link official YouTube or TikTok handles on their websites. Rather than guessing handles or linking fan/unofficial pages, unverified accounts are left blank and flagged.",
+      "missing_info_discovery": "To locate additional official accounts manually, check the footer icons inside interactive browser views of each venue's official website or search the parent resort's verified Instagram bio links (e.g., @venetianvegas, @mgmgrand, @cosmopolitan_lv, @wynnlasvegas, @resortsworldlv).",
+      "source_url": "https://neonmuseum.org/your-visit/"
+    }
+  ]
+}
