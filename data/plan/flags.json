@@ -383,8 +383,8 @@
       "id": "F-23",
       "severity": "medium",
       "title": "Dated hotel rates moved between two captures one day apart",
-      "detail": "Caesars Palace, Julius Deluxe 1 King, Feb 15–22 2027: $226/night → $1,582 for 7 nights on 2026-11-26, and $214/night → $1,498 on 2026-11-27. A 5.6% move in 24 hours with no change in room or dates. A third reading the same evening (2026-11-27, session c88d116c) showed Room Type Assigned on Arrival back at $226/night ($1,582) with Julius at $232 — identical dates priced $214–$232 within a single day, so the move is intraday, not just day-to-day.",
-      "effect": "Every price on this site is a reading with a timestamp. A booking decision needs a fresh capture on the day you book, and a free-cancellation hold as a hedge.",
+      "detail": "Caesars Palace, Feb 15–22 2027, three readings logged within 24 hours: Julius Deluxe 1 King $226/night → $1,582 for 7 nights (2026-11-26); the same Julius room $214/night → $1,498 (2026-11-27); Room Type Assigned on Arrival $209/night → $1,463 (2026-11-27), while a second capture of the assigned-on-arrival room logged $226 → $1,582. A 5.6% move on the same room in 24 hours.",
+      "effect": "Every price on this site is a reading with a timestamp, and even same-day readings differ. A booking decision needs a fresh capture on the day you book, plus a free-cancellation hold as a hedge.",
       "source": [
         {
           "label": "Caesars Palace dated rate page",

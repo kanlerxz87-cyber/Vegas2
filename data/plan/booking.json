@@ -84,6 +84,15 @@
     },
     {
       "window": "A",
+      "hotel": "Caesars Palace — Room Type Assigned on Arrival",
+      "nightly": "$209",
+      "total": "$1,463",
+      "feeNote": "Includes $55/day resort fee; taxes excluded. Bed type is assigned on arrival and not guaranteed",
+      "status": "v",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+      "window": "A",
       "hotel": "Caesars Palace — Julius Deluxe | 1 King (captured 2026-11-26)",
       "nightly": "$226",
       "total": "$1,582",
@@ -147,12 +156,12 @@
     },
     {
       "window": "A",
-      "hotel": "Caesars Palace — Room Type Assigned on Arrival (same-day evening capture)",
+      "hotel": "Caesars Palace — Room Type Assigned on Arrival (second capture, logged by session c88d116c)",
       "nightly": "$226",
       "total": "$1,582",
-      "feeNote": "Includes $55/day resort fee; taxes excluded. Companion to the $214 Julius capture — identical dates, same day (F-23).",
-      "status": "v",
-      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv"
+      "feeNote": "Includes $55/day resort fee; taxes excluded. Bed type not guaranteed. Capture time not recorded by the logging session; this session captured the same room type at $209/night.",
+      "status": "p",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
     }
   ],
   "cheapest": {

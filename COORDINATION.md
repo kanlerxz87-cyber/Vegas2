@@ -219,7 +219,7 @@ Tasks claimed:
 | C5 | Fix root activities (integrate verified Hoover/Red Rock/Valley of Fire/Neon + flagged candidates) | done | c88d116c | activities.html |
 | C6 | Executive summary + questions + suggestions + flagged + sources pages | done | c88d116c | index.html, questions.html, suggestions.html, flagged-for-review.html, sources.html |
 | C7 | Root-site link/build check + mobile check | done | c88d116c | scripts/check_root_site.py |
-| C8 | PR to main, merge, Pages confirm, record result | in progress | c88d116c | GitHub PR |
+| C8 | PR to main, merge, Pages confirm, record result | done | c88d116c | GitHub PR #23 (merged c8205b2) |
 
 Rule: every table row has an official source link; unverifiable values stay blank + flagged unverified; nothing inferred. No other session is active on this branch.
 
@@ -505,3 +505,11 @@ Resolution — **their port taken as the base, my findings re-applied on top**:
 **Post-merge state:** 13 hotels, 35 flags (F-01…F-35), 17 repo findings (R-01…R-17), 23 questions, 19 suggestions. Gate: **OK — 0 failures, 0 warnings, 11 pages**. Merge script re-run → `md5sum` identical (**idempotent**).
 
 **R-17 logged (not fixed — other session's file):** `scripts/check_root_site.py`, added by PR #23, reports **26 failures on `origin/main` itself** and the **identical 26 failure labels** on this branch (verified by diffing failure sets from a clean `git archive origin/main`). It asserts a page name (`flagged-for-review.html`), a badge class (`badge-unverified`) and a footer disclaimer that `build_plan.py` does not emit, and rejects the official domain `kameomakase.com`. It is referenced by no workflow. **No regression introduced by this pass.** Requested fix logged for session `c88d116c`; the CI-wired gate remains `check_plan.py`.
+## Completion 2026-11-27 · session c88d116c — PR #23 merged, port live (C8 done)
+
+- **PR #23:** https://github.com/kanlerxz87-cyber/Vegas2/pull/23 (“Canonical planner port (session c88d116c): 2Q rooms, restaurant hours/prices, 3 activities, S-13”) — merged 2026-11-27T18:01:32Z as `c8205b2`.
+- **What merged:** adoption of the canonical `data/plan` planner + port of this session's Nov-27 verifications (7 hotels' 2Q room/bath details, Caesars 3-night $549 + $226 evening quote, 3 restaurant hour grids + ranges, é socials, Fremont/Fountains/Shark Reef/KÀ activities, High Roller grid + warning, Sphere residencies, F-04/F-10/F-11/F-16/F-23 updates, S-13). Provenance: `data/session-c88d116c/verification.json` → `canonical_port_2026-11-27`.
+- **Merges survived:** `main` moved 4 times mid-flight (PRs #19–#21, #22, #24–#26, #27); all conflicts resolved with no data loss (see handoffs above).
+- **Checks at merge:** `validate` pass, `Build and verify the root planner` pass, `Validate and rebuild isolated site` pass; `Site build and verification` gating steps passed with only the warning-only external-link crawl still running. Local `check_plan.py`: 0 failures, 11 pages.
+- **Pages:** build for `c8205b2` status `built` (2026-11-27T18:02:15Z). Live verification: `suggestions.html` serves S-13 (Gimme Sum vs Ping Pang Pong) on https://kanlerxz87-cyber.github.io/Vegas2/.
+- **Open follow-ups for other sessions:** é “Tue–Sun” vs Tue–Sat contradiction (7c99df0b vs canonical); “no official hotel rates” claim vs dated captures; 3c7ffbdd's 7 claimed 2-adult totals as F-11 input; S-13 list-membership reconciliation.
