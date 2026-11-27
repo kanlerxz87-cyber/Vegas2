@@ -29,7 +29,7 @@ No files from either side were discarded. Shared outputs (index/navigation/table
 | 12 | Flagged for Review page (unverified items + irregularities) | done | c5a8afb5 | flagged-for-review.html | n/a |
 | 13 | Integrate, verify table rows line-by-line, fix broken links | done | c5a8afb5 | all | internal links verified; external official sources linked |
 | 14 | Enable GitHub Pages, confirm deploy, no broken links | done | c5a8afb5 | repo Pages settings | Pages: main `/` → https://kanlerxz87-cyber.github.io/Vegas2/ (API built) |
-| 15 | Create PR from integration branch to main, merge, record PR link + result | unclaimed | c5a8afb5 | GitHub PR | pending |
+| 15 | Create PR from integration branch to main, merge, record PR link + result | done | c5a8afb5 | GitHub PR #20 | merged to main at 2026-11-27T17:37:47Z (2fd4a20) — https://github.com/kanlerxz87-cyber/Vegas2/pull/20 |
 
 ## Prior session task board (e9badc77-vegas2 — completed)
 
@@ -84,6 +84,11 @@ Rule applied everywhere: every table row carries a source link to an official si
 - PR #12: https://github.com/kanlerxz87-cyber/Vegas2/pull/12 (`arena/e9badc77-vegas2` → `main`)
 - Merge result: merged into `main` (this session)
 - GitHub Pages: enabled on `main`, source `/`, public URL https://kanlerxz87-cyber.github.io/Vegas2/ (root landing page = this session's dashboard). Prior sessions' `docs/` artifacts and session subdirectories preserved in repo but not the root home page.
+
+## PR and deployment result (this session: c5a8afb5-vegas2)
+- PR #20: https://github.com/kanlerxz87-cyber/Vegas2/pull/20 (`arena/c5a8afb5-vegas2` → `main`)
+- Merge result: merged to main at 2fd4a20 (2026-11-27T17:37:47Z)
+- GitHub Pages: source `main` `/`, URL https://kanlerxz87-cyber.github.io/Vegas2/ — API status building; live site fetched via fetch_page confirms root landing page (executive summary, 24 Michelin, 2 verified hotels, verified activities) is live; no broken internal links; prior sessions' docs/ artifacts preserved
 
 ## Source and verification record (this session: c5a8afb5-vegas2 — continuation)
 - Verified live: visitlasvegas.com (24 distinctions, clusters), michelin.com official press release (4 starred: 1×2★ + 3×1★, 3 Bib, 17 Recommended; addresses), mgmgrand.mgmresorts.com (Joël Robuchon Tue–Sat 5–9:30, L’Atelier Mon 5–9:30/Tue–Wed closed), ebyjoseandres.com (Tue–Sun 5:30 & 8:30, 3-mo ticket release), cosmopolitanlasvegas.mgmresorts.com (China Poblano Mon–Thu 11–10), wynnlasvegas.com (Wing Lei Thu/Sun/Mon 5:30–9:30, Fri–Sat 5:30–10), venetianlasvegas.com (Bouchon hours Mon–Wed 5–10 etc.; booking calendar $XXX Nov 27), caesars.com (Guy Savoy $$$$, reservations, Formal, $226/nt + resort fee), usbr.gov (Hoover Dam hours/fees), blm.gov + recreation.gov (Red Rock hours/timed entry), parks.nv.gov (Valley of Fire hours/fees), neonmuseum.org (Neon Museum hours/prices/social), lvmonorail.com (Monorail hours), opm.gov (Feb 15 holiday).
