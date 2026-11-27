@@ -179,6 +179,34 @@ This entry records the active session's additions without replacing the existing
 
 ---
 
+## Session c88d116c-vegas2 (this branch: arena/c88d116c-vegas2) — CLAIM
+
+Claimed 2026-11-27 by session c88d116c. File scope (non-overlapping with other sessions' docs/, site/, field-notes/, legacy-dashboard/):
+- COORDINATION.md (this claim + completion record)
+- Root site only: index.html, hotels.html, restaurants.html, activities.html, questions.html, suggestions.html, flagged-for-review.html, booking.html (new), sources.html (new), assets/css/style.css
+- New verification record: data/session-c88d116c/verification.json + scripts/check_root_site.py (new checker for root site only)
+- Does NOT touch: docs/**, site/**, field-notes/**, legacy-dashboard/**, data/verified/**, data/trip/**, data/*.json (read-only reference)
+
+Tasks claimed:
+| # | Task | Status | Owner | File scope |
+|---|------|--------|-------|------------|
+| C1 | Claim + coordination record | done | c88d116c | COORDINATION.md |
+| C2 | Fresh official-source re-verification (Michelin, LVCVA, OPM, RTC/Monorail, hotels, restaurants, activities) | done | c88d116c | data/session-c88d116c/verification.json |
+| C3 | Fix root hotels ranking (remove unverified 1-hr assertion; on-campus verified + 1-hr flagged; 3n+7n totals) | done | c88d116c | hotels.html, booking.html |
+| C4 | Fix root restaurants (total for 2 adults column; hours reconciliation; official-only social) | done | c88d116c | restaurants.html |
+| C5 | Fix root activities (integrate verified Hoover/Red Rock/Valley of Fire/Neon + flagged candidates) | done | c88d116c | activities.html |
+| C6 | Executive summary + questions + suggestions + flagged + sources pages | done | c88d116c | index.html, questions.html, suggestions.html, flagged-for-review.html, sources.html |
+| C7 | Root-site link/build check + mobile check | done | c88d116c | scripts/check_root_site.py |
+| C8 | PR to main, merge, Pages confirm, record result | in progress | c88d116c | GitHub PR |
+
+Rule: every table row has an official source link; unverifiable values stay blank + flagged unverified; nothing inferred. No other session is active on this branch.
+
+## Handoff 2026-11-27 · c88d116c merged origin/main (PRs #19–#21) — overlapping-scope resolution
+
+Parallel sessions `arena/4831d710-vegas2` (PR #19, nav fix) and `arena/c5a8afb5-vegas2` (PRs #20–#21, root-site verification) merged to `main` while this branch was in flight. File scope overlapped on `index.html`, `restaurants.html`, `hotels.html`, `activities.html`, `flagged-for-review.html`, `COORDINATION.md`. Resolution (PR #23, session c88d116c):
+- Conflicts resolved by keeping this branch's verified base and integrating the parallel contributions that comply with the user's explicit rules (clusters, corroborated socials, Neon heat policy, Recreation.gov link, OPM link, advance-purchase note). Full list in `data/session-c88d116c/verification.json` → `integration`.
+- Held out of data tables (preserved in git history + Flagged X-2/U-3): travel-time estimates without an official source, per-restaurant cost estimates, generic search links, and the contradicted é “Tue–Sun” hours (corrected by fresh official fetch — Sunday is Closed; see Flagged X-1).
+- No files from either side were discarded from the repo. `scripts/check_root_site.py` re-run after resolution: PASS.
 ## Session `arena/7c99df0b-vegas2` — Dashboard Rebuild & Research Update
 
 **Branch:** `arena/7c99df0b-vegas2` (active). Base commit: `8a538fbd6535abf19448da2e48616ffc61907a58`.
@@ -267,6 +295,13 @@ While this session was building, `main` advanced through PRs #19–#21 (sessions
 
 No other session's files, data trees, workflows or open PRs were touched.
 
+## Handoff 2026-11-27 · c88d116c merged origin/main (PR #22) — adopting the canonical planner
+
+Session `arena/155b420b-vegas2` (PR #22) consolidated the root site into a canonical data-driven planner (`data/plan/*.json` → `scripts/build_plan.py` → 11 root pages incl. `flagged.html`, `transit.html`, `repo-review.html`; archive at `docs/session-legacy-root/`; gate `.github/workflows/validate-plan.yml`). Resolution (PR #23, session c88d116c):
+- Adopted the canonical architecture: main's generated root pages kept; this branch's hand-written root pages superseded (their content is ported into `data/plan/*.json` below, and remains in this branch's git history). `flagged-for-review.html` at root removed (superseded by `flagged.html`; archived by 155b420b).
+- This branch's fresh Nov 27 verifications ported into `data/plan/`: Caesars 3-night $183/nt capture; restaurant hour sets; Fountains/High Roller/Fremont/Shark Reef/Sphere/KÀ activity rows; hotel 2-queen room details; é “Tue–Sun” correction; corroborated socials; clusters. `data/session-c88d116c/verification.json` retained as this session's evidence record.
+- `scripts/check_root_site.py` retired in favor of the canonical `scripts/check_plan.py` gate (plus a no-inference phrase check added there); it never merged, so nothing is deleted from the repo.
+- Scope note: this session now also edits `data/plan/*.json` (canonical root-site data) — same root-site scope, new file layout. `docs/**`, `site/**`, `field-notes/**`, `legacy-dashboard/**`, `data/verified/**`, `data/trip/**`, other `data/*.json` remain read-only.
 ### PR, merge and deployment result — session `155b420b-vegas2`
 
 - **PR #22:** https://github.com/kanlerxz87-cyber/Vegas2/pull/22 (branch `arena/155b420b-vegas2` → `main`) — "Consolidate Vegas planner into one verified, mobile-first root site".
@@ -303,6 +338,15 @@ No other session's files, data trees, workflows or open PRs were touched.
 
 **Verification rule:** A value appears only when an official source confirmed it. Otherwise blank + `Unverified` + flag ID linking to Flagged for Review. No inference, no hallucination. Dynamic 2027 hotel rates are re-checked live; if an official booking page cannot be retrieved, the price stays blank.
 
+## Handoff 2026-11-27 · c88d116c merged origin/main (PRs #24–#26) — no data overlap
+
+`main` moved to `900cb90` while PR #23 was in flight (PR #24 dashboard rebuild by 155b420b, PR #26 by 7c99df0b, PR #25 isolated subsite by 9b4f59cd). Only `COORDINATION.md` conflicted; resolved by keeping both sides. None of the three PRs touched root `*.html`, `data/plan/**`, `scripts/build_plan.py` or `scripts/check_plan.py`, so the canonical port in PR #23 is unaffected — gate re-run after merge (see C8).
+
+Cross-surface inconsistencies noticed (outside this session's root-site scope — flagged for follow-up, not edited here):
+- Session 7c99df0b records é by José Andrés hours as “Tue–Sun” in `data/verified/` + `docs/`; the canonical root site shows Tue–Sat with Sun Closed (re-verified from the official page 2026-11-27, session c88d116c). One side is wrong.
+- Session 7c99df0b states “no official Feb 2027 rate verified for any hotel”; the canonical root site carries dated official-engine captures (e.g. Flamingo $581, South Point windows, Caesars $1,498/$1,582). Needs reconciliation.
+- 7c99df0b's 7 verified restaurant hour sets live only in `data/verified/` + `docs/`; they are not yet in `data/plan/` (this session ported its own three: Sparrow and Wolf, China Poblano, Stubborn Seed).
+- Session 9b4f59cd's isolated subsite (`docs/session-9b4f59cd/`, `data/session-9b4f59cd/`) does not overlap this scope; respected as-is.
 ---
 
 ### Post-merge observation — sessions `7c99df0b` and `9b4f59cd` merged on top (2026-11-27)
@@ -360,3 +404,9 @@ After this session's PR #22 and PR #24 merged, two further sessions merged to `m
   - `python3 scripts/check_session_3c7ffbdd.py` — PASS (7 pages, 8 hotels, 24 Michelin restaurants [1 Two-Star, 3 One-Star, 3 Bib Gourmand, 17 Recommended], 11 activities, 13 flagged items, 0 broken internal links, 0 forbidden broken domains, balanced HTML).
   - Existing repo checks (`scripts/check_site.py`, `scripts/check_plan.py`, `scripts/validate_field_notes.py`, `scripts/check_session_b29fc34e.py`) all passed unchanged.
 
+
+## Handoff 2026-11-27 · c88d116c merged origin/main (PR #27) — no data overlap
+
+`main` moved to `a07c877` (PR #27, isolated subsite by 3c7ffbdd) between PR #23's push and merge. Only `COORDINATION.md` conflicted; kept both sides. PR #27 touches only `docs/session-3c7ffbdd/`, `data/session-3c7ffbdd/`, its own scripts/workflow — the canonical port is unaffected; gate re-run after merge.
+
+Follow-up for the canonical owner (not edited here): session 3c7ffbdd claims official 2-adult menu totals for 7 venues (Guy Savoy, China Poblano $120, Michael Mina $590++, Stubborn Seed $320–$390, Kabuto $260–$370, Partage $260–$420, Anima by EDO $170/$65 Mon Pasta) in `data/session-3c7ffbdd/restaurants.json`. If those totals check out against official menus, they narrow F-11 substantially — this session's port conservatively shows only Partage as exact.
