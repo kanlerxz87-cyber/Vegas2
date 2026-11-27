@@ -1,0 +1,454 @@
+{
+ "as_of": "2026-11-27",
+ "note": "Every value in this dataset cites at least one URL below. Where no official source confirmed a value, the value is blank and the row carries a flag ID.",
+ "items": [
+  {
+   "id": "ML",
+   "label": "MICHELIN Guide press release — inaugural 2026 MICHELIN Guide Southwest (stars, Bib Gourmand, Recommended, official addresses)",
+   "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s",
+   "domain": "michelin.com",
+   "tier": "official"
+  },
+  {
+   "id": "LVCVA",
+   "label": "Las Vegas Convention & Visitors Authority — MICHELIN restaurants in Las Vegas (24 distinctions)",
+   "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/",
+   "domain": "visitlasvegas.com",
+   "tier": "official DMO"
+  },
+  {
+   "id": "GMICHELIN",
+   "label": "MICHELIN Guide (guide.michelin.com)",
+   "url": "https://guide.michelin.com/",
+   "domain": "guide.michelin.com",
+   "tier": "official"
+  },
+  {
+   "id": "OPM",
+   "label": "U.S. Office of Personnel Management — Federal Holidays 2027",
+   "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "domain": "opm.gov",
+   "tier": "official government"
+  },
+  {
+   "id": "SP_BOOK",
+   "label": "South Point official booking engine (SynXis) — Feb 15–22 2027, 2 adults, 1 room",
+   "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+   "domain": "be.synxis.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "SP_BOOK3",
+   "label": "South Point official booking engine — Feb 15–18 2027 (3 nights)",
+   "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-18&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+   "domain": "be.synxis.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "SP_BOOK14",
+   "label": "South Point official booking engine — Feb 15–Mar 1 2027 (14 nights)",
+   "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-03-01&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+   "domain": "be.synxis.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "SP_BOOK222",
+   "label": "South Point official booking engine — Feb 22–Mar 1 2027",
+   "url": "https://be.synxis.com/?adult=2&arrive=2027-02-22&chain=6903&child=0&currency=USD&depart=2027-03-01&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+   "domain": "be.synxis.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "SP_ROOMS",
+   "label": "South Point — guest rooms (500 sq ft, Premium King / Premium Two Queens)",
+   "url": "https://southpointcasino.com/hotel/guest-rooms",
+   "domain": "southpointcasino.com",
+   "tier": "official hotel"
+  },
+  {
+   "id": "CLV_BOOK",
+   "label": "Caesars Palace official booking engine — Feb 15–22 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "CLV_BOOK3",
+   "label": "Caesars Palace official booking engine — Feb 15–18 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "CLV_BOOK14",
+   "label": "Caesars Palace official booking engine — Feb 15–Mar 1 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=03/01/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "CLV_BOOK222",
+   "label": "Caesars Palace official booking engine — Feb 22–Mar 1 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/22/2027&departureDate=03/01/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "CLV_BOOK315",
+   "label": "Caesars Palace official booking engine — Mar 15–22 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=03/15/2027&departureDate=03/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "FLV_BOOK",
+   "label": "Flamingo Las Vegas official booking engine — Feb 15–22 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "FLV_BOOK3",
+   "label": "Flamingo Las Vegas official booking engine — Feb 15–18 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "FLV_BOOK14",
+   "label": "Flamingo Las Vegas official booking engine — Feb 15–Mar 1 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=03/01/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "FLV_BOOK222",
+   "label": "Flamingo Las Vegas official booking engine — Feb 22–Mar 1 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/22/2027&departureDate=03/01/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "FLV_BOOK315",
+   "label": "Flamingo Las Vegas official booking engine — Mar 15–22 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=03/15/2027&departureDate=03/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "PLV_BOOK",
+   "label": "Paris Las Vegas official booking engine — Feb 15–22 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=plv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "PLV_BOOK14",
+   "label": "Paris Las Vegas official booking engine — Feb 15–Mar 1 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=03/01/2027&dateSearchFormat=exact-dates&propCode=plv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "PLV_BOOK315",
+   "label": "Paris Las Vegas official booking engine — Mar 15–22 2027",
+   "url": "https://www.caesars.com/book/room-list?arrivalDate=03/15/2027&departureDate=03/22/2027&dateSearchFormat=exact-dates&propCode=plv&numberOfAdults=2&numberOfRooms=1",
+   "domain": "caesars.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "RW_BOOK",
+   "label": "Resorts World Las Vegas official booking engine (Hilton tower) — Feb 15–22 2027, itemised totals",
+   "url": "https://reservations.rwlasvegas.com/ibe/shop.aspx?hotelID=17726&selectedTower=HILTON&nights=7&adults=2&children=0&checkIn=02/15/2027&checkOut=02/22/2027&selectedRate=DBF26",
+   "domain": "reservations.rwlasvegas.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "WYNN_BOOK",
+   "label": "Wynn Las Vegas official booking engine — Wynn Resort King, 7 nights Feb 15–22 2027",
+   "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&rmID=68658&checkIn=02/15/2027&checkOut=02/22/2027&adults=2&children=0",
+   "domain": "reservations.wynnlasvegas.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "WYNN_ROOM",
+   "label": "Wynn Las Vegas — Wynn Resort room (640 sq ft, one King or two Queens)",
+   "url": "https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort",
+   "domain": "wynnlasvegas.com",
+   "tier": "official hotel"
+  },
+  {
+   "id": "VEN_ROOM",
+   "label": "The Venetian Resort — Luxury Two Queen Suite (750 sq ft, 2 queen beds)",
+   "url": "https://www.venetianlasvegas.com/hotel/the-venetian/luxury-two-queen-suite.html",
+   "domain": "venetianlasvegas.com",
+   "tier": "official hotel"
+  },
+  {
+   "id": "VEN_BOOK",
+   "label": "The Venetian Resort official booking calendar — Feb 15–22 2027 returned a placeholder instead of a rate",
+   "url": "https://www.venetianlasvegas.com/booking?adults%5B%5D=2&arrival_date=2027-02-15&children%5B%5D=0&departure_date=2027-02-22&view=calendar",
+   "domain": "venetianlasvegas.com",
+   "tier": "official booking engine"
+  },
+  {
+   "id": "BEL_ROOM",
+   "label": "Bellagio — Fountain View Two Queen room (510 sq ft, 2 queen beds)",
+   "url": "https://bellagio.mgmresorts.com/en/hotel/resort-queen-room-fountain-view.html",
+   "domain": "bellagio.mgmresorts.com",
+   "tier": "official hotel"
+  },
+  {
+   "id": "JR",
+   "label": "MGM Grand — Joël Robuchon (Two MICHELIN Stars, hours, dress code)",
+   "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+   "domain": "mgmgrand.mgmresorts.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "LAT",
+   "label": "MGM Grand — L'Atelier de Joël Robuchon (One MICHELIN Star, hours)",
+   "url": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
+   "domain": "mgmgrand.mgmresorts.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "EBJA",
+   "label": "The Cosmopolitan — é by José Andrés (One MICHELIN Star, hours, seating policy)",
+   "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
+   "domain": "cosmopolitanlasvegas.mgmresorts.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "GS",
+   "label": "Caesars Palace — Restaurant Guy Savoy landing page (hours status, dress code, reservations)",
+   "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+   "domain": "caesars.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "GS_MENU",
+   "label": "Caesars Palace — Restaurant Guy Savoy main menu, effective 11.5.2026 (à la carte prices)",
+   "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy/main-menu",
+   "domain": "caesars.com",
+   "tier": "official menu"
+  },
+  {
+   "id": "CP",
+   "label": "The Cosmopolitan — China Poblano (Bib Gourmand, hours)",
+   "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html",
+   "domain": "cosmopolitanlasvegas.mgmresorts.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "BOU",
+   "label": "The Venetian — Bouchon (hours)",
+   "url": "https://www.venetianlasvegas.com/dining/restaurants/bouchon.html",
+   "domain": "venetianlasvegas.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "COTE",
+   "label": "The Venetian — COTE (hours)",
+   "url": "https://www.venetianlasvegas.com/dining/restaurants/cote.html",
+   "domain": "venetianlasvegas.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "MOTT",
+   "label": "The Venetian / Palazzo — Mott 32 (hours)",
+   "url": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html",
+   "domain": "venetianlasvegas.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "WL",
+   "label": "Wynn Las Vegas — Wing Lei (hours, dress code)",
+   "url": "https://www.wynnlasvegas.com/dining/fine-dining/wing-lei",
+   "domain": "wynnlasvegas.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "MM",
+   "label": "Bellagio — Michael Mina (MICHELIN Recommended, temporary closure, $295++ tasting menu)",
+   "url": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html",
+   "domain": "bellagio.mgmresorts.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "SS",
+   "label": "Resorts World — Stubborn Seed (hours, MICHELIN 2026 selection)",
+   "url": "https://www.rwlasvegas.com/dining/stubborn-seed/",
+   "domain": "rwlasvegas.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "PPP",
+   "label": "Gold Coast — Ping Pang Pong (hours)",
+   "url": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong",
+   "domain": "goldcoast.boydgaming.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "PART",
+   "label": "Partage — home (tasting menus, private room)",
+   "url": "https://partage.vegas/",
+   "domain": "partage.vegas",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "PART_MENU",
+   "label": "Partage — menus and prices (5 courses $130 / 7 courses $160 / signature $210)",
+   "url": "https://partage.vegas/menu",
+   "domain": "partage.vegas",
+   "tier": "official menu"
+  },
+  {
+   "id": "ESTHER",
+   "label": "Esther's Kitchen — official site",
+   "url": "https://www.estherslv.com/",
+   "domain": "estherslv.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "YEN",
+   "label": "Yen Viet Kitchen — official site",
+   "url": "https://www.yenvietkitchen.com/",
+   "domain": "yenvietkitchen.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "SW",
+   "label": "Sparrow + Wolf — official site (reservation policy)",
+   "url": "https://sparrowandwolflv.com/",
+   "domain": "sparrowandwolflv.com",
+   "tier": "official restaurant"
+  },
+  {
+   "id": "SPHERE",
+   "label": "Sphere — shows and event dates",
+   "url": "https://www.thesphere.com/shows",
+   "domain": "thesphere.com",
+   "tier": "official venue"
+  },
+  {
+   "id": "HR",
+   "label": "The LINQ — High Roller Observation Wheel (hours, ticket prices)",
+   "url": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
+   "domain": "caesars.com",
+   "tier": "official venue"
+  },
+  {
+   "id": "MOB",
+   "label": "The Mob Museum — home (hours grid)",
+   "url": "https://themobmuseum.org/",
+   "domain": "themobmuseum.org",
+   "tier": "official venue"
+  },
+  {
+   "id": "MOB_TIX",
+   "label": "The Mob Museum — tickets (General Admission $37.95 per adult)",
+   "url": "https://admission.themobmuseum.org/",
+   "domain": "admission.themobmuseum.org",
+   "tier": "official ticketing"
+  },
+  {
+   "id": "NEON",
+   "label": "The Neon Museum — home (hours, 2027 admission)",
+   "url": "https://neonmuseum.org/",
+   "domain": "neonmuseum.org",
+   "tier": "official venue"
+  },
+  {
+   "id": "CONS",
+   "label": "Bellagio Conservatory & Botanical Gardens — show dates and dark dates",
+   "url": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html",
+   "domain": "bellagio.mgmresorts.com",
+   "tier": "official venue"
+  },
+  {
+   "id": "FOUNT",
+   "label": "Fountains of Bellagio — display schedule",
+   "url": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+   "domain": "bellagio.mgmresorts.com",
+   "tier": "official venue"
+  },
+  {
+   "id": "RRC",
+   "label": "Red Rock Canyon — visitation reminder: timed entry Oct 1–May 31",
+   "url": "https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/",
+   "domain": "redrockcanyonlv.org",
+   "tier": "official (USFS partner)"
+  },
+  {
+   "id": "RRC_HOME",
+   "label": "Red Rock Canyon — home",
+   "url": "https://www.redrockcanyonlv.org/",
+   "domain": "redrockcanyonlv.org",
+   "tier": "official (USFS partner)"
+  },
+  {
+   "id": "MONO",
+   "label": "Las Vegas Monorail — ticket information and pricing",
+   "url": "https://www.lvmonorail.com/ticket-information/",
+   "domain": "lvmonorail.com",
+   "tier": "official transit operator"
+  },
+  {
+   "id": "MONO_ST",
+   "label": "Las Vegas Monorail — station guide (7 stations) and station hours",
+   "url": "https://www.lvmonorail.com/stations/",
+   "domain": "lvmonorail.com",
+   "tier": "official transit operator"
+  },
+  {
+   "id": "RTC_FARE",
+   "label": "RTC of Southern Nevada — fares and passes (Strip & All Access)",
+   "url": "https://www.rtcsnv.com/ways-to-travel/fares-passes/",
+   "domain": "rtcsnv.com",
+   "tier": "official transit agency"
+  },
+  {
+   "id": "RTC",
+   "label": "RTC of Southern Nevada — trip planner, schedules and maps",
+   "url": "https://www.rtcsnv.com/",
+   "domain": "rtcsnv.com",
+   "tier": "official transit agency"
+  },
+  {
+   "id": "SOULBELLY",
+   "label": "SoulBelly BBQ official site — hours for both locations, Instagram link, 2026 MICHELIN selection badge",
+   "url": "https://soulbellybbq.com/",
+   "domain": "soulbellybbq.com",
+   "tier": "official"
+  },
+  {
+   "id": "ANIMA",
+   "label": "Anima by EDO official site — nightly 5 PM dinner, $85 per-person tasting menu, Instagram link",
+   "url": "https://animabyedo.com/",
+   "domain": "animabyedo.com",
+   "tier": "official"
+  },
+  {
+   "id": "LAMAII",
+   "label": "Lamaii official site — Chinatown and Henderson locations, phone, published hours",
+   "url": "https://lamaiilv.com/chinatown/",
+   "domain": "lamaiilv.com",
+   "tier": "official"
+  },
+  {
+   "id": "KABUTO",
+   "label": "Kabuto official site — daily 5:30–9:00 PM, two seatings 5:30 and 7:45, Resy only, phone",
+   "url": "https://www.kabutolv.com/",
+   "domain": "kabutolv.com",
+   "tier": "official"
+  },
+  {
+   "id": "JRA",
+   "label": "Joel Robuchon official page (MGM Grand) — opened hours widget, dress code, phone, address",
+   "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+   "domain": "mgmgrand.mgmresorts.com",
+   "tier": "official"
+  }
+ ]
+}

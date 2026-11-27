@@ -1,0 +1,114 @@
+{
+ "as_of": "2026-11-27",
+ "intro": "Each row states a question that has to be settled before a booking decision is reasonable, what is already known, what is still missing, and how to close the gap.",
+ "rows": [
+  {
+   "id": "Q-01",
+   "question": "How many nights is the trip?",
+   "known": "The brief says 1–2 weeks, then names Feb 15–18 (3 nights) as preferred, and asks for 7-night pricing.",
+   "missing": "One confirmed duration.",
+   "how": "Choose 3, 7 or 14 nights. Only South Point quoted a real 14-night stay ($2,039).",
+   "owner": "Traveller",
+   "blocking": "Yes — every price comparison depends on it"
+  },
+  {
+   "id": "Q-02",
+   "question": "Is a car available for off-Strip days?",
+   "known": "Red Rock Canyon has no bus service and needs a timed-entry reservation; Chinatown has 6 Michelin restaurants but no Michelin hotel.",
+   "missing": "Whether the couple will rent a car, use rideshare, or stay transit-only.",
+   "how": "Decide transport mode, then re-check the 1-hour travel rule.",
+   "owner": "Traveller",
+   "blocking": "Yes — it changes which restaurants are reachable"
+  },
+  {
+   "id": "Q-03",
+   "question": "Which week inside Feb 15 – Mar 23, 2027?",
+   "known": "Feb 15–22 priced lowest on every hotel tested; Mar 15–22 priced highest (Caesars $310 vs $209). Feb 15 is a federal holiday.",
+   "missing": "Confirmation that the preferred week is available at the chosen hotel.",
+   "how": "Re-run the exact-date searches and book the Feb 15–22 week if confirmed.",
+   "owner": "Traveller",
+   "blocking": "Yes"
+  },
+  {
+   "id": "Q-04",
+   "question": "What is the total food-and-drink budget?",
+   "known": "Exact per-person prices for 4 of 24 Michelin restaurants (Michael Mina, Partage, Anima by EDO) and à-la-carte dish prices for Guy Savoy.",
+   "missing": "Prices for the other 20, plus wine, tax and gratuity.",
+   "how": "Ask each venue for the tasting-menu price per person; assume wine on top.",
+   "owner": "Traveller",
+   "blocking": "No, but it determines how many starred meals are realistic"
+  },
+  {
+   "id": "Q-05",
+   "question": "Two beds or one?",
+   "known": "Every hotel checked offers a king or queen option; several offer 2 queens. The brief says 'queen sized bed or equivalent or bigger'.",
+   "missing": "Whether one king satisfies the requirement or two queens are required.",
+   "how": "Confirm bed preference; it changes the room type and the price by $5–$40/night.",
+   "owner": "Traveller",
+   "blocking": "No"
+  },
+  {
+   "id": "Q-06",
+   "question": "Is a private bathroom already guaranteed?",
+   "known": "Verified for Venetian, Wynn, Bellagio, Caesars, Paris, Flamingo and South Point from their own room descriptions. Resorts World's Hilton Deluxe page did not state one.",
+   "missing": "Resorts World confirmation.",
+   "how": "Check the Hilton Deluxe room details or ask the property.",
+   "owner": "Planner",
+   "blocking": "No"
+  },
+  {
+   "id": "Q-07",
+   "question": "Which Michelin restaurants are actually reachable?",
+   "known": "4 starred restaurants sit inside MGM Grand, Cosmopolitan, Caesars Palace. 6 Recommended sit along Spring Mountain Rd.",
+   "missing": "Door-to-door transit times.",
+   "how": "Use the RTC trip planner per restaurant on the actual date.",
+   "owner": "Planner",
+   "blocking": "No"
+  },
+  {
+   "id": "Q-08",
+   "question": "Do you want to book now or wait?",
+   "known": "No official price history exists; Caesars advertises up to 30% off for stays 30+ days ahead. Feb dates are already cheaper than March.",
+   "missing": "Evidence that waiting lowers the price.",
+   "how": "Re-check the same dates weekly and record movement.",
+   "owner": "Traveller",
+   "blocking": "No"
+  },
+  {
+   "id": "Q-09",
+   "question": "Will Michael Mina / Bellagio's Michelin restaurant be open in Feb 2027?",
+   "known": "Listed closed with seasonal closures through December.",
+   "missing": "Reopening date.",
+   "how": "Call Bellagio reservations.",
+   "owner": "Planner",
+   "blocking": "No"
+  },
+  {
+   "id": "Q-10",
+   "question": "Are show tickets (Sphere) wanted?",
+   "known": "Metallica residency runs Jan 28 – Mar 13, 2027, overlapping the whole trip window.",
+   "missing": "Ticket prices and availability for the specific date.",
+   "how": "Check Ticketmaster for the chosen date.",
+   "owner": "Traveller",
+   "blocking": "No"
+  },
+  {
+   "id": "Q-11",
+   "question": "What is the total trip budget?",
+   "known": "Hotel ranges from $581 to $2,435 for 7 nights. Restaurant meals start around $260 for two at Partage.",
+   "missing": "A stated budget ceiling.",
+   "how": "Set a ceiling; the hotel and restaurant count can then be optimised against it.",
+   "owner": "Traveller",
+   "blocking": "No, but it would speed everything up"
+  },
+  {
+   "id": "Q-12",
+   "question": "Is a pool / spa / casino important?",
+   "known": "All ten hotels have a pool; Caesars, Paris, Flamingo and Wynn list spas.",
+   "missing": "Which amenities matter to this couple.",
+   "how": "Rank amenities; it may promote a cheaper hotel over a pricier one.",
+   "owner": "Traveller",
+   "blocking": "No"
+  }
+ ]
+}

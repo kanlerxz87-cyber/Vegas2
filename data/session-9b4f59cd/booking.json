@@ -1,0 +1,66 @@
+{
+ "as_of": "2026-11-27",
+ "question": "What does a 3-, 7- or 14-night stay actually cost, and when should it be booked?",
+ "windows": [
+  {
+   "window": "Feb 15 – Feb 18, 2027 (3 nights — the preferred dates)",
+   "south_point": "Premium 2 Queens $343 total (hotel-issued; 'including all fees', taxes not included)",
+   "caesars": "Run-of-house $198/night · Julius Deluxe 1 King $202/night (both include the $55 resort fee, exclude taxes). No 2-queen rate was offered on this search.",
+   "flamingo": "Fab Room 2 Queens $60/night · Go Room 2 Queens $60/night · run-of-house $55/night (all include the $50 resort fee, exclude taxes)",
+   "paris": "",
+   "resorts_world": "",
+   "wynn": ""
+  },
+  {
+   "window": "Feb 15 – Feb 22, 2027 (7 nights)",
+   "south_point": "Premium 2 Queens $989 total (hotel-issued; 'including all fees', taxes not included)",
+   "caesars": "Run-of-house $209/night · Julius Deluxe 1 King $214/night → $1,463 derived for run-of-house × 7, taxes excluded",
+   "flamingo": "Flamingo Room 2 Queens $83/night → $581 derived × 7, taxes excluded",
+   "paris": "Bordeaux Room 2 Queens $203/night → $1,421 derived × 7, taxes excluded",
+   "resorts_world": "Deluxe 2 Queens $2,434.84 all-in (room $1,762.50 + room tax $235.82 + resort fees $385.00 + fee tax $51.52)",
+   "wynn": "Wynn Resort King, Flexible Getaway Rate $833 average/night. Tax and fee basis of that figure is not confirmed, so no total is given."
+  },
+  {
+   "window": "Feb 15 – Mar 1, 2027 (14 nights)",
+   "south_point": "Premium 2 Queens $2,039 total (hotel-issued; 'including all fees', taxes not included)",
+   "caesars": "Julius Deluxe Room 2 Queens $248/night → $3,472 derived × 14, taxes excluded. Run-of-house $237/night.",
+   "flamingo": "Flamingo Room 2 Queens (Habitat Tower) $112/night → $1,568 derived × 14, taxes excluded",
+   "paris": "Bordeaux Room 1 King $234/night · run-of-house $232/night. No 2-queen rate was offered on this search.",
+   "resorts_world": "",
+   "wynn": ""
+  },
+  {
+   "window": "Feb 22 – Mar 1, 2027 (7 nights)",
+   "south_point": "Premium 2 Queens $1,049 total (hotel-issued)",
+   "caesars": "Run-of-house $248/night (includes resort fee, excludes taxes)",
+   "flamingo": "Flamingo Room 2 Queens $125/night · run-of-house $114/night",
+   "paris": "",
+   "resorts_world": "",
+   "wynn": ""
+  },
+  {
+   "window": "Mar 15 – Mar 22, 2027 (7 nights)",
+   "south_point": "NO AVAILABILITY — engine returned 'We do not have available rooms' for the March dates tested (Mar 4, 6, 10 and 20, 2027 each blocked a window).",
+   "caesars": "Run-of-house $310/night · Julius Deluxe 1 King $317/night (highest of any window tested)",
+   "flamingo": "Run-of-house $112/night · Go Room 1 King City View $122/night. No 2-queen room appeared on this search.",
+   "paris": "Run-of-house $233/night · Bordeaux Room 1 King $235/night",
+   "resorts_world": "",
+   "wynn": ""
+  }
+ ],
+ "cheapest_finding": {
+  "cheapest_7n_verified": "Flamingo Las Vegas — Flamingo Room 2 Queens at $83/night, $581 derived for Feb 15–22, 2027, excluding taxes and resort-fee tax.",
+  "cheapest_7n_hotel_issued": "South Point — $989 for the same seven nights, issued as a single total by the hotel's own engine ('including all fees', taxes excluded). It is the lowest hotel-issued 7-night figure but not the lowest of all quotes.",
+  "cheapest_14n_verified": "South Point — $2,039 for Feb 15 – Mar 1, 2027. This is the only genuine 14-night quote obtained, and it matches the '1–2 weeks' brief.",
+  "window_ranking": "Among windows tested with the same hotel and room, Feb 15–22, 2027 was the cheapest. Caesars Palace run-of-house rate: $209 (Feb 15–22) < $237 (Feb 15–Mar 1) < $248 (Feb 22–Mar 1) < $310 (Mar 15–22). Paris points the same way, on its cheapest published nightly rate per window: $203 (Feb 15–22) → $232 (Feb 15–Mar 1) → $233 (Mar 15–22). Mar 15–22 is the most expensive week inside the planning window.",
+  "note": "Totals marked 'derived' are the hotel's own displayed nightly rate multiplied by the number of nights. No tax rate has been assumed anywhere; taxes and resort-fee tax are excluded unless the hotel published an all-in figure (only Resorts World did)."
+ },
+ "best_time_to_book": {
+  "answer": "",
+  "status": "Unverified",
+  "why": "No official hotel source publishes a future price history or a book-now-vs-wait forecast, and none was found. The only documented timing lever is Caesars Entertainment's 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance', whose actual effect on these specific February 2027 dates is not stated by the company.",
+  "what_would_answer_it": "Re-run the same exact-date searches weekly and record the movement, or ask each property for its rate-hold and cancellation policy in writing. The Feb 15–22 week already prices below the March weeks, so waiting for a lower March rate is not supported by the data collected."
+ },
+ "fees_note": "Caesars properties: resort fee $56.63 (Flamingo, Paris) or $62.30 (Caesars Palace) including tax, plus a $50–$100/day incidental deposit. Resorts World: $55/night resort fee + tax. Wynn: $55/night resort fee + tax. South Point: $29.20/night resort fee, already inside the 'including all fees' total.",
+ "flag_note": "F-04 covers the Wynn rate basis; F-05 covers the South Point fee wording; F-12 covers all derived totals."
+}
