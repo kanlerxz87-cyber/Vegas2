@@ -394,7 +394,7 @@ def build_hotels() -> str:
 <caption>Requirement: queen-sized bed or larger, and a private bathroom. Verified from the hotel's own room description.</caption>
 <thead><tr><th>Hotel</th><th>Room verified</th><th>Bed</th><th>Bathroom evidence</th><th>Source</th></tr></thead>
 <tbody>
-{''.join(f'<tr><td><strong>{E(h["name"])}</strong></td><td>{E((h["queen_or_bigger"] or "—"))}</td><td>{("2 queen beds" if "Queen" in (h["queen_or_bigger"] or "") or "queen" in (h["queen_or_bigger"] or "") else ("1 king" if "King" in (h["queen_or_bigger"] or "") else unv(h["flag"])))}</td><td>{E((h["private_bath"] or "Not confirmed"))}</td><td class="src">{src_links((h["queen_src"]+","+h["private_bath_src"]).strip(",")) if (h["queen_src"] or h["private_bath_src"]) else unv(h["flag"])}</td></tr>' for h in HOTELS["rows"])}
+{''.join(f'<tr><td><strong>{E(h["name"])}</strong></td><td>{E((h["queen_or_bigger"] or "—"))}</td><td>{("2 queen beds" if "Queen" in (h["queen_or_bigger"] or "") or "queen" in (h["queen_or_bigger"] or "") else ("1 king" if "King" in (h["queen_or_bigger"] or "") else unv(h["flag"])))}</td><td>{E((h["private_bath"] or "Not confirmed"))}</td><td class="src">{src_links(",".join(dict.fromkeys([s for s in (h["queen_src"], h["private_bath_src"]) if s]))) if (h["queen_src"] or h["private_bath_src"]) else unv(h["flag"])}</td></tr>' for h in HOTELS["rows"])}
 </tbody></table>
 </div>
 <p class="muted">Resorts World's Hilton Deluxe room page described the bed configuration but not a private bathroom; that single cell is flagged rather than filled (<a class="flaglink" href="flagged.html#F-06">F-06</a> covers the pricing gap for the same property).</p>
