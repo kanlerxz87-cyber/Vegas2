@@ -276,3 +276,29 @@ No other session's files, data trees, workflows or open PRs were touched.
 - **Live verification:** the deployed root now serves the new overview page (`<title>Las Vegas, planned from official sources · Vegas2 planner</title>`) with the 24-distinction / $581 / 23-flag figures — confirmed by fetching `https://kanlerxz87-cyber.github.io/Vegas2/index.html?rev=76b22b8` from this sandbox. The root also serves `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `repo-review.html`, `sources.html` and `assets/site/style.css` from the same commit.
 - **Flagged items published:** F-01…F-23 on `flagged.html`; repository findings R-01…R-13 on `repo-review.html`. Unverified values are blank, and each flag carries its official source link.
 - **Not changed:** PRs #8 and #9 remain open; every prior session folder under `docs/` and every prior data tree is untouched. Their root-page versions are archived at `docs/session-legacy-root/main-0d3e73e/`.
+
+---
+
+---
+
+## Session 9b4f59cd — isolated verified planner subsite (current branch arena/9b4f59cd-vegas2)
+
+**Claim (2026-11-27):** Session `9b4f59cd` claims ONLY these paths; no other session's files will be edited:
+- `data/session-9b4f59cd/*.json` (new source data)
+- `docs/session-9b4f59cd/**` (generated output; no separate site/ tree)
+- `scripts/build_session_9b4f59cd.py`, `scripts/check_session_9b4f59cd.py` (new)
+- `docs/session-9b4f59cd/**` (generated Pages output)
+- This COORDINATION.md section (append-only)
+
+**Explicitly NOT claimed / not edited:** root `docs/*.html`, `docs/index.html`, `data/verified/*`, `data/trip/*`, `data/*.json`, `field-notes/`, `site/session-b29fc34e/`, `docs/session-*/` (other sessions), workflows. Session `c88d116c` (root-site verification scope, per its commit message) is respected — no root-site edits from this session. If a shared-file change is needed, it will be logged here as a request instead of edited.
+
+**Tasks:**
+| # | Task | Status | Owner | File scope |
+|---|------|--------|-------|------------|
+| 1 | Claim scope + audit existing site/validators | done | 9b4f59cd | COORDINATION.md |
+| 2 | Fresh official-source research (Michelin, hotels, activities, transit, social) | done | 9b4f59cd | data/session-9b4f59cd/ |
+| 3 | Build isolated subsite (executive summary, hotels, Michelin, activities, booking, questions, suggestions, flagged, sources) | done | 9b4f59cd | site/session-9b4f59cd/, docs/session-9b4f59cd/ |
+| 4 | Line-by-line verification (every row sourced; blanks flagged) | done | 9b4f59cd | scripts/check_session_9b4f59cd.py |
+| 5 | PR to main, merge, confirm Pages deploy, record result | in progress | 9b4f59cd | GitHub PR |
+
+**Verification rule:** A value appears only when an official source confirmed it. Otherwise blank + `Unverified` + flag ID linking to Flagged for Review. No inference, no hallucination. Dynamic 2027 hotel rates are re-checked live; if an official booking page cannot be retrieved, the price stays blank.
