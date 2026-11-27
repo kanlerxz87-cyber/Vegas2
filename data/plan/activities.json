@@ -25,7 +25,7 @@
       "hoursStatus": "v",
       "price2": "$47.00 daytime / $69.50 anytime / $120.00 Happy Half Hour",
       "priceNote": "Adult daytime $23.50pp, anytime $34.75pp, Happy Half Hour (21+) $60pp, plus taxes and fees. Two adults = $47 / $69.50 / $120 before taxes and fees.",
-      "transit": "Center Strip; walkable from Flamingo, Paris and Caesars. Monorail corridor. No transit time retrieved.",
+      "transit": "Center Strip at The LINQ. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
       "social": [
@@ -45,7 +45,7 @@
       "hoursStatus": "v",
       "price2": "",
       "priceNote": "Ticket price not captured from the official ticket page.",
-      "transit": "Downtown; about 1 mile from Fremont Street. No transit time retrieved.",
+      "transit": "Downtown, 300 Stewart Ave. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://themobmuseum.org/plan-your-visit/",
       "social": [],
@@ -62,7 +62,7 @@
       "hoursStatus": "v",
       "price2": "",
       "priceNote": "Ticket price not captured; the official site sells timed entry and notes that from Jan 1, 2027 arriving outside your slot may cost extra.",
-      "transit": "Downtown, north end of Las Vegas Blvd. No transit time retrieved.",
+      "transit": "Downtown, 770 Las Vegas Blvd N. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://neonmuseum.org/your-visit/",
       "social": [
@@ -138,7 +138,7 @@
     },
     {
       "name": "Omega Mart at AREA15",
-      "area": "Off-Strip (northwest of the Strip)",
+      "area": "Off-Strip (AREA15)",
       "hours": "",
       "hoursStatus": "u",
       "price2": "",

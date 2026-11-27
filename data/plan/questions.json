@@ -1,25 +1,185 @@
 {
   "intro": "Everything that must be answered before a booking decision can be made. Each item separates what we know from an official source, what is missing, and exactly how to close the gap. Nothing here asks you to re-enter data we already hold.",
   "rows": [
-    {"id": "Q-01", "q": "Is this a 3-night trip (Feb 15–18) or a 7-night trip (Feb 15–22) — or up to two weeks?", "status": "open", "known": "The brief names Feb 15–18, 2027 as preferred vacation time, asks for hotel costs on a 7-night basis, and allows 1–2 weeks. Those three statements conflict.", "missing": "One authoritative length.", "how": "Pick one: 3 nights / 7 nights / 10+ nights. This site prices 7 nights and keeps 3 nights as the preferred-date reference.", "impact": "Changes hotel total by roughly half, changes which restaurants fit, and changes whether a Downtown day and a Hoover Dam day both fit."},
-    {"id": "Q-02", "q": "What is the total budget for two adults, all-in (room + tax + resort fees + food + activities)?", "status": "open", "known": "Cheapest verified 7-night two-queen room is $581 before tax (Flamingo); most expensive verified figure is a prior-session $6,170.43 (Venetian, all-in).", "missing": "A budget ceiling.", "how": "State a number. The site can then flag which hotels/restaurants fit.", "impact": "Without it, a $581 room and a $6,170 suite look equally valid."},
-    {"id": "Q-03", "q": "Do you accept that Las Vegas has no subway or metro?", "status": "answered", "known": "There is no subway. Rail is the 7-station Las Vegas Monorail (Strip only); the rest is RTC bus/Deuce, walking, tram, rideshare or car. Verified on lvmonorail.com and rtcsnv.com.", "missing": "Whether that changes your '1 hour by subway or bus' criterion.", "how": "Read the Transit page; decide if bus/monorail/walking satisfies the rule.", "impact": "The whole hotel-proximity ranking rests on this."},
-    {"id": "Q-04", "q": "Does the 1-hour rule mean door-to-door, or time on the vehicle?", "status": "open", "known": "No official door-to-door journey time was retrieved for any venue pair. Monorail headways are 4–8 minutes; station hours are published.", "missing": "Definition of the limit, and per-pair journey times.", "how": "Define it, then query the RTC Trip Planner for the exact pairs on the exact dates.", "impact": "Door-to-door can double a 20-minute ride once waiting and walking are added."},
-    {"id": "Q-05", "q": "Do you want MICHELIN-starred restaurants only, or every MICHELIN-listed restaurant?", "status": "open", "known": "4 starred (5 stars), 3 Bib Gourmand, 17 Recommended = 24 total in the 2026 guide.", "missing": "A preference.", "how": "Choose a path on the Suggestions page.", "impact": "Determines whether hotel ranking weights 2 resorts (starred only) or 8 (all listed)."},
-    {"id": "Q-06", "q": "What is the per-meal budget for two?", "status": "open", "known": "Exact published two-person totals exist for Partage ($260 / $320 / $420). Guy Savoy publishes à-la-carte items $60–$290. Other menus were not priced on official pages.", "missing": "A ceiling per meal.", "how": "Set a range; then request menus/prices directly from the venues that do not publish them.", "impact": "Starred rooms typically run several hundred dollars per couple before wine."},
-    {"id": "Q-07", "q": "Is one king bed acceptable, or must it be two queens?", "status": "open", "known": "The brief says queen-sized or bigger, which a king satisfies. Two-queen rooms cost more at South Point (+$70/week) and Flamingo (+$63/week) but the same as a king at Paris.", "missing": "Whether you want two beds.", "how": "Confirm bed preference.", "impact": "Up to ~10% on the room."},
-    {"id": "Q-08", "q": "Will a 2026 MICHELIN distinction still apply in February 2027?", "status": "open", "known": "The 2026 Southwest guide is the current one; 2027 awards are not announced. Restaurants can lose or gain stars.", "missing": "The 2027 guide.", "how": "Recheck visitlasvegas.com and guide.michelin.com once the 2027 selection publishes.", "impact": "A hotel chosen for a specific star could lose that reason."},
-    {"id": "Q-09", "q": "Do you need a private bathroom attached to the room, or a private bathroom anywhere?", "status": "answered", "known": "Every room captured (Venetian suites, Caesars Julius, Paris Bordeaux, Flamingo, South Point) is described with an in-room bathroom.", "missing": "Nothing for those rooms; other hotels' room pages were not captured.", "how": "n/a — attached bathrooms confirmed for the priced rooms.", "impact": "Removes a filtering requirement."},
-    {"id": "Q-10", "q": "Do you need a pool, spa, gym or view?", "status": "open", "known": "Caesars Palace lists a full-service spa, pools and fitness centre; Flamingo lists two seasonal pools and a spa; South Point lists free valet and a fitness centre in the resort fee.", "missing": "Which amenities actually matter to you.", "how": "Name the top three.", "impact": "Feb pool weather in Las Vegas is cool; a pool may not be usable."},
-    {"id": "Q-11", "q": "Are you willing to rent a car or use rideshare for out-of-corridor activities?", "status": "open", "known": "Hoover Dam, Red Rock Canyon and Valley of Fire have no verified public-transit option; public transit in the valley is bus-only outside the Monorail.", "missing": "A yes/no.", "how": "Decide before choosing a hotel — South Point's free parking and south location favour a car; a center-Strip hotel favours walking.", "impact": "Adds $40–$100+/day in car, insurance and parking, or rideshare fares."},
-    {"id": "Q-12", "q": "How flexible are your dates inside Feb 15 – Mar 23, 2027?", "status": "open", "known": "South Point quoted $989 for Feb 15–22 vs $1,049 for Feb 22–Mar 1, and had no rooms at all for Mar 15–22 because Mar 20 is sold out.", "missing": "How much you can move.", "how": "Give a range of ±3 days.", "impact": "Slight price differences and real availability risk in March."},
-    {"id": "Q-13", "q": "Is Feb 15, 2027 (Washington's Birthday / Presidents' Day) a problem?", "status": "answered", "known": "Feb 15, 2027 is a federal holiday (OPM calendar), so the preferred check-in is a holiday Monday — higher demand and a busier Strip.", "missing": "Whether you want to avoid it.", "how": "Consider checking in Feb 16 or Feb 17 instead.", "impact": "Holiday weekends raise rates and restaurant demand."},
-    {"id": "Q-14", "q": "Do you have loyalty status (Caesars Rewards, MGM Rewards, Wynn Rewards, Venetian Rewards)?", "status": "open", "known": "Caesars Rewards: 15% off this booking for new members; Diamond/Seven Stars free High Roller; resort fees waived for Diamond/Seven Stars. Venetian Rewards: up to 5% member rate. MGM Rewards Gold+ gets priority dining reservations.", "missing": "Your status.", "how": "Say which programmes you hold.", "impact": "Resort-fee waivers alone can be worth $400+ on a week."},
-    {"id": "Q-15", "q": "Do you want reservations pre-booked, or a list to book yourself?", "status": "open", "known": "é by José Andrés releases tickets about three months ahead; starred rooms need reservations; Bib/Recommended are generally walk-in friendly per the official FAQ.", "missing": "Whether we should hold placeholders.", "how": "Choose 'book now' or 'list only'.", "impact": "February is high season; the small rooms (é, Kabuto, Kame) sell out."},
-    {"id": "Q-16", "q": "Are there dietary restrictions or dress-code constraints?", "status": "open", "known": "Partage cannot accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. Joël Robuchon requires business formal; Guy Savoy is formal; Wing Lei business casual and no children under 5.", "missing": "Restrictions and wardrobe plans.", "how": "List restrictions.", "impact": "Can eliminate otherwise strong picks."},
-    {"id": "Q-17", "q": "How much walking per day is acceptable?", "status": "open", "known": "Strip resorts are large; the Venetian suite collection alone spans two towers. No official walking distances were captured.", "missing": "A comfort limit.", "how": "Estimate blocks/minutes per day.", "impact": "Decides whether a center-Strip location beats a cheaper off-Strip one."},
-    {"id": "Q-18", "q": "Do you need cancellation flexibility?", "status": "open", "known": "Caesars advertises free 48-hour cancellation with terms not fully retrieved; South Point rates require a deposit; advance-purchase rates are typically restrictive.", "missing": "How firm your plans are.", "how": "Confirm the cancellation window on the exact rate before paying.", "impact": "Cheapest rates are usually the least flexible."},
-    {"id": "Q-19", "q": "What is the arrival airport and date?", "status": "open", "known": "Nothing was researched for flights — out of scope so far.", "missing": "Airport, arrival time, airline.", "how": "Provide flight details or ask for a flight search.", "impact": "Late arrivals change the first night's plan and airport-transfer cost."},
-    {"id": "Q-20", "q": "Should the site show all-in totals including tax?", "status": "open", "known": "No booking engine published the tax amount; every rate was 'excluding taxes'.", "missing": "The applicable tax rate for these bookings.", "how": "Either fetch the tax line from a booking checkout, or use the applicable Clark County room-tax rate from an official Nevada source.", "impact": "All totals on this site currently understate the final bill."}
+    {
+      "id": "Q-01",
+      "q": "Is this a 3-night trip (Feb 15–18) or a 7-night trip (Feb 15–22) — or up to two weeks?",
+      "status": "open",
+      "known": "The brief names Feb 15–18, 2027 as preferred vacation time, asks for hotel costs on a 7-night basis, and allows 1–2 weeks. Those three statements conflict.",
+      "missing": "One authoritative length.",
+      "how": "Pick one: 3 nights / 7 nights / 10+ nights. This site prices 7 nights and keeps 3 nights as the preferred-date reference.",
+      "impact": "Changes hotel total by roughly half, changes which restaurants fit, and changes whether a Downtown day and a Hoover Dam day both fit."
+    },
+    {
+      "id": "Q-02",
+      "q": "What is the total budget for two adults, all-in (room + tax + resort fees + food + activities)?",
+      "status": "open",
+      "known": "Cheapest verified 7-night two-queen room is $581 before tax (Flamingo); most expensive verified figure is a prior-session $6,170.43 (Venetian, all-in).",
+      "missing": "A budget ceiling.",
+      "how": "State a number. The site can then flag which hotels/restaurants fit.",
+      "impact": "Without it, a $581 room and a $6,170 suite look equally valid."
+    },
+    {
+      "id": "Q-03",
+      "q": "Do you accept that Las Vegas has no subway or metro?",
+      "status": "answered",
+      "known": "There is no subway. Rail is the 7-station Las Vegas Monorail (Strip only); the rest is RTC bus/Deuce, walking, tram, rideshare or car. Verified on lvmonorail.com and rtcsnv.com.",
+      "missing": "Whether that changes your '1 hour by subway or bus' criterion.",
+      "how": "Read the Transit page; decide if bus/monorail/walking satisfies the rule.",
+      "impact": "The whole hotel-proximity ranking rests on this."
+    },
+    {
+      "id": "Q-04",
+      "q": "Does the 1-hour rule mean door-to-door, or time on the vehicle?",
+      "status": "open",
+      "known": "No official door-to-door journey time was retrieved for any venue pair. Monorail headways are 4–8 minutes; station hours are published.",
+      "missing": "Definition of the limit, and per-pair journey times.",
+      "how": "Define it, then query the RTC Trip Planner for the exact pairs on the exact dates.",
+      "impact": "Door-to-door can double a 20-minute ride once waiting and walking are added."
+    },
+    {
+      "id": "Q-05",
+      "q": "Do you want MICHELIN-starred restaurants only, or every MICHELIN-listed restaurant?",
+      "status": "open",
+      "known": "4 starred (5 stars), 3 Bib Gourmand, 17 Recommended = 24 total in the 2026 guide.",
+      "missing": "A preference.",
+      "how": "Choose a path on the Suggestions page.",
+      "impact": "Determines whether hotel ranking weights 2 resorts (starred only) or 8 (all listed)."
+    },
+    {
+      "id": "Q-06",
+      "q": "What is the per-meal budget for two?",
+      "status": "open",
+      "known": "Exact published two-person totals exist for Partage ($260 / $320 / $420). Guy Savoy publishes à-la-carte items $60–$290. Other menus were not priced on official pages.",
+      "missing": "A ceiling per meal.",
+      "how": "Set a range; then request menus/prices directly from the venues that do not publish them.",
+      "impact": "Starred rooms typically run several hundred dollars per couple before wine."
+    },
+    {
+      "id": "Q-07",
+      "q": "Is one king bed acceptable, or must it be two queens?",
+      "status": "open",
+      "known": "The brief says queen-sized or bigger, which a king satisfies. Verified bed-price differences: South Point two queens $989 vs king $919 (+$70 for the week); Paris two queens $1,421 vs king $1,393 (+$28). Flamingo's two-queen rate is $83/night; its king rate was not captured.",
+      "missing": "Whether you want two beds.",
+      "how": "Confirm bed preference.",
+      "impact": "About 7% on the room at South Point, about 2% at Paris. Bed choice does not change the total much for two adults."
+    },
+    {
+      "id": "Q-08",
+      "q": "Will a 2026 MICHELIN distinction still apply in February 2027?",
+      "status": "open",
+      "known": "The 2026 Southwest guide is the current one; 2027 awards are not announced. Restaurants can lose or gain stars.",
+      "missing": "The 2027 guide.",
+      "how": "Recheck visitlasvegas.com and guide.michelin.com once the 2027 selection publishes.",
+      "impact": "A hotel chosen for a specific star could lose that reason."
+    },
+    {
+      "id": "Q-09",
+      "q": "Do you need a private bathroom attached to the room, or a private bathroom anywhere?",
+      "status": "answered",
+      "known": "Every room captured (Venetian suites, Caesars Julius, Paris Bordeaux, Flamingo, South Point) is described with an in-room bathroom.",
+      "missing": "Nothing for those rooms; other hotels' room pages were not captured.",
+      "how": "n/a — attached bathrooms confirmed for the priced rooms.",
+      "impact": "Removes a filtering requirement."
+    },
+    {
+      "id": "Q-10",
+      "q": "Do you need a pool, spa, gym or view?",
+      "status": "open",
+      "known": "Caesars Palace lists a full-service spa, pools and fitness centre; Flamingo lists two seasonal pools and a spa; South Point lists free valet and a fitness centre in the resort fee.",
+      "missing": "Which amenities actually matter to you.",
+      "how": "Name the top three.",
+      "impact": "Feb pool weather in Las Vegas is cool; a pool may not be usable."
+    },
+    {
+      "id": "Q-11",
+      "q": "Are you willing to rent a car or use rideshare for out-of-corridor activities?",
+      "status": "open",
+      "known": "Hoover Dam, Red Rock Canyon and Valley of Fire have no verified public-transit option; public transit in the valley is bus-only outside the Monorail.",
+      "missing": "A yes/no.",
+      "how": "Decide before choosing a hotel — South Point's free parking and south location favour a car; a center-Strip hotel favours walking.",
+      "impact": "Adds $40–$100+/day in car, insurance and parking, or rideshare fares."
+    },
+    {
+      "id": "Q-12",
+      "q": "How flexible are your dates inside Feb 15 – Mar 23, 2027?",
+      "status": "open",
+      "known": "South Point quoted $989 for Feb 15–22 vs $1,049 for Feb 22–Mar 1, and had no rooms at all for Mar 15–22 because Mar 20 is sold out.",
+      "missing": "How much you can move.",
+      "how": "Give a range of ±3 days.",
+      "impact": "Slight price differences and real availability risk in March."
+    },
+    {
+      "id": "Q-13",
+      "q": "Is Feb 15, 2027 (Washington's Birthday / Presidents' Day) a problem?",
+      "status": "answered",
+      "known": "Feb 15, 2027 is a federal holiday (OPM calendar), so the preferred check-in is a holiday Monday — higher demand and a busier Strip.",
+      "missing": "Whether you want to avoid it.",
+      "how": "Consider checking in Feb 16 or Feb 17 instead.",
+      "impact": "Holiday weekends raise rates and restaurant demand."
+    },
+    {
+      "id": "Q-14",
+      "q": "Do you have loyalty status (Caesars Rewards, MGM Rewards, Wynn Rewards, Venetian Rewards)?",
+      "status": "open",
+      "known": "Caesars Rewards: 15% off this booking for new members; Diamond/Seven Stars free High Roller; resort fees waived for Diamond/Seven Stars. Venetian Rewards: up to 5% member rate. MGM Rewards Gold+ gets priority dining reservations.",
+      "missing": "Your status.",
+      "how": "Say which programmes you hold.",
+      "impact": "Resort-fee waivers alone can be worth $400+ on a week."
+    },
+    {
+      "id": "Q-15",
+      "q": "Do you want reservations pre-booked, or a list to book yourself?",
+      "status": "open",
+      "known": "é by José Andrés releases tickets about three months ahead; starred rooms need reservations; Bib/Recommended are generally walk-in friendly per the official FAQ.",
+      "missing": "Whether we should hold placeholders.",
+      "how": "Choose 'book now' or 'list only'.",
+      "impact": "February is high season; the small rooms (é, Kabuto, Kame) sell out."
+    },
+    {
+      "id": "Q-16",
+      "q": "Are there dietary restrictions or dress-code constraints?",
+      "status": "open",
+      "known": "Partage cannot accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. Joël Robuchon requires business formal; Guy Savoy is formal; Wing Lei business casual and no children under 5.",
+      "missing": "Restrictions and wardrobe plans.",
+      "how": "List restrictions.",
+      "impact": "Can eliminate otherwise strong picks."
+    },
+    {
+      "id": "Q-17",
+      "q": "How much walking per day is acceptable?",
+      "status": "open",
+      "known": "Strip resorts are large; the Venetian suite collection alone spans two towers. No official walking distances were captured.",
+      "missing": "A comfort limit.",
+      "how": "Estimate blocks/minutes per day.",
+      "impact": "Decides whether a center-Strip location beats a cheaper off-Strip one."
+    },
+    {
+      "id": "Q-18",
+      "q": "Do you need cancellation flexibility?",
+      "status": "open",
+      "known": "Caesars advertises free 48-hour cancellation with terms not fully retrieved; South Point rates require a deposit; advance-purchase rates are typically restrictive.",
+      "missing": "How firm your plans are.",
+      "how": "Confirm the cancellation window on the exact rate before paying.",
+      "impact": "Cheapest rates are usually the least flexible."
+    },
+    {
+      "id": "Q-19",
+      "q": "What is the arrival airport and date?",
+      "status": "open",
+      "known": "Nothing was researched for flights — out of scope so far.",
+      "missing": "Airport, arrival time, airline.",
+      "how": "Provide flight details or ask for a flight search.",
+      "impact": "Late arrivals change the first night's plan and airport-transfer cost."
+    },
+    {
+      "id": "Q-20",
+      "q": "Should the site show all-in totals including tax?",
+      "status": "open",
+      "known": "No booking engine published the tax amount; every rate was 'excluding taxes'.",
+      "missing": "The applicable tax rate for these bookings.",
+      "how": "Either fetch the tax line from a booking checkout, or use the applicable Clark County room-tax rate from an official Nevada source.",
+      "impact": "All totals on this site currently understate the final bill."
+    }
   ]
 }
