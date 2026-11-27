@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repository review · Vegas2 planner</title>
+<meta name="description" content="What was in the repository when this session started, what was wrong with it, and exactly what changed.">
+<link rel="stylesheet" href="assets/site/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> Vegas2 <span class="small" style="color:#66707d;font-weight:500">Las Vegas · Feb–Mar 2027</span></a>
+    <span class="spacer"></span>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="nav" id="navLinks" aria-label="Main"><a href="index.html">Overview</a><a href="restaurants.html">MICHELIN</a><a href="hotels.html">Hotels</a><a href="booking.html">Prices &amp; dates</a><a href="activities.html">Activities</a><a href="transit.html">Transit</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged</a><a href="repo-review.html" class="active">Repo review</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p class="crumb"><a href="index.html" target="_blank" rel="noopener noreferrer">Overview</a> / Repo review</p>
+<h1>Repository review</h1>
+<p class="lede">What was in the repository when this session started, what was wrong with it, and exactly what changed.</p>
+
+<div class="note">
+  <p>Line-by-line review of the repository as inherited (commit 3386a21), plus what this session changed. Findings are grouped by kind; nothing is asserted without a file path or an API result.</p>
+</div>
+<div class="kpis"><div class="kpi"><span class="n">78</span><span class="l">HTML pages in repo</span></div><div class="kpi"><span class="n">7</span><span class="l">Competing &#x27;final&#x27; planners</span></div><div class="kpi"><span class="n">4</span><span class="l">Duplicate data trees</span></div><div class="kpi"><span class="n">4</span><span class="l">CI workflows</span></div><div class="kpi"><span class="n">2</span><span class="l">Open PRs from old sessions</span></div><div class="kpi"><span class="n">legacy · main · /</span><span class="l">Pages build type (API)</span></div></div>
+
+<h2>What the previous work got right</h2>
+<ul class="clean"><li>Every previous session left a written record: COORDINATION.md is 18 KB and tracks claims, sources and handoffs across seven sessions.</li><li>Data files are structured JSON with explicit null/blank values rather than invented numbers — the right instinct for this brief.</li><li>The 24-row MICHELIN list in prior sessions matches the official Las Vegas MICHELIN page exactly (4 starred / 3 Bib / 17 Recommended).</li><li>Prior sessions correctly identified the two structural problems: no subway in Las Vegas, and the missing transit-time evidence.</li></ul>
+
+<h2>Findings</h2>
+<div class="table-wrap"><table class="stack"><caption>'Fixed' = changed in this session. 'Documented' = deliberately left as historical record.</caption><thead><tr><th class="">ID</th><th class="">Severity</th><th class="">Finding</th><th class="">Evidence (paths)</th><th class="">Action taken</th><th class="">Status</th></tr></thead><tbody><tr><td data-label="ID"><span class="qid">R-01</span></td><td data-label="Severity"><span class="badge b-no">HIGH</span></td><td data-label="Finding"><strong>Seven parallel sites all claimed to be the planner</strong></td><td data-label="Evidence (paths)"><span class="small">Root *.html (7 pages), docs/*.html (9 pages), docs/session-059c3126/, docs/session-2e5e3452/, docs/session-36cc5108/, docs/session-b29fc34e/, docs/session-d33551df/, docs/planner-v1/, legacy-dashboard/, field-notes/, site/*.html, site/session-b29fc34e/.</span></td><td data-label="Action taken">Consolidated to one canonical root site (this session). All prior sites preserved untouched under docs/ and in git history. README now states which site is canonical.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-02</span></td><td data-label="Severity"><span class="badge b-no">HIGH</span></td><td data-label="Finding"><strong>Pages serves the repository root, not docs/, yet most prior work lives in docs/</strong></td><td data-label="Evidence (paths)"><span class="small">GET /repos/.../pages → {build_type: &#x27;legacy&#x27;, source: {branch: &#x27;main&#x27;, path: &#x27;/&#x27;}}. Prior READMEs described docs/ as the published site.</span></td><td data-label="Action taken">Root site rebuilt as the canonical, mobile-first planner, so the URL people actually open is the good one. docs/ remains reachable at /docs/ and /&lt;session&gt;/ paths.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-03</span></td><td data-label="Severity"><span class="badge b-part">MEDIUM</span></td><td data-label="Finding"><strong>README is four READMEs stacked, with contradictory instructions and a factual error</strong></td><td data-label="Evidence (paths)"><span class="small">README.md repeats &#x27;Rebuild&#x27; instructions for four different builders and says &#x27;three starred restaurants&#x27; (official list: four).</span></td><td data-label="Action taken">README rewritten as one document with one build command; the historical text is preserved in the Repo review page and git history. Error logged as F-19.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-04</span></td><td data-label="Severity"><span class="badge b-part">MEDIUM</span></td><td data-label="Finding"><strong>Four overlapping data trees with duplicated files</strong></td><td data-label="Evidence (paths)"><span class="small">data/*.json (14), data/verified/*.json (9), data/trip/*.json (9), field-notes/data/*.json (3); 2 files are byte-identical duplicates across trees.</span></td><td data-label="Action taken">New canonical tree data/plan/ (9 files) used by the new build. Old trees left read-only as record.</td><td data-label="Status"><span class="badge b-list">documented</span></td></tr><tr><td data-label="ID"><span class="qid">R-05</span></td><td data-label="Severity"><span class="badge b-part">MEDIUM</span></td><td data-label="Finding"><strong>Four CI workflows, three of which rebuild only a subtask</strong></td><td data-label="Evidence (paths)"><span class="small">.github/workflows/pages.yml (uploads docs/), pages-check.yml (rebuilds session-059c3126), validate.yml (session b29fc34e), validate-field-notes.yml (session 2e5e3452).</span></td><td data-label="Action taken">Added .github/workflows/validate-plan.yml for the canonical site; existing workflows left intact so old outputs do not go stale.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-06</span></td><td data-label="Severity"><span class="badge b-list">LOW</span></td><td data-label="Finding"><strong>Legacy dashboard duplicated at the root and in legacy-dashboard/</strong></td><td data-label="Evidence (paths)"><span class="small">legacy-dashboard/{index.html,data.js,app.js,styles.css} duplicates the first session&#x27;s dashboard, which was also the v1 root pages.</span></td><td data-label="Action taken">Kept as-is (historical). Not linked from the new site.</td><td data-label="Status"><span class="badge b-list">documented</span></td></tr><tr><td data-label="ID"><span class="qid">R-07</span></td><td data-label="Severity"><span class="badge b-list">LOW</span></td><td data-label="Finding"><strong>Prior root pages used emoji icons and inline nav duplicated per file</strong></td><td data-label="Evidence (paths)"><span class="small">Every previous root page carried its own &lt;header&gt; block with a hard-coded nav, and an emoji brand mark.</span></td><td data-label="Action taken">Replaced by a single generated layout from scripts/build_plan.py with a shared nav and accessible skip link.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-08</span></td><td data-label="Severity"><span class="badge b-part">MEDIUM</span></td><td data-label="Finding"><strong>Unverified values were sometimes presented as facts in prose</strong></td><td data-label="Evidence (paths)"><span class="small">The inherited hotels.html stated &#x27;roughly 15–20 minutes by car&#x27; travel times and a blanket &#x27;all 24 restaurants reachable&#x27; claim without a transit source; this site&#x27;s rule forbids that.</span></td><td data-label="Action taken">Travel times removed or explicitly marked unverified. Ranking now uses a measurable, sourced measure (restaurants inside the same resort).</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-09</span></td><td data-label="Severity"><span class="badge b-list">LOW</span></td><td data-label="Finding"><strong>No automated link or source check existed for the root site</strong></td><td data-label="Evidence (paths)"><span class="small">Prior checkers (scripts/check_site.py, check_session_b29fc34e.py) cover only docs/ builds.</span></td><td data-label="Action taken">scripts/check_plan.py validates every page, internal link, required source on every row, award counts (4/3/17) and blank-value discipline.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-10</span></td><td data-label="Severity"><span class="badge b-list">LOW</span></td><td data-label="Finding"><strong>Open PRs #8 and #9 were never merged or closed</strong></td><td data-label="Evidence (paths)"><span class="small">GitHub PR list shows both OPEN since 2026-11-26.</span></td><td data-label="Action taken">Left open (outside this session&#x27;s scope); recorded in COORDINATION.md and F-21.</td><td data-label="Status"><span class="badge b-list">documented</span></td></tr><tr><td data-label="ID"><span class="qid">R-11</span></td><td data-label="Severity"><span class="badge b-list">LOW</span></td><td data-label="Finding"><strong>Coordination board&#x27;s task table had drifted from reality</strong></td><td data-label="Evidence (paths)"><span class="small">Previous session marked &#x27;verify table rows line-by-line&#x27; done while its own flag list recorded most rows unverified.</span></td><td data-label="Action taken">This session split &#x27;verified&#x27; from &#x27;done&#x27; and records per-value capture dates.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr><tr><td data-label="ID"><span class="qid">R-12</span></td><td data-label="Severity"><span class="badge b-list">LOW</span></td><td data-label="Finding"><strong>Mobile tables in prior versions required horizontal scrolling</strong></td><td data-label="Evidence (paths)"><span class="small">Prior tables used overflow-x on 8+ columns with no stacking behaviour at narrow widths.</span></td><td data-label="Action taken">New tables stack into labelled cards below 640 px (CSS data-label pattern), verified by the checker&#x27;s markup test.</td><td data-label="Status"><span class="badge b-ok">fixed</span></td></tr></tbody></table></div>
+
+<h2>What this session changed</h2>
+<div class="grid two">
+  <div class="card"><h3>Published</h3>
+    <ul class="clean">
+      <li>New canonical root site: 11 pages generated from <code>data/plan/*.json</code> by <code>scripts/build_plan.py</code>.</li>
+      <li>Mobile-first stylesheet at <code>assets/site/style.css</code> — tables stack into labelled cards under 640 px.</li>
+      <li>Verification gate <code>scripts/check_plan.py</code> and CI workflow <code>.github/workflows/validate-plan.yml</code>.</li>
+      <li>README rewritten to one document with one build command.</li>
+    </ul>
+  </div>
+  <div class="card"><h3>Preserved</h3>
+    <ul class="clean">
+      <li>All seven prior sites remain under <code>docs/</code> and in git history.</li>
+      <li>The previous root pages are archived at <code>docs/session-legacy-root/</code>.</li>
+      <li>Every prior data tree (<code>data/</code>, <code>data/verified/</code>, <code>data/trip/</code>, <code>field-notes/data/</code>) is untouched.</li>
+      <li>Open PRs #8 and #9 were left alone.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Remaining repository risks</h2>
+<ul class="clean">
+  <li>Two publishing paths are configured (legacy root source and a <code>docs/</code> artifact workflow). Until one is retired, both must stay buildable (F-20).</li>
+  <li>Stale duplicates are load-bearing documentation for past sessions — deleting them would erase provenance, so they stay.</li>
+  <li>Two open PRs from older sessions may reintroduce conflicting pages if merged without review (F-21).</li>
+</ul>
+
+</main>
+<footer class="site">
+  <p><strong>Vegas2 planner.</strong> Built 2026-11-27. Two adults, one room, Las Vegas, Feb 15 – Mar 23, 2027.
+  Every value shown is tied to an official source captured on the date stated; anything unconfirmed is left blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Prices are snapshots, not offers, and exclude taxes unless stated.</p>
+  <p>Source register: <a href="sources.html">Sources</a> · Repository review: <a href="repo-review.html">Repo review</a> · Coordination: <a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md</a></p>
+</footer>
+<script>
+  var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');
+  if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+</script>
+</body>
+</html>

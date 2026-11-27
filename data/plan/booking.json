@@ -1,0 +1,185 @@
+{
+  "asOf": "2026-11-27",
+  "costBasis": "7 nights, 1 room, 2 adults, USD. All figures exclude taxes unless explicitly stated, because every captured booking engine displayed rates 'excluding taxes' without publishing the tax amount.",
+  "windows": [
+    {
+      "id": "A",
+      "label": "Preferred",
+      "checkIn": "Mon Feb 15, 2027",
+      "checkOut": "Mon Feb 22, 2027",
+      "nights": 7,
+      "note": "Covers the brief's preferred Feb 15–18 dates and extends to a full week."
+    },
+    {
+      "id": "B",
+      "label": "Same length, later week",
+      "checkIn": "Mon Feb 22, 2027",
+      "checkOut": "Mon Mar 1, 2027",
+      "nights": 7,
+      "note": "Used only to test whether shifting a week changes price."
+    },
+    {
+      "id": "C",
+      "label": "Mid-March",
+      "checkIn": "Mon Mar 15, 2027",
+      "checkOut": "Mon Mar 22, 2027",
+      "nights": 7,
+      "note": "Test window inside the Feb 15–Mar 23 range."
+    }
+  ],
+  "quotes": [
+    {
+      "window": "A",
+      "hotel": "Flamingo — Flamingo Room | 2 Queens",
+      "nightly": "$83",
+      "total": "$581",
+      "feeNote": "Includes $50/day resort fee; taxes excluded",
+      "status": "v",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+      "window": "A",
+      "hotel": "Flamingo — Room Type Assigned on Arrival",
+      "nightly": "$74",
+      "total": "$518",
+      "feeNote": "Includes $50/day resort fee; taxes excluded. Bed type NOT guaranteed",
+      "status": "v",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+      "window": "A",
+      "hotel": "South Point — Premium 2 Queens",
+      "nightly": "$141",
+      "total": "$989",
+      "feeNote": "Including all fees; taxes excluded",
+      "status": "v",
+      "source": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+      "window": "A",
+      "hotel": "South Point — Premium King",
+      "nightly": "$131",
+      "total": "$919",
+      "feeNote": "Including all fees; taxes excluded",
+      "status": "v",
+      "source": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+      "window": "A",
+      "hotel": "Paris Las Vegas — Bordeaux Room | 2 Queens",
+      "nightly": "$203",
+      "total": "$1,421",
+      "feeNote": "Includes $55/day resort fee; taxes excluded",
+      "status": "v",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=plv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+      "window": "A",
+      "hotel": "Caesars Palace — Julius Deluxe | 1 King",
+      "nightly": "$214",
+      "total": "$1,498",
+      "feeNote": "Includes $55/day resort fee; taxes excluded",
+      "status": "v",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
+      "window": "B",
+      "hotel": "South Point — Premium 2 Queens",
+      "nightly": "$150",
+      "total": "$1,049",
+      "feeNote": "Including all fees; taxes excluded",
+      "status": "v",
+      "source": "https://be.synxis.com/?adult=2&arrive=2027-02-22&chain=6903&child=0&currency=USD&depart=2027-03-01&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+      "window": "B",
+      "hotel": "South Point — Premium King",
+      "nightly": "$140",
+      "total": "$979",
+      "feeNote": "Including all fees; taxes excluded",
+      "status": "v",
+      "source": "https://be.synxis.com/?adult=2&arrive=2027-02-22&chain=6903&child=0&currency=USD&depart=2027-03-01&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+      "window": "C",
+      "hotel": "South Point — any room",
+      "nightly": "",
+      "total": "",
+      "feeNote": "Engine returned 'We do not have available rooms on March 20, 2027' for this window",
+      "status": "u",
+      "source": "https://be.synxis.com/?adult=2&arrive=2027-03-15&chain=6903&child=0&currency=USD&depart=2027-03-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+      "window": "A",
+      "hotel": "The Venetian — suite",
+      "nightly": "",
+      "total": "",
+      "feeNote": "Official calendar served '$XXX' (no rate) for every February 2027 date. A prior session logged $6,170.43 all-in for 7 nights but it could not be reproduced.",
+      "status": "p",
+      "source": "https://www.venetianlasvegas.com/booking?adults[]=2&arrival_date=2027-02-15&children[]=0&departure_date=2027-02-22"
+    },
+    {
+      "window": "A",
+      "hotel": "Wynn — Resort King or 2 Queens",
+      "nightly": "",
+      "total": "",
+      "feeNote": "Wynn engine returned to its search form; no dated total served. Fee disclosure itself was verified: $55/day plus tax.",
+      "status": "u",
+      "source": "https://reservations.wynnlasvegas.com/ibe/index.aspx?hotelID=13763&langID=1"
+    },
+    {
+      "window": "A",
+      "hotel": "MGM Grand / Cosmopolitan / Bellagio / ARIA",
+      "nightly": "",
+      "total": "",
+      "feeNote": "MGM Resorts booking platform did not load in the fetch tool",
+      "status": "u",
+      "source": "https://www.mgmresorts.com/en/booking.html"
+    }
+  ],
+  "cheapest": {
+    "verdict": "Flamingo Las Vegas, Flamingo Room | 2 Queens: $581 for 7 nights (Feb 15–22, 2027), including a $50/day resort fee, before taxes.",
+    "runnerUp": "South Point, Premium 2 Queens: $989 for the same seven nights including all fees, before taxes.",
+    "delta": "$408 more at South Point for the week. Flamingo is center Strip; South Point is at the south end of the Las Vegas Strip.",
+    "caveat": "These are snapshot rates from one capture. A rate is not a reservation, and taxes are excluded."
+  },
+  "dateVerdict": {
+    "statement": "Among the windows actually captured, Feb 15–22, 2027 is cheaper than the following week at the only hotel that quoted both: South Point charges $989 vs $1,049 for a two-queen room (+$60, about 6%). The March 15–22 window could not be quoted at all because March 20, 2027 shows no availability.",
+    "cannotSay": "This is not proof that Feb 15–22 is the cheapest week in the whole window. Only one property produced comparable quotes across windows, and no historical or forward rate series was retrieved. Some March dates are already sold out, which is itself a reason not to wait."
+  },
+  "bookTiming": {
+    "statement": "No official source publishes an optimal booking lead time. What is verified: Caesars Entertainment advertises 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance' and free cancellation within 48 hours. Booking now (≈80 days before Feb 15, 2027) already satisfies the 30-day threshold.",
+    "verifiedPolicies": [
+      {
+        "fact": "Advanced Purchase Savings: up to 30% off for stays 30+ days in advance (terms apply).",
+        "source": "https://www.caesars.com/caesars-palace"
+      },
+      {
+        "fact": "Free 48-hour cancellation advertised under 'Why Book With Us' (asterisk terms not retrieved).",
+        "source": "https://www.caesars.com/caesars-palace"
+      },
+      {
+        "fact": "Caesars Palace resort fee disclosure: $62.30 with tax ($54.95 + $7.35); deposit $100/day; check-in 4 PM, check-out 11 AM.",
+        "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
+      },
+      {
+        "fact": "Flamingo resort fee disclosure: $56.63 with tax ($49.95 + $6.68); deposit $50/day.",
+        "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1"
+      },
+      {
+        "fact": "Wynn: a daily resort fee of $55 plus tax is added per room night.",
+        "source": "https://reservations.wynnlasvegas.com/ibe/index.aspx?hotelID=13763&langID=1"
+      },
+      {
+        "fact": "South Point booking engine: Prevailing Rates include a $29.20 daily resort fee; taxes not included.",
+        "source": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+      },
+      {
+        "fact": "é by José Andrés releases tickets about three months in advance (logged by a prior session).",
+        "source": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html"
+      }
+    ],
+    "action": "Book a refundable/free-cancellation two-queen room now as a hedge, then recheck the same dated engines weekly and rebook if the rate falls. Cancellation terms must be read on the booking page — the 48-hour term was not fully retrieved."
+  },
+  "taxNote": "Nevada/Clark County room tax is applied on top of every figure above. No official tax rate was captured for these bookings, so no tax-inclusive number is asserted anywhere on this site."
+}
