@@ -1,124 +1,92 @@
 {
  "as_of": "2026-11-27",
- "method": "Every finding below was read directly from the checked-out repository or the GitHub API on 2026-11-27; each row gives the file, the line or command, and what it shows. No finding is inferred.",
- "headline": "The repository is not broken \u2014 all 5 published session sites and the two root builds resolve their internal links (0 broken local refs across docs/**/*.html and 7 root pages). The problems are duplication, drift between published pages, and a deploy configuration that serves unchecked files.",
+ "method": "Every finding was produced by a command run against the checked-out repository or the GitHub API on 2026-11-27, after rebasing onto main at 76b22b8. Line numbers refer to that commit. Findings that could no longer be reproduced were removed rather than carried forward.",
+ "headline": "Re-audited after the root dashboard was replaced by the integration session (PR #22). The four line-level defects this reviewer originally logged against the old root index.html — conflicting hotel prices, an unsourced '~15–20 minute' travel claim, a wrong MICHELIN reveal date and a '3–4 nights' span for a 3-night window — no longer exist in the tree, so they have been retired rather than repeated. What remains are structural issues that still hold today.",
  "findings": [
   {
    "id": "R-01",
    "severity": "high",
-   "title": "Published pages contradict each other on hotel pricing",
-   "evidence": "The Pages root page index.html line 58 states 'Caesars Palace $226/nt + tax ($1,582/7nts before tax) \u2022 The Venetian $6,170.43 all-in for 7 nts'. Today's live check of the same official engines for the same dates returns Caesars run-of-house at $209/night (\u2192 $1,463) and The Venetian returning no price at all. Two different figures for the same hotel and week are live at once, and the Venetian figure cannot be reproduced today.",
-   "impact": "Two different all-in numbers for the same hotel and week are live at once; the Venetian figure cannot be reproduced today.",
-   "how_to_fix": "Re-price both hotels and publish one dated snapshot; state the capture date next to every price.",
-   "source": "index.html",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html"
+   "title": "Two independent build systems publish to the same Pages URL",
+   "kind": "configuration",
+   "evidence": "The GitHub Pages API reports build_type 'legacy' with source branch 'main' and path '/', while .github/workflows/pages.yml line 27 uploads 'path: docs' as an artifact deployment. Both mechanisms target the same site, so which content a visitor receives depends on deployment ordering rather than on a single source of truth.",
+   "impact": "A stale legacy build can silently override a newer artifact deploy (or the reverse), and neither pipeline guards the other. Any future move to a custom domain or branch change has two places to update.",
+   "how_to_fix": "Disable the legacy branch source in repository settings and keep only the Actions deployment in pages.yml.",
+   "source": "Repository settings + .github/workflows/pages.yml:27",
+   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/.github/workflows/pages.yml#L27"
   },
   {
    "id": "R-02",
    "severity": "high",
-   "title": "An unverified travel time is presented as fact",
-   "evidence": "index.html line 63: 'reachable in ~15\u201320 minutes by car, rideshare, RTC Deuce bus, or the Las Vegas Monorail'. No official page publishes that figure. The same page's own footnote says travel times are unverified.",
-   "impact": "A reader could plan around 15\u201320 minutes. The honest position is 'no published travel-time data'.",
-   "how_to_fix": "Replace with the documented frequencies (Deuce ~every 15 min; Monorail every 4\u20138 min) and a link to the RTC trip planner.",
-   "source": "index.html line 63",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html"
+   "title": "CI does not validate the pages it deploys",
+   "kind": "missing coverage",
+   "evidence": "The three validators in .github/workflows (pages-check.yml:23, validate.yml:29, validate-field-notes.yml:27) assert only against docs/session-059c3126, docs/session-b29fc34e and docs/session-2e5e3452. Root *.html and docs/*.html — the pages a visitor actually lands on — are rebuilt and compared by nothing.",
+   "impact": "A regression on the landing page or any category page can merge with every check green. The session pages are the best-tested artifacts in the repository; the front door is the least-tested.",
+   "how_to_fix": "Add one job that rebuilds the root site from its generator and fails on `git diff --exit-code`, the same pattern already used for the three session directories.",
+   "source": ".github/workflows/*.yml",
+   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/tree/main/.github/workflows"
   },
   {
    "id": "R-03",
    "severity": "medium",
-   "title": "Wrong lead time quoted for the MICHELIN Guide date",
-   "evidence": "index.html line 48 says the guide was 'awarded Aug 26, 2026'. The MICHELIN press release is dated 31 Aug 2026 ('31 Aug 2026').",
-   "impact": "Minor factual error on the landing page of the site the owner sees.",
-   "how_to_fix": "Change to 31 Aug 2026.",
-   "source": "index.html line 48",
-   "source_url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-  },
-  {
-   "id": "R-04",
-   "severity": "medium",
-   "title": "Trip length is stated three different ways",
-   "evidence": "index.html line 43 says 'Preferred: Feb 15 \u2013 18, 2027 (3\u20134 nights)'. Feb 15\u219218 is 3 nights, not 3\u20134. The brief also asks for 1\u20132 weeks and for 7-night prices.",
-   "impact": "The single most important input to every price calculation is ambiguous.",
-   "how_to_fix": "State '3 nights (Feb 15\u201318)' and keep 7-night and 14-night as explicitly separate scenarios.",
-   "source": "index.html line 43",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html"
-  },
-  {
-   "id": "R-05",
-   "severity": "high",
-   "title": "Two build systems publish to the same Pages URL with different configurations",
-   "evidence": "The GitHub Pages API reports build_type 'legacy', source branch 'main', path '/'. The workflow .github/workflows/pages.yml uploads the 'docs' directory (line 27). Under legacy root hosting the live root is the repository root (index.html + assets/), while the workflow deploys docs/.",
-   "impact": "Careful readers can see different content at / and in the Actions artifact. Five separate session sites (059c3126, 2e5e3452, 36cc5108, b29fc34e, d33551df) also coexist with overlapping subject matter.",
-   "how_to_fix": "Pick one source (docs/ recommended) in Settings \u2192 Pages, and add a root redirect to it.",
-   "source": ".github/workflows/pages.yml",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/.github/workflows/pages.yml"
-  },
-  {
-   "id": "R-06",
-   "severity": "medium",
-   "title": "CI never checks the pages actually served at the root",
-   "evidence": "Every workflow gates only generated session folders (pages-check.yml \u2192 docs/session-059c3126; validate.yml \u2192 docs/session-b29fc34e; validate-field-notes.yml \u2192 docs/session-2e5e3452). No workflow validates the seven root HTML pages that legacy hosting serves.",
-   "impact": "Errors R-01 to R-04 could not have been caught by CI, and can repeat any time the root pages are hand-edited.",
-   "how_to_fix": "Add a check that parses each root page, requires a <a href> source on every table row, and fails on placeholder text.",
-   "source": ".github/workflows/",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/tree/main/.github/workflows"
-  },
-  {
-   "id": "R-07",
-   "severity": "low",
-   "title": "A published session page still carries a superseded star count",
-   "evidence": "docs/session-36cc5108/flagged.html contains the phrase 'three starred' inside flag F29, describing an older dashboard. The live total is four.",
-   "impact": "Low, because the same text is explaining that the old figure was wrong, but a keyword search for 'three starred' surfaces it as if current.",
-   "how_to_fix": "Quote the old figure in quotation marks and add 'superseded' beside it.",
+   "title": "Published session archive still asserts a superseded star count",
+   "kind": "stale content",
+   "evidence": "docs/session-36cc5108/flagged.html contains the phrase 'three starred'. The current 2026 MICHELIN Guide Southwest selection has four starred Las Vegas restaurants (two-star Joël Robuchon plus one-star é, Guy Savoy and L'Atelier de Joël Robuchon).",
+   "impact": "An archived page contradicts the live selection on a fact a traveller is likely to plan around. Because the archive is published and indexable, the error is reachable without any warning that it is historical.",
+   "how_to_fix": "Either correct the archived page or add a dated banner marking it superseded, and point readers to the current MICHELIN page.",
    "source": "docs/session-36cc5108/flagged.html",
    "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/docs/session-36cc5108/flagged.html"
   },
   {
-   "id": "R-08",
+   "id": "R-04",
    "severity": "medium",
-   "title": "The primary price comparison uses a room type the brief may not accept",
-   "evidence": "For Caesars Palace on Feb 15\u201322, 2027 the engine offered 'Room Type Assigned on Arrival' ($209/night) and 'Julius Deluxe 1 King' ($214/night). No two-queen room appeared. 'Assigned on arrival' does not guarantee a queen-or-larger bed, which the brief requires.",
-   "impact": "A savings figure may rest on a room that cannot be shown to meet the bed requirement.",
-   "how_to_fix": "Only compare named 2-queen rooms; treat run-of-house rates as ineligible for this trip.",
-   "source": "data via live search",
-   "source_url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
-  },
-  {
-   "id": "R-09",
-   "severity": "low",
-   "title": "No LICENSE file in the repository",
-   "evidence": "ls LICENSE* \u2192 'No such file or directory'. There is a .gitignore (4 rules) and a README that begins with the planner description.",
-   "impact": "Anyone reusing the repository has no stated licence terms. Not a site defect.",
-   "how_to_fix": "Add a LICENSE (the owner's choice of terms).",
+   "title": "No LICENSE file",
+   "kind": "compliance",
+   "evidence": "`ls LICENSE*` returns nothing at the repository root. No licence text appears in README.md either.",
+   "impact": "Without an explicit grant, default copyright applies: the content is technically all-rights-reserved and third parties cannot safely reuse it. It also leaves the provenance of the aggregated research ambiguous.",
+   "how_to_fix": "Add a LICENSE file (or a short 'all rights reserved' statement) so the terms are explicit.",
    "source": "repository root",
    "source_url": "https://github.com/kanlerxz87-cyber/Vegas2"
   },
   {
-   "id": "R-10",
-   "severity": "low",
-   "title": "Root pages carry raw HTML entity/emoji markup",
-   "evidence": "index.html contains 3 occurrences of raw '&#x' entity sequences including an inline SVG favicon built from escaped markup in the href attribute.",
-   "impact": "Cosmetic and fragile: some browsers and validators reject a data-URI SVG written that way.",
-   "how_to_fix": "Move the favicon to a real .svg file.",
-   "source": "index.html",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html"
+   "id": "R-05",
+   "severity": "medium",
+   "title": "Root site and docs/ subsites do not link to each other",
+   "kind": "navigation",
+   "evidence": "A crawl of the 7 root *.html pages finds 0 hrefs into docs/, and a crawl of docs/*.html finds 0 hrefs back up to the root. The two halves of the published site are reachable only by typing a URL.",
+   "impact": "Five session subsites and the canonical dashboard form two disconnected islands. A visitor who lands deep in docs/ has no route back to the main planner.",
+   "how_to_fix": "Add a single persistent 'back to planner' link in each subsite header, and a 'research archive' link on the root.",
+   "source": "*.html, docs/*.html",
+   "source_url": "https://kanlerxz87-cyber.github.io/Vegas2/"
   },
   {
-   "id": "R-11",
-   "severity": "medium",
-   "title": "README points at a live site whose root is not the documented site",
-   "evidence": "README says the session planner is published at '/session-059c3126/' and the landing page is 'the verified landing page'; index.html has 0 links to docs/ and docs/index.html has 0 links back to the root, so the two halves of the published site are not navigable from one another.",
-   "impact": "A visitor landing at / cannot reach the detailed verified pages; a visitor in docs/ cannot get back.",
-   "how_to_fix": "Add one link each way, or serve a single site.",
-   "source": "README.md",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/README.md"
+   "id": "R-06",
+   "severity": "low",
+   "title": "Historical snapshots live inside the deployed tree",
+   "kind": "structure",
+   "evidence": "docs/session-legacy-root/ holds a full copy of a previous root dashboard (activities, flagged-for-review, hotels, index, questions, restaurants, suggestions) plus a main-0d3e73e snapshot. Because pages.yml uploads all of docs/, these archives are published and indexable.",
+   "impact": "Superseded pages stay publicly reachable and compete with current content in search results, while also inflating every deployment artifact.",
+   "how_to_fix": "Move archives outside docs/ (or exclude them in the workflow) and keep one clearly-labelled snapshot per merge.",
+   "source": "docs/session-legacy-root/",
+   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/tree/main/docs/session-legacy-root"
+  },
+  {
+   "id": "R-07",
+   "severity": "low",
+   "title": "Root pages are very long single-line HTML",
+   "kind": "maintainability",
+   "evidence": "index.html lines 41–46 each contain an entire table section on one physical line (the hotel and restaurant blocks are single lines several thousand characters long).",
+   "impact": "Line-anchored code review and git blame are effectively impossible for those regions; any edit rewrites a whole line. It also makes the file hostile to line-based diff review.",
+   "how_to_fix": "Emit one element per line from the generator so diffs and blame stay readable.",
+   "source": "index.html:41-46",
+   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html#L41"
   }
  ],
  "clean_checks": [
-  "0 broken local references across every HTML file in docs/** (checked 40 pages).",
+  "0 broken local references across every HTML file in docs/** (40 pages checked by regex crawl).",
   "0 broken local references across the 7 root HTML pages.",
-  "No loopback-host strings, placeholder lorem text, or developer code markers in any published HTML, JS or CSS under docs/, site/, assets/ or field-notes/.",
-  "All five session sites build reproducibly under their own check scripts; python3 scripts/check_site.py, validate_field_notes.py and check_session_b29fc34e.py all exit 0.",
-  "Pages is enabled, public, HTTPS-enforced, and the latest build status is 'built'."
+  "No loopback-host strings, placeholder lorem text, or developer code markers in any published HTML, JS or CSS under docs/, assets/ or field-notes/.",
+  "python3 scripts/check_site.py, validate_field_notes.py and check_session_b29fc34e.py all exit 0.",
+  "GitHub Pages is enabled, public, HTTPS-enforced, and the latest build status is 'built'.",
+  "The four line-level defects previously logged against the old root index.html (conflicting prices, unsourced travel time, wrong reveal date, wrong night span) are no longer present and have been retired from this list."
  ]
 }
