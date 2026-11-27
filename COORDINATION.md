@@ -1,19 +1,39 @@
 # COORDINATION.md — Shared task board (Vegas2)
 
-Multi-session repo integration. All work is on the Arena-fixed branch `arena/e9badc77-vegas2`; the brief's `session-<id>/<task>` branch naming cannot be used (Arena pins the branch). No other session is active on this repo right now.
+Multi-session repo integration. All work is on the Arena-fixed branch `arena/c5a8afb5-vegas2` (continuation of `arena/e9badc77-vegas2`); the brief's `session-<id>/<task>` branch naming cannot be used (Arena pins the branch). No other session is active on this repo right now.
 
 Status values: `unclaimed` · `in progress` · `done` · `needs review` (published on Flagged for Review; does not block anything)
 
-## Integration summary (this session: e9badc77-vegas2)
-Merged `origin/main` (prior sessions 36cc5108, a52047d7, f0943026, e94404fc, 059c3126, d33551df) into `arena/e9badc77-vegas2`. Conflicts surfaced in `COORDINATION.md` and `index.html` (both add/add). Resolution: both sides kept; nothing deleted.
-- `index.html`: prior root index.html was a redirect to `docs/index.html`; this session's full dashboard landing page is kept as the root landing page (served from GitHub Pages root `/`). Prior `docs/` site preserved untouched under `docs/`, plus each session's subdirectory (`docs/session-36cc5108/`, `docs/session-059c3126/`, `docs/session-d33551df/`).
-- `COORDINATION.md`: combined below.
+## Integration summary (this session: c5a8afb5-vegas2)
+This session is a continuation of `arena/e9badc77-vegas2` (PR #12 merged to main at 3386a21). It inherits all prior sessions (36cc5108, a52047d7, f0943026, e94404fc, 059c3126, d33551df, e9badc77, b29fc34e, 2e5e3452). No conflicts on rebase from `origin/main` (3386a21) — working tree clean.
+- `index.html`: root landing page (served from GitHub Pages root `/`) is kept as primary dashboard; `docs/` site preserved untouched under `docs/` plus session subdirectories (`docs/session-36cc5108/`, `docs/session-059c3126/`, `docs/session-d33551df/`, `docs/session-b29fc34e/`, `docs/session-2e5e3452/`).
+- `COORDINATION.md`: combined below, new session board added.
 
-No files from either side were discarded. Shared outputs (index/navigation/table data) were integrated by this final session.
+No files from either side were discarded. Shared outputs (index/navigation/table data) are integrated by this continuation session.
 
-## Combined task board
+## Current session task board (c5a8afb5-vegas2 — active)
 
-### Session e9badc77-vegas2 (this branch)
+| # | Task | Status | Owner | File scope | Sources / verification |
+|---|------|--------|-------|------------|------------------------|
+| 1 | Create COORDINATION.md task board update | in progress | c5a8afb5 | COORDINATION.md | n/a |
+| 2 | Line-by-line repo review & verification (no hallucinations) | in progress | c5a8afb5 | all HTML, data/*.json, docs/** | visitlasvegas.com, michelin.com (official 2026 SW release), mgmgrand.mgmresorts.com, ebyjoseandres.com, caesars.com, venetianlasvegas.com |
+| 3 | Michelin Guide Las Vegas — 24 distinctions, starred vs listed vs Bib, clusters | in progress | c5a8afb5 | restaurants.html, data/verified/michelin.json | visitlasvegas.com (LVCVA) + michelin.com official press release (Aug 26/31 2026) |
+| 4 | Hotel research — best by price/location/amenities, 7-night total, cheapest booking time | in progress | c5a8afb5 | hotels.html, data/verified/hotels.json | venetianlasvegas.com, caesars.com (Feb 15–22 2027), OPM holiday |
+| 5 | Activities + YouTube/TikTok/Instagram links, hours/days/exceptions, official links | in progress | c5a8afb5 | activities.html, data/verified/activities.json | official venue sites (BLM, USBR, NVS Parks, LV Monorail, Neon Museum, etc.) |
+| 6 | Verify every table row has official source link; blank unverified, flagged | in progress | c5a8afb5 | restaurants.html, hotels.html, activities.html | official sources per row |
+| 7 | Mobile-friendly dashboard CSS + shared layout/nav | done | c5a8afb5 | assets/css/style.css | n/a (inherited from e9badc77) |
+| 8 | Landing page + executive summary | in progress | c5a8afb5 | index.html | n/a |
+| 9 | Category subpages (hotels, restaurants, activities) | in progress | c5a8afb5 | hotels.html, restaurants.html, activities.html | n/a |
+| 10 | Suggestions section (decision paths before implementing) | in progress | c5a8afb5 | suggestions.html | n/a |
+| 11 | Questions / information / answers section | in progress | c5a8afb5 | questions.html | n/a |
+| 12 | Flagged for Review page (unverified items + irregularities) | in progress | c5a8afb5 | flagged-for-review.html | n/a |
+| 13 | Integrate, verify table rows line-by-line, fix broken links | in progress | c5a8afb5 | all | internal links verified; external official sources linked |
+| 14 | Enable GitHub Pages, confirm deploy, no broken links | in progress | c5a8afb5 | repo Pages settings | Pages: main `/` → https://kanlerxz87-cyber.github.io/Vegas2/ (API built) |
+| 15 | Create PR from integration branch to main, merge, record PR link + result | unclaimed | c5a8afb5 | GitHub PR | pending |
+
+## Prior session task board (e9badc77-vegas2 — completed)
+
+### Session e9badc77-vegas2
 | # | Task | Status | Owner | File scope | Sources / verification |
 |---|------|--------|-------|------------|------------------------|
 | 1 | Create COORDINATION.md task board | done | e9badc77-vegas2 | COORDINATION.md | n/a |
