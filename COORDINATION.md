@@ -159,9 +159,9 @@ Claimed 2026-11-27 by session c88d116c. File scope (non-overlapping with other s
 Tasks claimed:
 | # | Task | Status | Owner | File scope |
 |---|------|--------|-------|------------|
-| C1 | Claim + coordination record | in progress | c88d116c | COORDINATION.md |
-| C2 | Fresh official-source re-verification (Michelin, LVCVA, OPM, RTC/Monorail, hotels, restaurants, activities) | unclaimed | c88d116c | data/session-c88d116c/verification.json |
-| C3 | Fix root hotels ranking (remove unverified 1-hr assertion; on-campus verified + 1-hr flagged; 3n+7n totals) | unclaimed | c88d116c | hotels.html, booking.html |
+| C1 | Claim + coordination record | done | c88d116c | COORDINATION.md |
+| C2 | Fresh official-source re-verification (Michelin, LVCVA, OPM, RTC/Monorail, hotels, restaurants, activities) | done | c88d116c | data/session-c88d116c/verification.json |
+| C3 | Fix root hotels ranking (remove unverified 1-hr assertion; on-campus verified + 1-hr flagged; 3n+7n totals) | in progress | c88d116c | hotels.html, booking.html |
 | C4 | Fix root restaurants (total for 2 adults column; hours reconciliation; official-only social) | unclaimed | c88d116c | restaurants.html |
 | C5 | Fix root activities (integrate verified Hoover/Red Rock/Valley of Fire/Neon + flagged candidates) | unclaimed | c88d116c | activities.html |
 | C6 | Executive summary + questions + suggestions + flagged + sources pages | unclaimed | c88d116c | index.html, questions.html, suggestions.html, flagged-for-review.html, sources.html |
