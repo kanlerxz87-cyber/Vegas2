@@ -174,9 +174,9 @@
     {
       "id": "F-11",
       "severity": "high",
-      "title": "Two-person menu totals are published for only one MICHELIN restaurant",
-      "detail": "Partage publishes $130 / $160 / $210 per person. Guy Savoy publishes à-la-carte items ($60–$290). Sparrow and Wolf, China Poblano and Stubborn Seed publish à-la-carte menus with item ranges but no two-person total (captured 2026-11-27). The other 19 restaurants do not publish a two-person total on the pages captured.",
-      "effect": "The 'Cost for 2' column shows an exact total only for Partage; à-la-carte anchors are noted where published (Guy Savoy, Sparrow and Wolf, China Poblano, Stubborn Seed). No estimate is invented.",
+      "title": "Most MICHELIN restaurants do not publish an exact two-person menu total",
+      "detail": "Exact or exact-basis two-person figures published (captured 2026-11-26/27): Partage $260/$320/$420; China Poblano Jose's Way $60pp=$120; Anima by EDO Experience $85pp=$170; Kabuto $260/$370; Kame Omakase $700/$1,000; Mott 32 lunch sets $76/$136; Sparrow and Wolf tasting $149pp=$298; Michael Mina tasting $295++pp=$590 (temporarily closed). Guy Savoy publishes à-la-carte items ($60–$290); Stubborn Seed publishes a $95/pp tasting + $65 pairing (two-person total not published); à-la-carte ranges noted for China Poblano and Sparrow and Wolf. The remaining restaurants do not publish a two-person total.",
+      "effect": "The 'Cost for 2' column carries exact figures only where the restaurant publishes a per-person price or total (price × 2, pre-tax/pre-tip; lunch-only basis noted for Mott 32). No estimate is invented; the rest stay blank/not-published.",
       "source": [
         {
           "label": "Partage menu",
