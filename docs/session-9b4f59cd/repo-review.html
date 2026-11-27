@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo review · Las Vegas Trip Planner</title>
+<meta name="description" content="Source-verified Las Vegas trip plan for two adults, Feb 15 – Mar 23, 2027. Hotels, MICHELIN restaurants, activities and open questions, each row linked to an official source.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="bar">
+<a class="brand" href="index.html">Las Vegas <span>2027</span></a>
+<button class="navbtn" id="navbtn" aria-label="Toggle navigation" aria-expanded="false">&#9776; Menu</button>
+<nav class="main" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="booking.html">Booking &amp; cost</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="repo-review.html" aria-current="page">Repo review</a><a href="sources.html">Sources</a></nav>
+</div></div></header>
+<main class="wrap">
+
+<h1>Repository review</h1>
+<p class="lead">Every finding was produced by a command run against the checked-out repository or the GitHub API on 2026-11-27, after rebasing onto main at 9630aea. Line numbers refer to that commit. Findings that could no longer be reproduced were removed or rewritten rather than carried forward, including the original &#x27;root pages are unchecked by CI&#x27; finding, which main&#x27;s validate-plan.yml now solves for the root copy.</p>
+
+<div class="note"><strong>Verdict.</strong> Re-audited after the root dashboard was replaced by the integration session (PR #22). The four line-level defects this reviewer originally logged against the old root index.html — conflicting hotel prices, an unsourced &#x27;~15–20 minute&#x27; travel claim, a wrong MICHELIN reveal date and a &#x27;3–4 nights&#x27; span for a 3-night window — no longer exist in the tree, so they have been retired rather than repeated. What remains are structural issues that still hold today.</div>
+
+<h2>Findings</h2>
+<div class="tablewrap"><table>
+<caption>11 findings, each with the file or command that produced it.</caption>
+<thead><tr><th>ID</th><th>Severity</th><th>Finding</th><th>Evidence, impact and fix</th><th>Where</th></tr></thead>
+<tbody><tr id="R-01">
+<td><strong>R-01</strong></td>
+<td><span class="b bx">high</span></td>
+<td><strong>Two independent build systems publish to the same Pages URL</strong></td>
+<td>The GitHub Pages API reports build_type &#x27;legacy&#x27; with source branch &#x27;main&#x27; and path &#x27;/&#x27;, while .github/workflows/pages.yml line 27 uploads &#x27;path: docs&#x27; as an artifact deployment. Both mechanisms target the same site, so which content a visitor receives depends on deployment ordering rather than on a single source of truth.<br><br><em>Impact:</em> A stale legacy build can silently override a newer artifact deploy (or the reverse), and neither pipeline guards the other. Any future move to a custom domain or branch change has two places to update.<br><em>Fix:</em> Disable the legacy branch source in repository settings and keep only the Actions deployment in pages.yml.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/.github/workflows/pages.yml#L27" target="_blank" rel="noopener">Repository settings + .github/workflows/pages.yml:27</a></td>
+</tr><tr id="R-02">
+<td><strong>R-02</strong></td>
+<td><span class="b bx">high</span></td>
+<td><strong>The docs/ copy of the planner is neither gated nor synced</strong></td>
+<td>validate-plan.yml:26-29 rebuilds and diffs the 11 root *.html pages, so those are now covered (this reviewer&#x27;s earlier &#x27;root pages unchecked&#x27; finding is superseded). But pages.yml line 27 uploads &#x27;path: docs&#x27;, which includes a second copy of the same planner at docs/index.html, docs/hotels.html, docs/booking.html and docs/sources.html. No workflow rebuilds or diffs those files, and they already differ from the root copies they shadow.<br><br><em>Impact:</em> Under the legacy branch source the published site is served from the root, but under the Actions upload it is served from docs/. The two copies have already drifted, so which version a visitor sees depends on which deployment path last won. The divergence is invisible to CI.<br><em>Fix:</em> Either delete the duplicated planner from docs/ and let the root be the only copy, or add the docs/ copies to the existing git diff --exit-code step so drift fails the build.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/.github/workflows/pages.yml#L27" target="_blank" rel="noopener">.github/workflows/pages.yml:27, validate-plan.yml:26-29, docs/index.html</a></td>
+</tr><tr id="R-03">
+<td><strong>R-03</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>Published session archive still asserts a superseded star count</strong></td>
+<td>docs/session-36cc5108/flagged.html contains the phrase &#x27;three starred&#x27;. The current 2026 MICHELIN Guide Southwest selection has four starred Las Vegas restaurants (two-star Joël Robuchon plus one-star é, Guy Savoy and L&#x27;Atelier de Joël Robuchon).<br><br><em>Impact:</em> An archived page contradicts the live selection on a fact a traveller is likely to plan around. Because the archive is published and indexable, the error is reachable without any warning that it is historical.<br><em>Fix:</em> Either correct the archived page or add a dated banner marking it superseded, and point readers to the current MICHELIN page.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/docs/session-36cc5108/flagged.html" target="_blank" rel="noopener">docs/session-36cc5108/flagged.html</a></td>
+</tr><tr id="R-04">
+<td><strong>R-04</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>No LICENSE file</strong></td>
+<td>`ls LICENSE*` returns nothing at the repository root. No licence text appears in README.md either.<br><br><em>Impact:</em> Without an explicit grant, default copyright applies: the content is technically all-rights-reserved and third parties cannot safely reuse it. It also leaves the provenance of the aggregated research ambiguous.<br><em>Fix:</em> Add a LICENSE file (or a short &#x27;all rights reserved&#x27; statement) so the terms are explicit.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">repository root</a></td>
+</tr><tr id="R-05">
+<td><strong>R-05</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>Root site and docs/ subsites do not link to each other</strong></td>
+<td>A crawl of the 7 root *.html pages finds 0 hrefs into docs/, and a crawl of docs/*.html finds 0 hrefs back up to the root. The two halves of the published site are reachable only by typing a URL.<br><br><em>Impact:</em> Five session subsites and the canonical dashboard form two disconnected islands. A visitor who lands deep in docs/ has no route back to the main planner.<br><em>Fix:</em> Add a single persistent &#x27;back to planner&#x27; link in each subsite header, and a &#x27;research archive&#x27; link on the root.</td>
+<td class="src"><a href="https://kanlerxz87-cyber.github.io/Vegas2/" target="_blank" rel="noopener">*.html, docs/*.html</a></td>
+</tr><tr id="R-06">
+<td><strong>R-06</strong></td>
+<td><span class="b bu">low</span></td>
+<td><strong>Historical snapshots live inside the deployed tree</strong></td>
+<td>docs/session-legacy-root/ holds a full copy of a previous root dashboard (activities, flagged-for-review, hotels, index, questions, restaurants, suggestions) plus a main-0d3e73e snapshot. Because pages.yml uploads all of docs/, these archives are published and indexable.<br><br><em>Impact:</em> Superseded pages stay publicly reachable and compete with current content in search results, while also inflating every deployment artifact.<br><em>Fix:</em> Move archives outside docs/ (or exclude them in the workflow) and keep one clearly-labelled snapshot per merge.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/tree/main/docs/session-legacy-root" target="_blank" rel="noopener">docs/session-legacy-root/</a></td>
+</tr><tr id="R-07">
+<td><strong>R-07</strong></td>
+<td><span class="b bu">low</span></td>
+<td><strong>Root pages are very long single-line HTML</strong></td>
+<td>index.html lines 41–46 each contain an entire table section on one physical line (the hotel and restaurant blocks are single lines several thousand characters long).<br><br><em>Impact:</em> Line-anchored code review and git blame are effectively impossible for those regions; any edit rewrites a whole line. It also makes the file hostile to line-based diff review.<br><em>Fix:</em> Emit one element per line from the generator so diffs and blame stay readable.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html#L41" target="_blank" rel="noopener">index.html:41-46</a></td>
+</tr></tbody></table></div>
+
+<h2>Checks that passed</h2>
+<ul class="sum"><li>0 broken local references across every HTML file in docs/** (40 pages checked by regex crawl).</li><li>0 broken local references across the 7 root HTML pages.</li><li>No loopback-host strings, placeholder lorem text, or developer code markers in any published HTML, JS or CSS under docs/, assets/ or field-notes/.</li><li>python3 scripts/check_site.py, validate_field_notes.py and check_session_b29fc34e.py all exit 0.</li><li>GitHub Pages is enabled, public, HTTPS-enforced, and the latest build status is &#x27;built&#x27;.</li><li>The four line-level defects previously logged against the old root index.html (conflicting prices, unsourced travel time, wrong reveal date, wrong night span) are no longer present and have been retired from this list.</li></ul>
+
+<h2>How this was checked</h2>
+<ul class="plain">
+<li>Every HTML file under <code>docs/</code>, <code>site/</code>, <code>field-notes/</code> and the repository root was parsed and each relative <code>href</code>/<code>src</code> resolved on disk.</li>
+<li>The GitHub Pages API was read directly for the deployment configuration.</li>
+<li>Each session's own validation script was executed and its exit code recorded.</li>
+<li>Live prices were re-read from the official booking engines on 2026-11-27 and compared with the numbers already published.</li>
+<li>No file outside this session's scope was modified. Findings are reported here instead of edited elsewhere, per the shared coordination rules.</li>
+</ul>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p><strong>Data captured 2026-11-27 from official sources only.</strong> Hotel and restaurant prices are dynamic and will change. A cell is filled only when an official source confirmed it; everything else says <span class="b bu">Unverified</span> and links to the flag that explains why.</p>
+<p><a href="index.html">Home</a> · <a href="flagged.html">Flagged for review</a> · <a href="sources.html">All sources</a> · <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">Repository</a></p>
+</div></footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=document.getElementById('navbtn'),n=document.getElementById('nav');
+  if(b&&b.contains(e.target)){n.classList.toggle('open');return}
+  if(n&&n.contains(e.target)){n.classList.remove('open')}
+});
+</script>
+</body>
+</html>
