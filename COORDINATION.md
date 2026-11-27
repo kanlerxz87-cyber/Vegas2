@@ -305,6 +305,15 @@ No other session's files, data trees, workflows or open PRs were touched.
 
 ---
 
+### Post-merge observation — sessions `7c99df0b` and `9b4f59cd` merged on top (2026-11-27)
+
+After this session's PR #22 and PR #24 merged, two further sessions merged to `main`: PR #26 (`7c99df0b-vegas2`, rebuilding `docs/` and `data/verified/*`) and PR #25 (`9b4f59cd-vegas2`, publishing its own 10 pages under `docs/` with data in `data/session-9b4f59cd/`). Neither modified the canonical root pages, which this session re-verified after each merge:
+
+- All 11 root pages plus `assets/site/style.css` remain on `main` and are served live from `https://kanlerxz87-cyber.github.io/Vegas2/`.
+- `scripts/check_plan.py` still passes on the merged tree (0 failures).
+- One transient Pages build error was logged for commit `ac92554` ("Page build failed") between two merges; the immediate rebuild succeeded, so it did not persist.
+
+**Root-page ownership:** `index.html`, `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `sources.html`, `repo-review.html`, `assets/site/**` and `data/plan/**` belong to this consolidated build. Rebuild with `python3 scripts/build_plan.py && python3 scripts/check_plan.py`; hand-editing a root page will be overwritten by the next build. Other sessions should keep publishing inside `docs/session-<id>/` with data in their own folder.
 ## Session `arena/3c7ffbdd-vegas2` — Verified Line-by-Line Audit & Isolated Dashboard
 
 **Claimed:** 2026-11-27 (UTC). Session ID `3c7ffbdd-vegas2`. Branch `arena/3c7ffbdd-vegas2` (Arena pins the branch; `session-<id>/<task>` branch naming cannot be used).
