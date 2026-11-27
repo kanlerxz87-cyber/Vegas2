@@ -1,0 +1,262 @@
+{
+  "as_of": "2026-11-27",
+  "award_source": {
+    "label": "MICHELIN Guide Southwest 2026 — official press release (31 Aug 2026)",
+    "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+  },
+  "award_source_2": {
+    "label": "Visit Las Vegas (LVCVA) — MICHELIN Restaurants in Las Vegas",
+    "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+  },
+  "headline": "Las Vegas IS covered by the MICHELIN Guide as of the inaugural 2026 MICHELIN Guide Southwest, revealed at Fontainebleau Las Vegas. The city holds 24 distinctions: 4 starred restaurants (5 stars total), 3 Bib Gourmand, 17 Recommended.",
+  "counts": { "starred_restaurants": 4, "stars_total": 5, "bib_gourmand": 3, "recommended": 17, "total": 24 },
+  "region_note": "The 2026 Southwest selection covers 64 restaurants across Arizona, Nevada, New Mexico and Utah. The fifth starred restaurant, Monte, is in South Salt Lake, Utah — NOT in Las Vegas, and is excluded from the tables below.",
+  "status_definitions": [
+    { "key": "star", "label": "MICHELIN Star", "meaning": "Currently holds one or two MICHELIN Stars in the 2026 selection. Highest distinction." },
+    { "key": "bib", "label": "Bib Gourmand", "meaning": "Inspectors' award for good food at a moderate price. A distinct award — NOT a star." },
+    { "key": "recommended", "label": "MICHELIN Recommended / listed", "meaning": "Listed in the MICHELIN Guide as a recommended restaurant. NO star and NO Bib Gourmand." }
+  ],
+  "price_rule": "A dollar figure appears only where the restaurant's own official site publishes a price. 'For 2 adults' is that published per-person price x 2, before tax, tip, drinks and add-ons. Where only a symbol ($$ / $$$$) is published, the symbol is shown and the dollar amount is left blank.",
+  "rows": [
+    {
+      "name": "Restaurant de Joël Robuchon", "status": "star", "distinction": "2 MICHELIN Stars", "cuisine": "French Contemporary",
+      "venue": "MGM Grand", "cluster": "Strip — south-center", "address": "MGM Grand, 3799 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "verified", "v": "Tue–Sat 5:00 PM – 9:30 PM", "exceptions": "CLOSED Monday and Sunday. Children under 6 requested not to be included in the reservation." },
+      "price_level": { "s": "verified", "v": "$$$$" },
+      "price_2": { "s": "unverified", "v": "", "note": "Official page publishes a price symbol only, no dollar amount." },
+      "dress": { "s": "verified", "v": "Business Formal" },
+      "contact": { "s": "verified", "v": "Reservations 702.891.7925" },
+      "other_awards": "MICHELIN Service Award 2026 (Sean Christopher); Forbes 5-Star 2026 & 2025; AAA Five Diamond; Wine Spectator Grand Award",
+      "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+      "social": { "s": "unverified", "v": "", "note": "No restaurant-level YouTube/TikTok/Instagram link published on the official page." },
+      "note": "The only Two-Star restaurant in the entire 2026 Southwest selection."
+    },
+    {
+      "name": "L'Atelier de Joël Robuchon Las Vegas", "status": "star", "distinction": "1 MICHELIN Star", "cuisine": "French",
+      "venue": "MGM Grand", "cluster": "Strip — south-center", "address": "MGM Grand, 3799 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "hours": { "s": "verified", "v": "Mon 5:00 PM – 9:30 PM; Thu–Sun 5:00 PM – 9:30 PM", "exceptions": "CLOSED Tuesday and Wednesday. Children 6 and under requested not to be included." },
+      "price_level": { "s": "verified", "v": "$$$" },
+      "price_2": { "s": "unverified", "v": "", "note": "Symbol only on the official page." },
+      "dress": { "s": "verified", "v": "Business Casual" },
+      "contact": { "s": "verified", "v": "Reservations 702.891.7358" },
+      "other_awards": "MICHELIN Service Award 2026 (shared GM); Wine Spectator Best of Award of Excellence; Forbes Travel Guide Four Stars; AAA Four Diamond",
+      "url": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
+      "social": { "s": "unverified", "v": "" },
+      "note": "34-seat counter facing the open kitchen. Open Mon/Sun when Joël Robuchon is closed — the two together cover all 7 nights."
+    },
+    {
+      "name": "é by José Andrés", "status": "star", "distinction": "1 MICHELIN Star", "cuisine": "Spanish Contemporary",
+      "venue": "The Cosmopolitan (inside Jaleo, 3rd floor)", "cluster": "Strip — center", "address": "The Cosmopolitan, 3708 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "hours": { "s": "verified", "v": "Tue–Sun; two seatings nightly at 5:30 PM and 8:30 PM", "exceptions": "CLOSED Monday. Only 9 seats. Tickets released three months in advance; waitlist offered." },
+      "price_level": { "s": "unverified", "v": "" },
+      "price_2": { "s": "unverified", "v": "", "note": "Official site does not publish a ticket price." },
+      "dress": { "s": "unverified", "v": "" },
+      "contact": { "s": "verified", "v": "+1 702-698-7950 · reserve@ebyjoseandres.com" },
+      "other_awards": "",
+      "url": "https://www.ebyjoseandres.com/",
+      "social": { "s": "unverified", "v": "" },
+      "note": "For a Feb 15–18 2027 stay, the 3-month ticket window opens around mid-November 2026 — it is open NOW."
+    },
+    {
+      "name": "Restaurant Guy Savoy", "status": "star", "distinction": "1 MICHELIN Star", "cuisine": "French",
+      "venue": "Caesars Palace (Augustus Tower, 2nd floor)", "cluster": "Strip — center", "address": "Caesars Palace, 3570 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "hours": { "s": "partial", "v": "Opens 5:00 PM (live status on official page)", "exceptions": "Open days were not exposed in the retrieved official page text — left unconfirmed. Confirm by phone before booking." },
+      "price_level": { "s": "verified", "v": "$$$$" },
+      "price_2": { "s": "unverified", "v": "", "note": "Symbol only. A 9-course Krug table dinner is offered but no price is published." },
+      "dress": { "s": "verified", "v": "Formal" },
+      "contact": { "s": "verified", "v": "(702) 731-7286 · groups (866) 733-5827" },
+      "other_awards": "Forbes Five-Star; AAA Five Diamond; Wine Spectator Grand Award (12,000+ bottles); highest-ranked Las Vegas restaurant on LaListe 2026 Top 1,000",
+      "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+      "social": { "s": "verified", "v": "https://www.instagram.com/caesarspalace/ · https://www.youtube.com/user/caesarspalace", "note": "Property-level (Caesars Palace) accounts, linked from the official restaurant page footer. Not a restaurant-specific account." },
+      "note": "Krug table is described as the only one in North America."
+    },
+    {
+      "name": "China Poblano", "status": "bib", "distinction": "Bib Gourmand", "cuisine": "Chinese / Mexican",
+      "venue": "The Cosmopolitan", "cluster": "Strip — center", "address": "The Cosmopolitan, 3708 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "verified", "v": "Mon–Thu 11:00 AM – 10:00 PM; Fri 11:00 AM – 10:30 PM; Sat 10:00 AM – 10:30 PM; Sun 10:00 AM – 10:00 PM", "exceptions": "Cocktail Hour Mon–Thu 4:00 PM – 6:00 PM." },
+      "price_level": { "s": "verified", "v": "$$" },
+      "price_2": { "s": "unverified", "v": "", "note": "Symbol only on the official page." },
+      "dress": { "s": "verified", "v": "Casual" },
+      "contact": { "s": "verified", "v": "Reservations 877.893.2003 · info 702.698.7900" },
+      "other_awards": "",
+      "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html",
+      "social": { "s": "unverified", "v": "" },
+      "note": "Best value-per-dollar option on the Strip among the 24; open every day, including the Monday when é is closed."
+    },
+    {
+      "name": "Esther's Kitchen", "status": "bib", "distinction": "Bib Gourmand", "cuisine": "Italian",
+      "venue": "Independent — Arts District", "cluster": "Downtown / Arts District", "address": "1131 S. Main St., Las Vegas, NV 89104",
+      "hours": { "s": "unverified", "v": "", "exceptions": "Official homepage retrieved did not publish hours." },
+      "price_level": { "s": "unverified", "v": "" },
+      "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" },
+      "contact": { "s": "unverified", "v": "" },
+      "other_awards": "",
+      "url": "https://www.estherslv.com/",
+      "social": { "s": "unverified", "v": "" },
+      "note": "Chef James Trees; seasonal Italian, farm-to-table. Pairs well with SoulBelly BBQ on the same street."
+    },
+    {
+      "name": "YEN Viet Kitchen", "status": "bib", "distinction": "Bib Gourmand", "cuisine": "Vietnamese",
+      "venue": "Independent — west side", "cluster": "Off-Strip — west", "address": "3575 S. Decatur Blvd., Ste. 101, Las Vegas, NV 89103",
+      "hours": { "s": "unverified", "v": "", "exceptions": "Prior sessions logged conflicting hours for this venue; not re-confirmed here." },
+      "price_level": { "s": "unverified", "v": "" },
+      "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" },
+      "contact": { "s": "unverified", "v": "" },
+      "other_awards": "",
+      "url": "https://www.yenvietkitchen.com/",
+      "social": { "s": "unverified", "v": "" },
+      "note": ""
+    },
+    {
+      "name": "Anima by EDO", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Spanish / Mediterranean",
+      "venue": "Independent — The Gramercy", "cluster": "Off-Strip — southwest", "address": "9205 W. Russell Rd., #185, Las Vegas, NV 89148",
+      "hours": { "s": "verified", "v": "Dinner served nightly from 5:00 PM", "exceptions": "Tasting menu runs ~2 to 2.5 hours and the entire table must participate. Monday Pasta & Wine Night is a separate weekly special." },
+      "price_level": { "s": "unverified", "v": "" },
+      "price_2": { "s": "verified", "v": "$170", "note": "Official 'Anima Experience' tasting menu $85 per person x 2 adults. Before tax, tip and wine pairings. Monday special: two handmade pasta dishes + one bottle of wine for $65 (price for the table, not per person)." },
+      "dress": { "s": "unverified", "v": "" },
+      "contact": { "s": "verified", "v": "Reservations via SevenRooms on the official site" },
+      "other_awards": "",
+      "url": "https://animabyedo.com/",
+      "social": { "s": "unverified", "v": "" },
+      "note": "Cheapest published tasting-menu price for two among the 24. Vegetarian/vegan tasting available on request."
+    },
+    {
+      "name": "Partage", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "French",
+      "venue": "Independent — Chinatown", "cluster": "Chinatown / Spring Mountain", "address": "3839 Spring Mountain Rd., Las Vegas, NV 89102",
+      "hours": { "s": "unverified", "v": "", "exceptions": "Prior sessions found the official site's hours differ from the MICHELIN listing. Not re-confirmed — see flagged page." },
+      "price_level": { "s": "unverified", "v": "" },
+      "price_2": { "s": "verified", "v": "$260 – $420", "note": "Official menu: 5 courses $130 pp ($260 for 2, ~1.5 h); 7 courses $160 pp ($320 for 2, ~2.5 h); Signature 9 courses $210 pp ($420 for 2, ~3 h). Before tax/tip. Wine pairing per person: 5-glass $60, 7-glass $84, 9-glass $108 (premium add $40/$56/$72); 5-glass Champagne $125. Seared foie gras add-on +$33 pp." },
+      "dress": { "s": "unverified", "v": "" },
+      "contact": { "s": "verified", "v": "Reservations via OpenTable on the official site" },
+      "other_awards": "",
+      "url": "https://partage.vegas/menu",
+      "social": { "s": "unverified", "v": "" },
+      "note": "Menu changes monthly. CANNOT accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. Automatic 20% gratuity only for parties of 6+ (does not apply to 2)."
+    },
+    {
+      "name": "Bouchon", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "French",
+      "venue": "The Venetian", "cluster": "Strip — mid-north", "address": "The Venetian Resort & Casino, 3355 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.venetianlasvegas.com/restaurants/bouchon.html", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "COTE Las Vegas", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Korean Steakhouse",
+      "venue": "The Venetian", "cluster": "Strip — mid-north", "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.venetianlasvegas.com/dining/restaurants/cote.html", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Estiatorio Milos", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Greek Seafood",
+      "venue": "The Venetian", "cluster": "Strip — mid-north", "address": "The Venetian Las Vegas, 3355 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.venetianlasvegas.com/restaurants/estiatorio-milos.html", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Mott 32", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Cantonese",
+      "venue": "The Palazzo at The Venetian", "cluster": "Strip — mid-north", "address": "The Palazzo at The Venetian, 3325 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Gymkhana Las Vegas", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Indian",
+      "venue": "ARIA Resort & Casino", "cluster": "Strip — center (CityCenter)", "address": "ARIA Resort & Casino, 3730 S. Las Vegas Blvd., Las Vegas, NV 89158",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Michael Mina", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Seafood",
+      "venue": "Bellagio", "cluster": "Strip — center", "address": "Bellagio Hotel & Casino, 3600 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "A prior session recorded a temporary closure notice on the official page. Current operating status must be re-confirmed before planning a meal here." },
+      "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Wing Lei", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Cantonese",
+      "venue": "Wynn Las Vegas", "cluster": "Strip — north", "address": "Wynn Las Vegas, 3131 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.wynnlasvegas.com/dining/fine-dining/wing-lei", "social": { "s": "unverified", "v": "" },
+      "note": "In the 2026 Southwest selection Wing Lei is Recommended, NOT starred. Older articles calling it a one-star venue refer to the discontinued 2008–2009 Las Vegas guide."
+    },
+    {
+      "name": "Stubborn Seed Las Vegas", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Contemporary",
+      "venue": "Resorts World Las Vegas", "cluster": "Strip — north", "address": "Resorts World Las Vegas, 3000 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.rwlasvegas.com/restaurant/stubborn-seed/", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Ping Pang Pong", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Chinese",
+      "venue": "Gold Coast Hotel and Casino", "cluster": "Off-Strip — West Flamingo", "address": "Gold Coast Hotel and Casino, 4000 W. Flamingo Rd., Las Vegas, NV 89103",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Kabuto", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Sushi",
+      "venue": "Independent — Chinatown", "cluster": "Chinatown / Spring Mountain", "address": "5040 Spring Mountain Rd., #4, Las Vegas, NV 89146",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://kabutolv.com/", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Kame Omakase", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Omakase",
+      "venue": "Independent — Chinatown", "cluster": "Chinatown / Spring Mountain", "address": "3616 W. Spring Mountain Rd., Ste. 103, Las Vegas, NV 89102",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.kameomakase.com/", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Lamaii", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Thai",
+      "venue": "Independent — Chinatown", "cluster": "Chinatown / Spring Mountain", "address": "4480 Spring Mountain Rd., Ste. 700, Las Vegas, NV 89102",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.lamaiilv.com/", "social": { "s": "unverified", "v": "" }, "note": "Same building as Sparrow + Wolf (different suite)."
+    },
+    {
+      "name": "Sparrow + Wolf", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "New American",
+      "venue": "Independent — Chinatown", "cluster": "Chinatown / Spring Mountain", "address": "4480 Spring Mountain Rd., #100, Las Vegas, NV 89102",
+      "hours": { "s": "unverified", "v": "", "exceptions": "Prior sessions found the venue site and the MICHELIN listing disagree on hours." },
+      "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.sparrowandwolflv.com/", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "Pho Ga Bac Bac", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Vietnamese",
+      "venue": "Independent — Chinatown", "cluster": "Chinatown / Spring Mountain", "address": "3775 Spring Mountain Rd., Las Vegas, NV 89102",
+      "hours": { "s": "unverified", "v": "", "exceptions": "A prior session flagged the hours extracted from the official site as anomalous." },
+      "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://bestchickenpho.com/", "social": { "s": "unverified", "v": "" }, "note": ""
+    },
+    {
+      "name": "SoulBelly BBQ", "status": "recommended", "distinction": "MICHELIN Recommended (listed, no star)", "cuisine": "Barbecue",
+      "venue": "Independent — Arts District", "cluster": "Downtown / Arts District", "address": "1327 S. Main St., Las Vegas, NV 89104",
+      "hours": { "s": "unverified", "v": "", "exceptions": "" }, "price_level": { "s": "unverified", "v": "" }, "price_2": { "s": "unverified", "v": "" },
+      "dress": { "s": "unverified", "v": "" }, "contact": { "s": "unverified", "v": "" }, "other_awards": "",
+      "url": "https://www.soulbellybbq.com/", "social": { "s": "unverified", "v": "" }, "note": "Two doors from Esther's Kitchen — an easy paired downtown evening."
+    }
+  ],
+  "clusters": [
+    { "name": "Strip — MGM Grand", "count": 2, "stars": 3, "detail": "Joël Robuchon (2★) + L'Atelier (1★). Highest star concentration of any single address in the Southwest." },
+    { "name": "Strip — The Venetian / Palazzo", "count": 4, "stars": 0, "detail": "Bouchon, COTE, Estiatorio Milos, Mott 32 — all Recommended. Highest COUNT of distinctions at one resort." },
+    { "name": "Strip — The Cosmopolitan", "count": 2, "stars": 1, "detail": "é by José Andrés (1★) + China Poblano (Bib Gourmand)." },
+    { "name": "Chinatown / Spring Mountain Rd", "count": 6, "stars": 0, "detail": "Kabuto, Kame Omakase, Lamaii, Partage, Pho Ga Bac Bac, Sparrow + Wolf. Densest walkable cluster in the city; one short bus or rideshare hop from the Strip." },
+    { "name": "Downtown / Arts District (S. Main St)", "count": 2, "stars": 0, "detail": "Esther's Kitchen (Bib) + SoulBelly BBQ. Both on the 1100–1300 block of S. Main St." },
+    { "name": "Strip — Caesars Palace", "count": 1, "stars": 1, "detail": "Guy Savoy (1★)." },
+    { "name": "Strip — ARIA", "count": 1, "stars": 0, "detail": "Gymkhana (Recommended)." },
+    { "name": "Strip — Bellagio", "count": 1, "stars": 0, "detail": "Michael Mina (Recommended)." },
+    { "name": "Strip — Wynn", "count": 1, "stars": 0, "detail": "Wing Lei (Recommended)." },
+    { "name": "Strip — Resorts World", "count": 1, "stars": 0, "detail": "Stubborn Seed (Recommended)." },
+    { "name": "Off-Strip — West Flamingo (Gold Coast)", "count": 1, "stars": 0, "detail": "Ping Pang Pong (Recommended)." },
+    { "name": "Off-Strip — west / southwest", "count": 2, "stars": 0, "detail": "YEN Viet Kitchen (Bib, S. Decatur) + Anima by EDO (W. Russell)." }
+  ]
+}

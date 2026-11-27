@@ -1,0 +1,54 @@
+{
+  "as_of": "2026-11-27",
+  "headline": "Las Vegas has NO subway and NO metro. The brief's 'within 1 hour by subway or bus' cannot be evaluated as written for subway. Public transport is the RTC bus network (including the Deuce on Las Vegas Blvd) plus the privately operated Las Vegas Monorail, which is an elevated single-line people-mover, not a subway.",
+  "modes": [
+    {
+      "name": "RTC bus — Strip / Downtown (Deuce & SDX)",
+      "operator": "Regional Transportation Commission of Southern Nevada (public agency)",
+      "fares": { "s": "verified", "v": "2-Hour Pass $6 · 24-Hour Pass $8 · 3-Day Pass $20", "note": "Official RTC fare page, Strip/Downtown (SDX/DEUCE) tier." },
+      "for_two": { "s": "verified", "v": "$16 for two 24-hour passes; $40 for two 3-day passes", "note": "Fares are per person; 2 adults x published pass price." },
+      "hours": { "s": "unverified", "v": "", "note": "The official RTC Deuce service page could not be retrieved in this session, so service span and frequency are NOT asserted." },
+      "coverage": { "s": "unverified", "v": "", "note": "Route extent and stop list not re-confirmed from an official RTC page in this session." },
+      "url": "https://rtcws.rtcsnv.com/mobile/geoFares.html",
+      "url2": "https://www.rtcsnv.com/",
+      "social": { "s": "unverified", "v": "" }
+    },
+    {
+      "name": "RTC bus — Residential routes (the rest of the valley)",
+      "operator": "RTC of Southern Nevada",
+      "fares": { "s": "verified", "v": "Single Ride $2 · 2-Hour Pass $3 · 24-Hour Pass $5 · 15-Day Pass $34 · 30-Day Pass $65", "note": "Reduced fare (ages 6–17, seniors 60+, persons with disabilities, Medicare card): $1 / $1.50 / $2.50 / $17 / $32.50 with photo ID." },
+      "for_two": { "s": "verified", "v": "$10 for two residential 24-hour passes; $68 for two 15-day passes", "note": "A 15-day pass matches the brief's 1–2 week trip length. Official note: all residential passes are valid on the SDX and Deuce WITH A LOCAL I.D. — visitors without local ID need the Strip tier." },
+      "hours": { "s": "unverified", "v": "" },
+      "coverage": { "s": "unverified", "v": "", "note": "Chinatown (Spring Mountain Rd) and S. Decatur are residential-route areas, but no official route number or journey time was confirmed." },
+      "url": "https://rtcws.rtcsnv.com/mobile/geoFares.html",
+      "url2": "",
+      "social": { "s": "unverified", "v": "" }
+    },
+    {
+      "name": "Las Vegas Monorail",
+      "operator": "Las Vegas Monorail (private)",
+      "fares": { "s": "unverified", "v": "", "note": "Ticket prices are on the official ticket-information page, which was not retrieved. Do not quote a fare." },
+      "for_two": { "s": "unverified", "v": "" },
+      "hours": { "s": "verified", "v": "Monday 7:00 AM – midnight · Tuesday–Thursday 7:00 AM – 2:00 AM · Friday–Sunday 7:00 AM – 3:00 AM", "exceptions": "The operator posts date-specific early closures. At the time of check the posted modifications were Nov 29 – Dec 2, Dec 3, Dec 6–10 and Dec 13–15, 2026 — all OUTSIDE the Feb/Mar 2027 window. Re-check closer to travel." },
+      "coverage": { "s": "verified", "v": "7 stations along the Strip; trains arrive every 4–8 minutes", "note": "The official homepage states seven stations and a 4–8 minute headway. It does not publish an end-to-end journey time, so none is claimed." },
+      "url": "https://www.lvmonorail.com/",
+      "url2": "https://www.lvmonorail.com/ticket-information/",
+      "social": { "s": "verified", "v": "https://www.instagram.com/lvmonorail", "note": "The official homepage says 'Follow @lvmonorail on Instagram, Twitter, and Facebook'. Handle verified from the operator's own text." }
+    }
+  ],
+  "one_hour_analysis": {
+    "conclusion": "All 24 MICHELIN-listed Las Vegas restaurants sit inside one compact metropolitan area: the Las Vegas Blvd Strip corridor, the Spring Mountain Rd / Chinatown strip, the S. Main St Arts District, S. Decatur Blvd and W. Russell Rd. There is no MICHELIN restaurant outside the Las Vegas valley anywhere in the Southwest selection that could be reached in an hour — the next-closest starred restaurant, Monte, is in South Salt Lake, Utah.",
+    "consequence": "Because the whole MICHELIN set is local, a 1-hour radius does NOT discriminate between Strip hotels. Every Strip hotel in this study plausibly reaches all 24 within an hour by road. The useful discriminator is therefore (a) how many distinctions are at your own address, and (b) how many are walkable — not the 1-hour test.",
+    "verification_gap": "No official RTC or Monorail door-to-door journey-time matrix could be retrieved. Therefore no hotel is scored as 'verified within 1 hour'. That column is marked unverified for every hotel, and the ranking uses on-property MICHELIN counts (verified from the official MICHELIN address list) instead.",
+    "no_transit": [
+      "Red Rock Canyon Scenic Drive — the official visitor pages describe vehicle entry and timed vehicle reservations; no public bus service is published.",
+      "Valley of Fire State Park — the official park page explicitly warns that Uber/Lyft riders can be stranded because a return ride is often unavailable.",
+      "Hoover Dam — no official public-transit route was retrieved."
+    ]
+  },
+  "fare_change_watch": {
+    "status": "unverified",
+    "detail": "A third-party page cites an RTC proposal to raise fares from January 31, 2027 (Strip single ride $4 → $5, Strip 24-hour $8 → $10, residential 24-hour $5 → $7) and links https://www.rtcsnv.com/ways-to-travel/transitupdates-fares/ . That official RTC page could NOT be retrieved in this session, so the proposal, its amounts and its date are NOT verified. Because the proposed start date falls before the trip, this is a high-priority item to confirm directly with RTC.",
+    "official_url_to_check": "https://www.rtcsnv.com/ways-to-travel/transitupdates-fares/"
+  }
+}
