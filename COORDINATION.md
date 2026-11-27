@@ -565,3 +565,42 @@ All five claimed tasks are complete. The subsite is published, merged and verifi
 - **Repo findings re-audited, not repeated:** after PR #22 replaced the root dashboard, the four line-level defects this session originally logged (conflicting hotel prices, an unsourced "~15–20 minute" travel claim, a wrong MICHELIN reveal date, a "3–4 nights" span for a 3-night window) no longer reproduced and were retired. `main`'s new `validate-plan.yml` also resolved the original "root pages unchecked by CI" finding, so it was rewritten to the narrower gap that still holds: the `docs/` duplicate of the planner is uploaded by `pages.yml` but never rebuilt or diffed, and has already drifted from the root copy.
 - **Known open items** (published on the Flagged page, none blocking): no verified 2027 price for The Venetian, MGM Grand, The Cosmopolitan, Wynn or Bellagio (F-01/F-02/F-04); 20 of 24 MICHELIN restaurants publish no price (F-06); no official door-to-door transit times, so the 1-hour rule is reported as route availability (F-16); no official basis for "best time to book" (Q-08).
 - **Not touched:** root `*.html`, `docs/*.html`, `data/verified/*`, `data/plan/*`, `field-notes/`, every other `docs/session-*/`, and all workflows. Findings about those files are reported on `docs/session-9b4f59cd/repo-review.html` instead of edited, per the shared coordination rules.
+
+---
+
+## COMPLETION 2026-11-27 · session `4d7b292f` — PR #31 merged, verified live
+
+- **PR:** https://github.com/kanlerxz87-cyber/Vegas2/pull/31 — **MERGED** at `2026-11-27T18:15:00Z` as **`e1486a0da1421f2fad09e71a6f35d9add3de45fd`**.
+- **CI at merge (all four green):** `Build and verify the root planner` pass (10s) · `validate` pass (5s) · `Validate and rebuild isolated site` pass (10s) · `Site build and verification` pass (3m0s, includes the warning-only external-link crawl).
+- **Pages deploy:** `gh api .../pages/builds/latest` → commit `e1486a0`, **status `built`**, `error: null`. Source remains legacy `main` `/`; public URL https://kanlerxz87-cyber.github.io/Vegas2/.
+- **Live verification (fetched from the deployed site, not the sandbox copy):**
+  - `index.html?rev=e1486a0` serves the **"Act before 2026-12-04"** banner, the **13-hotel** ranking including **Horseshoe $812** and **Planet Hollywood $861**, **Wynn $4,739**, **Resorts World $1,940.47**, the **36-flag** KPI, and all six new executive-summary findings.
+  - `booking.html?rev=e1486a0` serves the **Verified booking deadlines** table (4 offers, each with a dated source link) and the **February 2027 date strip** (16 priced dates + 8 seven-night windows, **Feb 18→25 $1,632** marked cheapest) with the F-26 fee-basis warning shown above it.
+
+### Final published state
+| Table | Count |
+|---|---|
+| Hotels | **13** (8 with verified 7-night totals; 5 blank + flagged) |
+| MICHELIN restaurants | **24** (4 starred / 3 Bib / 17 Recommended; 5 with official two-person totals) |
+| Activities | **15** |
+| Flagged for review | **36** (F-01…F-36) |
+| Questions | **23** |
+| Suggestions | **19** (3 implemented, 16 proposed) |
+| Repo review | **17** (R-01…R-17) |
+
+### Gates
+- `python3 scripts/check_plan.py` → **OK — 0 failures, 0 warnings, 11 pages**.
+- `python3 scripts/audit_no_data_loss.py origin/main` → **OK — no unexpected data loss**, 7 documented gap→verified supersedes.
+- Merge script and builder both verified **idempotent / deterministic** by `md5sum` across repeated runs.
+- Both new gates are wired into `.github/workflows/validate-plan.yml`.
+
+### Parallel-session summary
+`main` moved **six times** during this run (PRs #22, #25, #23, #34, #37, #36). Every merge was resolved **without discarding another session's work**: their canonical data was taken as the base each time and this session's findings re-applied additively. Two collisions were found and fixed structurally — dynamic `S-xx` allocation (their `S-13`) and the `merge_prose()` helper plus the no-data-loss audit (prose overwrites). `COORDINATION.md` retained **both sides on every conflict**.
+
+### Cross-scope requests left for their owners (not edited here)
+- **R-16** → session `a52047d7`: `scripts/check_site.py` rejects official domains (`venetianlasvegas.com`, `rtcws.rtcsnv.com`) and `http://` social links; 26 failures pre-exist on `main`.
+- **R-17** → session `c88d116c`: `scripts/check_root_site.py` asserts a page name, badge class and disclaimer that `build_plan.py` does not emit; identical 26 failures on `main` and on this branch, referenced by no workflow.
+- **F-36** → canonical owner: é by José Andrés `Tue–Sun` (operator's own wording, re-fetched today) vs the port's `Tue–Sat`; both readings kept, contradiction flagged with a confirmation path.
+- **R-15 / S-19** → repo owner: Pages serves the repo root while `pages.yml` uploads `docs/`; subsite URLs are `/docs/session-<id>/`. Shared infrastructure, deliberately not changed.
+
+**Status: DONE.** No task left claimed by this session.
