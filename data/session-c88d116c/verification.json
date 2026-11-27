@@ -587,5 +587,21 @@
    "e 'Tue-Sun' hours — contradicted by fresh official-page fetch (Sunday: Closed); corrected, noted in Flagged X-1.",
    "Duplicated booking paragraph tail + 'Nov 27, 2027' typo + malformed flagged q-item shell — parallel-session editing bugs; not carried over (originals preserved in main history)."
   ]
+ },
+ "canonical_port_2026-11-27": {
+  "context": "Second merge: origin/main moved to 76b22b8 (PR #22, canonical data/plan planner). Adopted canonical; ported c88d116c verifications into data/plan/*.json.",
+  "ported": [
+   "hotels: 2Q room/bath details for Venetian, Cosmopolitan, MGM Grand, Bellagio, ARIA, Resorts World, Wynn (+7 official room-page sources); Caesars 3-night $549 capture as price3 + $226/$1,582 evening quote in booking.json; F-23 intraday note.",
+   "restaurants: full hour grids Sparrow and Wolf, China Poblano, Stubborn Seed; Esther's Tue–Sun partial; à-la-carte ranges for the same three; é IG+X socials; Guy Savoy terrace micro-note; F-10/F-11 recounts.",
+   "activities: Fremont schedule+free; High Roller hours grid + youth tiers + highroller.com warning; Sphere residency facts; Neon 2027 from-price; 3 new rows (Fountains, Shark Reef, KÀ); F-16 recount to 10 of 14; builder 'only High Roller' sentence updated.",
+   "flags: F-04 corroboration, F-23 intraday third reading. suggestions: S-13 list-membership reconciliation."
+  ],
+  "held_out": [
+   "Gimme Sum Dim Sum hours (not in canonical 24) → filed as S-13, no data change.",
+   "YEN Vietnamese partial-hours note → identity uncertain vs canonical 'Yen Viet Kitchen'; too weak to port.",
+   "é Sunday-open note → superseded; canonical already Tue–Sat, Sun closure re-confirmed.",
+   "Stubborn Seed IG / China Poblano TikTok → no exact handle captured; blanks stand.",
+   "Generic YouTube-search fallback links appended by build_plan.py → left for the canonical owner; rule tension noted (search links are not official sources)."
+  ]
  }
 }

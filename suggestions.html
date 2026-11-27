@@ -1,163 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suggestions — Vegas2 Las Vegas Planner</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions and decision paths · Vegas2 planner</title>
+<meta name="description" content="Three concrete trip paths and twelve site improvements, each with its cost, benefit and the exact data needed — review before anything is implemented.">
+<link rel="stylesheet" href="assets/site/style.css">
 </head>
 <body>
-
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="brand"><span class="mark">&#x1F3DC;&#xFE0F;</span> Vegas2</a>
-    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">&#x2261;</button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="restaurants.html">Michelin Restaurants</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="activities.html">Activities</a>
-      <a href="booking.html">Booking &amp; Prices</a>
-      <a href="suggestions.html" class="active">Suggestions</a>
-      <a href="questions.html">Questions &amp; Answers</a>
-      <a href="flagged-for-review.html">Flagged for Review</a>
-      <a href="sources.html">Sources</a>
-    </div>
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span> Vegas2 <span class="small" style="color:#66707d;font-weight:500">Las Vegas · Feb–Mar 2027</span></a>
+    <span class="spacer"></span>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="nav" id="navLinks" aria-label="Main"><a href="index.html">Overview</a><a href="restaurants.html">MICHELIN</a><a href="hotels.html">Hotels</a><a href="booking.html">Prices &amp; dates</a><a href="activities.html">Activities</a><a href="transit.html">Transit</a><a href="questions.html">Questions</a><a href="suggestions.html" class="active">Suggestions</a><a href="flagged.html">Flagged</a><a href="repo-review.html">Repo review</a><a href="sources.html">Sources</a></nav>
   </div>
 </header>
+<main class="wrap" id="main">
+<p class="crumb"><a href="index.html" target="_blank" rel="noopener noreferrer">Overview</a> / Suggestions</p>
+<h1>Suggestions and decision paths</h1>
+<p class="lede">Three concrete trip paths and twelve site improvements, each with its cost, benefit and the exact data needed — review before anything is implemented.</p>
 
-<div class="container">
-  <h1 class="page-title">Suggestions &amp; Decision Paths</h1>
-  <p class="page-subtitle">Suggestions for improving the site and the decision-making process. Review each suggestion and choose the best path before implementing any changes. Status as of Nov 27, 2026.</p>
-
-  <div class="callout">
-    <p><strong>How to use this page.</strong> Each suggestion lists the proposed change, why it helps, the effort level, and a recommended decision path. A reviewer should mark each as <em>approve / revise / defer / reject</em> before any work is scheduled. Items marked <span class="badge badge-verified">done</span> were implemented Nov 27, 2026 and await reviewer sign-off; <span class="badge badge-unverified">partial</span> items are in progress.</p>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Site-improvement suggestions</h2>
-
-    <div class="q-item">
-      <div class="q">S-1 &bull; Add a date picker &amp; live price checker for hotels <span class="badge badge-unverified">proposed</span></div>
-      <div class="a">Why: Hotel rates are dynamic; the verified prices here are snapshots and will go stale. A date picker that calls each hotel’s official booking endpoint would let users compare real-time 7-night totals for their exact dates.</div>
-      <div class="a" style="margin-top:6px;">Effort: High (requires integration with hotel booking APIs or official site scraping, respecting terms of service).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve only after confirming data sources &amp; legal review; otherwise defer to the manual price log on <a href="booking.html">Booking &amp; Prices</a>.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-2 &bull; Verify &amp; complete missing hours, prices &amp; social links <span class="badge badge-unverified">partial — hours/prices mostly done, social open</span></div>
-      <div class="a">Why: Most restaurant and activity rows had blank hours/price/social fields. Nov 27 update: hours verified for 19/24 restaurants and 10/12 activities; cost-for-2 totals added for 6 fixed-menu restaurants; all social cells remain blank (official-site links only — none found yet).</div>
-      <div class="a" style="margin-top:6px;">Effort: Medium (manual research of each official venue page).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve continued work — next: venue-confirmed social handles + Sphere/K&Agrave; February schedules. Track on the Flagged for Review page.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-3 &bull; Add a Michelin proximity map <span class="badge badge-unverified">proposed — Phase 2</span></div>
-      <div class="a">Why: A map showing each hotel and the on-campus Michelin restaurants would make the ranking visual. Note: a 1-hour travel-time map must NOT be drawn — no official transit-time source exists, and drawing one would be inference.</div>
-      <div class="a" style="margin-top:6px;">Effort: Medium (map library + coordinates from official addresses only).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve as a Phase-2 enhancement showing on-campus counts only.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-4 &bull; Add restaurant cost-per-couple estimates <span class="badge badge-verified">done (verified-only version)</span></div>
-      <div class="a">Why: The user wants total price for 2 adults. Implemented Nov 27 as verified-only totals (fixed-menu price &times; 2, pre-tax/tip) for 6 restaurants — no estimated ranges were added, because estimates would violate the no-inference rule.</div>
-      <div class="a" style="margin-top:6px;">Decision path: Reviewer to confirm the verified-only approach (no estimates) is acceptable, or explicitly approve labeled estimates. Parallel-session estimate ranges (~$40–$1,200+) are preserved in main history and noted in Flagged X-2 for the same decision.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-5 &bull; Add filters &amp; sorting (star level, price, area, open-days) <span class="badge badge-unverified">proposed</span></div>
-      <div class="a">Why: Helps the couple narrow choices quickly on mobile.</div>
-      <div class="a" style="margin-top:6px;">Effort: Low (client-side JavaScript).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve — quick win, low risk.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-6 &bull; Add a printable trip itinerary export <span class="badge badge-unverified">proposed — Phase 2</span></div>
-      <div class="a">Why: Users may want a one-page summary (hotel + dinner reservations + activities) to print or save to phone.</div>
-      <div class="a" style="margin-top:6px;">Effort: Low–Medium (client-side PDF or .ics export).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve as Phase-2.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-7 &bull; Add accessibility &amp; i18n improvements <span class="badge badge-unverified">partial</span></div>
-      <div class="a">Why: Mobile-friendly is required; also ensure WCAG contrast, keyboard navigation, and language options. Tables scroll horizontally on small screens; nav collapses to a toggle.</div>
-      <div class="a" style="margin-top:6px;">Effort: Low–Medium.</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve accessibility fixes; defer i18n.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-8 &bull; Add user notes / saved selections <span class="badge badge-unverified">proposed</span></div>
-      <div class="a">Why: Let the couple save a shortlist of hotels and restaurants and compare side by side.</div>
-      <div class="a" style="margin-top:6px;">Effort: Medium (localStorage or backend).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve localStorage version first; evaluate backend only if needed.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-9 &bull; Weekly hotel price log for cheapest-window detection <span class="badge badge-verified">done</span></div>
-      <div class="a">Why: Cheapest booking time cannot be found from snapshots. Implemented Nov 27 as <a href="booking.html">Booking &amp; Prices</a>: dated 3-nt/7-nt snapshots plus a log template with the first three rows filled.</div>
-      <div class="a" style="margin-top:6px;">Decision path: Reviewer to sign off; assign a weekly owner for the log until booking.</div>
-    </div>
-
-    <div class="q-item">
-      <div class="q">S-10 &bull; Dedicated Sources page + machine-readable verification record <span class="badge badge-verified">done</span></div>
-      <div class="a">Why: Every claim needs a checkable source. Implemented Nov 27 as <a href="sources.html">Sources</a> plus <code>data/session-c88d116c/verification.json</code> in the repo.</div>
-      <div class="a" style="margin-top:6px;">Decision path: Reviewer to sign off.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2 class="section-title">Reviewer decision log</h2>
-    <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Suggestion</th>
-          <th>Recommended path</th>
-          <th>Decision (approve / revise / defer / reject)</th>
-          <th>Reviewer &amp; date</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>S-1 Live price checker</td><td>Defer pending data-source &amp; legal review</td><td>—</td><td>—</td><td>Use price log meanwhile</td></tr>
-        <tr><td>S-2 Verify missing fields</td><td>Approve — social + Sphere/K&Agrave; next</td><td>—</td><td>—</td><td>Track on Flagged for Review page</td></tr>
-        <tr><td>S-3 Michelin proximity map</td><td>Approve — Phase 2, on-campus only</td><td>—</td><td>—</td><td>No 1-hour map (no source)</td></tr>
-        <tr><td>S-4 Cost-per-couple</td><td>Approve verified-only version</td><td>—</td><td>—</td><td>No estimates added</td></tr>
-        <tr><td>S-5 Filters &amp; sorting</td><td>Approve</td><td>—</td><td>—</td><td>Low-risk client-side</td></tr>
-        <tr><td>S-6 Itinerary export</td><td>Approve — Phase 2</td><td>—</td><td>—</td><td>Client-side PDF/.ics</td></tr>
-        <tr><td>S-7 Accessibility / i18n</td><td>Approve accessibility; defer i18n</td><td>—</td><td>—</td><td>WCAG contrast + keyboard nav</td></tr>
-        <tr><td>S-8 Saved selections</td><td>Approve localStorage version</td><td>—</td><td>—</td><td>Evaluate backend only if needed</td></tr>
-        <tr><td>S-9 Price log</td><td>Approve — assign weekly owner</td><td>—</td><td>—</td><td>Implemented as booking.html</td></tr>
-        <tr><td>S-10 Sources page</td><td>Approve</td><td>—</td><td>—</td><td>Implemented as sources.html</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
+<div class="note">
+  <p>Proposals only — nothing here changes the plan automatically. Review, pick a path, and the next build implements it.</p>
+  <p class="small">Nothing on this page has been implemented. Choose a path (or a list of improvement IDs) and the next build applies exactly that.</p>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="foot-title">Vegas2</div>
-      <div class="small">Suggestions for decision making.</div>
-    </div>
-    <div>
-      <div class="foot-title">Navigate</div>
-      <div><a href="index.html">Home</a></div>
-      <div><a href="questions.html">Questions &amp; Answers</a></div>
-      <div><a href="flagged-for-review.html">Flagged for Review</a></div>
-    </div>
-  </div>
-  <div class="footer-inner" style="border-top:1px solid var(--color-border); margin-top:20px; padding-top:16px; font-size:0.75rem; color:#9ca3af;">
-    Disclaimer: Prices, hours, and availability change. Always confirm on the official venue/hotel site before booking. Unverified items are flagged and must be reviewed before any decision.
-  </div>
+<h2>Decision paths</h2>
+<div class="grid three">
+<div class="card">
+  <h3>PATH-A · Star-first, everything walkable</h3>
+  <p><strong>Pick:</strong> Stay at The Venetian Resort (4 MICHELIN distinctions on campus) or MGM Grand (both Robuchon rooms).</p>
+  <p><strong>Pros:</strong> No transit needed for four MICHELIN rooms; suites are 650 sq ft+ with private oversized bathrooms; the Venetian is the densest cluster in the city.</p>
+  <p><strong>Cons:</strong> Highest cost. No dated Venetian rate was retrievable, so the budget is unknown; a prior session logged $6,170.43 all-in for 7 nights.</p>
+  <p><strong>Best if:</strong> The restaurants are the reason for the trip and the budget is flexible.</p>
+  <p class="small"><strong>Still unknown:</strong> dated Venetian/MGM price, 2027 star status</p>
+</div>
+<div class="card">
+  <h3>PATH-B · Value-first on the Strip</h3>
+  <p><strong>Pick:</strong> Flamingo Las Vegas, Flamingo Room | 2 Queens — $581 for 7 nights before tax, center Strip.</p>
+  <p><strong>Pros:</strong> Cheapest verified two-queen total found; center-Strip walk to Caesars Palace (Guy Savoy), Bellagio (Michael Mina) and the LINQ (High Roller); Monorail and Deuce on the doorstep.</p>
+  <p><strong>Cons:</strong> No MICHELIN restaurant inside the resort; 350 sq ft rooms are the smallest verified in this set; two seasonal pools and a casino-floor location mean noise.</p>
+  <p><strong>Best if:</strong> You want the 1–2 week stay and a restaurant list rather than a resort.</p>
+  <p class="small"><strong>Still unknown:</strong> whether you accept 350 sq ft, resort-fee tolerance</p>
+</div>
+<div class="card">
+  <h3>PATH-C · Space and quiet, south of the noise</h3>
+  <p><strong>Pick:</strong> South Point, Premium 2 Queens — $989 for 7 nights including fees, 500 sq ft.</p>
+  <p><strong>Pros:</strong> Best documented pricing across three date windows; largest verified non-suite room (500 sq ft); free valet parking; airport shuttle; 2,079 rooms.</p>
+  <p><strong>Cons:</strong> Well south of the center Strip; public-transit door-to-door time unverified; no MICHELIN restaurant nearby.</p>
+  <p><strong>Best if:</strong> You will rent a car, value space, and treat the Strip as a day trip.</p>
+  <p class="small"><strong>Still unknown:</strong> resort-fee discrepancy ($29.20 engine vs $33 public page), car needed</p>
+</div></div>
+
+<h2>Site improvements to approve or reject</h2>
+<div class="table-wrap"><table class="stack"><caption>Effort and impact are this session's assessment, not a sourced fact. Everything else states what data is missing.</caption><thead><tr><th class="">#</th><th class="">Improvement</th><th class="">Why it improves decisions</th><th class="">Effort</th><th class="">Impact</th><th class="">What is needed</th></tr></thead><tbody><tr><td data-label="#"><span class="qid">S-01</span></td><td data-label="Improvement">Add an all-in cost calculator (tax + resort fee + food + activities)</td><td data-label="Why it improves decisions">Every total on the site is pre-tax; the real bill is materially higher. This is the single biggest decision-quality gap.</td><td data-label="Effort">medium</td><td data-label="Impact">high</td><td data-label="What is needed">Applicable room-tax rate from an official Nevada/Clark County source or a captured checkout tax line.</td></tr><tr><td data-label="#"><span class="qid">S-02</span></td><td data-label="Improvement">Capture dated prices for MGM Resorts, Venetian, Wynn, Resorts World and Fontainebleau</td><td data-label="Why it improves decisions">Seven of eleven hotels have no verified rate, so the ranking is dominated by cheap Caesars properties.</td><td data-label="Effort">medium</td><td data-label="Impact">high</td><td data-label="What is needed">A browser-capable fetch (the MGM/Venetian engines render client-side) or manual screenshots with dates.</td></tr><tr><td data-label="#"><span class="qid">S-03</span></td><td data-label="Improvement">Replace blank restaurant hours with a single verified hours table</td><td data-label="Why it improves decisions">17 of 24 rows have no hours, which blocks day-by-day planning.</td><td data-label="Effort">medium</td><td data-label="Impact">high</td><td data-label="What is needed">One fetch per venue restaurant page; record the capture date.</td></tr><tr><td data-label="#"><span class="qid">S-04</span></td><td data-label="Improvement">Add exact two-person menu totals for starred rooms</td><td data-label="Why it improves decisions">Only Partage publishes a total. Starred menus are the largest single expense line after the room.</td><td data-label="Effort">medium</td><td data-label="Impact">high</td><td data-label="What is needed">Menu PDFs or a phone/email price request; do not estimate.</td></tr><tr><td data-label="#"><span class="qid">S-05</span></td><td data-label="Improvement">Build a real door-to-door transit matrix from the RTC Trip Planner</td><td data-label="Why it improves decisions">The 1-hour rule cannot currently be verified for any venue pair.</td><td data-label="Effort">high</td><td data-label="Impact">high</td><td data-label="What is needed">RTC trip-planner queries for the exact hotel→venue pairs on a weekday and a weekend day.</td></tr><tr><td data-label="#"><span class="qid">S-06</span></td><td data-label="Improvement">Add a printable one-page itinerary for the 3-night and 7-night versions</td><td data-label="Why it improves decisions">Tables are good for decisions, bad for the street.</td><td data-label="Effort">low</td><td data-label="Impact">medium</td><td data-label="What is needed">Nothing new; use confirmed hours only.</td></tr><tr><td data-label="#"><span class="qid">S-07</span></td><td data-label="Improvement">Add verified social/creator links per venue</td><td data-label="Why it improves decisions">The brief asks for YouTube/TikTok/Instagram links; only the Neon Museum and Caesars Palace accounts are verifiable from official sites today.</td><td data-label="Effort">medium</td><td data-label="Impact">medium</td><td data-label="What is needed">Venue websites that link their accounts, or platform verification of each handle.</td></tr><tr><td data-label="#"><span class="qid">S-08</span></td><td data-label="Improvement">Add a price-watch log (date, hotel, room, total) so &#x27;best time to book&#x27; becomes measurable</td><td data-label="Why it improves decisions">A single snapshot cannot establish the cheapest booking date. A weekly log can.</td><td data-label="Effort">low</td><td data-label="Impact">high</td><td data-label="What is needed">Repeat the same dated URL each week and append the result.</td></tr><tr><td data-label="#"><span class="qid">S-09</span></td><td data-label="Improvement">Fold the six parallel session sites into an archive page</td><td data-label="Why it improves decisions">The repository now publishes seven competing sites, which confuses which one is authoritative.</td><td data-label="Effort">low</td><td data-label="Impact">medium</td><td data-label="What is needed">Agreement that this consolidated site is canonical (implemented in this session; old pages preserved).</td></tr><tr><td data-label="#"><span class="qid">S-10</span></td><td data-label="Improvement">Add accessibility and mobility notes per hotel</td><td data-label="Why it improves decisions">Room sizes and bathroom layouts are captured, mobility distances are not.</td><td data-label="Effort">low</td><td data-label="Impact">medium</td><td data-label="What is needed">Official hotel accessibility pages.</td></tr><tr><td data-label="#"><span class="qid">S-11</span></td><td data-label="Improvement">Add a Feb 2027 event calendar (conventions, shows, F1 works)</td><td data-label="Why it improves decisions">Events drive room prices and traffic. RTC already publishes F1-related service changes.</td><td data-label="Effort">medium</td><td data-label="Impact">medium</td><td data-label="What is needed">LVCVA convention calendar and venue calendars.</td></tr><tr><td data-label="#"><span class="qid">S-12</span></td><td data-label="Improvement">Publish an explicit &#x27;what we could not verify&#x27; count on the landing page</td><td data-label="Why it improves decisions">Sets expectations and stops blanks being read as zero.</td><td data-label="Effort">low</td><td data-label="Impact">medium</td><td data-label="What is needed">Nothing; implemented from the flag list.</td></tr><tr><td data-label="#"><span class="qid">S-13</span></td><td data-label="Improvement">Reconcile the 24-restaurant list membership (Gimme Sum Dim Sum vs Ping Pang Pong)</td><td data-label="Why it improves decisions">A parallel session (c88d116c) verified hours for Gimme Sum Dim Sum (Wed–Mon 9 AM–9 PM, Tue closed), which is not among the canonical 24; the off-Strip Chinese slot is held by Ping Pang Pong (Gold Coast). One of the two lists disagrees with the official 2026 MICHELIN selection.</td><td data-label="Effort">low</td><td data-label="Impact">medium</td><td data-label="What is needed">Side-by-side check of the official 2026 MICHELIN Las Vegas selection against the canonical 24 names; add or swap the row if the guide lists Gimme Sum Dim Sum.</td></tr></tbody></table></div>
+
+<h2>What I would do first</h2>
+<ol>
+  <li><strong>S-08 price-watch log</strong> — cheap, and it turns "best time to book" from a guess into a measurement.</li>
+  <li><strong>S-01 all-in calculator</strong> — closes the biggest honesty gap (every total here is pre-tax).</li>
+  <li><strong>S-02 capture MGM/Venetian/Wynn rates</strong> — seven of eleven hotels are currently unpriced, which biases the ranking.</li>
+  <li><strong>S-05 transit matrix</strong> — the only way to honour your 1-hour rule with evidence.</li>
+</ol>
+
+<h2>How to choose a path</h2>
+<table class="stack">
+  <thead><tr><th>If this is true</th><th>Take</th><th>Because</th></tr></thead>
+  <tbody>
+    <tr><td data-label="If this is true">The restaurants are the point</td><td data-label="Take">PATH-A (Venetian / MGM Grand)</td><td data-label="Because">Four or two MICHELIN rooms with zero transit, 650 sq ft+ suites</td></tr>
+    <tr><td data-label="If this is true">Budget matters and you want to walk everywhere</td><td data-label="Take">PATH-B (Flamingo)</td><td data-label="Because">$581 verified, center Strip, no car needed</td></tr>
+    <tr><td data-label="If this is true">You want space, quiet and a rental car</td><td data-label="Take">PATH-C (South Point)</td><td data-label="Because">500 sq ft, free valet, $989 including fees</td></tr>
+  </tbody>
+</table>
+
+</main>
+<footer class="site">
+  <p><strong>Vegas2 planner.</strong> Built 2026-11-27. Two adults, one room, Las Vegas, Feb 15 – Mar 23, 2027.
+  Every value shown is tied to an official source captured on the date stated; anything unconfirmed is left blank and listed on
+  <a href="flagged.html">Flagged for review</a>. Prices are snapshots, not offers, and exclude taxes unless stated.</p>
+  <p>Source register: <a href="sources.html">Sources</a> · Repository review: <a href="repo-review.html">Repo review</a> · Coordination: <a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">COORDINATION.md</a></p>
 </footer>
-
 <script>
-document.getElementById('navToggle').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
-});
+  var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');
+  if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
 </script>
-
 </body>
 </html>

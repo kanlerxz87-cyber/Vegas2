@@ -1,0 +1,459 @@
+{
+ "guide": {
+  "name": "2026 MICHELIN Guide Southwest",
+  "cityList": "24 Las Vegas distinctions: 4 starred (5 stars), 3 Bib Gourmand, 17 Recommended",
+  "source": "https://www.visitlasvegas.com/michelin-guide-restaurants/",
+  "sourceLabel": "Visit Las Vegas (Las Vegas Convention and Visitors Authority) — official MICHELIN list page",
+  "captured": "2026-11-27",
+  "note": "2027 awards have not been announced. A 2026 distinction is not a guarantee of 2027 status."
+ },
+ "rows": [
+  {
+   "name": "Joël Robuchon",
+   "award": "2s",
+   "cuisine": "French",
+   "area": "The Strip",
+   "venue": "MGM Grand",
+   "hours": "Tue–Sat 5:00–9:30 PM. Closed Sunday and Monday.",
+   "hoursStatus": "v",
+   "price2": "",
+   "priceNote": "Menu listed on the official page without prices. A two-person total is not published.",
+   "official": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "$$$$ · Business Formal dress code · Reservations 702.891.7925 · children under 6 not accepted. Awarded Two Stars, 2026 (only Las Vegas restaurant with two). Also a 2026 MICHELIN Service Award (Sean Christopher) and Forbes Five-Star.",
+   "flagIds": [
+    "F-08"
+   ]
+  },
+  {
+   "name": "é by José Andrés",
+   "award": "1s",
+   "cuisine": "Spanish",
+   "area": "The Strip",
+   "venue": "The Cosmopolitan",
+   "hours": "Tue–Sat, two seatings 5:30–8:30 PM (logged on the official page 2026-11-26).",
+   "hoursStatus": "p",
+   "price2": "",
+   "priceNote": "Per-person tasting price not captured.",
+   "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
+   "social": [
+    {
+     "label": "Instagram @ebyjoseandres",
+     "url": "https://www.instagram.com/ebyjoseandres/"
+    },
+    {
+     "label": "X @ebyjoseandres",
+     "url": "https://x.com/ebyjoseandres"
+    }
+   ],
+   "socialStatus": "p",
+   "note": "Intimate tasting-menu room; a prior logged session recorded that tickets release three months ahead, which is relevant for a February 2027 booking. Sun closure re-confirmed 2026-11-27 (session c88d116c): official page shows Mon & Sun Closed.",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "L'Atelier de Joël Robuchon",
+   "award": "1s",
+   "cuisine": "French",
+   "area": "The Strip",
+   "venue": "MGM Grand",
+   "hours": "Mon and Thu–Sun 5:00–9:30 PM; closed Tue–Wed (logged on the official page 2026-11-26).",
+   "hoursStatus": "p",
+   "price2": "",
+   "priceNote": "À-la-carte pricing not captured.",
+   "official": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Counter-style room from the same kitchen group as Joël Robuchon, at a lower price point.",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Restaurant Guy Savoy",
+   "award": "1s",
+   "cuisine": "French",
+   "area": "The Strip",
+   "venue": "Caesars Palace",
+   "hours": "Weekly schedule not published on the captured page (it showed 'Closed · Opens 5:00 PM').",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "À la carte only, effective 11/5/2026: $60 (cheese cart) to $290 (Japanese A5 wagyu) per item; e.g. Colors of Caviar $120, Artichoke & Black Truffle Soup $100, Sea Bass $160, Marmite of Squab $200. No fixed two-person total is published.",
+   "official": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+   "menu": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy/main-menu",
+   "social": [
+    {
+     "label": "Caesars Palace Instagram (property account, official footer link)",
+     "url": "https://www.instagram.com/caesarspalace/"
+    }
+   ],
+   "socialStatus": "v",
+   "note": "$$$$ · Formal · 9-course Krug table (only one in North America) · over 12,000 bottles and a Wine Spectator Grand Award. Address 3570 Las Vegas Blvd S. Terrace menu carries same hours except Sat (6–9:30 PM); an '11 AM–1 AM daily' string in raw page text is unverified — full grid uncaptured.",
+   "flagIds": [
+    "F-10",
+    "F-11"
+   ]
+  },
+  {
+   "name": "China Poblano",
+   "award": "bib",
+   "cuisine": "Chinese / Mexican",
+   "area": "The Strip",
+   "venue": "The Cosmopolitan",
+   "hours": "Sun–Thu 11 AM–10 PM; Fri–Sat 11 AM–11 PM",
+   "hoursStatus": "v",
+   "price2": "Menu: tacos ~$17–18, ramen/pho ~$21–22, larger plates higher",
+   "priceNote": "Price-for-two total not published — illustrative menu ranges from the official menu.",
+   "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Bib Gourmand — the guide's value category. Walk-in friendly per the official Las Vegas MICHELIN FAQ.",
+   "flagIds": [
+    "F-10",
+    "F-11"
+   ]
+  },
+  {
+   "name": "Esther's Kitchen",
+   "award": "bib",
+   "cuisine": "Italian",
+   "area": "Downtown (Arts District)",
+   "venue": "Downtown",
+   "hours": "Tue–Sun; full hours grid not captured",
+   "hoursStatus": "p",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.estherslv.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Bib Gourmand, Downtown. Best paired with Mob Museum / Neon Museum days.",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Yen Viet Kitchen",
+   "award": "bib",
+   "cuisine": "Vietnamese",
+   "area": "Off-Strip",
+   "venue": "Off-Strip",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.yenvietkitchen.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Bib Gourmand. A prior session flagged a conflict in posted hours between sources (F-10).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Anima by EDO",
+   "award": "listed",
+   "cuisine": "Spanish",
+   "area": "Off-Strip",
+   "venue": "Off-Strip",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "A prior session logged an $85/person anchor from the official site.",
+   "official": "https://animabyedo.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended in the 2026 guide (listed, no star).",
+   "flagIds": []
+  },
+  {
+   "name": "Bouchon",
+   "award": "listed",
+   "cuisine": "French",
+   "area": "The Strip",
+   "venue": "The Venetian",
+   "hours": "Mon–Wed 5:00–10:00 PM; Thu 8:00 AM–1:00 PM and 5:00–10:00 PM; Fri–Sun 8:00 AM–2:00 PM and 5:00–10:00 PM. Brunch Thu 8–1, Fri–Sun 8–2.",
+   "hoursStatus": "v",
+   "price2": "",
+   "priceNote": "Menu prices not published on the captured page.",
+   "official": "https://www.venetianlasvegas.com/dining/restaurants/bouchon.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). Thomas Keller bistro on the 10th floor of the Venetian South Tower — the only MICHELIN-listed breakfast/brunch room captured in this set.",
+   "flagIds": [
+    "F-11"
+   ]
+  },
+  {
+   "name": "COTE Las Vegas",
+   "award": "listed",
+   "cuisine": "Korean Steakhouse",
+   "area": "The Strip",
+   "venue": "The Venetian",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.venetianlasvegas.com/dining/restaurants/cote.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Estiatorio Milos",
+   "award": "listed",
+   "cuisine": "Greek Seafood",
+   "area": "The Strip",
+   "venue": "The Venetian",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.venetianlasvegas.com/restaurants/estiatorio-milos.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Mott 32",
+   "award": "listed",
+   "cuisine": "Cantonese",
+   "area": "The Strip",
+   "venue": "The Palazzo",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). Inside The Palazzo, part of the Venetian campus.",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Gymkhana",
+   "award": "listed",
+   "cuisine": "Indian",
+   "area": "The Strip",
+   "venue": "ARIA",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Michael Mina",
+   "award": "listed",
+   "cuisine": "Seafood",
+   "area": "The Strip",
+   "venue": "Bellagio",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "Bellagio's own page lists a $210 per-person dinner for The Garden Table (5:00 and 8:30 PM seatings) inside the Conservatory — a dated, fixed-price experience, but only through Jan 2, 2027.",
+   "official": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). A prior session flagged a temporary closure notice on Nov 26, 2026 — recheck before booking (F-10).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Kabuto",
+   "award": "listed",
+   "cuisine": "Sushi",
+   "area": "Chinatown",
+   "venue": "Chinatown",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://kabutolv.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). Very small room — reserve early.",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Kame Omakase",
+   "award": "listed",
+   "cuisine": "Omakase",
+   "area": "Chinatown",
+   "venue": "Chinatown",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.kameomakase.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Lamaii",
+   "award": "listed",
+   "cuisine": "Thai",
+   "area": "Off-Strip",
+   "venue": "Off-Strip",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.lamaiilv.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Partage",
+   "award": "listed",
+   "cuisine": "French",
+   "area": "Chinatown",
+   "venue": "Chinatown",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "$260 / $320 / $420",
+   "priceNote": "Exact published pre-tax, pre-tip totals for two: 5-course $130pp = $260; 7-course $160pp = $320; Signature $210pp = $420. Add-ons: seared foie gras +$33pp; wine pairings $60–$108pp. 20% auto-gratuity applies to parties of 6+.",
+   "official": "https://partage.vegas/",
+   "menu": "https://partage.vegas/menu",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). The only restaurant in this set with exact two-person totals published. Cannot accommodate vegan, dairy-free, celiac, or garlic/onion-free diets.",
+   "flagIds": []
+  },
+  {
+   "name": "Pho Ga Bac Bac",
+   "award": "listed",
+   "cuisine": "Vietnamese",
+   "area": "Chinatown",
+   "venue": "Chinatown",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://bestchickenpho.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). A prior session flagged its extracted hours as anomalous (F-10).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Ping Pang Pong",
+   "award": "listed",
+   "cuisine": "Chinese",
+   "area": "Off-Strip",
+   "venue": "Off-Strip",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). Inside the Gold Coast, west of the Strip.",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Soulbelly BBQ",
+   "award": "listed",
+   "cuisine": "Barbecue",
+   "area": "Downtown (Arts District)",
+   "venue": "Downtown",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "official": "https://www.soulbellybbq.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Sparrow and Wolf",
+   "award": "listed",
+   "cuisine": "New American",
+   "area": "Chinatown",
+   "venue": "Chinatown",
+   "hours": "Mon–Wed & Fri–Sun 5–10 PM; pasta tasting Tue 5–10 PM; Closed Thu",
+   "hoursStatus": "v",
+   "price2": "Menu: starters ~$18–24, handmade pastas ~$24–32, mains ~$42–68",
+   "priceNote": "Price-for-two total not published — illustrative menu ranges from the official menu.",
+   "official": "https://www.sparrowandwolflv.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed). Hours differ between its own site and the MICHELIN listing per a prior session (F-10). Tue evenings are a separate pasta tasting menu; Thu closed (official site, session c88d116c 2026-11-27).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Stubborn Seed",
+   "award": "listed",
+   "cuisine": "Contemporary",
+   "area": "The Strip",
+   "venue": "Resorts World",
+   "hours": "Sun & Wed–Thu 5–9 PM; Fri–Sat 5–10 PM; Closed Mon–Tue",
+   "hoursStatus": "v",
+   "price2": "Tasting $95/person + $65 pairing; à la carte pastas ~$30s, mains ~$50s–$70s",
+   "priceNote": "A two-person total is not published; tasting for two ≈ $190 + $130 pairings before tax/fees (menu, official site).",
+   "official": "https://www.rwlasvegas.com/restaurant/stubborn-seed/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Recommended (listed).",
+   "flagIds": [
+    "F-10"
+   ]
+  },
+  {
+   "name": "Wing Lei",
+   "award": "listed",
+   "cuisine": "Cantonese",
+   "area": "The Strip",
+   "venue": "Wynn",
+   "hours": "Thu and Sun–Mon 5:30–9:30 PM; Fri–Sat 5:30–10:00 PM; closed Tue–Wed.",
+   "hoursStatus": "v",
+   "price2": "",
+   "priceNote": "Main menu is published as a PDF; prices were not extracted, so no total is given.",
+   "official": "https://www.wynnlasvegas.com/dining/fine-dining/wing-lei",
+   "menu": "https://cdn.wynnresorts.com/image/upload/v1781902951/visitwynn_pdfs_files/wing-lei-main-menu-new.pdf",
+   "social": [],
+   "socialStatus": "u",
+   "note": "2026 Recommended (listed — NOT starred in the 2026 guide), despite Forbes Five-Star and a business-casual dress code. Children under 5 not permitted. Located in Wynn Tower Suites.",
+   "flagIds": [
+    "F-09"
+   ]
+  }
+ ]
+}

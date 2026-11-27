@@ -1,0 +1,29 @@
+name: Validate canonical planner
+
+on:
+  pull_request:
+  push:
+    branches: [main, "arena/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Build and verify the root planner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Rebuild the planner
+        run: python3 scripts/build_plan.py
+      - name: Verify data, sources, links and markup
+        run: python3 scripts/check_plan.py
+      - name: Fail if committed pages are out of date
+        run: |
+          git diff --exit-code -- index.html restaurants.html hotels.html booking.html activities.html transit.html questions.html suggestions.html flagged.html sources.html repo-review.html

@@ -1,0 +1,254 @@
+{
+ "basis": "Two adults. Costs are for two where the official price is per person and states it. Hours are the venue's published schedule as captured 2026-11-27.",
+ "rows": [
+  {
+   "name": "Bellagio Conservatory & Botanical Gardens",
+   "area": "Center Strip — inside Bellagio",
+   "hours": "Display dates: Lunar New Year Jan 9 – Mar 6, 2027; gardens dark Mar 7–12; Spring Mar 13 – May 15, 2027. Daily opening hours not published on the captured page.",
+   "hoursStatus": "p",
+   "price2": "",
+   "priceNote": "No admission price is published on the captured page; the garden itself is presented as an open display. Not stated as free on the page, so left blank.",
+   "transit": "0 min if staying at Bellagio; otherwise walkable from the center Strip. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "14,000 sq ft, seasonal installation changes five times a year. The Feb 15–18 window falls inside the Lunar New Year display, not a dark period — verified against the official show-date list.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "High Roller Observation Wheel",
+   "area": "Center Strip — The LINQ",
+   "hours": "Tickets: daytime daily 12:00–5:00 PM; anytime daily 12:00 PM–close. Page banner showed 'Opens 12:30 PM'. One rotation ≈30 minutes. Operating grid: Sun 12:30 PM–1:30 AM; Mon–Thu 12:30–11:30 PM; Fri–Sat 12:30 PM–1:30 AM.",
+   "hoursStatus": "v",
+   "price2": "$47.00 daytime / $69.50 anytime / $120.00 Happy Half Hour",
+   "priceNote": "Adult daytime $23.50pp, anytime $34.75pp, Happy Half Hour (21+) $60pp, plus taxes and fees. Two adults = $47 / $69.50 / $120 before taxes and fees. Youth $8.50 daytime / $17.50 anytime; children 3 and under free.",
+   "transit": "Center Strip at The LINQ. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
+   "social": [
+    {
+     "label": "Caesars Palace Instagram (parent property, official footer link)",
+     "url": "https://www.instagram.com/caesarspalace/"
+    }
+   ],
+   "socialStatus": "p",
+   "note": "550 ft, largest observation wheel in North America, 28 cabins. Caesars Rewards Diamond/Seven Stars ride free; Platinum/Gold buy-one-get-one (limit 2/month). Warning: highroller.com is NOT this attraction (served unrelated content on 2026-11-27) — book only via the official Caesars page.",
+   "flagIds": []
+  },
+  {
+   "name": "The Mob Museum",
+   "area": "Downtown — 300 Stewart Ave",
+   "hours": "Daily 9:00 AM–9:00 PM. The Underground (speakeasy) Sun–Thu 11:00 AM–11:00 PM, Fri–Sat 11:00 AM–midnight. Early closures posted separately.",
+   "hoursStatus": "v",
+   "price2": "",
+   "priceNote": "Ticket price not captured from the official ticket page.",
+   "transit": "Downtown, 300 Stewart Ave. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://themobmuseum.org/plan-your-visit/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Housed in the 1933 federal courthouse; four floors; working distillery and Prohibition-era bar downstairs. Online tickets are discounted vs. door per the official page.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "The Neon Museum",
+   "area": "Downtown — 770 Las Vegas Blvd N",
+   "hours": "Daily 3:00–11:00 PM (Sept–May schedule), last entry 10:00 PM; box office closes 1 hour before closing. June–August runs 8:00 PM–midnight.",
+   "hoursStatus": "v",
+   "price2": "",
+   "priceNote": "Ticket price not captured; the official site sells timed entry and notes that from Jan 1, 2027 arriving outside your slot may cost extra. 2027 admission was listed 'From $21' on the official site (2026-11-27); the exact per-person figure for trip dates was not confirmed, so the total stays blank.",
+   "transit": "Downtown, 770 Las Vegas Blvd N. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://neonmuseum.org/your-visit/",
+   "social": [
+    {
+     "label": "Instagram @theneonmuseumlasvegas (official footer link)",
+     "url": "https://www.instagram.com/theneonmuseumlasvegas/"
+    },
+    {
+     "label": "TikTok @neonmuseumlasvegas (official footer link)",
+     "url": "https://www.tiktok.com/@neonmuseumlasvegas"
+    },
+    {
+     "label": "Facebook /NeonMuseum (official footer link)",
+     "url": "https://www.facebook.com/NeonMuseum"
+    }
+   ],
+   "socialStatus": "v",
+   "note": "Outdoor Neon Boneyard; tours can be cancelled for lightning, high wind or heat above 100°F. February evening visits avoid the heat risk.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "Fremont Street Experience",
+   "area": "Downtown",
+   "hours": "Viva Vision canopy shows FREE at the top of every hour, 6 PM–2 AM daily.",
+   "hoursStatus": "v",
+   "price2": "Free",
+   "priceNote": "Viva Vision light shows are free; no reservation. SlotZilla zipline is paid (price not extracted).",
+   "transit": "Downtown pedestrian mall. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://www.vegasexperience.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Free-to-enter district. Viva Vision: 16.4M pixels, 1,375 × 90 ft canopy, 90 ft above the mall. Live music on 3 stages; SlotZilla zipline (Zip-Zilla seated / Super-Hero Zoom) paid.",
+   "flagIds": []
+  },
+  {
+   "name": "Sphere",
+   "area": "East of the Strip (Venetian adjacent)",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "Event-dependent pricing; nothing captured for February 2027.",
+   "transit": "Adjacent to The Venetian via pedestrian bridge. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://www.thespherevegas.com/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Programme for Feb 2027 was not published/retrieved; check the official calendar before planning a day around it. Show runs (official shows page, 2026-11-27): Wizard of Oz on sale now; Eagles ended Jan 23, 2027 and Backstreet Boys ended Jan 2, 2027 — both BEFORE the trip window; Metallica Jan 28–Mar 13, 2027 overlaps the window but February dates were not confirmed. Venue is cashless, mobile tickets via Ticketmaster; ticket prices not extracted.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "Gondola rides at The Venetian",
+   "area": "Center-North Strip — The Venetian",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "transit": "0 min if staying at The Venetian.",
+   "transitStatus": "u",
+   "official": "https://www.venetianlasvegas.com/attractions/gondola-rides.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Indoor and outdoor canals; pricing tiers not captured.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "Omega Mart at AREA15",
+   "area": "Off-Strip (AREA15)",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "transit": "Near the west side of the Strip; no public-transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://www.meowwolf.com/visit/las-vegas",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Immersive art installation; timed tickets.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "Hoover Dam",
+   "area": "Southeast of the Strip, at the Nevada/Arizona border",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "Tour pricing and hours were not retrievable from the current official page in prior sessions — recheck before booking a day trip.",
+   "transit": "No rail service; car or tour bus only. Drive time not verified from an official source.",
+   "transitStatus": "u",
+   "official": "https://www.usbr.gov/lc/hooverdam/",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Outside the walkable/transit core; treat as a full-day car trip.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "Red Rock Canyon National Conservation Area",
+   "area": "West of the Strip",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "transit": "No public transit to the scenic drive per prior sessions; car required. Drive time not verified.",
+   "transitStatus": "u",
+   "official": "https://www.blm.gov/visit/red-rock-canyon",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Timed-entry reservation system may apply; check the BLM page.",
+   "flagIds": [
+    "F-16",
+    "F-02"
+   ]
+  },
+  {
+   "name": "Valley of Fire State Park",
+   "area": "Northeast of the Strip",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "",
+   "transit": "Car required. Travel time not verified; treat as a dedicated day trip.",
+   "transitStatus": "u",
+   "official": "https://parks.nv.gov/parks/valley-of-fire",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option.",
+   "flagIds": [
+    "F-16"
+   ]
+  },
+  {
+   "name": "Bellagio Fountains",
+   "area": "Center Strip — Bellagio",
+   "hours": "Mon–Fri: every 30 min 3:00–7:30 PM, then every 15 min 8:00 PM–midnight. Sat/Sun/holidays: every 30 min 12:00–7:30 PM, then every 15 min 8:00 PM–midnight.",
+   "hoursStatus": "v",
+   "price2": "Free",
+   "priceNote": "Free outdoor show; no reservation.",
+   "transit": "Center Strip at Bellagio. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "1,000+ fountains; water to 460 ft; spans 1,000+ ft. Outdoor show — weather cancellations possible.",
+   "flagIds": []
+  },
+  {
+   "name": "Shark Reef Aquarium (Mandalay Bay)",
+   "area": "South Strip — Mandalay Bay",
+   "hours": "Daily 10:00 AM–8:00 PM; last admission 7:00 PM. Guided tours Mon–Sat 3:00 PM; Sun 1:00/2:00/3:00 PM.",
+   "hoursStatus": "v",
+   "price2": "$58.00 timed entry / $72.00 anytime",
+   "priceNote": "Timed entry: Adult $29, Seniors (65+) $27, Children (5–12) $24, 4 and under free. Anytime: Adult $36, Seniors $34, Children $31. Two adults = $58 timed / $72 anytime. Includes Undersea Explorer VR (ages 5+). Timed entry covers a one-hour window — reserve ahead, peak times sell out.",
+   "transit": "South Strip at Mandalay Bay. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Anytime tickets valid any time on date of entry (limited quantity). Nevada-resident $3 discount at the box office with NV ID; aquarium may close early for private events.",
+   "flagIds": []
+  },
+  {
+   "name": "KÀ by Cirque du Soleil (MGM Grand)",
+   "area": "Center Strip — MGM Grand",
+   "hours": "",
+   "hoursStatus": "u",
+   "price2": "",
+   "priceNote": "Ticket prices not extracted — left blank.",
+   "transit": "Center Strip at MGM Grand. No transit time retrieved.",
+   "transitStatus": "u",
+   "official": "https://www.cirquedusoleil.com/ka",
+   "social": [],
+   "socialStatus": "u",
+   "note": "Epic story of imperial twins; Wushu, Chinese Opera, Capoeira, Wheel of Death (official Cirque page). Showtimes and prices not captured.",
+   "flagIds": [
+    "F-16"
+   ]
+  }
+ ]
+}
