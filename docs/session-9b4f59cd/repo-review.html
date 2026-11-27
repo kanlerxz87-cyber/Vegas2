@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repo review · Las Vegas Trip Planner</title>
+<meta name="description" content="Source-verified Las Vegas trip plan for two adults, Feb 15 – Mar 23, 2027. Hotels, MICHELIN restaurants, activities and open questions, each row linked to an official source.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="bar">
+<a class="brand" href="index.html">Las Vegas <span>2027</span></a>
+<button class="navbtn" id="navbtn" aria-label="Toggle navigation" aria-expanded="false">&#9776; Menu</button>
+<nav class="main" id="nav" aria-label="Main"><a href="index.html">Home</a><a href="hotels.html">Hotels</a><a href="michelin.html">Michelin</a><a href="activities.html">Activities</a><a href="booking.html">Booking &amp; cost</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged for review</a><a href="repo-review.html" aria-current="page">Repo review</a><a href="sources.html">Sources</a></nav>
+</div></div></header>
+<main class="wrap">
+
+<h1>Repository review</h1>
+<p class="lead">Every finding below was read directly from the checked-out repository or the GitHub API on 2026-11-27; each row gives the file, the line or command, and what it shows. No finding is inferred.</p>
+
+<div class="note"><strong>Verdict.</strong> The repository is not broken — all 5 published session sites and the two root builds resolve their internal links (0 broken local refs across docs/**/*.html and 7 root pages). The problems are duplication, drift between published pages, and a deploy configuration that serves unchecked files.</div>
+
+<h2>Findings</h2>
+<div class="tablewrap"><table>
+<caption>11 findings, each with the file or command that produced it.</caption>
+<thead><tr><th>ID</th><th>Severity</th><th>Finding</th><th>Evidence, impact and fix</th><th>Where</th></tr></thead>
+<tbody><tr id="R-01">
+<td><strong>R-01</strong></td>
+<td><span class="b bx">high</span></td>
+<td><strong>Published pages contradict each other on hotel pricing</strong></td>
+<td>The Pages root page index.html line 58 states &#x27;Caesars Palace $226/nt + tax ($1,582/7nts before tax) • The Venetian $6,170.43 all-in for 7 nts&#x27;. Today&#x27;s live check of the same official engines for the same dates returns Caesars run-of-house at $209/night (→ $1,463) and The Venetian returning no price at all. Two different figures for the same hotel and week are live at once, and the Venetian figure cannot be reproduced today.<br><br><em>Impact:</em> Two different all-in numbers for the same hotel and week are live at once; the Venetian figure cannot be reproduced today.<br><em>Fix:</em> Re-price both hotels and publish one dated snapshot; state the capture date next to every price.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html" target="_blank" rel="noopener">index.html</a></td>
+</tr><tr id="R-02">
+<td><strong>R-02</strong></td>
+<td><span class="b bx">high</span></td>
+<td><strong>An unverified travel time is presented as fact</strong></td>
+<td>index.html line 63: &#x27;reachable in ~15–20 minutes by car, rideshare, RTC Deuce bus, or the Las Vegas Monorail&#x27;. No official page publishes that figure. The same page&#x27;s own footnote says travel times are unverified.<br><br><em>Impact:</em> A reader could plan around 15–20 minutes. The honest position is &#x27;no published travel-time data&#x27;.<br><em>Fix:</em> Replace with the documented frequencies (Deuce ~every 15 min; Monorail every 4–8 min) and a link to the RTC trip planner.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html" target="_blank" rel="noopener">index.html line 63</a></td>
+</tr><tr id="R-03">
+<td><strong>R-03</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>Wrong lead time quoted for the MICHELIN Guide date</strong></td>
+<td>index.html line 48 says the guide was &#x27;awarded Aug 26, 2026&#x27;. The MICHELIN press release is dated 31 Aug 2026 (&#x27;31 Aug 2026&#x27;).<br><br><em>Impact:</em> Minor factual error on the landing page of the site the owner sees.<br><em>Fix:</em> Change to 31 Aug 2026.</td>
+<td class="src"><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener">index.html line 48</a></td>
+</tr><tr id="R-04">
+<td><strong>R-04</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>Trip length is stated three different ways</strong></td>
+<td>index.html line 43 says &#x27;Preferred: Feb 15 – 18, 2027 (3–4 nights)&#x27;. Feb 15→18 is 3 nights, not 3–4. The brief also asks for 1–2 weeks and for 7-night prices.<br><br><em>Impact:</em> The single most important input to every price calculation is ambiguous.<br><em>Fix:</em> State &#x27;3 nights (Feb 15–18)&#x27; and keep 7-night and 14-night as explicitly separate scenarios.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html" target="_blank" rel="noopener">index.html line 43</a></td>
+</tr><tr id="R-05">
+<td><strong>R-05</strong></td>
+<td><span class="b bx">high</span></td>
+<td><strong>Two build systems publish to the same Pages URL with different configurations</strong></td>
+<td>The GitHub Pages API reports build_type &#x27;legacy&#x27;, source branch &#x27;main&#x27;, path &#x27;/&#x27;. The workflow .github/workflows/pages.yml uploads the &#x27;docs&#x27; directory (line 27). Under legacy root hosting the live root is the repository root (index.html + assets/), while the workflow deploys docs/.<br><br><em>Impact:</em> Careful readers can see different content at / and in the Actions artifact. Five separate session sites (059c3126, 2e5e3452, 36cc5108, b29fc34e, d33551df) also coexist with overlapping subject matter.<br><em>Fix:</em> Pick one source (docs/ recommended) in Settings → Pages, and add a root redirect to it.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/.github/workflows/pages.yml" target="_blank" rel="noopener">.github/workflows/pages.yml</a></td>
+</tr><tr id="R-06">
+<td><strong>R-06</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>CI never checks the pages actually served at the root</strong></td>
+<td>Every workflow gates only generated session folders (pages-check.yml → docs/session-059c3126; validate.yml → docs/session-b29fc34e; validate-field-notes.yml → docs/session-2e5e3452). No workflow validates the seven root HTML pages that legacy hosting serves.<br><br><em>Impact:</em> Errors R-01 to R-04 could not have been caught by CI, and can repeat any time the root pages are hand-edited.<br><em>Fix:</em> Add a check that parses each root page, requires a &lt;a href&gt; source on every table row, and fails on placeholder text.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/tree/main/.github/workflows" target="_blank" rel="noopener">.github/workflows/</a></td>
+</tr><tr id="R-07">
+<td><strong>R-07</strong></td>
+<td><span class="b bu">low</span></td>
+<td><strong>A published session page still carries a superseded star count</strong></td>
+<td>docs/session-36cc5108/flagged.html contains the phrase &#x27;three starred&#x27; inside flag F29, describing an older dashboard. The live total is four.<br><br><em>Impact:</em> Low, because the same text is explaining that the old figure was wrong, but a keyword search for &#x27;three starred&#x27; surfaces it as if current.<br><em>Fix:</em> Quote the old figure in quotation marks and add &#x27;superseded&#x27; beside it.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/docs/session-36cc5108/flagged.html" target="_blank" rel="noopener">docs/session-36cc5108/flagged.html</a></td>
+</tr><tr id="R-08">
+<td><strong>R-08</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>The primary price comparison uses a room type the brief may not accept</strong></td>
+<td>For Caesars Palace on Feb 15–22, 2027 the engine offered &#x27;Room Type Assigned on Arrival&#x27; ($209/night) and &#x27;Julius Deluxe 1 King&#x27; ($214/night). No two-queen room appeared. &#x27;Assigned on arrival&#x27; does not guarantee a queen-or-larger bed, which the brief requires.<br><br><em>Impact:</em> A savings figure may rest on a room that cannot be shown to meet the bed requirement.<br><em>Fix:</em> Only compare named 2-queen rooms; treat run-of-house rates as ineligible for this trip.</td>
+<td class="src"><a href="https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&amp;departureDate=02/22/2027&amp;dateSearchFormat=exact-dates&amp;propCode=clv&amp;numberOfAdults=2&amp;numberOfRooms=1" target="_blank" rel="noopener">data via live search</a></td>
+</tr><tr id="R-09">
+<td><strong>R-09</strong></td>
+<td><span class="b bu">low</span></td>
+<td><strong>No LICENSE file in the repository</strong></td>
+<td>ls LICENSE* → &#x27;No such file or directory&#x27;. There is a .gitignore (4 rules) and a README that begins with the planner description.<br><br><em>Impact:</em> Anyone reusing the repository has no stated licence terms. Not a site defect.<br><em>Fix:</em> Add a LICENSE (the owner&#x27;s choice of terms).</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">repository root</a></td>
+</tr><tr id="R-10">
+<td><strong>R-10</strong></td>
+<td><span class="b bu">low</span></td>
+<td><strong>Root pages carry raw HTML entity/emoji markup</strong></td>
+<td>index.html contains 3 occurrences of raw &#x27;&amp;#x&#x27; entity sequences including an inline SVG favicon built from escaped markup in the href attribute.<br><br><em>Impact:</em> Cosmetic and fragile: some browsers and validators reject a data-URI SVG written that way.<br><em>Fix:</em> Move the favicon to a real .svg file.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/index.html" target="_blank" rel="noopener">index.html</a></td>
+</tr><tr id="R-11">
+<td><strong>R-11</strong></td>
+<td><span class="b bp">medium</span></td>
+<td><strong>README points at a live site whose root is not the documented site</strong></td>
+<td>README says the session planner is published at &#x27;/session-059c3126/&#x27; and the landing page is &#x27;the verified landing page&#x27;; index.html has 0 links to docs/ and docs/index.html has 0 links back to the root, so the two halves of the published site are not navigable from one another.<br><br><em>Impact:</em> A visitor landing at / cannot reach the detailed verified pages; a visitor in docs/ cannot get back.<br><em>Fix:</em> Add one link each way, or serve a single site.</td>
+<td class="src"><a href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/README.md" target="_blank" rel="noopener">README.md</a></td>
+</tr></tbody></table></div>
+
+<h2>Checks that passed</h2>
+<ul class="sum"><li>0 broken local references across every HTML file in docs/** (checked 40 pages).</li><li>0 broken local references across the 7 root HTML pages.</li><li>No loopback-host strings, placeholder lorem text, or developer code markers in any published HTML, JS or CSS under docs/, site/, assets/ or field-notes/.</li><li>All five session sites build reproducibly under their own check scripts; python3 scripts/check_site.py, validate_field_notes.py and check_session_b29fc34e.py all exit 0.</li><li>Pages is enabled, public, HTTPS-enforced, and the latest build status is &#x27;built&#x27;.</li></ul>
+
+<h2>How this was checked</h2>
+<ul class="plain">
+<li>Every HTML file under <code>docs/</code>, <code>site/</code>, <code>field-notes/</code> and the repository root was parsed and each relative <code>href</code>/<code>src</code> resolved on disk.</li>
+<li>The GitHub Pages API was read directly for the deployment configuration.</li>
+<li>Each session's own validation script was executed and its exit code recorded.</li>
+<li>Live prices were re-read from the official booking engines on 2026-11-27 and compared with the numbers already published.</li>
+<li>No file outside this session's scope was modified. Findings are reported here instead of edited elsewhere, per the shared coordination rules.</li>
+</ul>
+
+</main>
+<footer class="foot"><div class="wrap">
+<p><strong>Data captured 2026-11-27 from official sources only.</strong> Hotel and restaurant prices are dynamic and will change. A cell is filled only when an official source confirmed it; everything else says <span class="b bu">Unverified</span> and links to the flag that explains why.</p>
+<p><a href="index.html">Home</a> · <a href="flagged.html">Flagged for review</a> · <a href="sources.html">All sources</a> · <a href="https://github.com/kanlerxz87-cyber/Vegas2" target="_blank" rel="noopener">Repository</a></p>
+</div></footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=document.getElementById('navbtn'),n=document.getElementById('nav');
+  if(b&&b.contains(e.target)){n.classList.toggle('open');return}
+  if(n&&n.contains(e.target)){n.classList.remove('open')}
+});
+</script>
+</body>
+</html>
