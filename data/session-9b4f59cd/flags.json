@@ -1,0 +1,172 @@
+{
+ "as_of": "2026-11-27",
+ "intro": "Every item below is either unverified, a conflict between two official sources, or a data gap. Nothing here blocks the site from publishing; each item is listed so a decision can be made with eyes open.",
+ "items": [
+  {
+   "id": "F-01",
+   "title": "The Venetian publishes no price for February 2027",
+   "severity": "high",
+   "kind": "missing value",
+   "detail": "The official booking calendar for Feb 15–22, 2027 displayed a placeholder string in place of a rate on every February 2027 date. The hotel therefore has no verified price despite hosting the largest Michelin cluster.",
+   "impact": "Venetian cannot be ranked on cost at all. It can only be ranked on Michelin count and room fit.",
+   "source": "https://www.venetianlasvegas.com/booking?adults%5B%5D=2&arrival_date=2027-02-15&children%5B%5D=0&departure_date=2027-02-22&view=calendar",
+   "next": "Check again closer to the date or ask the property for a quote."
+  },
+  {
+   "id": "F-02",
+   "title": "Five hotels have no verified 2027 price",
+   "severity": "high",
+   "kind": "missing value",
+   "detail": "MGM Grand, The Cosmopolitan and Bellagio booking pages returned errors (HTTP 500 / page errors), The Venetian's calendar published no rate, and Wynn returned an average nightly rate without a confirmed tax and fee basis, so no total can be stated. Four of the five carry MICHELIN restaurants.",
+   "impact": "Any price ranking excludes four of the five hotels that have a MICHELIN restaurant on campus. The 'best hotel by price' answer is therefore incomplete, not negative.",
+   "source": "https://mgmgrand.mgmresorts.com/en/hotel/rooms.html",
+   "next": "Retry the MGM Resorts booking flow, The Venetian calendar and the Wynn engine; ask each property for a written all-in quote for Feb 15–22, 2027."
+  },
+  {
+   "id": "F-03",
+   "title": "Two official sources disagree on the number of Bib Gourmands",
+   "severity": "medium",
+   "kind": "source conflict",
+   "detail": "The MICHELIN press release lists exactly 3 Las Vegas Bib Gourmands (China Poblano, Esther's Kitchen, YEN Viet Kitchen). The Visit Las Vegas page says '24 distinctions' and names four Bib Gourmands, adding a fourth name not in the release. Both are official domains.",
+   "impact": "The Las Vegas total could be 24 (17 Recommended + 3 Bib + 4 stars) or the DMO's slightly different split. Star count is unaffected — both sources agree on 4 starred restaurants.",
+   "source": "https://www.visitlasvegas.com/michelin-guide-restaurants/",
+   "source2": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s",
+   "next": "Treat the MICHELIN press release as authoritative for award class; treat the DMO list as a discovery aid."
+  },
+  {
+   "id": "F-04",
+   "title": "Wynn's $833 average nightly has an unconfirmed fee basis",
+   "severity": "medium",
+   "kind": "unverified",
+   "detail": "The booking engine returned '$833 Avg/Night Includes ...' and the string was truncated before stating what it includes. Wynn separately states a $55/night resort fee plus tax.",
+   "impact": "No 7-night total is shown for Wynn. Multiplying $833 × 7 could overstate or understate the real bill.",
+   "source": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&rmID=68658&checkIn=02/15/2027&checkOut=02/22/2027&adults=2&children=0",
+   "next": "Re-open the rate block and read the inclusion line before comparing Wynn on price."
+  },
+  {
+   "id": "F-05",
+   "title": "South Point's fee wording is internally inconsistent",
+   "severity": "medium",
+   "kind": "source conflict",
+   "detail": "The engine's rate banner says 'Prevailing Rates include a $29.20 daily resort fee. Taxes not included.' while the room cards say 'Including all fees'. A prior session also recorded the public rate page quoting $33/night.",
+   "impact": "South Point's $989 may or may not include the full resort fee. It is the cheapest hotel-issued 7-night total, so this matters for the ranking.",
+   "source": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+   "next": "Request an itemised quote from the property showing room, tax and resort fee separately."
+  },
+  {
+   "id": "F-06",
+   "title": "Per-couple restaurant prices missing for 20 of 24 Michelin listings",
+   "severity": "high",
+   "kind": "missing value",
+   "detail": "Four restaurants publish a usable price on an official page: Michael Mina ($295++ per person), Partage ($130/$160/$210 per person for 5/7/9 courses), Anima by EDO ($85 per person tasting menu) and Restaurant Guy Savoy (à-la-carte dish prices, summed into scenarios). The other 20 publish no price.",
+   "impact": "A total dining budget cannot be built from official data alone. The table shows blank prices rather than estimates, and the four known prices are multiplied by two diners and labelled.",
+   "source": "https://www.visitlasvegas.com/michelin-guide-restaurants/",
+   "next": "OpenTable/MICHELIN Guide menu pages per restaurant, or ask each property for its current tasting-menu price."
+  },
+  {
+   "id": "F-07",
+   "title": "Starred menus are priced per dish, not per person",
+   "severity": "medium",
+   "kind": "method note",
+   "detail": "Guy Savoy and Partage quote dish or course prices. Multiplying by two diners gives a food-only subtotal, excluding tax, gratuity, wine and add-ons.",
+   "impact": "The $420–$2,080 Guy Savoy range is a scenario spread, not an expected bill. Presenting one number would be misleading.",
+   "source": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy/main-menu",
+   "source2": "https://partage.vegas/menu",
+   "next": "Ask for the current tasting-menu price per person including service."
+  },
+  {
+   "id": "F-08",
+   "title": "Hours and prices not published by many official sites",
+   "severity": "medium",
+   "kind": "missing value",
+   "detail": "Hours and prices are published inconsistently. Since the last pass, official hours were confirmed for Kabuto (daily 5:30–9:00 PM), Lamaii Chinatown (Mon–Wed 11–12, Thu–Sun 11–2), SoulBelly BBQ (Tue–Sun) and Anima by EDO (nightly from 5 PM). Still unconfirmed: Esther's Kitchen, YEN Viet Kitchen, Sparrow + Wolf, Kame Omakase, and day-by-day grids for Guy Savoy.",
+   "impact": "Day-by-day itinerary planning now has confirmed hours for more venues, but a full week cannot be built for the restaurants that publish no weekly grid.",
+   "source": "https://www.estherslv.com/",
+   "source2": "https://www.yenvietkitchen.com/",
+   "next": "Use each venue's reservation widget (OpenTable/SevenRooms) which usually exposes service times."
+  },
+  {
+   "id": "F-09",
+   "title": "Michael Mina is currently closed and its February 2027 status is unknown",
+   "severity": "medium",
+   "kind": "unverified",
+   "detail": "Bellagio's official page lists Michael Mina as 'Monday to Sunday: Closed' with seasonal closures Nov 22–30 and Dec 6–8, 13–15, 20–22. No reopening date is published.",
+   "impact": "Bellagio's only Michelin restaurant may not be operating during the trip. Bellagio should not be selected on the strength of that restaurant alone.",
+   "source": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html",
+   "next": "Call Bellagio (702.693.7223) to confirm February 2027 service."
+  },
+  {
+   "id": "F-10",
+   "title": "Red Rock Canyon has no public transit and needs a timed-entry reservation",
+   "severity": "medium",
+   "kind": "constraint",
+   "detail": "Vehicle entry requires a timed-entry reservation 1 Oct–31 May, 8 AM–5 PM, booked through Recreation.gov. The RTC does not serve the canyon.",
+   "impact": "Any plan that assumes bus or monorail access to Red Rock is not viable. Transport must be a rental car or rideshare.",
+   "source": "https://www.redrockcanyonlv.org/visitation-reminder-october-1-to-may-31/",
+   "next": "Book timed entry once the date is fixed; add car rental or rideshare to the budget."
+  },
+  {
+   "id": "F-11",
+   "title": "There is no subway or metro in Las Vegas",
+   "severity": "high",
+   "kind": "brief conflict",
+   "detail": "The brief asks for Michelin restaurants 'within 1 hour of travel by subway or bus'. Las Vegas has no subway or metro rail. Public options are the RTC bus network (including the Deuce on the Strip) and the privately operated Las Vegas Monorail.",
+   "impact": "All '1 hour by subway' analysis was re-scoped to bus + monorail. Distances that are not served by either are flagged rather than assumed.",
+   "source": "https://www.rtcsnv.com/",
+   "source2": "https://www.lvmonorail.com/stations/",
+   "next": "Confirm whether car/rideshare time may substitute for the 1-hour transit rule."
+  },
+  {
+   "id": "F-12",
+   "title": "Derived totals are labelled, not presented as official",
+   "severity": "low",
+   "kind": "method note",
+   "detail": "Where a hotel published only a nightly rate, the 7-night figure is that rate × 7 and is marked 'derived'. Only South Point and Resorts World issued genuine multi-night totals.",
+   "impact": "Derived totals exclude taxes and resort-fee tax. Clark County room tax was not verified for these bookings, so no percentage is applied and no all-in figure is implied.",
+   "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=flv&numberOfAdults=2&numberOfRooms=1",
+   "next": "Use the booking engine's 'Total Price' toggle for a true all-in figure before deciding."
+  },
+  {
+   "id": "F-13",
+   "title": "Feb 15, 2027 is a federal holiday",
+   "severity": "low",
+   "kind": "context",
+   "detail": "OPM lists Monday, February 15, 2027 as Washington's Birthday. The preferred arrival date is therefore a US federal holiday, which usually means higher demand and heavier traffic.",
+   "impact": "Arrival-day pricing and crowds may be elevated; the Feb 15–22 week was still the cheapest of the weeks tested.",
+   "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "next": "Consider arriving Feb 16 to avoid holiday demand, then re-check prices."
+  },
+  {
+   "id": "F-14",
+   "title": "Social-media links verified for only 6 of 33 listed venues",
+   "severity": "medium",
+   "kind": "missing value",
+   "detail": "A social link is recorded only where the venue's own official site publishes it. That is true for The Neon Museum (Instagram, TikTok, Facebook), SoulBelly BBQ (@soulbellybbqlv), Anima by EDO (@animabyedo) and Kabuto (@kabutolv, confirmed by the venue's own embedded post). The remaining venues publish no social account on any official page reached in this session, so those cells stay blank.",
+   "impact": "The requested YouTube/TikTok/Instagram column is populated wherever the venue itself links an account, and blank elsewhere. Guessing handles is not acceptable: a check of instagram.com/estherskitchen returned a Miami-based Haitian caterer, not the Las Vegas restaurant, which is exactly the impersonation risk this rule avoids.",
+   "source": "https://neonmuseum.org/",
+   "next": "Each venue's own footer, or a platform search confirmed against a post that names the address and phone. Where a handle can be tied to the venue's address, add it; do not infer from the restaurant name."
+  },
+  {
+   "id": "F-15",
+   "title": "Trip length in the brief conflicts with itself",
+   "severity": "medium",
+   "kind": "brief conflict",
+   "detail": "The brief asks for a 1–2 week trip, then names Feb 15–18, 2027 (3 nights) as the preferred vacation time, and also asks for hotel costs on a 7-night basis.",
+   "impact": "Three different durations were priced separately rather than merged: 3 nights (preferred), 7 nights (cost basis) and 14 nights (1–2 week goal).",
+   "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+   "source2": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-03-01&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1",
+   "next": "Pick one duration; only South Point quoted a 14-night stay."
+  },
+  {
+   "id": "F-16",
+   "title": "Travel times to each venue were not published by RTC or Monorail",
+   "severity": "high",
+   "kind": "missing value",
+   "detail": "Neither RTC nor the Monorail publishes a venue-to-venue travel-time table. The Deuce is documented as running about every 15 minutes, and the Monorail every 4–8 minutes, but door-to-door minutes depend on which stop and how far you walk.",
+   "impact": "The 1-hour travel test could not be executed with official numbers. It is shown as a route-availability test (served / not served) instead of a false minute count.",
+   "source": "https://www.rtcsnv.com/ways-to-travel/fares-passes/",
+   "source2": "https://www.lvmonorail.com/stations/",
+   "next": "Run each specific pair through the RTC trip planner for the actual date and record the result."
+  }
+ ]
+}
