@@ -145,3 +145,22 @@ This entry records the active session's additions without replacing the existing
 - The Pages API still reports legacy source `main` `/` and status `built`. Public page checks confirmed the new subsite at `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-2e5e3452/` (the repository's current legacy root source exposes the checked-in `docs/` path). The alternate path without `/docs/` did not resolve under that source configuration.
 - Actions reported an upstream Node.js 20 deprecation advisory; deployment succeeded.
 - Local preview remains served from `field-notes/` on port 4173.
+
+---
+
+## Session `arena/155b420b-vegas2` — final integration (ACTIVE)
+
+**Claimed:** 2026-11-27 (UTC). Session ID `155b420b-vegas2`. Branch `arena/155b420b-vegas2` (Arena pins it; `session-<id>/<task>` naming is not usable).
+
+### Claim
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Consolidate the repository's competing dashboards into one canonical, mobile-first site with a single landing page and category subpages | in progress | 155b420b-vegas2 | root `*.html`, `assets/site/**` |
+| Re-verify Michelin award tiers / hotel room types / rates / activity hours against official sources | in progress | 155b420b-vegas2 | `data/plan/**`, `scripts/**` |
+| Questions, Suggestions and Flagged for Review pages | in progress | 155b420b-vegas2 | `questions.html`, `suggestions.html`, `flagged.html` |
+| Repo review of prior-session artifacts, irregularity report | in progress | 155b420b-vegas2 | `repo-review.html`, `COORDINATION.md` |
+| Build checks, PR to `main`, merge, verify Pages deploy, record result | unclaimed | — | `.github/workflows/**`, `COORDINATION.md` |
+
+**Scope boundaries:** this session edits only the root-level pages, `assets/site/`, `data/plan/`, `scripts/` and `COORDINATION.md`/`README.md`. Every prior session's folder (`docs/session-*/`, `docs/planner-v1/`, `field-notes/`, `site/session-*/`, `legacy-dashboard/`, `data/verified/`, `data/trip/`, `data/*.json`) is treated as read-only historical record and is **not** deleted, moved or edited. Prior sessions' root pages (`index.html`, `hotels.html`, `restaurants.html`, `activities.html`, `questions.html`, `suggestions.html`, `flagged-for-review.html`) are superseded by this session's consolidated root site; their content is preserved by copying into `docs/session-legacy-root/` before replacement (no history lost — files remain in git history too).
+
+**Parallel sessions:** PR #8 (`arena/0f0e637a-vegas2`) and PR #9 (`arena/fd2715d0-vegas2`) are still open from older sessions and touch `docs/` subfolders. They are left open and untouched; this session does not merge or edit them. No active session has claimed a conflicting file scope as of this claim.
