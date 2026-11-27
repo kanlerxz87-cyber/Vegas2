@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-27",
- "method": "Every finding was produced by a command run against the checked-out repository or the GitHub API on 2026-11-27, after rebasing onto main at 76b22b8. Line numbers refer to that commit. Findings that could no longer be reproduced were removed rather than carried forward.",
+ "method": "Every finding was produced by a command run against the checked-out repository or the GitHub API on 2026-11-27, after rebasing onto main at 9630aea. Line numbers refer to that commit. Findings that could no longer be reproduced were removed or rewritten rather than carried forward, including the original 'root pages are unchecked by CI' finding, which main's validate-plan.yml now solves for the root copy.",
  "headline": "Re-audited after the root dashboard was replaced by the integration session (PR #22). The four line-level defects this reviewer originally logged against the old root index.html — conflicting hotel prices, an unsourced '~15–20 minute' travel claim, a wrong MICHELIN reveal date and a '3–4 nights' span for a 3-night window — no longer exist in the tree, so they have been retired rather than repeated. What remains are structural issues that still hold today.",
  "findings": [
   {
@@ -17,13 +17,13 @@
   {
    "id": "R-02",
    "severity": "high",
-   "title": "CI does not validate the pages it deploys",
+   "title": "The docs/ copy of the planner is neither gated nor synced",
    "kind": "missing coverage",
-   "evidence": "The three validators in .github/workflows (pages-check.yml:23, validate.yml:29, validate-field-notes.yml:27) assert only against docs/session-059c3126, docs/session-b29fc34e and docs/session-2e5e3452. Root *.html and docs/*.html — the pages a visitor actually lands on — are rebuilt and compared by nothing.",
-   "impact": "A regression on the landing page or any category page can merge with every check green. The session pages are the best-tested artifacts in the repository; the front door is the least-tested.",
-   "how_to_fix": "Add one job that rebuilds the root site from its generator and fails on `git diff --exit-code`, the same pattern already used for the three session directories.",
-   "source": ".github/workflows/*.yml",
-   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/tree/main/.github/workflows"
+   "evidence": "validate-plan.yml:26-29 rebuilds and diffs the 11 root *.html pages, so those are now covered (this reviewer's earlier 'root pages unchecked' finding is superseded). But pages.yml line 27 uploads 'path: docs', which includes a second copy of the same planner at docs/index.html, docs/hotels.html, docs/booking.html and docs/sources.html. No workflow rebuilds or diffs those files, and they already differ from the root copies they shadow.",
+   "impact": "Under the legacy branch source the published site is served from the root, but under the Actions upload it is served from docs/. The two copies have already drifted, so which version a visitor sees depends on which deployment path last won. The divergence is invisible to CI.",
+   "how_to_fix": "Either delete the duplicated planner from docs/ and let the root be the only copy, or add the docs/ copies to the existing git diff --exit-code step so drift fails the build.",
+   "source": ".github/workflows/pages.yml:27, validate-plan.yml:26-29, docs/index.html",
+   "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/.github/workflows/pages.yml#L27"
   },
   {
    "id": "R-03",
