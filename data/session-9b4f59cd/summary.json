@@ -1,0 +1,70 @@
+{
+ "as_of": "2026-11-27",
+ "window": "Planning window Feb 15 – Mar 23, 2027 · preferred Feb 15–18, 2027",
+ "party": "Two adults · one room · queen-or-larger bed · private bathroom",
+ "headline": [
+  {
+   "k": "Michelin, Las Vegas 2026",
+   "v": "24 distinctions: 4 starred (5 stars total), 3 Bib Gourmand, 17 Recommended — confirmed in the MICHELIN press release.",
+   "src": "ML"
+  },
+  {
+   "k": "Starred restaurants",
+   "v": "Restaurant de Joël Robuchon (2 stars) and three 1-star rooms: é by José Andrés, Guy Savoy, L'Atelier de Joël Robuchon.",
+   "src": "ML"
+  },
+  {
+   "k": "Best Michelin cluster",
+   "v": "The Venetian/Palazzo with 4 restaurants, all Recommended and none starred; MGM Grand holds the most stars (3) in 2 restaurants.",
+   "src": "ML"
+  },
+  {
+   "k": "Cheapest verified 7-night stay",
+   "v": "Flamingo Las Vegas, 2-queen room, $83/night → $581 for Feb 15–22, 2027, excluding tax.",
+   "src": "FLV_BOOK"
+  },
+  {
+   "k": "Cheapest 14-night stay",
+   "v": "South Point, Premium 2 Queens, $2,039 for Feb 15 – Mar 1, 2027 — the only real 14-night quote obtained.",
+   "src": "SP_BOOK14"
+  },
+  {
+   "k": "Only all-in total",
+   "v": "Resorts World Hilton, Deluxe 2 Queens, $2,434.84 for 7 nights with room tax and resort-fee tax included.",
+   "src": "RW_BOOK"
+  },
+  {
+   "k": "Cheapest week tested",
+   "v": "Feb 15–22, 2027 beat Feb 22–Mar 1 and Mar 15–22 at every hotel that quoted all three.",
+   "src": "CLV_BOOK315"
+  },
+  {
+   "k": "Best time to book",
+   "v": "Unverified — no official source publishes a booking-timing forecast. See F-16 and Q-08.",
+   "src": "CLV_BOOK"
+  },
+  {
+   "k": "Transit reality",
+   "v": "Las Vegas has no subway. Public transport is the RTC bus network and the private Monorail; Red Rock Canyon has no bus service at all.",
+   "src": "RTC_FARE"
+  },
+  {
+   "k": "Free things that fit the dates",
+   "v": "Bellagio Conservatory Lunar New Year display runs to Mar 6, 2027; Fountains of Bellagio run daily and are free.",
+   "src": "CONS"
+  }
+ ],
+ "biggest_gaps": [
+  "No verified 2027 price for The Venetian, MGM Grand, The Cosmopolitan, Wynn and Bellagio (F-01, F-02, F-04).",
+  "20 of 24 Michelin restaurants publish no price for two (F-06).",
+  "No official travel-time data, so the 1-hour rule is a route-availability check, not a minutes test (F-16).",
+  "No official basis for 'best time to book' (Q-08)."
+ ],
+ "recommended_path": [
+  "Stay 7 nights, Feb 15–22, 2027 — the cheapest week tested and it matches the 7-night cost basis.",
+  "If budget leads: Flamingo (2 queens, $581 derived) or South Point ($989 hotel-issued, 14-night option available).",
+  "If Michelin access leads: Caesars Palace (Guy Savoy on site, $1,463 derived) or MGM Grand (2 starred restaurants, price still missing).",
+  "If one all-in number matters most: Resorts World, $2,434.84 total.",
+  "Book the starred restaurants early — é by José Andrés releases tables three months ahead and seats nine."
+ ]
+}
