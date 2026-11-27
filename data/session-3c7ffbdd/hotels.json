@@ -1,0 +1,236 @@
+{
+  "verified_date": "2026-11-27",
+  "benchmark_dates": "Mon Feb 15 – Mon Feb 22, 2027 (7 nights, 2 adults)",
+  "ranking_methodology": "Ranked primarily by confirmed Michelin restaurants reachable within <=1 hour by Las Vegas Monorail / RTC bus / direct Strip walk (Strip 13 + Arts District 2 = 15 confirmed corridor venues; Chinatown 6 and Off-Strip West/SW 3 are flagged for exact RTC door-to-door schedule verification), then by live 7-night 2-adult total cost and verified bed/private-bathroom standards.",
+  "hotels": [
+    {
+      "rank": 1,
+      "id": "linq",
+      "name": "The LINQ Hotel + Experience",
+      "area": "Center Strip (Harrah's / The LINQ Monorail Station)",
+      "room_type": "Deluxe Room, 1 Queen, Non-Smoking (Roll-In Shower)",
+      "bed_verified": "1 Queen bed (meets Queen or larger requirement)",
+      "private_bath_verified": "Yes — private bathroom with roll-in shower explicitly listed on Caesars booking engine",
+      "nightly_rate_usd": 77,
+      "seven_night_total_usd": 539,
+      "pricing_basis": "Includes $50/nt resort fee; taxes excluded (official room-list quote)",
+      "resort_fee_detail": "$50/night + tax (included in displayed $77/nt Caesars room-list rate)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (13 Strip via Monorail/walk + 2 Arts District via RTC Deuce); +6 Chinatown / +3 Off-Strip require RTC schedule check",
+      "transit_access": "Direct access to Harrah's/The LINQ Monorail Station (every 4–8 min) and Strip RTC Deuce stops (~15 min headway). Walkable to Venetian/Palazzo (4 Michelin) & Caesars Palace (1★).",
+      "value_verdict": "Best Overall Value & Transit Hub",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=ilv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "property_url": "https://www.caesars.com/linq",
+      "flags": [
+        "Caesars room-list quote includes resort fee but excludes Clark County room tax (~13.38% — verify final checkout total).",
+        "Lowest $77/nt room is the ADA Roll-In Shower Deluxe 1 Queen; verify standard Deluxe 1 King/2 Queens rate if non-ADA layout preferred."
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "flamingo",
+      "name": "Flamingo Las Vegas",
+      "area": "Center Strip (Flamingo / Caesars Palace Monorail Station)",
+      "room_type": "Flamingo Room, 2 Queens, Non-Smoking",
+      "bed_verified": "2 Queen beds (meets Queen or larger requirement)",
+      "private_bath_verified": "Yes — standard private en-suite hotel room on Caesars booking engine",
+      "nightly_rate_usd": 83,
+      "seven_night_total_usd": 581,
+      "pricing_basis": "Includes $50/nt resort fee ($56.63 w/ tax); room taxes excluded (official room-list quote)",
+      "resort_fee_detail": "$50/night ($56.63 with tax; included in displayed $83/nt Caesars room-list rate)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (13 Strip via Monorail/walk + 2 Arts District via RTC Deuce); +6 Chinatown / +3 Off-Strip require RTC schedule check",
+      "transit_access": "On-site Flamingo/Caesars Palace Monorail Station + RTC Deuce stop across from Bellagio & Caesars Palace.",
+      "value_verdict": "Best Standard 2-Queen Center-Strip Value",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=flv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "property_url": "https://www.caesars.com/flamingo-las-vegas",
+      "flags": [
+        "Caesars room-list quote includes resort fee but excludes room tax — confirm final checkout total."
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "horseshoe",
+      "name": "Horseshoe Las Vegas",
+      "area": "Center Strip (Horseshoe / Paris Monorail Station)",
+      "room_type": "Resort Room, 1 King, Non-Smoking",
+      "bed_verified": "1 King bed (larger than Queen)",
+      "private_bath_verified": "Yes — private en-suite bathroom in Resort Room",
+      "nightly_rate_usd": 116,
+      "seven_night_total_usd": 812,
+      "pricing_basis": "Includes $50/nt resort fee; taxes excluded (official room-list quote)",
+      "resort_fee_detail": "$50/night + tax (included in displayed $116/nt Caesars room-list rate)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (13 Strip via Monorail/walk + 2 Arts District via RTC Deuce); +6 Chinatown / +3 Off-Strip require RTC schedule check",
+      "transit_access": "Direct Monorail station at Horseshoe/Paris + RTC Deuce + pedestrian bridge to Bellagio & Cosmopolitan (é 1★, China Poblano Bib).",
+      "value_verdict": "Best Mid-Budget King Room at Center Strip",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=blv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "property_url": "https://www.caesars.com/horseshoe-las-vegas",
+      "flags": [
+        "Caesars room-list quote includes resort fee but excludes room tax — confirm final checkout total."
+      ]
+    },
+    {
+      "rank": 4,
+      "id": "paris",
+      "name": "Paris Las Vegas",
+      "area": "Center Strip (Horseshoe / Paris Monorail Station)",
+      "room_type": "Bordeaux Room, 1 King ($199/nt) or 2 Queens ($203/nt)",
+      "bed_verified": "1 King or 2 Queens (both meet requirement)",
+      "private_bath_verified": "Yes — private marble en-suite bathroom in Bordeaux Room",
+      "nightly_rate_usd": 199,
+      "seven_night_total_usd": 1393,
+      "pricing_basis": "Includes $55/nt resort fee ($62.30 w/ tax); room taxes excluded ($1,421 for 2 Queens)",
+      "resort_fee_detail": "$55/night ($62.30 with tax; included in displayed $199/nt Caesars room-list rate)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (13 Strip via Monorail/walk + 2 Arts District via RTC Deuce); +6 Chinatown / +3 Off-Strip require RTC schedule check",
+      "transit_access": "Indoor promenade to Horseshoe/Paris Monorail Station; directly across Las Vegas Blvd from Bellagio Fountains & Cosmopolitan.",
+      "value_verdict": "Upscale Center-Strip Couples Option",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=plv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "property_url": "https://www.caesars.com/paris-las-vegas",
+      "flags": [
+        "Caesars room-list quote includes resort fee but excludes room tax — confirm final checkout total."
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "caesars-palace",
+      "name": "Caesars Palace",
+      "area": "Center Strip (Across from Flamingo / Caesars Palace Monorail Station)",
+      "room_type": "Julius Deluxe Room, 1 King, Non-Smoking",
+      "bed_verified": "1 King bed (larger than Queen)",
+      "private_bath_verified": "Yes — private bathroom in Julius Deluxe Room",
+      "nightly_rate_usd": 214,
+      "seven_night_total_usd": 1498,
+      "pricing_basis": "Includes $55/nt resort fee ($62.30 w/ tax); room taxes excluded (official room-list quote)",
+      "resort_fee_detail": "$55/night ($62.30 with tax; included in displayed $214/nt Caesars room-list rate)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (includes on-site Restaurant Guy Savoy 1★ + 12 other Strip + 2 Arts District); +6 Chinatown / +3 Off-Strip require RTC schedule check",
+      "transit_access": "On-site 1★ Restaurant Guy Savoy; walk across Las Vegas Blvd to Flamingo/Caesars Palace Monorail Station and RTC Deuce stops.",
+      "value_verdict": "Flagship Center-Strip Luxury with On-Site 1★ Dining",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=clv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "property_url": "https://www.caesars.com/caesars-palace",
+      "flags": [
+        "Caesars room-list quote includes resort fee but excludes room tax — confirm final checkout total.",
+        "Early March surge: Tue Mar 2, 2027 already shows Sold Out on Caesars Palace booking calendar."
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "resorts-world-hilton",
+      "name": "Las Vegas Hilton at Resorts World",
+      "area": "North Strip (3000 S Las Vegas Blvd)",
+      "room_type": "Hilton Deluxe Room, 1 King ($2,200.15 all-in) or 2 Queens ($2,434.84 all-in)",
+      "bed_verified": "1 King or 2 Queens (both meet requirement)",
+      "private_bath_verified": "Yes — private bathroom in Hilton Deluxe Room",
+      "nightly_rate_usd": 314.31,
+      "seven_night_total_usd": 2200.15,
+      "pricing_basis": "ALL-IN total verified at live booking checkout ($385 resort fee + $208.13 room tax + $51.52 resort fee tax included)",
+      "resort_fee_detail": "$55/night ($385 + $51.52 tax for 7 nights; fully included in $2,200.15 total)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (includes on-site Stubborn Seed + Strip via RTC Deuce + Arts District via RTC Deuce); Monorail requires walk/bus to Westgate or SAHARA",
+      "transit_access": "On-site Stubborn Seed (Michelin Recommended); RTC Deuce bus stop directly outside on Las Vegas Blvd; ~12–15 min walk to Wynn (Wing Lei).",
+      "value_verdict": "Best Verified All-In Modern North-Strip Option",
+      "source_url": "https://reservations.rwlasvegas.com/book?selectedTower=HILTON&checkin=2027-02-15&checkout=2027-02-22&adults=2&children=0",
+      "property_url": "https://www.rwlasvegas.com/stay/las-vegas-hilton/",
+      "flags": [
+        "No direct on-site Monorail station; Strip transit relies primarily on RTC Deuce bus."
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "wynn",
+      "name": "Wynn Las Vegas",
+      "area": "North Strip (3131 S Las Vegas Blvd)",
+      "room_type": "Wynn Resort King (640 sq ft)",
+      "bed_verified": "1 King bed (larger than Queen)",
+      "private_bath_verified": "Yes — private oversized marble bathroom with soaking tub and separate shower explicitly confirmed",
+      "nightly_rate_usd": 677,
+      "seven_night_total_usd": 4739,
+      "pricing_basis": "Wynn Cyber Exclusive rate (book Nov 20 – Dec 4, 2026), before tax, incl. up to $300 resort credit & 72-hr cancel (Flexible Getaway is $833/nt = $5,831)",
+      "resort_fee_detail": "$55/night + tax (plus free self-parking confirmed on Wynn booking page)",
+      "michelin_within_1hr_confirmed": 15,
+      "michelin_within_1hr_label": "15 confirmed (includes on-site Wing Lei + walk to Venetian/Palazzo's 4 venues + Strip/Arts District via RTC Deuce)",
+      "transit_access": "On-site Wing Lei (Recommended); pedestrian bridge across Sands Ave directly to Palazzo/Venetian (4 Michelin); RTC Deuce directly on Las Vegas Blvd.",
+      "value_verdict": "Ultra-Luxury Splurge (Book Before Dec 4, 2026 Cyber Deadline)",
+      "source_url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&rmID=68658&checkIn=02/15/2027&checkOut=02/22/2027",
+      "property_url": "https://www.wynnlasvegas.com/",
+      "flags": [
+        "Cyber Exclusive $677/nt offer expires Dec 4, 2026; verify whether displayed $677/nt excludes the $55/nt resort fee and taxes at final checkout."
+      ]
+    },
+    {
+      "rank": 8,
+      "id": "south-point",
+      "name": "South Point Hotel, Casino & Spa",
+      "area": "South Las Vegas Blvd (~6 miles south of Mandalay Bay)",
+      "room_type": "Premium King ($919) or Premium Two Queens ($989)",
+      "bed_verified": "1 King or 2 Queens (both meet requirement)",
+      "private_bath_verified": "Yes — private bathroom in Premium Room",
+      "nightly_rate_usd": 131.29,
+      "seven_night_total_usd": 919,
+      "pricing_basis": "SynXis live quote states total includes $29.20/day resort fee; taxes excluded ($989 for 2 Queens)",
+      "resort_fee_detail": "CONFLICT FLAGGED: SynXis checkout displays $29.20/day resort fee vs $33/night on South Point public info page",
+      "michelin_within_1hr_confirmed": null,
+      "michelin_within_1hr_label": "Unverified by bus/monorail (off-Strip ~6 mi south of Strip; no Monorail; RTC bus transfer required — flagged for review)",
+      "transit_access": "No Monorail access; RTC Deuce terminates at South Strip Transit Terminal (requires bus transfer + long travel times to Center Strip, Chinatown, and Downtown).",
+      "value_verdict": "Off-Strip Budget Reference (Lower Transit Score)",
+      "source_url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1",
+      "property_url": "https://southpointcasino.com/",
+      "flags": [
+        "Resort fee discrepancy: SynXis booking engine says $29.20/day while public hotel pages state $33/night — flagged for manual review.",
+        "Not on the Monorail corridor; transit times to Strip/Downtown/Chinatown Michelin clusters unverified and likely exceed 1 hour for Downtown/North Strip by bus."
+      ]
+    }
+  ],
+  "multi_week_comparison": {
+    "description": "Live 7-night Monday–Monday quotes captured on 2026-11-27 across all five full weeks inside the Feb 15 – Mar 23, 2027 travel window (2 adults).",
+    "weeks": [
+      {
+        "window": "Mon Feb 15 – Mon Feb 22, 2027",
+        "overlaps_preferred": true,
+        "flamingo_rate": "$83/nt ($581, 2Q)",
+        "caesars_palace_rate": "$214/nt ($1,498, 1K)",
+        "south_point_rate": "$131/nt ($919, 1K)",
+        "verdict": "CHEAPEST VERIFIED WEEK"
+      },
+      {
+        "window": "Mon Feb 22 – Mon Mar 1, 2027",
+        "overlaps_preferred": false,
+        "flamingo_rate": "$118/nt ($826, 1K) / $125/nt (2Q)",
+        "caesars_palace_rate": "$254/nt ($1,778, 1K)",
+        "south_point_rate": "$140/nt ($979, 1K)",
+        "verdict": "+19% to +42% higher"
+      },
+      {
+        "window": "Mon Mar 1 – Mon Mar 8, 2027",
+        "overlaps_preferred": false,
+        "flamingo_rate": "$141/nt ($987, 2Q)",
+        "caesars_palace_rate": "Unavailable (Tue Mar 2 Sold Out; Mar 1 $604/nt)",
+        "south_point_rate": "",
+        "verdict": "Peak surge / sellouts (avoid)"
+      },
+      {
+        "window": "Mon Mar 8 – Mon Mar 15, 2027",
+        "overlaps_preferred": false,
+        "flamingo_rate": "$128/nt ($896, 2Q)",
+        "caesars_palace_rate": "$267/nt ($1,869, 1K)",
+        "south_point_rate": "",
+        "verdict": "+25% to +54% higher"
+      },
+      {
+        "window": "Mon Mar 15 – Mon Mar 22, 2027",
+        "overlaps_preferred": false,
+        "flamingo_rate": "$122/nt ($854, 1K)",
+        "caesars_palace_rate": "$317/nt ($2,219, 1K; Mar 19–20 $455–$530)",
+        "south_point_rate": "",
+        "verdict": "March Madness weekend surge"
+      }
+    ],
+    "sources": [
+      "https://www.caesars.com/book/room-list?propCode=flv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "https://www.caesars.com/book/room-list?propCode=clv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0",
+      "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    ]
+  }
+}

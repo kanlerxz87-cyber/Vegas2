@@ -1,0 +1,203 @@
+{
+  "verified_date": "2026-11-27",
+  "scope_note": "Activities curated within <=1 hour travel from a Center-Strip hotel (LINQ / Flamingo / Horseshoe / Paris / Caesars Palace). Transit accessibility is explicitly distinguished from car/rideshare/tour-only outdoor parks.",
+  "activities": [
+    {
+      "id": "bellagio-fountains",
+      "name": "Fountains of Bellagio",
+      "category": "Free Strip Icon",
+      "travel_from_center_strip": "Walk (5–10 min from LINQ/Flamingo/Paris/Caesars) or RTC Deuce",
+      "transit_accessible": true,
+      "cost_for_2_adults": "$0.00 (Free)",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "Mon–Fri: every 30 min 3:00–7:30 PM, every 15 min 8:00 PM–12:00 AM; Sat–Sun & Holidays: every 30 min 12:00–7:30 PM, every 15 min 8:00 PM–12:00 AM",
+      "exceptions": "Outdoor show subject to wind/weather cancellation; Mon Feb 15, 2027 (Washington's Birthday) follows Holiday schedule starting 12:00 PM.",
+      "official_url": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+      "youtube_url": "https://www.youtube.com/user/BellagioLasVegasTV",
+      "tiktok_url": "",
+      "instagram_url": "https://www.instagram.com/bellagio/",
+      "flags": []
+    },
+    {
+      "id": "bellagio-conservatory",
+      "name": "Bellagio Conservatory & Botanical Gardens",
+      "category": "Free Strip Icon",
+      "travel_from_center_strip": "Walk (5–10 min from LINQ/Flamingo/Paris/Caesars) or RTC Deuce",
+      "transit_accessible": true,
+      "cost_for_2_adults": "$0.00 (Free)",
+      "days_open": "Daily (except seasonal dark dates)",
+      "hours": "Open during seasonal installation runs (see 2027 schedule below)",
+      "exceptions": "CRITICAL 2027 DATES: Lunar New Year display runs Jan 9 – Mar 6, 2027; DARK DATES (CLOSED for changeover) Mar 7 – Mar 12, 2027; Spring display opens Mar 13 – May 15, 2027. Feb 15–22 visits catch the Lunar New Year display.",
+      "official_url": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html",
+      "youtube_url": "https://www.youtube.com/user/BellagioLasVegasTV",
+      "tiktok_url": "",
+      "instagram_url": "https://www.instagram.com/bellagio/",
+      "flags": [
+        "If shifting trip into Mar 7–12, 2027, the Conservatory is CLOSED (dark dates)."
+      ]
+    },
+    {
+      "id": "high-roller",
+      "name": "High Roller Observation Wheel (The LINQ)",
+      "category": "Strip Observation Attraction",
+      "travel_from_center_strip": "Walk (0–10 min from LINQ/Flamingo/Caesars) or Monorail to Harrah's/LINQ Station",
+      "transit_accessible": true,
+      "cost_for_2_adults": "$47.00 Daytime ($23.50×2); $69.50 Anytime ($34.75×2); $120.00 Happy Half Hour 21+ ($60×2), plus taxes & fees",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "Daily from 12:00 PM / 12:30 PM to Close (verify closing hour on ride date)",
+      "exceptions": "30-min rotation (plan ~1 hr total); Daytime tickets 12:00–5:59 PM; Anytime starts 6:00 PM; Happy Half Hour is 21+ only; individual outside beverages allowed (no glass/coolers/cases). Phone: 702-322-0552.",
+      "official_url": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
+      "youtube_url": "",
+      "tiktok_url": "",
+      "instagram_url": "",
+      "flags": [
+        "Exact daily closing time is behind dynamic Caesars widget (homepage noted 'Opens 12:30 PM') — verify closing hour on Ticketmaster before visiting.",
+        "Dedicated High Roller YouTube/TikTok/Instagram handles unverified — blank."
+      ]
+    },
+    {
+      "id": "shark-reef",
+      "name": "Shark Reef Aquarium at Mandalay Bay",
+      "category": "Strip Attraction",
+      "travel_from_center_strip": "RTC Deuce south on Strip or Monorail to MGM Grand + Mandalay Bay Tram (~20–30 min)",
+      "transit_accessible": true,
+      "cost_for_2_adults": "$58.00 Timed Entry ($29×2) or $72.00 Anytime ($36×2), before tax/fees",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "10:00 AM – 8:00 PM (Last Admission 7:00 PM; Box Office 9:30 AM–7:30 PM)",
+      "exceptions": "Timed entry good for 1-hour entry window; peak times may sell out — advance booking recommended; includes Undersea Explorer VR experience. Phone: 702-632-4555.",
+      "official_url": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
+      "youtube_url": "",
+      "tiktok_url": "",
+      "instagram_url": "",
+      "flags": [
+        "Dedicated Shark Reef YouTube/TikTok/Instagram handles unverified — blank."
+      ]
+    },
+    {
+      "id": "sphere",
+      "name": "Sphere Las Vegas",
+      "category": "Live Entertainment Venue",
+      "travel_from_center_strip": "Walk (~15–20 min via Venetian bridge from LINQ/Flamingo) or Monorail to Harrah's/LINQ Station",
+      "transit_accessible": true,
+      "cost_for_2_adults": "",
+      "cost_verified": false,
+      "days_open": "Event & show dates only",
+      "hours": "Varies by scheduled show/concert date",
+      "exceptions": "Event-driven venue — doors and pricing depend entirely on the February/March 2027 show calendar (not yet finalized for all dates). Mobile tickets required.",
+      "official_url": "https://www.thesphere.com/plan-your-visit",
+      "youtube_url": "",
+      "tiktok_url": "https://www.tiktok.com/@spherevegas",
+      "instagram_url": "",
+      "flags": [
+        "Exact Feb–Mar 2027 showtimes and 2-adult ticket totals depend on the specific show booked — blank & flagged."
+      ]
+    },
+    {
+      "id": "fremont-street-experience",
+      "name": "Fremont Street Experience",
+      "category": "Downtown Entertainment District",
+      "travel_from_center_strip": "RTC Deuce bus northbound on Las Vegas Blvd (~25–35 min from Center Strip)",
+      "transit_accessible": true,
+      "cost_for_2_adults": "$0.00 (Free entry & free nightly concerts; SlotZilla zipline extra)",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "Open-air 5-block pedestrian mall; free concerts & Canopy shows nightly (check event calendar for specific set times)",
+      "exceptions": "Special ticketed events (e.g., NYE Countdown Under The Canopy) restrict access; parking garage at 4th & Carson has 7 ft max clearance and 15-min grace period.",
+      "official_url": "https://fremontstreetexperience.com/",
+      "youtube_url": "",
+      "tiktok_url": "",
+      "instagram_url": "",
+      "flags": [
+        "Exact Feb 2027 nightly Viva Vision light-show/concert set times are published closer to date — check calendar.",
+        "Official Fremont Street Experience YouTube/TikTok/Instagram handles not linked in static chunk 0 — blank."
+      ]
+    },
+    {
+      "id": "mob-museum",
+      "name": "The Mob Museum & The Underground Speakeasy",
+      "category": "Downtown Museum",
+      "travel_from_center_strip": "RTC Deuce bus northbound to Downtown (~25–35 min + 5-min walk to 300 Stewart Ave)",
+      "transit_accessible": true,
+      "cost_for_2_adults": "$75.90 General Admission ($37.95×2); $99.90 Deluxe ($49.95×2); $109.90 Premier ($54.95×2, or $95.90 online Morning/Evening discount)",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "Museum: 9:00 AM–9:00 PM daily; The Underground Speakeasy: Sun–Thu 11:00 AM–11:00 PM, Fri–Sat 11:00 AM–12:00 AM",
+      "exceptions": "Online Morning (9–11 AM) and Evening (5–9 PM) discounts save $7/adult on Premier Pass; check official hours page for occasional early closures. Phone: 702-229-2734.",
+      "official_url": "https://themobmuseum.org/plan-your-visit/purchase-tickets/",
+      "youtube_url": "https://www.youtube.com/channel/UCKu4g_N8sPxIUhAmZN4YDgQ",
+      "tiktok_url": "",
+      "instagram_url": "https://www.instagram.com/themobmuseum/",
+      "flags": []
+    },
+    {
+      "id": "neon-museum",
+      "name": "The Neon Museum (Neon Boneyard)",
+      "category": "Downtown Outdoor Museum",
+      "travel_from_center_strip": "RTC Deuce northbound to Downtown + ~15-min walk or short rideshare (~30–40 min total)",
+      "transit_accessible": true,
+      "cost_for_2_adults": "From $42.00 (2027 Admission starts at $21/adult × 2, plus ticket processing fee)",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "Sept–May: 3:00 PM–11:00 PM daily (Last Admission 10:00 PM; Box Office closes 1 hr before close)",
+      "exceptions": "NEW 2027 POLICY: Starting Jan 1, 2027, single '2027 Admission' replaces separate daytime/evening tiers, AND arriving earlier/later than your selected ticket time may incur a higher price. Outdoor collection subject to lightning/wind/heat closure; phones/tablets only (no DSLR/tripods/selfie sticks). Phone: 702-387-6366.",
+      "official_url": "https://neonmuseum.org/your-visit/",
+      "youtube_url": "https://www.youtube.com/channel/UCyNQ_kc2RRDYHZfvcmSFWxA",
+      "tiktok_url": "https://www.tiktok.com/@neonmuseumlasvegas",
+      "instagram_url": "https://www.instagram.com/theneonmuseumlasvegas/",
+      "flags": []
+    },
+    {
+      "id": "red-rock-canyon",
+      "name": "Red Rock Canyon National Conservation Area",
+      "category": "Outdoor Desert Park (Car / Tour Required)",
+      "travel_from_center_strip": "~30 min drive west (17 miles on SR 159) — NO public transit",
+      "transit_accessible": false,
+      "cost_for_2_adults": "$22.00 per personal vehicle ($20.00 1-day vehicle fee + $2.00 nonrefundable Recreation.gov timed-entry fee; covers both adults)",
+      "days_open": "Daily (Mon–Sun)",
+      "hours": "Scenic Drive: Nov–Feb 6:00 AM–5:00 PM PST; March 6:00 AM–7:00 PM PST. Visitor Center: Daily 8:00 AM–4:30 PM",
+      "exceptions": "MANDATORY TIMED ENTRY: Required Oct 1 – May 31 for entry 8:00 AM–5:00 PM (book at Recreation.gov 30 days ahead at 7:00 AM PT, or 2 days ahead at 7:00 AM PT). NO public transportation; rideshare users limited to Visitor Center area; download/print ticket before arrival (weak cell signal); flush toilets/water at Visitor Center only.",
+      "official_url": "https://www.blm.gov/programs/national-conservation-lands/nevada/red-rock-canyon",
+      "youtube_url": "https://www.youtube.com/BLMNational",
+      "tiktok_url": "",
+      "instagram_url": "https://instagram.com/mypubliclands",
+      "flags": [
+        "BLM FAQ PDF still states older $15 fee while live Recreation.gov checkout charges $20.00 + $2.00 = $22.00 — flagged.",
+        "Not reachable by public bus/monorail; requires rental car or commercial tour."
+      ]
+    },
+    {
+      "id": "hoover-dam",
+      "name": "Hoover Dam & Powerplant Tours",
+      "category": "Engineering Landmark (Car / Tour Required)",
+      "travel_from_center_strip": "~45–50 min drive southeast (~35 miles via I-11) — NO public transit",
+      "transit_accessible": false,
+      "cost_for_2_adults": "$30.00 Self-Guided ($15×2); $50.00 Powerplant Tour ($25×2); $80.00 Guided Dam Tour ($40×2, on-site only) + $10 garage parking",
+      "days_open": "Daily (Closed Thanksgiving & Christmas Day for Visitor Center/Tours)",
+      "hours": "Dam top: 5:00 AM–9:00 PM PST; Visitor Center & Tours: 9:00 AM–5:00 PM (doors close 4:15 PM; last tour 4:10 PM)",
+      "exceptions": "Interagency National Parks passes NOT accepted; Guided Dam Tour ($40/pp) sold IN PERSON ONLY (entire party must be present, routinely sells out early); vehicle inspection + airport-style security screening; no drones/weapons/pocketknives; no strollers or motorized scooters on Dam Tour.",
+      "official_url": "https://www.usbr.gov/lc/hooverdam/service/index.html",
+      "youtube_url": "https://www.youtube.com/@reclamation/",
+      "tiktok_url": "",
+      "instagram_url": "https://instagram.com/bureau_of_reclamation",
+      "flags": [
+        "Not reachable by public transit; requires rental car or commercial tour."
+      ]
+    },
+    {
+      "id": "valley-of-fire",
+      "name": "Valley of Fire State Park (Boundary ~50–60 Min Drive)",
+      "category": "Outdoor Desert Park (Car Required — 1-Hr Limit Boundary)",
+      "travel_from_center_strip": "~50–60 min drive northeast via I-15 (~50 miles) — NO public transit; DO NOT use Uber/Lyft",
+      "transit_accessible": false,
+      "cost_for_2_adults": "$15.00 per non-Nevada vehicle ($10.00 Nevada vehicle; covers both adults)",
+      "days_open": "Daily (Closed annually Dec 1–14 for maintenance)",
+      "hours": "Park: Sunrise to Sunset daily; Visitor Center: 9:00 AM–4:00 PM daily",
+      "exceptions": "Feb–Mar is prime season: ALL major trails (Fire Wave, White Domes, Pastel Canyon) are OPEN (closed May 15–Sep 30 for heat). Day-use reservations NOT required. OFFICIAL WARNING: Do NOT take Uber/Lyft — return rides are often unavailable and visitors can be stranded. Travel time sits right at the ~60-minute boundary depending on I-15 traffic.",
+      "official_url": "https://parks.nv.gov/parks/valley-of-fire",
+      "youtube_url": "",
+      "tiktok_url": "",
+      "instagram_url": "",
+      "flags": [
+        "Drive time (~50–60 min each way from Strip) sits at the <=1 hour boundary and may exceed 60 min in traffic — flagged for review.",
+        "Not reachable by public transit; official Nevada State Parks page warns against Uber/Lyft."
+      ]
+    }
+  ]
+}
