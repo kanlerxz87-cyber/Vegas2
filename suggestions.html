@@ -17,83 +17,97 @@
       <a href="restaurants.html">Michelin Restaurants</a>
       <a href="hotels.html">Hotels</a>
       <a href="activities.html">Activities</a>
+      <a href="booking.html">Booking &amp; Prices</a>
       <a href="suggestions.html" class="active">Suggestions</a>
       <a href="questions.html">Questions &amp; Answers</a>
       <a href="flagged-for-review.html">Flagged for Review</a>
+      <a href="sources.html">Sources</a>
     </div>
   </div>
 </header>
 
 <div class="container">
   <h1 class="page-title">Suggestions &amp; Decision Paths</h1>
-  <p class="page-subtitle">Suggestions for improving the site and the decision-making process. Review each suggestion and choose the best path before implementing any changes. None of these are implemented yet.</p>
+  <p class="page-subtitle">Suggestions for improving the site and the decision-making process. Review each suggestion and choose the best path before implementing any changes. Status as of Nov 27, 2026.</p>
 
   <div class="callout">
-    <p><strong>How to use this page.</strong> Each suggestion below lists the proposed change, why it helps, the effort level, and a recommended decision path. A reviewer should mark each as <em>approve / revise / defer / reject</em> before any work is scheduled.</p>
+    <p><strong>How to use this page.</strong> Each suggestion lists the proposed change, why it helps, the effort level, and a recommended decision path. A reviewer should mark each as <em>approve / revise / defer / reject</em> before any work is scheduled. Items marked <span class="badge badge-verified">done</span> were implemented Nov 27, 2026 and await reviewer sign-off; <span class="badge badge-unverified">partial</span> items are in progress.</p>
   </div>
 
   <div class="section">
     <h2 class="section-title">Site-improvement suggestions</h2>
 
     <div class="q-item">
-      <div class="q">S-1 &bull; Add a date picker &amp; live price checker for hotels</div>
-      <div class="a">Why: Hotel rates are dynamic; the verified prices here are snapshots (Feb 15–22, 2027) and will go stale. A date picker that calls each hotel&rsquo;s official booking endpoint would let users compare real-time 7-night totals for their exact dates.</div>
+      <div class="q">S-1 &bull; Add a date picker &amp; live price checker for hotels <span class="badge badge-unverified">proposed</span></div>
+      <div class="a">Why: Hotel rates are dynamic; the verified prices here are snapshots and will go stale. A date picker that calls each hotel’s official booking endpoint would let users compare real-time 7-night totals for their exact dates.</div>
       <div class="a" style="margin-top:6px;">Effort: High (requires integration with hotel booking APIs or official site scraping, respecting terms of service).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve only after confirming data sources &amp; legal review; otherwise defer to a manual “check official site” link per hotel.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve only after confirming data sources &amp; legal review; otherwise defer to the manual price log on <a href="booking.html">Booking &amp; Prices</a>.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-2 &bull; Verify &amp; complete missing hours, prices &amp; social links</div>
-      <div class="a">Why: Most restaurant and activity rows have blank hours/price/social fields flagged unverified. Completing them makes the tables decision-ready.</div>
+      <div class="q">S-2 &bull; Verify &amp; complete missing hours, prices &amp; social links <span class="badge badge-unverified">partial — hours/prices mostly done, social open</span></div>
+      <div class="a">Why: Most restaurant and activity rows had blank hours/price/social fields. Nov 27 update: hours verified for 19/24 restaurants and 10/12 activities; cost-for-2 totals added for 6 fixed-menu restaurants; all social cells remain blank (official-site links only — none found yet).</div>
       <div class="a" style="margin-top:6px;">Effort: Medium (manual research of each official venue page).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve — prioritize starred restaurants (4) and the user’s preferred dates first; track progress on the Flagged for Review page.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve continued work — next: venue-confirmed social handles + Sphere/K&Agrave; February schedules. Track on the Flagged for Review page.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-3 &bull; Add a Michelin proximity map</div>
-      <div class="a">Why: A map showing each hotel and the Michelin restaurants within one hour would make the “one-hour travel” rule visual and easier to compare than a table alone.</div>
-      <div class="a" style="margin-top:6px;">Effort: Medium (map library + geocoded restaurant/hotel coordinates).</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve as a Phase-2 enhancement after table data is verified.</div>
+      <div class="q">S-3 &bull; Add a Michelin proximity map <span class="badge badge-unverified">proposed — Phase 2</span></div>
+      <div class="a">Why: A map showing each hotel and the on-campus Michelin restaurants would make the ranking visual. Note: a 1-hour travel-time map must NOT be drawn — no official transit-time source exists, and drawing one would be inference.</div>
+      <div class="a" style="margin-top:6px;">Effort: Medium (map library + coordinates from official addresses only).</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve as a Phase-2 enhancement showing on-campus counts only.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-4 &bull; Add restaurant cost-per-couple estimates</div>
-      <div class="a">Why: The user wants total price for a couple of 2 adults at Michelin restaurants. Current tables show per-person symbols ($$–$$$$) only. Add an estimated total range per restaurant (e.g., “$$$$ = ~$400–$700+/couple”) flagged as estimates, not verified quotes.</div>
-      <div class="a" style="margin-top:6px;">Effort: Low–Medium.</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve for starred/Bib Gourmand restaurants where menu prices are published on official sites; mark clearly as estimate.</div>
+      <div class="q">S-4 &bull; Add restaurant cost-per-couple estimates <span class="badge badge-verified">done (verified-only version)</span></div>
+      <div class="a">Why: The user wants total price for 2 adults. Implemented Nov 27 as verified-only totals (fixed-menu price &times; 2, pre-tax/tip) for 6 restaurants — no estimated ranges were added, because estimates would violate the no-inference rule.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Reviewer to confirm the verified-only approach (no estimates) is acceptable, or explicitly approve labeled estimates.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-5 &bull; Add filters &amp; sorting (star level, price, area, open-days)</div>
+      <div class="q">S-5 &bull; Add filters &amp; sorting (star level, price, area, open-days) <span class="badge badge-unverified">proposed</span></div>
       <div class="a">Why: Helps the couple narrow choices quickly on mobile.</div>
       <div class="a" style="margin-top:6px;">Effort: Low (client-side JavaScript).</div>
       <div class="a" style="margin-top:6px;">Decision path: Approve — quick win, low risk.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-6 &bull; Add a printable trip itinerary export</div>
+      <div class="q">S-6 &bull; Add a printable trip itinerary export <span class="badge badge-unverified">proposed — Phase 2</span></div>
       <div class="a">Why: Users may want a one-page summary (hotel + dinner reservations + activities) to print or save to phone.</div>
       <div class="a" style="margin-top:6px;">Effort: Low–Medium (client-side PDF or .ics export).</div>
       <div class="a" style="margin-top:6px;">Decision path: Approve as Phase-2.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-7 &bull; Add accessibility &amp; i18n improvements</div>
-      <div class="a">Why: Mobile-friendly is required; also ensure WCAG contrast, keyboard navigation, and language options for international travelers.</div>
+      <div class="q">S-7 &bull; Add accessibility &amp; i18n improvements <span class="badge badge-unverified">partial</span></div>
+      <div class="a">Why: Mobile-friendly is required; also ensure WCAG contrast, keyboard navigation, and language options. Tables scroll horizontally on small screens; nav collapses to a toggle.</div>
       <div class="a" style="margin-top:6px;">Effort: Low–Medium.</div>
-      <div class="a" style="margin-top:6px;">Decision path: Approve accessibility fixes (already in CSS); defer i18n.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Approve accessibility fixes; defer i18n.</div>
     </div>
 
     <div class="q-item">
-      <div class="q">S-8 &bull; Add user notes / saved selections</div>
+      <div class="q">S-8 &bull; Add user notes / saved selections <span class="badge badge-unverified">proposed</span></div>
       <div class="a">Why: Let the couple save a shortlist of hotels and restaurants and compare side by side.</div>
       <div class="a" style="margin-top:6px;">Effort: Medium (localStorage or backend).</div>
       <div class="a" style="margin-top:6px;">Decision path: Approve localStorage version first; evaluate backend only if needed.</div>
     </div>
+
+    <div class="q-item">
+      <div class="q">S-9 &bull; Weekly hotel price log for cheapest-window detection <span class="badge badge-verified">done</span></div>
+      <div class="a">Why: Cheapest booking time cannot be found from snapshots. Implemented Nov 27 as <a href="booking.html">Booking &amp; Prices</a>: dated 3-nt/7-nt snapshots plus a log template with the first three rows filled.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Reviewer to sign off; assign a weekly owner for the log until booking.</div>
+    </div>
+
+    <div class="q-item">
+      <div class="q">S-10 &bull; Dedicated Sources page + machine-readable verification record <span class="badge badge-verified">done</span></div>
+      <div class="a">Why: Every claim needs a checkable source. Implemented Nov 27 as <a href="sources.html">Sources</a> plus <code>data/session-c88d116c/verification.json</code> in the repo.</div>
+      <div class="a" style="margin-top:6px;">Decision path: Reviewer to sign off.</div>
+    </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Reviewer decision log</h1>
+    <h2 class="section-title">Reviewer decision log</h2>
+    <div class="table-wrap">
     <table>
       <thead>
         <tr>
@@ -105,16 +119,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>S-1 Live price checker</td><td>Defer pending data-source &amp; legal review</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>S-2 Verify missing fields</td><td>Approve — prioritize starred restaurants</td><td>—</td><td>—</td><td>Track on Flagged for Review page</td></tr>
-        <tr><td>S-3 Michelin proximity map</td><td>Approve — Phase 2</td><td>—</td><td>—</td><td>After table data verified</td></tr>
-        <tr><td>S-4 Cost-per-couple estimates</td><td>Approve — starred/Bib Gourmand first</td><td>—</td><td>—</td><td>Mark as estimate, not verified</td></tr>
+        <tr><td>S-1 Live price checker</td><td>Defer pending data-source &amp; legal review</td><td>—</td><td>—</td><td>Use price log meanwhile</td></tr>
+        <tr><td>S-2 Verify missing fields</td><td>Approve — social + Sphere/K&Agrave; next</td><td>—</td><td>—</td><td>Track on Flagged for Review page</td></tr>
+        <tr><td>S-3 Michelin proximity map</td><td>Approve — Phase 2, on-campus only</td><td>—</td><td>—</td><td>No 1-hour map (no source)</td></tr>
+        <tr><td>S-4 Cost-per-couple</td><td>Approve verified-only version</td><td>—</td><td>—</td><td>No estimates added</td></tr>
         <tr><td>S-5 Filters &amp; sorting</td><td>Approve</td><td>—</td><td>—</td><td>Low-risk client-side</td></tr>
         <tr><td>S-6 Itinerary export</td><td>Approve — Phase 2</td><td>—</td><td>—</td><td>Client-side PDF/.ics</td></tr>
         <tr><td>S-7 Accessibility / i18n</td><td>Approve accessibility; defer i18n</td><td>—</td><td>—</td><td>WCAG contrast + keyboard nav</td></tr>
         <tr><td>S-8 Saved selections</td><td>Approve localStorage version</td><td>—</td><td>—</td><td>Evaluate backend only if needed</td></tr>
+        <tr><td>S-9 Price log</td><td>Approve — assign weekly owner</td><td>—</td><td>—</td><td>Implemented as booking.html</td></tr>
+        <tr><td>S-10 Sources page</td><td>Approve</td><td>—</td><td>—</td><td>Implemented as sources.html</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
 </div>
 
@@ -130,6 +147,9 @@
       <div><a href="questions.html">Questions &amp; Answers</a></div>
       <div><a href="flagged-for-review.html">Flagged for Review</a></div>
     </div>
+  </div>
+  <div class="footer-inner" style="border-top:1px solid var(--color-border); margin-top:20px; padding-top:16px; font-size:0.75rem; color:#9ca3af;">
+    Disclaimer: Prices, hours, and availability change. Always confirm on the official venue/hotel site before booking. Unverified items are flagged and must be reviewed before any decision.
   </div>
 </footer>
 
