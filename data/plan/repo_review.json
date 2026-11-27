@@ -146,11 +146,11 @@
       "status": "resolved"
     },
     {
-      "id": "R-15",
+      "id": "R-17",
       "severity": "medium",
-      "finding": "GitHub Pages source configuration and the Pages workflow disagree",
-      "evidence": "The Pages API reports build_type 'legacy' with source branch 'main' and path '/', so the checked-in REPOSITORY ROOT is what https://kanlerxz87-cyber.github.io/Vegas2/ serves. But .github/workflows/pages.yml uploads the 'docs' folder via actions/upload-pages-artifact and deploys it with actions/deploy-pages. Under the legacy source that artifact is not the served site.",
-      "action": "The canonical site is therefore correctly built at the root by scripts/build_plan.py. Prior-session notes claiming a subsite lives at '/session-<id>/' are wrong under this configuration — those folders resolve at '/docs/session-<id>/'. Either switch Pages to GitHub Actions as the source, or retire the misleading workflow. Left unchanged here because it is shared infrastructure outside this session's additive scope.",
+      "finding": "check_root_site.py does not match the canonical builder's markup and fails on main",
+      "evidence": "scripts/check_root_site.py (added by session c88d116c, PR #23) reports exactly 26 failures on origin/main @ c8205b2 and the identical 26 failure labels on this branch after the fieldwork merge — verified by diffing the failure sets from a clean git archive of main. It expects flagged-for-review.html (the canonical page is flagged.html), a 'badge-unverified' CSS class and a footer disclaimer string that scripts/build_plan.py does not emit, and it rejects kameomakase.com, which is an official restaurant domain present in the canonical data. It is not referenced by any workflow.",
+      "action": "Not fixed here: the script belongs to session c88d116c. Requested change: align its page list, badge class and disclaimer assertions with build_plan.py output, or retire it in favour of scripts/check_plan.py, which is the gate wired into CI and passes with 0 failures. No regression was introduced by this pass.",
       "status": "needs review"
     },
     {
@@ -162,11 +162,11 @@
       "status": "needs review"
     },
     {
-      "id": "R-17",
+      "id": "R-15",
       "severity": "medium",
-      "finding": "check_root_site.py does not match the canonical builder's markup and fails on main",
-      "evidence": "scripts/check_root_site.py (added by session c88d116c, PR #23) reports exactly 26 failures on origin/main @ c8205b2 and the identical 26 failure labels on this branch after the fieldwork merge — verified by diffing the failure sets from a clean git archive of main. It expects flagged-for-review.html (the canonical page is flagged.html), a 'badge-unverified' CSS class and a footer disclaimer string that scripts/build_plan.py does not emit, and it rejects kameomakase.com, which is an official restaurant domain present in the canonical data. It is not referenced by any workflow.",
-      "action": "Not fixed here: the script belongs to session c88d116c. Requested change: align its page list, badge class and disclaimer assertions with build_plan.py output, or retire it in favour of scripts/check_plan.py, which is the gate wired into CI and passes with 0 failures. No regression was introduced by this pass.",
+      "finding": "GitHub Pages source configuration and the Pages workflow disagree",
+      "evidence": "The Pages API reports build_type 'legacy' with source branch 'main' and path '/', so the checked-in REPOSITORY ROOT is what https://kanlerxz87-cyber.github.io/Vegas2/ serves. But .github/workflows/pages.yml uploads the 'docs' folder via actions/upload-pages-artifact and deploys it with actions/deploy-pages. Under the legacy source that artifact is not the served site.",
+      "action": "The canonical site is therefore correctly built at the root by scripts/build_plan.py. Prior-session notes claiming a subsite lives at '/session-<id>/' are wrong under this configuration — those folders resolve at '/docs/session-<id>/'. Either switch Pages to GitHub Actions as the source, or retire the misleading workflow. Left unchanged here because it is shared infrastructure outside this session's additive scope.",
       "status": "needs review"
     }
   ]

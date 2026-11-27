@@ -24,6 +24,10 @@ jobs:
         run: |
           python3 scripts/merge_fieldwork_4d7b292f.py
           git diff --exit-code -- data/plan
+      - name: Prove the merge discarded no other session's data
+        run: |
+          git fetch --no-tags --depth=200 origin main || true
+          python3 scripts/audit_no_data_loss.py origin/main || python3 scripts/audit_no_data_loss.py FETCH_HEAD
       - name: Rebuild the planner
         run: python3 scripts/build_plan.py
       - name: Verify data, sources, links and markup

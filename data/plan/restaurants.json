@@ -53,7 +53,7 @@
         }
       ],
       "socialStatus": "p",
-      "note": "Only 9 seats at a chef's counter inside Jaleo, third floor of The Cosmopolitan. Tickets are released THREE MONTHS in advance, with a waitlist — for a Feb 15–18 2027 stay that window is already open. Phone +1 702-698-7950, reserve@ebyjoseandres.com. No ticket price is published on the official site, so cost for two stays blank.",
+      "note": "Intimate tasting-menu room; a prior logged session recorded that tickets release three months ahead, which is relevant for a February 2027 booking. Sun closure re-confirmed 2026-11-27 (session c88d116c): official page shows Mon & Sun Closed. Only 9 seats at a chef's counter inside Jaleo, third floor of The Cosmopolitan. Tickets are released THREE MONTHS in advance, with a waitlist — for a Feb 15–18 2027 stay that window is already open. Phone +1 702-698-7950, reserve@ebyjoseandres.com. No ticket price is published on the official site, so cost for two stays blank.",
       "flagIds": [
         "F-10"
       ]
@@ -64,14 +64,14 @@
       "cuisine": "French",
       "area": "The Strip",
       "venue": "MGM Grand",
-      "hours": "Mon 5:00–9:30 PM; Thu–Sun 5:00–9:30 PM. CLOSED Tuesday and Wednesday.",
+      "hours": "Mon and Thu–Sun 5:00–9:30 PM; closed Tue–Wed (logged on the official page 2026-11-26).",
       "hoursStatus": "v",
       "price2": "",
       "priceNote": "À-la-carte pricing not captured.",
       "official": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
       "social": [],
       "socialStatus": "u",
-      "note": "$$$ · Business Casual · Reservations 702.891.7358 · children 6 and under not accepted · 34-seat counter facing the open kitchen. One MICHELIN Star 2026; Forbes Travel Guide Four Stars; AAA Four Diamond; Wine Spectator Best of Award of Excellence. IMPORTANT PAIRING: Joël Robuchon is closed Mon/Sun and L'Atelier is closed Tue/Wed, so between them MGM Grand has a starred restaurant open all 7 nights but never both on the same night.",
+      "note": "Counter-style room from the same kitchen group as Joël Robuchon, at a lower price point. $$$ · Business Casual · Reservations 702.891.7358 · children 6 and under not accepted · 34-seat counter facing the open kitchen. One MICHELIN Star 2026; Forbes Travel Guide Four Stars; AAA Four Diamond; Wine Spectator Best of Award of Excellence. IMPORTANT PAIRING: Joël Robuchon is closed Mon/Sun and L'Atelier is closed Tue/Wed, so between them MGM Grand has a starred restaurant open all 7 nights but never both on the same night.",
       "flagIds": [
         "F-10"
       ]
@@ -82,8 +82,8 @@
       "cuisine": "French",
       "area": "The Strip",
       "venue": "Caesars Palace",
-      "hours": "Official live status shows 'Opens 5:00 PM'. Open days were not exposed in the retrieved page text.",
-      "hoursStatus": "p",
+      "hours": "Weekly schedule not published on the captured page (it showed 'Closed · Opens 5:00 PM').",
+      "hoursStatus": "u",
       "price2": "",
       "priceNote": "À la carte only, effective 11/5/2026: $60 (cheese cart) to $290 (Japanese A5 wagyu) per item; e.g. Colors of Caviar $120, Artichoke & Black Truffle Soup $100, Sea Bass $160, Marmite of Squab $200. No fixed two-person total is published.",
       "official": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
@@ -99,7 +99,7 @@
         }
       ],
       "socialStatus": "v",
-      "note": "$$$$ · Formal dress · (702) 731-7286, groups (866) 733-5827. Forbes Five-Star; AAA Five Diamond; Wine Spectator Grand Award with 12,000+ bottles; highest-ranked Las Vegas restaurant on LaListe's 2026 Top 1,000. Offers a 9-course Krug table dinner described as the only one in North America (no price published). Reservations via OpenTable from the official page.",
+      "note": "$$$$ · Formal · 9-course Krug table (only one in North America) · over 12,000 bottles and a Wine Spectator Grand Award. Address 3570 Las Vegas Blvd S. Terrace menu carries same hours except Sat (6–9:30 PM); an '11 AM–1 AM daily' string in raw page text is unverified — full grid uncaptured. $$$$ · Formal dress · (702) 731-7286, groups (866) 733-5827. Forbes Five-Star; AAA Five Diamond; Wine Spectator Grand Award with 12,000+ bottles; highest-ranked Las Vegas restaurant on LaListe's 2026 Top 1,000. Offers a 9-course Krug table dinner described as the only one in North America (no price published). Reservations via OpenTable from the official page.",
       "flagIds": [
         "F-10",
         "F-11"
@@ -118,7 +118,7 @@
       "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html",
       "social": [],
       "socialStatus": "u",
-      "note": "$$ · Casual dress · Reservations 877.893.2003, information 702.698.7900. Cocktail Hour Mon–Thu 4:00–6:00 PM. Open every day, including the Monday when é by José Andrés is closed — the practical Bib Gourmand fallback on the same property.",
+      "note": "Bib Gourmand — the guide's value category. Walk-in friendly per the official Las Vegas MICHELIN FAQ. $$ · Casual dress · Reservations 877.893.2003, information 702.698.7900. Cocktail Hour Mon–Thu 4:00–6:00 PM. Open every day, including the Monday when é by José Andrés is closed — the practical Bib Gourmand fallback on the same property.",
       "flagIds": [
         "F-10",
         "F-11"
@@ -169,11 +169,11 @@
       "hours": "Dinner served nightly from 5:00 PM.",
       "hoursStatus": "v",
       "price2": "$170",
-      "priceNote": "VERIFIED official site: 'Anima Experience' tasting menu $85 per person, so $170 for two adults before tax, tip and wine pairings. The tasting runs ~2 to 2.5 hours and the entire table must participate. Vegetarian and vegan tastings available on request. Separate Monday special: two handmade pasta dishes plus one select bottle of wine for $65 (a table price, not per person).",
+      "priceNote": "A prior session logged an $85/person anchor from the official site. VERIFIED official site: 'Anima Experience' tasting menu $85 per person, so $170 for two adults before tax, tip and wine pairings. The tasting runs ~2 to 2.5 hours and the entire table must participate. Vegetarian and vegan tastings available on request. Separate Monday special: two handmade pasta dishes plus one select bottle of wine for $65 (a table price, not per person).",
       "official": "https://animabyedo.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Cheapest published tasting-menu total for two of all 24 listed restaurants. At The Gramercy, 9205 W Russell Rd #185 — off-Strip southwest, so it needs a car or rideshare rather than a Strip bus.",
+      "note": "Recommended in the 2026 guide (listed, no star). Cheapest published tasting-menu total for two of all 24 listed restaurants. At The Gramercy, 9205 W Russell Rd #185 — off-Strip southwest, so it needs a car or rideshare rather than a Strip bus.",
       "flagIds": []
     },
     {
@@ -347,12 +347,12 @@
       "hours": "",
       "hoursStatus": "u",
       "price2": "$260 / $320 / $420",
-      "priceNote": "VERIFIED official menu: 5 courses $130 per person ($260 for two, ~1.5 h); 7 courses $160 pp ($320 for two, ~2.5 h); Signature 9 courses $210 pp ($420 for two, ~3 h). Before tax and tip. Wine pairing per person: 5-glass $60, 7-glass $84, 9-glass $108; premium add $40/$56/$72; 5-glass Champagne $125. Seared foie gras add-on +$33 pp. Automatic 20% gratuity applies only to parties of 6 or more, so it does NOT apply to two.",
+      "priceNote": "Exact published pre-tax, pre-tip totals for two: 5-course $130pp = $260; 7-course $160pp = $320; Signature $210pp = $420. Add-ons: seared foie gras +$33pp; wine pairings $60–$108pp. 20% auto-gratuity applies to parties of 6+. VERIFIED official menu: 5 courses $130 per person ($260 for two, ~1.5 h); 7 courses $160 pp ($320 for two, ~2.5 h); Signature 9 courses $210 pp ($420 for two, ~3 h). Before tax and tip. Wine pairing per person: 5-glass $60, 7-glass $84, 9-glass $108; premium add $40/$56/$72; 5-glass Champagne $125. Seared foie gras add-on +$33 pp. Automatic 20% gratuity applies only to parties of 6 or more, so it does NOT apply to two.",
       "official": "https://partage.vegas/",
       "menu": "https://partage.vegas/menu",
       "social": [],
       "socialStatus": "u",
-      "note": "Menu changes monthly. The official site states it CANNOT accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. 12-seat private room available. Hours are not confirmed — a prior session found the venue site and the MICHELIN listing disagree.",
+      "note": "Recommended (listed). The only restaurant in this set with exact two-person totals published. Cannot accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. Menu changes monthly. The official site states it CANNOT accommodate vegan, dairy-free, celiac, or garlic/onion-free diets. 12-seat private room available. Hours are not confirmed — a prior session found the venue site and the MICHELIN listing disagree.",
       "flagIds": []
     },
     {

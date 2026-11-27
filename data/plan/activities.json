@@ -45,7 +45,7 @@
     {
       "name": "The Mob Museum",
       "area": "Downtown — 300 Stewart Ave",
-      "hours": "Museum daily 9:00 AM–9:00 PM. The Underground speakeasy: Sun–Thu 11:00 AM–11:00 PM; Fri–Sat 11:00 AM–midnight. Hours subject to change; a separate early-closures page is published.",
+      "hours": "Daily 9:00 AM–9:00 PM. The Underground (speakeasy) Sun–Thu 11:00 AM–11:00 PM, Fri–Sat 11:00 AM–midnight. Early closures posted separately.",
       "hoursStatus": "v",
       "price2": "$75.90 / $99.90 / $109.90",
       "priceNote": "VERIFIED official admission portal: General Admission $37.95 per adult ($75.90 for two), Deluxe Pass $49.95 ($99.90), Premier Pass $54.95 ($109.90). All three include entry to The Underground. Online-only Morning (9–11 AM) or Evening (5–9 PM) arrival reduces Premier to $47.95 pp = $95.90 for two. Children 10 and under free. Prices were read with a November 2026 date selected, so 2027 pricing may differ (F-31).",
@@ -176,7 +176,7 @@
         }
       ],
       "socialStatus": "v",
-      "note": "America the Beautiful / Interagency passes are NOT accepted at Hoover Dam — it is self-funded and receives no Federal Lands Recreation Enhancement Act revenue. The Guided Dam Tour includes the historic tunnels, the original elevator, the inspection tunnels and the Powerplant tour; it is wheelchair accessible but not stroller or scooter accessible.",
+      "note": "Outside the walkable/transit core; treat as a full-day car trip. America the Beautiful / Interagency passes are NOT accepted at Hoover Dam — it is self-funded and receives no Federal Lands Recreation Enhancement Act revenue. The Guided Dam Tour includes the historic tunnels, the original elevator, the inspection tunnels and the Powerplant tour; it is wheelchair accessible but not stroller or scooter accessible.",
       "flagIds": [
         "F-16"
       ]
@@ -190,13 +190,19 @@
       "priceNote": "VERIFIED official fee table: Car/Truck 1 day $20 PER VEHICLE, so two adults in one car pay $20 total. Commercial tour vehicle (bus, limo, taxi, ride-share) is $20 per vehicle PLUS $5 per person = $30 for two. Motorcycle $10; bicycle $8; pedestrian $5 per person. Red Rock Annual Pass $50. America the Beautiful Annual Pass is $80 for U.S. citizens/residents but $250 for NON-U.S. residents.",
       "transit": "No public transit to the scenic drive per prior sessions; car required. Drive time not verified.",
       "transitStatus": "u",
-      "official": "https://www.redrockcanyonlv.org/visitor-information/",
+      "official": "https://www.blm.gov/visit/red-rock-canyon",
       "social": [],
       "socialStatus": "u",
       "note": "26 hikes and trails. Reserve the timed entry at Recreation.gov (timed-entry/10075177) or (877) 444-6777 BEFORE fixing the day's itinerary. No public bus service to the Scenic Drive is published on the official visitor pages, so this is a car or commercial-tour day.",
       "flagIds": [
         "F-16",
         "F-02"
+      ],
+      "sources": [
+        {
+          "label": "Southern Nevada Conservancy — official Red Rock visitor information",
+          "url": "https://www.redrockcanyonlv.org/visitor-information/"
+        }
       ],
       "alsoOfficial": [
         "https://www.redrockcanyonlv.org/fees/",
@@ -215,7 +221,7 @@
       "official": "https://parks.nv.gov/parks/valley-of-fire",
       "social": [],
       "socialStatus": "u",
-      "note": "OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30).",
+      "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option. OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30).",
       "flagIds": [
         "F-16"
       ],

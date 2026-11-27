@@ -513,3 +513,18 @@ Resolution — **their port taken as the base, my findings re-applied on top**:
 - **Checks at merge:** `validate` pass, `Build and verify the root planner` pass, `Validate and rebuild isolated site` pass; `Site build and verification` gating steps passed with only the warning-only external-link crawl still running. Local `check_plan.py`: 0 failures, 11 pages.
 - **Pages:** build for `c8205b2` status `built` (2026-11-27T18:02:15Z). Live verification: `suggestions.html` serves S-13 (Gimme Sum vs Ping Pang Pong) on https://kanlerxz87-cyber.github.io/Vegas2/.
 - **Open follow-ups for other sessions:** é “Tue–Sun” vs Tue–Sat contradiction (7c99df0b vs canonical); “no official hotel rates” claim vs dated captures; 3c7ffbdd's 7 claimed 2-adult totals as F-11 input; S-13 list-membership reconciliation.
+
+### Fourth parallel merge (PR #34) — and a real data-loss bug found and fixed
+`main` advanced to `b5878eb` (PR #34, session `155b420b`, a further canonical restaurant port). Resolved with `--theirs` as the base and the fieldwork re-applied.
+
+**A genuine regression was caught by auditing every field against `origin/main`, not just by running the gate.** The first version of the merge script *replaced* prose fields, silently discarding another session's newer text. Fixes:
+- New `merge_prose()` helper: existing prose is **kept and appended to**; only an explicit gap statement (`not captured`, `no dated price`, `may apply`…) is superseded by a verified capture.
+- **Red Rock's official link is no longer overwritten.** Session c88d116c's BLM URL stays as `official`; the Southern Nevada Conservancy visitor page is added as an *additional* source.
+- Removed two no-gain overrides (L'Atelier and Mob Museum hours) where the other session's wording was already equivalent.
+- Kept session c88d116c's more precise Guy Savoy captured-hours string instead of a weaker restatement.
+
+**F-36 — é by José Andrés opening days, resolved against the primary source.** The canonical port recorded `Tue–Sat` with "Sunday closure re-confirmed 2026-11-27". Re-fetching `https://www.ebyjoseandres.com/` today shows the operator stating **twice** (body and footer): *"Open Tuesday through Sunday with two shows per night, at 5:30 PM and 8:30 PM."* The site shows the operator's own wording, **keeps the other session's note verbatim alongside it**, and flags the contradiction with a phone/email confirmation path. Monday is closed in both readings.
+
+**New repeatable gate: `scripts/audit_no_data_loss.py`.** Diffs every row and field of `data/plan/*.json` against a base git ref and fails on any row or value that disappeared or was shortened. Status-code upgrades (`u→p→v`) are allowed; the **7 deliberate gap→verified supersedes are listed explicitly in the script** so each one is auditable rather than hidden. Current result: **OK — no unexpected data loss**, 7 documented supersedes. Wired into `validate-plan.yml`.
+
+**Post-merge state:** 13 hotels (8 priced), 24 restaurants (5 with two-person totals), 15 activities, **36 flags**, 23 questions, 19 suggestions, **17 repo findings**. `check_plan.py`: **OK — 0 failures, 0 warnings, 11 pages**. Merge script idempotent (`md5sum` identical across runs).

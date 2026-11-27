@@ -543,6 +543,19 @@
       ]
     },
     {
+      "id": "F-36",
+      "severity": "medium",
+      "title": "é by José Andrés: official site says Tue–Sun, a parallel session logged Sunday closed",
+      "detail": "Re-fetched https://www.ebyjoseandres.com/ on 2026-11-27. The page states TWICE, in the body and in the footer, 'Open Tuesday through Sunday with two shows per night, at 5:30 PM and 8:30 PM.' Session c88d116c's canonical port instead recorded 'Tue–Sat' with a note that Sunday closure was re-confirmed on 2026-11-27. The two readings cannot both be right.",
+      "effect": "This site shows the operator's own wording (Tue–Sun, closed Monday) because it is the first-party text captured today, and keeps the other session's note verbatim alongside it. If you plan é for a Sunday, confirm by phone (+1 702-698-7950) or reserve@ebyjoseandres.com before relying on it. Monday is closed in both readings.",
+      "source": [
+        {
+          "label": "é by José Andrés — official site (re-fetched 2026-11-27)",
+          "url": "https://www.ebyjoseandres.com/"
+        }
+      ]
+    },
+    {
       "id": "F-35",
       "severity": "low",
       "title": "South Point's engine prints a nightly rate that does not multiply to its own stay total",

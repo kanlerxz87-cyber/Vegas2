@@ -33,6 +33,30 @@ def by(rows, key, val):
     return None
 
 
+GAP_PHRASES = ("not captured", "not retrievable", "no dated price", "not published",
+               "were not exposed", "uncaptured", "may apply")
+
+
+def merge_prose(existing, addition):
+    """Never discard another session's prose.
+
+    A gap statement ('not captured', 'no dated price'...) is superseded by a verified
+    capture. Any other existing text is kept and the new detail appended.
+    """
+    existing = (existing or "").strip()
+    addition = (addition or "").strip()
+    if not addition:
+        return existing
+    if not existing:
+        return addition
+    if addition in existing:
+        return existing
+    low = existing.lower()
+    if any(g in low for g in GAP_PHRASES) and len(existing) < 260:
+        return addition
+    return existing + " " + addition
+
+
 def append_once(existing, marker, addition):
     """Append prose only if the marker is not already present (keeps re-runs idempotent)."""
     existing = existing or ""
@@ -67,12 +91,12 @@ def hotels():
                   "'Includes Resort Fee, Excludes taxes'. Resort fee is $55/night plus tax. "
                   "Must be booked Nov 20 \u2013 Dec 4, 2026."),
     }
-    w["price7Note"] = (
+    w["price7Note"] = merge_prose(w.get("price7Note"), (
         "VERIFIED " + CAP + ": official Wynn booking engine, Wynn Resort King, 7-night stay "
         "Feb 15\u201322 2027, 2 adults. 'Wynn Cyber Exclusive + Up to $300 Resort Credit' shows "
         "$677 Avg/Night, 'Includes Resort Fee, Excludes taxes'. $677 x 7 = $4,739 before tax. "
         "The Flexible Getaway Rate on the same page is $833 Avg/Night ($5,831 for 7 nights)."
-    )
+    ))
     w["price7Status"] = "v"
     w["price7Alt"] = {
         "label": "Flexible Getaway Rate (no sale)",
@@ -101,12 +125,12 @@ def hotels():
         "basis": ("Official 'Up to 50% Off' tile: 'Current price: $277.21 ... Avg./Per Night Includes Resort Fee "
                   "and Excludes Taxes'. Bed type and bathroom are not stated in that tile, so they stay unverified."),
     }
-    rw["price7Note"] = (
+    rw["price7Note"] = merge_prose(rw.get("price7Note"), (
         "VERIFIED " + CAP + ": official Resorts World engine, Las Vegas Hilton tower, Feb 15\u201322 2027, "
         "2 adults. 'Up to 50% Off' Cyber Sale tile: 'Current price: $277.21 ... Avg./Per Night "
         "Includes Resort Fee and Excludes Taxes'. $277.21 x 7 = $1,940.47 before tax. "
         "'Signature Savings' and '$75 Dining Credits' offers both show $351.29 Avg/Night for the same dates."
-    )
+    ))
     rw["price7Status"] = "v"
     rw["price7Alt"] = {"label": "Signature Savings / Dining Credit offers", "nightly": 351.29, "total": 2459.03,
                        "basis": "Includes resort fee, excludes taxes."}
@@ -228,7 +252,6 @@ def restaurants():
     rows = d["rows"]
     fills = {
         "L'Atelier de Jo\u00ebl Robuchon": {
-            "hours": "Mon 5:00\u20139:30 PM; Thu\u2013Sun 5:00\u20139:30 PM. CLOSED Tuesday and Wednesday.",
             "hoursStatus": "v",
             "note": ("$$$ \u00b7 Business Casual \u00b7 Reservations 702.891.7358 \u00b7 children 6 and under not "
                      "accepted \u00b7 34-seat counter facing the open kitchen. One MICHELIN Star 2026; "
@@ -279,8 +302,6 @@ def restaurants():
                      "or rideshare rather than a Strip bus."),
         },
         "Restaurant Guy Savoy": {
-            "hours": "Official live status shows 'Opens 5:00 PM'. Open days were not exposed in the retrieved page text.",
-            "hoursStatus": "p",
             "note": ("$$$$ \u00b7 Formal dress \u00b7 (702) 731-7286, groups (866) 733-5827. Forbes Five-Star; "
                      "AAA Five Diamond; Wine Spectator Grand Award with 12,000+ bottles; highest-ranked "
                      "Las Vegas restaurant on LaListe's 2026 Top 1,000. Offers a 9-course Krug table "
@@ -293,6 +314,9 @@ def restaurants():
         if not r:
             continue
         for k, v in patch.items():
+            if k in ("note", "priceNote"):
+                r[k] = merge_prose(r.get(k), v)
+                continue
             if k in ("hours", "hoursStatus") and r.get("hoursStatus") == "v" and r.get("hours"):
                 continue
             if k == "price2" and r.get("price2"):
@@ -327,6 +351,9 @@ def activities():
         if not r:
             return None
         for k, v in kw.items():
+            if k in ("note", "priceNote"):
+                r[k] = merge_prose(r.get(k), v)
+                continue
             if k == "price2" and r.get("price2"):
                 continue
             if k == "hours" and r.get("hoursStatus") == "v":
@@ -372,7 +399,8 @@ def activities():
               "is published on the official visitor pages, so this is a car or commercial-tour day."),
     )
     if rr:
-        rr["official"] = "https://www.redrockcanyonlv.org/visitor-information/"
+        add_source(rr, "Southern Nevada Conservancy \u2014 official Red Rock visitor information",
+                   "https://www.redrockcanyonlv.org/visitor-information/")
         rr.setdefault("alsoOfficial", [])
         for u in ["https://www.redrockcanyonlv.org/fees/", "https://www.recreation.gov/timed-entry/10075177"]:
             if u not in rr["alsoOfficial"]:
@@ -420,9 +448,6 @@ def activities():
 
     mob = by(rows, "name", "The Mob Museum")
     if mob:
-        mob["hours"] = ("Museum daily 9:00 AM\u20139:00 PM. The Underground speakeasy: Sun\u2013Thu 11:00 AM\u201311:00 PM; "
-                        "Fri\u2013Sat 11:00 AM\u2013midnight. Hours subject to change; a separate early-closures "
-                        "page is published.")
         mob["hoursStatus"] = "v"
         mob["price2"] = "$75.90 / $99.90 / $109.90"
         mob["priceNote"] = ("VERIFIED official admission portal: General Admission $37.95 per adult "
@@ -737,6 +762,21 @@ def flags():
             "source": [{"label": "Official Bardot Brasserie page (ARIA)",
                         "url": "https://aria.mgmresorts.com/en/restaurants/bardot-brasserie.html"},
                        {"label": "Chef's own group page for Bardot", "url": "https://theminagroup.com/restaurants/bardot-brasserie/"}],
+        },
+        {
+            "id": "F-36", "severity": "medium",
+            "title": "\u00e9 by Jos\u00e9 Andr\u00e9s: official site says Tue\u2013Sun, a parallel session logged Sunday closed",
+            "detail": ("Re-fetched https://www.ebyjoseandres.com/ on " + CAP + ". The page states TWICE, in the "
+                       "body and in the footer, 'Open Tuesday through Sunday with two shows per night, at "
+                       "5:30 PM and 8:30 PM.' Session c88d116c's canonical port instead recorded 'Tue\u2013Sat' "
+                       "with a note that Sunday closure was re-confirmed on 2026-11-27. The two readings "
+                       "cannot both be right."),
+            "effect": ("This site shows the operator's own wording (Tue\u2013Sun, closed Monday) because it is "
+                       "the first-party text captured today, and keeps the other session's note verbatim "
+                       "alongside it. If you plan \u00e9 for a Sunday, confirm by phone (+1 702-698-7950) or "
+                       "reserve@ebyjoseandres.com before relying on it. Monday is closed in both readings."),
+            "source": [{"label": "\u00e9 by Jos\u00e9 Andr\u00e9s \u2014 official site (re-fetched " + CAP + ")",
+                        "url": "https://www.ebyjoseandres.com/"}],
         },
         {
             "id": "F-35", "severity": "low",
