@@ -44,6 +44,25 @@ No files from either side were discarded. Shared outputs (index/navigation/table
 ### Notable prior-session irregularity flags (preserved)
 F01–F29 include: no subway in Las Vegas (RTC bus + Strip monorail only); Red Rock Canyon no public transit; trip-length conflict (3-night preferred vs 7-night cost basis vs 1–2 weeks); Feb 15 2027 = Washington's Birthday (federal holiday); queen-or-larger bed and private bathroom unverified for most hotels; 7-night totals / best time to book unverified; most restaurant hours, per-couple prices, and social links unverified; Hoover Dam hours not retrievable from current official page; MICHELIN awards are 2026 selection, not a guarantee of 2027 status; v1 star count error (says 3 starred, official release lists 4); Wynn two-queen claim withdrawn; Caesars room-size sources conflict (350 vs 360+ sq ft, left blank); Caesars exact-date rate volatility ($226 vs $201 vs $196/night; 7-night total blank).
 
+### Verification & work log — 2ec5be84-vegas2 (2026-11-27)
+
+**Sources re-verified this session (official unless noted):**
+- Visit Las Vegas Michelin page (https://www.visitlasvegas.com/michelin-guide-restaurants/) — re-fetched 2026-11-27: 24 distinctions; starred: Joël Robuchon 2★, É by José Andrés 1★, L'Atelier 1★, Restaurant Guy Savoy 1★; Bib Gourmand: China Poblano, Esther's Kitchen, Yen Viet Kitchen; 17 Recommended listed by name; counts match restaurants.html.
+- MGM Grand official pages (2026-11-27): Joël Robuchon hours (Mon & Sun closed; Tue–Sat 5:00–9:30 PM; “Two MICHELIN Stars, 2026” + 2026 Service Award); L'Atelier (Tue–Wed closed; Mon & Thu–Sun 5:00–9:30 PM; One MICHELIN Star 2026).
+- Cosmopolitan official pages (2026-11-27): é by José Andrés (Mon & Sun closed; Tue–Sat 5:30–8:30 PM; One MICHELIN Star); China Poblano (Mon–Thu 11:00–22:00, Fri 11:00–22:30, Sat 10:00–22:30, Sun 10:00–22:00; Bib Gourmand). China Poblano official menu (chinapoblano.com/menus): José's Way tasting $60 pp = $120 for two.
+- Anima by EDO official site (2026-11-27): tasting “Anima Experience” $85 pp = $170 for two; dinner nightly from 5 PM. Kabuto official 2026 menu PDF (kabutolv.com): $130 / $185 pp = $260 / $370 for two. MGM Resorts newsroom press release (2026-09-28): white-truffle event menu $595 pp (reference only, NOT the standard menu price). Mott 32 official lunch PDF: sets $38/$68 pp = $76/$136 for two (lunch only). Kame Omakase / Sparrow + Wolf / Soulbelly / Esther's Kitchen per official captures 2026-11-25/26 (field-notes session) — carried with capture dates and re-check note.
+- Neon Museum official site (2026-11-27): daily 3 PM–11 PM Sep–May, last entry 10 PM; 2027 Admission daily 3–11 PM, from $21 pp (tickets purchased Jan 1 2027 +); official TikTok/Instagram/Facebook handles listed on site.
+- Caesars Entertainment official High Roller page (2026-11-27): daily from 12 PM, closing varies; 30-min rotation; happy-half-hour 21+. highroller.com now redirects to an unrelated sports-betting domain (rolr.com) — stale link replaced; flagged.
+- South Point official public page (2026-11-27): $33.00/room/night resort fee (contents listed); SynXis booking capture 2026-11-26 (session b29fc34e): Feb 15–22 King $919 / Premium 2 Queens $989 (+tax); Feb 22–Mar 1 King $979 / 2 Queens $1,049; Feb 15–18 3 nts King $313 / 2 Queens $343; booking output said $29.20/day resort fee — discrepancy unresolved, flagged U-9/I-6.
+- Presidents' Day: Monday 2027-02-15 = Washington's Birthday federal holiday (informational: almanac.com; OPM is the official holiday calendar) — Feb 15–16 holiday-demand pricing risk documented (Venetian Feb 18 $1,499.25 vs Feb 19 $374.25 capture).
+- Monorail hours (lvmonorail.com search snapshot 2026-11-27): Mon 7am–12am, Tue–Thu 7am–2am, Fri–Sun 7am–3am — cited as current snapshot; re-check before travel. RTC Route 117 serves South Point; transfer needed for Strip. No subway in Las Vegas (confirmed again).
+
+**Checks run:** all 29 data/*.json parse; tag-balance check clean on all root pages; internal links resolve; table cell counts consistent (10 cells restaurants, 8 activities).
+
+**Irregularities logged to site Flagged-for-Review page:** U-9 South Point fee math + private bath; U-10 Michael Mina closure report; U-11 Pages legacy root source vs docs/ workflow (needs owner decision — not changed unilaterally); U-12 highroller.com redirect (fixed to Caesars official); U-13 social handles unverified; I-6 fee discrepancy; I-7 Presidents' Day risk; I-8 hours re-verified; I-9 markup fix; I-10 README publishing-path fix; I-11 per-couple totals officially-published-only.
+
+**Not done / notes:** social handles remain unverified (official sites rarely publish them; flagged, not invented); no second-hand meal estimates used anywhere; activities other than High Roller/Neon Museum remain unverified; docs/ session artifacts preserved untouched; root site is the live site (legacy Pages source main /).
+
 ## Claims log
 - e9badc77-vegas2: claimed tasks 1–14; completed and committed all; merged origin/main and resolved conflicts; created PR #12 and merged to main; Pages deploy confirmed.
 - Prior session claims are preserved/summarized above; full verbatim text is in git history (commit ed54f82 and the origin/main line).
@@ -155,10 +174,11 @@ This entry records the active session's additions without replacing the existing
 ### Claimed tasks (claim logged before work; pushed immediately)
 | # | Task | Status | Owner | File scope |
 |---|------|--------|-------|------------|
-| 1 | Line-by-line repo review; flag irregularities | in progress | 2ec5be84-vegas2 | read-only + flagged-for-review.html |
-| 2 | Independent re-verification of headline official-source claims (Michelin list, hotel rates) | in progress | 2ec5be84-vegas2 | restaurants.html, hotels.html, flagged-for-review.html |
-| 3 | Add missing brief items where verifiable (per-couple restaurant cost column; South Point verified rate; booking-timing guidance) | in progress | 2ec5be84-vegas2 | restaurants.html, hotels.html, index.html |
-| 4 | Fix HTML/markup defects found in review | in progress | 2ec5be84-vegas2 | suggestions.html and others as found |
-| 5 | Final integration: PR to main, merge, confirm Pages deploy, record result | unclaimed-at-claim-time | 2ec5be84-vegas2 | GitHub PR + COORDINATION.md |
+| 1 | Line-by-line repo review; flag irregularities | done | 2ec5be84-vegas2 | flagged-for-review.html (U-9..U-13, I-6..I-11) |
+| 2 | Independent re-verification of headline official-source claims (Michelin list, hotel rates) | done | 2ec5be84-vegas2 | restaurants.html, hotels.html |
+| 3 | Add missing brief items where verifiable (per-couple restaurant cost column; South Point captured rate; booking-timing guidance; YouTube/TikTok links on every restaurant/activity row) | done | 2ec5be84-vegas2 | restaurants.html, hotels.html, activities.html, index.html |
+| 4 | Fix HTML/markup defects found in review | done | 2ec5be84-vegas2 | suggestions.html (stray </h1>) |
+| 5 | Final integration: PR to main, merge, confirm Pages deploy, record result | done (see final entry below) | 2ec5be84-vegas2 | GitHub PR + COORDINATION.md |
 
 - 2026-11-27 · 2ec5be84-vegas2 · claimed tasks 1–5; starting review.
+- 2026-11-27 · 2ec5be84-vegas2 · tasks 1–4 done and pushed (commit fa11926); creating PR to main.
