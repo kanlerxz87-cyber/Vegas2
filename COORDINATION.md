@@ -179,6 +179,45 @@ This entry records the active session's additions without replacing the existing
 
 ---
 
+## Session `arena/7c99df0b-vegas2` — Dashboard Rebuild & Research Update
+
+**Branch:** `arena/7c99df0b-vegas2` (active). Base commit: `8a538fbd6535abf19448da2e48616ffc61907a58`.
+
+### Research conducted (2026-11-27)
+
+- Fetched and verified official Michelin press release (all 24 LV restaurants, addresses, statuses)
+- Fetched official restaurant pages for: Joël Robuchon (hours Tue-Sat 5-9:30PM, $$$$, Business Formal, phone 702-891.7925), L'Atelier (hours Mon/Thu-Sun 5-9:30PM, $$$, Business Casual, phone 702-891.7358), é by José Andrés (hours Tue-Sun, seatings 5:30/8:30PM, tickets 3mo ahead, phone 702-698-7950), China Poblano (hours Mon-Sun, $$, Casual, phone 877-893-2003), Bouchon (hours Mon-Sun with brunch, $$$, phone 702-414-6200), Gymkhana (hours Mon-Sun, $$$$, Business Casual, phone 702-590-9520, IG @gymkhanalasvegas), Wing Lei (hours Thu-Sun/Mon, Tue-Wed closed, Business casual, phone 702-770-3388), Sparrow + Wolf (phone 702-790-2147, OpenTable, max 4 guests), Esther's Kitchen, YEN Viet Kitchen
+- Fetched official RTC Deuce PDF: Strip bus operates 24/7, every 10-15 min (7AM-1AM), every 20 min (1-7AM). Full SSTT-to-Fremont route: 77 min. Stops at all major Strip hotels.
+- Searched hotel pricing: third-party sources show Venetian ~$481/night Feb 2027 (Google Hotels, not official). No official Feb 2027 rate verified for any hotel.
+- Web search confirmed Michelin 2026 data across multiple sources (Eater Vegas, Visit Las Vegas/LVCVA, The Adventurist).
+
+### Files changed
+- `data/verified/michelin.json` — Updated with verified hours for 7 restaurants (Joël Robuchon, é, L'Atelier, China Poblano, Bouchon, Gymkhana, Wing Lei); verified prices ($$$$, $$$, $$, etc.); verified phones and social; official links for all 24.
+- `data/verified/hotels.json` — Updated with RTC transit verification (all Strip hotels confirmed Deuce access); verified queen beds for 3/8 hotels; updated booking policies.
+- `docs/index.html` — Clean dashboard with executive summary, KPIs, navigation tiles.
+- `docs/michelin.html` — All 24 restaurants in organized tables with status, hours, prices, official links, social.
+- `docs/hotels.html` — 8 hotels ranked with Michelin count, room verification, transit, pricing.
+- `docs/activities.html` — 4 activities with verified hours/fees from official sources.
+- `docs/booking.html` — Date options, verified policies, third-party estimates flagged.
+- `docs/questions.html` — 5 answered + 9 open questions + missing info list.
+- `docs/suggestions.html` — 9 suggestions (S1–S9) for review.
+- `docs/flagged.html` — 13 flagged items (F1–F13) with source links.
+- `docs/sources.html` — 21 official + 5 secondary sources + all 24 restaurant links.
+- `docs/assets/style.css` — Clean mobile-first responsive stylesheet.
+
+### Verification performed
+- All 24 Michelin entries confirmed against official press release (S01)
+- 7 of 24 restaurant hours verified from official restaurant pages
+- RTC Deuce route confirmed from official PDF (S20)
+- Feb 15 = Presidents' Day confirmed from OPM (S19)
+- Activity hours/fees verified from BLM, Nevada State Parks, USBR, Recreation.gov, Neon Museum
+
+### Irregularities
+- No official Feb 2027 hotel rates (F6)
+- 17 of 24 restaurant hours unverified (F5 partial — now 7 verified)
+- Most social media links unverified (F12)
+- Third-party price estimates flagged, not used as verified
+
 ## Session `arena/155b420b-vegas2` — final integration (ACTIVE)
 
 **Claimed:** 2026-11-27 (UTC). Session ID `155b420b-vegas2`. Branch `arena/155b420b-vegas2` (Arena pins it; `session-<id>/<task>` naming is not usable).

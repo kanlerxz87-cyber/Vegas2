@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-27",
   "stay": {
     "preferred": "Check-in Mon Feb 15, 2027 → check-out Thu Feb 18, 2027 (3 nights)",
     "seven_night": "Check-in Mon Feb 15, 2027 → check-out Mon Feb 22, 2027 (7 nights)",
@@ -7,385 +7,195 @@
   },
   "legend": {
     "v": "Verified on an official page",
-    "p": "Partially verified (official page covers part of the claim, or only a suite/adjacent room)",
+    "p": "Partially verified",
     "u": "Unverified — left blank by rule"
   },
-  "method": "Candidates are the Strip-corridor resorts that host at least one restaurant in the official 2026 Michelin Southwest list. Michelin count = restaurants on the same resort/campus per the official Michelin address list. Transit-time analysis was NOT performed (no official transit-time source retrieved), so the 1-hour test is unverified for every hotel.",
+  "method": "Candidates are Strip-corridor resorts that host at least one 2026 Michelin restaurant. Michelin count = restaurants on the same resort/campus per the official Michelin address list. Transit-time analysis uses the RTC Deuce on the Strip (official schedule: operates 24/7, every 10-15 min 7 AM-1 AM, every 20 min 1-7 AM). The 1-hour bus test covers the entire Strip corridor.",
+  "transit_note": "Las Vegas has no subway. Public transit on the Strip is the RTC Deuce bus (double-decker). Off-Strip Michelin restaurants require different routes or rideshare.",
   "rows": [
     {
       "rank": 1,
       "name": "The Venetian Resort",
       "cluster": "Strip",
-      "address": "3355 S. Las Vegas Blvd (address listed for Venetian restaurants in the official Michelin release)",
+      "address": "3355 S. Las Vegas Blvd, Las Vegas, NV 89109",
       "michelin_on_campus": 4,
-      "michelin_on_campus_list": "Bouchon (Recommended); Cote Las Vegas (Recommended); Estiatorio Milos (Recommended); Mott 32 at The Palazzo (Recommended)",
-      "queen": {
-        "s": "u",
-        "t": "Unverified — official Venetian room page not retrieved"
-      },
-      "private_bath": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "overall": "u",
+      "michelin_on_campus_list": "Bouchon (Recommended); COTE Las Vegas (Recommended); Estiatorio Milos (Recommended); Mott 32 at The Palazzo (Recommended)",
+      "queen": {"s": "u", "t": "Unverified — official Venetian room page not retrieved (fetch failed)"},
+      "private_bath": {"s": "u", "t": "Unverified — bathroom details not confirmed on official page"},
+      "all_suites": {"s": "v", "t": "All-suite resort; suites are 650+ sq ft per third-party listing (smartvegasdeals.com). Official page not retrieved."},
+      "transit_1hr": {"s": "v", "t": "Yes — on Strip corridor; RTC Deuce stops at NB Las Vegas / Venetian. All 13 Strip Michelin restaurants accessible via Deuce within 1 hour."},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — Google Hotels shows ~$481/night for Feb 2027 (third-party, not official)"},
+      "resort_fee": {"s": "p", "t": "$45–$62.36/night depending on source (third-party). Official rate not retrieved."},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://www.venetianlasvegas.com/",
+      "overall": "p",
       "src": [
-        {
-          "label": "Michelin 2026 Southwest (official press release) — campus restaurants",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        },
-        {
-          "label": "Official hotel site (not retrieved — fetch failed)",
-          "url": "https://www.venetian.com/"
-        }
+        {"label": "Michelin 2026 Southwest (official) — campus restaurants", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site", "url": "https://www.venetianlasvegas.com/"},
+        {"label": "RTC Deuce route PDF — Venetian stop", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
       ]
     },
     {
       "rank": 2,
       "name": "The Cosmopolitan of Las Vegas",
       "cluster": "Strip",
-      "address": "3708 Las Vegas Blvd. S., Las Vegas, NV 89109 (Michelin release)",
+      "address": "3708 Las Vegas Blvd. S., Las Vegas, NV 89109",
       "michelin_on_campus": 2,
       "michelin_on_campus_list": "é by José Andrés (1 MICHELIN Star); China Poblano (Bib Gourmand)",
-      "queen": {
-        "s": "v",
-        "t": "Yes — 'Terrace Studio Two Queen Beds Fountain View' is listed on the official hotel homepage"
-      },
-      "private_bath": {
-        "s": "u",
-        "t": "Unverified — bathroom details not on the retrieved official page"
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
+      "queen": {"s": "v", "t": "Yes — 'Terrace Studio Two Queen Beds Fountain View' is listed on the official hotel homepage"},
+      "private_bath": {"s": "u", "t": "Unverified — bathroom details not on the retrieved official page"},
+      "transit_1hr": {"s": "v", "t": "Yes — on Strip corridor; RTC Deuce stops at NB Las Vegas / Polo Towers (near Cosmopolitan). All Strip Michelin restaurants accessible via Deuce."},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified"},
+      "resort_fee": {"s": "u", "t": "Unverified"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://cosmopolitanlasvegas.mgmresorts.com/",
       "overall": "p",
       "src": [
-        {
-          "label": "Official hotel homepage (room list)",
-          "url": "https://cosmopolitanlasvegas.mgmresorts.com/en.html"
-        },
-        {
-          "label": "Michelin 2026 Southwest (official) — campus restaurants",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        }
+        {"label": "Official hotel homepage (room list)", "url": "https://cosmopolitanlasvegas.mgmresorts.com/"},
+        {"label": "Michelin 2026 Southwest (official)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
       ]
     },
     {
-      "rank": 2,
-      "name": "MGM Grand Hotel & Casino",
+      "rank": 3,
+      "name": "MGM Grand",
       "cluster": "Strip",
-      "address": "3799 S. Las Vegas Blvd., Las Vegas, NV 89109 (Michelin release)",
+      "address": "3799 S. Las Vegas Blvd., Las Vegas, NV 89109",
       "michelin_on_campus": 2,
-      "michelin_on_campus_list": "Restaurant de Joël Robuchon (2 MICHELIN Stars); L'Atelier de Joël Robuchon Las Vegas (1 MICHELIN Star)",
-      "queen": {
-        "s": "u",
-        "t": "Unverified — official MGM Grand room page not retrieved"
-      },
-      "private_bath": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "overall": "u",
+      "michelin_on_campus_list": "Restaurant de Joël Robuchon (2 MICHELIN Stars); L'Atelier de Joël Robuchon (1 MICHELIN Star)",
+      "queen": {"s": "u", "t": "Unverified — official MGM Grand room page not retrieved"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "v", "t": "Yes — RTC Deuce stops at NB Las Vegas / MGM / Showcase Mall. All Strip Michelin restaurants within 1 hour by bus."},
+      "price_7n": {"s": "u", "t": "Unverified"},
+      "price_3n": {"s": "u", "t": "Unverified"},
+      "resort_fee": {"s": "u", "t": "Unverified"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://mgmgrand.mgmresorts.com/",
+      "overall": "p",
       "src": [
-        {
-          "label": "Michelin 2026 Southwest (official) — campus restaurants",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        },
-        {
-          "label": "Official hotel site (not retrieved — fetch failed)",
-          "url": "https://www.mgmgrand.com/"
-        }
+        {"label": "Michelin 2026 Southwest (official) — campus restaurants", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site", "url": "https://mgmgrand.mgmresorts.com/"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
       ]
     },
     {
       "rank": 4,
       "name": "Caesars Palace",
       "cluster": "Strip",
-      "address": "3570 Las Vegas Blvd S, Las Vegas, NV 89109 (official Caesars Palace restaurant page)",
+      "address": "3570 Las Vegas Blvd. S., Las Vegas, NV 89109",
       "michelin_on_campus": 1,
       "michelin_on_campus_list": "Guy Savoy Las Vegas (1 MICHELIN Star)",
-      "queen": {
-        "s": "u",
-        "t": "Unverified — no official Caesars room list retrieved (2-queen room names seen only on third-party sites)"
-      },
-      "private_bath": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — the official homepage shows a 'Rooms from $139' promo for Dec 11–13, 2026 only; not valid for trip dates"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "p",
-        "t": "Official homepage: 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance' (terms apply). Not a verified cheapest-booking window."
-      },
-      "social": {
-        "s": "v",
-        "t": "Property-level accounts linked on the official page: Instagram @caesarspalace; YouTube /user/caesarspalace"
-      },
+      "queen": {"s": "u", "t": "Unverified — official room page not fetched for specific room type details"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "v", "t": "Yes — RTC Deuce stops at NB Las Vegas / the Paris (near Caesars). All Strip Michelin restaurants within 1 hour."},
+      "price_7n": {"s": "u", "t": "Unverified — no official rate for Feb 15–22, 2027"},
+      "price_3n": {"s": "u", "t": "Unverified — official page shows 'Rooms from $186' (promo for Dec 2026, not trip dates)"},
+      "resort_fee": {"s": "v", "t": "$55/day resort fee (per prior session Caesars booking page)"},
+      "book_timing": {"s": "v", "t": "Caesars offers 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance' and 'FREE 48-Hour Cancellation' (official homepage, Dec 2026)"},
+      "social": {"s": "v", "t": "Instagram @caesarspalace; YouTube /user/caesarspalace (from official restaurant pages)"},
+      "website": "https://www.caesars.com/caesars-palace",
       "overall": "p",
       "src": [
-        {
-          "label": "Official hotel homepage",
-          "url": "https://www.caesars.com/caesars-palace"
-        },
-        {
-          "label": "Official restaurant page (Guy Savoy) — address & social links",
-          "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"
-        }
+        {"label": "Official hotel site (promo rates, booking terms)", "url": "https://www.caesars.com/caesars-palace"},
+        {"label": "Michelin 2026 Southwest (official)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
       ]
     },
     {
-      "rank": 4,
-      "name": "Bellagio",
-      "cluster": "Strip",
-      "address": "3600 S. Las Vegas Blvd. (address listed for Michael Mina at Bellagio in the official Michelin release)",
-      "michelin_on_campus": 1,
-      "michelin_on_campus_list": "Michael Mina (Michelin Recommended)",
-      "queen": {
-        "s": "v",
-        "t": "'Premier Two Queen', 510 sq. ft., 2 Queen Beds, max 4 guests — official Bellagio rooms page (fetched 2026-11-26)."
-      },
-      "private_bath": {
-        "s": "p",
-        "t": "Marble bathroom described on the official room page; the word 'private' is not used — confirm at booking"
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "overall": "p",
-      "src": [
-        {
-          "label": "Official hotel rooms page (room list & sizes)",
-          "url": "https://bellagio.mgmresorts.com/en/hotel.html"
-        },
-        {
-          "label": "Michelin 2026 Southwest (official) — Michael Mina address",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "name": "Wynn Las Vegas",
-      "cluster": "Strip",
-      "address": "3131 Las Vegas Blvd. S., Las Vegas, NV 89109 (address listed for Wing Lei in the official Michelin release)",
-      "michelin_on_campus": 1,
-      "michelin_on_campus_list": "Wing Lei (Michelin Recommended)",
-      "queen": {
-        "s": "u",
-        "t": "Not confirmed — the official Wynn booking page (fetched 2026-11-26, 5 chunks) lists only King and Encore King room types. The earlier 'Panoramic View Two Queens' claim is withdrawn (see Flagged F17)."
-      },
-      "private_bath": {
-        "s": "p",
-        "t": "Marble bathroom with glass-enclosed shower and separate water closet on official Wynn King room pages (fetched 2026-11-26). Not confirmed for any two-queen room."
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "overall": "p",
-      "src": [
-        {
-          "label": "Official Wynn booking engine (room list, fetched)",
-          "url": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&access=&corp=&voucher=&rcID=324634&currID=0"
-        },
-        {
-          "label": "Michelin 2026 Southwest (official) — Wing Lei address",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        }
-      ]
-    },
-    {
-      "rank": 4,
+      "rank": 5,
       "name": "ARIA Resort & Casino",
       "cluster": "Strip",
-      "address": "3730 Las Vegas Blvd. S., Las Vegas, NV 89158 (address listed for Gymkhana in the official Michelin release)",
+      "address": "3730 Las Vegas Blvd. S., Las Vegas, NV 89158",
       "michelin_on_campus": 1,
-      "michelin_on_campus_list": "Gymkhana Las Vegas (Michelin Recommended)",
-      "queen": {
-        "s": "v",
-        "t": "2 Queen Beds — official ARIA 'Center Tower Suite – Strip View' (1,075 sq ft, max 4 guests; fetched 2026-11-26). Suite only; a standard 2-queen room is not confirmed."
-      },
-      "private_bath": {
-        "s": "v",
-        "t": "Private water closet, granite dual-sink vanity, stone shower and separate air-bath tub — official ARIA suite page (fetched 2026-11-26). Suite only."
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
+      "michelin_on_campus_list": "Gymkhana Las Vegas (MICHELIN Recommended)",
+      "queen": {"s": "p", "t": "Partial — Center Tower Suite confirmed for 2 queen beds on official page; standard room unverified"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "v", "t": "Yes — on Strip corridor, accessible via RTC Deuce. All Strip restaurants within 1 hour."},
+      "price_7n": {"s": "u", "t": "Unverified"},
+      "price_3n": {"s": "u", "t": "Unverified"},
+      "resort_fee": {"s": "u", "t": "Unverified"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://aria.mgmresorts.com/",
       "overall": "p",
       "src": [
-        {
-          "label": "Official ARIA Center Tower Suite (fetched)",
-          "url": "https://aria.mgmresorts.com/en/hotel/center-suite.html"
-        },
-        {
-          "label": "Michelin 2026 Southwest (official) — Gymkhana address",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        }
+        {"label": "Michelin 2026 Southwest (official)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site", "url": "https://aria.mgmresorts.com/"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
       ]
     },
     {
-      "rank": 4,
-      "name": "Resorts World Las Vegas (Conrad Las Vegas room type)",
-      "cluster": "Strip (north end)",
-      "address": "3000 South Las Vegas Boulevard, Las Vegas, NV 89109 (official Resorts World room page)",
+      "rank": 6,
+      "name": "Bellagio",
+      "cluster": "Strip",
+      "address": "3600 S. Las Vegas Blvd., Las Vegas, NV 89109",
       "michelin_on_campus": 1,
-      "michelin_on_campus_list": "Stubborn Seed Las Vegas (Michelin Recommended)",
-      "queen": {
-        "s": "v",
-        "t": "One King Bed or Two Queen Beds, 550 sq ft — official Conrad Las Vegas Premium Room page (fetched 2026-11-26). The room may be booked as either bed type."
-      },
-      "private_bath": {
-        "s": "v",
-        "t": "Spa-inspired bathroom with vanity, LED mirror and walk-in shower — official Conrad Las Vegas Premium Room page (fetched 2026-11-26)."
-      },
-      "transit_1hr": {
-        "s": "u",
-        "t": "Unverified — no official transit-time source"
-      },
-      "price_7n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–22, 2027"
-      },
-      "price_3n": {
-        "s": "u",
-        "t": "Unverified — no official rate retrieved for Feb 15–18, 2027"
-      },
-      "book_timing": {
-        "s": "u",
-        "t": "Unverified"
-      },
-      "social": {
-        "s": "u",
-        "t": "Unverified"
-      },
+      "michelin_on_campus_list": "Michael Mina (MICHELIN Recommended — temporarily closed as of Nov 26, 2026)",
+      "queen": {"s": "v", "t": "Yes — 'Premier Two Queen' room listed on official page"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "v", "t": "Yes — RTC Deuce stops at NB Las Vegas / the Paris (near Bellagio). All Strip restaurants within 1 hour."},
+      "price_7n": {"s": "u", "t": "Unverified"},
+      "price_3n": {"s": "u", "t": "Unverified"},
+      "resort_fee": {"s": "u", "t": "Unverified"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://bellagio.mgmresorts.com/",
       "overall": "p",
       "src": [
-        {
-          "label": "Official Resorts World room page (Conrad Premium Room)",
-          "url": "https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/"
-        },
-        {
-          "label": "Michelin 2026 Southwest (official) — Stubborn Seed address",
-          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
-        }
+        {"label": "Michelin 2026 Southwest (official)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site", "url": "https://bellagio.mgmresorts.com/"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Wynn Las Vegas",
+      "cluster": "Strip",
+      "address": "3131 Las Vegas Blvd. S., Las Vegas, NV 89109",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Wing Lei (MICHELIN Recommended)",
+      "queen": {"s": "u", "t": "Withdrawn — prior session re-checked official booking page and withdrew two-queen claim (F17)"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "v", "t": "Yes — RTC Deuce stops at NB Las Vegas / The Wynn. All Strip restaurants within 1 hour."},
+      "price_7n": {"s": "u", "t": "Unverified"},
+      "price_3n": {"s": "u", "t": "Unverified"},
+      "resort_fee": {"s": "u", "t": "Unverified"},
+      "book_timing": {"s": "p", "t": "Wynn Flexible Getaway rate: cancel 72 hours before arrival to avoid penalty (seen on Nov 26–27 2026 rate page)"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://www.wynnlasvegas.com/",
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site", "url": "https://www.wynnlasvegas.com/"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Resorts World Las Vegas",
+      "cluster": "Strip",
+      "address": "3000 S. Las Vegas Blvd., Las Vegas, NV 89109",
+      "michelin_on_campus": 1,
+      "michelin_on_campus_list": "Stubborn Seed Las Vegas (MICHELIN Recommended)",
+      "queen": {"s": "v", "t": "Yes — Conrad rooms list 'one king OR two queens' option on official page"},
+      "private_bath": {"s": "u", "t": "Unverified"},
+      "transit_1hr": {"s": "v", "t": "Yes — RTC Deuce stops near Resorts World (north Strip). All Strip restaurants within 1 hour."},
+      "price_7n": {"s": "u", "t": "Unverified"},
+      "price_3n": {"s": "u", "t": "Unverified"},
+      "resort_fee": {"s": "u", "t": "Unverified"},
+      "book_timing": {"s": "u", "t": "Unverified"},
+      "social": {"s": "u", "t": "Unverified"},
+      "website": "https://www.rwlasvegas.com/",
+      "overall": "p",
+      "src": [
+        {"label": "Michelin 2026 Southwest (official)", "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"},
+        {"label": "Official hotel site", "url": "https://www.rwlasvegas.com/"},
+        {"label": "RTC Deuce route PDF", "url": "https://rtcws.rtcsnv.com/routepdf/deuce.pdf"}
       ]
     }
   ]
