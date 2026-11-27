@@ -237,3 +237,13 @@ No other session's files, data trees, workflows or open PRs were touched.
 - **Live verification:** the deployed root now serves the new overview page (`<title>Las Vegas, planned from official sources · Vegas2 planner</title>`) with the 24-distinction / $581 / 23-flag figures — confirmed by fetching `https://kanlerxz87-cyber.github.io/Vegas2/index.html?rev=76b22b8` from this sandbox. The root also serves `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `repo-review.html`, `sources.html` and `assets/site/style.css` from the same commit.
 - **Flagged items published:** F-01…F-23 on `flagged.html`; repository findings R-01…R-13 on `repo-review.html`. Unverified values are blank, and each flag carries its official source link.
 - **Not changed:** PRs #8 and #9 remain open; every prior session folder under `docs/` and every prior data tree is untouched. Their root-page versions are archived at `docs/session-legacy-root/main-0d3e73e/`.
+
+### Post-merge observation — concurrent session `arena/7c99df0b-vegas2` (2026-11-27T17:52Z)
+
+While this session was verifying its deployment, PR #26 from session `7c99df0b-vegas2` merged on top of the PR #22/#24 changes (main `9630aea`). Their commit `a543860` rebuilt the **`docs/`** site and `data/verified/*`; it did **not** modify the root pages, so the canonical root planner remains the one described above. Verified after their merge:
+
+- Every root page (`index.html`, `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `sources.html`, `repo-review.html`) and `assets/site/style.css` is present on `main` at `9630aea`.
+- The Pages build for `9630aea` completed with status `built` (2026-11-27T17:52:52Z), and `https://kanlerxz87-cyber.github.io/Vegas2/index.html` and `/flagged.html` were fetched live and serve this session's pages.
+- One transient Pages build error was logged for commit `ac92554` ("Page build failed") between the two merges; the immediate rebuild for `9630aea` succeeded, so it did not persist.
+
+**Ownership going forward:** root `*.html` and `data/plan/**` belong to the consolidated build (`scripts/build_plan.py`). Later sessions should either rebuild through that script or work inside their own `docs/session-<id>/` folder — hand-editing a root page would be overwritten by the next build.
