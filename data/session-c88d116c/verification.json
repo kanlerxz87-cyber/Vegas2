@@ -1,1 +1,565 @@
-{"activities":[{"exceptions":"Closed Thanksgiving Day and Christmas Day. Special-event limits may apply around Easter, early August, 3 days after Thanksgiving and the week after Christmas (official tour page). Security checkpoint; no firearms/drones.","fees":"Self-Guided Visitor Center Tour $15; Guided Power Plant Tour $25 (adult); Guided Dam Tour $40 per person, on-site purchase only, first-come first-served, sells out. Children 3 and under free. America the Beautiful / Interagency passes NOT accepted. Parking $10.","fetched":"2026-11-27","hours":"Dam: daily 5:00 AM-9:00 PM (PST). Visitor Center and tours: daily 9:00 AM-5:00 PM. Doors close 4:15 PM; last tour departs 4:10 PM (official page, last updated 10/30/26).","name":"Hoover Dam (Bureau of Reclamation)","reservation":"Visitor Center and Power Plant tours sold through the official ticketing link on usbr.gov. Guided Dam Tour on-site only.","social":"Unverified at venue level for this session (prior session noted Hoover Dam Facebook linked from official page; not re-verified 2026-11-27).","status":"verified-hours-fees-exceptions","transit_1hr":"u: no official transit-time source; public transit to Hoover Dam not established","url":"https://www.usbr.gov/lc/hooverdam/service/index.html"},{"exceptions":"Limited hours on Thanksgiving (BLM, 2025 note). BLM waived amenity fees for Presidents' Day in 2021 (press release); no 2027 fee-free day confirmed. Timed-entry reservation non-refundable on the day of visit.","fees":"u: entry/amenity fee not confirmed on an official page retrieved in this session (left blank on site).","fetched":"2026-11-27","hours":"Scenic Drive (Recreation.gov/BLM): Oct 6 AM-7 PM; Nov-Feb 6 AM-5 PM; Mar 6 AM-7 PM; Apr-Sep 6 AM-8 PM. Visitor Center 8 AM-4:30 PM.","name":"Red Rock Canyon National Conservation Area - Scenic Drive","reservation":"Timed entry reservation required Oct 1-May 31, 8 AM-5 PM for the Scenic Drive (BLM + Recreation.gov). Covers the Feb 2027 trip window. Walk-in and bicycle visitors do not need a reservation.","social":"u: agency-level BLM accounts only (not venue-specific); left blank.","status":"verified-distance-hours-reservation","transit_1hr":"u: BLM states public transit does not extend to Red Rock; drive time is not an official transit-time source","url":"https://www.blm.gov/visit/red-rock-canyon-national-conservation-area","url2":"https://www.recreation.gov/timed-entry/400000","verified_distance":"17 miles west of the Las Vegas Strip, approx. 30 minutes (BLM). Public transit does not extend to Red Rock (BLM)."},{"exceptions":"Annual maintenance closure Dec 1-14 (park fully closed, including on foot). Many trails closed May 15-Sep 30 (outside the trip window).","fees":"Day-use entrance $10 per Nevada-plated vehicle; $15 for non-Nevada vehicles. Bike-in $2 per bike (Nevada State Parks).","fetched":"2026-11-27","hours":"Open daily, sunrise to sunset. Visitor Center daily 9 AM-4 PM (Nevada State Parks).","name":"Valley of Fire State Park","reservation":"Day-use reservations not required. Campsites by reservation via reservenevada.com.","social":"u: left blank.","status":"verified-hours-fees-exceptions","transit_1hr":"u: no official distance or transit-time source retrieved; rideshare return reported unreliable","url":"https://parks.nv.gov/parks/valley-of-fire"},{"exceptions":"Official holiday advisory: buy tickets ahead to guarantee admission. 2026 last-entry table may not match 2027 times - confirm on tickets page.","fees":"2027 Admission (tickets for Jan 1, 2027 onward) listed 'From $21' (official). 2026 reference: Daytime from $25 (3-5 PM), Evening from $35 (5-11 PM). Exact per-person price for trip date not confirmed.","fetched":"2026-11-27","hours":"2027 Admission: daily 3-11 PM (official). 2026 reference: Jun-Aug 8 PM-midnight; last entry 10 PM Sep-May; box office closes 1 hour before close.","name":"The Neon Museum","reservation":"Tickets bought online on neonmuseum.org (official).","social":"Prior session verified TikTok/Instagram/Facebook links on official site (not re-verified 2026-11-27); re-confirm before treating as official.","status":"verified-hours-partial-fees","transit_1hr":"u: no official transit-time source","url":"https://neonmuseum.org/"},{"exceptions":"Outdoor show; weather cancellations possible. Holiday schedule = Sat/Sun schedule.","fees":"Free.","fetched":"2026-11-27","hours":"Mon-Fri: every 30 min 3:00-7:30 PM, then every 15 min 8:00 PM-midnight. Sat/Sun/Holidays: every 30 min 12:00-7:30 PM, then every 15 min 8:00 PM-midnight.","name":"Bellagio Fountains","reservation":"None - free outdoor show.","social":"u: left blank (no venue-level social verified on the official Fountains page).","status":"verified-hours-fees","transit_1hr":"u: no official transit-time source (on-Strip location only)","url":"https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html","verified_scale":"1,000+ fountains; water to 460 ft; spans 1,000+ ft."},{"exceptions":"Senior $5 off Sun-Thu 12-5 PM; locals 20% off select Jan/June dates before 5 PM; service members 20% off military holidays before 5 PM (official page).","fees":"Daytime $23.50 (12:00-5:59 PM); Anytime $34.75 (from 6 PM); Happy Half Hour $60 (21+ only, includes bar); Youth $8.50 daytime / $17.50 anytime; children 3 and under free.","fetched":"2026-11-27","hours":"Sun 12:30 PM-1:30 AM; Mon-Thu 12:30-11:30 PM; Fri-Sat 12:30 PM-1:30 AM.","name":"High Roller Observation Wheel (LINQ / Caesars)","reservation":"Tickets on the official Caesars page; timed entry.","social":"u: left blank.","status":"verified-hours-fees","transit_1hr":"u: no official transit-time source","url":"https://www.caesars.com/linq/things-to-do/attractions/high-roller","verified_scale":"550 ft tall; 30-minute rotation; 28 cabins, up to 40 guests each.","wrong_domain_note":"https://www.highroller.com/ does NOT belong to the attraction (2026-11-27: served rolr.com prediction-market content). Official page is the Caesars URL above."},{"exceptions":"Live music on 3 stages; weekends from noon-2 AM. SlotZilla: Zip-Zilla (seated, 7 stories, 2 blocks) and Super-Hero Zoom (11 stories, 5 blocks). All-You-Can-Fly Mon-Fri before 5 PM (paid).","fees":"Viva Vision light shows free. SlotZilla zipline paid (price not extracted - left blank).","fetched":"2026-11-27","hours":"Viva Vision shows FREE at the top of every hour, 6 PM-2 AM daily.","name":"Fremont Street Experience","reservation":"None for the canopy show.","social":"u: left blank.","status":"verified-hours-show-schedule","transit_1hr":"u: no official transit-time source","url":"https://fremontstreetexperience.com/about-us/","verified_scale":"Viva Vision: 16.4M pixels, 1,375 x 90 ft, 90 ft above the mall."},{"exceptions":"Eagles residency ends Jan 23, 2027 - BEFORE the Feb 15+ trip window. Backstreet Boys Dec 26, 2026-Jan 2, 2027 - before the trip window. Metallica Jan 28-Mar 13, 2027 overlaps the window but exact February performance dates were not extracted - left blank.","fees":"u: ticket prices not extracted from the official shows page - left blank. Tickets via Ticketmaster; venue is cashless, mobile tickets only.","fetched":"2026-11-27","hours":"u: event-dependent; no daily hours. Feb 2027 show dates not confirmed - left blank.","name":"Sphere","reservation":"Tickets via Ticketmaster (linked from thesphere.com).","social":"u: left blank.","status":"partial-shows-listed-dates-prices-unverified","transit_1hr":"u: no official transit-time source","url":"https://www.thesphere.com/shows","verified_shows":"Wizard of Oz at Sphere on sale now; Eagles Nov 13, 2026-Jan 23, 2027; Backstreet Boys Dec 26, 2026-Jan 2, 2027; Metallica Jan 28-Mar 13, 2027."},{"exceptions":"u: dark days / holiday schedule not extracted - left blank.","fees":"u: ticket prices not extracted - left blank.","fetched":"2026-11-27","hours":"u: showtimes not extracted from the official page - left blank.","name":"Cirque du Soleil - KA (MGM Grand)","reservation":"u: book via official Cirque page - confirm showtimes first.","social":"u: left blank.","status":"description-only-showtimes-prices-unverified","transit_1hr":"u: no official transit-time source","url":"https://www.cirquedusoleil.com/ka","verified_description":"Epic story of imperial twins; Wushu, Chinese Opera, Capoeira; Wheel of Death (official Cirque page)."},{"exceptions":"Nevada Resident discount $3 off Adult or Child admission, box-office only with government-issued NV ID, subject to availability. Children 12 and under must be accompanied by a paid adult. Children 4 and under free (no ticket) but may not ride VR; under-5s rotate with a parent/guardian in VR. Aquarium may close early for private events. Anytime tickets limited quantity.","fees":"Timed entry: Adult $29.00; Seniors (65+) $27.00; Children (5-12) $24.00; children 4 and under free. Anytime: Adult $36.00; Seniors $34.00; Children (5-12) $31.00. Includes Undersea Explorer VR Experience (ages 5+).","fetched":"2026-11-27","hours":"Daily 10:00 AM-8:00 PM; last admission 7:00 PM. Box office Mon-Sun 9:30 AM-7:30 PM. Guided tours: Mon-Sat 3:00 PM; Sun 1:00, 2:00 or 3:00 PM.","name":"Shark Reef Aquarium (Mandalay Bay)","reservation":"Timed ticket entry; entry time good for the one-hour window selected. Reserve in advance - peak times sell out. Anytime tickets valid for date of entry anytime during aquarium hours (limited).","social":"u: left blank.","status":"verified-hours-fees","transit_1hr":"u: no official transit-time source","url":"https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"}],"as_of":"2026-11-27","branch":"arena/c88d116c-vegas2","hotels":[{"bath":"u: bathroom details not extracted from an official Venetian room page in this session.","bed":"Two Queen beds - Luxury Two Queen Suite, 750 sq ft, living room, Roman tub; 'largest standard suite on the Strip' (official Venetian page, fetched 2026-11-27).","fetched":"2026-11-27","michelin_on_campus":"4: Bouchon (Recommended); Cote Las Vegas (Recommended); Estiatorio Milos (Recommended); Mott 32 at The Palazzo (Recommended) - per official Michelin address list.","name":"The Venetian Resort","price_3n":"u: no official rate retrieved for Feb 15-18, 2027 (Nov 27 re-check of the official booking calendar returned $XXX placeholders, no prices).","price_7n":"PRIOR snapshot only (2026-11-26, session e9badc77): $6,170.43 all-in incl. taxes for Feb 15-22, 2027 (Luxury King Suite). NOT re-verified 2026-11-27: the official booking calendar returned $XXX placeholders with the note 'Pricing shown is best available suite and rate, includes daily resort fee, excludes taxes.' Treat the $6,170.43 figure as stale until re-checked.","room_url":"https://www.venetianlasvegas.com/hotel/the-venetian/luxury-two-queen-suite.html","transit_1hr":"u: no official transit-time source; 1-hour test unverified."},{"bath":"Stone and glass bathroom, double-sink vanity, hand-held showerhead (official booking room description, fetched 2026-11-27).","bed":"1 King - Julius Deluxe Room, 360+ sq ft (official booking, fetched 2026-11-27). 2-Queen room types: Colosseum Strip View 2 Queens 475 sq ft; Augustus Fountain View 2 Queens 650 sq ft (official hotel page).","book_timing":"u: cheapest booking window unverified from a single snapshot. Observed: Feb 15-18, 2027 avg $183/nt vs Feb 15-22, 2027 avg $226/nt (same room pool, includes $55 resort fee, excludes taxes) - weekend/holiday nights raise the 7-night average. A weekly price log is the only honest method (see booking.html).","fetched":"2026-11-27","michelin_on_campus":"1: Guy Savoy Las Vegas (1 MICHELIN Star) - per official Michelin address list.","name":"Caesars Palace","policies":"Check-in 4 PM (min age 21, government photo ID, credit card for incidentals); check-out 11 AM. Resort fee line on booking: +$55 daily resort fee. Policies section states: Resort fees $62.30 ($54.95 plus $7.35 tax) - CONFLICT with the $55 line, flagged. Deposit $100/day. Self/valet parking surcharge (free for Platinum+). Dogs only (2 max, 50 lb, fees apply).","price_3n":"$183/night Best Available Rate incl. $55 daily resort fee, EXCLUDES taxes (fetched 2026-11-27, 73 rooms). Cheapest shown: Room Type Assigned on Arrival $128 + $55 = $183/nt (Standard $167); Julius Deluxe 1 King $131 + $55 = $186/nt (Standard $172). 3-night arithmetic total: $183 x 3 = $549 before tax (arithmetic, not a quoted total).","price_7n":"$226/night Best Available Rate incl. $55 daily resort fee, EXCLUDES taxes (fetched 2026-11-27, 69 rooms). Cheapest shown: Room Type Assigned on Arrival $171 + $55 = $226/nt (Standard $223); Julius Deluxe 1 King $177 + $55 = $232/nt (Standard $231). 7-night arithmetic total: $226 x 7 = $1,582 before tax (arithmetic, not a quoted total).","room_url":"https://www.caesars.com/caesars-palace/hotel","transit_1hr":"u: no official transit-time source; 1-hour test unverified.","url_3n":"https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=clv","url_7n":"https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv"},{"bath":"Upgraded bathroom vanity with dual sinks; frameless shower enclosure; energizing lighted bathroom mirror (official room page). The word 'private' is not used - confirm at booking.","bed":"2 Queen Beds - Premier Two Queen, 510 sq ft, max 4 guests (official Bellagio room page, fetched 2026-11-27).","fetched":"2026-11-27","michelin_on_campus":"1: Michael Mina (Recommended) - per official Michelin address list.","name":"Bellagio","price_3n":"u: no official rate retrieved for Feb 15-18, 2027 (official pages show Check Rates only).","price_7n":"u: no official rate retrieved for Feb 15-22, 2027 (official pages show Check Rates only).","room_url":"https://bellagio.mgmresorts.com/en/hotel/premier-two-queen.html","transit_1hr":"u: no official transit-time source; 1-hour test unverified."},{"bath":"Private water closet, granite dual-sink vanity, stone shower and separate air-bath tub (official suite page). SUITE ONLY.","bed":"2 Queen Beds - Center Suite (Center Tower Suite - Strip View), 1,075 sq ft, max 4 guests (official ARIA page, fetched 2026-11-27). SUITE ONLY; a standard 2-queen room is not confirmed.","fetched":"2026-11-27","michelin_on_campus":"1: Gymkhana Las Vegas (Recommended) - per official Michelin address list.","name":"ARIA Resort & Casino","price_3n":"u: no official rate retrieved (Check Rates only).","price_7n":"u: no official rate retrieved (Check Rates only).","room_url":"https://aria.mgmresorts.com/en/hotel/center-suite.html","transit_1hr":"u: no official transit-time source; 1-hour test unverified."},{"bath":"u: bathroom details not extracted from an official MGM Grand room page in this session.","bed":"2 Queen Beds - MGM Two Queen, 446 sq ft, max 4 guests; 55-inch HDTV, Serta Presidential Pillow-top (official MGM Grand page, fetched 2026-11-27).","fetched":"2026-11-27","michelin_on_campus":"2: Restaurant de Joel Robuchon (2 Stars); L'Atelier de Joel Robuchon (1 Star) - per official Michelin address list.","name":"MGM Grand Hotel & Casino","price_3n":"u: no official rate retrieved (Check Rates only).","price_7n":"u: no official rate retrieved (Check Rates only).","room_url":"https://mgmgrand.mgmresorts.com/en/hotel/mgm-two-queen.html","transit_1hr":"u: no official transit-time source; 1-hour test unverified."},{"bath":"Marble bathroom with glass-enclosed shower and separate water closet - on official Wynn King room pages (prior session). Not confirmed for a two-queen room; use of 'private' not confirmed.","bed":"One King or two Queen double pillow-top Wynn Dream Beds with 507-thread-count linens - Wynn Resort room, 640 sq ft, floor-to-ceiling windows (official Wynn page, fetched 2026-11-27). Prior-session note: the official booking engine room list showed only King types on the retrieved page - confirm a 2-queen booking before relying on it.","fetched":"2026-11-27","michelin_on_campus":"1: Wing Lei (Recommended) - per official Michelin address list.","name":"Wynn Las Vegas","price_3n":"u: no official rate retrieved.","price_7n":"u: no official rate retrieved.","room_url":"https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort","transit_1hr":"u: no official transit-time source; 1-hour test unverified."},{"bath":"u: bathroom details not confirmed on the retrieved official Cosmopolitan room page.","bed":"2 Queen Beds - City Room Queen, 460 sq ft, max 4 guests (official Cosmopolitan page, fetched 2026-11-27). Terrace Studio 730 sq ft also listed. Homepage offer at fetch time: up to 30% off + $150 F&B (promo, not a verified trip-date rate).","fetched":"2026-11-27","michelin_on_campus":"2: e by Jose Andres (1 Star); China Poblano (Bib Gourmand) - per official Michelin address list.","name":"The Cosmopolitan of Las Vegas","price_3n":"u: no official rate retrieved for Feb 15-18, 2027.","price_7n":"u: no official rate retrieved for Feb 15-22, 2027.","room_url":"https://cosmopolitanlasvegas.mgmresorts.com/en/hotel/city-room.html","transit_1hr":"u: no official transit-time source; 1-hour test unverified."},{"bath":"Spa-inspired bathroom with vanity, LED mirror and walk-in shower (official Conrad Premium Room page, fetched 2026-11-27).","bed":"One King Bed or Two Queen Beds - Conrad Las Vegas Premium Room, 550 sq ft (official Resorts World page, fetched 2026-11-27). May be booked as either bed type.","fetched":"2026-11-27","michelin_on_campus":"1: Stubborn Seed Las Vegas (Recommended) - per official Michelin address list. (Room type shown is Conrad Las Vegas at Resorts World.)","name":"Resorts World Las Vegas (Conrad Las Vegas room type)","price_3n":"u: no official rate retrieved.","price_7n":"u: no official rate retrieved.","room_url":"https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/","transit_1hr":"u: no official transit-time source; 1-hour test unverified."}],"irregularities":["ROOT-1 (FIXED this session): root hotels.html and index.html asserted all 24 Michelin restaurants are '~15-20 min' from any Strip hotel with no official transit-time source - an inference that violates the no-inference rule. Removed; replaced with verified on-campus counts + 1-hour column flagged unverified.","ROOT-2 (FIXED this session): index.html nav marked 'Michelin Restaurants' active on the Home page. Fixed to mark Home active.","ROOT-3 (FIXED this session): activities.html linked https://www.highroller.com/ as official - that domain served unrelated rolr.com prediction-market content on 2026-11-27. Replaced with the official Caesars High Roller page.","ROOT-4 (FIXED this session): activities.html linked https://www.vegasmonorail.com/ as official - parked/for-sale. Replaced with https://www.lvmonorail.com/.","ROOT-5 (FIXED this session): restaurants.html showed Instagram handles found via web search (@joelrobuchon.lasvegas, @ebyjoseandres, @wynnlasvegas) as if venue-confirmed. Removed; social column is blank+unverified unless the handle is linked from the venue's own official site.","ROOT-6 (FIXED this session): restaurants.html Stubborn Seed official link pointed to /restaurant/stubborn-seed/; the working official page is /dining/stubborn-seed/. Updated.","ROOT-7 (FIXED this session): restaurants.html Kame official link kameomakase.com redirects to sushikame.com. Updated to https://sushikame.com/ with redirect noted.","ROOT-8 (OPEN): Caesars booking shows '+$55 Daily Resort Fee' on room lines but the Policies section states 'Resort fees: $62.30 ($54.95 plus $7.35 tax)'. Both figures are shown; do not merge them.","ROOT-9 (OPEN): The Venetian 2026-11-26 all-in snapshot ($6,170.43) could not be re-verified on 2026-11-27 (official calendar returned $XXX placeholders). Kept as a dated prior snapshot, flagged stale.","ROOT-10 (OPEN): Wynn 2-queen bookability - the Wynn Resort room page offers 'Book Two Queens' but a prior booking-engine pull listed only King types. Confirm a 2-queen booking before relying on it.","ROOT-11 (OPEN): cheapest booking time cannot be determined from snapshots; a weekly price log is required (see booking.html). Any 'book X days ahead' advice without a log is unverified.","ROOT-12 (OPEN): .github/workflows/pages.yml uploads docs/ while the live Pages source is main / (root) per the Pages API. The root dashboard is the live home page; docs/ is preserved history. No workflow change in this session (out of scope)."],"legend":{"p":"Partially verified (official page covers part of the claim)","u":"Unverified - left blank by rule","v":"Verified on an official page"},"method":"Fresh official-source re-verification 2026-11-27 (fetch_page + web_search) for hotels, restaurants, activities, RTC and Monorail. Michelin star/Bib/Recommended statuses re-use the official 2026 Michelin Southwest release + LVCVA list verified 2026-11-26 (not re-fetched). Every table row carries an official source link; values not confirmable from an official source are left blank and flagged unverified; nothing is inferred.","michelin":{"counts":"24 Las Vegas distinctions: 4 starred (1 x 2 stars, 3 x 1 star), 3 Bib Gourmand, 17 Recommended.","note":"Statuses are the 2026 selection, not a guarantee of 2027 status. Starred = 1-2 stars only; Bib Gourmand is a distinction, not a star; Recommended = in the guide, no star.","prior_as_of":"2026-11-26","reverified_2026_11_27":false,"source_urls":["https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s","https://www.visitlasvegas.com/michelin-guide-restaurants/"],"starred":["Restaurant de Joel Robuchon - 2 MICHELIN Stars (MGM Grand)","e by Jose Andres - 1 MICHELIN Star (The Cosmopolitan)","Guy Savoy Las Vegas - 1 MICHELIN Star (Caesars Palace)","L'Atelier de Joel Robuchon Las Vegas - 1 MICHELIN Star (MGM Grand)"]},"restaurants":[{"cost_for_2":"u: blank (no official fixed-menu price retrieved).","cuisine":"French","fetched_prior":"2026-11-26","hours":"Tue-Sat 5:00-9:30 PM; Mon & Sun Closed (prior official MGM Grand snapshot; not re-fetched 2026-11-27).","name":"Joel Robuchon","official":"https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html","social":"u: blank (prior Instagram lead was search-found, not venue-confirmed; removed).","status":"2 MICHELIN Stars"},{"cost_for_2":"u: blank.","cuisine":"Spanish","fetched_prior":"2026-11-26","hours":"Tue-Sat 5:30-8:30 PM; Mon & Sun Closed (prior official Cosmopolitan snapshot; not re-fetched 2026-11-27). Reservations up to three months ahead, two seatings nightly (LVCVA; confirm on official site).","name":"e by Jose Andres","official":"https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html","social":"u: blank (prior Instagram lead was search-found, not venue-confirmed; removed).","status":"1 MICHELIN Star"},{"cost_for_2":"u: blank.","cuisine":"French","fetched_prior":"2026-11-26","hours":"Mon 5:00-9:30 PM; Tue-Wed Closed; Thu-Sun 5:00-9:30 PM (prior official MGM Grand snapshot; not re-fetched 2026-11-27).","name":"L'Atelier de Joel Robuchon","official":"https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html","social":"u: blank.","status":"1 MICHELIN Star"},{"cost_for_2":"u: blank.","cuisine":"French","fetched_prior":"2026-11-26","hours":"Opens 5:00 PM; full weekly hours not confirmed (partial, prior official Caesars snapshot).","name":"Restaurant Guy Savoy","official":"https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy","social":"u: blank.","status":"1 MICHELIN Star"},{"cost_for_2":"$120 total for 2 adults: JOSE'S WAY TASTING MENU $60.00 per person x 2 (official menu page, fetched 2026-11-27). Pre-tax/pre-tip; menu items subject to change.","cuisine":"Chinese, Mexican","fetched":"2026-11-27 (tasting price); hours prior 2026-11-26","hours":"Mon-Thu 11:00 AM-10:00 PM; Fri 11:00 AM-10:30 PM; Sat 10:00 AM-10:30 PM; Sun 10:00 AM-10:00 PM (prior official Cosmopolitan snapshot; not re-fetched 2026-11-27). Open for lunch, dinner, takeout (official menus page).","name":"China Poblano","official":"https://www.chinapoblano.com/menus/","social":"u: blank.","status":"Bib Gourmand"},{"cost_for_2":"u: blank.","cuisine":"Italian","fetched":"2026-11-27","hours":"u: blank (no hours on official homepage, About, or Contact pages).","name":"Esther's Kitchen","official":"https://www.estherslv.com/","social":"u: blank.","status":"Bib Gourmand","verified_notes":"Seasonal Italian, Arts District downtown; Chef James Trees story on About page. Phone 702-570-7864 (Contact page)."},{"cost_for_2":"u: blank.","cuisine":"Vietnamese","fetched":"2026-11-27","hours":"u: blank (no hours on official homepage).","name":"YEN Viet Kitchen","official":"https://www.yenvietkitchen.com/","social":"u: blank.","status":"Bib Gourmand","verified_notes":"Vietnamese; dine-in/takeout; menu/order via SkipTheLine."},{"cost_for_2":"u: blank.","cuisine":"Cantonese","fetched_prior":"2026-11-26","hours":"Thu/Sun/Mon 5:30-9:30 PM; Fri-Sat 5:30-10:00 PM; Tue-Wed Closed (prior official Wynn snapshot; not re-fetched 2026-11-27).","name":"Wing Lei","official":"https://www.wynnlasvegas.com/dining/fine-dining/wing-lei","social":"u: blank (prior Wynn property-level lead removed; not venue-confirmed).","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"French","fetched_prior":"2026-11-26","hours":"Mon-Wed 5:00-10:00 PM; Thu 8:00 AM-1:00 PM & 5:00-10:00 PM; Fri-Sun 8:00 AM-2:00 PM & 5:00-10:00 PM (prior official Venetian snapshot; not re-fetched 2026-11-27).","name":"Bouchon","official":"https://www.venetianlasvegas.com/restaurants/bouchon.html","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Korean Steakhouse","fetched":"2026-11-27","hours":"Mon-Thu/Sun 5:00-11:00 PM; Fri-Sat 4:30 PM-midnight. Restaurant Row. Phone 702.607.2683. Reservations via SevenRooms.","name":"COTE Las Vegas","official":"https://www.venetianlasvegas.com/dining/restaurants/cote.html","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Greek Seafood","fetched":"2026-11-27","hours":"Mon-Thu/Sun 11:30 AM-10:30 PM; Fri-Sat 11:30 AM-11:00 PM. Lunch 11:30 AM-3 PM; midday 3-5 PM; dinner from 5 PM. Phone 702.414.1270.","name":"Estiatorio Milos","official":"https://www.venetianlasvegas.com/dining/restaurants/estiatorio-milos.html","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank (official page shows $$$$ price level only; amount blank).","cuisine":"Indian","fetched":"2026-11-27","hours":"Mon-Thu 5:00-10:00 PM; Fri-Sat 5:00-10:30 PM; Sun 5:00-10:00 PM. Children 6+; no one under 21 after 10 PM. 3730 S Las Vegas Blvd. MICHELIN Recommended, $$$$ (official ARIA page).","name":"Gymkhana Las Vegas","official":"https://aria.mgmresorts.com/en/restaurants/gymkhana.html","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Sushi","fetched":"2026-11-27","hours":"Daily 5:30-9:00 PM. 5040 Spring Mountain Rd. MICHELIN Guide 2026 selected. Reservations via Resy.","name":"Kabuto","official":"https://www.kabutolv.com/","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Omakase","fetched":"2026-11-27","hours":"u: blank (minimal content on redirect target; no hours).","name":"Kame Omakase","official":"https://sushikame.com/","social":"u: blank.","status":"Recommended","verified_notes":"https://www.kameomakase.com/ redirects to https://sushikame.com/ (Kame Omakase)."},{"cost_for_2":"u: blank.","cuisine":"Thai","fetched":"2026-11-27","hours":"Mon-Wed 11:00 AM-midnight; Thu-Sun 11:00 AM-2:00 AM (Chinatown location). 4480 Spring Mountain Rd #700. MICHELIN Selected 2026; Wine Spectator Award of Excellence 2026. Reservations via Resy.","name":"Lamaii","official":"https://www.lamaiilv.com/chinatown/","social":"u: blank.","status":"Recommended"},{"cost_for_2":"$590++ total for 2 adults: tasting menu $295++ per person x 2 (official Bellagio page, fetched 2026-11-27). '++' = plus tax and gratuity; pre-tax/pre-tip base.","cuisine":"Seafood","fetched":"2026-11-27","hours":"u: weekly hours blank (not extracted). EXCEPTION: seasonal closure Nov 22-30 (year per official page at fetch time - confirm for 2027). MICHELIN Recommended, $$$$ seafood. Phone 702.693.7223.","name":"Michael Mina","official":"https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Cantonese","fetched":"2026-11-27","hours":"Lunch 11:00 AM-2:30 PM daily; Sat/Sun brunch 10:30 AM-2:30 PM; dinner 5:00-10:00 PM daily. Palazzo Casino Floor. Phone 702.607.3232.","name":"Mott 32","official":"https://www.venetianlasvegas.com/dining/restaurants/mott-32.html","social":"u: blank.","status":"Recommended"},{"cost_for_2":"5-course $130pp = $260 for 2; 7-course $160pp = $320 for 2; Signature $210pp = $420 for 2 (official menu, fetched 2026-11-27). Pairings $60-$125pp. Chef's Table 9-course + 9 wines; Bar Experience 5/7/9-course; Private Dining 12-seat; Grand Cru room up to 30. 20% gratuity parties of 6+. All pre-tax/pre-tip.","cuisine":"French","fetched":"2026-11-27","hours":"u: weekly hours blank (not extracted from menu/restaurant pages) - confirm on official site.","name":"Partage","official":"https://partage.vegas/menu","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Vietnamese","fetched":"2026-11-27","hours":"Open 24 hours (Pho Ga Bac Bac). Full bar. Reservations not guaranteed on holidays/peak. MICHELIN Guide Recommended 2026. Chinatown.","name":"Pho Ga Bac Bac","official":"https://bestchickenpho.com/","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Chinese","fetched":"2026-11-27","hours":"Daily 10:00 AM-3:00 AM. Reservations 702-247-8136. Dim sum at lunch. Gold Coast Hotel and Casino, 4000 W. Flamingo Rd.","name":"Ping Pang Pong","official":"https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong","social":"u: blank.","status":"Recommended"},{"cost_for_2":"u: blank.","cuisine":"Barbecue","fetched":"2026-11-27","hours":"Tue-Thu 11:00 AM-9:00 PM; Fri-Sat 11:00 AM-10:00 PM; Sun 11:00 AM-9:00 PM. 1327 S Main St, Arts District. MICHELIN 2026 (Main St location only). Reservations via Resy.","name":"SoulBelly BBQ","official":"https://www.soulbellybbq.com/","social":"u: blank.","status":"Recommended"},{"cost_for_2":"$298 total for 2 adults: Chef's Tasting Menu $149pp x 2 (official menu, fetched 2026-11-27). Wine pairing +$78pp = +$156 for 2. Auto gratuity added to tasting. Last call for tasting 9:30 PM. Whole table must participate. Pre-tax/pre-tip.","cuisine":"New American","fetched":"2026-11-27","hours":"u: weekly hours blank (not on homepage/menu pages). Tasting last call 9:30 PM. Max 4 guests per table online; $25/guest cancellation fee under 24h. OpenTable rid 732187.","name":"Sparrow + Wolf","official":"https://www.sparrowandwolflv.com/menu/","social":"u: blank.","status":"Recommended"},{"cost_for_2":"$320 total for 2 adults: Tasting Menu $160pp x 2 (official Resorts World PDF, fetched 2026-11-27). Elevated tasting +$35; wine pairing $60|$70; enhancements (caviar, truffle, etc.) extra. Full table participation required. 20% gratuity parties of 6+. Pre-tax/pre-tip. Menu curated by Michelin Star Chef Jeremy Ford.","cuisine":"Contemporary","fetched":"2026-11-27","hours":"Main Dining daily 5:00-10:00 PM; Bar & Lounge 4:00-10:00 PM. MICHELIN Guide 2026 selected. Phone 702-676-8062. Reservations via SevenRooms.","name":"Stubborn Seed Las Vegas","official":"https://www.rwlasvegas.com/dining/stubborn-seed/","official_menu_pdf":"https://www.rwlasvegas.com/pdf/stubborn-seed-tasting-menu-11-25-2026/","social":"u: blank.","status":"Recommended"},{"cost_for_2":"$170 total for 2 adults: tasting menu $85 per person x 2 (official site, fetched 2026-11-27). Pre-tax/pre-tip.","cuisine":"Mediterranean / Italian","fetched":"2026-11-27","hours":"Dinner nightly from 5:00 PM. 9205 W Russell Rd #185. Reservations via SevenRooms.","name":"Anima by EDO","official":"https://animabyedo.com/","social":"u: blank.","status":"Recommended"}],"rule":"Every table row carries a source link to an official site. Values not confirmable from an official source are left blank and flagged unverified. Nothing is inferred or filled in manually.","scope":"Root site only: index.html, hotels.html, restaurants.html, activities.html, questions.html, suggestions.html, flagged-for-review.html, booking.html (new), sources.html (new), assets/css/style.css. New: data/session-c88d116c/verification.json, scripts/check_root_site.py. Read-only: data/verified/**, data/*.json, data/trip/**, docs/**, site/**, field-notes/**, legacy-dashboard/**.","session":"c88d116c","transit":{"las_vegas_subway":"No subway service is published on the official RTC or Monorail sites. Public transit = RTC buses + Las Vegas Monorail (+ Downtown Loop / Vegas Loop, separate systems). Absolute 'no subway exists' is not sourced to a single official negative statement and is phrased as 'no subway service found on official transit sites'.","monorail":{"fetched":"2026-11-27","headways":"Trains every 4-8 minutes.","hours":"Mon 7:00 AM-midnight; Tue-Thu 7:00 AM-2:00 AM; Fri-Sun 7:00 AM-3:00 AM. Modified-hours notices posted for Nov 29-Dec 2, Dec 3, Dec 6-10, Dec 13-15, 2026 - always re-check for trip dates.","note":"Separate ticketed system; RTC passes do not work on the Monorail. 7 stations, MGM Grand to SAHARA.","url":"https://www.lvmonorail.com/","wrong_domain_note":"vegasmonorail.com is parked/for-sale - do not use."},"rtc":{"fares":"Strip / All Access: single ride $4; 2-hour $6; 24-hour $8; 3-day $20. Reduced: $2/$3/$4/$10. Children 5 and under free. Tap-to-ride with Visa/Mastercard/phone; rideRTC app.","fetched":"2026-11-27","schedules":"Current schedules dated Aug 23, 2026 (re-check for Feb 2027). Deuce (Strip-Downtown) runs 24/7, about every 15 minutes.","urls":["https://www.rtcsnv.com/","https://www.rtcsnv.com/ways-to-travel/schedules-maps/","https://www.rtcsnv.com/ways-to-travel/fares-passes/"]},"travel_time_matrix":"NOT VERIFIED: no official door-to-door transit-time source (hotel to each restaurant/activity) was retrieved. The 1-hour test is unverified for every hotel. Previously published '~15-20 min' estimates were removed as inference."},"trip":{"holiday_note":"Feb 15, 2027 is Washington's Birthday (Presidents' Day), a federal holiday (OPM; prior verification 2026-11-26). Expect holiday/weekend demand pricing on Feb 15-18 nights.","seven_night":"Check-in Mon Feb 15, 2027 -> check-out Mon Feb 22, 2027 (7 nights; comparison basis)","window":"2027-02-15 to 2027-03-23 (1-2 weeks); preferred 2027-02-15 to 2027-02-18 (3 nights)"}}
+{
+ "activities": [
+  {
+   "exceptions": "Closed Thanksgiving Day and Christmas Day. Special-event limits may apply around Easter, early August, 3 days after Thanksgiving and the week after Christmas (official tour page). Security checkpoint; no firearms/drones.",
+   "fees": "Self-Guided Visitor Center Tour $15; Guided Power Plant Tour $25 (adult); Guided Dam Tour $40 per person, on-site purchase only, first-come first-served, sells out. Children 3 and under free. America the Beautiful / Interagency passes NOT accepted. Parking $10.",
+   "fetched": "2026-11-27",
+   "hours": "Dam: daily 5:00 AM-9:00 PM (PST). Visitor Center and tours: daily 9:00 AM-5:00 PM. Doors close 4:15 PM; last tour departs 4:10 PM (official page, last updated 10/30/26).",
+   "name": "Hoover Dam (Bureau of Reclamation)",
+   "reservation": "Visitor Center and Power Plant tours sold through the official ticketing link on usbr.gov. Guided Dam Tour on-site only.",
+   "social": "Unverified at venue level for this session (prior session noted Hoover Dam Facebook linked from official page; not re-verified 2026-11-27).",
+   "status": "verified-hours-fees-exceptions",
+   "transit_1hr": "u: no official transit-time source; public transit to Hoover Dam not established",
+   "url": "https://www.usbr.gov/lc/hooverdam/service/index.html"
+  },
+  {
+   "exceptions": "Limited hours on Thanksgiving (BLM, 2025 note). BLM waived amenity fees for Presidents' Day in 2021 (press release); no 2027 fee-free day confirmed. Timed-entry reservation non-refundable on the day of visit.",
+   "fees": "u: entry/amenity fee not confirmed on an official page retrieved in this session (left blank on site).",
+   "fetched": "2026-11-27",
+   "hours": "Scenic Drive (Recreation.gov/BLM): Oct 6 AM-7 PM; Nov-Feb 6 AM-5 PM; Mar 6 AM-7 PM; Apr-Sep 6 AM-8 PM. Visitor Center 8 AM-4:30 PM.",
+   "name": "Red Rock Canyon National Conservation Area - Scenic Drive",
+   "reservation": "Timed entry reservation required Oct 1-May 31, 8 AM-5 PM for the Scenic Drive (BLM + Recreation.gov). Covers the Feb 2027 trip window. Walk-in and bicycle visitors do not need a reservation.",
+   "social": "u: agency-level BLM accounts only (not venue-specific); left blank.",
+   "status": "verified-distance-hours-reservation",
+   "transit_1hr": "u: BLM states public transit does not extend to Red Rock; drive time is not an official transit-time source",
+   "url": "https://www.blm.gov/visit/red-rock-canyon-national-conservation-area",
+   "url2": "https://www.recreation.gov/timed-entry/400000",
+   "verified_distance": "17 miles west of the Las Vegas Strip, approx. 30 minutes (BLM). Public transit does not extend to Red Rock (BLM)."
+  },
+  {
+   "exceptions": "Annual maintenance closure Dec 1-14 (park fully closed, including on foot). Many trails closed May 15-Sep 30 (outside the trip window).",
+   "fees": "Day-use entrance $10 per Nevada-plated vehicle; $15 for non-Nevada vehicles. Bike-in $2 per bike (Nevada State Parks).",
+   "fetched": "2026-11-27",
+   "hours": "Open daily, sunrise to sunset. Visitor Center daily 9 AM-4 PM (Nevada State Parks).",
+   "name": "Valley of Fire State Park",
+   "reservation": "Day-use reservations not required. Campsites by reservation via reservenevada.com.",
+   "social": "u: left blank.",
+   "status": "verified-hours-fees-exceptions",
+   "transit_1hr": "u: no official distance or transit-time source retrieved; rideshare return reported unreliable",
+   "url": "https://parks.nv.gov/parks/valley-of-fire"
+  },
+  {
+   "exceptions": "Official holiday advisory: buy tickets ahead to guarantee admission. 2026 last-entry table may not match 2027 times - confirm on tickets page.",
+   "fees": "2027 Admission (tickets for Jan 1, 2027 onward) listed 'From $21' (official). 2026 reference: Daytime from $25 (3-5 PM), Evening from $35 (5-11 PM). Exact per-person price for trip date not confirmed.",
+   "fetched": "2026-11-27",
+   "hours": "2027 Admission: daily 3-11 PM (official). 2026 reference: Jun-Aug 8 PM-midnight; last entry 10 PM Sep-May; box office closes 1 hour before close.",
+   "name": "The Neon Museum",
+   "reservation": "Tickets bought online on neonmuseum.org (official).",
+   "social": "Prior session verified TikTok/Instagram/Facebook links on official site (not re-verified 2026-11-27); re-confirm before treating as official.",
+   "status": "verified-hours-partial-fees",
+   "transit_1hr": "u: no official transit-time source",
+   "url": "https://neonmuseum.org/"
+  },
+  {
+   "exceptions": "Outdoor show; weather cancellations possible. Holiday schedule = Sat/Sun schedule.",
+   "fees": "Free.",
+   "fetched": "2026-11-27",
+   "hours": "Mon-Fri: every 30 min 3:00-7:30 PM, then every 15 min 8:00 PM-midnight. Sat/Sun/Holidays: every 30 min 12:00-7:30 PM, then every 15 min 8:00 PM-midnight.",
+   "name": "Bellagio Fountains",
+   "reservation": "None - free outdoor show.",
+   "social": "u: left blank (no venue-level social verified on the official Fountains page).",
+   "status": "verified-hours-fees",
+   "transit_1hr": "u: no official transit-time source (on-Strip location only)",
+   "url": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+   "verified_scale": "1,000+ fountains; water to 460 ft; spans 1,000+ ft."
+  },
+  {
+   "exceptions": "Senior $5 off Sun-Thu 12-5 PM; locals 20% off select Jan/June dates before 5 PM; service members 20% off military holidays before 5 PM (official page).",
+   "fees": "Daytime $23.50 (12:00-5:59 PM); Anytime $34.75 (from 6 PM); Happy Half Hour $60 (21+ only, includes bar); Youth $8.50 daytime / $17.50 anytime; children 3 and under free.",
+   "fetched": "2026-11-27",
+   "hours": "Sun 12:30 PM-1:30 AM; Mon-Thu 12:30-11:30 PM; Fri-Sat 12:30 PM-1:30 AM.",
+   "name": "High Roller Observation Wheel (LINQ / Caesars)",
+   "reservation": "Tickets on the official Caesars page; timed entry.",
+   "social": "u: left blank.",
+   "status": "verified-hours-fees",
+   "transit_1hr": "u: no official transit-time source",
+   "url": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
+   "verified_scale": "550 ft tall; 30-minute rotation; 28 cabins, up to 40 guests each.",
+   "wrong_domain_note": "https://www.highroller.com/ does NOT belong to the attraction (2026-11-27: served rolr.com prediction-market content). Official page is the Caesars URL above."
+  },
+  {
+   "exceptions": "Live music on 3 stages; weekends from noon-2 AM. SlotZilla: Zip-Zilla (seated, 7 stories, 2 blocks) and Super-Hero Zoom (11 stories, 5 blocks). All-You-Can-Fly Mon-Fri before 5 PM (paid).",
+   "fees": "Viva Vision light shows free. SlotZilla zipline paid (price not extracted - left blank).",
+   "fetched": "2026-11-27",
+   "hours": "Viva Vision shows FREE at the top of every hour, 6 PM-2 AM daily.",
+   "name": "Fremont Street Experience",
+   "reservation": "None for the canopy show.",
+   "social": "u: left blank.",
+   "status": "verified-hours-show-schedule",
+   "transit_1hr": "u: no official transit-time source",
+   "url": "https://fremontstreetexperience.com/about-us/",
+   "verified_scale": "Viva Vision: 16.4M pixels, 1,375 x 90 ft, 90 ft above the mall."
+  },
+  {
+   "exceptions": "Eagles residency ends Jan 23, 2027 - BEFORE the Feb 15+ trip window. Backstreet Boys Dec 26, 2026-Jan 2, 2027 - before the trip window. Metallica Jan 28-Mar 13, 2027 overlaps the window but exact February performance dates were not extracted - left blank.",
+   "fees": "u: ticket prices not extracted from the official shows page - left blank. Tickets via Ticketmaster; venue is cashless, mobile tickets only.",
+   "fetched": "2026-11-27",
+   "hours": "u: event-dependent; no daily hours. Feb 2027 show dates not confirmed - left blank.",
+   "name": "Sphere",
+   "reservation": "Tickets via Ticketmaster (linked from thesphere.com).",
+   "social": "u: left blank.",
+   "status": "partial-shows-listed-dates-prices-unverified",
+   "transit_1hr": "u: no official transit-time source",
+   "url": "https://www.thesphere.com/shows",
+   "verified_shows": "Wizard of Oz at Sphere on sale now; Eagles Nov 13, 2026-Jan 23, 2027; Backstreet Boys Dec 26, 2026-Jan 2, 2027; Metallica Jan 28-Mar 13, 2027."
+  },
+  {
+   "exceptions": "u: dark days / holiday schedule not extracted - left blank.",
+   "fees": "u: ticket prices not extracted - left blank.",
+   "fetched": "2026-11-27",
+   "hours": "u: showtimes not extracted from the official page - left blank.",
+   "name": "Cirque du Soleil - KA (MGM Grand)",
+   "reservation": "u: book via official Cirque page - confirm showtimes first.",
+   "social": "u: left blank.",
+   "status": "description-only-showtimes-prices-unverified",
+   "transit_1hr": "u: no official transit-time source",
+   "url": "https://www.cirquedusoleil.com/ka",
+   "verified_description": "Epic story of imperial twins; Wushu, Chinese Opera, Capoeira; Wheel of Death (official Cirque page)."
+  },
+  {
+   "exceptions": "Nevada Resident discount $3 off Adult or Child admission, box-office only with government-issued NV ID, subject to availability. Children 12 and under must be accompanied by a paid adult. Children 4 and under free (no ticket) but may not ride VR; under-5s rotate with a parent/guardian in VR. Aquarium may close early for private events. Anytime tickets limited quantity.",
+   "fees": "Timed entry: Adult $29.00; Seniors (65+) $27.00; Children (5-12) $24.00; children 4 and under free. Anytime: Adult $36.00; Seniors $34.00; Children (5-12) $31.00. Includes Undersea Explorer VR Experience (ages 5+).",
+   "fetched": "2026-11-27",
+   "hours": "Daily 10:00 AM-8:00 PM; last admission 7:00 PM. Box office Mon-Sun 9:30 AM-7:30 PM. Guided tours: Mon-Sat 3:00 PM; Sun 1:00, 2:00 or 3:00 PM.",
+   "name": "Shark Reef Aquarium (Mandalay Bay)",
+   "reservation": "Timed ticket entry; entry time good for the one-hour window selected. Reserve in advance - peak times sell out. Anytime tickets valid for date of entry anytime during aquarium hours (limited).",
+   "social": "u: left blank.",
+   "status": "verified-hours-fees",
+   "transit_1hr": "u: no official transit-time source",
+   "url": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"
+  },
+  {
+   "name": "Las Vegas Monorail",
+   "status": "verified-hours",
+   "url": "https://www.lvmonorail.com/",
+   "fetched": "2026-11-27",
+   "hours": "Mon 7:00 AM-midnight; Tue-Thu 7:00 AM-2:00 AM; Fri-Sun 7:00 AM-3:00 AM. Modified-hours notices posted seasonally - re-check for Feb 2027.",
+   "fees": "u: fares not extracted - left blank.",
+   "exceptions": "Separate ticketed system; RTC passes do NOT work on the Monorail. 7 stations, MGM Grand to SAHARA; trains every 4-8 minutes.",
+   "reservation": "None - buy tickets/passes for travel days.",
+   "social": "u: left blank.",
+   "transit_1hr": "u: no official door-to-door transit-time source",
+   "wrong_domain_note": "vegasmonorail.com is parked/for-sale - do not use."
+  },
+  {
+   "name": "RTC Buses (Deuce & Strip routes)",
+   "status": "verified-hours-fees",
+   "url": "https://www.rtcsnv.com/ways-to-travel/fares-passes/",
+   "fetched": "2026-11-27",
+   "hours": "Deuce (Strip-Downtown) runs 24/7, about every 15 minutes. Full schedules current as of Aug 23, 2026 - re-check for Feb 2027.",
+   "fees": "Strip / All Access: single $4; 2-hour $6; 24-hour $8; 3-day $20. Reduced $2/$3/$4/$10. Children 5 and under free. For 2 adults: $8 / $12 / $16 / $40.",
+   "exceptions": "Tap-to-ride with Visa/Mastercard/phone; rideRTC app. RTC passes do NOT work on the Monorail.",
+   "reservation": "None - buy passes in the rideRTC app or at vending machines.",
+   "social": "u: left blank.",
+   "transit_1hr": "u: no official door-to-door transit-time source"
+  }
+ ],
+ "as_of": "2026-11-27",
+ "branch": "arena/c88d116c-vegas2",
+ "hotels": [
+  {
+   "bath": "u: bathroom details not extracted from an official Venetian room page in this session.",
+   "bed": "Two Queen beds - Luxury Two Queen Suite, 750 sq ft, living room, Roman tub; 'largest standard suite on the Strip' (official Venetian page, fetched 2026-11-27).",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "4: Bouchon (Recommended); Cote Las Vegas (Recommended); Estiatorio Milos (Recommended); Mott 32 at The Palazzo (Recommended) - per official Michelin address list.",
+   "name": "The Venetian Resort",
+   "price_3n": "u: no official rate retrieved for Feb 15-18, 2027 (Nov 27 re-check of the official booking calendar returned $XXX placeholders, no prices).",
+   "price_7n": "PRIOR snapshot only (2026-11-26, session e9badc77): $6,170.43 all-in incl. taxes for Feb 15-22, 2027 (Luxury King Suite). NOT re-verified 2026-11-27: the official booking calendar returned $XXX placeholders with the note 'Pricing shown is best available suite and rate, includes daily resort fee, excludes taxes.' Treat the $6,170.43 figure as stale until re-checked.",
+   "room_url": "https://www.venetianlasvegas.com/hotel/the-venetian/luxury-two-queen-suite.html",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  },
+  {
+   "bath": "Stone and glass bathroom, double-sink vanity, hand-held showerhead (official booking room description, fetched 2026-11-27).",
+   "bed": "1 King - Julius Deluxe Room, 360+ sq ft (official booking, fetched 2026-11-27). 2-Queen room types: Colosseum Strip View 2 Queens 475 sq ft; Augustus Fountain View 2 Queens 650 sq ft (official hotel page).",
+   "book_timing": "u: cheapest booking window unverified from a single snapshot. Observed: Feb 15-18, 2027 avg $183/nt vs Feb 15-22, 2027 avg $226/nt (same room pool, includes $55 resort fee, excludes taxes) - weekend/holiday nights raise the 7-night average. A weekly price log is the only honest method (see booking.html).",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "1: Guy Savoy Las Vegas (1 MICHELIN Star) - per official Michelin address list.",
+   "name": "Caesars Palace",
+   "policies": "Check-in 4 PM (min age 21, government photo ID, credit card for incidentals); check-out 11 AM. Resort fee line on booking: +$55 daily resort fee. Policies section states: Resort fees $62.30 ($54.95 plus $7.35 tax) - CONFLICT with the $55 line, flagged. Deposit $100/day. Self/valet parking surcharge (free for Platinum+). Dogs only (2 max, 50 lb, fees apply).",
+   "price_3n": "$183/night Best Available Rate incl. $55 daily resort fee, EXCLUDES taxes (fetched 2026-11-27, 73 rooms). Cheapest shown: Room Type Assigned on Arrival $128 + $55 = $183/nt (Standard $167); Julius Deluxe 1 King $131 + $55 = $186/nt (Standard $172). 3-night arithmetic total: $183 x 3 = $549 before tax (arithmetic, not a quoted total).",
+   "price_7n": "$226/night Best Available Rate incl. $55 daily resort fee, EXCLUDES taxes (fetched 2026-11-27, 69 rooms). Cheapest shown: Room Type Assigned on Arrival $171 + $55 = $226/nt (Standard $223); Julius Deluxe 1 King $177 + $55 = $232/nt (Standard $231). 7-night arithmetic total: $226 x 7 = $1,582 before tax (arithmetic, not a quoted total).",
+   "room_url": "https://www.caesars.com/caesars-palace/hotel",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified.",
+   "url_3n": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=clv",
+   "url_7n": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv"
+  },
+  {
+   "bath": "Upgraded bathroom vanity with dual sinks; frameless shower enclosure; energizing lighted bathroom mirror (official room page). The word 'private' is not used - confirm at booking.",
+   "bed": "2 Queen Beds - Premier Two Queen, 510 sq ft, max 4 guests (official Bellagio room page, fetched 2026-11-27).",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "1: Michael Mina (Recommended) - per official Michelin address list.",
+   "name": "Bellagio",
+   "price_3n": "u: no official rate retrieved for Feb 15-18, 2027 (official pages show Check Rates only).",
+   "price_7n": "u: no official rate retrieved for Feb 15-22, 2027 (official pages show Check Rates only).",
+   "room_url": "https://bellagio.mgmresorts.com/en/hotel/premier-two-queen.html",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  },
+  {
+   "bath": "Private water closet, granite dual-sink vanity, stone shower and separate air-bath tub (official suite page). SUITE ONLY.",
+   "bed": "2 Queen Beds - Center Suite (Center Tower Suite - Strip View), 1,075 sq ft, max 4 guests (official ARIA page, fetched 2026-11-27). SUITE ONLY; a standard 2-queen room is not confirmed.",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "1: Gymkhana Las Vegas (Recommended) - per official Michelin address list.",
+   "name": "ARIA Resort & Casino",
+   "price_3n": "u: no official rate retrieved (Check Rates only).",
+   "price_7n": "u: no official rate retrieved (Check Rates only).",
+   "room_url": "https://aria.mgmresorts.com/en/hotel/center-suite.html",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  },
+  {
+   "bath": "u: bathroom details not extracted from an official MGM Grand room page in this session.",
+   "bed": "2 Queen Beds - MGM Two Queen, 446 sq ft, max 4 guests; 55-inch HDTV, Serta Presidential Pillow-top (official MGM Grand page, fetched 2026-11-27).",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "2: Restaurant de Joel Robuchon (2 Stars); L'Atelier de Joel Robuchon (1 Star) - per official Michelin address list.",
+   "name": "MGM Grand Hotel & Casino",
+   "price_3n": "u: no official rate retrieved (Check Rates only).",
+   "price_7n": "u: no official rate retrieved (Check Rates only).",
+   "room_url": "https://mgmgrand.mgmresorts.com/en/hotel/mgm-two-queen.html",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  },
+  {
+   "bath": "Marble bathroom with glass-enclosed shower and separate water closet - on official Wynn King room pages (prior session). Not confirmed for a two-queen room; use of 'private' not confirmed.",
+   "bed": "One King or two Queen double pillow-top Wynn Dream Beds with 507-thread-count linens - Wynn Resort room, 640 sq ft, floor-to-ceiling windows (official Wynn page, fetched 2026-11-27). Prior-session note: the official booking engine room list showed only King types on the retrieved page - confirm a 2-queen booking before relying on it.",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "1: Wing Lei (Recommended) - per official Michelin address list.",
+   "name": "Wynn Las Vegas",
+   "price_3n": "u: no official rate retrieved.",
+   "price_7n": "u: no official rate retrieved.",
+   "room_url": "https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  },
+  {
+   "bath": "u: bathroom details not confirmed on the retrieved official Cosmopolitan room page.",
+   "bed": "2 Queen Beds - City Room Queen, 460 sq ft, max 4 guests (official Cosmopolitan page, fetched 2026-11-27). Terrace Studio 730 sq ft also listed. Homepage offer at fetch time: up to 30% off + $150 F&B (promo, not a verified trip-date rate).",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "2: e by Jose Andres (1 Star); China Poblano (Bib Gourmand) - per official Michelin address list.",
+   "name": "The Cosmopolitan of Las Vegas",
+   "price_3n": "u: no official rate retrieved for Feb 15-18, 2027.",
+   "price_7n": "u: no official rate retrieved for Feb 15-22, 2027.",
+   "room_url": "https://cosmopolitanlasvegas.mgmresorts.com/en/hotel/city-room.html",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  },
+  {
+   "bath": "Spa-inspired bathroom with vanity, LED mirror and walk-in shower (official Conrad Premium Room page, fetched 2026-11-27).",
+   "bed": "One King Bed or Two Queen Beds - Conrad Las Vegas Premium Room, 550 sq ft (official Resorts World page, fetched 2026-11-27). May be booked as either bed type.",
+   "fetched": "2026-11-27",
+   "michelin_on_campus": "1: Stubborn Seed Las Vegas (Recommended) - per official Michelin address list. (Room type shown is Conrad Las Vegas at Resorts World.)",
+   "name": "Resorts World Las Vegas (Conrad Las Vegas room type)",
+   "price_3n": "u: no official rate retrieved.",
+   "price_7n": "u: no official rate retrieved.",
+   "room_url": "https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/",
+   "transit_1hr": "u: no official transit-time source; 1-hour test unverified."
+  }
+ ],
+ "irregularities": [
+  "ROOT-1 (FIXED this session): root hotels.html and index.html asserted all 24 Michelin restaurants are '~15-20 min' from any Strip hotel with no official transit-time source - an inference that violates the no-inference rule. Removed; replaced with verified on-campus counts + 1-hour column flagged unverified.",
+  "ROOT-2 (FIXED this session): index.html nav marked 'Michelin Restaurants' active on the Home page. Fixed to mark Home active.",
+  "ROOT-3 (FIXED this session): activities.html linked https://www.highroller.com/ as official - that domain served unrelated rolr.com prediction-market content on 2026-11-27. Replaced with the official Caesars High Roller page.",
+  "ROOT-4 (FIXED this session): activities.html linked https://www.vegasmonorail.com/ as official - parked/for-sale. Replaced with https://www.lvmonorail.com/.",
+  "ROOT-5 (FIXED this session): restaurants.html showed Instagram handles found via web search (@joelrobuchon.lasvegas, @ebyjoseandres, @wynnlasvegas) as if venue-confirmed. Removed; social column is blank+unverified unless the handle is linked from the venue's own official site.",
+  "ROOT-6 (FIXED this session): restaurants.html Stubborn Seed official link pointed to /restaurant/stubborn-seed/; the working official page is /dining/stubborn-seed/. Updated.",
+  "ROOT-7 (FIXED this session): restaurants.html Kame official link kameomakase.com redirects to sushikame.com. Updated to https://sushikame.com/ with redirect noted.",
+  "ROOT-8 (OPEN): Caesars booking shows '+$55 Daily Resort Fee' on room lines but the Policies section states 'Resort fees: $62.30 ($54.95 plus $7.35 tax)'. Both figures are shown; do not merge them.",
+  "ROOT-9 (OPEN): The Venetian 2026-11-26 all-in snapshot ($6,170.43) could not be re-verified on 2026-11-27 (official calendar returned $XXX placeholders). Kept as a dated prior snapshot, flagged stale.",
+  "ROOT-10 (OPEN): Wynn 2-queen bookability - the Wynn Resort room page offers 'Book Two Queens' but a prior booking-engine pull listed only King types. Confirm a 2-queen booking before relying on it.",
+  "ROOT-11 (OPEN): cheapest booking time cannot be determined from snapshots; a weekly price log is required (see booking.html). Any 'book X days ahead' advice without a log is unverified.",
+  "ROOT-12 (OPEN): .github/workflows/pages.yml uploads docs/ while the live Pages source is main / (root) per the Pages API. The root dashboard is the live home page; docs/ is preserved history. No workflow change in this session (out of scope)."
+ ],
+ "legend": {
+  "p": "Partially verified (official page covers part of the claim)",
+  "u": "Unverified - left blank by rule",
+  "v": "Verified on an official page"
+ },
+ "method": "Fresh official-source re-verification 2026-11-27 (fetch_page + web_search) for hotels, restaurants, activities, RTC and Monorail. Michelin star/Bib/Recommended statuses re-use the official 2026 Michelin Southwest release + LVCVA list verified 2026-11-26 (not re-fetched). Every table row carries an official source link; values not confirmable from an official source are left blank and flagged unverified; nothing is inferred.",
+ "michelin": {
+  "counts": "24 Las Vegas distinctions: 4 starred (1 x 2 stars, 3 x 1 star), 3 Bib Gourmand, 17 Recommended.",
+  "note": "Statuses are the 2026 selection, not a guarantee of 2027 status. Starred = 1-2 stars only; Bib Gourmand is a distinction, not a star; Recommended = in the guide, no star.",
+  "prior_as_of": "2026-11-26",
+  "reverified_2026_11_27": false,
+  "source_urls": [
+   "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s",
+   "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+  ],
+  "starred": [
+   "Restaurant de Joel Robuchon - 2 MICHELIN Stars (MGM Grand)",
+   "e by Jose Andres - 1 MICHELIN Star (The Cosmopolitan)",
+   "Guy Savoy Las Vegas - 1 MICHELIN Star (Caesars Palace)",
+   "L'Atelier de Joel Robuchon Las Vegas - 1 MICHELIN Star (MGM Grand)"
+  ]
+ },
+ "restaurants": [
+  {
+   "cost_for_2": "u: blank (no official fixed-menu price retrieved).",
+   "cuisine": "French",
+   "fetched_prior": "2026-11-26",
+   "hours": "Tue-Sat 5:00-9:30 PM; Mon & Sun Closed (prior official MGM Grand snapshot; not re-fetched 2026-11-27).",
+   "name": "Joel Robuchon",
+   "official": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+   "social": "u: blank (prior Instagram lead was search-found, not venue-confirmed; removed).",
+   "status": "2 MICHELIN Stars"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Spanish",
+   "fetched_prior": "2026-11-26",
+   "hours": "Tue-Sat 5:30-8:30 PM; Mon & Sun Closed (prior official Cosmopolitan snapshot; not re-fetched 2026-11-27). Reservations up to three months ahead, two seatings nightly (LVCVA; confirm on official site).",
+   "name": "e by Jose Andres",
+   "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
+   "social": "u: blank (prior Instagram lead was search-found, not venue-confirmed; removed).",
+   "status": "1 MICHELIN Star"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "French",
+   "fetched_prior": "2026-11-26",
+   "hours": "Mon 5:00-9:30 PM; Tue-Wed Closed; Thu-Sun 5:00-9:30 PM (prior official MGM Grand snapshot; not re-fetched 2026-11-27).",
+   "name": "L'Atelier de Joel Robuchon",
+   "official": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html",
+   "social": "u: blank.",
+   "status": "1 MICHELIN Star"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "French",
+   "fetched_prior": "2026-11-26",
+   "hours": "Opens 5:00 PM; full weekly hours not confirmed (partial, prior official Caesars snapshot).",
+   "name": "Restaurant Guy Savoy",
+   "official": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+   "social": "u: blank.",
+   "status": "1 MICHELIN Star"
+  },
+  {
+   "cost_for_2": "$120 total for 2 adults: JOSE'S WAY TASTING MENU $60.00 per person x 2 (official menu page, fetched 2026-11-27). Pre-tax/pre-tip; menu items subject to change.",
+   "cuisine": "Chinese, Mexican",
+   "fetched": "2026-11-27 (tasting price); hours prior 2026-11-26",
+   "hours": "Mon-Thu 11:00 AM-10:00 PM; Fri 11:00 AM-10:30 PM; Sat 10:00 AM-10:30 PM; Sun 10:00 AM-10:00 PM (prior official Cosmopolitan snapshot; not re-fetched 2026-11-27). Open for lunch, dinner, takeout (official menus page).",
+   "name": "China Poblano",
+   "official": "https://www.chinapoblano.com/menus/",
+   "social": "u: blank.",
+   "status": "Bib Gourmand"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Italian",
+   "fetched": "2026-11-27",
+   "hours": "u: blank (no hours on official homepage, About, or Contact pages).",
+   "name": "Esther's Kitchen",
+   "official": "https://www.estherslv.com/",
+   "social": "u: blank.",
+   "status": "Bib Gourmand",
+   "verified_notes": "Seasonal Italian, Arts District downtown; Chef James Trees story on About page. Phone 702-570-7864 (Contact page)."
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Vietnamese",
+   "fetched": "2026-11-27",
+   "hours": "u: blank (no hours on official homepage).",
+   "name": "YEN Viet Kitchen",
+   "official": "https://www.yenvietkitchen.com/",
+   "social": "u: blank.",
+   "status": "Bib Gourmand",
+   "verified_notes": "Vietnamese; dine-in/takeout; menu/order via SkipTheLine."
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Cantonese",
+   "fetched_prior": "2026-11-26",
+   "hours": "Thu/Sun/Mon 5:30-9:30 PM; Fri-Sat 5:30-10:00 PM; Tue-Wed Closed (prior official Wynn snapshot; not re-fetched 2026-11-27).",
+   "name": "Wing Lei",
+   "official": "https://www.wynnlasvegas.com/dining/fine-dining/wing-lei",
+   "social": "u: blank (prior Wynn property-level lead removed; not venue-confirmed).",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "French",
+   "fetched_prior": "2026-11-26",
+   "hours": "Mon-Wed 5:00-10:00 PM; Thu 8:00 AM-1:00 PM & 5:00-10:00 PM; Fri-Sun 8:00 AM-2:00 PM & 5:00-10:00 PM (prior official Venetian snapshot; not re-fetched 2026-11-27).",
+   "name": "Bouchon",
+   "official": "https://www.venetianlasvegas.com/restaurants/bouchon.html",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Korean Steakhouse",
+   "fetched": "2026-11-27",
+   "hours": "Mon-Thu/Sun 5:00-11:00 PM; Fri-Sat 4:30 PM-midnight. Restaurant Row. Phone 702.607.2683. Reservations via SevenRooms.",
+   "name": "COTE Las Vegas",
+   "official": "https://www.venetianlasvegas.com/dining/restaurants/cote.html",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Greek Seafood",
+   "fetched": "2026-11-27",
+   "hours": "Mon-Thu/Sun 11:30 AM-10:30 PM; Fri-Sat 11:30 AM-11:00 PM. Lunch 11:30 AM-3 PM; midday 3-5 PM; dinner from 5 PM. Phone 702.414.1270.",
+   "name": "Estiatorio Milos",
+   "official": "https://www.venetianlasvegas.com/dining/restaurants/estiatorio-milos.html",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank (official page shows $$$$ price level only; amount blank).",
+   "cuisine": "Indian",
+   "fetched": "2026-11-27",
+   "hours": "Mon-Thu 5:00-10:00 PM; Fri-Sat 5:00-10:30 PM; Sun 5:00-10:00 PM. Children 6+; no one under 21 after 10 PM. 3730 S Las Vegas Blvd. MICHELIN Recommended, $$$$ (official ARIA page).",
+   "name": "Gymkhana Las Vegas",
+   "official": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Sushi",
+   "fetched": "2026-11-27",
+   "hours": "Daily 5:30-9:00 PM. 5040 Spring Mountain Rd. MICHELIN Guide 2026 selected. Reservations via Resy.",
+   "name": "Kabuto",
+   "official": "https://www.kabutolv.com/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Omakase",
+   "fetched": "2026-11-27",
+   "hours": "u: blank (minimal content on redirect target; no hours).",
+   "name": "Kame Omakase",
+   "official": "https://sushikame.com/",
+   "social": "u: blank.",
+   "status": "Recommended",
+   "verified_notes": "https://www.kameomakase.com/ redirects to https://sushikame.com/ (Kame Omakase)."
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Thai",
+   "fetched": "2026-11-27",
+   "hours": "Mon-Wed 11:00 AM-midnight; Thu-Sun 11:00 AM-2:00 AM (Chinatown location). 4480 Spring Mountain Rd #700. MICHELIN Selected 2026; Wine Spectator Award of Excellence 2026. Reservations via Resy.",
+   "name": "Lamaii",
+   "official": "https://www.lamaiilv.com/chinatown/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "$590++ total for 2 adults: tasting menu $295++ per person x 2 (official Bellagio page, fetched 2026-11-27). '++' = plus tax and gratuity; pre-tax/pre-tip base.",
+   "cuisine": "Seafood",
+   "fetched": "2026-11-27",
+   "hours": "u: weekly hours blank (not extracted). EXCEPTION: seasonal closure Nov 22-30 (year per official page at fetch time - confirm for 2027). MICHELIN Recommended, $$$$ seafood. Phone 702.693.7223.",
+   "name": "Michael Mina",
+   "official": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Cantonese",
+   "fetched": "2026-11-27",
+   "hours": "Lunch 11:00 AM-2:30 PM daily; Sat/Sun brunch 10:30 AM-2:30 PM; dinner 5:00-10:00 PM daily. Palazzo Casino Floor. Phone 702.607.3232.",
+   "name": "Mott 32",
+   "official": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "5-course $130pp = $260 for 2; 7-course $160pp = $320 for 2; Signature $210pp = $420 for 2 (official menu, fetched 2026-11-27). Pairings $60-$125pp. Chef's Table 9-course + 9 wines; Bar Experience 5/7/9-course; Private Dining 12-seat; Grand Cru room up to 30. 20% gratuity parties of 6+. All pre-tax/pre-tip.",
+   "cuisine": "French",
+   "fetched": "2026-11-27",
+   "hours": "u: weekly hours blank (not extracted from menu/restaurant pages) - confirm on official site.",
+   "name": "Partage",
+   "official": "https://partage.vegas/menu",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Vietnamese",
+   "fetched": "2026-11-27",
+   "hours": "Open 24 hours (Pho Ga Bac Bac). Full bar. Reservations not guaranteed on holidays/peak. MICHELIN Guide Recommended 2026. Chinatown.",
+   "name": "Pho Ga Bac Bac",
+   "official": "https://bestchickenpho.com/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Chinese",
+   "fetched": "2026-11-27",
+   "hours": "Daily 10:00 AM-3:00 AM. Reservations 702-247-8136. Dim sum at lunch. Gold Coast Hotel and Casino, 4000 W. Flamingo Rd.",
+   "name": "Ping Pang Pong",
+   "official": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "u: blank.",
+   "cuisine": "Barbecue",
+   "fetched": "2026-11-27",
+   "hours": "Tue-Thu 11:00 AM-9:00 PM; Fri-Sat 11:00 AM-10:00 PM; Sun 11:00 AM-9:00 PM. 1327 S Main St, Arts District. MICHELIN 2026 (Main St location only). Reservations via Resy.",
+   "name": "SoulBelly BBQ",
+   "official": "https://www.soulbellybbq.com/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "$298 total for 2 adults: Chef's Tasting Menu $149pp x 2 (official menu, fetched 2026-11-27). Wine pairing +$78pp = +$156 for 2. Auto gratuity added to tasting. Last call for tasting 9:30 PM. Whole table must participate. Pre-tax/pre-tip.",
+   "cuisine": "New American",
+   "fetched": "2026-11-27",
+   "hours": "u: weekly hours blank (not on homepage/menu pages). Tasting last call 9:30 PM. Max 4 guests per table online; $25/guest cancellation fee under 24h. OpenTable rid 732187.",
+   "name": "Sparrow + Wolf",
+   "official": "https://www.sparrowandwolflv.com/menu/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "$320 total for 2 adults: Tasting Menu $160pp x 2 (official Resorts World PDF, fetched 2026-11-27). Elevated tasting +$35; wine pairing $60|$70; enhancements (caviar, truffle, etc.) extra. Full table participation required. 20% gratuity parties of 6+. Pre-tax/pre-tip. Menu curated by Michelin Star Chef Jeremy Ford.",
+   "cuisine": "Contemporary",
+   "fetched": "2026-11-27",
+   "hours": "Main Dining daily 5:00-10:00 PM; Bar & Lounge 4:00-10:00 PM. MICHELIN Guide 2026 selected. Phone 702-676-8062. Reservations via SevenRooms.",
+   "name": "Stubborn Seed Las Vegas",
+   "official": "https://www.rwlasvegas.com/dining/stubborn-seed/",
+   "official_menu_pdf": "https://www.rwlasvegas.com/pdf/stubborn-seed-tasting-menu-11-25-2026/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  },
+  {
+   "cost_for_2": "$170 total for 2 adults: tasting menu $85 per person x 2 (official site, fetched 2026-11-27). Pre-tax/pre-tip.",
+   "cuisine": "Mediterranean / Italian",
+   "fetched": "2026-11-27",
+   "hours": "Dinner nightly from 5:00 PM. 9205 W Russell Rd #185. Reservations via SevenRooms.",
+   "name": "Anima by EDO",
+   "official": "https://animabyedo.com/",
+   "social": "u: blank.",
+   "status": "Recommended"
+  }
+ ],
+ "rule": "Every table row carries a source link to an official site. Values not confirmable from an official source are left blank and flagged unverified. Nothing is inferred or filled in manually.",
+ "scope": "Root site only: index.html, hotels.html, restaurants.html, activities.html, questions.html, suggestions.html, flagged-for-review.html, booking.html (new), sources.html (new), assets/css/style.css. New: data/session-c88d116c/verification.json, scripts/check_root_site.py. Read-only: data/verified/**, data/*.json, data/trip/**, docs/**, site/**, field-notes/**, legacy-dashboard/**.",
+ "session": "c88d116c",
+ "transit": {
+  "las_vegas_subway": "No subway service is published on the official RTC or Monorail sites. Public transit = RTC buses + Las Vegas Monorail (+ Downtown Loop / Vegas Loop, separate systems). Absolute 'no subway exists' is not sourced to a single official negative statement and is phrased as 'no subway service found on official transit sites'.",
+  "monorail": {
+   "fetched": "2026-11-27",
+   "headways": "Trains every 4-8 minutes.",
+   "hours": "Mon 7:00 AM-midnight; Tue-Thu 7:00 AM-2:00 AM; Fri-Sun 7:00 AM-3:00 AM. Modified-hours notices posted for Nov 29-Dec 2, Dec 3, Dec 6-10, Dec 13-15, 2026 - always re-check for trip dates.",
+   "note": "Separate ticketed system; RTC passes do not work on the Monorail. 7 stations, MGM Grand to SAHARA.",
+   "url": "https://www.lvmonorail.com/",
+   "wrong_domain_note": "vegasmonorail.com is parked/for-sale - do not use."
+  },
+  "rtc": {
+   "fares": "Strip / All Access: single ride $4; 2-hour $6; 24-hour $8; 3-day $20. Reduced: $2/$3/$4/$10. Children 5 and under free. Tap-to-ride with Visa/Mastercard/phone; rideRTC app.",
+   "fetched": "2026-11-27",
+   "schedules": "Current schedules dated Aug 23, 2026 (re-check for Feb 2027). Deuce (Strip-Downtown) runs 24/7, about every 15 minutes.",
+   "urls": [
+    "https://www.rtcsnv.com/",
+    "https://www.rtcsnv.com/ways-to-travel/schedules-maps/",
+    "https://www.rtcsnv.com/ways-to-travel/fares-passes/"
+   ]
+  },
+  "travel_time_matrix": "NOT VERIFIED: no official door-to-door transit-time source (hotel to each restaurant/activity) was retrieved. The 1-hour test is unverified for every hotel. Previously published '~15-20 min' estimates were removed as inference."
+ },
+ "trip": {
+  "holiday_note": "Feb 15, 2027 is Washington's Birthday (Presidents' Day), a federal holiday (OPM; prior verification 2026-11-26). Expect holiday/weekend demand pricing on Feb 15-18 nights.",
+  "seven_night": "Check-in Mon Feb 15, 2027 -> check-out Mon Feb 22, 2027 (7 nights; comparison basis)",
+  "window": "2027-02-15 to 2027-03-23 (1-2 weeks); preferred 2027-02-15 to 2027-02-18 (3 nights)"
+ }
+}
