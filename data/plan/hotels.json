@@ -35,10 +35,10 @@
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
         }
       ],
-      "note": "Four MICHELIN distinctions on one campus: Bouchon, COTE, Estiatorio Milos and Mott 32 (all 2026 Recommended). A prior session logged a $6,170.43 all-in 7-night total for Feb 15–22, 2027; that figure could not be reproduced on 2026-11-27, so it is not ranked as current.",
+      "note": "Four MICHELIN distinctions on one campus: Bouchon, COTE, Estiatorio Milos and Mott 32 (all 2026 Recommended). A prior session captured a $6,170.43 all-in 7-night total (including $728.18 tax) on 2026-11-26; the same calendar returned no rate on 2026-11-27, so no current price is ranked.",
       "priorPrice": {
         "total": 6170.43,
-        "basis": "all-in incl. taxes, 7 nights, logged by prior session 2026-11-26; not reproduced",
+        "basis": "All-in 7-night total including $728.18 of tax and the daily $55 resort fee, average $777.46/night, captured by a prior session on 2026-11-26 under the 'Book Direct: Up to 25% Off' offer. Not reproduced on 2026-11-27.",
         "status": "p"
       },
       "flagIds": [
@@ -156,7 +156,7 @@
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
         }
       ],
-      "note": "One MICHELIN distinction on campus: Restaurant Guy Savoy (1 star). The two-queen room exists but its dated rate was not captured; only the king rate is shown.",
+      "note": "One MICHELIN distinction on campus: Restaurant Guy Savoy (1 star). Rates moved between captures: $226/night ($1,582 for 7 nights) on 2026-11-26 and $214/night ($1,498) on 2026-11-27 — a 5.6% swing in one day (F-23). The two-queen room exists but only the king rate was served.",
       "flagIds": [
         "F-04",
         "F-07"

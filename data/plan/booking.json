@@ -83,6 +83,15 @@
       "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
     },
     {
+      "window": "A",
+      "hotel": "Caesars Palace — Julius Deluxe | 1 King (captured 2026-11-26)",
+      "nightly": "$226",
+      "total": "$1,582",
+      "feeNote": "Prior-day capture of the same room and dates; includes $55/day resort fee, taxes excluded",
+      "status": "p",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
+    },
+    {
       "window": "B",
       "hotel": "South Point — Premium 2 Queens",
       "nightly": "$150",
@@ -141,7 +150,7 @@
     "verdict": "Flamingo Las Vegas, Flamingo Room | 2 Queens: $581 for 7 nights (Feb 15–22, 2027), including a $50/day resort fee, before taxes.",
     "runnerUp": "South Point, Premium 2 Queens: $989 for the same seven nights including all fees, before taxes.",
     "delta": "$408 more at South Point for the week. Flamingo is center Strip; South Point is at the south end of the Las Vegas Strip.",
-    "caveat": "These are snapshot rates from one capture. A rate is not a reservation, and taxes are excluded."
+    "caveat": "These are snapshot rates from one capture. A rate is not a reservation, and taxes are excluded. Caesars Palace itself moved from $226 to $214 per night between 2026-11-26 and 2026-11-27 (F-23), so treat every total as a reading, not a price."
   },
   "dateVerdict": {
     "statement": "Among the windows actually captured, Feb 15–22, 2027 is cheaper than the following week at the only hotel that quoted both: South Point charges $989 vs $1,049 for a two-queen room (+$60, about 6%). The March 15–22 window could not be quoted at all because March 20, 2027 shows no availability.",
