@@ -528,3 +528,20 @@ Resolution — **their port taken as the base, my findings re-applied on top**:
 **New repeatable gate: `scripts/audit_no_data_loss.py`.** Diffs every row and field of `data/plan/*.json` against a base git ref and fails on any row or value that disappeared or was shortened. Status-code upgrades (`u→p→v`) are allowed; the **7 deliberate gap→verified supersedes are listed explicitly in the script** so each one is auditable rather than hidden. Current result: **OK — no unexpected data loss**, 7 documented supersedes. Wired into `validate-plan.yml`.
 
 **Post-merge state:** 13 hotels (8 priced), 24 restaurants (5 with two-person totals), 15 activities, **36 flags**, 23 questions, 19 suggestions, **17 repo findings**. `check_plan.py`: **OK — 0 failures, 0 warnings, 11 pages**. Merge script idempotent (`md5sum` identical across runs).
+---
+
+### Final state — session `155b420b-vegas2` (2026-11-27T18:06Z)
+
+| Item | Result |
+|---|---|
+| PR #22 — consolidated planner | **MERGED** 17:48:24Z as `76b22b8` |
+| PR #24 — merge/Pages record | **MERGED** as `9630aea` |
+| PR #28 — post-merge verification + root ownership + `COORDINATION.md` union merge driver | **MERGED** as `c8205b2` |
+| PR #34 — reconciliation of parallel data edits (F-23 provenance, China Poblano item estimate) | **MERGED** as `b5878eb` |
+| `main` at close | `b5878eb` |
+| GitHub Pages | build for `b5878eb` = `built`; site `https://kanlerxz87-cyber.github.io/Vegas2/` serves the consolidated root planner |
+| Local gate | `python3 scripts/build_plan.py && python3 scripts/check_plan.py` → OK, 0 failures, 0 warnings |
+
+**Live pages:** `/` (overview + executive summary), `/restaurants.html` (24 MICHELIN rows), `/hotels.html` (11 candidates), `/booking.html` (dated quotes, cheapest verified, booking timing), `/activities.html` (14 rows after the merge), `/transit.html`, `/questions.html` (20 items), `/suggestions.html` (3 paths + 13 improvements), `/flagged.html` (23 items), `/repo-review.html` (13 findings), `/sources.html` (67-link register).
+
+**Open for the next session:** taxes are still excluded from every total (F-03); Venetia/MGM/Wynn/Resorts World have no dated rate (F-05, F-06); 17 restaurants still lack verified hours and 23 lack a published two-person price (F-10, F-11); no RTC door-to-door times (F-02). All are listed with sources on `flagged.html`.
