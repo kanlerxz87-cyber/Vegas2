@@ -1,147 +1,195 @@
 {
- "intro": "Proposals only — nothing here changes the plan automatically. Review, pick a path, and the next build implements it.",
- "paths": [
-  {
-   "id": "PATH-A",
-   "name": "Star-first, everything walkable",
-   "pick": "Stay at The Venetian Resort (4 MICHELIN distinctions on campus) or MGM Grand (both Robuchon rooms).",
-   "pros": "No transit needed for four MICHELIN rooms; suites are 650 sq ft+ with private oversized bathrooms; the Venetian is the densest cluster in the city.",
-   "cons": "Highest cost. No dated Venetian rate was retrievable, so the budget is unknown; a prior session logged $6,170.43 all-in for 7 nights.",
-   "bestIf": "The restaurants are the reason for the trip and the budget is flexible.",
-   "unknowns": [
-    "dated Venetian/MGM price",
-    "2027 star status"
-   ]
-  },
-  {
-   "id": "PATH-B",
-   "name": "Value-first on the Strip",
-   "pick": "Flamingo Las Vegas, Flamingo Room | 2 Queens — $581 for 7 nights before tax, center Strip.",
-   "pros": "Cheapest verified two-queen total found; center-Strip walk to Caesars Palace (Guy Savoy), Bellagio (Michael Mina) and the LINQ (High Roller); Monorail and Deuce on the doorstep.",
-   "cons": "No MICHELIN restaurant inside the resort; 350 sq ft rooms are the smallest verified in this set; two seasonal pools and a casino-floor location mean noise.",
-   "bestIf": "You want the 1–2 week stay and a restaurant list rather than a resort.",
-   "unknowns": [
-    "whether you accept 350 sq ft",
-    "resort-fee tolerance"
-   ]
-  },
-  {
-   "id": "PATH-C",
-   "name": "Space and quiet, south of the noise",
-   "pick": "South Point, Premium 2 Queens — $989 for 7 nights including fees, 500 sq ft.",
-   "pros": "Best documented pricing across three date windows; largest verified non-suite room (500 sq ft); free valet parking; airport shuttle; 2,079 rooms.",
-   "cons": "Well south of the center Strip; public-transit door-to-door time unverified; no MICHELIN restaurant nearby.",
-   "bestIf": "You will rent a car, value space, and treat the Strip as a day trip.",
-   "unknowns": [
-    "resort-fee discrepancy ($29.20 engine vs $33 public page)",
-    "car needed"
-   ]
-  }
- ],
- "siteImprovements": [
-  {
-   "id": "S-01",
-   "title": "Add an all-in cost calculator (tax + resort fee + food + activities)",
-   "why": "Every total on the site is pre-tax; the real bill is materially higher. This is the single biggest decision-quality gap.",
-   "effort": "medium",
-   "impact": "high",
-   "needs": "Applicable room-tax rate from an official Nevada/Clark County source or a captured checkout tax line."
-  },
-  {
-   "id": "S-02",
-   "title": "Capture dated prices for MGM Resorts, Venetian, Wynn, Resorts World and Fontainebleau",
-   "why": "Seven of eleven hotels have no verified rate, so the ranking is dominated by cheap Caesars properties.",
-   "effort": "medium",
-   "impact": "high",
-   "needs": "A browser-capable fetch (the MGM/Venetian engines render client-side) or manual screenshots with dates."
-  },
-  {
-   "id": "S-03",
-   "title": "Replace blank restaurant hours with a single verified hours table",
-   "why": "17 of 24 rows have no hours, which blocks day-by-day planning.",
-   "effort": "medium",
-   "impact": "high",
-   "needs": "One fetch per venue restaurant page; record the capture date."
-  },
-  {
-   "id": "S-04",
-   "title": "Add exact two-person menu totals for starred rooms",
-   "why": "Only Partage publishes a total. Starred menus are the largest single expense line after the room.",
-   "effort": "medium",
-   "impact": "high",
-   "needs": "Menu PDFs or a phone/email price request; do not estimate."
-  },
-  {
-   "id": "S-05",
-   "title": "Build a real door-to-door transit matrix from the RTC Trip Planner",
-   "why": "The 1-hour rule cannot currently be verified for any venue pair.",
-   "effort": "high",
-   "impact": "high",
-   "needs": "RTC trip-planner queries for the exact hotel→venue pairs on a weekday and a weekend day."
-  },
-  {
-   "id": "S-06",
-   "title": "Add a printable one-page itinerary for the 3-night and 7-night versions",
-   "why": "Tables are good for decisions, bad for the street.",
-   "effort": "low",
-   "impact": "medium",
-   "needs": "Nothing new; use confirmed hours only."
-  },
-  {
-   "id": "S-07",
-   "title": "Add verified social/creator links per venue",
-   "why": "The brief asks for YouTube/TikTok/Instagram links; only the Neon Museum and Caesars Palace accounts are verifiable from official sites today.",
-   "effort": "medium",
-   "impact": "medium",
-   "needs": "Venue websites that link their accounts, or platform verification of each handle."
-  },
-  {
-   "id": "S-08",
-   "title": "Add a price-watch log (date, hotel, room, total) so 'best time to book' becomes measurable",
-   "why": "A single snapshot cannot establish the cheapest booking date. A weekly log can.",
-   "effort": "low",
-   "impact": "high",
-   "needs": "Repeat the same dated URL each week and append the result."
-  },
-  {
-   "id": "S-09",
-   "title": "Fold the six parallel session sites into an archive page",
-   "why": "The repository now publishes seven competing sites, which confuses which one is authoritative.",
-   "effort": "low",
-   "impact": "medium",
-   "needs": "Agreement that this consolidated site is canonical (implemented in this session; old pages preserved)."
-  },
-  {
-   "id": "S-10",
-   "title": "Add accessibility and mobility notes per hotel",
-   "why": "Room sizes and bathroom layouts are captured, mobility distances are not.",
-   "effort": "low",
-   "impact": "medium",
-   "needs": "Official hotel accessibility pages."
-  },
-  {
-   "id": "S-11",
-   "title": "Add a Feb 2027 event calendar (conventions, shows, F1 works)",
-   "why": "Events drive room prices and traffic. RTC already publishes F1-related service changes.",
-   "effort": "medium",
-   "impact": "medium",
-   "needs": "LVCVA convention calendar and venue calendars."
-  },
-  {
-   "id": "S-12",
-   "title": "Publish an explicit 'what we could not verify' count on the landing page",
-   "why": "Sets expectations and stops blanks being read as zero.",
-   "effort": "low",
-   "impact": "medium",
-   "needs": "Nothing; implemented from the flag list."
-  },
-  {
-   "id": "S-13",
-   "title": "Reconcile the 24-restaurant list membership (Gimme Sum Dim Sum vs Ping Pang Pong)",
-   "why": "A parallel session (c88d116c) verified hours for Gimme Sum Dim Sum (Wed–Mon 9 AM–9 PM, Tue closed), which is not among the canonical 24; the off-Strip Chinese slot is held by Ping Pang Pong (Gold Coast). One of the two lists disagrees with the official 2026 MICHELIN selection.",
-   "effort": "low",
-   "impact": "medium",
-   "needs": "Side-by-side check of the official 2026 MICHELIN Las Vegas selection against the canonical 24 names; add or swap the row if the guide lists Gimme Sum Dim Sum."
-  }
- ]
+  "intro": "Proposals only — nothing here changes the plan automatically. Review, pick a path, and the next build implements it.",
+  "paths": [
+    {
+      "id": "PATH-A",
+      "name": "Star-first, everything walkable",
+      "pick": "Stay at The Venetian Resort (4 MICHELIN distinctions on campus) or MGM Grand (both Robuchon rooms).",
+      "pros": "No transit needed for four MICHELIN rooms; suites are 650 sq ft+ with private oversized bathrooms; the Venetian is the densest cluster in the city.",
+      "cons": "Highest cost. No dated Venetian rate was retrievable, so the budget is unknown; a prior session logged $6,170.43 all-in for 7 nights.",
+      "bestIf": "The restaurants are the reason for the trip and the budget is flexible.",
+      "unknowns": [
+        "dated Venetian/MGM price",
+        "2027 star status"
+      ]
+    },
+    {
+      "id": "PATH-B",
+      "name": "Value-first on the Strip",
+      "pick": "Flamingo Las Vegas, Flamingo Room | 2 Queens — $581 for 7 nights before tax, center Strip.",
+      "pros": "Cheapest verified two-queen total found; center-Strip walk to Caesars Palace (Guy Savoy), Bellagio (Michael Mina) and the LINQ (High Roller); Monorail and Deuce on the doorstep.",
+      "cons": "No MICHELIN restaurant inside the resort; 350 sq ft rooms are the smallest verified in this set; two seasonal pools and a casino-floor location mean noise.",
+      "bestIf": "You want the 1–2 week stay and a restaurant list rather than a resort.",
+      "unknowns": [
+        "whether you accept 350 sq ft",
+        "resort-fee tolerance"
+      ]
+    },
+    {
+      "id": "PATH-C",
+      "name": "Space and quiet, south of the noise",
+      "pick": "South Point, Premium 2 Queens — $989 for 7 nights including fees, 500 sq ft.",
+      "pros": "Best documented pricing across three date windows; largest verified non-suite room (500 sq ft); free valet parking; airport shuttle; 2,079 rooms.",
+      "cons": "Well south of the center Strip; public-transit door-to-door time unverified; no MICHELIN restaurant nearby.",
+      "bestIf": "You will rent a car, value space, and treat the Strip as a day trip.",
+      "unknowns": [
+        "resort-fee discrepancy ($29.20 engine vs $33 public page)",
+        "car needed"
+      ]
+    }
+  ],
+  "siteImprovements": [
+    {
+      "id": "S-01",
+      "title": "Add an all-in cost calculator (tax + resort fee + food + activities)",
+      "why": "Every total on the site is pre-tax; the real bill is materially higher. This is the single biggest decision-quality gap.",
+      "effort": "medium",
+      "impact": "high",
+      "needs": "Applicable room-tax rate from an official Nevada/Clark County source or a captured checkout tax line."
+    },
+    {
+      "id": "S-02",
+      "title": "Capture dated prices for MGM Resorts, Venetian, Wynn, Resorts World and Fontainebleau",
+      "why": "Seven of eleven hotels have no verified rate, so the ranking is dominated by cheap Caesars properties.",
+      "effort": "medium",
+      "impact": "high",
+      "needs": "A browser-capable fetch (the MGM/Venetian engines render client-side) or manual screenshots with dates."
+    },
+    {
+      "id": "S-03",
+      "title": "Replace blank restaurant hours with a single verified hours table",
+      "why": "17 of 24 rows have no hours, which blocks day-by-day planning.",
+      "effort": "medium",
+      "impact": "high",
+      "needs": "One fetch per venue restaurant page; record the capture date."
+    },
+    {
+      "id": "S-04",
+      "title": "Add exact two-person menu totals for starred rooms",
+      "why": "Only Partage publishes a total. Starred menus are the largest single expense line after the room.",
+      "effort": "medium",
+      "impact": "high",
+      "needs": "Menu PDFs or a phone/email price request; do not estimate."
+    },
+    {
+      "id": "S-05",
+      "title": "Build a real door-to-door transit matrix from the RTC Trip Planner",
+      "why": "The 1-hour rule cannot currently be verified for any venue pair.",
+      "effort": "high",
+      "impact": "high",
+      "needs": "RTC trip-planner queries for the exact hotel→venue pairs on a weekday and a weekend day."
+    },
+    {
+      "id": "S-06",
+      "title": "Add a printable one-page itinerary for the 3-night and 7-night versions",
+      "why": "Tables are good for decisions, bad for the street.",
+      "effort": "low",
+      "impact": "medium",
+      "needs": "Nothing new; use confirmed hours only."
+    },
+    {
+      "id": "S-07",
+      "title": "Add verified social/creator links per venue",
+      "why": "The brief asks for YouTube/TikTok/Instagram links; only the Neon Museum and Caesars Palace accounts are verifiable from official sites today.",
+      "effort": "medium",
+      "impact": "medium",
+      "needs": "Venue websites that link their accounts, or platform verification of each handle."
+    },
+    {
+      "id": "S-08",
+      "title": "Add a price-watch log (date, hotel, room, total) so 'best time to book' becomes measurable",
+      "why": "A single snapshot cannot establish the cheapest booking date. A weekly log can.",
+      "effort": "low",
+      "impact": "high",
+      "needs": "Repeat the same dated URL each week and append the result."
+    },
+    {
+      "id": "S-09",
+      "title": "Fold the six parallel session sites into an archive page",
+      "why": "The repository now publishes seven competing sites, which confuses which one is authoritative.",
+      "effort": "low",
+      "impact": "medium",
+      "needs": "Agreement that this consolidated site is canonical (implemented in this session; old pages preserved)."
+    },
+    {
+      "id": "S-10",
+      "title": "Add accessibility and mobility notes per hotel",
+      "why": "Room sizes and bathroom layouts are captured, mobility distances are not.",
+      "effort": "low",
+      "impact": "medium",
+      "needs": "Official hotel accessibility pages."
+    },
+    {
+      "id": "S-11",
+      "title": "Add a Feb 2027 event calendar (conventions, shows, F1 works)",
+      "why": "Events drive room prices and traffic. RTC already publishes F1-related service changes.",
+      "effort": "medium",
+      "impact": "medium",
+      "needs": "LVCVA convention calendar and venue calendars."
+    },
+    {
+      "id": "S-12",
+      "title": "Publish an explicit 'what we could not verify' count on the landing page",
+      "why": "Sets expectations and stops blanks being read as zero.",
+      "effort": "low",
+      "impact": "medium",
+      "needs": "Nothing; implemented from the flag list."
+    },
+    {
+      "id": "S-13",
+      "title": "Reconcile the 24-restaurant list membership (Gimme Sum Dim Sum vs Ping Pang Pong)",
+      "why": "A parallel session (c88d116c) verified hours for Gimme Sum Dim Sum (Wed–Mon 9 AM–9 PM, Tue closed), which is not among the canonical 24; the off-Strip Chinese slot is held by Ping Pang Pong (Gold Coast). One of the two lists disagrees with the official 2026 MICHELIN selection.",
+      "effort": "low",
+      "impact": "medium",
+      "needs": "Side-by-side check of the official 2026 MICHELIN Las Vegas selection against the canonical 24 names; add or swap the row if the guide lists Gimme Sum Dim Sum."
+    },
+    {
+      "title": "Put the verified booking deadline at the top of the landing page",
+      "why": "The most valuable fact found is time-limited: Wynn's $677 Cyber rate must be booked by December 4, 2026, and it saves $1,092 over 7 nights versus the Flexible rate. Burying it below eleven hotel rows risks the reader missing it entirely.",
+      "effort": "small",
+      "impact": "high",
+      "needs": "Nothing further — IMPLEMENTED in this pass as a dated banner driven by booking.bookTiming.deadlines.",
+      "id": "S-14"
+    },
+    {
+      "title": "Show a per-night date strip instead of only a single stay average",
+      "why": "Resorts World's official February calendar reveals a 16% swing between adjacent 7-night windows ($1,942 for Feb 15–22 vs $1,632 for Feb 18–25). A single average hides that.",
+      "effort": "small",
+      "impact": "high",
+      "needs": "Nothing further — IMPLEMENTED in this pass on Prices & dates. Fee basis still unresolved (F-26).",
+      "id": "S-15"
+    },
+    {
+      "title": "Cite the primary MICHELIN press release, not only the tourism-board page",
+      "why": "MGM's own site shows a star badge Bardot Brasserie does not hold (F-24) and review blogs invent stars for Mizumi and Sage. A first-party primary source with street addresses settles tier disputes and proves Monte is in Utah, not Las Vegas.",
+      "effort": "small",
+      "impact": "medium",
+      "needs": "Nothing further — IMPLEMENTED in this pass; the press release is now recorded as guide.primarySource.",
+      "id": "S-16"
+    },
+    {
+      "title": "Add a 'closed on your dates' filter driven by the verified calendars",
+      "why": "Three verified facts silently break itineraries: Bellagio Conservatory is dark Mar 7–12; Joël Robuchon is closed Mon/Sun while L'Atelier is closed Tue/Wed; Red Rock needs a timed reservation on every day of the window.",
+      "effort": "medium",
+      "impact": "high",
+      "needs": "A chosen check-in date from the reader, plus verified daily hours for the remaining restaurants.",
+      "id": "S-17"
+    },
+    {
+      "title": "Stamp a capture timestamp on every dynamic price cell",
+      "why": "Caesars Palace moved from $226 to $214 per night in one day (F-23). Without a per-cell timestamp a reader cannot tell a stale figure from a fresh one.",
+      "effort": "medium",
+      "impact": "medium",
+      "needs": "A re-verification run that writes capture dates per cell rather than one page-level date.",
+      "id": "S-18"
+    },
+    {
+      "title": "Reconcile GitHub Pages source with the Pages workflow",
+      "why": "Pages serves the repository ROOT (legacy source main '/'), but pages.yml uploads the docs/ folder. Prior-session notes therefore point at wrong URLs, which wastes review time (R-15).",
+      "effort": "small",
+      "impact": "medium",
+      "needs": "Owner decision: switch Pages to GitHub Actions, or retire the misleading workflow. Shared infrastructure — not changed in this pass.",
+      "id": "S-19"
+    }
+  ]
 }

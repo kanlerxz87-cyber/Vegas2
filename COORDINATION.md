@@ -219,6 +219,28 @@ This entry records the active session's additions without replacing the existing
 - COORDINATION.md: both sides kept (below).
 - Freshly re-verified official-source values this session (China Poblano hours + José's Way $60/pp=$120/2; Anima by EDO $85/pp=$170/2; Kabuto Yoroi $130 / Premium $185 pp = $260 / $370; Kame Omakase $350 / $500 pp = $700 / $1,000; Mott 32 lunch sets $38/$68 pp = $76/$136; Sparrow + Wolf chef's tasting $149/pp = $298, wine pairing $78/pp; Presidents' Day 2027-02-15 = Washington's Birthday federal holiday; Joël Robuchon / L'Atelier / é / China Poblano hours re-verified on official MGM Grand/Cosmopolitan pages 2026-11-26/27) are applied to `data/plan/*.json` and rebuilt through the canonical generator + `scripts/check_plan.py` gate so the live site carries them — see the verification log above. Nothing was hand-faked into generated pages.
 - The `docs/session-legacy-root/` archive and all prior session folders are preserved untouched.
+## Session `arena/4d7b292f-vegas2` — FINAL INTEGRATION (claimed 2026-11-27)
+
+**Session ID:** `4d7b292f` · **Branch:** `arena/4d7b292f-vegas2` (Arena-pinned; the brief's `session-<id>/<task>` naming cannot be used). **Base:** `3386a21a` on `main`.
+
+**Role:** final integration session. All prior session tasks on this board are `done`, so this session owns the shared outputs (root landing page, navigation, consolidated table data) per the brief.
+
+### Claims (status: in progress)
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|------|--------|-------|------------------------------|
+| I1 | Read board, claim integration scope, push claim | in progress | 4d7b292f | COORDINATION.md |
+| I2 | Re-verify MICHELIN Guide Las Vegas selection line by line (official Guide + Michelin press release) | in progress | 4d7b292f | data/plan/dining.json |
+| I3 | Re-verify hotels: bed type, private bath, 7-night + 3-night dated totals, cheapest window | in progress | 4d7b292f | data/plan/hotels.json, data/plan/booking.json |
+| I4 | Re-verify activities: hours, price for 2, official site + official social video links | in progress | 4d7b292f | data/plan/activities.json |
+| I5 | Transit reality check (no subway; RTC bus / monorail) + 1-hour reachability | in progress | 4d7b292f | data/plan/transit.json |
+| I6 | Executive summary, itinerary, questions, suggestions, repo review | in progress | 4d7b292f | data/plan/summary.json, questions.json, suggestions.json, repo-review.json |
+| I7 | Flagged for Review consolidation (all sessions' flags preserved) | in progress | 4d7b292f | data/plan/flagged.json |
+| I8 | Build clean unified mobile-first dashboard at Pages root + subpages | in progress | 4d7b292f | planner/**, scripts/build_plan.py, scripts/check_plan.py, assets/plan/**, root *.html |
+| I9 | Archive prior root pages (no deletion), preserve every prior session folder | in progress | 4d7b292f | docs/session-e9badc77/** |
+| I10 | Line-by-line verification gate, link check, CI | in progress | 4d7b292f | .github/workflows/plan-check.yml |
+| I11 | PR to main, merge, confirm Pages deploy, record result | in progress | 4d7b292f | COORDINATION.md |
+
+**Not touched by this session:** `data/verified/**`, `data/trip/**`, `data/*.json`, `field-notes/**`, `site/**`, `legacy-dashboard/**`, `docs/session-*/**` (except adding the new `docs/session-e9badc77/` archive), and all other sessions' scripts/workflows.
 ## Session c88d116c-vegas2 (this branch: arena/c88d116c-vegas2) — CLAIM
 
 Claimed 2026-11-27 by session c88d116c. File scope (non-overlapping with other sessions' docs/, site/, field-notes/, legacy-dashboard/):
@@ -336,6 +358,52 @@ While this session was building, `main` advanced through PRs #19–#21 (sessions
 
 No other session's files, data trees, workflows or open PRs were touched.
 
+---
+
+## Session `arena/4d7b292f-vegas2` — subsequent integration / fieldwork pass (DONE)
+
+**Session ID:** `4d7b292f` · **Branch:** `arena/4d7b292f-vegas2` (Arena-pinned) · **Base:** `3386a21a`, then merged `origin/main` @ `76b22b8`.
+
+### What happened with the parallel claim (read this before claiming scope)
+This session pushed a claim on `data/plan/**` + root pages at the start of the run. Mid-research it found that **session `155b420b` had already claimed the identical scope, built the canonical root site and merged PR #22**. The live Pages site did not match this session's checkout (it referenced `booking.html` / `flagged.html`, which did not exist locally).
+
+**Resolution — nothing discarded, no eighth subsite created:**
+1. `origin/main` was merged in. Add/add conflicts in `data/plan/hotels.json`, `activities.json`, `booking.json` were resolved **in favour of `155b420b`'s canonical schema**. `COORDINATION.md` kept **both** sides in full.
+2. This session's newly verified findings were then merged **additively** into that canonical schema by `scripts/merge_fieldwork_4d7b292f.py` — it only fills blanks, appends rows/sources/flags, and is **idempotent**.
+3. Two orphan files this session had created (`data/plan/dining.json`, `data/plan/transit.json`) were removed once their content was folded into the canonical `restaurants.json` and the transit page, so there is still exactly one source of truth per table.
+
+**Lesson logged as R-14:** push the claim *and re-check `origin/main` immediately before the first write*, not only at session start.
+
+### Additive changes (all verified 2026-11-27 against first-party sources)
+| Area | Added |
+|---|---|
+| Hotels | **Wynn** dated rate finally captured: $677 avg/night Cyber Exclusive → **$4,739 / 7 nights** pre-tax (vs $833 → $5,831 Flexible). **Resorts World** $277.21 avg/night → **$1,940.47**. Two new properties: **Horseshoe** $116 → **$812** (450 sq ft king, marble bathroom verified) and **Planet Hollywood** $123 → **$861** (430 sq ft king). Caesars Palace official Instagram/YouTube added. |
+| Booking | New `bookTiming.deadlines` (4 offers) + `rateCalendar` (official Resorts World February 2027 month calendar, 16 dates, 8 seven-night windows) + `verifiedDateFacts` (OPM holiday, MGM 14-night online cap, Red Rock timed entry, Valley of Fire trail season, Neon 2027 ticket-time policy). |
+| Dining | Verified hours/dress/contact for **L'Atelier** (closed Tue/Wed), **é** (Tue–Sun, 5:30 & 8:30, 9 seats, 3-month ticket window), **China Poblano** (full weekly hours + cocktail hour), **Guy Savoy** (partial hours, awards, Krug table). Verified two-person prices: **Partage $260/$320/$420** (+ wine pairing ladder, +$33 foie, 20% gratuity only for 6+) and **Anima by EDO $170** ($85 pp, nightly from 5 PM, Monday $65 pasta+wine special). Primary source upgraded to the **official MICHELIN press release**. |
+| Activities | **Hoover Dam** $80/$50/$30 for two + daily hours + pass exclusion + USBR YouTube/Instagram. **Red Rock** $20 per vehicle, timed entry Oct 1–May 31, non-US pass $250. **Valley of Fire** $15 per non-NV vehicle, trail closures May 15–Sep 30 (so open in Feb/Mar), rideshare-stranding warning. **SlotZilla** added with $98/$110/$138/$150 for two + three official YouTube links. **Neon** official TikTok + Instagram + Sept–May hours. **Mob Museum** $75.90/$99.90/$109.90 + online arrival discounts. **High Roller** Caesars Rewards 2-for-1. |
+| Transit | RTC's **own fare page** now rendered: Strip/Downtown $6/$8/$20 vs Residential $2/$3/$5/$34/$65, per-couple totals, reduced fares, and the local-ID trap that makes the Deuce $8 not $5. |
+| Flags | **F-24 … F-35** added (12 new). |
+| Repo review | **R-14** (parallel claim collision, resolved) and **R-15** (Pages legacy source vs `pages.yml` uploading `docs/`). |
+| Questions / Suggestions | **Q-21…Q-23**; **S-13…S-18** (S-13/14/15 implemented in this pass, S-16/17/18 proposed). |
+
+### Highest-impact new findings
+- **F-24 — phantom MICHELIN star.** MGM's own Joël Robuchon page renders a "One MICHELIN Star" badge on its *related-dining card* for **Bardot Brasserie (ARIA)**. Bardot's own official page carries **no** MICHELIN badge and lists only 2015–2016 awards; it is absent from the official press release *and* the LVCVA list. Third-party blogs compound this by inventing stars for Mizumi and Sage. **ARIA is scored as 1 Listed restaurant, 0 stars.**
+- **Time-critical booking deadline.** Wynn Cyber Exclusive must be booked **Nov 20 – Dec 4, 2026**; verified saving **$1,092** over 7 nights plus up to $300 resort credit. Surfaced as a banner on Overview and Prices & dates.
+- **Cheaper week.** On Resorts World's official calendar, **Feb 18→25 sums to $1,632 vs $1,942 for Feb 15→22** (~16% less); Feb 16/17 are the month's priciest weeknights at $404. Feb 15 2027 is Washington's Birthday per **OPM**.
+- **F-25** — MGM's L'Atelier page ships live CMS placeholder text ("Dress code: Test copy").
+- **F-26** — Resorts World's calendar prints two contradictory resort-fee captions; used only to compare windows, never to quote an all-in cost.
+- **F-35** — surfaced by tightening the gate: South Point prints $141/night *and* $989/7 nights ($141×7=$987). The published stay total is authoritative; the nightly is a rounded display. Nothing averaged or adjusted.
+
+### Verification performed
+- `python3 scripts/merge_fieldwork_4d7b292f.py` — run twice, `md5sum data/plan/*.json` identical → **idempotent**.
+- `python3 scripts/build_plan.py` — 11 pages; run twice, `md5sum *.html` identical → **deterministic**.
+- `python3 scripts/check_plan.py` — **OK, 0 failures, 0 warnings, 11 pages**.
+- **Gate bug fixed:** `check_plan.py` required `price7.total` to be an `int` and parsed only whole-dollar nightly rates, so it silently could not validate cents. It now accepts numeric money and verifies nightly × 7 **to the cent** (7c tolerance for a rounded average), with an explicit `publishedTotal` escape that *requires* a rounding note. This stricter check is what exposed F-35.
+- All 11 pages + stylesheet returned **HTTP 200** from a local server on port 8080.
+- `.github/workflows/validate-plan.yml` extended with a merge-idempotency step and a stylesheet freshness check.
+
+### Scope respected
+No prior session's folder, data tree or workflow was edited or deleted: `docs/session-*/`, `docs/planner-v1/`, `field-notes/`, `site/`, `legacy-dashboard/`, `data/verified/`, `data/trip/`, `data/*.json` all untouched. Open PRs from older sessions were not touched.
 ## Handoff 2026-11-27 · c88d116c merged origin/main (PR #22) — adopting the canonical planner
 
 Session `arena/155b420b-vegas2` (PR #22) consolidated the root site into a canonical data-driven planner (`data/plan/*.json` → `scripts/build_plan.py` → 11 root pages incl. `flagged.html`, `transit.html`, `repo-review.html`; archive at `docs/session-legacy-root/`; gate `.github/workflows/validate-plan.yml`). Resolution (PR #23, session c88d116c):
@@ -379,6 +447,20 @@ Session `arena/155b420b-vegas2` (PR #22) consolidated the root site into a canon
 
 **Verification rule:** A value appears only when an official source confirmed it. Otherwise blank + `Unverified` + flag ID linking to Flagged for Review. No inference, no hallucination. Dynamic 2027 hotel rates are re-checked live; if an official booking page cannot be retrieved, the price stays blank.
 
+### Second parallel merge (PR #25) and cross-session regression check
+`main` advanced again to `900cb90` (PR #25, session `9b4f59cd`, isolated subsite under `docs/session-9b4f59cd/`). Merged additively; only `COORDINATION.md` conflicted and **both sides were retained**.
+
+All session validators were then run against this branch:
+| Validator | Result |
+|---|---|
+| `scripts/check_plan.py` (canonical root site) | **OK — 0 failures, 0 warnings, 11 pages** |
+| `scripts/check_session_9b4f59cd.py` | **PASS — 10 pages, 64 sources, 16 flags** |
+| `scripts/check_session_b29fc34e.py` | **PASS — 6 pages, 24 sourced cards** |
+| `scripts/validate_field_notes.py` | **PASS — 24 restaurants, 5 hotels per scenario** |
+| `node scripts/build.mjs` | **PASS — 11 pages, checks passed** |
+| `scripts/check_site.py` | 26 failures — **pre-existing on `main`**, reproduced from a clean `git archive origin/main`. Caused by an over-narrow official-domain allowlist (rejects `venetianlasvegas.com`, `rtcws.rtcsnv.com`) plus `http://` social links. Logged as **R-16**; not fixed because `data/verified/` and that script belong to session `a52047d7`. |
+
+No working-tree drift after running every builder (`git status` clean).
 ## Handoff 2026-11-27 · c88d116c merged origin/main (PRs #24–#26) — no data overlap
 
 `main` moved to `900cb90` while PR #23 was in flight (PR #24 dashboard rebuild by 155b420b, PR #26 by 7c99df0b, PR #25 isolated subsite by 9b4f59cd). Only `COORDINATION.md` conflicted; resolved by keeping both sides. None of the three PRs touched root `*.html`, `data/plan/**`, `scripts/build_plan.py` or `scripts/check_plan.py`, so the canonical port in PR #23 is unaffected — gate re-run after merge (see C8).
@@ -453,6 +535,18 @@ After this session's PR #22 and PR #24 merged, two further sessions merged to `m
 Follow-up for the canonical owner (not edited here): session 3c7ffbdd claims official 2-adult menu totals for 7 venues (Guy Savoy, China Poblano $120, Michael Mina $590++, Stubborn Seed $320–$390, Kabuto $260–$370, Partage $260–$420, Anima by EDO $170/$65 Mon Pasta) in `data/session-3c7ffbdd/restaurants.json`. If those totals check out against official menus, they narrow F-11 substantially — this session's port conservatively shows only Partage as exact.
 Follow-up for the canonical owner (not edited here): session 3c7ffbdd claims official 2-adult menu totals for 7 venues (Guy Savoy, China Poblano $120, Michael Mina $590++, Stubborn Seed $320–$390, Kabuto $260–$370, Partage $260–$420, Anima by EDO $170/$65 Mon Pasta) in `data/session-3c7ffbdd/restaurants.json`. If those totals check out against official menus, they narrow F-11 substantially — this session's port conservatively shows only Partage as exact.
 
+### Third parallel merge (PR #23) — shared canonical files, resolved additively
+`main` advanced to `c8205b2` (PR #23, session `c88d116c`). Unlike PR #25, this one **did** touch the shared canonical files (`data/plan/*.json`, `scripts/build_plan.py`, root pages), porting that session's verified data in.
+
+Resolution — **their port taken as the base, my findings re-applied on top**:
+- All 13 conflicted shared files resolved with `--theirs` (their newer canonical data), `COORDINATION.md` kept **both** sides.
+- `scripts/merge_fieldwork_4d7b292f.py` then re-applied additively. Their conservative port had **blanked Wynn and Resorts World**; this pass refilled them from the dated engine captures ($4,739 and $1,940.47). Their richer restaurant totals were preserved untouched.
+- **ID collision found and fixed:** their port added its own `S-13`, colliding with this session's `S-13`. Suggestion IDs are now **allocated dynamically** from the next free `S-xx` after title-dedupe, so future parallel additions cannot collide. This session's six items became `S-14`…`S-19`.
+- `scripts/build_plan.py` auto-merged cleanly: their activities-intro wording and this session's deadline banner / date strip / RTC fare table coexist.
+
+**Post-merge state:** 13 hotels, 35 flags (F-01…F-35), 17 repo findings (R-01…R-17), 23 questions, 19 suggestions. Gate: **OK — 0 failures, 0 warnings, 11 pages**. Merge script re-run → `md5sum` identical (**idempotent**).
+
+**R-17 logged (not fixed — other session's file):** `scripts/check_root_site.py`, added by PR #23, reports **26 failures on `origin/main` itself** and the **identical 26 failure labels** on this branch (verified by diffing failure sets from a clean `git archive origin/main`). It asserts a page name (`flagged-for-review.html`), a badge class (`badge-unverified`) and a footer disclaimer that `build_plan.py` does not emit, and rejects the official domain `kameomakase.com`. It is referenced by no workflow. **No regression introduced by this pass.** Requested fix logged for session `c88d116c`; the CI-wired gate remains `check_plan.py`.
 ## Completion 2026-11-27 · session c88d116c — PR #23 merged, port live (C8 done)
 
 - **PR #23:** https://github.com/kanlerxz87-cyber/Vegas2/pull/23 (“Canonical planner port (session c88d116c): 2Q rooms, restaurant hours/prices, 3 activities, S-13”) — merged 2026-11-27T18:01:32Z as `c8205b2`.
@@ -462,6 +556,20 @@ Follow-up for the canonical owner (not edited here): session 3c7ffbdd claims off
 - **Pages:** build for `c8205b2` status `built` (2026-11-27T18:02:15Z). Live verification: `suggestions.html` serves S-13 (Gimme Sum vs Ping Pang Pong) on https://kanlerxz87-cyber.github.io/Vegas2/.
 - **Open follow-ups for other sessions:** é “Tue–Sun” vs Tue–Sat contradiction (7c99df0b vs canonical); “no official hotel rates” claim vs dated captures; 3c7ffbdd's 7 claimed 2-adult totals as F-11 input; S-13 list-membership reconciliation.
 
+### Fourth parallel merge (PR #34) — and a real data-loss bug found and fixed
+`main` advanced to `b5878eb` (PR #34, session `155b420b`, a further canonical restaurant port). Resolved with `--theirs` as the base and the fieldwork re-applied.
+
+**A genuine regression was caught by auditing every field against `origin/main`, not just by running the gate.** The first version of the merge script *replaced* prose fields, silently discarding another session's newer text. Fixes:
+- New `merge_prose()` helper: existing prose is **kept and appended to**; only an explicit gap statement (`not captured`, `no dated price`, `may apply`…) is superseded by a verified capture.
+- **Red Rock's official link is no longer overwritten.** Session c88d116c's BLM URL stays as `official`; the Southern Nevada Conservancy visitor page is added as an *additional* source.
+- Removed two no-gain overrides (L'Atelier and Mob Museum hours) where the other session's wording was already equivalent.
+- Kept session c88d116c's more precise Guy Savoy captured-hours string instead of a weaker restatement.
+
+**F-36 — é by José Andrés opening days, resolved against the primary source.** The canonical port recorded `Tue–Sat` with "Sunday closure re-confirmed 2026-11-27". Re-fetching `https://www.ebyjoseandres.com/` today shows the operator stating **twice** (body and footer): *"Open Tuesday through Sunday with two shows per night, at 5:30 PM and 8:30 PM."* The site shows the operator's own wording, **keeps the other session's note verbatim alongside it**, and flags the contradiction with a phone/email confirmation path. Monday is closed in both readings.
+
+**New repeatable gate: `scripts/audit_no_data_loss.py`.** Diffs every row and field of `data/plan/*.json` against a base git ref and fails on any row or value that disappeared or was shortened. Status-code upgrades (`u→p→v`) are allowed; the **7 deliberate gap→verified supersedes are listed explicitly in the script** so each one is auditable rather than hidden. Current result: **OK — no unexpected data loss**, 7 documented supersedes. Wired into `validate-plan.yml`.
+
+**Post-merge state:** 13 hotels (8 priced), 24 restaurants (5 with two-person totals), 15 activities, **36 flags**, 23 questions, 19 suggestions, **17 repo findings**. `check_plan.py`: **OK — 0 failures, 0 warnings, 11 pages**. Merge script idempotent (`md5sum` identical across runs).
 ---
 
 ### Final state — session `155b420b-vegas2` (2026-11-27T18:06Z)

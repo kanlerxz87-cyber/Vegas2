@@ -20,10 +20,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Verify the fieldwork merge is idempotent
+        run: |
+          python3 scripts/merge_fieldwork_4d7b292f.py
+          git diff --exit-code -- data/plan
+      - name: Prove the merge discarded no other session's data
+        run: |
+          git fetch --no-tags --depth=200 origin main || true
+          python3 scripts/audit_no_data_loss.py origin/main || python3 scripts/audit_no_data_loss.py FETCH_HEAD
       - name: Rebuild the planner
         run: python3 scripts/build_plan.py
       - name: Verify data, sources, links and markup
         run: python3 scripts/check_plan.py
       - name: Fail if committed pages are out of date
         run: |
-          git diff --exit-code -- index.html restaurants.html hotels.html booking.html activities.html transit.html questions.html suggestions.html flagged.html sources.html repo-review.html
+          git diff --exit-code -- assets/site/style.css index.html restaurants.html hotels.html booking.html activities.html transit.html questions.html suggestions.html flagged.html sources.html repo-review.html
