@@ -288,8 +288,8 @@ def build_index() -> str:
         ("questions.html", "Questions", "12 questions that must be answered before a booking decision is reasonable — what we know, what is missing, how to close it."),
         ("suggestions.html", "Suggestions", "12 proposed changes, ranked by effort and impact. Nothing is implemented until you choose."),
         ("flagged.html", "Flagged for review", "16 conflicts, missing values and brief mismatches, each with its evidence and a link."),
-        ("repo-review.html", "Repo review", "11 findings from a line-by-line audit of the repository and its deployment."),
-        ("sources.html", "Sources", "59 sources, every one linked, and the rule used to decide what counts as verified."),
+        ("repo-review.html", "Repo review", f"{len(REVIEW['findings'])} findings from a line-by-line audit of the repository and its deployment."),
+        ("sources.html", "Sources", f"{len(SRC['items'])} sources, every one linked, and the rule used to decide what counts as verified."),
     ]
     tile_html = "".join(
         f'<a class="tile" href="{h}"><strong>{t}</strong><span>{E(d)}</span></a>' for h, t, d in tiles)
@@ -715,7 +715,7 @@ def build_repo_review() -> str:
 
 <h2>Findings</h2>
 <div class="tablewrap"><table>
-<caption>11 findings, each with the file or command that produced it.</caption>
+<caption>{len(REVIEW["findings"])} findings, each with the file or command that produced it.</caption>
 <thead><tr><th>ID</th><th>Severity</th><th>Finding</th><th>Evidence, impact and fix</th><th>Where</th></tr></thead>
 <tbody>{rows}</tbody></table></div>
 
