@@ -145,3 +145,20 @@ This entry records the active session's additions without replacing the existing
 - The Pages API still reports legacy source `main` `/` and status `built`. Public page checks confirmed the new subsite at `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-2e5e3452/` (the repository's current legacy root source exposes the checked-in `docs/` path). The alternate path without `/docs/` did not resolve under that source configuration.
 - Actions reported an upstream Node.js 20 deprecation advisory; deployment succeeded.
 - Local preview remains served from `field-notes/` on port 4173.
+
+---
+
+## Session 2ec5be84-vegas2 — Review, verification and final integration (this branch)
+
+**Branch:** `arena/2ec5be84-vegas2` (active). Scope: repo line-by-line review, independent verification of headline claims against official sources, root Pages site fixes/additions, final PR + merge + Pages deploy confirmation. Preserves all prior sessions' files (`docs/`, `data/`, `scripts/`, `field-notes/`, `legacy-dashboard/`, `site/`); edits only root-level site files, this file, and README if required.
+
+### Claimed tasks (claim logged before work; pushed immediately)
+| # | Task | Status | Owner | File scope |
+|---|------|--------|-------|------------|
+| 1 | Line-by-line repo review; flag irregularities | in progress | 2ec5be84-vegas2 | read-only + flagged-for-review.html |
+| 2 | Independent re-verification of headline official-source claims (Michelin list, hotel rates) | in progress | 2ec5be84-vegas2 | restaurants.html, hotels.html, flagged-for-review.html |
+| 3 | Add missing brief items where verifiable (per-couple restaurant cost column; South Point verified rate; booking-timing guidance) | in progress | 2ec5be84-vegas2 | restaurants.html, hotels.html, index.html |
+| 4 | Fix HTML/markup defects found in review | in progress | 2ec5be84-vegas2 | suggestions.html and others as found |
+| 5 | Final integration: PR to main, merge, confirm Pages deploy, record result | unclaimed-at-claim-time | 2ec5be84-vegas2 | GitHub PR + COORDINATION.md |
+
+- 2026-11-27 · 2ec5be84-vegas2 · claimed tasks 1–5; starting review.
