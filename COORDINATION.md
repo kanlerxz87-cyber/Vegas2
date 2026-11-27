@@ -479,3 +479,23 @@ Follow-up for the canonical owner (not edited here): session 3c7ffbdd claims off
 **Live pages:** `/` (overview + executive summary), `/restaurants.html` (24 MICHELIN rows), `/hotels.html` (11 candidates), `/booking.html` (dated quotes, cheapest verified, booking timing), `/activities.html` (14 rows after the merge), `/transit.html`, `/questions.html` (20 items), `/suggestions.html` (3 paths + 13 improvements), `/flagged.html` (23 items), `/repo-review.html` (13 findings), `/sources.html` (67-link register).
 
 **Open for the next session:** taxes are still excluded from every total (F-03); Venetia/MGM/Wynn/Resorts World have no dated rate (F-05, F-06); 17 restaurants still lack verified hours and 23 lack a published two-person price (F-10, F-11); no RTC door-to-door times (F-02). All are listed with sources on `flagged.html`.
+### PR, merge and deployment result — session `9b4f59cd`
+
+All five claimed tasks are complete. The subsite is published, merged and verified live.
+
+| Task | Status | Owner | Deliverable |
+|---|---|---|---|
+| 1 | done | 9b4f59cd | claim + audit; `COORDINATION.md` |
+| 2 | done | 9b4f59cd | `data/session-9b4f59cd/*.json` (64 sources, 10 hotels, 24 MICHELIN rows, 9 activities, 5 price windows, 16 flags, 12 questions, 12 suggestions, 7 repo findings) |
+| 3 | done | 9b4f59cd | `docs/session-9b4f59cd/` — 10 pages + `assets/style.css` |
+| 4 | done | 9b4f59cd | `scripts/check_session_9b4f59cd.py` — PASS |
+| 5 | done | 9b4f59cd | PRs #25 and #29 merged; Pages `built`; live URL verified |
+
+- **PR #25:** https://github.com/kanlerxz87-cyber/Vegas2/pull/25 — "Session 9b4f59cd: source-verified Las Vegas trip planner subsite". Merged 2026-11-27T17:56:42Z as `900cb903`. Checks at merge: `Build and verify the root planner` pass, `Validate and rebuild isolated site` pass, `Validate static site` pass, `Validate Vegas Field Notes` pass; the Pages build run also passed (only the upstream Node 20 deprecation advisory).
+- **PR #29:** https://github.com/kanlerxz87-cyber/Vegas2/pull/29 — follow-up. Two counts had been hardcoded in the generator and drifted from the data: the repo-review heading said "11 findings" while rendering 7, and the landing tile said "59 sources" while rendering 64. Both now interpolate the data length. Merged 2026-11-27T18:04:56Z as `8e72c06e`.
+- **Merges survived:** `main` advanced three times mid-flight (#26, #28, #34 and the integration PRs). `COORDINATION.md` conflicts were resolved by keeping both sessions' sections; no text from any other session was removed. Branch tip was force-pushed with `--force-with-lease` only after confirming the remote tip was this session's own commit.
+- **Pages:** API reports `status: built`, legacy source `main` `/`. Live verification at commit `8e72c06`: `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-9b4f59cd/index.html` serves the plan (KPI "5 of 10 hotels returned a verified price", "16 items flagged"); `repo-review.html` serves "7 findings"; `sources.html` lists all 64 links; `assets/style.css` loads and carries the mobile breakpoint.
+- **Local gates:** `scripts/check_session_9b4f59cd.py` PASS (10 pages, 64 sources, 16 flags, every row sourced, 0 broken local links); `check_site.py`, `validate_field_notes.py`, `check_session_b29fc34e.py` and `check_plan.py` all still pass. The builder is deterministic — the CI `git diff --exit-code` step does not trip.
+- **Repo findings re-audited, not repeated:** after PR #22 replaced the root dashboard, the four line-level defects this session originally logged (conflicting hotel prices, an unsourced "~15–20 minute" travel claim, a wrong MICHELIN reveal date, a "3–4 nights" span for a 3-night window) no longer reproduced and were retired. `main`'s new `validate-plan.yml` also resolved the original "root pages unchecked by CI" finding, so it was rewritten to the narrower gap that still holds: the `docs/` duplicate of the planner is uploaded by `pages.yml` but never rebuilt or diffed, and has already drifted from the root copy.
+- **Known open items** (published on the Flagged page, none blocking): no verified 2027 price for The Venetian, MGM Grand, The Cosmopolitan, Wynn or Bellagio (F-01/F-02/F-04); 20 of 24 MICHELIN restaurants publish no price (F-06); no official door-to-door transit times, so the 1-hour rule is reported as route availability (F-16); no official basis for "best time to book" (Q-08).
+- **Not touched:** root `*.html`, `docs/*.html`, `data/verified/*`, `data/plan/*`, `field-notes/`, every other `docs/session-*/`, and all workflows. Findings about those files are reported on `docs/session-9b4f59cd/repo-review.html` instead of edited, per the shared coordination rules.
