@@ -145,3 +145,28 @@ This entry records the active session's additions without replacing the existing
 - The Pages API still reports legacy source `main` `/` and status `built`. Public page checks confirmed the new subsite at `https://kanlerxz87-cyber.github.io/Vegas2/docs/session-2e5e3452/` (the repository's current legacy root source exposes the checked-in `docs/` path). The alternate path without `/docs/` did not resolve under that source configuration.
 - Actions reported an upstream Node.js 20 deprecation advisory; deployment succeeded.
 - Local preview remains served from `field-notes/` on port 4173.
+
+---
+
+## Session `arena/4d7b292f-vegas2` — FINAL INTEGRATION (claimed 2026-11-27)
+
+**Session ID:** `4d7b292f` · **Branch:** `arena/4d7b292f-vegas2` (Arena-pinned; the brief's `session-<id>/<task>` naming cannot be used). **Base:** `3386a21a` on `main`.
+
+**Role:** final integration session. All prior session tasks on this board are `done`, so this session owns the shared outputs (root landing page, navigation, consolidated table data) per the brief.
+
+### Claims (status: in progress)
+| # | Task | Status | Owner | File scope (non-overlapping) |
+|---|------|--------|-------|------------------------------|
+| I1 | Read board, claim integration scope, push claim | in progress | 4d7b292f | COORDINATION.md |
+| I2 | Re-verify MICHELIN Guide Las Vegas selection line by line (official Guide + Michelin press release) | in progress | 4d7b292f | data/plan/dining.json |
+| I3 | Re-verify hotels: bed type, private bath, 7-night + 3-night dated totals, cheapest window | in progress | 4d7b292f | data/plan/hotels.json, data/plan/booking.json |
+| I4 | Re-verify activities: hours, price for 2, official site + official social video links | in progress | 4d7b292f | data/plan/activities.json |
+| I5 | Transit reality check (no subway; RTC bus / monorail) + 1-hour reachability | in progress | 4d7b292f | data/plan/transit.json |
+| I6 | Executive summary, itinerary, questions, suggestions, repo review | in progress | 4d7b292f | data/plan/summary.json, questions.json, suggestions.json, repo-review.json |
+| I7 | Flagged for Review consolidation (all sessions' flags preserved) | in progress | 4d7b292f | data/plan/flagged.json |
+| I8 | Build clean unified mobile-first dashboard at Pages root + subpages | in progress | 4d7b292f | planner/**, scripts/build_plan.py, scripts/check_plan.py, assets/plan/**, root *.html |
+| I9 | Archive prior root pages (no deletion), preserve every prior session folder | in progress | 4d7b292f | docs/session-e9badc77/** |
+| I10 | Line-by-line verification gate, link check, CI | in progress | 4d7b292f | .github/workflows/plan-check.yml |
+| I11 | PR to main, merge, confirm Pages deploy, record result | in progress | 4d7b292f | COORDINATION.md |
+
+**Not touched by this session:** `data/verified/**`, `data/trip/**`, `data/*.json`, `field-notes/**`, `site/**`, `legacy-dashboard/**`, `docs/session-*/**` (except adding the new `docs/session-e9badc77/` archive), and all other sessions' scripts/workflows.
