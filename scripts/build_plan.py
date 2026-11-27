@@ -347,7 +347,7 @@ def build_index(meta, hotels, rests, acts, flags, suggestions, booking):
   <div class="card"><h3><a href="activities.html">Activities</a></h3><p class="small">{len(acts['rows'])} experiences with published hours, prices and travel notes.</p></div>
   <div class="card"><h3><a href="transit.html">Transit</a></h3><p class="small">Monorail hours, RTC links, and why no journey time is claimed.</p></div>
   <div class="card"><h3><a href="questions.html">Questions</a></h3><p class="small">What must be answered before booking, and how to close each gap.</p></div>
-  <div class="card"><h3><a href="suggestions.html">Suggestions</a></h3><p class="small">Three decision paths and {len(suggestions['siteImprovements'])} site improvements, nothing auto-applied.</p></div>
+  <div class="card"><h3><a href="suggestions.html">Suggestions</a></h3><p class="small">Three decision paths and {len(suggestions['siteImprovements'])} site improvements; those marked IMPLEMENTED were applied.</p></div>
   <div class="card"><h3><a href="flagged.html">Flagged for review</a></h3><p class="small">Every irregularity with severity, effect and official source.</p></div>
   <div class="card"><h3><a href="repo-review.html">Repo review</a></h3><p class="small">What was wrong with the repository and what this session changed.</p></div>
 </div>
