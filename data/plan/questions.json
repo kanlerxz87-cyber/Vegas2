@@ -131,7 +131,7 @@
       "id": "Q-15",
       "q": "Do you want reservations pre-booked, or a list to book yourself?",
       "status": "open",
-      "known": "é by José Andrés releases tickets about three months ahead; starred rooms need reservations; Bib/Recommended are generally walk-in friendly per the official FAQ.",
+      "known": "Booking windows differ by source and both are kept verbatim: Visit Las Vegas advises reserving 30–60 days ahead for MICHELIN restaurants (https://www.visitlasvegas.com/michelin-guide-restaurants/, captured 2026-11-27), while é by José Andrés releases tickets about three months ahead (official page). Starred rooms need reservations; Bib/Recommended are generally walk-in friendly per the official FAQ.",
       "missing": "Whether we should hold placeholders.",
       "how": "Choose 'book now' or 'list only'.",
       "impact": "February is high season; the small rooms (é, Kabuto, Kame) sell out."

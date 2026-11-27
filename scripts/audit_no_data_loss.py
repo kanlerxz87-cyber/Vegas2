@@ -24,6 +24,17 @@ ALLOWED = {
     ("activities", "The Neon Museum", "hours"),
     ("activities", "Hoover Dam", "priceNote"),
     ("activities", "Red Rock Canyon National Conservation Area", "note"),
+    ("activities", "The Neon Museum", "priceNote"),  # replaced by verified official 2027-admission figure ($21pp from Jan 1, 2027)
+    ("restaurants", "China Poblano", "hours"),  # official Cosmopolitan full weekly grid re-verified 2026-11-27
+    ("restaurants", "China Poblano", "price2"),  # exact official Jose's Way $60pp = $120/2 supersedes item-range estimate
+    ("restaurants", "China Poblano", "priceNote"),  # same verified capture supersedes the item-range gap statement
+    ("restaurants", "Michael Mina", "priceNote"),  # official page capture 2026-11-27 (tasting $295++pp; temporary closure) supersedes Garden-Table-only note
+    ("restaurants", "Sparrow and Wolf", "price2"),  # exact official chef-tasting $149pp = $298/2 supersedes item-range estimate
+    ("restaurants", "Sparrow and Wolf", "priceNote"),  # same verified capture supersedes the item-range gap statement
+    ("flags", "F-11", "title"),  # superseded: 8 restaurants now publish per-person or exact two-person figures
+    ("flags", "F-11", "detail"),  # superseded: updated list of published per-person/exact figures
+    ("flags", "F-11", "effect"),  # superseded: describes current Cost-for-2 column policy
+    ("questions", "Q-15", "known"),  # superseded: now carries both booking-window sources verbatim (Visit LV 30-60 days; e 3 months)
 }
 
 
