@@ -180,6 +180,33 @@
       "missing": "The applicable tax rate for these bookings.",
       "how": "Either fetch the tax line from a booking checkout, or use the applicable Clark County room-tax rate from an official Nevada source.",
       "impact": "All totals on this site currently understate the final bill."
+    },
+    {
+      "id": "Q-21",
+      "q": "Will you book the Wynn Cyber rate before it expires on December 4, 2026?",
+      "status": "open",
+      "known": "Verified: $677 avg/night including resort fee for Feb 15–22 2027 versus $833 on the Flexible rate; $1,092 saved over 7 nights; $75/day resort credit up to $300; book Nov 20 – Dec 4, 2026; 72-hour cancellation.",
+      "missing": "Whether a luxury budget is acceptable at all, and whether you want Wynn specifically.",
+      "how": "Decide the budget ceiling (Q-02) first; the deadline is 7 days from the capture date.",
+      "impact": "Highest of any open question — it is the only verified price change with a hard expiry."
+    },
+    {
+      "id": "Q-22",
+      "q": "Are you travelling from outside the United States, and will you have a car?",
+      "status": "open",
+      "known": "Verified: Red Rock's America the Beautiful annual pass is $80 for U.S. citizens/residents but $250 for non-U.S. residents, while the Red Rock-only annual pass is $50. Valley of Fire charges $10 for Nevada vehicles and $15 for non-Nevada vehicles, and officially warns rideshare users can be stranded. Red Rock has no published bus service.",
+      "missing": "Your residency and whether you will rent a car for the nature days.",
+      "how": "Answer once; it changes pass choice, the Red Rock entry fee basis and whether Valley of Fire is feasible at all.",
+      "impact": "Determines whether two of the three nature day trips are practical."
+    },
+    {
+      "id": "Q-23",
+      "q": "Do you want the cheaper Feb 18–25 window instead of the preferred Feb 15 start?",
+      "status": "open",
+      "known": "Verified: Feb 15 2027 is Washington's Birthday (OPM). On Resorts World's official February calendar, Feb 18–25 sums to $1,632 versus $1,942 for Feb 15–22 — about $310 less — and Feb 16/17 are the month's priciest weeknights at $404.",
+      "missing": "Whether your dates are fixed by flights or leave, and whether the calendar's fee basis resolves (F-26).",
+      "how": "Re-run the same engine for Feb 18–25 and read the offer tile's explicit fee wording.",
+      "impact": "Roughly 16% of the room cost at that property, for a three-day shift."
     }
   ]
 }

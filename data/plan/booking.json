@@ -157,7 +157,7 @@
     "cannotSay": "This is not proof that Feb 15–22 is the cheapest week in the whole window. Only one property produced comparable quotes across windows, and no historical or forward rate series was retrieved. Some March dates are already sold out, which is itself a reason not to wait."
   },
   "bookTiming": {
-    "statement": "No official source publishes an optimal booking lead time. What is verified: Caesars Entertainment advertises 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance' and free cancellation within 48 hours. Booking now (≈80 days before Feb 15, 2027) already satisfies the 30-day threshold.",
+    "statement": "TIME-CRITICAL, VERIFIED 2026-11-27: Wynn's public 'Cyber Exclusive' rate for the exact Feb 15–22 2027 stay is $677 avg/night including the resort fee, versus $833 avg/night on the same room's Flexible Getaway Rate. That offer must be BOOKED between November 20 and December 4, 2026. Booking inside that window saves $1,092 across 7 nights before tax and adds a $75/day resort credit (up to $300 per stay). This is the only verified, dated booking deadline found that changes the price of this specific trip. Separately, no official source publishes an optimal booking lead time, and Caesars advertises 'Advanced Purchase Savings — up to 30% off for stays 30+ days in advance', which booking now already satisfies.",
     "verifiedPolicies": [
       {
         "fact": "Advanced Purchase Savings: up to 30% off for stays 30+ days in advance (terms apply).",
@@ -188,7 +188,231 @@
         "source": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html"
       }
     ],
-    "action": "Book a refundable/free-cancellation two-queen room now as a hedge, then recheck the same dated engines weekly and rebook if the rate falls. Cancellation terms must be read on the booking page — the 48-hour term was not fully retrieved."
+    "action": "Book a refundable/free-cancellation two-queen room now as a hedge, then recheck the same dated engines weekly and rebook if the rate falls. Cancellation terms must be read on the booking page — the 48-hour term was not fully retrieved.",
+    "deadlines": [
+      {
+        "offer": "Wynn Cyber Exclusive + Up to $300 Resort Credit",
+        "bookFrom": "2026-11-20",
+        "bookBy": "2026-12-04",
+        "stayWindow": "Nov 22, 2026 – Jun 30, 2027",
+        "nights": "1 to 14 nights",
+        "membership": "None — public rate",
+        "rate": "$677 avg/night, Wynn Resort King, Feb 15–22 2027, includes resort fee, excludes taxes",
+        "compare": "$833 avg/night Flexible Getaway Rate, same room and dates ($5,831 for 7 nights)",
+        "saving": "$1,092 across 7 nights (computed: ($833 − $677) × 7)",
+        "perks": "$75 resort credit per day, up to $300 per stay",
+        "cancel": "72 hours before arrival to avoid a one-night room-rate-and-tax penalty",
+        "status": "v",
+        "source": "https://reservations.wynnlasvegas.com/ibe/details.aspx?hotelID=13763&langID=1&rmID=68658&checkIn=02/15/2027&checkOut=02/22/2027&adults=2&children=0",
+        "terms": "https://www.wynnlasvegas.com/terms-and-conditions/2026-cyber-sale-offer-public"
+      },
+      {
+        "offer": "Wynn Rewards Cyber + Resort Credit + Panoramic View upgrade",
+        "bookFrom": "2026-11-20",
+        "bookBy": "2026-12-04",
+        "stayWindow": "Nov 22, 2026 – Jun 30, 2027",
+        "nights": "2 to 14 nights",
+        "membership": "Wynn Rewards membership required (free to join)",
+        "rate": "Hidden behind sign-in — NOT verified. Advertised as up to 25% off Resort rooms.",
+        "compare": "",
+        "saving": "",
+        "perks": "Panoramic View upgrade; $75/day resort credit up to $300 per stay",
+        "cancel": "48 hours before arrival",
+        "status": "p",
+        "source": "https://www.wynnlasvegas.com/terms-and-conditions/2026-cyber-sale-offer-wynn-rewards",
+        "terms": "https://www.wynnlasvegas.com/terms-and-conditions/2026-cyber-sale-offer-wynn-rewards"
+      },
+      {
+        "offer": "Resorts World 'Up to 50% Off' Cyber Sale",
+        "bookFrom": "",
+        "bookBy": "",
+        "stayWindow": "",
+        "nights": "",
+        "membership": "Genting Rewards offered for best rate; the quoted price was visible without signing in",
+        "rate": "$277.21 avg/night, Hilton tower, Feb 15–22 2027, includes resort fee, excludes taxes",
+        "compare": "$351.29 avg/night on 'Signature Savings' and '$75 Dining Credits', same dates",
+        "saving": "$518.56 across 7 nights (computed: ($351.29 − $277.21) × 7)",
+        "perks": "Competing offers add up to $75 dining credit per stay",
+        "cancel": "",
+        "status": "v",
+        "source": "https://reservations.rwlasvegas.com/ibe/shop.aspx?hotelID=17726&selectedTower=HILTON&checkin=2027-02-15&checkout=2027-02-22&nights=7&adults=2&children=0",
+        "terms": ""
+      },
+      {
+        "offer": "Caesars Palace — daily breakfast at Brasserie B package",
+        "bookFrom": "",
+        "bookBy": "2027-12-20",
+        "stayWindow": "",
+        "nights": "",
+        "membership": "None stated",
+        "rate": "$274/night, excludes taxes",
+        "compare": "$209/night Best Available Rate",
+        "saving": "",
+        "perks": "Daily breakfast at Brasserie B",
+        "cancel": "",
+        "status": "v",
+        "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1",
+        "terms": ""
+      }
+    ]
   },
-  "taxNote": "Nevada/Clark County room tax is applied on top of every figure above. No official tax rate was captured for these bookings, so no tax-inclusive number is asserted anywhere on this site."
+  "taxNote": "Nevada/Clark County room tax is applied on top of every figure above. No official tax rate was captured for these bookings, so no tax-inclusive number is asserted anywhere on this site.",
+  "rateCalendar": {
+    "hotel": "Resorts World Las Vegas — Las Vegas Hilton tower",
+    "captured": "2026-11-27",
+    "source": "https://reservations.rwlasvegas.com/ibe/shop.aspx?hotelID=17726&selectedTower=HILTON&checkin=2027-02-15&checkout=2027-02-22&nights=7&adults=2&children=0",
+    "warning": "These are the engine's per-arrival-date 'from' prices for February 2027. The same calendar prints TWO contradictory captions — 'Calendar pricing excludes daily resort fee and taxes' AND 'Calendar pricing includes $55 daily resort fee and excludes taxes' — so fee treatment is UNRESOLVED (F-26). Summing seven consecutive nights is an INDICATIVE comparison of date windows, not a quote.",
+    "prices": [
+      [
+        "2027-02-13",
+        "Sat",
+        414
+      ],
+      [
+        "2027-02-14",
+        "Sun",
+        184
+      ],
+      [
+        "2027-02-15",
+        "Mon",
+        214
+      ],
+      [
+        "2027-02-16",
+        "Tue",
+        404
+      ],
+      [
+        "2027-02-17",
+        "Wed",
+        404
+      ],
+      [
+        "2027-02-18",
+        "Thu",
+        284
+      ],
+      [
+        "2027-02-19",
+        "Fri",
+        242
+      ],
+      [
+        "2027-02-20",
+        "Sat",
+        242
+      ],
+      [
+        "2027-02-21",
+        "Sun",
+        152
+      ],
+      [
+        "2027-02-22",
+        "Mon",
+        174
+      ],
+      [
+        "2027-02-23",
+        "Tue",
+        254
+      ],
+      [
+        "2027-02-24",
+        "Wed",
+        284
+      ],
+      [
+        "2027-02-25",
+        "Thu",
+        354
+      ],
+      [
+        "2027-02-26",
+        "Fri",
+        214
+      ],
+      [
+        "2027-02-27",
+        "Sat",
+        279
+      ],
+      [
+        "2027-02-28",
+        "Sun",
+        454
+      ]
+    ],
+    "windows": [
+      [
+        "Feb 15 → Feb 22",
+        1942,
+        "Preferred start — holiday week"
+      ],
+      [
+        "Feb 16 → Feb 23",
+        1902,
+        ""
+      ],
+      [
+        "Feb 17 → Feb 24",
+        1752,
+        ""
+      ],
+      [
+        "Feb 18 → Feb 25",
+        1632,
+        "CHEAPEST 7-night window on this calendar"
+      ],
+      [
+        "Feb 19 → Feb 26",
+        1702,
+        ""
+      ],
+      [
+        "Feb 20 → Feb 27",
+        1674,
+        ""
+      ],
+      [
+        "Feb 21 → Feb 28",
+        1711,
+        ""
+      ],
+      [
+        "Feb 22 → Mar 1",
+        2013,
+        "Runs into a $454 Feb 28 night"
+      ]
+    ],
+    "finding": "Shifting check-in from Mon Feb 15 to Thu Feb 18 lowers the indicative 7-night room subtotal from $1,942 to $1,632 — about $310 (16%) less — and still starts inside the preferred part of the window. Feb 16 and Feb 17 are the two most expensive weeknights of the month at $404 each. Only February was captured; no claim is made about March."
+  },
+  "verifiedDateFacts": [
+    {
+      "fact": "Monday, February 15, 2027 is Washington's Birthday (Presidents' Day), a U.S. federal holiday.",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "effect": "Your preferred check-in is the holiday itself, at the end of a three-day weekend."
+    },
+    {
+      "fact": "MGM Resorts' official engine states stays can only be booked up to 14 nights online; longer stays need 866.761.7111.",
+      "source": "https://mgmgrand.mgmresorts.com/book-room?property=mgmgrand",
+      "effect": "A 14-night trip is exactly the online maximum at MGM properties — no margin."
+    },
+    {
+      "fact": "Red Rock Canyon requires a timed-entry vehicle reservation 8 AM–5 PM, Oct 1 – May 31.",
+      "source": "https://www.redrockcanyonlv.org/fees/",
+      "effect": "Book the Red Rock slot before finalising the daily itinerary."
+    },
+    {
+      "fact": "Valley of Fire's trail closures run May 15 – Sep 30 and its maintenance closure is Dec 1–14.",
+      "source": "https://parks.nv.gov/parks/valley-of-fire",
+      "effect": "Feb/Mar is one of the best windows of the year — all listed trails are open."
+    },
+    {
+      "fact": "The Neon Museum may charge extra for arriving outside your selected ticket time from January 1, 2027.",
+      "source": "https://neonmuseum.org/your-visit/",
+      "effect": "Book a specific Neon Museum slot and keep to it."
+    }
+  ]
 }

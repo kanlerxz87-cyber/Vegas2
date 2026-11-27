@@ -249,3 +249,50 @@ While this session was building, `main` advanced through PRs #19–#21 (sessions
 - **Their transit claim (`~15–20 minutes` from any Strip hotel) was not adopted**, because no official journey time supports it; F-02 explains why the site prints no travel times.
 
 No other session's files, data trees, workflows or open PRs were touched.
+
+---
+
+## Session `arena/4d7b292f-vegas2` — subsequent integration / fieldwork pass (DONE)
+
+**Session ID:** `4d7b292f` · **Branch:** `arena/4d7b292f-vegas2` (Arena-pinned) · **Base:** `3386a21a`, then merged `origin/main` @ `76b22b8`.
+
+### What happened with the parallel claim (read this before claiming scope)
+This session pushed a claim on `data/plan/**` + root pages at the start of the run. Mid-research it found that **session `155b420b` had already claimed the identical scope, built the canonical root site and merged PR #22**. The live Pages site did not match this session's checkout (it referenced `booking.html` / `flagged.html`, which did not exist locally).
+
+**Resolution — nothing discarded, no eighth subsite created:**
+1. `origin/main` was merged in. Add/add conflicts in `data/plan/hotels.json`, `activities.json`, `booking.json` were resolved **in favour of `155b420b`'s canonical schema**. `COORDINATION.md` kept **both** sides in full.
+2. This session's newly verified findings were then merged **additively** into that canonical schema by `scripts/merge_fieldwork_4d7b292f.py` — it only fills blanks, appends rows/sources/flags, and is **idempotent**.
+3. Two orphan files this session had created (`data/plan/dining.json`, `data/plan/transit.json`) were removed once their content was folded into the canonical `restaurants.json` and the transit page, so there is still exactly one source of truth per table.
+
+**Lesson logged as R-14:** push the claim *and re-check `origin/main` immediately before the first write*, not only at session start.
+
+### Additive changes (all verified 2026-11-27 against first-party sources)
+| Area | Added |
+|---|---|
+| Hotels | **Wynn** dated rate finally captured: $677 avg/night Cyber Exclusive → **$4,739 / 7 nights** pre-tax (vs $833 → $5,831 Flexible). **Resorts World** $277.21 avg/night → **$1,940.47**. Two new properties: **Horseshoe** $116 → **$812** (450 sq ft king, marble bathroom verified) and **Planet Hollywood** $123 → **$861** (430 sq ft king). Caesars Palace official Instagram/YouTube added. |
+| Booking | New `bookTiming.deadlines` (4 offers) + `rateCalendar` (official Resorts World February 2027 month calendar, 16 dates, 8 seven-night windows) + `verifiedDateFacts` (OPM holiday, MGM 14-night online cap, Red Rock timed entry, Valley of Fire trail season, Neon 2027 ticket-time policy). |
+| Dining | Verified hours/dress/contact for **L'Atelier** (closed Tue/Wed), **é** (Tue–Sun, 5:30 & 8:30, 9 seats, 3-month ticket window), **China Poblano** (full weekly hours + cocktail hour), **Guy Savoy** (partial hours, awards, Krug table). Verified two-person prices: **Partage $260/$320/$420** (+ wine pairing ladder, +$33 foie, 20% gratuity only for 6+) and **Anima by EDO $170** ($85 pp, nightly from 5 PM, Monday $65 pasta+wine special). Primary source upgraded to the **official MICHELIN press release**. |
+| Activities | **Hoover Dam** $80/$50/$30 for two + daily hours + pass exclusion + USBR YouTube/Instagram. **Red Rock** $20 per vehicle, timed entry Oct 1–May 31, non-US pass $250. **Valley of Fire** $15 per non-NV vehicle, trail closures May 15–Sep 30 (so open in Feb/Mar), rideshare-stranding warning. **SlotZilla** added with $98/$110/$138/$150 for two + three official YouTube links. **Neon** official TikTok + Instagram + Sept–May hours. **Mob Museum** $75.90/$99.90/$109.90 + online arrival discounts. **High Roller** Caesars Rewards 2-for-1. |
+| Transit | RTC's **own fare page** now rendered: Strip/Downtown $6/$8/$20 vs Residential $2/$3/$5/$34/$65, per-couple totals, reduced fares, and the local-ID trap that makes the Deuce $8 not $5. |
+| Flags | **F-24 … F-35** added (12 new). |
+| Repo review | **R-14** (parallel claim collision, resolved) and **R-15** (Pages legacy source vs `pages.yml` uploading `docs/`). |
+| Questions / Suggestions | **Q-21…Q-23**; **S-13…S-18** (S-13/14/15 implemented in this pass, S-16/17/18 proposed). |
+
+### Highest-impact new findings
+- **F-24 — phantom MICHELIN star.** MGM's own Joël Robuchon page renders a "One MICHELIN Star" badge on its *related-dining card* for **Bardot Brasserie (ARIA)**. Bardot's own official page carries **no** MICHELIN badge and lists only 2015–2016 awards; it is absent from the official press release *and* the LVCVA list. Third-party blogs compound this by inventing stars for Mizumi and Sage. **ARIA is scored as 1 Listed restaurant, 0 stars.**
+- **Time-critical booking deadline.** Wynn Cyber Exclusive must be booked **Nov 20 – Dec 4, 2026**; verified saving **$1,092** over 7 nights plus up to $300 resort credit. Surfaced as a banner on Overview and Prices & dates.
+- **Cheaper week.** On Resorts World's official calendar, **Feb 18→25 sums to $1,632 vs $1,942 for Feb 15→22** (~16% less); Feb 16/17 are the month's priciest weeknights at $404. Feb 15 2027 is Washington's Birthday per **OPM**.
+- **F-25** — MGM's L'Atelier page ships live CMS placeholder text ("Dress code: Test copy").
+- **F-26** — Resorts World's calendar prints two contradictory resort-fee captions; used only to compare windows, never to quote an all-in cost.
+- **F-35** — surfaced by tightening the gate: South Point prints $141/night *and* $989/7 nights ($141×7=$987). The published stay total is authoritative; the nightly is a rounded display. Nothing averaged or adjusted.
+
+### Verification performed
+- `python3 scripts/merge_fieldwork_4d7b292f.py` — run twice, `md5sum data/plan/*.json` identical → **idempotent**.
+- `python3 scripts/build_plan.py` — 11 pages; run twice, `md5sum *.html` identical → **deterministic**.
+- `python3 scripts/check_plan.py` — **OK, 0 failures, 0 warnings, 11 pages**.
+- **Gate bug fixed:** `check_plan.py` required `price7.total` to be an `int` and parsed only whole-dollar nightly rates, so it silently could not validate cents. It now accepts numeric money and verifies nightly × 7 **to the cent** (7c tolerance for a rounded average), with an explicit `publishedTotal` escape that *requires* a rounding note. This stricter check is what exposed F-35.
+- All 11 pages + stylesheet returned **HTTP 200** from a local server on port 8080.
+- `.github/workflows/validate-plan.yml` extended with a merge-idempotency step and a stylesheet freshness check.
+
+### Scope respected
+No prior session's folder, data tree or workflow was edited or deleted: `docs/session-*/`, `docs/planner-v1/`, `field-notes/`, `site/`, `legacy-dashboard/`, `data/verified/`, `data/trip/`, `data/*.json` all untouched. Open PRs from older sessions were not touched.

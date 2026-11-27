@@ -347,6 +347,186 @@
           "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
         }
       ]
+    },
+    {
+      "id": "F-24",
+      "severity": "high",
+      "title": "MGM's own site shows a phantom 'One MICHELIN Star' badge for Bardot Brasserie (ARIA)",
+      "detail": "The related-dining card on the official Joël Robuchon page renders 'Bardot Brasserie — ARIA — One MICHELIN Star'. But Bardot Brasserie's OWN official page carries no MICHELIN badge and its 'Awards and acclaim' list contains only 2015–2016 honours (SNHCA, Wine Spectator, James Beard semifinalist, Desert Companion). Bardot appears in neither the official MICHELIN Southwest press release nor the LVCVA list. Third-party 'ARIA review' blogs compound the error by claiming Mizumi has 2 stars and Sage 1 — Sage is not in the 2026 selection at all.",
+      "effect": "ARIA is NOT counted as a starred hotel. It has one MICHELIN-listed restaurant (Gymkhana, Recommended) and zero stars. Do not let the MGM card or AI-written review blogs change the ranking.",
+      "source": [
+        {
+          "label": "Official Joël Robuchon page — related-dining card carrying the badge",
+          "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html"
+        },
+        {
+          "label": "Official Bardot Brasserie page — no MICHELIN award listed",
+          "url": "https://aria.mgmresorts.com/en/restaurants/bardot-brasserie.html"
+        },
+        {
+          "label": "Official MICHELIN Southwest 2026 press release — starred table",
+          "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+        }
+      ]
+    },
+    {
+      "id": "F-25",
+      "severity": "medium",
+      "title": "MGM Resorts page contains an unpublished CMS placeholder ('Dress code: Test copy')",
+      "detail": "The official L'Atelier de Joël Robuchon page has a 'Dress code' field reading literally 'Test copy', immediately above the real 'Dress Code: Business Casual' field. This is live editorial placeholder text on a first-party page.",
+      "effect": "Only the 'Business Casual' value is used. It also lowers confidence in MGM's restaurant metadata generally, which is why F-24 is treated as a site defect rather than an award.",
+      "source": [
+        {
+          "label": "Official L'Atelier page",
+          "url": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html"
+        }
+      ]
+    },
+    {
+      "id": "F-26",
+      "severity": "high",
+      "title": "Resorts World's rate calendar contradicts itself on the resort fee",
+      "detail": "The same official February 2027 calendar prints both 'Calendar pricing excludes daily resort fee and taxes' and 'Calendar pricing includes $55 daily resort fee and excludes taxes'. The two captions cannot both be true.",
+      "effect": "The calendar is used ONLY to compare date windows against each other, never to quote an all-in cost. The separately quoted $277.21 avg/night offer tile does state 'Includes Resort Fee and Excludes Taxes' and is the figure ranked.",
+      "source": [
+        {
+          "label": "Official Resorts World engine + February 2027 calendar",
+          "url": "https://reservations.rwlasvegas.com/ibe/shop.aspx?hotelID=17726&selectedTower=HILTON&checkin=2027-02-15&checkout=2027-02-22&nights=7&adults=2&children=0"
+        }
+      ]
+    },
+    {
+      "id": "F-27",
+      "severity": "medium",
+      "title": "Caesars 'book by' dates are ten months AFTER the stay",
+      "detail": "On the Feb 15–22 2027 rate search, Caesars Palace shows a breakfast package 'Book by Dec 20, 2027' and a food-credit package 'Book by Dec 30, 2027'; Flamingo and Planet Hollywood show 'Book by Dec 30, 2027'. Those deadlines fall after the trip itself.",
+      "effect": "Reproduced exactly as published and NOT corrected to 2026. Do not rely on these as booking urgency; confirm the real expiry with Caesars before choosing a package.",
+      "source": [
+        {
+          "label": "Official Caesars Palace dated rate page",
+          "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv&numberOfAdults=2&numberOfRooms=1"
+        }
+      ]
+    },
+    {
+      "id": "F-28",
+      "severity": "medium",
+      "title": "Proposed RTC fare increase dated January 31, 2027 could not be verified",
+      "detail": "A third-party page cites an RTC proposal to raise fares from Jan 31, 2027 (Strip single ride $4→$5, Strip 24-hour $8→$10, residential 24-hour $5→$7) and links the official RTC fare-update page. That official page could NOT be retrieved in this session, so the proposal, amounts and date are UNVERIFIED. The fares actually shown on this site are the ones read on RTC's own fare page.",
+      "effect": "Because the proposed start date falls BEFORE the trip, confirm directly with RTC before budgeting transit. Budget risk is small in absolute terms (a few dollars per pass) but it is a real pre-trip change.",
+      "source": [
+        {
+          "label": "Official RTC fare page (current fares, verified)",
+          "url": "https://rtcws.rtcsnv.com/mobile/geoFares.html"
+        },
+        {
+          "label": "Official RTC fare-update page — could not be retrieved",
+          "url": "https://www.rtcsnv.com/ways-to-travel/transitupdates-fares/"
+        }
+      ]
+    },
+    {
+      "id": "F-29",
+      "severity": "low",
+      "title": "High Roller opening time disagrees with its own ticket window",
+      "detail": "The official High Roller page showed a live status of 'Opens 12:30 PM' while publishing ticket windows of 'Daily 12 PM to 5 PM' and 'Anytime, Daily 12 PM – Close'.",
+      "effect": "Do not plan a noon arrival. Confirm the day's opening before buying a daytime ticket.",
+      "source": [
+        {
+          "label": "Official High Roller page",
+          "url": "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+        }
+      ]
+    },
+    {
+      "id": "F-30",
+      "severity": "medium",
+      "title": "Valley of Fire west entrance notice expires November 30, 2026",
+      "detail": "Nevada State Parks posts 'WEST ENTRANCE *OPEN* UNTIL NOVEMBER 30, 2026' plus a separate upcoming-maintenance-closure notice. What happens to the west entrance after that date is not stated on the retrieved page.",
+      "effect": "Re-check entrance status and routing before a Feb/Mar 2027 visit; the drive time and route depend on which entrance is open.",
+      "source": [
+        {
+          "label": "Official Nevada State Parks — Valley of Fire",
+          "url": "https://parks.nv.gov/parks/valley-of-fire"
+        },
+        {
+          "label": "Official west-entrance closure notice",
+          "url": "https://parks.nv.gov/news/temporary-closure-of-the-west-entrance-at-valley-of-fire"
+        }
+      ]
+    },
+    {
+      "id": "F-31",
+      "severity": "medium",
+      "title": "Mob Museum ticket prices were read against a November 2026 date, not a 2027 date",
+      "detail": "The official admission portal defaulted to today's date when prices were captured ($37.95 / $49.95 / $54.95 per adult). The portal did not expose a February 2027 price for the same ticket types.",
+      "effect": "The doubled figures are arithmetically correct for the published prices but are not a confirmed 2027 quote. Re-price on the official portal for your exact date.",
+      "source": [
+        {
+          "label": "Official Mob Museum admission portal",
+          "url": "https://admission.themobmuseum.org/"
+        }
+      ]
+    },
+    {
+      "id": "F-32",
+      "severity": "low",
+      "title": "SlotZilla operating hours not published on the retrieved official page",
+      "detail": "The operator's page publishes Mon–Thu and Fri–Sun pricing, rider weight and height limits and ADA access, but no opening hours were exposed in the retrieved text.",
+      "effect": "Hours are left blank rather than inferred. Confirm before scheduling a downtown evening.",
+      "source": [
+        {
+          "label": "Official SlotZilla page",
+          "url": "https://fremontstreetexperience.com/slotzilla-zip-line/"
+        }
+      ]
+    },
+    {
+      "id": "F-33",
+      "severity": "medium",
+      "title": "Bardot Brasserie's own page contradicts itself on hours",
+      "detail": "The official page's 'Hours of operation' block says Tue–Thu 5–10 PM, Fri 9 AM–2 PM and 5–9 PM, Sat 9 AM–4 PM, Sun 9 AM–2 PM; the summary below it says 'Dinner Tuesday–Saturday 5 PM–10 PM'; and the overview says 'on Friday and Saturday, we are closed between 2-5PM' — which conflicts with a 4 PM Saturday close. The chef's own group site gives the summary version.",
+      "effect": "Bardot is not in the MICHELIN selection so it is not ranked, but if you book it, phone the restaurant (702.590.8610) rather than trusting either block.",
+      "source": [
+        {
+          "label": "Official Bardot Brasserie page (ARIA)",
+          "url": "https://aria.mgmresorts.com/en/restaurants/bardot-brasserie.html"
+        },
+        {
+          "label": "Chef's own group page for Bardot",
+          "url": "https://theminagroup.com/restaurants/bardot-brasserie/"
+        }
+      ]
+    },
+    {
+      "id": "F-35",
+      "severity": "low",
+      "title": "South Point's engine prints a nightly rate that does not multiply to its own stay total",
+      "detail": "For Feb 15–22 2027 the official SynXis engine shows Premium 2 Queens at '$141 Per Night' and '$989 Total for 7 nights'. $141 × 7 = $987, a $2 gap; $989 / 7 = $141.29, so the nightly figure is a rounded display. The same pattern appears on the King room ($131/night vs $919 total; $131 × 7 = $917).",
+      "effect": "The explicit published stay total is used as authoritative and the nightly figure is labelled a rounded average. No figure is averaged, adjusted or inferred. This was surfaced by tightening the build gate to validate money to the cent.",
+      "source": [
+        {
+          "label": "Official South Point booking engine — Feb 15–22 2027, 2 adults",
+          "url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&productcurrency=USD&rooms=1"
+        }
+      ]
+    },
+    {
+      "id": "F-34",
+      "severity": "high",
+      "title": "Parallel-session collision on the data/plan and root-page scope",
+      "detail": "Session 4d7b292f claimed data/plan/** and the root pages at the start of this run, then discovered that session 155b420b had already claimed the identical scope, built the canonical root site and merged PR #22 while this session was researching. The live site therefore did not match this session's checkout.",
+      "effect": "Resolved without discarding anything: origin/main was merged in, 155b420b's data schema and generated pages were kept as canonical, and this session's new verified findings were merged ADDITIVELY via scripts/merge_fieldwork_4d7b292f.py. Both COORDINATION records were retained. No eighth competing subsite was created.",
+      "source": [
+        {
+          "label": "COORDINATION.md — shared task board",
+          "url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/COORDINATION.md"
+        },
+        {
+          "label": "PR #22 — session 155b420b canonical root site",
+          "url": "https://github.com/kanlerxz87-cyber/Vegas2/pull/22"
+        }
+      ]
     }
   ]
 }

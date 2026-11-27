@@ -32,19 +32,23 @@
         {
           "label": "Caesars Palace Instagram (parent property, official footer link)",
           "url": "https://www.instagram.com/caesarspalace/"
+        },
+        {
+          "label": "Caesars Entertainment — official YouTube (property-level)",
+          "url": "https://www.youtube.com/user/caesarspalace"
         }
       ],
-      "socialStatus": "p",
-      "note": "550 ft, largest observation wheel in North America, 28 cabins. Caesars Rewards Diamond/Seven Stars ride free; Platinum/Gold buy-one-get-one (limit 2/month).",
+      "socialStatus": "v",
+      "note": "550 ft, largest observation wheel in North America, 28 cabins. Caesars Rewards Diamond/Seven Stars ride free; Platinum/Gold buy-one-get-one (limit 2/month). Caesars Rewards Gold and Platinum members can buy one ticket and get one free (limit 2 tickets per month) — a genuine two-for-one for a couple. Seniors 65+ get $5 off Sun–Thu 12–5 PM at the box office. Individual outside beverages are allowed; glass, coolers and cases are not.",
       "flagIds": []
     },
     {
       "name": "The Mob Museum",
       "area": "Downtown — 300 Stewart Ave",
-      "hours": "Daily 9:00 AM–9:00 PM. The Underground (speakeasy) Sun–Thu 11:00 AM–11:00 PM, Fri–Sat 11:00 AM–midnight. Early closures posted separately.",
+      "hours": "Museum daily 9:00 AM–9:00 PM. The Underground speakeasy: Sun–Thu 11:00 AM–11:00 PM; Fri–Sat 11:00 AM–midnight. Hours subject to change; a separate early-closures page is published.",
       "hoursStatus": "v",
-      "price2": "",
-      "priceNote": "Ticket price not captured from the official ticket page.",
+      "price2": "$75.90 / $99.90 / $109.90",
+      "priceNote": "VERIFIED official admission portal: General Admission $37.95 per adult ($75.90 for two), Deluxe Pass $49.95 ($99.90), Premier Pass $54.95 ($109.90). All three include entry to The Underground. Online-only Morning (9–11 AM) or Evening (5–9 PM) arrival reduces Premier to $47.95 pp = $95.90 for two. Children 10 and under free. Prices were read with a November 2026 date selected, so 2027 pricing may differ (F-31).",
       "transit": "Downtown, 300 Stewart Ave. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://themobmuseum.org/plan-your-visit/",
@@ -58,7 +62,7 @@
     {
       "name": "The Neon Museum",
       "area": "Downtown — 770 Las Vegas Blvd N",
-      "hours": "Daily 3:00–11:00 PM (Sept–May schedule), last entry 10:00 PM; box office closes 1 hour before closing. June–August runs 8:00 PM–midnight.",
+      "hours": "SEPT–MAY: 3:00 PM–11:00 PM daily, last entry 10:00 PM — this is the schedule for Feb/Mar 2027. JUN–AUG: 8:00 PM–midnight, last entry 11:00 PM. Box office closes one hour before posted closing.",
       "hoursStatus": "v",
       "price2": "",
       "priceNote": "Ticket price not captured; the official site sells timed entry and notes that from Jan 1, 2027 arriving outside your slot may cost extra.",
@@ -80,7 +84,7 @@
         }
       ],
       "socialStatus": "v",
-      "note": "Outdoor Neon Boneyard; tours can be cancelled for lightning, high wind or heat above 100°F. February evening visits avoid the heat risk.",
+      "note": "Outdoor Neon Boneyard; tours can be cancelled for lightning, high wind or heat above 100°F. February evening visits avoid the heat risk. From January 1, 2027 the museum may charge extra for arriving earlier or later than your selected ticket time, so book a specific slot and keep to it. Photography is personal phone/tablet snapshots ONLY — cameras, tripods and selfie sticks must be left in a vehicle or checked at the front desk. Outdoor collection: guided tours stop above 100°F, general admission closes above 105°F, the museum closes above 110°F.",
       "flagIds": [
         "F-16"
       ]
@@ -156,16 +160,25 @@
     {
       "name": "Hoover Dam",
       "area": "Southeast of the Strip, at the Nevada/Arizona border",
-      "hours": "",
-      "hoursStatus": "u",
-      "price2": "",
-      "priceNote": "Tour pricing and hours were not retrievable from the current official page in prior sessions — recheck before booking a day trip.",
+      "hours": "Dam open to the public daily 5:00 AM–9:00 PM (PST). Visitor Center and tours daily 9:00 AM–5:00 PM. The official page begins listing holiday exceptions but the list was cut off in the retrieved text — confirm before a holiday visit.",
+      "hoursStatus": "p",
+      "price2": "$80 / $50 / $30",
+      "priceNote": "VERIFIED official Bureau of Reclamation tour page: Guided Dam Tour $40 per person ($80 for two) — ON-SITE ONLY, must be purchased in person. Guided Powerplant Tour $25 per adult ($50 for two). Self-guided Visitor Center Tour $15 per person ($30 for two). Children 3 and under free. Powerplant and Visitor Center tickets are upgradeable on site.",
       "transit": "No rail service; car or tour bus only. Drive time not verified from an official source.",
       "transitStatus": "u",
       "official": "https://www.usbr.gov/lc/hooverdam/",
-      "social": [],
-      "socialStatus": "u",
-      "note": "Outside the walkable/transit core; treat as a full-day car trip.",
+      "social": [
+        {
+          "label": "Bureau of Reclamation — official YouTube (agency-level)",
+          "url": "https://www.youtube.com/@reclamation"
+        },
+        {
+          "label": "Bureau of Reclamation — official Instagram (agency-level)",
+          "url": "https://instagram.com/bureau_of_reclamation"
+        }
+      ],
+      "socialStatus": "v",
+      "note": "America the Beautiful / Interagency passes are NOT accepted at Hoover Dam — it is self-funded and receives no Federal Lands Recreation Enhancement Act revenue. The Guided Dam Tour includes the historic tunnels, the original elevator, the inspection tunnels and the Powerplant tour; it is wheelchair accessible but not stroller or scooter accessible.",
       "flagIds": [
         "F-16"
       ]
@@ -173,36 +186,76 @@
     {
       "name": "Red Rock Canyon National Conservation Area",
       "area": "West of the Strip",
-      "hours": "",
-      "hoursStatus": "u",
-      "price2": "",
-      "priceNote": "",
+      "hours": "Visitor Center and Elements Gift Shop open daily 8:00 AM–4:30 PM. TIMED-ENTRY RESERVATION REQUIRED for vehicle entry to the 13-mile Scenic Drive 8:00 AM–5:00 PM, October 1 – May 31 — which covers the entire Feb 15 – Mar 23, 2027 window.",
+      "hoursStatus": "v",
+      "price2": "$20 per vehicle",
+      "priceNote": "VERIFIED official fee table: Car/Truck 1 day $20 PER VEHICLE, so two adults in one car pay $20 total. Commercial tour vehicle (bus, limo, taxi, ride-share) is $20 per vehicle PLUS $5 per person = $30 for two. Motorcycle $10; bicycle $8; pedestrian $5 per person. Red Rock Annual Pass $50. America the Beautiful Annual Pass is $80 for U.S. citizens/residents but $250 for NON-U.S. residents.",
       "transit": "No public transit to the scenic drive per prior sessions; car required. Drive time not verified.",
       "transitStatus": "u",
-      "official": "https://www.blm.gov/visit/red-rock-canyon",
+      "official": "https://www.redrockcanyonlv.org/visitor-information/",
       "social": [],
       "socialStatus": "u",
-      "note": "Timed-entry reservation system may apply; check the BLM page.",
+      "note": "26 hikes and trails. Reserve the timed entry at Recreation.gov (timed-entry/10075177) or (877) 444-6777 BEFORE fixing the day's itinerary. No public bus service to the Scenic Drive is published on the official visitor pages, so this is a car or commercial-tour day.",
       "flagIds": [
         "F-16",
         "F-02"
+      ],
+      "alsoOfficial": [
+        "https://www.redrockcanyonlv.org/fees/",
+        "https://www.recreation.gov/timed-entry/10075177"
       ]
     },
     {
       "name": "Valley of Fire State Park",
       "area": "Northeast of the Strip",
-      "hours": "",
-      "hoursStatus": "u",
-      "price2": "",
-      "priceNote": "",
+      "hours": "Park open daily sunrise to sunset, 365 days a year. Visitor Center daily 9:00 AM–4:00 PM. Park office Mon–Fri 9–4, closed state holidays. Annual maintenance closure Dec 1–14 (outside your window). Annual trail closures May 15 – Sep 30 (outside your window, so Fire Wave, White Domes, Pastel Canyon and the other listed trails ARE open in Feb/Mar).",
+      "hoursStatus": "v",
+      "price2": "$15 per vehicle",
+      "priceNote": "VERIFIED Nevada State Parks: entrance $10.00, or $15.00 for NON-NEVADA vehicles. The fee is per vehicle, so two adults in one rental car pay $15 total. No reservation is required for day use.",
       "transit": "Car required. Travel time not verified; treat as a dedicated day trip.",
       "transitStatus": "u",
       "official": "https://parks.nv.gov/parks/valley-of-fire",
       "social": [],
       "socialStatus": "u",
-      "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option.",
+      "note": "OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30).",
       "flagIds": [
         "F-16"
+      ],
+      "alsoOfficial": [
+        "https://parks.nv.gov/news/temporary-closure-of-the-west-entrance-at-valley-of-fire"
+      ]
+    },
+    {
+      "name": "SlotZilla Zipline at Fremont Street Experience",
+      "area": "Downtown — Fremont Street Experience",
+      "hours": "",
+      "hoursStatus": "u",
+      "price2": "$98 / $110 (Zip) · $138 / $150 (Zoom)",
+      "priceNote": "VERIFIED official operator: Zip Line Mon–Thu from $49, Fri–Sun from $55; Zoom Line Mon–Thu from $69, Fri–Sun from $75. Doubled for two adults, all 'starting at' prices PLUS FEES. A Mob Museum + SlotZilla bundle is $88 and applies to Zoomline only.",
+      "transit": "Downtown terminus of the Las Vegas Blvd Deuce corridor. Door-to-door times not retrieved.",
+      "transitStatus": "u",
+      "official": "https://fremontstreetexperience.com/slotzilla-zip-line/",
+      "alsoOfficial": [
+        "https://fremontstreetexperience.com/slotzilla-zip-line-lv/slotzilla-faq/"
+      ],
+      "social": [
+        {
+          "label": "Official SlotZilla 'Hall of Famers' video — Katy Perry",
+          "url": "https://youtu.be/D85A-xuIb58"
+        },
+        {
+          "label": "Official SlotZilla video — Vampire Diaries",
+          "url": "https://youtu.be/gWVvWJxQSEc"
+        },
+        {
+          "label": "Official SlotZilla video — Spruce The Goose x The Aviator",
+          "url": "https://youtu.be/vCnkPlFylcE"
+        }
+      ],
+      "socialStatus": "v",
+      "note": "Zip Line: seated, launches from 77 ft, glides three blocks, rider 50–300 lbs. Zoom Line: belly-down head-up, launches from 11 stories, five blocks, rider 80–300 lbs. Maximum height 6'8\" for either. ADA elevators available. Operating hours were not exposed on the retrieved official page, so they are left blank.",
+      "flagIds": [
+        "F-32"
       ]
     }
   ]

@@ -157,6 +157,91 @@ def crumb_for(page, parents):
 
 # ---------------------------------------------------------------- pages
 
+def money(v):
+    """Render a verified amount without inventing precision."""
+    if isinstance(v, float) and not v.is_integer():
+        return f"${v:,.2f}"
+    return f"${v:,.0f}"
+
+
+def deadline_banner(booking):
+    """S-13: surface verified, dated booking deadlines above everything else."""
+    dl = [d for d in booking.get("bookTiming", {}).get("deadlines", []) if d.get("bookBy")]
+    if not dl:
+        return ""
+    dl = sorted(dl, key=lambda d: d["bookBy"])
+    soon = dl[0]
+    items = "".join(
+        f'<li><strong>{esc(d["offer"])}</strong> \u2014 book by <strong>{esc(d["bookBy"])}</strong>'
+        f'{" (opens " + esc(d["bookFrom"]) + ")" if d.get("bookFrom") else ""}. '
+        f'{esc(d["rate"])}'
+        f'{" Saving: " + esc(d["saving"]) + "." if d.get("saving") else ""} '
+        f'{ext(d["source"], "Dated rate")}'
+        f'{(" · " + ext(d["terms"], "Terms")) if d.get("terms") else ""}</li>'
+        for d in dl
+    )
+    return f"""
+<div class="note act">
+  <p><strong>Act before {esc(soon['bookBy'])}.</strong> {esc(soon['offer'])} is the only verified offer found
+  with a hard booking deadline that changes the price of this exact trip. {esc(soon['saving'])}
+  {esc(soon['perks'])}.</p>
+  <ul class="tight">{items}</ul>
+  <p class="small">Deadlines are reproduced exactly as the operator publishes them. Two Caesars packages
+  show a 2027 'book by' date that falls after the stay itself \u2014 that anomaly is flagged (F-27), not corrected.</p>
+</div>"""
+
+
+def deadline_table(booking):
+    dl = booking.get("bookTiming", {}).get("deadlines", [])
+    if not dl:
+        return ""
+    rows = []
+    for d in sorted(dl, key=lambda x: (x.get("bookBy") or "9999")):
+        rows.append([
+            f'<strong>{esc(d["offer"])}</strong><span class="sub">{esc(d["membership"])}</span>',
+            (f'<strong>{esc(d["bookBy"])}</strong>' if d.get("bookBy") else blank_marker("no deadline published"))
+            + (f'<span class="sub">from {esc(d["bookFrom"])}</span>' if d.get("bookFrom") else ""),
+            esc(d["stayWindow"]) + (f'<span class="sub">{esc(d["nights"])}</span>' if d.get("nights") else ""),
+            esc(d["rate"]) + (f'<span class="sub">vs {esc(d["compare"])}</span>' if d.get("compare") else ""),
+            esc(d["saving"]) if d.get("saving") else blank_marker("not published"),
+            esc(d["cancel"]) if d.get("cancel") else blank_marker("not published"),
+            vbadge(d["status"]) + " " + ext(d["source"], "Source"),
+        ])
+    return "<h2>Verified booking deadlines</h2>" + table(
+        ["Offer", "Book by", "Stay window", "Verified rate", "Saving for 7 nights", "Cancellation", "Status"],
+        rows, caption="Every rate and deadline here was read on the operator's own site on 2026-11-27. "
+                      "Savings are labelled arithmetic on two verified rates, not a quoted discount.")
+
+
+def rate_calendar_block(booking):
+    """S-14: per-night date strip so a 16% window swing is visible."""
+    rc = booking.get("rateCalendar")
+    if not rc:
+        return ""
+    prices = rc["prices"]
+    lo = min(p[2] for p in prices)
+    hi = max(p[2] for p in prices)
+    cells = ""
+    for date, dow, val in prices:
+        pct = 0 if hi == lo else (val - lo) / (hi - lo)
+        cls = "cool" if pct < 0.34 else ("warm" if pct < 0.67 else "hot")
+        mmdd = date[5:].replace("-", "/")
+        cells += (f'<div class="dcell {cls}"><span class="dd">{esc(mmdd)}</span>'
+                  f'<span class="dw">{esc(dow)}</span><span class="dp">{money(val)}</span></div>')
+    best = min(rc["windows"], key=lambda w: w[1])
+    wrows = [[f'<strong>{esc(w[0])}</strong>' if w[1] == best[1] else esc(w[0]),
+              money(w[1]),
+              f'<strong>{esc(w[2])}</strong>' if w[2] else ""] for w in rc["windows"]]
+    return f"""
+<h2>Which week is cheapest? Official February 2027 date strip</h2>
+<p class="small">{esc(rc['hotel'])} \u00b7 captured {esc(rc['captured'])} \u00b7 {ext(rc['source'], 'Official engine calendar')}</p>
+<div class="note warn"><p class="small">{esc(rc['warning'])}</p></div>
+<div class="dstrip">{cells}</div>
+{table(["7-night window", "Indicative room subtotal", "Note"], wrows,
+       caption="Sum of seven consecutive per-arrival-date prices. A comparison of windows, NOT a booking quote.")}
+<div class="note"><p>{esc(rc['finding'])}</p></div>"""
+
+
 def build_index(meta, hotels, rests, acts, flags, suggestions, booking):
     rows = hotels["rows"]
 
@@ -213,6 +298,7 @@ def build_index(meta, hotels, rests, acts, flags, suggestions, booking):
         ])
 
     body = f"""
+{deadline_banner(booking)}
 {kpi_html}
 <div class="note">
   <p><strong>Read this first.</strong> Las Vegas has <strong>no subway</strong>; rail is the 7-station Las Vegas Monorail along the Strip only. A 1-hour bus/rail limit therefore cannot separate Strip hotels — every MICHELIN restaurant in the city sits inside the Strip/Downtown/Chinatown core. The hotel ranking below uses the measure that <em>does</em> separate them: how many MICHELIN restaurants are inside the same resort, i.e. zero transit.</p>
@@ -309,6 +395,8 @@ def build_restaurants(rests, flags):
 <div class="note">
   <p><strong>How tiers are shown.</strong> The official Las Vegas MICHELIN page lists {guide['cityList']}. A <span class="badge b-star">star</span> is a star. <span class="badge b-bib">Bib Gourmand</span> is the value category — it is <em>not</em> a star. <span class="badge b-list">Listed</span> means the restaurant appears in the guide's recommended selection with no star. The official page's own wording for non-starred, non-Bib entries is "Recommended by MICHELIN Guide"; this site labels those rows "Listed in guide" and never calls them starred.</p>
   <p>Captured {guide['captured']} from {ext(guide['source'], 'the official Las Vegas MICHELIN page')}. 2027 awards have not been announced (F-08).</p>
+  <p class="small"><strong>Primary source:</strong> {ext(guide['primarySource']['url'], guide['primarySource']['label'])} — the first-party MICHELIN press release, which lists every restaurant with its street address. {esc(guide['primarySource']['note'])}</p>
+  <p class="small"><strong>Do not trust star badges on hotel sites.</strong> MGM's own Joël Robuchon page renders a "One MICHELIN Star" badge for Bardot Brasserie at ARIA, but Bardot's own page lists no MICHELIN award and it is absent from both official lists (F-24). ARIA is counted as one Listed restaurant, zero stars.</p>
 </div>
 
 <div class="kpis">
@@ -426,6 +514,9 @@ def build_booking(booking, hotels):
     c = booking["cheapest"]
     d = booking["dateVerdict"]
     body = f"""
+{deadline_banner(booking)}
+{deadline_table(booking)}
+{rate_calendar_block(booking)}
 <div class="note">
   <p><strong>Cheapest verified option.</strong> {esc(c['verdict'])}</p>
   <p>Runner-up: {esc(c['runnerUp'])} {esc(c['delta'])}</p>
@@ -530,6 +621,26 @@ def build_transit():
 {table(["Fact", "Value"], mono, caption="Source: lvmonorail.com, captured 2026-11-27.")}
 <p class="small">{ext("https://www.lvmonorail.com/", "Monorail home")} · {ext("https://www.lvmonorail.com/route-map/", "Route map")} · {ext("https://www.lvmonorail.com/ticket-information/", "Ticket information")}</p>
 
+<h2>RTC fares — verified on RTC's own fare page</h2>
+{table(["Fare product", "Strip / Downtown (SDX &amp; Deuce)", "Residential routes", "For 2 adults"], [
+    ["Single ride", blank_marker("not offered in this tier"), "$2", "$4 residential"],
+    ["2-hour pass", "$6", "$3", "$12 Strip / $6 residential"],
+    ["24-hour pass", "$8", "$5", "$16 Strip / $10 residential"],
+    ["3-day pass", "$20", blank_marker("not offered"), "$40 Strip"],
+    ["15-day pass", blank_marker("not offered"), "$34", "$68 residential"],
+    ["30-day pass", blank_marker("not offered"), "$65", "$130 residential"],
+], caption="Source: rtcws.rtcsnv.com/mobile/geoFares.html, captured 2026-11-27. 'For 2 adults' is the published per-person fare x 2.")}
+<div class="note">
+  <p><strong>The trap for visitors:</strong> RTC's own page states that residential passes are valid on the
+  SDX and Deuce <em>only with a local I.D.</em> Without Nevada ID you need the Strip/Downtown tier, which is
+  why the Deuce costs $8 a day rather than the $5 residential figure often quoted.</p>
+  <p>Reduced fare (ages 6–17, seniors 60+, persons with disabilities, or a Medicare card, with photo ID):
+  $1 single, $1.50 two-hour, $2.50 24-hour, $17 15-day, $32.50 30-day. Children five and under ride free
+  with an adult.</p>
+  <p class="small">{ext("https://rtcws.rtcsnv.com/mobile/geoFares.html", "Official RTC fare page")} ·
+  A proposed fare increase dated January 31, 2027 could not be confirmed on RTC's site and is flagged (F-28).</p>
+</div>
+
 <h2>RTC buses — where to get the real answer</h2>
 <div class="card">
   <p>RTC of Southern Nevada publishes a trip planner, fares and route maps. It also posts service alerts — currently including F1 construction changes around the Strip. Live journey times for your actual dates must come from that planner; this site does not model them (F-02).</p>
@@ -609,7 +720,7 @@ def build_suggestions(suggestions):
     body = f"""
 <div class="note">
   <p>{esc(suggestions['intro'])}</p>
-  <p class="small">Nothing on this page has been implemented. Choose a path (or a list of improvement IDs) and the next build applies exactly that.</p>
+  <p class="small">Items marked IMPLEMENTED were applied in the 2026-11-27 fieldwork pass (session 4d7b292f). Everything else is still a proposal: choose a path or a list of improvement IDs and the next build applies exactly that.</p>
 </div>
 
 <h2>Decision paths</h2>

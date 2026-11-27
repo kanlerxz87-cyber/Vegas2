@@ -139,3 +139,22 @@ details summary{cursor:pointer;font-weight:600}
 details[open] summary{margin-bottom:.5rem}
 .skip{position:absolute;left:-9999px}
 .skip:focus{left:.5rem;top:.5rem;background:#fff;padding:.4rem .7rem;border-radius:8px;z-index:99}
+
+/* ---- session 4d7b292f additions: deadline banner + date strip ---- */
+.note.act{border-left:4px solid #b8860b;background:#fff8e6}
+.note.warn{border-left:4px solid #c2410c;background:#fff4ed}
+ul.tight{margin:.5rem 0 0;padding-left:1.1rem}
+ul.tight li{margin:.45rem 0;line-height:1.5}
+.dstrip{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:6px;margin:.75rem 0 1rem}
+.dcell{border:1px solid #e3e6ea;border-radius:8px;padding:7px 6px;text-align:center;background:#fff}
+.dcell .dd{display:block;font-size:.72rem;color:#5b6570;letter-spacing:.02em}
+.dcell .dw{display:block;font-size:.66rem;color:#8a939c;text-transform:uppercase}
+.dcell .dp{display:block;font-weight:700;font-size:.95rem;margin-top:3px;font-variant-numeric:tabular-nums}
+.dcell.cool{background:#eef8f0;border-color:#bfe3c8}
+.dcell.warm{background:#fdf6e8;border-color:#ecd9a8}
+.dcell.hot{background:#fdeeee;border-color:#f0c4c4}
+@media (max-width:520px){
+  .dstrip{grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:5px}
+  .dcell .dp{font-size:.86rem}
+  ul.tight{padding-left:1rem}
+}
