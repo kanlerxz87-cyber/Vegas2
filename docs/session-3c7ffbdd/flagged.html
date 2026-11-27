@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flagged for Review — Las Vegas 2027 Trip Dashboard (Session 3c7ffbdd)</title>
+  <meta name="description" content="Transparent log of every repository audit irregularity, official-source conflict, and intentionally blank unverified field — each with a verification link.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-title" href="index.html">Las Vegas 2027 Planner</a>
+        <span class="brand-tag">Verified 2026-11-27 · 2 Adults · Feb 15–Mar 23, 2027</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Overview</a>
+          <a href="hotels.html">Hotels &amp; Dates</a>
+          <a href="restaurants.html">Michelin (24)</a>
+          <a href="activities.html">Activities</a>
+          <a href="suggestions.html">Suggestions</a>
+          <a href="questions.html">Q&amp;A</a>
+          <a href="flagged.html" class="active" aria-current="page">Flagged for Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Flagged for Review</h1>
+      <p class="hero-sub">Transparent log of every repository audit irregularity, official-source conflict, and intentionally blank unverified field — each with a verification link.</p>
+    </div>
+  </section>
+
+  <main id="main-content" class="container main-content">
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>A. Repository Line-by-Line Audit Irregularities</h2>
+        <span class="badge badge-danger">5 Repo Findings</span>
+      </div>
+      <p class="lead">Every repository irregularity discovered during our line-by-line audit AND every official-source conflict or unverified field from live 2026-11-27 checks is logged here with source links for manual review. Per project instructions, flagged items are published transparently and do not block delivery.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Severity</th>
+              <th>Repo Location</th>
+              <th>Irregularity &amp; Evidence</th>
+              <th>Disposition</th>
+              <th>Verification Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td><code>REPO-01</code></td>
+            <td><span class="badge badge-danger">High</span></td>
+            <td><code>hotels.html &amp; questions.html (root repo audit)</code></td>
+            <td><strong>Calendar weekday errors for Feb 2027</strong><br><span class="muted">Root dashboard files misstated 2027 weekdays: Feb 15, 2027 was labeled &#x27;Sun Feb 15&#x27; when Feb 15, 2027 is actually Monday (Washington&#x27;s Birthday federal holiday). In questions.html line 99, text stated &#x27;Thu Feb 19 was cheapest ($374.25) vs Fri Feb 18 ($1,499.25)&#x27; — inverting the real calendar (Feb 18, 2027 is Thursday; Feb 19, 2027 is Friday).</span></td>
+            <td>Flagged (verified correct calendar used in session-3c7ffbdd dashboard)</td>
+            <td><a class="ext-link" href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" target="_blank" rel="noopener noreferrer">Verify Source</a></td>
+          </tr><tr>
+            <td><code>REPO-02</code></td>
+            <td><span class="badge badge-danger">High</span></td>
+            <td><code>activities.html (root repo pre-PR #20 audit)</code></td>
+            <td><strong>Broken / incorrect official URLs and missing verified rows</strong><br><span class="muted">Root activities.html originally contained zero verified rows and linked broken/incorrect domains: highroller.com (official is caesars.com/linq/things-to-do/attractions/high-roller), fremontexperience.com (official is fremontstreetexperience.com), vegasmonorail.com (official is lvmonorail.com), www.bellagio.mgmresorts.com (official is bellagio.mgmresorts.com), and generic blm.gov.</span></td>
+            <td>Flagged (all verified official URLs used in session-3c7ffbdd dashboard)</td>
+            <td><a class="ext-link" href="https://fremontstreetexperience.com/" target="_blank" rel="noopener noreferrer">Verify Source</a></td>
+          </tr><tr>
+            <td><code>REPO-03</code></td>
+            <td><span class="badge badge-danger">High</span></td>
+            <td><code>index.html, hotels.html, restaurants.html (root repo audit)</code></td>
+            <td><strong>Unverified &#x27;~15–20 min&#x27; transit claim to all 24 Michelin restaurants &amp; subway terminology</strong><br><span class="muted">Root narrative claimed &#x27;~15–20 min&#x27; access to all 24 Michelin restaurants without RTC bus schedule evidence. Las Vegas has no subway, and reaching Southwest Las Vegas (Anima by EDO, 9205 W Russell Rd) or S. Decatur (YEN Viet Kitchen) by public bus requires transfers exceeding 15–20 minutes.</span></td>
+            <td>Flagged (session-3c7ffbdd strictly separates 15 confirmed Strip/Arts District transit venues from 9 Chinatown/SW venues needing RTC check)</td>
+            <td><a class="ext-link" href="https://www.rtcsnv.com/ways-to-travel/fares-passes/" target="_blank" rel="noopener noreferrer">Verify Source</a></td>
+          </tr><tr>
+            <td><code>REPO-04</code></td>
+            <td><span class="badge badge-warn">Medium</span></td>
+            <td><code>suggestions.html &amp; index.html (root repo pre-PR #19/#20 audit)</code></td>
+            <td><strong>HTML markup defects (mismatched heading tag, wrong active nav link, missing table wrapper)</strong><br><span class="muted">suggestions.html contained a mismatched closing tag (`&lt;h2 class=&quot;section-title&quot;&gt;Reviewer decision log&lt;/h1&gt;`) and omitted `.table-wrap` on a wide table; pre-PR #19 index.html highlighted `restaurants.html` as the active nav item instead of `index.html`.</span></td>
+            <td>Flagged for root-site owner review (not edited by session-3c7ffbdd to respect parallel claims)</td>
+            <td><a class="ext-link" href="https://github.com/kanlerxz87-cyber/Vegas2/blob/main/suggestions.html" target="_blank" rel="noopener noreferrer">Verify Source</a></td>
+          </tr><tr>
+            <td><code>REPO-05</code></td>
+            <td><span class="badge badge-warn">Medium</span></td>
+            <td><code>.github/workflows/pages.yml vs GitHub Pages settings</code></td>
+            <td><strong>Competing dashboards &amp; failing Actions Pages workflow</strong><br><span class="muted">GitHub Pages API confirms the repo uses `build_type: legacy` serving `main /`, which succeeds (`pages-build-deployment`), while `.github/workflows/pages.yml` attempts an Actions Pages deploy from `docs/` and fails on push. Multiple session subsites also coexist across `/`, `docs/`, `field-notes/`, and `site/`.</span></td>
+            <td>Flagged for repo maintainer consolidation</td>
+            <td><a class="ext-link" href="https://github.com/kanlerxz87-cyber/Vegas2/actions" target="_blank" rel="noopener noreferrer">Verify Source</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>B. Official-Source Conflicts &amp; Unverified Fields Register</h2>
+        <span class="badge badge-warn">8 Data Flags</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Venue / Item</th>
+              <th>Conflict or Unverified Gap</th>
+              <th>Official Source Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td><code>DATA-01</code></td>
+            <td><span class="badge badge-warn">Restaurant Status</span></td>
+            <td><strong>Michael Mina (Bellagio)</strong></td>
+            <td><strong>Temporarily Closed &amp; 2027 weekly operating days unposted</strong><br><span class="muted">On 2026-11-27, the official Bellagio page displays &#x27;Temporarily Closed&#x27; alongside seasonal closure blocks (Nov 22–30, Dec 6–8, Dec 13–15, Dec 20–22, 2026). While the 10-course tasting price ($295++/pp = $590++ for 2) is published, 2027 weekly days/hours are unposted and left blank.</span></td>
+            <td><a class="ext-link" href="https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-02</code></td>
+            <td><span class="badge badge-warn">Michelin Distinction Conflict</span></td>
+            <td><strong>Joël Robuchon Instagram Bio vs 2026 MICHELIN Guide</strong></td>
+            <td><strong>Official IG bio still says &#x27;Michelin 3-Star&#x27; vs 2026 Two-Star award</strong><br><span class="muted">The restaurant&#x27;s Instagram account (@joelrobuchon.lasvegas) still lists &#x27;Michelin 3-Star&#x27; from the historic 2008/2009 Las Vegas Guide, whereas the official 2026 MICHELIN Guide Southwest (Aug 31, 2026) awarded Two Michelin Stars (★★).</span></td>
+            <td><a class="ext-link" href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-03</code></td>
+            <td><span class="badge badge-warn">Hotel Fee Conflict</span></td>
+            <td><strong>South Point Hotel, Casino &amp; Spa</strong></td>
+            <td><strong>SynXis resort fee ($29.20/day) conflicts with public page ($33/night)</strong><br><span class="muted">Live SynXis booking checkout for Feb 15–22, 2027 ($919 Premium King, taxes excluded) states the total includes a $29.20 daily resort fee, conflicting with South Point&#x27;s $33/night public resort-fee figure. Also lacks direct Monorail/Strip bus transit access.</span></td>
+            <td><a class="ext-link" href="https://be.synxis.com/?adult=2&amp;arrive=2027-02-15&amp;chain=6903&amp;child=0&amp;currency=USD&amp;depart=2027-02-22&amp;hotel=11548&amp;level=hotel&amp;locale=en-US&amp;rooms=1" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-04</code></td>
+            <td><span class="badge badge-warn">Park Fee Conflict</span></td>
+            <td><strong>Red Rock Canyon National Conservation Area</strong></td>
+            <td><strong>Archived BLM FAQ PDF ($15 + $2) conflicts with live Recreation.gov checkout ($20 + $2)</strong><br><span class="muted">BLM&#x27;s Wildhorse_NNCC_WhatToExpect.pdf still cites a $15 day-use vehicle fee + $2 reservation fee, while the live Recreation.gov timed-entry ticket page charges $20.00 Personal Vehicle + $2.00 nonrefundable reservation fee ($22.00 total). We report the live $22.00 checkout rate.</span></td>
+            <td><a class="ext-link" href="https://www.recreation.gov/timed-entry/10075177/ticket/10075178" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-05</code></td>
+            <td><span class="badge badge-warn">Hotel Tax Basis &amp; Invalid Property Code</span></td>
+            <td><strong>Caesars Room-List Quotes &amp; Harrah&#x27;s propCode</strong></td>
+            <td><strong>Pre-tax Caesars quotes vs all-in Resorts World checkout; `propCode=hlv` invalid</strong><br><span class="muted">Caesars live room-list pages (LINQ, Flamingo, Horseshoe, Paris, Caesars Palace) include daily resort fees ($50–$55) in the displayed nightly rate but exclude Clark County room taxes (~13.38%), whereas Resorts World Hilton ($2,200.15) includes both resort fee and all taxes. Additionally, `propCode=hlv` returned &#x27;property does not exist&#x27; on caesars.com so Harrah&#x27;s was excluded rather than guessed.</span></td>
+            <td><a class="ext-link" href="https://www.caesars.com/book/room-list?propCode=ilv&amp;checkin=02%2F15%2F2027&amp;checkout=02%2F22%2F2027&amp;adults=2&amp;children=0" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-06</code></td>
+            <td><span class="badge badge-warn">Unverified Restaurant Pricing &amp; Hours</span></td>
+            <td><strong>17 of 24 Michelin Restaurants without Static 2-Adult Menu Totals; 4 with Partial/Blank Weekly Hours</strong></td>
+            <td><strong>Menu totals omitted or behind interactive reservation widgets</strong><br><span class="muted">Only 7 restaurants publish exact fixed/tasting or official menu ranges on fetched official pages (Guy Savoy, China Poblano, Michael Mina, Stubborn Seed, Kabuto, Partage, Anima by EDO). The other 17 leave 2-adult cost blank rather than guessing. Weekly open days/hours are also incomplete or blank on static official pages for Restaurant Guy Savoy (open days hidden in widget), Michael Mina (temporarily closed), YEN Viet Kitchen (Skipli app), Kame Omakase (minimal hero page), and Sparrow + Wolf (homepage lacks regular weekly hours).</span></td>
+            <td><a class="ext-link" href="https://www.visitlasvegas.com/michelin-guide-restaurants/" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-07</code></td>
+            <td><span class="badge badge-warn">Unverified Social Links</span></td>
+            <td><strong>YouTube, TikTok, and Instagram Handles</strong></td>
+            <td><strong>Blank cells where official channels could not be independently verified</strong><br><span class="muted">Verified official handles are linked for Neon Museum (YT/TT/IG), Mob Museum (YT/IG), Bellagio/Fountains/Conservatory/Michael Mina (YT/IG), Caesars Palace/Guy Savoy (YT/IG), BLM Red Rock (YT/IG), USBR Hoover Dam (YT/IG), Sphere (TT), LV Monorail (IG), Joël Robuchon (IG), China Poblano (IG), Esther&#x27;s Kitchen (IG), Gymkhana (IG), Partage (IG), Sparrow + Wolf (IG), SoulBelly BBQ (IG), and Anima by EDO (IG). All remaining unverified cells are intentionally left blank.</span></td>
+            <td><a class="ext-link" href="https://neonmuseum.org/your-visit/" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr><tr>
+            <td><code>DATA-08</code></td>
+            <td><span class="badge badge-warn">1-Hour Travel Boundary &amp; Transit Coverage</span></td>
+            <td><strong>Chinatown/Southwest Restaurants &amp; Valley of Fire State Park</strong></td>
+            <td><strong>Door-to-door RTC bus times unverified for 9 off-Strip restaurants; Valley of Fire at ~50–60 min drive boundary</strong><br><span class="muted">Center-Strip hotels have verified Monorail/walk/Deuce access to 15 Michelin venues (13 Strip + 2 Arts District), while exact evening RTC bus transfer times to 6 Chinatown and 3 West/SW venues remain to be logged via RTC Trip Planner. Valley of Fire State Park sits ~50 miles northeast (~50–60 min drive; may exceed 60 min in I-15 traffic) and is car-only (Nevada State Parks warns against Uber/Lyft).</span></td>
+            <td><a class="ext-link" href="https://parks.nv.gov/parks/valley-of-fire" target="_blank" rel="noopener noreferrer">Official Source</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Session 3c7ffbdd Verification Standard:</strong> Every rate, schedule, Michelin distinction, and official URL was checked live against official trusted sources on 2026-11-27. Unverified values are intentionally left blank (<code>—</code>) and logged on <a href="flagged.html">Flagged for Review</a>.</p>
+      <p class="footer-links">
+        <a href="index.html">Overview</a> ·
+        <a href="hotels.html">Hotels</a> ·
+        <a href="restaurants.html">Michelin (24)</a> ·
+        <a href="activities.html">Activities</a> ·
+        <a href="suggestions.html">Suggestions</a> ·
+        <a href="questions.html">Q&amp;A</a> ·
+        <a href="flagged.html">Flagged for Review</a>
+      </p>
+    </div>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

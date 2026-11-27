@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suggestions &amp; Decision Proposals — Las Vegas 2027 Trip Dashboard (Session 3c7ffbdd)</title>
+  <meta name="description" content="Trip-decision optimizations, data improvements, and repository architecture suggestions queued for review before implementing.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-title" href="index.html">Las Vegas 2027 Planner</a>
+        <span class="brand-tag">Verified 2026-11-27 · 2 Adults · Feb 15–Mar 23, 2027</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html">Overview</a>
+          <a href="hotels.html">Hotels &amp; Dates</a>
+          <a href="restaurants.html">Michelin (24)</a>
+          <a href="activities.html">Activities</a>
+          <a href="suggestions.html" class="active" aria-current="page">Suggestions</a>
+          <a href="questions.html">Q&amp;A</a>
+          <a href="flagged.html">Flagged for Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Suggestions &amp; Decision Proposals</h1>
+      <p class="hero-sub">Trip-decision optimizations, data improvements, and repository architecture suggestions queued for review before implementing.</p>
+    </div>
+  </section>
+
+  <main id="main-content" class="container main-content">
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>Suggestions for Review Before Implementation</h2>
+        <span class="badge badge-info">6 Proposals</span>
+      </div>
+      <p class="lead">Actionable site, data-pipeline, and trip-planning improvements proposed for human review BEFORE implementation. None of these modify root repository pages owned by parallel sessions.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Priority</th>
+              <th>Category</th>
+              <th>Proposal &amp; Rationale</th>
+              <th>Recommended Action</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            <td><code>SUG-01</code></td>
+            <td><span class="badge badge-warn">High</span></td>
+            <td>Trip Decision — Booking Timing</td>
+            <td><strong>Lock a refundable Mon Feb 15 – Mon Feb 22, 2027 Center-Strip room before Dec 4, 2026</strong><br><span class="muted">Live 5-week quotes captured on 2026-11-27 prove Mon Feb 15 – Mon Feb 22, 2027 is 19%–54% cheaper than late Feb / March weeks (and avoids the Tue Mar 2 Caesars Palace sellout and March Madness surge). Active Cyber Sales (Wynn Cyber Exclusive ending Dec 4, 2026; Resorts World DBF26) also offer flexible cancellation windows.</span></td>
+            <td>Choose between The LINQ ($539 before tax) / Flamingo 2 Queens ($581 before tax) for budget + Monorail access, or Resorts World Hilton ($2,200.15 all-in) / Wynn Cyber Exclusive ($4,739 before tax + $300 credit) for modern luxury, and book a refundable rate before Dec 4, 2026.</td>
+            <td><a class="ext-link" href="https://www.caesars.com/book/room-list?propCode=flv&amp;checkin=02%2F15%2F2027&amp;checkout=02%2F22%2F2027&amp;adults=2&amp;children=0" target="_blank" rel="noopener noreferrer">Supporting Source</a></td>
+          </tr><tr>
+            <td><code>SUG-02</code></td>
+            <td><span class="badge badge-warn">High</span></td>
+            <td>Trip Decision — Dining Strategy</td>
+            <td><strong>Set calendar reminders for 90-day, 60-day, and 30-day Michelin reservation drops</strong><br><span class="muted">é by José Andrés opens reservations up to 3 months in advance (already open for Feb 15–22, 2027!), Visit Las Vegas notes starred venues typically drop tables 30–60 days ahead, and Kabuto opens 30 days ahead on Resy.</span></td>
+            <td>Check é by José Andrés immediately (9 seats/seating); set reminders for Dec 17, 2026 (60 days out) and Jan 16, 2027 (30 days out, 7:00 AM PT for Red Rock Canyon timed entry &amp; Resy drops for Kabuto).</td>
+            <td><a class="ext-link" href="https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html" target="_blank" rel="noopener noreferrer">Supporting Source</a></td>
+          </tr><tr>
+            <td><code>SUG-03</code></td>
+            <td><span class="badge badge-info">Medium</span></td>
+            <td>Trip Decision — Itinerary Clustering</td>
+            <td><strong>Avoid Bellagio Conservatory dark dates (Mar 7–12, 2027) and pair Chinatown / Arts District dining by cluster</strong><br><span class="muted">Bellagio Conservatory closes Mar 7–12, 2027 between Lunar New Year (ends Mar 6) and Spring (opens Mar 13). Grouping the 2 Arts District Bib/Recommended spots (Esther&#x27;s Kitchen + SoulBelly BBQ) with The Mob Museum / Neon Museum saves transit time and fares.</span></td>
+            <td>Plan one Downtown/Arts District day (Mob Museum + Esther&#x27;s Kitchen or SoulBelly BBQ + Neon Museum at dusk) and one Chinatown evening along Spring Mountain Rd (6 Michelin restaurants within ~1.5 miles).</td>
+            <td><a class="ext-link" href="https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html" target="_blank" rel="noopener noreferrer">Supporting Source</a></td>
+          </tr><tr>
+            <td><code>SUG-04</code></td>
+            <td><span class="badge badge-warn">High</span></td>
+            <td>Site &amp; Repo Architecture</td>
+            <td><strong>Consolidate competing dashboards and fix GitHub Pages workflow alignment</strong><br><span class="muted">The repository currently hosts multiple competing dashboards across root `/`, `docs/`, `docs/session-*`, `field-notes/`, and `site/`. GitHub Pages uses legacy deployment (`main /`), while `.github/workflows/pages.yml` tries to deploy `docs/` and fails on push.</span></td>
+            <td>After parallel sessions finish merging, designate one canonical data-driven site build, update `.github/workflows/pages.yml` (or disable it if keeping legacy `main /`), and link all archived session audits from one unified index.</td>
+            <td><a class="ext-link" href="https://github.com/kanlerxz87-cyber/Vegas2/tree/main/.github/workflows" target="_blank" rel="noopener noreferrer">Supporting Source</a></td>
+          </tr><tr>
+            <td><code>SUG-05</code></td>
+            <td><span class="badge badge-info">Medium</span></td>
+            <td>Data Completeness</td>
+            <td><strong>Add an interactive all-in tax calculator &amp; RTC Trip Planner transit matrix</strong><br><span class="muted">Caesars room-list pages display resort-fee-inclusive pre-tax totals while Resorts World displays all-in totals with room tax and resort fee tax. Likewise, exact door-to-door RTC bus times to Chinatown (Route 203) and Southwest (Anima by EDO) need official RTC schedule extraction.</span></td>
+            <td>Before booking, capture final checkout screenshots (with Clark County room tax) for each finalist hotel and log official RTC Trip Planner door-to-door weekday evening times from Harrah&#x27;s/LINQ and Flamingo.</td>
+            <td><a class="ext-link" href="https://www.rtcsnv.com/ways-to-travel/fares-passes/" target="_blank" rel="noopener noreferrer">Supporting Source</a></td>
+          </tr><tr>
+            <td><code>SUG-06</code></td>
+            <td><span class="badge badge-neutral">Low</span></td>
+            <td>UX Improvement</td>
+            <td><strong>Add printable 7-day itinerary &amp; CSV export buttons to the hotel and Michelin tables</strong><br><span class="muted">Couples comparing 24 restaurants and 8 hotels across dinner budgets and closed days (e.g., Joël Robuchon &amp; Partage closed Sun–Mon; L&#x27;Atelier &amp; Wing Lei closed Tue–Wed) benefit from exporting their shortlist.</span></td>
+            <td>Review whether to add a client-side CSV export and print stylesheet in the next iteration so selected restaurants and hotels can be shared offline.</td>
+            <td><a class="ext-link" href="https://www.visitlasvegas.com/michelin-guide-restaurants/" target="_blank" rel="noopener noreferrer">Supporting Source</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Session 3c7ffbdd Verification Standard:</strong> Every rate, schedule, Michelin distinction, and official URL was checked live against official trusted sources on 2026-11-27. Unverified values are intentionally left blank (<code>—</code>) and logged on <a href="flagged.html">Flagged for Review</a>.</p>
+      <p class="footer-links">
+        <a href="index.html">Overview</a> ·
+        <a href="hotels.html">Hotels</a> ·
+        <a href="restaurants.html">Michelin (24)</a> ·
+        <a href="activities.html">Activities</a> ·
+        <a href="suggestions.html">Suggestions</a> ·
+        <a href="questions.html">Q&amp;A</a> ·
+        <a href="flagged.html">Flagged for Review</a>
+      </p>
+    </div>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

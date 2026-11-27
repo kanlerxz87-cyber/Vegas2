@@ -1,0 +1,117 @@
+{
+  "verified_date": "2026-11-27",
+  "intro": "Every repository irregularity discovered during our line-by-line audit AND every official-source conflict or unverified field from live 2026-11-27 checks is logged here with source links for manual review. Per project instructions, flagged items are published transparently and do not block delivery.",
+  "repo_audit_irregularities": [
+    {
+      "id": "REPO-01",
+      "severity": "High",
+      "location": "hotels.html & questions.html (root repo audit)",
+      "issue": "Calendar weekday errors for Feb 2027",
+      "details": "Root dashboard files misstated 2027 weekdays: Feb 15, 2027 was labeled 'Sun Feb 15' when Feb 15, 2027 is actually Monday (Washington's Birthday federal holiday). In questions.html line 99, text stated 'Thu Feb 19 was cheapest ($374.25) vs Fri Feb 18 ($1,499.25)' — inverting the real calendar (Feb 18, 2027 is Thursday; Feb 19, 2027 is Friday).",
+      "source_url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "status": "Flagged (verified correct calendar used in session-3c7ffbdd dashboard)"
+    },
+    {
+      "id": "REPO-02",
+      "severity": "High",
+      "location": "activities.html (root repo pre-PR #20 audit)",
+      "issue": "Broken / incorrect official URLs and missing verified rows",
+      "details": "Root activities.html originally contained zero verified rows and linked broken/incorrect domains: highroller.com (official is caesars.com/linq/things-to-do/attractions/high-roller), fremontexperience.com (official is fremontstreetexperience.com), vegasmonorail.com (official is lvmonorail.com), www.bellagio.mgmresorts.com (official is bellagio.mgmresorts.com), and generic blm.gov.",
+      "source_url": "https://fremontstreetexperience.com/",
+      "status": "Flagged (all verified official URLs used in session-3c7ffbdd dashboard)"
+    },
+    {
+      "id": "REPO-03",
+      "severity": "High",
+      "location": "index.html, hotels.html, restaurants.html (root repo audit)",
+      "issue": "Unverified '~15–20 min' transit claim to all 24 Michelin restaurants & subway terminology",
+      "details": "Root narrative claimed '~15–20 min' access to all 24 Michelin restaurants without RTC bus schedule evidence. Las Vegas has no subway, and reaching Southwest Las Vegas (Anima by EDO, 9205 W Russell Rd) or S. Decatur (YEN Viet Kitchen) by public bus requires transfers exceeding 15–20 minutes.",
+      "source_url": "https://www.rtcsnv.com/ways-to-travel/fares-passes/",
+      "status": "Flagged (session-3c7ffbdd strictly separates 15 confirmed Strip/Arts District transit venues from 9 Chinatown/SW venues needing RTC check)"
+    },
+    {
+      "id": "REPO-04",
+      "severity": "Medium",
+      "location": "suggestions.html & index.html (root repo pre-PR #19/#20 audit)",
+      "issue": "HTML markup defects (mismatched heading tag, wrong active nav link, missing table wrapper)",
+      "details": "suggestions.html contained a mismatched closing tag (`<h2 class=\"section-title\">Reviewer decision log</h1>`) and omitted `.table-wrap` on a wide table; pre-PR #19 index.html highlighted `restaurants.html` as the active nav item instead of `index.html`.",
+      "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/blob/main/suggestions.html",
+      "status": "Flagged for root-site owner review (not edited by session-3c7ffbdd to respect parallel claims)"
+    },
+    {
+      "id": "REPO-05",
+      "severity": "Medium",
+      "location": ".github/workflows/pages.yml vs GitHub Pages settings",
+      "issue": "Competing dashboards & failing Actions Pages workflow",
+      "details": "GitHub Pages API confirms the repo uses `build_type: legacy` serving `main /`, which succeeds (`pages-build-deployment`), while `.github/workflows/pages.yml` attempts an Actions Pages deploy from `docs/` and fails on push. Multiple session subsites also coexist across `/`, `docs/`, `field-notes/`, and `site/`.",
+      "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/actions",
+      "status": "Flagged for repo maintainer consolidation"
+    }
+  ],
+  "official_source_conflicts_and_gaps": [
+    {
+      "id": "DATA-01",
+      "category": "Restaurant Status",
+      "item": "Michael Mina (Bellagio)",
+      "issue": "Temporarily Closed & 2027 weekly operating days unposted",
+      "details": "On 2026-11-27, the official Bellagio page displays 'Temporarily Closed' alongside seasonal closure blocks (Nov 22–30, Dec 6–8, Dec 13–15, Dec 20–22, 2026). While the 10-course tasting price ($295++/pp = $590++ for 2) is published, 2027 weekly days/hours are unposted and left blank.",
+      "source_url": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html"
+    },
+    {
+      "id": "DATA-02",
+      "category": "Michelin Distinction Conflict",
+      "item": "Joël Robuchon Instagram Bio vs 2026 MICHELIN Guide",
+      "issue": "Official IG bio still says 'Michelin 3-Star' vs 2026 Two-Star award",
+      "details": "The restaurant's Instagram account (@joelrobuchon.lasvegas) still lists 'Michelin 3-Star' from the historic 2008/2009 Las Vegas Guide, whereas the official 2026 MICHELIN Guide Southwest (Aug 31, 2026) awarded Two Michelin Stars (★★).",
+      "source_url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-reveals-first-ever-southwest-restaurant-selection-in-the-u-s"
+    },
+    {
+      "id": "DATA-03",
+      "category": "Hotel Fee Conflict",
+      "item": "South Point Hotel, Casino & Spa",
+      "issue": "SynXis resort fee ($29.20/day) conflicts with public page ($33/night)",
+      "details": "Live SynXis booking checkout for Feb 15–22, 2027 ($919 Premium King, taxes excluded) states the total includes a $29.20 daily resort fee, conflicting with South Point's $33/night public resort-fee figure. Also lacks direct Monorail/Strip bus transit access.",
+      "source_url": "https://be.synxis.com/?adult=2&arrive=2027-02-15&chain=6903&child=0&currency=USD&depart=2027-02-22&hotel=11548&level=hotel&locale=en-US&rooms=1"
+    },
+    {
+      "id": "DATA-04",
+      "category": "Park Fee Conflict",
+      "item": "Red Rock Canyon National Conservation Area",
+      "issue": "Archived BLM FAQ PDF ($15 + $2) conflicts with live Recreation.gov checkout ($20 + $2)",
+      "details": "BLM's Wildhorse_NNCC_WhatToExpect.pdf still cites a $15 day-use vehicle fee + $2 reservation fee, while the live Recreation.gov timed-entry ticket page charges $20.00 Personal Vehicle + $2.00 nonrefundable reservation fee ($22.00 total). We report the live $22.00 checkout rate.",
+      "source_url": "https://www.recreation.gov/timed-entry/10075177/ticket/10075178"
+    },
+    {
+      "id": "DATA-05",
+      "category": "Hotel Tax Basis & Invalid Property Code",
+      "item": "Caesars Room-List Quotes & Harrah's propCode",
+      "issue": "Pre-tax Caesars quotes vs all-in Resorts World checkout; `propCode=hlv` invalid",
+      "details": "Caesars live room-list pages (LINQ, Flamingo, Horseshoe, Paris, Caesars Palace) include daily resort fees ($50–$55) in the displayed nightly rate but exclude Clark County room taxes (~13.38%), whereas Resorts World Hilton ($2,200.15) includes both resort fee and all taxes. Additionally, `propCode=hlv` returned 'property does not exist' on caesars.com so Harrah's was excluded rather than guessed.",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=ilv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0"
+    },
+    {
+      "id": "DATA-06",
+      "category": "Unverified Restaurant Pricing & Hours",
+      "item": "17 of 24 Michelin Restaurants without Static 2-Adult Menu Totals; 4 with Partial/Blank Weekly Hours",
+      "issue": "Menu totals omitted or behind interactive reservation widgets",
+      "details": "Only 7 restaurants publish exact fixed/tasting or official menu ranges on fetched official pages (Guy Savoy, China Poblano, Michael Mina, Stubborn Seed, Kabuto, Partage, Anima by EDO). The other 17 leave 2-adult cost blank rather than guessing. Weekly open days/hours are also incomplete or blank on static official pages for Restaurant Guy Savoy (open days hidden in widget), Michael Mina (temporarily closed), YEN Viet Kitchen (Skipli app), Kame Omakase (minimal hero page), and Sparrow + Wolf (homepage lacks regular weekly hours).",
+      "source_url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    },
+    {
+      "id": "DATA-07",
+      "category": "Unverified Social Links",
+      "item": "YouTube, TikTok, and Instagram Handles",
+      "issue": "Blank cells where official channels could not be independently verified",
+      "details": "Verified official handles are linked for Neon Museum (YT/TT/IG), Mob Museum (YT/IG), Bellagio/Fountains/Conservatory/Michael Mina (YT/IG), Caesars Palace/Guy Savoy (YT/IG), BLM Red Rock (YT/IG), USBR Hoover Dam (YT/IG), Sphere (TT), LV Monorail (IG), Joël Robuchon (IG), China Poblano (IG), Esther's Kitchen (IG), Gymkhana (IG), Partage (IG), Sparrow + Wolf (IG), SoulBelly BBQ (IG), and Anima by EDO (IG). All remaining unverified cells are intentionally left blank.",
+      "source_url": "https://neonmuseum.org/your-visit/"
+    },
+    {
+      "id": "DATA-08",
+      "category": "1-Hour Travel Boundary & Transit Coverage",
+      "item": "Chinatown/Southwest Restaurants & Valley of Fire State Park",
+      "issue": "Door-to-door RTC bus times unverified for 9 off-Strip restaurants; Valley of Fire at ~50–60 min drive boundary",
+      "details": "Center-Strip hotels have verified Monorail/walk/Deuce access to 15 Michelin venues (13 Strip + 2 Arts District), while exact evening RTC bus transfer times to 6 Chinatown and 3 West/SW venues remain to be logged via RTC Trip Planner. Valley of Fire State Park sits ~50 miles northeast (~50–60 min drive; may exceed 60 min in I-15 traffic) and is car-only (Nevada State Parks warns against Uber/Lyft).",
+      "source_url": "https://parks.nv.gov/parks/valley-of-fire"
+    }
+  ]
+}
