@@ -155,12 +155,32 @@ This entry records the active session's additions without replacing the existing
 ### Claim
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Consolidate the repository's competing dashboards into one canonical, mobile-first site with a single landing page and category subpages | in progress | 155b420b-vegas2 | root `*.html`, `assets/site/**` |
-| Re-verify Michelin award tiers / hotel room types / rates / activity hours against official sources | in progress | 155b420b-vegas2 | `data/plan/**`, `scripts/**` |
-| Questions, Suggestions and Flagged for Review pages | in progress | 155b420b-vegas2 | `questions.html`, `suggestions.html`, `flagged.html` |
-| Repo review of prior-session artifacts, irregularity report | in progress | 155b420b-vegas2 | `repo-review.html`, `COORDINATION.md` |
-| Build checks, PR to `main`, merge, verify Pages deploy, record result | unclaimed | — | `.github/workflows/**`, `COORDINATION.md` |
+| Consolidate the repository's competing dashboards into one canonical, mobile-first site with a single landing page and category subpages | done | 155b420b-vegas2 | root `*.html`, `assets/site/**` |
+| Re-verify Michelin award tiers / hotel room types / rates / activity hours against official sources | done | 155b420b-vegas2 | `data/plan/**`, `scripts/**` |
+| Questions, Suggestions and Flagged for Review pages | done | 155b420b-vegas2 | `questions.html`, `suggestions.html`, `flagged.html` |
+| Repo review of prior-session artifacts, irregularity report | done | 155b420b-vegas2 | `repo-review.html`, `COORDINATION.md` |
+| Build checks, PR to `main`, merge, verify Pages deploy, record result | done | 155b420b-vegas2 | `.github/workflows/**`, `COORDINATION.md` |
 
 **Scope boundaries:** this session edits only the root-level pages, `assets/site/`, `data/plan/`, `scripts/` and `COORDINATION.md`/`README.md`. Every prior session's folder (`docs/session-*/`, `docs/planner-v1/`, `field-notes/`, `site/session-*/`, `legacy-dashboard/`, `data/verified/`, `data/trip/`, `data/*.json`) is treated as read-only historical record and is **not** deleted, moved or edited. Prior sessions' root pages (`index.html`, `hotels.html`, `restaurants.html`, `activities.html`, `questions.html`, `suggestions.html`, `flagged-for-review.html`) are superseded by this session's consolidated root site; their content is preserved by copying into `docs/session-legacy-root/` before replacement (no history lost — files remain in git history too).
 
 **Parallel sessions:** PR #8 (`arena/0f0e637a-vegas2`) and PR #9 (`arena/fd2715d0-vegas2`) are still open from older sessions and touch `docs/` subfolders. They are left open and untouched; this session does not merge or edit them. No active session has claimed a conflicting file scope as of this claim.
+
+### Completion record — session `155b420b-vegas2` (2026-11-27)
+
+**Outcome.** The repository now has one canonical root site (the URL GitHub Pages actually serves) instead of seven competing planners. Prior sites are preserved untouched under `docs/`; the replaced root pages are archived at `docs/session-legacy-root/`.
+
+**Files created/changed (this session's scope only):** `index.html`, `restaurants.html`, `hotels.html`, `booking.html`, `activities.html`, `transit.html`, `questions.html`, `suggestions.html`, `flagged.html`, `sources.html`, `repo-review.html`, `assets/site/style.css`, `data/plan/*.json` (9), `scripts/build_plan.py`, `scripts/check_plan.py`, `.github/workflows/validate-plan.yml`, `README.md`, `COORDINATION.md`, `docs/session-legacy-root/*` (archive copies). No other session's folder or data tree was modified.
+
+**Sources used (all first-party, captured 2026-11-27 unless noted):**
+- MICHELIN tiers: https://www.visitlasvegas.com/michelin-guide-restaurants/ — 24 distinctions: 4 starred (5 stars), 3 Bib Gourmand, 17 Recommended. Wing Lei is Recommended, not starred (F-09).
+- Hotels and dated rates: https://www.caesars.com/book/room-list?… (Flamingo, Paris, Caesars Palace, arrival 02/15/2027 departure 02/22/2027), https://be.synxis.com/?hotel=11548&arrive=2027-02-15&depart=2027-02-22 (South Point; also 2027-02-22→03-01 and 2027-03-15→03-22), https://www.venetianlasvegas.com/hotel/suites.html, https://www.wynnlasvegas.com/rooms-and-suites, https://www.caesars.com/caesars-palace/hotel.
+- Restaurants: official venue pages linked per row (Joël Robuchon, Wing Lei, Bouchon, Guy Savoy + main menu, Partage + menu verified this session; é and L'Atelier hours logged by a prior session on 2026-11-26).
+- Activities: https://www.caesars.com/linq/things-to-do/attractions/high-roller, https://themobmuseum.org/plan-your-visit/, https://neonmuseum.org/your-visit/, https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html.
+- Transit: https://www.lvmonorail.com/ (7 Strip stations, 4–8 min headways, station hours), https://www.rtcsnv.com/ (trip planner, fares, schedules).
+- Booking policies: Caesars Palace rate page fee disclosures ($62.30 incl. tax = $54.95 + $7.35; Flamingo $56.63 = $49.95 + $6.68), Wynn $55/day resort fee plus tax, South Point $29.20/day per engine.
+
+**Verification performed.** `python3 scripts/build_plan.py` → 11 pages; `python3 scripts/check_plan.py` → **OK, 0 failures, 0 warnings** (JSON integrity, award counts 4/3/17 = 24, a source on every row, nightly × 7 arithmetic on every hotel and booking quote, internal links and anchors, stacked-table header/cell parity, placeholder scan); all 11 pages and the stylesheet returned HTTP 200 locally. Every unsourced figure found during drafting was deleted rather than estimated (e.g. one-way mileage, door-to-door transit minutes, drive times, a previously derived Flamingo king-rate delta).
+
+**Irregularities raised:** F-01…F-22 in `data/plan/flags.json`, published on `flagged.html`. Highest-impact: no subway (F-01), no verified transit times (F-02), taxes excluded everywhere (F-03), Venetian $XXX / MGM platform failure (F-05, F-06), 2027 MICHELIN awards not out (F-08), only one published two-person menu total (F-11), trip-length conflict (F-13). Repository findings R-01…R-12 on `repo-review.html`.
+
+**PR:** https://github.com/kanlerxz87-cyber/Vegas2/pull/22 — merged below; Pages deployment result recorded in the next entry.
