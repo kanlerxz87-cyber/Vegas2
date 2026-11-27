@@ -161,11 +161,11 @@ Tasks claimed:
 |---|------|--------|-------|------------|
 | C1 | Claim + coordination record | done | c88d116c | COORDINATION.md |
 | C2 | Fresh official-source re-verification (Michelin, LVCVA, OPM, RTC/Monorail, hotels, restaurants, activities) | done | c88d116c | data/session-c88d116c/verification.json |
-| C3 | Fix root hotels ranking (remove unverified 1-hr assertion; on-campus verified + 1-hr flagged; 3n+7n totals) | in progress | c88d116c | hotels.html, booking.html |
-| C4 | Fix root restaurants (total for 2 adults column; hours reconciliation; official-only social) | unclaimed | c88d116c | restaurants.html |
-| C5 | Fix root activities (integrate verified Hoover/Red Rock/Valley of Fire/Neon + flagged candidates) | unclaimed | c88d116c | activities.html |
-| C6 | Executive summary + questions + suggestions + flagged + sources pages | unclaimed | c88d116c | index.html, questions.html, suggestions.html, flagged-for-review.html, sources.html |
-| C7 | Root-site link/build check + mobile check | unclaimed | c88d116c | scripts/check_root_site.py |
-| C8 | PR to main, merge, Pages confirm, record result | unclaimed | c88d116c | GitHub PR |
+| C3 | Fix root hotels ranking (remove unverified 1-hr assertion; on-campus verified + 1-hr flagged; 3n+7n totals) | done | c88d116c | hotels.html, booking.html |
+| C4 | Fix root restaurants (total for 2 adults column; hours reconciliation; official-only social) | done | c88d116c | restaurants.html |
+| C5 | Fix root activities (integrate verified Hoover/Red Rock/Valley of Fire/Neon + flagged candidates) | done | c88d116c | activities.html |
+| C6 | Executive summary + questions + suggestions + flagged + sources pages | done | c88d116c | index.html, questions.html, suggestions.html, flagged-for-review.html, sources.html |
+| C7 | Root-site link/build check + mobile check | done | c88d116c | scripts/check_root_site.py |
+| C8 | PR to main, merge, Pages confirm, record result | in progress | c88d116c | GitHub PR |
 
 Rule: every table row has an official source link; unverifiable values stay blank + flagged unverified; nothing inferred. No other session is active on this branch.
