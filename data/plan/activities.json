@@ -21,10 +21,10 @@
     {
       "name": "High Roller Observation Wheel",
       "area": "Center Strip — The LINQ",
-      "hours": "Tickets: daytime daily 12:00–5:00 PM; anytime daily 12:00 PM–close. Page banner showed 'Opens 12:30 PM'. One rotation ≈30 minutes.",
+      "hours": "Tickets: daytime daily 12:00–5:00 PM; anytime daily 12:00 PM–close. Page banner showed 'Opens 12:30 PM'. One rotation ≈30 minutes. Operating grid: Sun 12:30 PM–1:30 AM; Mon–Thu 12:30–11:30 PM; Fri–Sat 12:30 PM–1:30 AM.",
       "hoursStatus": "v",
       "price2": "$47.00 daytime / $69.50 anytime / $120.00 Happy Half Hour",
-      "priceNote": "Adult daytime $23.50pp, anytime $34.75pp, Happy Half Hour (21+) $60pp, plus taxes and fees. Two adults = $47 / $69.50 / $120 before taxes and fees.",
+      "priceNote": "Adult daytime $23.50pp, anytime $34.75pp, Happy Half Hour (21+) $60pp, plus taxes and fees. Two adults = $47 / $69.50 / $120 before taxes and fees. Youth $8.50 daytime / $17.50 anytime; children 3 and under free.",
       "transit": "Center Strip at The LINQ. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
@@ -39,7 +39,7 @@
         }
       ],
       "socialStatus": "v",
-      "note": "550 ft, largest observation wheel in North America, 28 cabins. Caesars Rewards Diamond/Seven Stars ride free; Platinum/Gold buy-one-get-one (limit 2/month). Caesars Rewards Gold and Platinum members can buy one ticket and get one free (limit 2 tickets per month) — a genuine two-for-one for a couple. Seniors 65+ get $5 off Sun–Thu 12–5 PM at the box office. Individual outside beverages are allowed; glass, coolers and cases are not.",
+      "note": "550 ft, largest observation wheel in North America, 28 cabins. Caesars Rewards Diamond/Seven Stars ride free; Platinum/Gold buy-one-get-one (limit 2/month). Warning: highroller.com is NOT this attraction (served unrelated content on 2026-11-27) — book only via the official Caesars page. Caesars Rewards Gold and Platinum members can buy one ticket and get one free (limit 2 tickets per month) — a genuine two-for-one for a couple. Seniors 65+ get $5 off Sun–Thu 12–5 PM at the box office. Individual outside beverages are allowed; glass, coolers and cases are not.",
       "flagIds": []
     },
     {
@@ -65,7 +65,7 @@
       "hours": "SEPT–MAY: 3:00 PM–11:00 PM daily, last entry 10:00 PM — this is the schedule for Feb/Mar 2027. JUN–AUG: 8:00 PM–midnight, last entry 11:00 PM. Box office closes one hour before posted closing.",
       "hoursStatus": "v",
       "price2": "",
-      "priceNote": "Ticket price not captured; the official site sells timed entry and notes that from Jan 1, 2027 arriving outside your slot may cost extra.",
+      "priceNote": "Ticket price not captured; the official site sells timed entry and notes that from Jan 1, 2027 arriving outside your slot may cost extra. 2027 admission was listed 'From $21' on the official site (2026-11-27); the exact per-person figure for trip dates was not confirmed, so the total stays blank.",
       "transit": "Downtown, 770 Las Vegas Blvd N. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://neonmuseum.org/your-visit/",
@@ -92,19 +92,17 @@
     {
       "name": "Fremont Street Experience",
       "area": "Downtown",
-      "hours": "",
-      "hoursStatus": "u",
-      "price2": "",
-      "priceNote": "",
+      "hours": "Viva Vision canopy shows FREE at the top of every hour, 6 PM–2 AM daily.",
+      "hoursStatus": "v",
+      "price2": "Free",
+      "priceNote": "Viva Vision light shows are free; no reservation. SlotZilla zipline is paid (price not extracted).",
       "transit": "Downtown pedestrian mall. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.vegasexperience.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Free-to-enter entertainment district; show schedules change nightly and were not captured.",
-      "flagIds": [
-        "F-16"
-      ]
+      "note": "Free-to-enter district. Viva Vision: 16.4M pixels, 1,375 × 90 ft canopy, 90 ft above the mall. Live music on 3 stages; SlotZilla zipline (Zip-Zilla seated / Super-Hero Zoom) paid.",
+      "flagIds": []
     },
     {
       "name": "Sphere",
@@ -118,7 +116,7 @@
       "official": "https://www.thespherevegas.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Programme for Feb 2027 was not published/retrieved; check the official calendar before planning a day around it.",
+      "note": "Programme for Feb 2027 was not published/retrieved; check the official calendar before planning a day around it. Show runs (official shows page, 2026-11-27): Wizard of Oz on sale now; Eagles ended Jan 23, 2027 and Backstreet Boys ended Jan 2, 2027 — both BEFORE the trip window; Metallica Jan 28–Mar 13, 2027 overlaps the window but February dates were not confirmed. Venue is cashless, mobile tickets via Ticketmaster; ticket prices not extracted.",
       "flagIds": [
         "F-16"
       ]
@@ -223,6 +221,53 @@
       ],
       "alsoOfficial": [
         "https://parks.nv.gov/news/temporary-closure-of-the-west-entrance-at-valley-of-fire"
+      ]
+    },
+    {
+      "name": "Bellagio Fountains",
+      "area": "Center Strip — Bellagio",
+      "hours": "Mon–Fri: every 30 min 3:00–7:30 PM, then every 15 min 8:00 PM–midnight. Sat/Sun/holidays: every 30 min 12:00–7:30 PM, then every 15 min 8:00 PM–midnight.",
+      "hoursStatus": "v",
+      "price2": "Free",
+      "priceNote": "Free outdoor show; no reservation.",
+      "transit": "Center Strip at Bellagio. No transit time retrieved.",
+      "transitStatus": "u",
+      "official": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+      "social": [],
+      "socialStatus": "u",
+      "note": "1,000+ fountains; water to 460 ft; spans 1,000+ ft. Outdoor show — weather cancellations possible.",
+      "flagIds": []
+    },
+    {
+      "name": "Shark Reef Aquarium (Mandalay Bay)",
+      "area": "South Strip — Mandalay Bay",
+      "hours": "Daily 10:00 AM–8:00 PM; last admission 7:00 PM. Guided tours Mon–Sat 3:00 PM; Sun 1:00/2:00/3:00 PM.",
+      "hoursStatus": "v",
+      "price2": "$58.00 timed entry / $72.00 anytime",
+      "priceNote": "Timed entry: Adult $29, Seniors (65+) $27, Children (5–12) $24, 4 and under free. Anytime: Adult $36, Seniors $34, Children $31. Two adults = $58 timed / $72 anytime. Includes Undersea Explorer VR (ages 5+). Timed entry covers a one-hour window — reserve ahead, peak times sell out.",
+      "transit": "South Strip at Mandalay Bay. No transit time retrieved.",
+      "transitStatus": "u",
+      "official": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
+      "social": [],
+      "socialStatus": "u",
+      "note": "Anytime tickets valid any time on date of entry (limited quantity). Nevada-resident $3 discount at the box office with NV ID; aquarium may close early for private events.",
+      "flagIds": []
+    },
+    {
+      "name": "KÀ by Cirque du Soleil (MGM Grand)",
+      "area": "Center Strip — MGM Grand",
+      "hours": "",
+      "hoursStatus": "u",
+      "price2": "",
+      "priceNote": "Ticket prices not extracted — left blank.",
+      "transit": "Center Strip at MGM Grand. No transit time retrieved.",
+      "transitStatus": "u",
+      "official": "https://www.cirquedusoleil.com/ka",
+      "social": [],
+      "socialStatus": "u",
+      "note": "Epic story of imperial twins; Wushu, Chinese Opera, Capoeira, Wheel of Death (official Cirque page). Showtimes and prices not captured.",
+      "flagIds": [
+        "F-16"
       ]
     },
     {

@@ -793,6 +793,23 @@ def repo_review():
             "status": "resolved",
         },
         {
+            "id": "R-17", "severity": "medium",
+            "finding": "check_root_site.py does not match the canonical builder's markup and fails on main",
+            "evidence": ("scripts/check_root_site.py (added by session c88d116c, PR #23) reports exactly 26 "
+                         "failures on origin/main @ c8205b2 and the identical 26 failure labels on this "
+                         "branch after the fieldwork merge \u2014 verified by diffing the failure sets from a "
+                         "clean git archive of main. It expects flagged-for-review.html (the canonical page "
+                         "is flagged.html), a 'badge-unverified' CSS class and a footer disclaimer string "
+                         "that scripts/build_plan.py does not emit, and it rejects kameomakase.com, which "
+                         "is an official restaurant domain present in the canonical data. It is not "
+                         "referenced by any workflow."),
+            "action": ("Not fixed here: the script belongs to session c88d116c. Requested change: align its "
+                       "page list, badge class and disclaimer assertions with build_plan.py output, or "
+                       "retire it in favour of scripts/check_plan.py, which is the gate wired into CI and "
+                       "passes with 0 failures. No regression was introduced by this pass."),
+            "status": "needs review",
+        },
+        {
             "id": "R-16", "severity": "medium",
             "finding": "A prior session's validator fails on main because its official-domain allowlist is too narrow",
             "evidence": ("scripts/check_site.py reports 26 failures on origin/main @ 900cb90, independent of "
@@ -876,7 +893,6 @@ def questions_suggestions():
     si = s.setdefault("siteImprovements", [])
     adds = [
         {
-            "id": "S-13",
             "title": "Put the verified booking deadline at the top of the landing page",
             "why": ("The most valuable fact found is time-limited: Wynn's $677 Cyber rate must be booked by "
                     "December 4, 2026, and it saves $1,092 over 7 nights versus the Flexible rate. Burying it "
@@ -885,7 +901,6 @@ def questions_suggestions():
             "needs": "Nothing further \u2014 IMPLEMENTED in this pass as a dated banner driven by booking.bookTiming.deadlines.",
         },
         {
-            "id": "S-14",
             "title": "Show a per-night date strip instead of only a single stay average",
             "why": ("Resorts World's official February calendar reveals a 16% swing between adjacent 7-night "
                     "windows ($1,942 for Feb 15\u201322 vs $1,632 for Feb 18\u201325). A single average hides that."),
@@ -893,7 +908,6 @@ def questions_suggestions():
             "needs": "Nothing further \u2014 IMPLEMENTED in this pass on Prices & dates. Fee basis still unresolved (F-26).",
         },
         {
-            "id": "S-15",
             "title": "Cite the primary MICHELIN press release, not only the tourism-board page",
             "why": ("MGM's own site shows a star badge Bardot Brasserie does not hold (F-24) and review blogs "
                     "invent stars for Mizumi and Sage. A first-party primary source with street addresses "
@@ -902,7 +916,6 @@ def questions_suggestions():
             "needs": "Nothing further \u2014 IMPLEMENTED in this pass; the press release is now recorded as guide.primarySource.",
         },
         {
-            "id": "S-16",
             "title": "Add a 'closed on your dates' filter driven by the verified calendars",
             "why": ("Three verified facts silently break itineraries: Bellagio Conservatory is dark Mar 7\u201312; "
                     "Jo\u00ebl Robuchon is closed Mon/Sun while L'Atelier is closed Tue/Wed; Red Rock needs a timed "
@@ -911,7 +924,6 @@ def questions_suggestions():
             "needs": "A chosen check-in date from the reader, plus verified daily hours for the remaining restaurants.",
         },
         {
-            "id": "S-17",
             "title": "Stamp a capture timestamp on every dynamic price cell",
             "why": ("Caesars Palace moved from $226 to $214 per night in one day (F-23). Without a per-cell "
                     "timestamp a reader cannot tell a stale figure from a fresh one."),
@@ -919,7 +931,6 @@ def questions_suggestions():
             "needs": "A re-verification run that writes capture dates per cell rather than one page-level date.",
         },
         {
-            "id": "S-18",
             "title": "Reconcile GitHub Pages source with the Pages workflow",
             "why": ("Pages serves the repository ROOT (legacy source main '/'), but pages.yml uploads the docs/ "
                     "folder. Prior-session notes therefore point at wrong URLs, which wastes review time (R-15)."),
@@ -927,9 +938,17 @@ def questions_suggestions():
             "needs": "Owner decision: switch Pages to GitHub Actions, or retire the misleading workflow. Shared infrastructure \u2014 not changed in this pass.",
         },
     ]
+    # Allocate the next free S-xx so a parallel session's additions can never collide.
+    used = {x.get("id") for x in si}
+    n = 1
     for a in adds:
-        if not any(x.get("title") == a["title"] for x in si):
-            si.append(a)
+        if any(x.get("title") == a["title"] for x in si):
+            continue
+        while f"S-{n:02d}" in used:
+            n += 1
+        a["id"] = f"S-{n:02d}"
+        used.add(a["id"])
+        si.append(a)
     save("suggestions", s)
 
 

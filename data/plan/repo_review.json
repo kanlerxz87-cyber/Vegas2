@@ -160,6 +160,14 @@
       "evidence": "scripts/check_site.py reports 26 failures on origin/main @ 900cb90, independent of this session's changes (reproduced from a clean git archive of main). The failures are of two kinds: (a) genuinely official domains rejected by the allowlist, e.g. venetianlasvegas.com and rtcws.rtcsnv.com; (b) insecure http:// social links such as http://instagram.com/mypubliclands. Its own CI job is not gating main.",
       "action": "Not fixed here: data/verified/ and scripts/check_site.py belong to session a52047d7 and are outside this session's additive scope. Requested change: add the official domains to the allowlist and upgrade those social links to https. The canonical root site is gated separately by scripts/check_plan.py, which passes with 0 failures.",
       "status": "needs review"
+    },
+    {
+      "id": "R-17",
+      "severity": "medium",
+      "finding": "check_root_site.py does not match the canonical builder's markup and fails on main",
+      "evidence": "scripts/check_root_site.py (added by session c88d116c, PR #23) reports exactly 26 failures on origin/main @ c8205b2 and the identical 26 failure labels on this branch after the fieldwork merge — verified by diffing the failure sets from a clean git archive of main. It expects flagged-for-review.html (the canonical page is flagged.html), a 'badge-unverified' CSS class and a footer disclaimer string that scripts/build_plan.py does not emit, and it rejects kameomakase.com, which is an official restaurant domain present in the canonical data. It is not referenced by any workflow.",
+      "action": "Not fixed here: the script belongs to session c88d116c. Requested change: align its page list, badge class and disclaimer assertions with build_plan.py output, or retire it in favour of scripts/check_plan.py, which is the gate wired into CI and passes with 0 failures. No regression was introduced by this pass.",
+      "status": "needs review"
     }
   ]
 }

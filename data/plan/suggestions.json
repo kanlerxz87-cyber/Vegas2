@@ -137,51 +137,59 @@
     },
     {
       "id": "S-13",
+      "title": "Reconcile the 24-restaurant list membership (Gimme Sum Dim Sum vs Ping Pang Pong)",
+      "why": "A parallel session (c88d116c) verified hours for Gimme Sum Dim Sum (Wed–Mon 9 AM–9 PM, Tue closed), which is not among the canonical 24; the off-Strip Chinese slot is held by Ping Pang Pong (Gold Coast). One of the two lists disagrees with the official 2026 MICHELIN selection.",
+      "effort": "low",
+      "impact": "medium",
+      "needs": "Side-by-side check of the official 2026 MICHELIN Las Vegas selection against the canonical 24 names; add or swap the row if the guide lists Gimme Sum Dim Sum."
+    },
+    {
       "title": "Put the verified booking deadline at the top of the landing page",
       "why": "The most valuable fact found is time-limited: Wynn's $677 Cyber rate must be booked by December 4, 2026, and it saves $1,092 over 7 nights versus the Flexible rate. Burying it below eleven hotel rows risks the reader missing it entirely.",
       "effort": "small",
       "impact": "high",
-      "needs": "Nothing further — IMPLEMENTED in this pass as a dated banner driven by booking.bookTiming.deadlines."
+      "needs": "Nothing further — IMPLEMENTED in this pass as a dated banner driven by booking.bookTiming.deadlines.",
+      "id": "S-14"
     },
     {
-      "id": "S-14",
       "title": "Show a per-night date strip instead of only a single stay average",
       "why": "Resorts World's official February calendar reveals a 16% swing between adjacent 7-night windows ($1,942 for Feb 15–22 vs $1,632 for Feb 18–25). A single average hides that.",
       "effort": "small",
       "impact": "high",
-      "needs": "Nothing further — IMPLEMENTED in this pass on Prices & dates. Fee basis still unresolved (F-26)."
+      "needs": "Nothing further — IMPLEMENTED in this pass on Prices & dates. Fee basis still unresolved (F-26).",
+      "id": "S-15"
     },
     {
-      "id": "S-15",
       "title": "Cite the primary MICHELIN press release, not only the tourism-board page",
       "why": "MGM's own site shows a star badge Bardot Brasserie does not hold (F-24) and review blogs invent stars for Mizumi and Sage. A first-party primary source with street addresses settles tier disputes and proves Monte is in Utah, not Las Vegas.",
       "effort": "small",
       "impact": "medium",
-      "needs": "Nothing further — IMPLEMENTED in this pass; the press release is now recorded as guide.primarySource."
+      "needs": "Nothing further — IMPLEMENTED in this pass; the press release is now recorded as guide.primarySource.",
+      "id": "S-16"
     },
     {
-      "id": "S-16",
       "title": "Add a 'closed on your dates' filter driven by the verified calendars",
       "why": "Three verified facts silently break itineraries: Bellagio Conservatory is dark Mar 7–12; Joël Robuchon is closed Mon/Sun while L'Atelier is closed Tue/Wed; Red Rock needs a timed reservation on every day of the window.",
       "effort": "medium",
       "impact": "high",
-      "needs": "A chosen check-in date from the reader, plus verified daily hours for the remaining restaurants."
+      "needs": "A chosen check-in date from the reader, plus verified daily hours for the remaining restaurants.",
+      "id": "S-17"
     },
     {
-      "id": "S-17",
       "title": "Stamp a capture timestamp on every dynamic price cell",
       "why": "Caesars Palace moved from $226 to $214 per night in one day (F-23). Without a per-cell timestamp a reader cannot tell a stale figure from a fresh one.",
       "effort": "medium",
       "impact": "medium",
-      "needs": "A re-verification run that writes capture dates per cell rather than one page-level date."
+      "needs": "A re-verification run that writes capture dates per cell rather than one page-level date.",
+      "id": "S-18"
     },
     {
-      "id": "S-18",
       "title": "Reconcile GitHub Pages source with the Pages workflow",
       "why": "Pages serves the repository ROOT (legacy source main '/'), but pages.yml uploads the docs/ folder. Prior-session notes therefore point at wrong URLs, which wastes review time (R-15).",
       "effort": "small",
       "impact": "medium",
-      "needs": "Owner decision: switch Pages to GitHub Actions, or retire the misleading workflow. Shared infrastructure — not changed in this pass."
+      "needs": "Owner decision: switch Pages to GitHub Actions, or retire the misleading workflow. Shared infrastructure — not changed in this pass.",
+      "id": "S-19"
     }
   ]
 }

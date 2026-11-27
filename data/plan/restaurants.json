@@ -42,8 +42,17 @@
       "price2": "",
       "priceNote": "Per-person tasting price not captured.",
       "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @ebyjoseandres",
+          "url": "https://www.instagram.com/ebyjoseandres/"
+        },
+        {
+          "label": "X @ebyjoseandres",
+          "url": "https://x.com/ebyjoseandres"
+        }
+      ],
+      "socialStatus": "p",
       "note": "Only 9 seats at a chef's counter inside Jaleo, third floor of The Cosmopolitan. Tickets are released THREE MONTHS in advance, with a waitlist — for a Feb 15–18 2027 stay that window is already open. Phone +1 702-698-7950, reserve@ebyjoseandres.com. No ticket price is published on the official site, so cost for two stays blank.",
       "flagIds": [
         "F-10"
@@ -102,10 +111,10 @@
       "cuisine": "Chinese / Mexican",
       "area": "The Strip",
       "venue": "The Cosmopolitan",
-      "hours": "Mon–Thu 11:00 AM–10:00 PM; Fri 11:00 AM–10:30 PM; Sat 10:00 AM–10:30 PM; Sun 10:00 AM–10:00 PM.",
+      "hours": "Sun–Thu 11 AM–10 PM; Fri–Sat 11 AM–11 PM",
       "hoursStatus": "v",
-      "price2": "",
-      "priceNote": "A prior session logged a $60/person dining anchor; the current official page did not restate it.",
+      "price2": "Menu: tacos ~$17–18, ramen/pho ~$21–22, larger plates higher",
+      "priceNote": "Price-for-two total not published — illustrative menu ranges from the official menu.",
       "official": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html",
       "social": [],
       "socialStatus": "u",
@@ -121,8 +130,8 @@
       "cuisine": "Italian",
       "area": "Downtown (Arts District)",
       "venue": "Downtown",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Tue–Sun; full hours grid not captured",
+      "hoursStatus": "p",
       "price2": "",
       "priceNote": "",
       "official": "https://www.estherslv.com/",
@@ -406,14 +415,14 @@
       "cuisine": "New American",
       "area": "Chinatown",
       "venue": "Chinatown",
-      "hours": "",
-      "hoursStatus": "u",
-      "price2": "",
-      "priceNote": "",
+      "hours": "Mon–Wed & Fri–Sun 5–10 PM; pasta tasting Tue 5–10 PM; Closed Thu",
+      "hoursStatus": "v",
+      "price2": "Menu: starters ~$18–24, handmade pastas ~$24–32, mains ~$42–68",
+      "priceNote": "Price-for-two total not published — illustrative menu ranges from the official menu.",
       "official": "https://www.sparrowandwolflv.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Recommended (listed). Hours differ between its own site and the MICHELIN listing per a prior session (F-10).",
+      "note": "Recommended (listed). Hours differ between its own site and the MICHELIN listing per a prior session (F-10). Tue evenings are a separate pasta tasting menu; Thu closed (official site, session c88d116c 2026-11-27).",
       "flagIds": [
         "F-10"
       ]
@@ -424,10 +433,10 @@
       "cuisine": "Contemporary",
       "area": "The Strip",
       "venue": "Resorts World",
-      "hours": "",
-      "hoursStatus": "u",
-      "price2": "",
-      "priceNote": "",
+      "hours": "Sun & Wed–Thu 5–9 PM; Fri–Sat 5–10 PM; Closed Mon–Tue",
+      "hoursStatus": "v",
+      "price2": "Tasting $95/person + $65 pairing; à la carte pastas ~$30s, mains ~$50s–$70s",
+      "priceNote": "A two-person total is not published; tasting for two ≈ $190 + $130 pairings before tax/fees (menu, official site).",
       "official": "https://www.rwlasvegas.com/restaurant/stubborn-seed/",
       "social": [],
       "socialStatus": "u",

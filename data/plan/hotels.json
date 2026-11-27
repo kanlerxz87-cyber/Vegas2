@@ -11,7 +11,7 @@
         "The Venetian",
         "The Palazzo"
       ],
-      "rooms": "Every suite is 650 sq ft or larger. Verified suite types include Luxury King Suite (650 sq ft, 1 king), New Luxury Loft Two Queen Suite (650 sq ft, 2 queens) and Luxury Two Queen Suite at The Palazzo (720 sq ft, 2 queens).",
+      "rooms": "Every suite is 650 sq ft or larger. Verified suite types include Luxury King Suite (650 sq ft, 1 king), New Luxury Loft Two Queen Suite (650 sq ft, 2 queens) and Luxury Two Queen Suite at The Palazzo (720 sq ft, 2 queens). A 'Luxury Two Queen Suite' (750 sq ft, 2 queens, living room, Roman tub) is also listed for The Venetian tower (official page, session c88d116c 2026-11-27).",
       "bath": "Oversized private bathroom listed for each suite type on the official suite page.",
       "roomStatus": "v",
       "price7": null,
@@ -33,6 +33,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "Venetian Luxury Two Queen Suite (750 sq ft)",
+          "url": "https://www.venetianlasvegas.com/hotel/the-venetian/luxury-two-queen-suite.html"
         }
       ],
       "note": "Four MICHELIN distinctions on one campus: Bouchon, COTE, Estiatorio Milos and Mott 32 (all 2026 Recommended). A prior session captured a $6,170.43 all-in 7-night total (including $728.18 tax) on 2026-11-26; the same calendar returned no rate on 2026-11-27, so no current price is ranked.",
@@ -52,7 +56,7 @@
       "venues": [
         "The Cosmopolitan"
       ],
-      "rooms": "Two-queen configuration exists (prior logged session saw 'Terrace Studio Two Queen Beds | Fountain View' on the official site). Room size not captured this session.",
+      "rooms": "Two-queen configuration exists (prior logged session saw 'Terrace Studio Two Queen Beds | Fountain View' on the official site). Room size not captured this session. City Room Queen: 460 sq ft, 2 queens, max 4 (official page, session c88d116c 2026-11-27).",
       "bath": "",
       "roomStatus": "p",
       "price7": null,
@@ -70,6 +74,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "Cosmopolitan City Room Queen",
+          "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/hotel/city-room.html"
         }
       ],
       "note": "Two MICHELIN distinctions on campus: é by José Andrés (1 star) and China Poblano (Bib Gourmand) — the only hotel with both a starred room and a Bib Gourmand.",
@@ -85,9 +93,9 @@
       "venues": [
         "MGM Grand"
       ],
-      "rooms": "",
+      "rooms": "MGM Two Queen: 446 sq ft, 2 queens, max 4 (official page, session c88d116c 2026-11-27).",
       "bath": "",
-      "roomStatus": "u",
+      "roomStatus": "p",
       "price7": null,
       "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
       "price3": null,
@@ -103,6 +111,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "MGM Grand MGM Two Queen",
+          "url": "https://mgmgrand.mgmresorts.com/en/hotel/mgm-two-queen.html"
         }
       ],
       "note": "Two MICHELIN distinctions on campus: Joël Robuchon (2 stars — the only two-star in Las Vegas) and L'Atelier de Joël Robuchon (1 star).",
@@ -117,7 +129,7 @@
       "venues": [
         "Caesars Palace"
       ],
-      "rooms": "Julius Deluxe Room | 1 King | Non-Smoking, 360+ sq ft. A 'Colosseum Strip View Room | 2 Queens | Non-Smoking' also exists on the official room list.",
+      "rooms": "Julius Deluxe Room | 1 King | Non-Smoking, 360+ sq ft. A 'Colosseum Strip View Room | 2 Queens | Non-Smoking' also exists on the official room list. 'Colosseum Strip View | 2 Queens' (475 sq ft) and 'Augustus Fountain View | 2 Queens' (650 sq ft) are also on the official room list (session c88d116c 2026-11-27).",
       "bath": "Julius Deluxe: 'stone and glass bathroom features a double sink vanity and hand-held showerhead' (official description).",
       "roomStatus": "v",
       "price7": {
@@ -128,7 +140,13 @@
         "basis": "Rate card: $159 room rate + $55 resort fee = $214/night, taxes excluded. The fee disclosure states the resort fee is $62.30 with tax ($54.95 + $7.35), so taxes apply to the fee as well."
       },
       "price7Note": "",
-      "price3": null,
+      "price3": {
+        "total": 549,
+        "room": "Room Type Assigned on Arrival",
+        "nightly": "$183/night including the $55/day resort fee",
+        "math": "$183 × 3 = $549 before taxes",
+        "basis": "Captured 2026-11-27 for Feb 15–18, 2027 (3 nights, Mon–Thu): $128 room rate + $55 resort fee = $183/night, taxes excluded. Julius Deluxe 1 King was $186 ($131 + $55). Fee disclosure: $62.30 with tax (F-04)."
+      },
       "transit": "Center Strip. Door-to-door times not retrieved.",
       "transitStatus": "u",
       "social": [
@@ -154,12 +172,17 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "Official room list with rates, Feb 15–18 2027 (3-night)",
+          "url": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/18/2027&dateSearchFormat=exact-dates&propCode=clv"
         }
       ],
-      "note": "One MICHELIN distinction on campus: Restaurant Guy Savoy (1 star). Rates moved between captures: $226/night ($1,582 for 7 nights) on 2026-11-26 and $214/night ($1,498) on 2026-11-27 — a 5.6% swing in one day (F-23). The two-queen room exists but only the king rate was served. Social accounts are property-level, linked from the official Restaurant Guy Savoy page footer; they are not restaurant-specific.",
+      "note": "One MICHELIN distinction on campus: Restaurant Guy Savoy (1 star). Rates moved between captures: $226/night ($1,582 for 7 nights) on 2026-11-26 and $214/night ($1,498) on 2026-11-27 — a 5.6% swing in one day (F-23). The two-queen room exists but only the king rate was served. A second same-day capture (2026-11-27, session c88d116c) showed $226/night Best Available ($171 + $55, Room Type Assigned; Julius $232) — a $214–$232 intraday spread for identical dates (F-23). Social accounts are property-level, linked from the official Restaurant Guy Savoy page footer; they are not restaurant-specific.",
       "flagIds": [
         "F-04",
-        "F-07"
+        "F-07",
+        "F-23"
       ]
     },
     {
@@ -169,9 +192,9 @@
       "venues": [
         "Bellagio"
       ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
+      "rooms": "Premier Two Queen: 510 sq ft, 2 queens, max 4 (official page, session c88d116c 2026-11-27).",
+      "bath": "Marble bathroom with dual-sink vanity and frameless shower (official room page); the word 'private' is not used — confirm at booking.",
+      "roomStatus": "p",
       "price7": null,
       "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
       "price3": null,
@@ -187,6 +210,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "Bellagio Premier Two Queen",
+          "url": "https://bellagio.mgmresorts.com/en/hotel/premier-two-queen.html"
         }
       ],
       "note": "One MICHELIN distinction on campus: Michael Mina (Recommended). The free Conservatory display is on the same property and runs Lunar New Year 1/9–3/6/2027 — directly inside the Feb 15–18 window.",
@@ -201,9 +228,9 @@
       "venues": [
         "ARIA"
       ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
+      "rooms": "Center Suite: 1,075 sq ft, 2 queens, max 4 — suite only; no standard 2-queen room confirmed (official page, session c88d116c 2026-11-27).",
+      "bath": "Private water closet, dual-sink vanity, stone shower and tub — suite only (official page).",
+      "roomStatus": "v",
       "price7": null,
       "price7Note": "No dated price retrieved (MGM Resorts booking platform did not load).",
       "price3": null,
@@ -219,6 +246,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "ARIA Center Suite",
+          "url": "https://aria.mgmresorts.com/en/hotel/center-suite.html"
         }
       ],
       "note": "One MICHELIN distinction on campus: Gymkhana (Recommended).",
@@ -233,7 +264,7 @@
       "venues": [
         "Wynn"
       ],
-      "rooms": "Wynn Resort room: 'one King or two Queen Wynn Dream Beds, among the most spacious standard rooms in Las Vegas'. Wynn Tower Suite Two Queens also listed.",
+      "rooms": "Wynn Resort room: 'one King or two Queen Wynn Dream Beds, among the most spacious standard rooms in Las Vegas'. Wynn Tower Suite Two Queens also listed. Wynn Resort room: 640 sq ft, 1 king or 2 queens, Dream Beds (official page, session c88d116c 2026-11-27). Confirm a 2-queen booking — a prior engine pull listed king types only.",
       "bath": "",
       "roomStatus": "v",
       "price7": {
@@ -257,6 +288,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "Wynn Resort room",
+          "url": "https://www.wynnlasvegas.com/rooms-and-suites/wynn-rooms/wynn-deluxe-resort"
         },
         {
           "label": "Official dated Wynn rate page — $677 Cyber / $833 Flexible, Feb 15–22 2027",
@@ -287,9 +322,9 @@
       "venues": [
         "Resorts World"
       ],
-      "rooms": "",
-      "bath": "",
-      "roomStatus": "u",
+      "rooms": "Conrad Premium Room: 550 sq ft, 1 king or 2 queens (official page, session c88d116c 2026-11-27).",
+      "bath": "Spa-inspired bathroom with vanity, LED mirror and walk-in shower (official page).",
+      "roomStatus": "v",
       "price7": {
         "total": 1940.47,
         "room": "Las Vegas Hilton tower — promotional rate, room category not named in the offer tile",
@@ -311,6 +346,10 @@
         {
           "label": "Official 2026 MICHELIN Las Vegas list",
           "url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+        },
+        {
+          "label": "Conrad Premium Room",
+          "url": "https://www.rwlasvegas.com/stay/conrad-las-vegas/premium-room/"
         },
         {
           "label": "Official dated Resorts World rate page + February 2027 calendar",

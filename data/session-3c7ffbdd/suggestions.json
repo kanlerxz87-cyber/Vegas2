@@ -1,0 +1,60 @@
+{
+  "verified_date": "2026-11-27",
+  "intro": "Actionable site, data-pipeline, and trip-planning improvements proposed for human review BEFORE implementation. None of these modify root repository pages owned by parallel sessions.",
+  "suggestions": [
+    {
+      "id": "SUG-01",
+      "category": "Trip Decision — Booking Timing",
+      "priority": "High",
+      "title": "Lock a refundable Mon Feb 15 – Mon Feb 22, 2027 Center-Strip room before Dec 4, 2026",
+      "rationale": "Live 5-week quotes captured on 2026-11-27 prove Mon Feb 15 – Mon Feb 22, 2027 is 19%–54% cheaper than late Feb / March weeks (and avoids the Tue Mar 2 Caesars Palace sellout and March Madness surge). Active Cyber Sales (Wynn Cyber Exclusive ending Dec 4, 2026; Resorts World DBF26) also offer flexible cancellation windows.",
+      "proposed_action": "Choose between The LINQ ($539 before tax) / Flamingo 2 Queens ($581 before tax) for budget + Monorail access, or Resorts World Hilton ($2,200.15 all-in) / Wynn Cyber Exclusive ($4,739 before tax + $300 credit) for modern luxury, and book a refundable rate before Dec 4, 2026.",
+      "source_url": "https://www.caesars.com/book/room-list?propCode=flv&checkin=02%2F15%2F2027&checkout=02%2F22%2F2027&adults=2&children=0"
+    },
+    {
+      "id": "SUG-02",
+      "category": "Trip Decision — Dining Strategy",
+      "priority": "High",
+      "title": "Set calendar reminders for 90-day, 60-day, and 30-day Michelin reservation drops",
+      "rationale": "é by José Andrés opens reservations up to 3 months in advance (already open for Feb 15–22, 2027!), Visit Las Vegas notes starred venues typically drop tables 30–60 days ahead, and Kabuto opens 30 days ahead on Resy.",
+      "proposed_action": "Check é by José Andrés immediately (9 seats/seating); set reminders for Dec 17, 2026 (60 days out) and Jan 16, 2027 (30 days out, 7:00 AM PT for Red Rock Canyon timed entry & Resy drops for Kabuto).",
+      "source_url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html"
+    },
+    {
+      "id": "SUG-03",
+      "category": "Trip Decision — Itinerary Clustering",
+      "priority": "Medium",
+      "title": "Avoid Bellagio Conservatory dark dates (Mar 7–12, 2027) and pair Chinatown / Arts District dining by cluster",
+      "rationale": "Bellagio Conservatory closes Mar 7–12, 2027 between Lunar New Year (ends Mar 6) and Spring (opens Mar 13). Grouping the 2 Arts District Bib/Recommended spots (Esther's Kitchen + SoulBelly BBQ) with The Mob Museum / Neon Museum saves transit time and fares.",
+      "proposed_action": "Plan one Downtown/Arts District day (Mob Museum + Esther's Kitchen or SoulBelly BBQ + Neon Museum at dusk) and one Chinatown evening along Spring Mountain Rd (6 Michelin restaurants within ~1.5 miles).",
+      "source_url": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"
+    },
+    {
+      "id": "SUG-04",
+      "category": "Site & Repo Architecture",
+      "priority": "High",
+      "title": "Consolidate competing dashboards and fix GitHub Pages workflow alignment",
+      "rationale": "The repository currently hosts multiple competing dashboards across root `/`, `docs/`, `docs/session-*`, `field-notes/`, and `site/`. GitHub Pages uses legacy deployment (`main /`), while `.github/workflows/pages.yml` tries to deploy `docs/` and fails on push.",
+      "proposed_action": "After parallel sessions finish merging, designate one canonical data-driven site build, update `.github/workflows/pages.yml` (or disable it if keeping legacy `main /`), and link all archived session audits from one unified index.",
+      "source_url": "https://github.com/kanlerxz87-cyber/Vegas2/tree/main/.github/workflows"
+    },
+    {
+      "id": "SUG-05",
+      "category": "Data Completeness",
+      "priority": "Medium",
+      "title": "Add an interactive all-in tax calculator & RTC Trip Planner transit matrix",
+      "rationale": "Caesars room-list pages display resort-fee-inclusive pre-tax totals while Resorts World displays all-in totals with room tax and resort fee tax. Likewise, exact door-to-door RTC bus times to Chinatown (Route 203) and Southwest (Anima by EDO) need official RTC schedule extraction.",
+      "proposed_action": "Before booking, capture final checkout screenshots (with Clark County room tax) for each finalist hotel and log official RTC Trip Planner door-to-door weekday evening times from Harrah's/LINQ and Flamingo.",
+      "source_url": "https://www.rtcsnv.com/ways-to-travel/fares-passes/"
+    },
+    {
+      "id": "SUG-06",
+      "category": "UX Improvement",
+      "priority": "Low",
+      "title": "Add printable 7-day itinerary & CSV export buttons to the hotel and Michelin tables",
+      "rationale": "Couples comparing 24 restaurants and 8 hotels across dinner budgets and closed days (e.g., Joël Robuchon & Partage closed Sun–Mon; L'Atelier & Wing Lei closed Tue–Wed) benefit from exporting their shortlist.",
+      "proposed_action": "Review whether to add a client-side CSV export and print stylesheet in the next iteration so selected restaurants and hotels can be shared offline.",
+      "source_url": "https://www.visitlasvegas.com/michelin-guide-restaurants/"
+    }
+  ]
+}

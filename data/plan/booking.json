@@ -144,6 +144,15 @@
       "feeNote": "MGM Resorts booking platform did not load in the fetch tool",
       "status": "u",
       "source": "https://www.mgmresorts.com/en/booking.html"
+    },
+    {
+      "window": "A",
+      "hotel": "Caesars Palace — Room Type Assigned on Arrival (same-day evening capture)",
+      "nightly": "$226",
+      "total": "$1,582",
+      "feeNote": "Includes $55/day resort fee; taxes excluded. Companion to the $214 Julius capture — identical dates, same day (F-23).",
+      "status": "v",
+      "source": "https://www.caesars.com/book/room-list?arrivalDate=02/15/2027&departureDate=02/22/2027&dateSearchFormat=exact-dates&propCode=clv"
     }
   ],
   "cheapest": {
