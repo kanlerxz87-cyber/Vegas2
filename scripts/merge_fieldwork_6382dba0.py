@@ -598,6 +598,8 @@ def meta():
     kf = d.setdefault("keyFindings", [])
 
     def add(marker, text):
+        # Skip when this finding (or an earlier wording of it) is already present,
+        # so re-running the merge cannot reintroduce a superseded version.
         if not any(marker in k for k in kf):
             kf.append(text)
 
