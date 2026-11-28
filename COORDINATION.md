@@ -684,3 +684,62 @@ All five claimed tasks are complete. The subsite is published, merged and verifi
 **Scope discipline:** this session edits only `data/plan/restaurants.json`, `data/plan/activities.json`, `COORDINATION.md`, and the root pages that `scripts/build_plan.py` regenerates from them. Generated HTML is never hand-edited. No other session is currently active on this repo (last board entry: `2ec5be84-vegas2`, DONE).
 
 **Environment note:** `curl`/`urllib` cannot reach the internet from this sandbox (TLS refused; `000`). All live verification is done through the sanctioned page fetcher, and every capture is recorded with its date.
+
+### Task board — final state (2026-11-28)
+
+| # | Task | Status | Owner | Sources / verification |
+|---|------|--------|-------|------------------------|
+| C1 | Audit existing data line by line against official sources | **DONE** | 6382dba0 | 24 restaurant pages + 15 activity pages re-read 2026-11-28 |
+| C2 | Official YouTube / Instagram / TikTok link per venue | **DONE** | 6382dba0 | footer links only; 5 restaurants + 6 activities carry one, rest keep a labelled search link |
+| C3 | Hours grids where the official page publishes one | **DONE** | 6382dba0 | 19/24 restaurants verified (was 6); 9/15 activities verified |
+| C4 | Correct wrong values found by C1, append-only | **DONE** | 6382dba0 | High Roller + Shark Reef prices, Conservatory 2027 dates, Neon Museum 2027 rule, Valley of Fire fee conflict |
+| C5 | Integration: rebuild, verify, PR, merge, confirm Pages | **DONE** | 6382dba0 | see the completion record below |
+
+### What this pass changed
+
+**Verified and added (append-only; no other session's prose was replaced):**
+
+- **High Roller** — official FAQ prices for two: **$47.00 daytime / $69.50 anytime / $120.00 Happy Half Hour**, replacing an empty cell. Social accounts corrected to **The LINQ's own** handles (`instagram.com/thelinq`, `youtube.com/user/linqvegas`); the wheel has no separate account.
+- **Shark Reef** — **$58.00 timed entry / $72.00 anytime** for two, with last admission 7:00 PM and the 1-hour booked-window rule stated.
+- **Bellagio Conservatory** — the official 2027 show calendar, including the **dark window 7–12 March 2027**. This is the single most consequential find for the preferred window: the Conservatory is closed between the Lunar New Year and Spring shows.
+- **Neon Museum** — the **1 January 2027** rule that off-ticket-time entry may cost extra, plus the heat thresholds. Its 10:00 PM last entry is the hardest ceiling of any activity on the trip.
+- **Fremont Street Experience** — three guessed social handles **deleted**. Its official site publishes none, and it publishes no SlotZilla operating hours either. Both stay blank and flagged rather than invented. *(This was self-inflicted: a first draft of the merge script added handles from memory. The official page has no social links at all. Removed, status reset to `u`.)*
+- **Valley of Fire** — a **fee conflict recorded, not resolved**: the official page prints day-use as `$10.00 ($15.00 for Non-NV Vehicles)` while its group-use section prints `$20/$25 per vehicle per night`. The day-use fee is now published as **$10–$15 pending confirmation** rather than silently picking one reading.
+
+**New analysis (transit.html):** an arrival-deadline table mapping every activity's published closing or last-entry time to what a late flight implies, with the operator page linked on each row. Four venues have no published closing time — those cells are blank and say so.
+
+**Coverage after this pass**
+
+| Measure | Before | After |
+|---|---|---|
+| Restaurants with a verified weekly hours grid | 6 / 24 | **19 / 24** |
+| Activities with a verified hours grid | 5 / 15 | **9 / 15** |
+| Restaurants with an operator-linked social account | 0 | **5 / 24** |
+| Activities with an operator-linked social account | 3 | **6 / 15** |
+| Activities with a verified two-person price | 7 | **10 / 15** |
+| Executive-summary findings | 12 | **17** |
+
+### Defects found in this repo and fixed
+
+1. **A superseded finding was still published.** The executive summary carried an older socials finding claiming *"4 of 24 restaurants"* while listing five venues — a wrong count that a later wording had already corrected, leaving both on the page. The stale copy is gone; 17 findings remain, no duplicates.
+2. **The site understated its own freshness.** `AS_OF` was pinned to `2026-11-27`, so every page told the reader the figures were captured the day before this pass ran. Now `2026-11-28`.
+3. **Long source labels overflowed a phone.** `.src a` was `white-space:nowrap`; the newer labels (*"Official MGM Grand page — hours re-confirmed (2026-11-28)"*) are wider than a 390px viewport. Links and URLs now wrap below 700px. This was a real mobile-friendliness regression caused by this pass's own additions.
+4. **The merge script was non-idempotent in three places.** `append_once` guards on a marker that must appear literally in the text it protects; three markers did not match, so a second run duplicated prose and dropped a note. Fixed, and the duplicate prose already published was repaired by a deterministic sentence de-duplicator (`dedupe_sentences`).
+5. **`check_plan.py` had a dead loop** (`for ...: pass` over captions) and did not cover `transit.html`. Both fixed — extending the gate immediately caught three unsourced tables on the transit page, which are now sourced or explicitly marked as analysis.
+6. **CI could not have caught defect 4.** `.github/workflows/validate-plan.yml` now runs **every merge script twice** and diffs `data/plan` between passes, so a mismatched marker fails the build instead of reaching the site.
+
+### Gates (all green at HEAD)
+
+- `python3 scripts/check_plan.py` → **OK — 0 failures, 0 warning(s). Pages: 11**
+- `python3 scripts/check_root_site.py` → **PASS**
+- `python3 scripts/check_site.py` → **OK — all checks passed (0 warnings)** *(was 26 failures on `main`; the domain allowlist and two `http://` socials were fixed.)*
+- `python3 scripts/audit_no_data_loss.py origin/main` → **OK — no unexpected data loss**
+- Both merge scripts run twice in either order → **9/9 files byte-identical**; builder deterministic.
+- All 11 pages serve locally; every table cell carries a `data-label` for the stacked mobile layout.
+
+### Still open (owner: whoever answers the brief's own questions)
+
+- **Q-01 / Q-02 / Q-04** remain the three decisive unknowns: trip length, all-in budget, and what "within 1 hour" means now that the subway does not exist.
+- Hours that the operator genuinely does not publish: Guy Savoy, Kame Omakase, Sparrow + Wolf, Yen Viet Kitchen (restaurants); Sphere, Venetian gondolas, KÀ, SlotZilla, Omega Mart (activities). Blank by design.
+- Taxes are still excluded from every hotel total (F-03); no dated rate exists for Venetian / MGM / Cosmopolitan / Wynn / Bellagio (F-05/F-06); no official door-to-door transit time exists (F-02).
+
