@@ -22,8 +22,16 @@ jobs:
           python-version: "3.x"
       - name: Verify the fieldwork merges are idempotent
         run: |
+          # Run every merge twice. A marker that does not literally appear in the
+          # text it guards makes append_once() duplicate prose on the second run,
+          # which this comparison catches. (It caught two such bugs in session
+          # 6382dba0 while the pass was being written.)
           python3 scripts/merge_fieldwork_4d7b292f.py
           python3 scripts/merge_fieldwork_6382dba0.py
+          cp -r data/plan /tmp/plan-once
+          python3 scripts/merge_fieldwork_4d7b292f.py
+          python3 scripts/merge_fieldwork_6382dba0.py
+          diff -r /tmp/plan-once data/plan
           git diff --exit-code -- data/plan
       - name: Prove the merge discarded no other session's data
         run: |

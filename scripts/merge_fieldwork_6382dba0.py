@@ -465,7 +465,7 @@ def activities():
         "vehicle and must be confirmed at the gate or on the reservation page before it is budgeted. "
         "Reservations are NOT required for day use.",
     )
-    r["note"] = append_once(r.get("note"), "Drone use is prohibited",
+    r["note"] = append_once(r.get("note"), "drones and remote-controlled aircraft are prohibited",
         "Also from the official page: drones and remote-controlled aircraft are prohibited; pets must "
         "be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to "
         "specific areas designated by the Visitor Center; wifi is available at the park but is a paid "
