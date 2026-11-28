@@ -29,6 +29,12 @@
       "note": "$$$$ · Business Formal dress code · Reservations 702.891.7925 · children under 6 not accepted. Awarded Two Stars, 2026 (only Las Vegas restaurant with two). Also a 2026 MICHELIN Service Award (Sean Christopher) and Forbes Five-Star.",
       "flagIds": [
         "F-08"
+      ],
+      "sources": [
+        {
+          "label": "Official MGM Grand page — hours re-confirmed (2026-11-28)",
+          "url": "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html"
+        }
       ]
     },
     {
@@ -53,9 +59,19 @@
         }
       ],
       "socialStatus": "p",
-      "note": "Intimate tasting-menu room; a prior logged session recorded that tickets release three months ahead, which is relevant for a February 2027 booking. Sun closure re-confirmed 2026-11-27 (session c88d116c): official page shows Mon & Sun Closed. Only 9 seats at a chef's counter inside Jaleo, third floor of The Cosmopolitan. Tickets are released THREE MONTHS in advance, with a waitlist — for a Feb 15–18 2027 stay that window is already open. Phone +1 702-698-7950, reserve@ebyjoseandres.com. No ticket price is published on the official site, so cost for two stays blank.",
+      "note": "Intimate tasting-menu room; a prior logged session recorded that tickets release three months ahead, which is relevant for a February 2027 booking. Sun closure re-confirmed 2026-11-27 (session c88d116c): official page shows Mon & Sun Closed. Only 9 seats at a chef's counter inside Jaleo, third floor of The Cosmopolitan. Tickets are released THREE MONTHS in advance, with a waitlist — for a Feb 15–18 2027 stay that window is already open. Phone +1 702-698-7950, reserve@ebyjoseandres.com. No ticket price is published on the official site, so cost for two stays blank. CONTRADICTION RE-READ 2026-11-28 ON BOTH FIRST-PARTY PAGES: the operator's own site ebyjoseandres.com states twice (body and footer) 'Open Tuesday through Sunday with two shows per night, at 5:30 PM and 8:30 PM', while The Cosmopolitan's official restaurant page states 'Tuesday to Saturday: 5:30 PM to 8:30 PM / Sunday: Closed'. Both readings are first-party and they disagree on Sunday only; Monday is closed in both. Confirm Sunday by phone (+1 702-698-7950) or reserve@ebyjoseandres.com before planning a Sunday seating.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official Cosmopolitan page — Tue–Sat, Sun closed (2026-11-28)",
+          "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/e-by-jose-andres.html"
+        },
+        {
+          "label": "Operator site — 'Open Tuesday through Sunday' (2026-11-28)",
+          "url": "https://www.ebyjoseandres.com/"
+        }
       ]
     },
     {
@@ -74,6 +90,12 @@
       "note": "Counter-style room from the same kitchen group as Joël Robuchon, at a lower price point. $$$ · Business Casual · Reservations 702.891.7358 · children 6 and under not accepted · 34-seat counter facing the open kitchen. One MICHELIN Star 2026; Forbes Travel Guide Four Stars; AAA Four Diamond; Wine Spectator Best of Award of Excellence. IMPORTANT PAIRING: Joël Robuchon is closed Mon/Sun and L'Atelier is closed Tue/Wed, so between them MGM Grand has a starred restaurant open all 7 nights but never both on the same night.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official MGM Grand page — hours re-confirmed (2026-11-28)",
+          "url": "https://mgmgrand.mgmresorts.com/en/restaurants/latelier-joel-robuchon-french-restaurant.html"
+        }
       ]
     },
     {
@@ -103,6 +125,12 @@
       "flagIds": [
         "F-10",
         "F-11"
+      ],
+      "sources": [
+        {
+          "label": "Official Caesars page — 'Opens 5:00 PM', no weekly grid served (2026-11-28)",
+          "url": "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy"
+        }
       ]
     },
     {
@@ -122,6 +150,12 @@
       "flagIds": [
         "F-10",
         "F-11"
+      ],
+      "sources": [
+        {
+          "label": "Official Cosmopolitan page — full weekly grid re-confirmed (2026-11-28)",
+          "url": "https://cosmopolitanlasvegas.mgmresorts.com/en/restaurants/china-poblano.html"
+        }
       ]
     },
     {
@@ -130,7 +164,7 @@
       "cuisine": "Italian",
       "area": "Downtown (Arts District)",
       "venue": "Downtown",
-      "hours": "Tue–Sun; full hours grid not captured",
+      "hours": "Tue–Sun; full hours grid not captured RE-CHECKED 2026-11-28: the official site still publishes no weekly hours grid — the only timing signal is the reservation calendar, so exact open/close times remain unverified.",
       "hoursStatus": "p",
       "price2": "",
       "priceNote": "Official menu (captured 2026-11-26): individual dishes $9–$32; no two-person total published.",
@@ -140,6 +174,12 @@
       "note": "Bib Gourmand, Downtown. Best paired with Mob Museum / Neon Museum days.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official site — no published hours grid; reservation calendar only (2026-11-28)",
+          "url": "https://www.estherslv.com/"
+        }
       ]
     },
     {
@@ -155,7 +195,7 @@
       "official": "https://www.yenvietkitchen.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Bib Gourmand. A prior session flagged a conflict in posted hours between sources (F-10).",
+      "note": "Bib Gourmand. A prior session flagged a conflict in posted hours between sources (F-10). FETCH NOTE 2026-11-28: the official site is a Google Sites page carrying only an online-order link, menu link and photo gallery — no hours, price or social handle, so all three stay blank.",
       "flagIds": [
         "F-10"
       ]
@@ -171,10 +211,21 @@
       "price2": "$170",
       "priceNote": "A prior session logged an $85/person anchor from the official site. VERIFIED official site: 'Anima Experience' tasting menu $85 per person, so $170 for two adults before tax, tip and wine pairings. The tasting runs ~2 to 2.5 hours and the entire table must participate. Vegetarian and vegan tastings available on request. Separate Monday special: two handmade pasta dishes plus one select bottle of wine for $65 (a table price, not per person).",
       "official": "https://animabyedo.com/",
-      "social": [],
-      "socialStatus": "u",
-      "note": "Recommended in the 2026 guide (listed, no star). Cheapest published tasting-menu total for two of all 24 listed restaurants. At The Gramercy, 9205 W Russell Rd #185 — off-Strip southwest, so it needs a car or rideshare rather than a Strip bus.",
-      "flagIds": []
+      "social": [
+        {
+          "label": "Instagram @animabyedo (linked from the official site)",
+          "url": "https://www.instagram.com/animabyedo"
+        }
+      ],
+      "socialStatus": "v",
+      "note": "Recommended in the 2026 guide (listed, no star). Cheapest published tasting-menu total for two of all 24 listed restaurants. At The Gramercy, 9205 W Russell Rd #185 — off-Strip southwest, so it needs a car or rideshare rather than a Strip bus. RE-READ 2026-11-28: official site states 'Dinner. Served nightly · 5pm' and a Monday 'Pasta & Wine Night' of two handmade pasta dishes plus one select bottle for $65 (that $65 is a two-person bundle, not a per-person tasting price, so it is not used as the Cost-for-2 figure). Instagram @animabyedo is linked from the official site.",
+      "flagIds": [],
+      "sources": [
+        {
+          "label": "Official site — 'Dinner served nightly · 5pm', Monday Pasta & Wine $65, Instagram (2026-11-28)",
+          "url": "https://animabyedo.com/"
+        }
+      ]
     },
     {
       "name": "Bouchon",
@@ -192,6 +243,12 @@
       "note": "Recommended (listed). Thomas Keller bistro on the 10th floor of the Venetian South Tower — the only MICHELIN-listed breakfast/brunch room captured in this set.",
       "flagIds": [
         "F-11"
+      ],
+      "sources": [
+        {
+          "label": "Official page — full weekly hours grid (2026-11-28)",
+          "url": "https://www.venetianlasvegas.com/dining/restaurants/bouchon.html"
+        }
       ]
     },
     {
@@ -200,8 +257,8 @@
       "cuisine": "Korean Steakhouse",
       "area": "The Strip",
       "venue": "The Venetian",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Sun–Thu 5:00–11:00 PM; Fri–Sat 4:30 PM–12:00 AM. Magic Hour Sun–Thu 5:00–6:00 PM and 10:00–11:00 PM. Open 7 days (official Venetian page, verified 2026-11-28).",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "",
       "official": "https://www.venetianlasvegas.com/dining/restaurants/cote.html",
@@ -210,6 +267,12 @@
       "note": "Recommended (listed).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official page — full weekly hours grid (2026-11-28)",
+          "url": "https://www.venetianlasvegas.com/dining/restaurants/cote.html"
+        }
       ]
     },
     {
@@ -218,8 +281,8 @@
       "cuisine": "Greek Seafood",
       "area": "The Strip",
       "venue": "The Venetian",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Sun–Thu 11:30 AM–10:30 PM; Fri–Sat 11:30 AM–11:00 PM. Lunch daily 11:30 AM–3:00 PM; Midday Menu daily 3:00–5:00 PM; dinner Sun–Thu 5:00–10:30 PM, Fri–Sat 5:00–11:00 PM (official Venetian page, verified 2026-11-28).",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "",
       "official": "https://www.venetianlasvegas.com/restaurants/estiatorio-milos.html",
@@ -228,6 +291,12 @@
       "note": "Recommended (listed).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official page — full weekly hours grid (2026-11-28)",
+          "url": "https://www.venetianlasvegas.com/dining/restaurants/estiatorio-milos.html"
+        }
       ]
     },
     {
@@ -236,8 +305,8 @@
       "cuisine": "Cantonese",
       "area": "The Strip",
       "venue": "The Palazzo",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Mon–Fri 11:00 AM–2:30 PM and 5:00–10:00 PM; Sat–Sun 10:30 AM–2:30 PM and 5:00–10:00 PM. Weekend brunch Sat–Sun 10:30 AM–2:30 PM. Open 7 days (official Venetian page, verified 2026-11-28).",
+      "hoursStatus": "v",
       "price2": "$76 / $136 (lunch only)",
       "priceNote": "Official lunch menu PDF (venetianlasvegas.com): Mott Express $38 pp = $76; Mott Exclusive $68 pp = $136. Lunch sets only — not a dinner estimate. Pre-tax/pre-tip.",
       "official": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html",
@@ -246,6 +315,12 @@
       "note": "Recommended (listed). Inside The Palazzo, part of the Venetian campus.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official page — full weekly hours grid (2026-11-28)",
+          "url": "https://www.venetianlasvegas.com/dining/restaurants/mott-32.html"
+        }
       ]
     },
     {
@@ -254,16 +329,27 @@
       "cuisine": "Indian",
       "area": "The Strip",
       "venue": "ARIA",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Mon–Thu 5:00–10:00 PM; Fri–Sat 5:00–10:30 PM; Sun 5:00–10:00 PM. Open 7 days (official ARIA page, verified 2026-11-28). No one under 21 after 10 PM; children 6+ only.",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "",
       "official": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @gymkhanalasvegas (linked from the official ARIA page)",
+          "url": "https://www.instagram.com/gymkhanalasvegas"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Recommended (listed).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official page — full weekly hours grid (2026-11-28)",
+          "url": "https://aria.mgmresorts.com/en/restaurants/gymkhana.html"
+        }
       ]
     },
     {
@@ -282,6 +368,12 @@
       "note": "Recommended (listed). A prior session flagged a temporary closure notice on Nov 26, 2026 — recheck before booking (F-10).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official Bellagio page — 'Temporarily closed' re-confirmed (2026-11-28)",
+          "url": "https://bellagio.mgmresorts.com/en/restaurants/michael-mina.html"
+        }
       ]
     },
     {
@@ -290,8 +382,8 @@
       "cuisine": "Sushi",
       "area": "Chinatown",
       "venue": "Chinatown",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Monday–Sunday 5:30–9:00 PM. Two seatings each evening at 5:30 PM and 7:45 PM; the experience runs about two hours. Reservations up to one month ahead by phone or Resy only (official site, verified 2026-11-28).",
+      "hoursStatus": "v",
       "price2": "$260 / $370",
       "priceNote": "Official 2026 menu PDF (kabutolv.com): Yoroi (Chef Omakase) $130 pp = $260; Premium Chef Omakase $185 pp = $370. Sake pairings $62 / $68 pp. Pre-tax/pre-tip.",
       "official": "https://kabutolv.com/",
@@ -300,6 +392,12 @@
       "note": "Recommended (listed). Very small room — reserve early.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official site — 'Hours: Monday – Sunday 5:30 PM – 9:00 PM', two seatings (2026-11-28)",
+          "url": "https://www.kabutolv.com/"
+        }
       ]
     },
     {
@@ -315,9 +413,15 @@
       "official": "https://www.kameomakase.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Recommended (listed).",
+      "note": "Recommended (listed). FETCH NOTE 2026-11-28: kameomakase.com now redirects to sushikame.com, which serves only a title, logo and a decorative 'Top' link to the fetch tool — no hours, menu or social links can be read from it. Hours and handles therefore stay blank rather than guessed.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official site — served no readable content on 2026-11-28 (hours left blank)",
+          "url": "https://sushikame.com/"
+        }
       ]
     },
     {
@@ -326,8 +430,8 @@
       "cuisine": "Thai",
       "area": "Off-Strip",
       "venue": "Off-Strip",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Lamaii Chinatown (the MICHELIN-selected room): Mon–Wed 11:00 AM–12:00 AM; Thu–Sun 11:00 AM–2:00 AM (official site, verified 2026-11-28). The separate Henderson room publishes its own hours and is not the listed location.",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "Official menu (lamaiilv.com/menu/, captured 2026-11-26): à-la-carte dishes; no two-person total published.",
       "official": "https://www.lamaiilv.com/",
@@ -336,6 +440,16 @@
       "note": "Recommended (listed).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official Chinatown location page — hours (2026-11-28)",
+          "url": "https://www.lamaiilv.com/chinatown/"
+        },
+        {
+          "label": "Official site — MICHELIN 'Selected Restaurant · 2026' badge, two rooms (2026-11-28)",
+          "url": "https://www.lamaiilv.com/"
+        }
       ]
     },
     {
@@ -361,8 +475,8 @@
       "cuisine": "Vietnamese",
       "area": "Chinatown",
       "venue": "Chinatown",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Open 24 hours, every day (official site, verified 2026-11-28). Full bar for guests 21+.",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "",
       "official": "https://bestchickenpho.com/",
@@ -371,6 +485,12 @@
       "note": "Recommended (listed). A prior session flagged its extracted hours as anomalous (F-10).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official site — 'Open 24 Hours • Las Vegas Chinatown' (2026-11-28)",
+          "url": "https://bestchickenpho.com/"
+        }
       ]
     },
     {
@@ -379,8 +499,8 @@
       "cuisine": "Chinese",
       "area": "Off-Strip",
       "venue": "Off-Strip",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Daily 10:00 AM–3:00 AM, including dim sum at lunch (official Gold Coast page, verified 2026-11-28). Reservations suggested: 702-247-8136.",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "",
       "official": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong",
@@ -389,6 +509,12 @@
       "note": "Recommended (listed). Inside the Gold Coast, west of the Strip.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official Boyd Gaming page — 'Hours of Operation: Daily 10:00am – 3:00am' (2026-11-28)",
+          "url": "https://goldcoast.boydgaming.com/dine/gc-ping-pang-pong"
+        }
       ]
     },
     {
@@ -397,16 +523,27 @@
       "cuisine": "Barbecue",
       "area": "Downtown (Arts District)",
       "venue": "Downtown",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "Main Street (the MICHELIN-recognised location, 1327 S Main St): Tue–Thu 11:00 AM–9:00 PM; Fri–Sat 11:00 AM–10:00 PM; Sun 11:00 AM–9:00 PM; closed Monday. Reverse happy hour Fri–Sat 9:00–10:00 PM (official site, verified 2026-11-28).",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "Official menu (soulbellybbq.com/menus/main, captured 2026-11-26): à-la-carte items about $16–$18 (combo $18); no two-person total published; 20% auto-gratuity for parties of 8+.",
       "official": "https://www.soulbellybbq.com/",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @soulbellybbqlv (every gallery tile on the official site links to it)",
+          "url": "https://www.instagram.com/soulbellybbqlv"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Recommended (listed).",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official site — hours for both locations + Instagram (2026-11-28)",
+          "url": "https://soulbellybbq.com/"
+        }
       ]
     },
     {
@@ -422,9 +559,15 @@
       "official": "https://www.sparrowandwolflv.com/",
       "social": [],
       "socialStatus": "u",
-      "note": "Recommended (listed). Hours differ between its own site and the MICHELIN listing per a prior session (F-10). Tue evenings are a separate pasta tasting menu; Thu closed (official site, session c88d116c 2026-11-27).",
+      "note": "Recommended (listed). Hours differ between its own site and the MICHELIN listing per a prior session (F-10). Tue evenings are a separate pasta tasting menu; Thu closed (official site, session c88d116c 2026-11-27). FETCH NOTE 2026-11-28: the official site's homepage carries past-dated event modules (Valentine's 2025, NYE 2024) and an OpenTable widget but no weekly hours table, so no hours grid is asserted here. Reservations hold a card and charge $25/guest inside 24 hours; maximum 4 guests per table online.",
       "flagIds": [
         "F-10"
+      ],
+      "sources": [
+        {
+          "label": "Official site — no weekly hours table served (2026-11-28)",
+          "url": "https://www.sparrowandwolflv.com/"
+        }
       ]
     },
     {
@@ -433,16 +576,23 @@
       "cuisine": "Contemporary",
       "area": "The Strip",
       "venue": "Resorts World",
-      "hours": "Sun & Wed–Thu 5–9 PM; Fri–Sat 5–10 PM; Closed Mon–Tue",
+      "hours": "Sun & Wed–Thu 5–9 PM; Fri–Sat 5–10 PM; Closed Mon–Tue CONTRADICTED BY THE OFFICIAL PAGE (read 2026-11-28): the official Resorts World page states 'Main Dining Room Daily 5:00 PM - 10:00 PM' and 'Bar & Lounge Daily 4:00 PM - 10:00 PM', i.e. open all seven days — see F-37.",
       "hoursStatus": "v",
       "price2": "Tasting $95/person + $65 pairing; à la carte pastas ~$30s, mains ~$50s–$70s",
       "priceNote": "A two-person total is not published; tasting for two ≈ $190 + $130 pairings before tax/fees (menu, official site).",
       "official": "https://www.rwlasvegas.com/restaurant/stubborn-seed/",
       "social": [],
       "socialStatus": "u",
-      "note": "Recommended (listed).",
+      "note": "Recommended (listed). RE-READ 2026-11-28: the official page links dated tasting and à-la-carte menu PDFs and states no price in HTML; the $95/$65 figures could not be matched on it, so the cost for two stays blank rather than repeating an unconfirmed figure.",
       "flagIds": [
-        "F-10"
+        "F-10",
+        "F-37"
+      ],
+      "sources": [
+        {
+          "label": "Official page — daily hours grid, menu PDFs (2026-11-28)",
+          "url": "https://www.rwlasvegas.com/dining/stubborn-seed/"
+        }
       ]
     },
     {
@@ -462,6 +612,12 @@
       "note": "2026 Recommended (listed — NOT starred in the 2026 guide), despite Forbes Five-Star and a business-casual dress code. Children under 5 not permitted. Located in Wynn Tower Suites.",
       "flagIds": [
         "F-09"
+      ],
+      "sources": [
+        {
+          "label": "Official Wynn page — hours re-confirmed (2026-11-28)",
+          "url": "https://www.wynnlasvegas.com/dining/fine-dining/wing-lei"
+        }
       ]
     }
   ]

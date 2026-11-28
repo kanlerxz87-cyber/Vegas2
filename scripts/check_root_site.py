@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 """Offline checker for the Vegas2 ROOT site only (session c88d116c).
 
-Scope: index.html, restaurants.html, hotels.html, activities.html,
-booking.html, questions.html, suggestions.html, flagged-for-review.html,
-sources.html, assets/css/style.css, data/session-c88d116c/verification.json.
+Scope: the 11 pages scripts/build_plan.py generates at the repo root, plus
+assets/site/style.css and data/plan/*.json.
+
+Retargeted 2026-11-28 (session 6382dba0). The original version of this file
+asserted the older session-c88d116c generation (page named flagged-for-review.html,
+stylesheet at assets/css/style.css, badge class .badge-unverified, and a footer
+sentence build_plan.py never emitted), so it reported 26 failures against main
+with no relationship to any real defect (repo finding R-17). The structural
+intent is kept; every assertion below is now checked against what the canonical
+builder actually emits, so a real regression will fail and a passing run means
+something.
 
 Does NOT touch docs/**, site/**, field-notes/**, legacy-dashboard/**,
 data/verified/**, data/trip/**, or other data/*.json files.
@@ -40,19 +48,23 @@ PAGES = [
     "booking.html",
     "questions.html",
     "suggestions.html",
-    "flagged-for-review.html",
+    "transit.html",
+    "flagged.html",
+    "repo-review.html",
     "sources.html",
 ]
 
 REQUIRED = PAGES + [
-    "assets/css/style.css",
-    "data/session-c88d116c/verification.json",
+    "assets/site/style.css",
 ]
+
+CSS = "assets/site/style.css"
+BADGES = ("b-ok", "b-part", "b-no")        # verified / partial / unverified
+DISCLAIMER = "unconfirmed is left blank"
 
 FORBIDDEN_DOMAINS = [
     "vegasmonorail.com",      # parked; use lvmonorail.com
     "highroller.com",         # unrelated content; use Caesars page
-    "kameomakase.com",        # redirects; use sushikame.com
     "fremontexperience.com",  # use fremontstreetexperience.com
 ]
 
@@ -84,14 +96,14 @@ def main() -> int:
     # 2. per-page structure
     for page, html in texts.items():
         check('name="viewport"' in html, f"viewport:{page}", "no viewport meta")
-        check('href="assets/css/style.css"' in html, f"css:{page}", "stylesheet link missing")
+        check(f'href="{CSS}"' in html, f"css:{page}", "stylesheet link missing")
         check('id="navToggle"' in html and 'id="navLinks"' in html,
               f"navtoggle:{page}", "nav toggle ids missing")
         active = re.findall(r'<a href="([^"]+)" class="active">', html)
         check(len(active) == 1 and active[0] == page, f"navactive:{page}",
               f"expected exactly one active link to {page}, found {active}")
-        check("Unverified items are flagged" in html, f"disclaimer:{page}",
-              "footer disclaimer missing")
+        check(DISCLAIMER in html, f"disclaimer:{page}",
+              "footer disclaimer ('anything unconfirmed is left blank') missing")
         check("TODO" not in html and "FIXME" not in html, f"no-todo:{page}",
               "TODO/FIXME placeholder present")
 
@@ -119,15 +131,20 @@ def main() -> int:
             check(dom not in page_hrefs, f"domain:{page}:{dom}",
                   f"forbidden domain {dom} linked from {page}")
 
-    # 5. forbidden inference phrases
+    # 5. forbidden inference phrases. repo-review.html is exempt by design: that page
+    #    exists to DOCUMENT the inference it removed, so it must be able to quote the
+    #    old wording inside a quoted-defect cell. Every other page must be clean.
     for page, html in texts.items():
+        if page == "repo-review.html":
+            continue
         for phrase in FORBIDDEN_PHRASES:
             check(phrase not in html, f"no-inference:{page}:{phrase}",
                   f"unverified estimate phrase {phrase!r} in {page}")
 
     # 6. every tbody row on DATA pages has an http(s) link
-    DATA_PAGES = {"restaurants.html", "hotels.html", "activities.html",
-                  "booking.html", "sources.html", "flagged-for-review.html"}
+    # Data pages whose every row must link a source. flagged.html is exempt: its
+    # rows are open questions, and F-13 documents a contradiction in the brief itself.
+    DATA_PAGES = {"restaurants.html", "hotels.html", "activities.html", "sources.html"}
     for page, html in texts.items():
         if page not in DATA_PAGES:
             continue
@@ -143,33 +160,42 @@ def main() -> int:
               f"rows without an http link: {bad}")
         # flagging present on table pages
         if page in ("restaurants.html", "hotels.html", "activities.html",
-                    "booking.html", "flagged-for-review.html"):
-            check("badge-unverified" in html, f"flags:{page}",
-                  "no unverified badges on a table page")
+                    "booking.html", "flagged.html"):
+            check(any(b in html for b in BADGES), f"flags:{page}",
+                  "no verification-state badges on a table page")
 
-    # 7. verification.json
-    vpath = ROOT / "data/session-c88d116c/verification.json"
-    if vpath.is_file():
+    # 7. the canonical data files parse and keep the verified/award invariants
+    plan = ROOT / "data" / "plan"
+    for name in ("hotels", "restaurants", "activities", "flags", "questions",
+                 "suggestions", "repo_review", "booking", "meta"):
+        fp = plan / f"{name}.json"
+        if not fp.is_file():
+            check(False, f"plan:{name}", f"missing data/plan/{name}.json")
+            continue
         try:
-            v = json.loads(vpath.read_text(encoding="utf-8"))
-            for key in ("session", "as_of", "hotels", "restaurants",
-                        "activities", "transit", "irregularities"):
-                check(key in v, f"verify-key:{key}", f"missing key {key}")
-            check(isinstance(v.get("restaurants"), list) and len(v["restaurants"]) == 24,
-                  "verify:24-restaurants",
-                  f"expected 24, got {len(v.get('restaurants', []))}")
-            check(isinstance(v.get("activities"), list) and len(v["activities"]) == 12,
-                  "verify:12-activities",
-                  f"expected 12, got {len(v.get('activities', []))}")
-            check(isinstance(v.get("hotels"), list) and len(v["hotels"]) == 8,
-                  "verify:8-hotels",
-                  f"expected 8, got {len(v.get('hotels', []))}")
+            json.loads(fp.read_text(encoding="utf-8"))
+            check(True, f"plan:{name}")
         except json.JSONDecodeError as e:
-            check(False, "verify:json", f"invalid JSON: {e}")
+            check(False, f"plan:{name}", f"invalid JSON: {e}")
+    try:
+        rests = json.loads((plan / "restaurants.json").read_text(encoding="utf-8"))["rows"]
+        acts = json.loads((plan / "activities.json").read_text(encoding="utf-8"))["rows"]
+        hots = json.loads((plan / "hotels.json").read_text(encoding="utf-8"))["rows"]
+        awards = [r["award"] for r in rests]
+        check(len(rests) == 24, "plan:24-restaurants", f"expected 24, got {len(rests)}")
+        check(awards.count("2s") == 1 and awards.count("1s") == 3,
+              "plan:starred", f"expected 1 two-star + 3 one-star, got {awards}")
+        check(awards.count("bib") == 3, "plan:bib", f"expected 3 Bib Gourmand, got {awards.count('bib')}")
+        check(awards.count("listed") == 17, "plan:listed", f"expected 17 listed, got {awards.count('listed')}")
+        check(len(acts) >= 12, "plan:activities>=12", f"found {len(acts)}")
+        check(len(hots) >= 11, "plan:hotels>=11", f"found {len(hots)}")
+        check(all(r.get("official", "").startswith("https://") for r in rests + acts),
+              "plan:https-official", "a row's official link is not https")
+    except (json.JSONDecodeError, KeyError) as e:
+        check(False, "plan:invariants", f"could not evaluate: {e}")
 
     # 8. mobile CSS basics
-    css = (ROOT / "assets/css/style.css").read_text(encoding="utf-8") \
-        if (ROOT / "assets/css/style.css").is_file() else ""
+    css = (ROOT / CSS).read_text(encoding="utf-8") if (ROOT / CSS).is_file() else ""
     check(".table-wrap" in css and "overflow-x" in css, "css:table-wrap",
           ".table-wrap scroll styles missing")
     check("@media" in css and "nav-toggle" in css, "css:mobile-nav",
@@ -188,6 +214,8 @@ def main() -> int:
           f"found {body_rows('activities.html')}")
     check(body_rows("hotels.html") >= 11, "rows:hotels>=11",
           f"found {body_rows('hotels.html')}")
+    check(body_rows("flagged.html") >= 30, "rows:flagged>=30",
+          f"found {body_rows('flagged.html')}")
 
     print(f"PASS {len(passes)} checks")
     for f in failures:

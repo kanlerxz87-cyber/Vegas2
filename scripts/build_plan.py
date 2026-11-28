@@ -391,6 +391,7 @@ def build_restaurants(rests, flags):
         ["Resorts World", "1", "Stubborn Seed", "Recommended (listed)"],
         ["Chinatown / Downtown / off-Strip", "11", "Esther's Kitchen · Yen Viet · Anima · Kabuto · Kame · Lamaii · Partage · Pho Ga Bac Bac · Ping Pang Pong · Soulbelly · Sparrow and Wolf", "No casino campus; bus or car from the Strip"],
     ]
+    cluster = [row + [ext(guide["source"], "Official 2026 list")] for row in cluster]
     body = f"""
 <div class="note">
   <p><strong>How tiers are shown.</strong> The official Las Vegas MICHELIN page lists {guide['cityList']}. A <span class="badge b-star">star</span> is a star. <span class="badge b-bib">Bib Gourmand</span> is the value category — it is <em>not</em> a star. <span class="badge b-list">Listed</span> means the restaurant appears in the guide's recommended selection with no star. The official page's own wording for non-starred, non-Bib entries is "Recommended by MICHELIN Guide"; this site labels those rows "Listed in guide" and never calls them starred.</p>
@@ -407,8 +408,8 @@ def build_restaurants(rests, flags):
 </div>
 
 <h2>Restaurant clusters by property</h2>
-{table(["Property", "MICHELIN count", "Restaurants", "Notes"], cluster,
-       caption="Use this to pick a hotel. Counts come from the venue field of each row in the table below.")}
+{table(["Property", "MICHELIN count", "Restaurants", "Notes", "Source"], cluster,
+       caption="Use this to pick a hotel. Each count is read from the venue field of the 24 rows below; the property-to-restaurant mapping itself is in the official 2026 MICHELIN list, linked on every row.")}
 
 <h2>All 24 restaurants</h2>
 {table(["Restaurant", "2026 award", "Cuisine / area", "Open (days & hours)", "Cost for 2 adults", "Official link", "Social / video"], rows,
@@ -447,7 +448,9 @@ def build_hotels(hotels, rests):
             f'{esc(h["rooms"]) if h["rooms"] else blank_marker("room types not captured")}<span class="sub">{vbadge(h["roomStatus"])}</span>',
             f'{esc(h["bath"]) if h["bath"] else blank_marker("bathroom detail not captured")}',
             price,
-            vbadge("v" if h["price7"] else "u", {"v":"Verified","u":"Unverified"}),
+            f'{vbadge("v" if h["price7"] else "u", {"v":"Verified","u":"Unverified"})}'
+            f'<span class="sub">{src_links(h["sources"][:3])}'
+            f'{" (+%d more)" % (len(h["sources"]) - 3) if len(h["sources"]) > 3 else ""}</span>',
         ])
     detail = []
     for i, h in enumerate(rows_sorted, 1):
@@ -464,7 +467,9 @@ def build_hotels(hotels, rests):
 </details>""")
     priced = [h for h in hotels["rows"] if h["price7"]]
     value_rank = sorted(priced, key=lambda h: h["price7"]["total"])
-    value_rows = [[str(i), esc(h["name"]), esc(h["price7"]["room"]), f'${h["price7"]["total"]:,}', esc(h["price7"]["nightly"])] for i, h in enumerate(value_rank, 1)]
+    value_rows = [[str(i), esc(h["name"]), esc(h["price7"]["room"]), f'${h["price7"]["total"]:,}', esc(h["price7"]["nightly"]),
+                   src_links([s for s in h["sources"] if "book" in s["url"].lower() or "rate" in s["url"].lower() or "reservation" in s["url"].lower()] or h["sources"][:1])]
+                  for i, h in enumerate(value_rank, 1)]
     body = f"""
 <div class="note warn">
   <p><strong>Ranking rule.</strong> {esc(hotels['rankMethod'])}</p>
@@ -476,7 +481,7 @@ def build_hotels(hotels, rests):
        caption="Blank = the official page did not state it or the engine served no rate. It does not mean the feature is absent.", num_cols=(0,))}
 
 <h2>Value ranking (verified prices only)</h2>
-{table(["#", "Hotel", "Room used", "7 nights", "Nightly incl. resort fee"], value_rows,
+{table(["#", "Hotel", "Room used", "7 nights", "Nightly incl. resort fee", "Rate source"], value_rows,
        caption="Same dates, same party. Tax is not included because no engine published it.", num_cols=(0, 3))}
 
 <h2>Why the 1-hour rule does not rank these hotels</h2>
@@ -596,13 +601,15 @@ def build_activities(acts):
                   crumb=crumb_for("activities.html", [("Overview", "index.html")]))
 
 
-def build_transit():
+def build_transit(activities):
+    MONO_SRC = '<a href="https://www.lvmonorail.com/" rel="noopener">Official page</a>'
     mono = [
-        ["Stations", "7, all on the Las Vegas Strip (route map on the official site)"],
-        ["Train frequency", "Every 4–8 minutes"],
-        ["Station hours", "Monday 7 AM–midnight · Tuesday–Thursday 7 AM–2 AM · Friday–Sunday 7 AM–3 AM"],
-        ["Reach", "Strip corridor only — no Chinatown, no Downtown, no airport"],
-        ["Social", "@lvmonorail (stated by the official site)"],
+        ["Stations", "7, all on the Las Vegas Strip (route map on the official site)", MONO_SRC],
+        ["Train frequency", "Every 4–8 minutes", MONO_SRC],
+        ["Station hours", "Monday 7 AM–midnight · Tuesday–Thursday 7 AM–2 AM · Friday–Sunday 7 AM–3 AM", MONO_SRC],
+        ["Reach", "Strip corridor only — no Chinatown, no Downtown, no airport",
+         '<a href="https://www.lvmonorail.com/route-map/" rel="noopener">Route map</a>'],
+        ["Social", "@lvmonorail (stated by the official site)", MONO_SRC],
     ]
     reach = [
         ["The Venetian · The Palazzo · Wynn · Resorts World", "Monorail corridor / walk", "4 + 1 + 1 MICHELIN rooms reachable on foot or one short rail hop"],
@@ -612,24 +619,66 @@ def build_transit():
         ["Downtown (Esther's Kitchen, Soulbelly BBQ, Mob Museum, Neon Museum, Fremont)", "Bus, rideshare or car", "No rail link from the Strip"],
         ["Hoover Dam · Red Rock Canyon · Valley of Fire", "Car or tour", "Outside the bus network; travel time not verified"],
     ]
+    act_by_name = {r["name"]: r for r in activities["rows"]}
+
+    # The display names in this table are shorter than the canonical data names.
+    ACT_KEYS = {
+        "Bellagio Conservatory": "Bellagio Conservatory & Botanical Gardens",
+        "High Roller": "High Roller Observation Wheel",
+        "Shark Reef Aquarium": "Shark Reef Aquarium (Mandalay Bay)",
+        "K\u00c0 by Cirque du Soleil": "K\u00c0 by Cirque du Soleil (MGM Grand)",
+        "SlotZilla Zipline": "SlotZilla Zipline at Fremont Street Experience",
+    }
+
+    def act_src(name, label="Official page"):
+        row = act_by_name.get(ACT_KEYS.get(name, name)) or {}
+        url = row.get("official")
+        return f'<a href="{esc(url)}" rel="noopener">{esc(label)}</a>' if url else blank_marker("no official page captured")
+
+    arrive = []
+    for name, closes, latest, meaning in [
+        ("The Neon Museum", "11:00 PM; last entry 10:00 PM; box office closes one hour before closing (Sep\u2013May)",
+         "10:00 PM \u2014 the published last entry", "The hardest ceiling here. If you land in the evening, plan this for a full day, not arrival night."),
+        ("Bellagio Fountains", "Weekdays: every 30 min 3:00\u20137:30 PM, every 15 min 8:00 PM\u2013midnight. Sat/Sun/holidays from 12:00 PM",
+         "Before midnight, which is the published last show window", "Free and outdoors. The only evening item with no ticket and no door closing on you."),
+        ("Fremont Street Experience", "Viva Vision canopy shows free at the top of every hour, 6:00 PM\u20132:00 AM daily",
+         "The 1:00 AM show is the last one stated", "Downtown, so it is a separate trip from the Strip."),
+        ("High Roller", "Sun 12:30 PM\u20131:30 AM; the page publishes a per-night grid for the rest of the week",
+         "Read the grid for your specific night", "Late boarding is possible on Sunday; other nights need the grid checked."),
+        ("The Mob Museum", "Daily 9:00 AM\u20139:00 PM. The Underground Sun\u2013Thu 11:00 AM\u201311:00 PM, Fri\u2013Sat 11:00 AM\u2013midnight",
+         "9:00 PM is the published museum close", "The bar outlasts the exhibits. Downtown."),
+        ("Shark Reef Aquarium", "Daily 10:00 AM\u20138:00 PM, last admission 7:00 PM; box office 9:30 AM\u20137:30 PM",
+         "7:00 PM \u2014 the published last admission", "Mandalay Bay, south Strip. Cannot be done on arrival night if you land late."),
+        ("Bellagio Conservatory", "No daily hours published \u2014 2027 display dates only",
+         "blank_marker_UNKNOWN", "Free and walk-through, so no timed entry to miss \u2014 but dark 7\u201312 March 2027."),
+        ("Omega Mart at AREA15", "Not published: the official page says only \"Days and Times vary\"",
+         "blank_marker_UNKNOWN", "Timed ticket for a chosen slot; the closing time is unknown, so book a slot, not an evening."),
+        ("K\u00c0 by Cirque du Soleil", "Not captured: the official page did not render for this pass",
+         "blank_marker_UNKNOWN", "Date-specific showtimes. Choose the date before fixing the flight."),
+        ("SlotZilla Zipline", "No operating hours published on the operator's site",
+         "blank_marker_UNKNOWN", "The ride is 30 seconds (Zip) or about a minute (Zoom); the operator's FAQ says allow an hour end to end."),
+    ]:
+        latest_cell = blank_marker("not published") if latest == "blank_marker_UNKNOWN" else esc(latest)
+        arrive.append([f"<strong>{esc(name)}</strong>", esc(closes), latest_cell, esc(meaning), act_src(name)])
+
     body = f"""
 <div class="note stop">
   <p><strong>There is no subway or metro in Las Vegas.</strong> The brief's "within 1 hour by subway or bus" test needs rewording: rail here means the <strong>7-station Las Vegas Monorail</strong>, which never leaves the Strip. Everything else is RTC bus (including the Deuce on Las Vegas Blvd), walking, the free tram segments, rideshare or a car.</p>
 </div>
 
 <h2>Las Vegas Monorail — verified facts</h2>
-{table(["Fact", "Value"], mono, caption="Source: lvmonorail.com, captured 2026-11-27.")}
+{table(["Fact", "Value", "Source"], mono, caption="Every fact below is on lvmonorail.com, re-read 2026-11-28.")}
 <p class="small">{ext("https://www.lvmonorail.com/", "Monorail home")} · {ext("https://www.lvmonorail.com/route-map/", "Route map")} · {ext("https://www.lvmonorail.com/ticket-information/", "Ticket information")}</p>
 
 <h2>RTC fares — verified on RTC's own fare page</h2>
-{table(["Fare product", "Strip / Downtown (SDX &amp; Deuce)", "Residential routes", "For 2 adults"], [
-    ["Single ride", blank_marker("not offered in this tier"), "$2", "$4 residential"],
-    ["2-hour pass", "$6", "$3", "$12 Strip / $6 residential"],
-    ["24-hour pass", "$8", "$5", "$16 Strip / $10 residential"],
-    ["3-day pass", "$20", blank_marker("not offered"), "$40 Strip"],
-    ["15-day pass", blank_marker("not offered"), "$34", "$68 residential"],
-    ["30-day pass", blank_marker("not offered"), "$65", "$130 residential"],
-], caption="Source: rtcws.rtcsnv.com/mobile/geoFares.html, captured 2026-11-27. 'For 2 adults' is the published per-person fare x 2.")}
+{table(["Fare product", "Strip / Downtown (SDX &amp; Deuce)", "Residential routes", "For 2 adults", "Source"], [
+    ["Single ride", blank_marker("not offered in this tier"), "$2", "$4 residential", '<a href="https://rtcws.rtcsnv.com/mobile/geoFares.html" rel="noopener">Fare page</a>'],
+    ["2-hour pass", "$6", "$3", "$12 Strip / $6 residential", '<a href="https://rtcws.rtcsnv.com/mobile/geoFares.html" rel="noopener">Fare page</a>'],
+    ["24-hour pass", "$8", "$5", "$16 Strip / $10 residential", '<a href="https://rtcws.rtcsnv.com/mobile/geoFares.html" rel="noopener">Fare page</a>'],
+    ["3-day pass", "$20", blank_marker("not offered"), "$40 Strip", '<a href="https://rtcws.rtcsnv.com/mobile/geoFares.html" rel="noopener">Fare page</a>'],
+    ["15-day pass", blank_marker("not offered"), "$34", "$68 residential", '<a href="https://rtcws.rtcsnv.com/mobile/geoFares.html" rel="noopener">Fare page</a>'],
+    ["30-day pass", blank_marker("not offered"), "$65", "$130 residential", '<a href="https://rtcws.rtcsnv.com/mobile/geoFares.html" rel="noopener">Fare page</a>'],
+], caption="Every fare is on rtcws.rtcsnv.com/mobile/geoFares.html, re-read 2026-11-28. 'For 2 adults' is the published per-person fare x 2.")}
 <div class="note">
   <p><strong>The trap for visitors:</strong> RTC's own page states that residential passes are valid on the
   SDX and Deuce <em>only with a local I.D.</em> Without Nevada ID you need the Strip/Downtown tier, which is
@@ -648,8 +697,21 @@ def build_transit():
 </div>
 
 <h2>What the 1-hour rule really implies</h2>
-{table(["Where you stay", "How you move", "MICHELIN reach"], reach,
-       caption="Mode assignment is based on the published Monorail route and venue addresses. Door-to-door minutes are deliberately absent.")}
+{table(["Where you stay", "How you move", "MICHELIN reach"], reach, cls="stack derived",
+       caption="Analysis, not data: the mode assignment follows the published Monorail route map and the venues' published addresses. Door-to-door minutes are deliberately absent. The underlying route map is linked above.")}
+
+<h2>If you land late: which venues you can still reach</h2>
+<p>Every deadline below is read off the operator's own published hours (captured 2026-11-28), not estimated. Where an operator publishes no closing time, the cell is blank rather than guessed. No airport-to-hotel travel time is added, because no operator publishes one (F-02) \u2014 so treat these as ceilings, not as a schedule.</p>
+{table(["Venue", "Closes / last entry (official)", "Latest sensible arrival", "What it means for your flight", "Source"], arrive,
+       caption="Closing times are quoted from each operator's page; the arrival deadline is the published closing or last-entry time stated plainly, with no transit time added because none is published (F-02).")}
+<div class="note warn">
+  <p><strong>The binding constraint is the Neon Museum, not the airport.</strong> On its own page it closes at
+  11 PM with last entry at 10 PM from September to May — which is your window — and the box office shuts an
+  hour before closing. A late-afternoon landing makes this a next-day activity, not a first-night one.</p>
+  <p><strong>The Conservatory has no published daily hours at all</strong>, only 2027 display dates, and it is
+  dark 7–12 March. Because it is free and open to walk through, it is the one venue that survives a late
+  arrival — but only on a date inside a show run.</p>
+</div>
 
 <h2>Why there is no travel-time column</h2>
 <ul class="clean">
@@ -925,7 +987,7 @@ def main():
         "hotels.html": build_hotels(hotels, rests),
         "booking.html": build_booking(booking, hotels),
         "activities.html": build_activities(acts),
-        "transit.html": build_transit(),
+        "transit.html": build_transit(acts),
         "questions.html": build_questions(questions),
         "suggestions.html": build_suggestions(suggestions),
         "flagged.html": build_flagged(flags),

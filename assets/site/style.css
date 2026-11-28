@@ -131,7 +131,25 @@ footer.site a{color:var(--ink-3)}
 
 /* misc */
 .src{font-size:.78rem;color:var(--ink-3)}
-.src a{margin-right:.5rem;white-space:nowrap}
+/* Source labels are long ("Official MGM Grand page - hours re-confirmed
+   (2026-11-28)"). nowrap made them overflow a 390px phone, so links wrap and
+   long tokens break instead. */
+.src a{margin-right:.5rem;overflow-wrap:anywhere;word-break:break-word}
+@media(min-width:700px){.src a{white-space:nowrap}}
+
+/* Long source URLs inside prose/cards must never force a horizontal scroll. */
+a{overflow-wrap:anywhere}
+td,th,p,li,summary,span.sub{overflow-wrap:anywhere}
+table{table-layout:auto;max-width:100%}
+.table-wrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+@media(max-width:640px){
+  /* Stacked cards: keep the label above the value and let values wrap. */
+  table.stack td{overflow-wrap:anywhere}
+  table.stack td::before{overflow-wrap:normal}
+  details{padding:.5rem .6rem}
+  h1{font-size:1.35rem}
+}
 hr.soft{border:0;border-top:1px solid var(--line);margin:1.4rem 0}
 .qid{font-variant-numeric:tabular-nums;color:var(--ink-3);font-weight:650}
 details{border:1px solid var(--line);border-radius:10px;padding:.55rem .75rem;background:#fff;margin:0 0 .55rem}

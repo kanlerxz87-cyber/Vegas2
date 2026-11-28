@@ -4,8 +4,8 @@
     {
       "name": "Bellagio Conservatory & Botanical Gardens",
       "area": "Center Strip — inside Bellagio",
-      "hours": "Display dates: Lunar New Year Jan 9 – Mar 6, 2027; gardens dark Mar 7–12; Spring Mar 13 – May 15, 2027. Daily opening hours not published on the captured page.",
-      "hoursStatus": "p",
+      "hours": "Display dates: Lunar New Year Jan 9 – Mar 6, 2027; gardens dark Mar 7–12; Spring Mar 13 – May 15, 2027. Daily opening hours not published on the captured page. RE-READ 2026-11-28: officially posted 2027 schedule — Lunar New Year show 1/9/2027 to 3/6/2027, then the garden goes DARK 3/7/2027–3/12/2027, and Spring runs 3/13/2027 to 5/15/2027. A trip on Mar 7–12 2027 would find no display at all. Later dark windows: 5/16–5/21, 9/12–9/17 and 11/7–11/12 2027. Free to walk through; the 14,000 sq ft display is open to the public, and a free virtual tour is published on the official page.",
+      "hoursStatus": "v",
       "price2": "",
       "priceNote": "No admission price is published on the captured page; the garden itself is presented as an open display. Not stated as free on the page, so left blank.",
       "transit": "0 min if staying at Bellagio; otherwise walkable from the center Strip. No transit time retrieved.",
@@ -16,6 +16,12 @@
       "note": "14,000 sq ft, seasonal installation changes five times a year. The Feb 15–18 window falls inside the Lunar New Year display, not a dark period — verified against the official show-date list.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official Bellagio page — 2027 show dates and dark dates (2026-11-28)",
+          "url": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html"
+        }
       ]
     },
     {
@@ -36,11 +42,25 @@
         {
           "label": "Caesars Entertainment — official YouTube (property-level)",
           "url": "https://www.youtube.com/user/caesarspalace"
+        },
+        {
+          "label": "Instagram @thelinq — The LINQ, the property that operates the High Roller (official footer link on the High Roller page)",
+          "url": "https://www.instagram.com/thelinq/"
+        },
+        {
+          "label": "YouTube /linqvegas — The LINQ official channel (same footer)",
+          "url": "https://www.youtube.com/user/linqvegas"
         }
       ],
       "socialStatus": "v",
       "note": "550 ft, largest observation wheel in North America, 28 cabins. Caesars Rewards Diamond/Seven Stars ride free; Platinum/Gold buy-one-get-one (limit 2/month). Warning: highroller.com is NOT this attraction (served unrelated content on 2026-11-27) — book only via the official Caesars page. Caesars Rewards Gold and Platinum members can buy one ticket and get one free (limit 2 tickets per month) — a genuine two-for-one for a couple. Seniors 65+ get $5 off Sun–Thu 12–5 PM at the box office. Individual outside beverages are allowed; glass, coolers and cases are not.",
-      "flagIds": []
+      "flagIds": [],
+      "sources": [
+        {
+          "label": "Official Caesars page — ticket price FAQ, LINQ social footer (2026-11-28)",
+          "url": "https://www.caesars.com/linq/things-to-do/attractions/high-roller"
+        }
+      ]
     },
     {
       "name": "The Mob Museum",
@@ -57,6 +77,12 @@
       "note": "Housed in the 1933 federal courthouse; four floors; working distillery and Prohibition-era bar downstairs. Online tickets are discounted vs. door per the official page.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official page — daily 9 AM–9 PM grid re-confirmed (2026-11-28)",
+          "url": "https://themobmuseum.org/plan-your-visit/"
+        }
       ]
     },
     {
@@ -84,9 +110,15 @@
         }
       ],
       "socialStatus": "v",
-      "note": "Outdoor Neon Boneyard; tours can be cancelled for lightning, high wind or heat above 100°F. February evening visits avoid the heat risk. From January 1, 2027 the museum may charge extra for arriving earlier or later than your selected ticket time, so book a specific slot and keep to it. Photography is personal phone/tablet snapshots ONLY — cameras, tripods and selfie sticks must be left in a vehicle or checked at the front desk. Outdoor collection: guided tours stop above 100°F, general admission closes above 105°F, the museum closes above 110°F.",
+      "note": "Outdoor Neon Boneyard; tours can be cancelled for lightning, high wind or heat above 100°F. February evening visits avoid the heat risk. From January 1, 2027 the museum may charge extra for arriving earlier or later than your selected ticket time, so book a specific slot and keep to it. Photography is personal phone/tablet snapshots ONLY — cameras, tripods and selfie sticks must be left in a vehicle or checked at the front desk. Outdoor collection: guided tours stop above 100°F, general admission closes above 105°F, the museum closes above 110°F. From January 1, 2027, arriving earlier or later than the selected ticket time MAY CARRY A HIGHER PRICE, payable before entry (official FAQ, read 2026-11-28) — with a fixed Feb 2027 slot, budget for it or book the exact time. Box office closes one hour before the posted closing time. The Boneyard is a fine-gravel outdoor surface, ADA-navigable; general admission closes above 105°F and the museum closes above 110°F, and guided tours do not run above 100°F.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official 'Your Visit' page — hours grid, socials, 2027 ticketing change (2026-11-28)",
+          "url": "https://neonmuseum.org/your-visit/"
+        }
       ]
     },
     {
@@ -102,7 +134,13 @@
       "social": [],
       "socialStatus": "u",
       "note": "Free-to-enter district. Viva Vision: 16.4M pixels, 1,375 × 90 ft canopy, 90 ft above the mall. Live music on 3 stages; SlotZilla zipline (Zip-Zilla seated / Super-Hero Zoom) paid.",
-      "flagIds": []
+      "flagIds": [],
+      "sources": [
+        {
+          "label": "Official site — entertainment nightly, calendar (2026-11-28)",
+          "url": "https://fremontstreetexperience.com/"
+        }
+      ]
     },
     {
       "name": "Sphere",
@@ -141,18 +179,37 @@
     {
       "name": "Omega Mart at AREA15",
       "area": "Off-Strip (AREA15)",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "The official Meow Wolf Las Vegas page states only 'Days and Times vary. Please check availability' — no weekly grid is published, so hours stay unverified (2026-11-28).",
+      "hoursStatus": "p",
       "price2": "",
       "priceNote": "",
       "transit": "Near the west side of the Strip; no public-transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.meowwolf.com/visit/las-vegas",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @omegamartusa (linked from the official Omega Mart footer)",
+          "url": "https://www.instagram.com/omegamartusa/"
+        },
+        {
+          "label": "X @omegamartusa (linked from the official Omega Mart footer)",
+          "url": "https://twitter.com/omegamartusa"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Immersive art installation; timed tickets.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official Meow Wolf page — 'Days and Times vary', Instagram/X in footer (2026-11-28)",
+          "url": "https://meowwolf.com/visit/las-vegas"
+        },
+        {
+          "label": "Official Omega Mart site — social accounts in footer (2026-11-28)",
+          "url": "https://www.omegamart.com/"
+        }
       ]
     },
     {
@@ -179,6 +236,12 @@
       "note": "Outside the walkable/transit core; treat as a full-day car trip. America the Beautiful / Interagency passes are NOT accepted at Hoover Dam — it is self-funded and receives no Federal Lands Recreation Enhancement Act revenue. The Guided Dam Tour includes the historic tunnels, the original elevator, the inspection tunnels and the Powerplant tour; it is wheelchair accessible but not stroller or scooter accessible.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official Bureau of Reclamation page — social footer, event restrictions (2026-11-28)",
+          "url": "https://www.usbr.gov/lc/hooverdam/"
+        }
       ]
     },
     {
@@ -202,6 +265,10 @@
         {
           "label": "Southern Nevada Conservancy — official Red Rock visitor information",
           "url": "https://www.redrockcanyonlv.org/visitor-information/"
+        },
+        {
+          "label": "Official BLM page — timed entry re-checked (2026-11-28; the BLM host did not render for the fetcher, so the previously captured wording stands unchanged)",
+          "url": "https://www.blm.gov/visit/red-rock-canyon"
         }
       ],
       "alsoOfficial": [
@@ -215,18 +282,24 @@
       "hours": "Park open daily sunrise to sunset, 365 days a year. Visitor Center daily 9:00 AM–4:00 PM. Park office Mon–Fri 9–4, closed state holidays. Annual maintenance closure Dec 1–14 (outside your window). Annual trail closures May 15 – Sep 30 (outside your window, so Fire Wave, White Domes, Pastel Canyon and the other listed trails ARE open in Feb/Mar).",
       "hoursStatus": "v",
       "price2": "$15 per vehicle",
-      "priceNote": "VERIFIED Nevada State Parks: entrance $10.00, or $15.00 for NON-NEVADA vehicles. The fee is per vehicle, so two adults in one rental car pay $15 total. No reservation is required for day use.",
+      "priceNote": "VERIFIED Nevada State Parks: entrance $10.00, or $15.00 for NON-NEVADA vehicles. The fee is per vehicle, so two adults in one rental car pay $15 total. No reservation is required for day use. CONFLICT RE-READ 2026-11-28: the same official parks.nv.gov page now prints the day-use entrance fee as '$10.00 ($15.00 for Non-NV Vehicles)' while its group-use section prints $20/vehicle/night for Nevada residents and $25/vehicle/night for non-residents. The earlier reading of this page recorded $15, the newer reading records $10 for an in-state vehicle. Both figures come from the same first-party page, so the day-use fee is treated as $10–$15 per vehicle and must be confirmed at the gate or on the reservation page before it is budgeted. Reservations are NOT required for day use.",
       "transit": "Car required. Travel time not verified; treat as a dedicated day trip.",
       "transitStatus": "u",
       "official": "https://parks.nv.gov/parks/valley-of-fire",
       "social": [],
       "socialStatus": "u",
-      "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option. OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30).",
+      "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option. OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30). Also from the official page: drones and remote-controlled aircraft are prohibited; pets must be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to specific areas designated by the Visitor Center; wifi is available at the park but is a paid plan.",
       "flagIds": [
         "F-16"
       ],
       "alsoOfficial": [
         "https://parks.nv.gov/news/temporary-closure-of-the-west-entrance-at-valley-of-fire"
+      ],
+      "sources": [
+        {
+          "label": "Official Nevada State Parks page — fees, hours, closures re-read (2026-11-28)",
+          "url": "https://parks.nv.gov/parks/valley-of-fire"
+        }
       ]
     },
     {
@@ -242,7 +315,13 @@
       "social": [],
       "socialStatus": "u",
       "note": "1,000+ fountains; water to 460 ft; spans 1,000+ ft. Outdoor show — weather cancellations possible.",
-      "flagIds": []
+      "flagIds": [],
+      "sources": [
+        {
+          "label": "Official Bellagio page — display times re-confirmed (2026-11-28)",
+          "url": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html"
+        }
+      ]
     },
     {
       "name": "Shark Reef Aquarium (Mandalay Bay)",
@@ -257,7 +336,13 @@
       "social": [],
       "socialStatus": "u",
       "note": "Anytime tickets valid any time on date of entry (limited quantity). Nevada-resident $3 discount at the box office with NV ID; aquarium may close early for private events.",
-      "flagIds": []
+      "flagIds": [],
+      "sources": [
+        {
+          "label": "Official Mandalay Bay page — admission prices, hours, last entry (2026-11-28)",
+          "url": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html"
+        }
+      ]
     },
     {
       "name": "KÀ by Cirque du Soleil (MGM Grand)",
@@ -269,11 +354,22 @@
       "transit": "Center Strip at MGM Grand. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.cirquedusoleil.com/ka",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @ka.cirquedusoleil (linked from the official show page)",
+          "url": "https://www.instagram.com/ka.cirquedusoleil"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Epic story of imperial twins; Wushu, Chinese Opera, Capoeira, Wheel of Death (official Cirque page). Showtimes and prices not captured.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official Cirque du Soleil page — Instagram link (2026-11-28)",
+          "url": "https://www.cirquedusoleil.com/ka"
+        }
       ]
     },
     {
@@ -307,6 +403,12 @@
       "note": "Zip Line: seated, launches from 77 ft, glides three blocks, rider 50–300 lbs. Zoom Line: belly-down head-up, launches from 11 stories, five blocks, rider 80–300 lbs. Maximum height 6'8\" for either. ADA elevators available. Operating hours were not exposed on the retrieved official page, so they are left blank.",
       "flagIds": [
         "F-32"
+      ],
+      "sources": [
+        {
+          "label": "Official FAQ — no operating hours published; 1-hour process, 4 lanes (2026-11-28)",
+          "url": "https://fremontstreetexperience.com/slotzilla-zip-line/"
+        }
       ]
     }
   ]

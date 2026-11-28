@@ -584,6 +584,23 @@
           "url": "https://github.com/kanlerxz87-cyber/Vegas2/pull/22"
         }
       ]
+    },
+    {
+      "id": "F-37",
+      "severity": "medium",
+      "title": "Stubborn Seed: the official Resorts World page and the previously published planner contradict each other on days and on price",
+      "detail": "The official Resorts World page for Stubborn Seed, read on 2026-11-28, states 'Main Dining Room Daily 5:00 PM - 10:00 PM' and 'Bar & Lounge Daily 4:00 PM - 10:00 PM' — i.e. open seven days. The published planner row carried 'Sun & Wed–Thu 5–9 PM; Fri–Sat 5–10 PM; Closed Mon–Tue', which would have the restaurant dark on two nights of a Mon Feb 15 → Mon Feb 22 2027 stay. The same row also carried a tasting price of '$95/person + $65 pairing' that this session could NOT find on the official page; the official page instead links a dated tasting-menu PDF and states no figure in HTML. Per the no-overwrite rule the prior wording is retained verbatim in the row note and the verified official wording is shown beside it, rather than either being deleted.",
+      "effect": "Do not treat the Mon/Tue closure or the $95/$65 tasting price as fact. The official page says daily 5–10 PM; the price must be read from the official tasting-menu PDF or confirmed by phone (702-676-8062) before it is budgeted. Resorts World is also the only stop where the hotel and a MICHELIN-listed restaurant share a campus with no transit leg.",
+      "source": [
+        {
+          "label": "Official Resorts World page — 'Main Dining Room Daily 5:00 PM - 10:00 PM' (read 2026-11-28)",
+          "url": "https://www.rwlasvegas.com/dining/stubborn-seed/"
+        },
+        {
+          "label": "Official tasting-menu PDF linked from that page (not machine-readable here)",
+          "url": "https://www.rwlasvegas.com/pdf/stubborn-seed-tasting-menu-11-25-2026/"
+        }
+      ]
     }
   ]
 }

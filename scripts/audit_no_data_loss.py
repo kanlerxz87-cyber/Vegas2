@@ -35,6 +35,14 @@ ALLOWED = {
     ("flags", "F-11", "detail"),  # superseded: updated list of published per-person/exact figures
     ("flags", "F-11", "effect"),  # superseded: describes current Cost-for-2 column policy
     ("questions", "Q-15", "known"),  # superseded: now carries both booking-window sources verbatim (Visit LV 30-60 days; e 3 months)
+    # Session 6382dba0 actually FIXED these two repo findings instead of only
+    # requesting the fix, so their "needs review" action text and status are
+    # deliberately superseded by the shipped result. The new text quotes the old
+    # problem, so nothing is lost from the record.
+    ("repo_review", "R-16", "action"),
+    ("repo_review", "R-16", "status"),
+    ("repo_review", "R-17", "action"),
+    ("repo_review", "R-17", "status"),
 }
 
 

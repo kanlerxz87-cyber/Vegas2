@@ -20,9 +20,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Verify the fieldwork merge is idempotent
+      - name: Verify the fieldwork merges are idempotent
         run: |
+          # Run every merge twice. A marker that does not literally appear in the
+          # text it guards makes append_once() duplicate prose on the second run,
+          # which this comparison catches. (It caught two such bugs in session
+          # 6382dba0 while the pass was being written.)
           python3 scripts/merge_fieldwork_4d7b292f.py
+          python3 scripts/merge_fieldwork_6382dba0.py
+          cp -r data/plan /tmp/plan-once
+          python3 scripts/merge_fieldwork_4d7b292f.py
+          python3 scripts/merge_fieldwork_6382dba0.py
+          diff -r /tmp/plan-once data/plan
           git diff --exit-code -- data/plan
       - name: Prove the merge discarded no other session's data
         run: |
@@ -32,6 +41,10 @@ jobs:
         run: python3 scripts/build_plan.py
       - name: Verify data, sources, links and markup
         run: python3 scripts/check_plan.py
+      - name: Verify the legacy docs/ site data and links
+        run: python3 scripts/check_site.py
+      - name: Verify root page structure against the canonical generator
+        run: python3 scripts/check_root_site.py
       - name: Fail if committed pages are out of date
         run: |
           git diff --exit-code -- assets/site/style.css index.html restaurants.html hotels.html booking.html activities.html transit.html questions.html suggestions.html flagged.html sources.html repo-review.html
