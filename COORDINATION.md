@@ -743,3 +743,35 @@ All five claimed tasks are complete. The subsite is published, merged and verifi
 - Hours that the operator genuinely does not publish: Guy Savoy, Kame Omakase, Sparrow + Wolf, Yen Viet Kitchen (restaurants); Sphere, Venetian gondolas, KÀ, SlotZilla, Omega Mart (activities). Blank by design.
 - Taxes are still excluded from every hotel total (F-03); no dated rate exists for Venetian / MGM / Cosmopolitan / Wynn / Bellagio (F-05/F-06); no official door-to-door transit time exists (F-02).
 
+
+## COMPLETION 2026-11-28 · session `6382dba0` — three PRs merged, site verified live
+
+| PR | Commit | Merged (UTC) | What it carried |
+|---|---|---|---|
+| [#42](https://github.com/kanlerxz87-cyber/Vegas2/pull/42) | `6ca8d5c` | 2026-11-28T09:00:37Z | The fieldwork pass: verified hours/prices/socials, arrival-deadline table, CI double-run guard, mobile CSS fix |
+| [#43](https://github.com/kanlerxz87-cyber/Vegas2/pull/43) | `7cfcf55` | 2026-11-28T09:08:49Z | Global capture date corrected to 2026-11-28; superseded Valley of Fire finding fixed |
+| [#44](https://github.com/kanlerxz87-cyber/Vegas2/pull/44) | `4ee2b3f` | 2026-11-28T09:14:11Z | Duplicate executive-summary bullet, root-caused to a cross-session merge guard |
+
+All four CI checks passed on every PR before merge (`Build and verify the root planner`, `Validate and rebuild isolated site`, `build`, `validate`). No PR was merged on a failing or pending check.
+
+**Pages deploy:** `gh api repos/kanlerxz87-cyber/Vegas2/pages/builds/latest` → commit **`4ee2b3f`**, status **`built`**, `error: null`. Source remains legacy `main` at `/`. Live: https://kanlerxz87-cyber.github.io/Vegas2/
+
+**Live verification (fetched from the deployed site, not the sandbox):**
+
+- `index.html?rev=4ee2b3f` — capture date reads **2026-11-28**; **17** executive findings; the Valley of Fire bullet carries the corrected **$10–$15 pending confirmation** wording; **no duplicated bullet**; the "Act before 2026-12-04" Wynn banner is intact.
+- `transit.html` — the **arrival-deadline table** renders with 10 rows, each linking the operator page the closing time came from; four rows correctly show *"— not published"*.
+- `flagged.html` — F-01…F-37 all present with their own source links, including this pass's F-37.
+
+**A note on Pages caching:** the bare `/Vegas2/index.html` served a stale copy for several minutes after deploy while `?rev=<sha>` served the new one. The build was already reported `built`; this is CDN caching, not a deploy failure. Verification used the cache-busting query.
+
+### The three bugs that only reading the deployed page could find
+
+Worth recording, because the local gates were green for all three:
+
+1. **`AS_OF` was still `2026-11-27`.** A script edit in an earlier step had aborted before the assignment (`assert` on a count), so the change silently never applied while the commit message claimed it did. Every page told the reader the figures were captured the day before the pass ran.
+2. **A superseded finding was still published.** Two versions of the same bullet coexisted — one with the withdrawn `$15 per non-Nevada vehicle` claim, one corrected.
+3. **Re-running `merge_fieldwork_4d7b292f.py` resurrected that stale claim.** Its `if a not in kf: kf.append(a)` guard re-added the compound Red Rock/Valley of Fire finding whenever the exact original string was absent — so correcting the sentence guaranteed the next run would re-append the uncorrected version. Fixed to skip when *either* wording is present.
+
+**Lesson applied:** the local checker suite validates flags, questions, counts, row sourcing and markup, but not the uniqueness or freshness of `keyFindings`. The property that catches this class of bug is idempotency under a **second** run of every merge script — which the workflow now enforces.
+
+**Status: DONE.** No task left claimed by this session. Open items are the brief's own unanswered questions (Q-01/Q-02/Q-04) plus the values the operators genuinely do not publish, all listed on `questions.html` and `flagged.html`.
