@@ -236,6 +236,25 @@ def main():
                     if "data-label=" not in td:
                         fail(f"{page}: stacked td without data-label")
 
+    # --- every row of a data table must link at least one official source itself
+    # (the brief's rule: every table row carries a source link, not just the page).
+    # Exempt: narrative/decision tables that are not data rows.
+    # restaurants/hotels/activities/sources hold sourced data rows. flagged.html is excluded
+    # because one flag (F-13) documents a contradiction inside the trip brief itself and
+    # therefore has no external source to cite.
+    DATA_PAGES = {"restaurants.html", "hotels.html", "activities.html", "sources.html"}
+    for page in DATA_PAGES:
+        text = (ROOT / page).read_text(encoding="utf-8")
+        for cap_match in re.finditer(r"<caption>(.*?)</caption>", text, re.S):
+            pass
+        for body in re.findall(r'<table class="stack(?! derived)">.*?<tbody>(.*?)</tbody>', text, re.S):
+            for i, tr in enumerate(re.findall(r"<tr>(.*?)</tr>", body, re.S)):
+                if "<td" not in tr:
+                    continue
+                if "http://" not in tr and "https://" not in tr:
+                    fail(f"{page}: data row {i} carries no source link "
+                         f"(every table row must be self-sourced)")
+
     # --- counts surfaced on the site
     idx = (ROOT / "restaurants.html").read_text(encoding="utf-8")
     for label, n in (("Two-star", 1), ("One-star", 3), ("Bib Gourmand", 3), ("Listed / recommended", 17)):

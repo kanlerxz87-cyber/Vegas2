@@ -31,6 +31,25 @@ OFFICIAL_DOMAINS = {
     "usbr.gov", "facebook.com", "youtube.com", "instagram.com", "blm.gov", "x.com",
     "recreation.gov", "parks.nv.gov", "neonmuseum.org", "api.github.com", "github.com",
     "stocktitan.net",  # republished MGM Resorts press release (labelled in data)
+
+    # --- added 2026-11-28 (session 6382dba0). Every domain below is a first-party
+    # operator/resort/venue/agency site that the canonical planner already cites as
+    # the OFFICIAL source for a row. Their absence from the list was a stale-allowlist
+    # false positive (repo finding R-16), not an unverified source.
+    "venetianlasvegas.com",      # The Venetian Resort / The Palazzo (hotel + 4 restaurants)
+    "rtcsnv.com",                # RTC of Southern Nevada — official transit agency
+    "lvmonorail.com",            # Las Vegas Monorail — official
+    "themobmuseum.org", "admission.themobmuseum.org",
+    "cirquedusoleil.com",        # KÀ
+    "thespherevegas.com", "thesphere.com",
+    "meowwolf.com", "omegamart.com",
+    "fremontstreetexperience.com", "vegasexperience.com",
+    "estherslv.com", "animabyedo.com", "kabutolv.com", "kameomakase.com", "sushikame.com",
+    "lamaiilv.com", "partage.vegas", "bestchickenpho.com", "goldcoast.boydgaming.com",
+    "soulbellybbq.com", "sparrowandwolflv.com", "yenvietkitchen.com",
+    "southpointcasino.com", "be.synxis.com",   # South Point's own booking engine
+    "redrockcanyonlv.org",       # Southern Nevada Conservancy (BLM partner visitor page)
+    "opm.gov", "michelin.com",
 }
 SECONDARY_DOMAINS = {
     "memesita.com", "lasvegasmagazine.com", "smartervegas.com", "luminafrontier.ai",
@@ -75,6 +94,10 @@ def domain_of(url):
     if host.startswith("www."):
         host = host[4:]
     return host
+
+
+# Official agency document hosts that share a registrable domain but not the apex.
+AGENCY_SUBDOMAINS = {"rtcws.rtcsnv.com"}
 
 
 def in_domains(host, domains):

@@ -391,6 +391,7 @@ def build_restaurants(rests, flags):
         ["Resorts World", "1", "Stubborn Seed", "Recommended (listed)"],
         ["Chinatown / Downtown / off-Strip", "11", "Esther's Kitchen · Yen Viet · Anima · Kabuto · Kame · Lamaii · Partage · Pho Ga Bac Bac · Ping Pang Pong · Soulbelly · Sparrow and Wolf", "No casino campus; bus or car from the Strip"],
     ]
+    cluster = [row + [ext(guide["source"], "Official 2026 list")] for row in cluster]
     body = f"""
 <div class="note">
   <p><strong>How tiers are shown.</strong> The official Las Vegas MICHELIN page lists {guide['cityList']}. A <span class="badge b-star">star</span> is a star. <span class="badge b-bib">Bib Gourmand</span> is the value category — it is <em>not</em> a star. <span class="badge b-list">Listed</span> means the restaurant appears in the guide's recommended selection with no star. The official page's own wording for non-starred, non-Bib entries is "Recommended by MICHELIN Guide"; this site labels those rows "Listed in guide" and never calls them starred.</p>
@@ -407,8 +408,8 @@ def build_restaurants(rests, flags):
 </div>
 
 <h2>Restaurant clusters by property</h2>
-{table(["Property", "MICHELIN count", "Restaurants", "Notes"], cluster,
-       caption="Use this to pick a hotel. Counts come from the venue field of each row in the table below.")}
+{table(["Property", "MICHELIN count", "Restaurants", "Notes", "Source"], cluster,
+       caption="Use this to pick a hotel. Each count is read from the venue field of the 24 rows below; the property-to-restaurant mapping itself is in the official 2026 MICHELIN list, linked on every row.")}
 
 <h2>All 24 restaurants</h2>
 {table(["Restaurant", "2026 award", "Cuisine / area", "Open (days & hours)", "Cost for 2 adults", "Official link", "Social / video"], rows,
@@ -447,7 +448,9 @@ def build_hotels(hotels, rests):
             f'{esc(h["rooms"]) if h["rooms"] else blank_marker("room types not captured")}<span class="sub">{vbadge(h["roomStatus"])}</span>',
             f'{esc(h["bath"]) if h["bath"] else blank_marker("bathroom detail not captured")}',
             price,
-            vbadge("v" if h["price7"] else "u", {"v":"Verified","u":"Unverified"}),
+            f'{vbadge("v" if h["price7"] else "u", {"v":"Verified","u":"Unverified"})}'
+            f'<span class="sub">{src_links(h["sources"][:3])}'
+            f'{" (+%d more)" % (len(h["sources"]) - 3) if len(h["sources"]) > 3 else ""}</span>',
         ])
     detail = []
     for i, h in enumerate(rows_sorted, 1):
@@ -464,7 +467,9 @@ def build_hotels(hotels, rests):
 </details>""")
     priced = [h for h in hotels["rows"] if h["price7"]]
     value_rank = sorted(priced, key=lambda h: h["price7"]["total"])
-    value_rows = [[str(i), esc(h["name"]), esc(h["price7"]["room"]), f'${h["price7"]["total"]:,}', esc(h["price7"]["nightly"])] for i, h in enumerate(value_rank, 1)]
+    value_rows = [[str(i), esc(h["name"]), esc(h["price7"]["room"]), f'${h["price7"]["total"]:,}', esc(h["price7"]["nightly"]),
+                   src_links([s for s in h["sources"] if "book" in s["url"].lower() or "rate" in s["url"].lower() or "reservation" in s["url"].lower()] or h["sources"][:1])]
+                  for i, h in enumerate(value_rank, 1)]
     body = f"""
 <div class="note warn">
   <p><strong>Ranking rule.</strong> {esc(hotels['rankMethod'])}</p>
@@ -476,7 +481,7 @@ def build_hotels(hotels, rests):
        caption="Blank = the official page did not state it or the engine served no rate. It does not mean the feature is absent.", num_cols=(0,))}
 
 <h2>Value ranking (verified prices only)</h2>
-{table(["#", "Hotel", "Room used", "7 nights", "Nightly incl. resort fee"], value_rows,
+{table(["#", "Hotel", "Room used", "7 nights", "Nightly incl. resort fee", "Rate source"], value_rows,
        caption="Same dates, same party. Tax is not included because no engine published it.", num_cols=(0, 3))}
 
 <h2>Why the 1-hour rule does not rank these hotels</h2>

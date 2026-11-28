@@ -57,6 +57,12 @@
       "note": "Housed in the 1933 federal courthouse; four floors; working distillery and Prohibition-era bar downstairs. Online tickets are discounted vs. door per the official page.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official page — daily 9 AM–9 PM grid re-confirmed (2026-11-28)",
+          "url": "https://themobmuseum.org/plan-your-visit/"
+        }
       ]
     },
     {
@@ -99,10 +105,25 @@
       "transit": "Downtown pedestrian mall. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.vegasexperience.com/",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @fremontstreet (official account)",
+          "url": "https://www.instagram.com/fremontstreet/"
+        },
+        {
+          "label": "X @FremontStreet (official account)",
+          "url": "https://x.com/FremontStreet"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Free-to-enter district. Viva Vision: 16.4M pixels, 1,375 × 90 ft canopy, 90 ft above the mall. Live music on 3 stages; SlotZilla zipline (Zip-Zilla seated / Super-Hero Zoom) paid.",
-      "flagIds": []
+      "flagIds": [],
+      "sources": [
+        {
+          "label": "Official site — entertainment nightly, calendar (2026-11-28)",
+          "url": "https://fremontstreetexperience.com/"
+        }
+      ]
     },
     {
       "name": "Sphere",
@@ -141,18 +162,37 @@
     {
       "name": "Omega Mart at AREA15",
       "area": "Off-Strip (AREA15)",
-      "hours": "",
-      "hoursStatus": "u",
+      "hours": "The official Meow Wolf Las Vegas page states only 'Days and Times vary. Please check availability' — no weekly grid is published, so hours stay unverified (2026-11-28).",
+      "hoursStatus": "p",
       "price2": "",
       "priceNote": "",
       "transit": "Near the west side of the Strip; no public-transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.meowwolf.com/visit/las-vegas",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @omegamartusa (linked from the official Omega Mart footer)",
+          "url": "https://www.instagram.com/omegamartusa/"
+        },
+        {
+          "label": "X @omegamartusa (linked from the official Omega Mart footer)",
+          "url": "https://twitter.com/omegamartusa"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Immersive art installation; timed tickets.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official Meow Wolf page — 'Days and Times vary', Instagram/X in footer (2026-11-28)",
+          "url": "https://meowwolf.com/visit/las-vegas"
+        },
+        {
+          "label": "Official Omega Mart site — social accounts in footer (2026-11-28)",
+          "url": "https://www.omegamart.com/"
+        }
       ]
     },
     {
@@ -269,11 +309,22 @@
       "transit": "Center Strip at MGM Grand. No transit time retrieved.",
       "transitStatus": "u",
       "official": "https://www.cirquedusoleil.com/ka",
-      "social": [],
-      "socialStatus": "u",
+      "social": [
+        {
+          "label": "Instagram @ka.cirquedusoleil (linked from the official show page)",
+          "url": "https://www.instagram.com/ka.cirquedusoleil"
+        }
+      ],
+      "socialStatus": "v",
       "note": "Epic story of imperial twins; Wushu, Chinese Opera, Capoeira, Wheel of Death (official Cirque page). Showtimes and prices not captured.",
       "flagIds": [
         "F-16"
+      ],
+      "sources": [
+        {
+          "label": "Official Cirque du Soleil page — Instagram link (2026-11-28)",
+          "url": "https://www.cirquedusoleil.com/ka"
+        }
       ]
     },
     {
@@ -307,6 +358,12 @@
       "note": "Zip Line: seated, launches from 77 ft, glides three blocks, rider 50–300 lbs. Zoom Line: belly-down head-up, launches from 11 stories, five blocks, rider 80–300 lbs. Maximum height 6'8\" for either. ADA elevators available. Operating hours were not exposed on the retrieved official page, so they are left blank.",
       "flagIds": [
         "F-32"
+      ],
+      "sources": [
+        {
+          "label": "Official FAQ — no operating hours published; 1-hour process, 4 lanes (2026-11-28)",
+          "url": "https://fremontstreetexperience.com/slotzilla-zip-line/"
+        }
       ]
     }
   ]
