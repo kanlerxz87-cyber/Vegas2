@@ -242,11 +242,12 @@ def main():
     # restaurants/hotels/activities/sources hold sourced data rows. flagged.html is excluded
     # because one flag (F-13) documents a contradiction inside the trip brief itself and
     # therefore has no external source to cite.
-    DATA_PAGES = {"restaurants.html", "hotels.html", "activities.html", "sources.html"}
+    # transit.html joined this set on 2026-11-28 when the arrival-deadline table
+    # was added: each of its rows cites the operator page the closing time came from.
+    DATA_PAGES = {"restaurants.html", "hotels.html", "activities.html", "sources.html",
+                  "transit.html"}
     for page in DATA_PAGES:
         text = (ROOT / page).read_text(encoding="utf-8")
-        for cap_match in re.finditer(r"<caption>(.*?)</caption>", text, re.S):
-            pass
         for body in re.findall(r'<table class="stack(?! derived)">.*?<tbody>(.*?)</tbody>', text, re.S):
             for i, tr in enumerate(re.findall(r"<tr>(.*?)</tr>", body, re.S)):
                 if "<td" not in tr:
