@@ -21,6 +21,7 @@ Idempotent: safe to re-run.
 """
 import json
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PLAN = ROOT / "data" / "plan"
@@ -99,6 +100,23 @@ def set_hours(row, text, status="v"):
     row["hoursStatus"] = status
     return True
 
+
+def dedupe_sentences(text):
+    """Drop repeated sentences produced by an append whose marker did not match.
+
+    This pass shipped two such bugs before the CI double-run guard existed, so the
+    already-published prose is cleaned here, deterministically, rather than by hand.
+    Sentences are compared on a normalised form; first occurrence wins.
+    """
+    parts = re.split(r"(?<=[.!?])\s+", (text or "").strip())
+    seen, out = set(), []
+    for part in parts:
+        key = re.sub(r"\s+", " ", part.strip().lower())
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        out.append(part.strip())
+    return " ".join(out)
 
 def append_once(existing, marker, addition):
     """Append prose only when the marker is absent, so re-runs stay byte-identical."""
@@ -470,6 +488,7 @@ def activities():
         "be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to "
         "specific areas designated by the Visitor Center; wifi is available at the park but is a paid "
         "plan.")
+    r["note"] = dedupe_sentences(r["note"])
     add_source(r, f"Official Nevada State Parks page \u2014 fees, hours, closures re-read ({CAP})",
                SOURCES["vof"])
 
@@ -611,10 +630,21 @@ def meta():
     save("meta", d)
 
 
+def cleanup():
+    """One-off repair of prose duplicated by the two marker bugs fixed above."""
+    d = load("activities")
+    for row in d["rows"]:
+        for field in ("note", "priceNote", "hours"):
+            if isinstance(row.get(field), str):
+                row[field] = dedupe_sentences(row[field])
+    save("activities", d)
+
+
 if __name__ == "__main__":
     restaurants()
     activities()
     flags()
     repo_review()
     meta()
+    cleanup()
     print("merged fieldwork for session 6382dba0")
