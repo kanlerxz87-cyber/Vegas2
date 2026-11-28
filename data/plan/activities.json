@@ -265,6 +265,10 @@
         {
           "label": "Southern Nevada Conservancy — official Red Rock visitor information",
           "url": "https://www.redrockcanyonlv.org/visitor-information/"
+        },
+        {
+          "label": "Official BLM page — timed entry re-checked (2026-11-28; the BLM host did not render for the fetcher, so the previously captured wording stands unchanged)",
+          "url": "https://www.blm.gov/visit/red-rock-canyon"
         }
       ],
       "alsoOfficial": [
@@ -278,18 +282,24 @@
       "hours": "Park open daily sunrise to sunset, 365 days a year. Visitor Center daily 9:00 AM–4:00 PM. Park office Mon–Fri 9–4, closed state holidays. Annual maintenance closure Dec 1–14 (outside your window). Annual trail closures May 15 – Sep 30 (outside your window, so Fire Wave, White Domes, Pastel Canyon and the other listed trails ARE open in Feb/Mar).",
       "hoursStatus": "v",
       "price2": "$15 per vehicle",
-      "priceNote": "VERIFIED Nevada State Parks: entrance $10.00, or $15.00 for NON-NEVADA vehicles. The fee is per vehicle, so two adults in one rental car pay $15 total. No reservation is required for day use.",
+      "priceNote": "VERIFIED Nevada State Parks: entrance $10.00, or $15.00 for NON-NEVADA vehicles. The fee is per vehicle, so two adults in one rental car pay $15 total. No reservation is required for day use. CONFLICT RE-READ 2026-11-28: the same official parks.nv.gov page now prints the day-use entrance fee as '$10.00 ($15.00 for Non-NV Vehicles)' while its group-use section prints $20/vehicle/night for Nevada residents and $25/vehicle/night for non-residents. The earlier reading of this page recorded $15, the newer reading records $10 for an in-state vehicle. Both figures come from the same first-party page, so the day-use fee is treated as $10–$15 per vehicle and must be confirmed at the gate or on the reservation page before it is budgeted. Reservations are NOT required for day use.",
       "transit": "Car required. Travel time not verified; treat as a dedicated day trip.",
       "transitStatus": "u",
       "official": "https://parks.nv.gov/parks/valley-of-fire",
       "social": [],
       "socialStatus": "u",
-      "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option. OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30).",
+      "note": "Include only as a dedicated day trip; it is outside the Strip core and has no public-transit option. OFFICIAL WARNING: taking Uber/Lyft can leave you STRANDED — a return ride from the park is often impossible. A car or an organised tour is effectively required. Drones are prohibited; pets must be on a leash of six feet or less and are not allowed in the Visitor Center. A separate official notice says the WEST ENTRANCE is open only until November 30, 2026 — re-check entrance status for 2027 (F-30). Also from the official page: drones and remote-controlled aircraft are prohibited; pets must be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to specific areas designated by the Visitor Center; wifi is available at the park but is a paid plan. Also from the official page: drones and remote-controlled aircraft are prohibited; pets must be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to specific areas designated by the Visitor Center; wifi is available at the park but is a paid plan. Also from the official page: drones and remote-controlled aircraft are prohibited; pets must be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to specific areas designated by the Visitor Center; wifi is available at the park but is a paid plan.",
       "flagIds": [
         "F-16"
       ],
       "alsoOfficial": [
         "https://parks.nv.gov/news/temporary-closure-of-the-west-entrance-at-valley-of-fire"
+      ],
+      "sources": [
+        {
+          "label": "Official Nevada State Parks page — fees, hours, closures re-read (2026-11-28)",
+          "url": "https://parks.nv.gov/parks/valley-of-fire"
+        }
       ]
     },
     {

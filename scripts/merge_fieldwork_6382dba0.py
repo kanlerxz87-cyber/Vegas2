@@ -60,6 +60,8 @@ SOURCES = {
     "sharkreef": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
     "fountains": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
     "usbr": "https://www.usbr.gov/lc/hooverdam/",
+    "vof": "https://parks.nv.gov/parks/valley-of-fire",
+    "vdara": "https://www.venetianlasvegas.com/attractions/gondola-rides.html",
 }
 
 
@@ -445,6 +447,37 @@ def activities():
         "above 100\u00b0F.")
     add_source(r, f"Official 'Your Visit' page \u2014 hours grid, socials, 2027 ticketing change ({CAP})",
                "https://neonmuseum.org/your-visit/")
+
+    # Valley of Fire — CORRECTION: the 2nd official reading of the fee page shows
+    # "$10.00 ($15.00 for Non-NV Vehicles)" alongside a group-camping rate of
+    # $20 (resident) / $25 (non-resident) per vehicle per night. The row had
+    # carried $15; the two readings do not reconcile, so the newer one is shown
+    # and the conflict is stated instead of silently picking a number.
+    r = by(rows, "name", "Valley of Fire State Park")
+    r["priceNote"] = append_once(
+        r.get("priceNote"),
+        "CONFLICT RE-READ 2026-11-28",
+        "CONFLICT RE-READ 2026-11-28: the same official parks.nv.gov page now prints the day-use "
+        "entrance fee as '$10.00 ($15.00 for Non-NV Vehicles)' while its group-use section prints "
+        "$20/vehicle/night for Nevada residents and $25/vehicle/night for non-residents. The earlier "
+        "reading of this page recorded $15, the newer reading records $10 for an in-state vehicle. Both "
+        "figures come from the same first-party page, so the day-use fee is treated as $10\u2013$15 per "
+        "vehicle and must be confirmed at the gate or on the reservation page before it is budgeted. "
+        "Reservations are NOT required for day use.",
+    )
+    r["note"] = append_once(r.get("note"), "Drone use is prohibited",
+        "Also from the official page: drones and remote-controlled aircraft are prohibited; pets must "
+        "be leashed at 6 ft or less and are barred from the Visitor Center; rock climbing is limited to "
+        "specific areas designated by the Visitor Center; wifi is available at the park but is a paid "
+        "plan.")
+    add_source(r, f"Official Nevada State Parks page \u2014 fees, hours, closures re-read ({CAP})",
+               SOURCES["vof"])
+
+    # Red Rock — re-confirm the timed-entry requirement from the official page.
+    r = by(rows, "name", "Red Rock Canyon National Conservation Area")
+    add_source(r, f"Official BLM page \u2014 timed entry re-checked ({CAP}; the BLM host did not render "
+                  "for the fetcher, so the previously captured wording stands unchanged)",
+               "https://www.blm.gov/visit/red-rock-canyon")
 
     # Hoover Dam — the Bureau of Reclamation's own social accounts are in the site footer.
     r = by(rows, "name", "Hoover Dam")
