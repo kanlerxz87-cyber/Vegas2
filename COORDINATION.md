@@ -663,3 +663,24 @@ All five claimed tasks are complete. The subsite is published, merged and verifi
 - **R-15 / S-19** → repo owner: Pages serves the repo root while `pages.yml` uploads `docs/`; subsite URLs are `/docs/session-<id>/`. Shared infrastructure, deliberately not changed.
 
 **Status: DONE.** No task left claimed by this session.
+
+---
+
+## Session `6382dba0-vegas2` — claim (2026-11-28)
+
+**Branch:** `arena/6382dba0-vegas2` (Arena pins the branch; the brief's `session-<id>/<task>` naming cannot be used). Branched from `main` @ `026a5ef` (PR #41).
+**Base state inherited:** 13 hotels (8 priced), 24 restaurants, 15 activities, 36 flags (F-01…F-36), 23 questions, 19 suggestions, 17 repo findings, 11 root pages, gates green.
+
+### Task board — this session
+
+| # | Task | Status | Owner | File scope | Sources / verification |
+|---|------|--------|-------|------------|------------------------|
+| C1 | Audit existing data line by line; reproduce every published value against its official source | **in progress** | 6382dba0 | read-only across `data/plan/**` | official pages, re-fetched 2026-11-28 |
+| C2 | Close the social/video gap: official YouTube / Instagram / TikTok link per restaurant and activity | **in progress** | 6382dba0 | `data/plan/restaurants.json`, `data/plan/activities.json` (social + socialStatus fields only) | official site footers, official YouTube channel pages |
+| C3 | Close the hours gap where the official page publishes a grid | unclaimed | — | same two JSON files (hours + hoursStatus only) | official venue pages |
+| C4 | Correct any wrong value found by C1 (append-only; never delete another session's field) | unclaimed | — | same | official page quoted in the flag |
+| C5 | Integration: rebuild, re-verify, PR → `main`, merge, confirm Pages, record result | unclaimed | — | `COORDINATION.md`, generated root pages | `scripts/check_plan.py`, Pages API |
+
+**Scope discipline:** this session edits only `data/plan/restaurants.json`, `data/plan/activities.json`, `COORDINATION.md`, and the root pages that `scripts/build_plan.py` regenerates from them. Generated HTML is never hand-edited. No other session is currently active on this repo (last board entry: `2ec5be84-vegas2`, DONE).
+
+**Environment note:** `curl`/`urllib` cannot reach the internet from this sandbox (TLS refused; `000`). All live verification is done through the sanctioned page fetcher, and every capture is recorded with its date.
