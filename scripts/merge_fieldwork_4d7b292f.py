@@ -1015,9 +1015,20 @@ def meta():
          "(Oct 1-May 31) and charges $20 per car, not per person. Valley of Fire charges $15 per non-Nevada "
          "vehicle and officially warns that rideshare visitors can be stranded."),
     ]
+    # Session 6382dba0 superseded the Valley of Fire sentence: the official page
+    # states the day-use fee inconsistently, so it is now "$10-$15 pending
+    # confirmation". Without this guard, re-running THIS script would re-append
+    # the original wording next to the corrected one and resurrect a claim the
+    # site had already withdrawn. Skip when either wording is present.
+    SUPERSEDED_VOF = ("Valley of Fire charges $15 per non-Nevada",
+                      "Valley of Fire publishes a day-use fee")
     for a in adds:
-        if a not in kf:
-            kf.append(a)
+        if a in kf:
+            continue
+        if a.startswith("Red Rock Canyon requires") and any(
+                frag in k for k in kf for frag in SUPERSEDED_VOF):
+            continue
+        kf.append(a)
     save("meta", d)
 
 
