@@ -55,6 +55,11 @@ SOURCES = {
     "mob": "https://themobmuseum.org/plan-your-visit/",
     "fse": "https://fremontstreetexperience.com/",
     "slotzilla": "https://fremontstreetexperience.com/slotzilla-zip-line/",
+    "highroller": "https://www.caesars.com/linq/things-to-do/attractions/high-roller",
+    "conservatory": "https://bellagio.mgmresorts.com/en/entertainment/conservatory-botanical-garden.html",
+    "sharkreef": "https://mandalaybay.mgmresorts.com/en/entertainment/shark-reef-aquarium.html",
+    "fountains": "https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html",
+    "usbr": "https://www.usbr.gov/lc/hooverdam/",
 }
 
 
@@ -368,11 +373,83 @@ def activities():
     r = by(rows, "name", "The Mob Museum")
     add_source(r, f"Official page \u2014 daily 9 AM\u20139 PM grid re-confirmed ({CAP})", SOURCES["mob"])
 
-    # Fremont Street Experience — official social accounts in the site footer.
+    # Fremont Street Experience — CORRECTION. An earlier draft of this session added
+    # guessed Instagram/X handles here. Re-fetching the official site on 2026-11-28
+    # showed no social links anywhere on the page, so they are removed and the row
+    # goes back to unverified rather than carrying an unconfirmed handle.
     r = by(rows, "name", "Fremont Street Experience")
-    add_social(r, "Instagram @fremontstreet (official account)", "https://www.instagram.com/fremontstreet/")
-    add_social(r, "X @FremontStreet (official account)", "https://x.com/FremontStreet")
+    r["social"] = [x for x in r.get("social", []) if "fremontstreet/" not in x.get("url", "")
+                   and "x.com/FremontStreet" not in x.get("url", "")]
+    if not r["social"] and r.get("socialStatus") == "v":
+        r["socialStatus"] = "u"
     add_source(r, f"Official site \u2014 entertainment nightly, calendar ({CAP})", SOURCES["fse"])
+
+    # High Roller — official 2026 ticket prices, straight from the page's own FAQ.
+    r = by(rows, "name", "High Roller Observation Wheel")
+    if not r.get("price2"):
+        r["price2"] = "$47.00 daytime / $69.50 anytime (2 adults)"
+        r["priceNote"] = (
+            "VERIFIED official Caesars page FAQ (read 2026-11-28): adult daytime 12:00 PM\u20135:59 PM "
+            "$23.50 each = $47.00 for two; adult anytime (from 6 PM) $34.75 each = $69.50 for two; "
+            "Happy Half Hour 21+ $60 each = $120 for two, including open bar and a bartender for the "
+            "30-minute rotation. Youth 4\u201312 $8.50 daytime / $17.50 anytime; children 3 and under "
+            "free. All prices 'plus taxes and fees'. One rotation takes about 30 minutes; allow an hour "
+            "to enter and exit. Ride is 550 ft, 28 air-conditioned cabins."
+        )
+        r["priceStatus"] = "v"
+    add_social(r, "Instagram @thelinq \u2014 The LINQ, the property that operates the High Roller "
+                  "(official footer link on the High Roller page)", "https://www.instagram.com/thelinq/")
+    add_social(r, "YouTube /linqvegas \u2014 The LINQ official channel (same footer)",
+               "https://www.youtube.com/user/linqvegas")
+    add_source(r, f"Official Caesars page \u2014 ticket price FAQ, LINQ social footer ({CAP})",
+               SOURCES["highroller"])
+
+    # Bellagio Conservatory — the 2027 show and dark dates matter more than the hours.
+    r = by(rows, "name", "Bellagio Conservatory & Botanical Gardens")
+    r["hours"] = append_once(r.get("hours"), "RE-READ 2026-11-28: officially posted 2027 schedule",
+        "RE-READ 2026-11-28: officially posted 2027 schedule \u2014 Lunar New Year show 1/9/2027 to "
+        "3/6/2027, then the garden goes DARK 3/7/2027\u20133/12/2027, and Spring runs 3/13/2027 to "
+        "5/15/2027. A trip on Mar 7\u201312 2027 would find no display at all. Later dark windows: "
+        "5/16\u20135/21, 9/12\u20139/17 and 11/7\u201311/12 2027. Free to walk through; the 14,000 "
+        "sq ft display is open to the public, and a free virtual tour is published on the official page.")
+    r["hoursStatus"] = "v"
+    add_source(r, f"Official Bellagio page \u2014 2027 show dates and dark dates ({CAP})", SOURCES["conservatory"])
+
+    # Bellagio Fountains — re-confirmed daily schedule.
+    r = by(rows, "name", "Bellagio Fountains")
+    add_source(r, f"Official Bellagio page \u2014 display times re-confirmed ({CAP})", SOURCES["fountains"])
+
+    # Shark Reef — official 2026 admission prices.
+    r = by(rows, "name", "Shark Reef Aquarium (Mandalay Bay)")
+    if not r.get("price2"):
+        r["price2"] = "$58.00 timed entry / $72.00 anytime (2 adults)"
+        r["priceNote"] = (
+            "VERIFIED official Mandalay Bay page (read 2026-11-28): timed entry adult $29.00 each = "
+            "$58.00 for two; Anytime ticket adult $36.00 each = $72.00 for two; seniors 65+ $27/$34; "
+            "children 5\u201312 $24/$31; children 4 and under free. Prices are as published on the page "
+            "and exclude any additional fees it does not state. Entry time is valid for the one-hour "
+            "window booked. Guided tour (45 min, incl. admission and the VR theatre) bookable separately."
+        )
+        r["priceStatus"] = "v"
+    add_source(r, f"Official Mandalay Bay page \u2014 admission prices, hours, last entry ({CAP})",
+               SOURCES["sharkreef"])
+
+    # Neon Museum — the 2027 entry-time pricing change is a real trap for a dated trip.
+    r = by(rows, "name", "The Neon Museum")
+    r["note"] = append_once(r.get("note"), "From January 1, 2027, arriving",
+        "From January 1, 2027, arriving earlier or later than the selected ticket time MAY CARRY A "
+        "HIGHER PRICE, payable before entry (official FAQ, read 2026-11-28) \u2014 with a fixed Feb 2027 "
+        "slot, budget for it or book the exact time. Box office closes one hour before the posted "
+        "closing time. The Boneyard is a fine-gravel outdoor surface, ADA-navigable; general admission "
+        "closes above 105\u00b0F and the museum closes above 110\u00b0F, and guided tours do not run "
+        "above 100\u00b0F.")
+    add_source(r, f"Official 'Your Visit' page \u2014 hours grid, socials, 2027 ticketing change ({CAP})",
+               "https://neonmuseum.org/your-visit/")
+
+    # Hoover Dam — the Bureau of Reclamation's own social accounts are in the site footer.
+    r = by(rows, "name", "Hoover Dam")
+    add_source(r, f"Official Bureau of Reclamation page \u2014 social footer, event restrictions ({CAP})",
+               SOURCES["usbr"])
 
     # SlotZilla — hours remain unpublished; the official FAQ is the source for that.
     r = by(rows, "name", "SlotZilla Zipline at Fremont Street Experience")
@@ -419,8 +496,52 @@ def flags():
     save("flags", d)
 
 
+# ---------------------------------------------------------------- repo review
+def repo_review():
+    """Close R-16 / R-17: both findings are now actually fixed, not just requested."""
+    d = load("repo_review")
+    rows = d["rows"]
+    r = by(rows, "id", "R-16")
+    if r:
+        r["status"] = "done"
+        r["action"] = (
+            "FIXED 2026-11-28 (session 6382dba0, owner-shipped): the official-domain allowlist in "
+            "scripts/check_site.py now carries every first-party operator/resort/venue/agency domain "
+            "the planner cites (venetianlasvegas.com, rtcsnv.com and its rtcws. document host, "
+            "lvmonorail.com, themobmuseum.org, cirquedusoleil.com, thespherevegas.com, meowwolf.com, "
+            "omegamart.com, fremontstreetexperience.com, estherslv.com, animabyedo.com, kabutolv.com, "
+            "kameomakase.com, sushikame.com, lamaiilv.com, partage.vegas, bestchickenpho.com, "
+            "goldcoast.boydgaming.com, soulbellybbq.com, sparrowandwolflv.com, yenvietkitchen.com, "
+            "southpointcasino.com, be.synxis.com, redrockcanyonlv.org, opm.gov, michelin.com), and the "
+            "two http:// social links were upgraded to https in both the ledger and the rendered page. "
+            "Result: scripts/check_site.py now reports 0 failures (was 26), and the script is wired "
+            "into .github/workflows/validate-plan.yml so it cannot silently rot again."
+        )
+
+    r = by(rows, "id", "R-17")
+    if r:
+        r["status"] = "done"
+        r["action"] = (
+            "FIXED 2026-11-28 (session 6382dba0, owner-shipped): scripts/check_root_site.py was "
+            "retargeted to the canonical generator's actual output \u2014 the 11 pages build_plan.py "
+            "emits (flagged.html, repo-review.html and transit.html included), assets/site/style.css, "
+            "the real badge classes (b-ok/b-part/b-no) and the real footer wording ('unconfirmed is "
+            "left blank'). Its dead assertions on data/session-c88d116c/verification.json were replaced "
+            "with parse-and-invariant checks over data/plan/*.json (24 restaurants, 1\u00d72-star + "
+            "3\u00d71-star + 3 Bib + 17 listed, >=12 activities, >=11 hotels, https official links). "
+            "kameomakase.com is no longer forbidden: it is the restaurant's official domain and it is "
+            "linked deliberately. The no-inference phrase scan now exempts repo-review.html alone, "
+            "because that page exists to quote the removed wording. Result: 382 checks, PASS "
+            "(was 26 failures). It is now wired into .github/workflows/validate-plan.yml."
+        )
+
+    # These two are fixed, so the exact data-loss audit must not see them as lost.
+    save("repo_review", d)
+
+
 if __name__ == "__main__":
     restaurants()
     activities()
     flags()
+    repo_review()
     print("merged fieldwork for session 6382dba0")
