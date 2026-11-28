@@ -539,9 +539,49 @@ def repo_review():
     save("repo_review", d)
 
 
+# ---------------------------------------------------------------- meta
+def meta():
+    """Executive-summary findings for this pass. Appended, never replacing."""
+    d = load("meta")
+    kf = d.setdefault("keyFindings", [])
+
+    def add(marker, text):
+        if not any(marker in k for k in kf):
+            kf.append(text)
+
+    add("Hours coverage",
+        "Hours coverage after the 2026-11-28 pass: 19 of 24 MICHELIN restaurants now have an "
+        "official pages-stated weekly grid (up from 6), 1 is partial and 4 remain blank because the "
+        "operator publishes none (Guy Savoy, Kame Omakase, Sparrow + Wolf, Yen Viet Kitchen). For "
+        "activities, 9 of 15 have a verified grid, 2 are partial (Omega Mart publishes only 'Days and "
+        "Times vary') and 4 are blank.")
+    add("Social coverage",
+        "Official social accounts are attached only where the operator's own page links them: 5 of 24 "
+        "restaurants carry one (Guy Savoy via Caesars Palace, Gymkhana, Anima by EDO and SoulBelly fully "
+        "verified; \u00e9 partial) and 6 of 15 activities do (High Roller via The LINQ, Neon Museum, "
+        "Omega Mart, K\u00c0, SlotZilla and Hoover Dam). "
+        "The other rows keep a YouTube search link, clearly labelled as a search and not an account. "
+        "Three venue handles were checked and REMOVED because the official site does not link them.")
+    add("Eleven of the 24 restaurants sit on",
+        "Eleven of the 24 MICHELIN restaurants sit on no casino campus at all (Chinatown, Downtown, "
+        "off-Strip). No hotel in this set puts more than four of them on the same campus, so the "
+        "1-hour rule is decided by bus/rideshare, not by hotel choice. The Venetian campus is the only "
+        "one where four distinctions need zero transit.")
+    add("Fremont Street Experience publishes",
+        "Fremont Street Experience publishes no social handles on its official site and no operating "
+        "hours for SlotZilla; both stay blank rather than guessed. Its own FAQ confirms SlotZilla "
+        "needs about an hour end to end for a 30-second (Zip) or 1-minute (Zoom) flight.")
+    add("Bellagio Conservatory is DARK",
+        "Bellagio Conservatory is DARK 7\u201312 March 2027 between the Lunar New Year and Spring "
+        "shows. Any itinerary in that window must drop it; the official 2027 show and dark dates are on "
+        "the page.")
+    save("meta", d)
+
+
 if __name__ == "__main__":
     restaurants()
     activities()
     flags()
     repo_review()
+    meta()
     print("merged fieldwork for session 6382dba0")
