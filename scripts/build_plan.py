@@ -18,7 +18,7 @@ from urllib.parse import quote_plus
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "plan"
-AS_OF = "2026-11-27"
+AS_OF = "2026-11-28"
 
 PAGES = [
     ("index.html", "Overview"),
